@@ -87,6 +87,29 @@
             "schema": {
               "$ref": "#/definitions/typeExample"
             }
+          },
+          {
+            "name": "options.suggestLimit",
+            "description": "Maximum number of suggestions to return per target.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "options.minConfidence",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "VERY_LOW",
+              "LOW",
+              "MID",
+              "HIGH",
+              "VERY_HIGH"
+            ],
+            "default": "UNKNOWN"
           }
         ],
         "tags": [
@@ -1164,6 +1187,22 @@
         },
         "model": {
           "$ref": "#/definitions/typeModel"
+        }
+      }
+    },
+    "v2alphaTestOptions": {
+      "type": "object",
+      "example": {
+        "suggest_limit": 3
+      },
+      "properties": {
+        "suggestLimit": {
+          "type": "integer",
+          "format": "int32",
+          "title": "Maximum number of suggestions to return per target"
+        },
+        "minConfidence": {
+          "$ref": "#/definitions/ConfidenceLevel"
         }
       }
     }

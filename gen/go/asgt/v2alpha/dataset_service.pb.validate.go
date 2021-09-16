@@ -16,6 +16,8 @@ import (
 	"unicode/utf8"
 
 	"google.golang.org/protobuf/types/known/anypb"
+
+	asgttype "github.com/e-conomic/vmlapis/gen/go/asgt/type"
 )
 
 // ensure the imports are used
@@ -31,7 +33,83 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+
+	_ = asgttype.Confidence_Level(0)
 )
+
+// Validate checks the field values on TestOptions with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *TestOptions) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for SuggestLimit
+
+	if _, ok := asgttype.Confidence_Level_name[int32(m.GetMinConfidence())]; !ok {
+		return TestOptionsValidationError{
+			field:  "MinConfidence",
+			reason: "value must be one of the defined enum values",
+		}
+	}
+
+	return nil
+}
+
+// TestOptionsValidationError is the validation error returned by
+// TestOptions.Validate if the designated constraints aren't met.
+type TestOptionsValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e TestOptionsValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e TestOptionsValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e TestOptionsValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e TestOptionsValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e TestOptionsValidationError) ErrorName() string { return "TestOptionsValidationError" }
+
+// Error satisfies the builtin error interface
+func (e TestOptionsValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sTestOptions.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = TestOptionsValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = TestOptionsValidationError{}
 
 // Validate checks the field values on GetDatasetRequest with the rules defined
 // in the proto definition for this message. If any rules are violated, an
@@ -421,6 +499,16 @@ func (m *CreateExampleRequest) Validate() error {
 		if err := v.Validate(); err != nil {
 			return CreateExampleRequestValidationError{
 				field:  "Example",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return CreateExampleRequestValidationError{
+				field:  "Options",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}

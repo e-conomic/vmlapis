@@ -14,6 +14,621 @@ public final class DatasetServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface TestOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2alpha.TestOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Maximum number of suggestions to return per target
+     * </pre>
+     *
+     * <code>int32 suggest_limit = 1;</code>
+     * @return The suggestLimit.
+     */
+    int getSuggestLimit();
+
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * @return The enum numeric value on the wire for minConfidence.
+     */
+    int getMinConfidenceValue();
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * @return The minConfidence.
+     */
+    asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
+  }
+  /**
+   * Protobuf type {@code asgt.v2alpha.TestOptions}
+   */
+  public static final class TestOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.v2alpha.TestOptions)
+      TestOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TestOptions.newBuilder() to construct.
+    private TestOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TestOptions() {
+      minConfidence_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TestOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TestOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              suggestLimit_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              minConfidence_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.v2alpha.DatasetServiceOuterClass.internal_static_asgt_v2alpha_TestOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.v2alpha.DatasetServiceOuterClass.internal_static_asgt_v2alpha_TestOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.v2alpha.DatasetServiceOuterClass.TestOptions.class, asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder.class);
+    }
+
+    public static final int SUGGEST_LIMIT_FIELD_NUMBER = 1;
+    private int suggestLimit_;
+    /**
+     * <pre>
+     * Maximum number of suggestions to return per target
+     * </pre>
+     *
+     * <code>int32 suggest_limit = 1;</code>
+     * @return The suggestLimit.
+     */
+    @java.lang.Override
+    public int getSuggestLimit() {
+      return suggestLimit_;
+    }
+
+    public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
+    private int minConfidence_;
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * @return The enum numeric value on the wire for minConfidence.
+     */
+    @java.lang.Override public int getMinConfidenceValue() {
+      return minConfidence_;
+    }
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * @return The minConfidence.
+     */
+    @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
+      @SuppressWarnings("deprecation")
+      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+      return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (suggestLimit_ != 0) {
+        output.writeInt32(1, suggestLimit_);
+      }
+      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+        output.writeEnum(2, minConfidence_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (suggestLimit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, suggestLimit_);
+      }
+      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, minConfidence_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.v2alpha.DatasetServiceOuterClass.TestOptions)) {
+        return super.equals(obj);
+      }
+      asgt.v2alpha.DatasetServiceOuterClass.TestOptions other = (asgt.v2alpha.DatasetServiceOuterClass.TestOptions) obj;
+
+      if (getSuggestLimit()
+          != other.getSuggestLimit()) return false;
+      if (minConfidence_ != other.minConfidence_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUGGEST_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getSuggestLimit();
+      hash = (37 * hash) + MIN_CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + minConfidence_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.v2alpha.DatasetServiceOuterClass.TestOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.v2alpha.TestOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.v2alpha.TestOptions)
+        asgt.v2alpha.DatasetServiceOuterClass.TestOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.v2alpha.DatasetServiceOuterClass.internal_static_asgt_v2alpha_TestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.v2alpha.DatasetServiceOuterClass.internal_static_asgt_v2alpha_TestOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.v2alpha.DatasetServiceOuterClass.TestOptions.class, asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder.class);
+      }
+
+      // Construct using asgt.v2alpha.DatasetServiceOuterClass.TestOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        suggestLimit_ = 0;
+
+        minConfidence_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.v2alpha.DatasetServiceOuterClass.internal_static_asgt_v2alpha_TestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.v2alpha.DatasetServiceOuterClass.TestOptions getDefaultInstanceForType() {
+        return asgt.v2alpha.DatasetServiceOuterClass.TestOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.v2alpha.DatasetServiceOuterClass.TestOptions build() {
+        asgt.v2alpha.DatasetServiceOuterClass.TestOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.v2alpha.DatasetServiceOuterClass.TestOptions buildPartial() {
+        asgt.v2alpha.DatasetServiceOuterClass.TestOptions result = new asgt.v2alpha.DatasetServiceOuterClass.TestOptions(this);
+        result.suggestLimit_ = suggestLimit_;
+        result.minConfidence_ = minConfidence_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.v2alpha.DatasetServiceOuterClass.TestOptions) {
+          return mergeFrom((asgt.v2alpha.DatasetServiceOuterClass.TestOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.v2alpha.DatasetServiceOuterClass.TestOptions other) {
+        if (other == asgt.v2alpha.DatasetServiceOuterClass.TestOptions.getDefaultInstance()) return this;
+        if (other.getSuggestLimit() != 0) {
+          setSuggestLimit(other.getSuggestLimit());
+        }
+        if (other.minConfidence_ != 0) {
+          setMinConfidenceValue(other.getMinConfidenceValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.v2alpha.DatasetServiceOuterClass.TestOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.v2alpha.DatasetServiceOuterClass.TestOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int suggestLimit_ ;
+      /**
+       * <pre>
+       * Maximum number of suggestions to return per target
+       * </pre>
+       *
+       * <code>int32 suggest_limit = 1;</code>
+       * @return The suggestLimit.
+       */
+      @java.lang.Override
+      public int getSuggestLimit() {
+        return suggestLimit_;
+      }
+      /**
+       * <pre>
+       * Maximum number of suggestions to return per target
+       * </pre>
+       *
+       * <code>int32 suggest_limit = 1;</code>
+       * @param value The suggestLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuggestLimit(int value) {
+        
+        suggestLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of suggestions to return per target
+       * </pre>
+       *
+       * <code>int32 suggest_limit = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuggestLimit() {
+        
+        suggestLimit_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int minConfidence_ = 0;
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * @return The enum numeric value on the wire for minConfidence.
+       */
+      @java.lang.Override public int getMinConfidenceValue() {
+        return minConfidence_;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * @param value The enum numeric value on the wire for minConfidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinConfidenceValue(int value) {
+        
+        minConfidence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * @return The minConfidence.
+       */
+      @java.lang.Override
+      public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
+        @SuppressWarnings("deprecation")
+        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+        return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * @param value The minConfidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinConfidence(asgt.type.PredictionOuterClass.Confidence.Level value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        minConfidence_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinConfidence() {
+        
+        minConfidence_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.v2alpha.TestOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.v2alpha.TestOptions)
+    private static final asgt.v2alpha.DatasetServiceOuterClass.TestOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.v2alpha.DatasetServiceOuterClass.TestOptions();
+    }
+
+    public static asgt.v2alpha.DatasetServiceOuterClass.TestOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TestOptions>
+        PARSER = new com.google.protobuf.AbstractParser<TestOptions>() {
+      @java.lang.Override
+      public TestOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TestOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TestOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TestOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.v2alpha.DatasetServiceOuterClass.TestOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetDatasetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.v2alpha.GetDatasetRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2756,6 +3371,21 @@ public final class DatasetServiceOuterClass {
      * <code>.asgt.v2alpha.type.Example example = 2;</code>
      */
     asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
+
+    /**
+     * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+     * @return Whether the options field is set.
+     */
+    boolean hasOptions();
+    /**
+     * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+     * @return The options.
+     */
+    asgt.v2alpha.DatasetServiceOuterClass.TestOptions getOptions();
+    /**
+     * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+     */
+    asgt.v2alpha.DatasetServiceOuterClass.TestOptionsOrBuilder getOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.CreateExampleRequest}
@@ -2818,6 +3448,19 @@ public final class DatasetServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(example_);
                 example_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder subBuilder = null;
+              if (options_ != null) {
+                subBuilder = options_.toBuilder();
+              }
+              options_ = input.readMessage(asgt.v2alpha.DatasetServiceOuterClass.TestOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(options_);
+                options_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2926,6 +3569,32 @@ public final class DatasetServiceOuterClass {
       return getExample();
     }
 
+    public static final int OPTIONS_FIELD_NUMBER = 3;
+    private asgt.v2alpha.DatasetServiceOuterClass.TestOptions options_;
+    /**
+     * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+     * @return Whether the options field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptions() {
+      return options_ != null;
+    }
+    /**
+     * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+     * @return The options.
+     */
+    @java.lang.Override
+    public asgt.v2alpha.DatasetServiceOuterClass.TestOptions getOptions() {
+      return options_ == null ? asgt.v2alpha.DatasetServiceOuterClass.TestOptions.getDefaultInstance() : options_;
+    }
+    /**
+     * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+     */
+    @java.lang.Override
+    public asgt.v2alpha.DatasetServiceOuterClass.TestOptionsOrBuilder getOptionsOrBuilder() {
+      return getOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2946,6 +3615,9 @@ public final class DatasetServiceOuterClass {
       if (example_ != null) {
         output.writeMessage(2, getExample());
       }
+      if (options_ != null) {
+        output.writeMessage(3, getOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2961,6 +3633,10 @@ public final class DatasetServiceOuterClass {
       if (example_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExample());
+      }
+      if (options_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2984,6 +3660,11 @@ public final class DatasetServiceOuterClass {
         if (!getExample()
             .equals(other.getExample())) return false;
       }
+      if (hasOptions() != other.hasOptions()) return false;
+      if (hasOptions()) {
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3000,6 +3681,10 @@ public final class DatasetServiceOuterClass {
       if (hasExample()) {
         hash = (37 * hash) + EXAMPLE_FIELD_NUMBER;
         hash = (53 * hash) + getExample().hashCode();
+      }
+      if (hasOptions()) {
+        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3142,6 +3827,12 @@ public final class DatasetServiceOuterClass {
           example_ = null;
           exampleBuilder_ = null;
         }
+        if (optionsBuilder_ == null) {
+          options_ = null;
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3173,6 +3864,11 @@ public final class DatasetServiceOuterClass {
           result.example_ = example_;
         } else {
           result.example_ = exampleBuilder_.build();
+        }
+        if (optionsBuilder_ == null) {
+          result.options_ = options_;
+        } else {
+          result.options_ = optionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3228,6 +3924,9 @@ public final class DatasetServiceOuterClass {
         }
         if (other.hasExample()) {
           mergeExample(other.getExample());
+        }
+        if (other.hasOptions()) {
+          mergeOptions(other.getOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3471,6 +4170,125 @@ public final class DatasetServiceOuterClass {
           example_ = null;
         }
         return exampleBuilder_;
+      }
+
+      private asgt.v2alpha.DatasetServiceOuterClass.TestOptions options_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2alpha.DatasetServiceOuterClass.TestOptions, asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder, asgt.v2alpha.DatasetServiceOuterClass.TestOptionsOrBuilder> optionsBuilder_;
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       * @return Whether the options field is set.
+       */
+      public boolean hasOptions() {
+        return optionsBuilder_ != null || options_ != null;
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       * @return The options.
+       */
+      public asgt.v2alpha.DatasetServiceOuterClass.TestOptions getOptions() {
+        if (optionsBuilder_ == null) {
+          return options_ == null ? asgt.v2alpha.DatasetServiceOuterClass.TestOptions.getDefaultInstance() : options_;
+        } else {
+          return optionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       */
+      public Builder setOptions(asgt.v2alpha.DatasetServiceOuterClass.TestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          options_ = value;
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       */
+      public Builder setOptions(
+          asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder builderForValue) {
+        if (optionsBuilder_ == null) {
+          options_ = builderForValue.build();
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       */
+      public Builder mergeOptions(asgt.v2alpha.DatasetServiceOuterClass.TestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (options_ != null) {
+            options_ =
+              asgt.v2alpha.DatasetServiceOuterClass.TestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          } else {
+            options_ = value;
+          }
+          onChanged();
+        } else {
+          optionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       */
+      public Builder clearOptions() {
+        if (optionsBuilder_ == null) {
+          options_ = null;
+          onChanged();
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       */
+      public asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder getOptionsBuilder() {
+        
+        onChanged();
+        return getOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       */
+      public asgt.v2alpha.DatasetServiceOuterClass.TestOptionsOrBuilder getOptionsOrBuilder() {
+        if (optionsBuilder_ != null) {
+          return optionsBuilder_.getMessageOrBuilder();
+        } else {
+          return options_ == null ?
+              asgt.v2alpha.DatasetServiceOuterClass.TestOptions.getDefaultInstance() : options_;
+        }
+      }
+      /**
+       * <code>.asgt.v2alpha.TestOptions options = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2alpha.DatasetServiceOuterClass.TestOptions, asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder, asgt.v2alpha.DatasetServiceOuterClass.TestOptionsOrBuilder> 
+          getOptionsFieldBuilder() {
+        if (optionsBuilder_ == null) {
+          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.v2alpha.DatasetServiceOuterClass.TestOptions, asgt.v2alpha.DatasetServiceOuterClass.TestOptions.Builder, asgt.v2alpha.DatasetServiceOuterClass.TestOptionsOrBuilder>(
+                  getOptions(),
+                  getParentForChildren(),
+                  isClean());
+          options_ = null;
+        }
+        return optionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5916,6 +6734,11 @@ public final class DatasetServiceOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2alpha_TestOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2alpha_TestOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2alpha_GetDatasetRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5965,24 +6788,29 @@ public final class DatasetServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\"asgt/v2alpha/dataset_service.proto\022\014as" +
-      "gt.v2alpha\032\027asgt/type/dataset.proto\032\037asg" +
-      "t/v2alpha/type/example.proto\032\034google/api" +
-      "/annotations.proto\032\033google/protobuf/empt" +
-      "y.proto\032\031options/annotations.proto\032\027vali" +
-      "date/validate.proto\"K\n\021GetDatasetRequest" +
-      "\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
-      "A-Za-z0-9_.>-]*$\"\210\001\n\024CreateDatasetReques" +
-      "t\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.]" +
-      "[A-Za-z0-9_.>-]*$\0228\n\004tags\030\002 \003(\tB*\372B\037\222\001\034\"" +
-      "\032r\030(@2\024^[A-Za-z0-9\\s_.>-]*$\372B\005\222\001\002\030\001\"N\n\024D" +
-      "eleteDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#" +
-      "(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J\n\020D" +
-      "eleteTagRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022" +
-      "\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\203\001\n\024Crea" +
-      "teExampleRequest\022>\n\014dataset_name\030\001 \001(\tB(" +
-      "\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$" +
-      "\022+\n\007example\030\002 \001(\0132\032.asgt.v2alpha.type.Ex" +
-      "ample\"\213\001\n\034CreateOrUpdateExampleRequest\022>" +
+      "gt.v2alpha\032\027asgt/type/dataset.proto\032\032asg" +
+      "t/type/prediction.proto\032\037asgt/v2alpha/ty" +
+      "pe/example.proto\032\034google/api/annotations" +
+      ".proto\032\033google/protobuf/empty.proto\032\031opt" +
+      "ions/annotations.proto\032\027validate/validat" +
+      "e.proto\"~\n\013TestOptions\022\025\n\rsuggest_limit\030" +
+      "\001 \001(\005\022=\n\016min_confidence\030\002 \001(\0162\033.asgt.typ" +
+      "e.Confidence.LevelB\010\372B\005\202\001\002\020\001:\031\222A\0262\024{\"sug" +
+      "gest_limit\": 3}\"K\n\021GetDatasetRequest\0226\n\004" +
+      "name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za" +
+      "-z0-9_.>-]*$\"\210\001\n\024CreateDatasetRequest\0226\n" +
+      "\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Z" +
+      "a-z0-9_.>-]*$\0228\n\004tags\030\002 \003(\tB*\372B\037\222\001\034\"\032r\030(" +
+      "@2\024^[A-Za-z0-9\\s_.>-]*$\372B\005\222\001\002\030\001\"N\n\024Delet" +
+      "eDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022" +
+      "\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J\n\020Delet" +
+      "eTagRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
+      "-Za-z0-9.][A-Za-z0-9_.>-]*$\"\257\001\n\024CreateEx" +
+      "ampleRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r" +
+      "#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022+\n\007" +
+      "example\030\002 \001(\0132\032.asgt.v2alpha.type.Exampl" +
+      "e\022*\n\007options\030\003 \001(\0132\031.asgt.v2alpha.TestOp" +
+      "tions\"\213\001\n\034CreateOrUpdateExampleRequest\022>" +
       "\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z" +
       "0-9.][A-Za-z0-9_.>-]*$\022+\n\007example\030\002 \001(\0132" +
       "\032.asgt.v2alpha.type.Example\"\211\001\n\031BatchCre" +
@@ -6027,56 +6855,63 @@ public final class DatasetServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
+          asgt.type.PredictionOuterClass.getDescriptor(),
           asgt.v2alpha.type.ExampleOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
-    internal_static_asgt_v2alpha_GetDatasetRequest_descriptor =
+    internal_static_asgt_v2alpha_TestOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_asgt_v2alpha_TestOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2alpha_TestOptions_descriptor,
+        new java.lang.String[] { "SuggestLimit", "MinConfidence", });
+    internal_static_asgt_v2alpha_GetDatasetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_v2alpha_GetDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_GetDatasetRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_asgt_v2alpha_CreateDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_v2alpha_CreateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_CreateDatasetRequest_descriptor,
         new java.lang.String[] { "Name", "Tags", });
     internal_static_asgt_v2alpha_DeleteDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_v2alpha_DeleteDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_DeleteDatasetRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_asgt_v2alpha_DeleteTagRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_v2alpha_DeleteTagRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_DeleteTagRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_asgt_v2alpha_CreateExampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_asgt_v2alpha_CreateExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_CreateExampleRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "Example", });
+        new java.lang.String[] { "DatasetName", "Example", "Options", });
     internal_static_asgt_v2alpha_CreateOrUpdateExampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_asgt_v2alpha_CreateOrUpdateExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_CreateOrUpdateExampleRequest_descriptor,
         new java.lang.String[] { "DatasetName", "Example", });
     internal_static_asgt_v2alpha_BatchCreateExampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_asgt_v2alpha_BatchCreateExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_BatchCreateExampleRequest_descriptor,
         new java.lang.String[] { "DatasetName", "Examples", });
     internal_static_asgt_v2alpha_TruncateDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_asgt_v2alpha_TruncateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_TruncateDatasetRequest_descriptor,
@@ -6084,11 +6919,13 @@ public final class DatasetServiceOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Tag);
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.DatasetOuterClass.getDescriptor();
+    asgt.type.PredictionOuterClass.getDescriptor();
     asgt.v2alpha.type.ExampleOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
