@@ -36,7 +36,7 @@ message InvoiceLine {
 
 message Supplier {
   //  id of the supplier; not nullable
-  string id = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9]*$", max_bytes: 64 }];;
+  string id = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9]*$", max_bytes: 64 }];
 
   // name of the supplier
   string name = 4;                // TODO(lku) has non-english letters and even slashes
