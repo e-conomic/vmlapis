@@ -16,5 +16,5 @@ message Example {
   repeated asgt.v2alpha.type.TargetValue target_values = 2 [(validate.rules).repeated = {min_items: 1, ignore_empty: false}];
 
   // An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
-  string id = 3 [(validate.rules).string.uuid = true];
+  string id = 3 [(validate.rules).string = {uuid: true, ignore_empty: true}];
 }
