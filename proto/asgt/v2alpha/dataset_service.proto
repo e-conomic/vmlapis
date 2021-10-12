@@ -10,6 +10,7 @@ import "options/annotations.proto";
 import "validate/validate.proto";
 
 import "asgt/v2alpha/type/example.proto";
+import "asgt/v2alpha/type/training_info.proto";
 import "asgt/type/dataset.proto";
 
 
@@ -53,14 +54,14 @@ service DatasetService {
 
   rpc CreateExample (CreateExampleRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v2/datasets/{dataset_name}/examples"
+      post: "/v2/datasets/{name}/examples"
       body: "example"
     };
   }
 
   rpc CreateOrUpdateExample (CreateOrUpdateExampleRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      put: "/v2/datasets/{dataset_name}/examples/{example.id}"
+      put: "/v2/datasets/{name}/examples/{example.id}"
       body: "example"
     };
   }
@@ -68,7 +69,7 @@ service DatasetService {
   // Upload multiple examples at once. This matches the behavior of the v1 API.
   rpc BatchCreateExample (BatchCreateExampleRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v2/datasets/{dataset_name}/examples:batchCreate"
+      post: "/v2/datasets/{name}/examples:batchCreate"
       body: "*"
     };
   }
@@ -78,6 +79,12 @@ service DatasetService {
   rpc TruncateDataset (TruncateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v2/datasets/{name}/examples"
+    };
+  }
+
+  rpc TrainingInfo (TrainingInfoRequest) returns (asgt.v2alpha.type.TrainingInfo) {
+    option (google.api.http) = {
+      get: "/v2/datasets/{name}/traininginfo"
     };
   }
 }
@@ -101,20 +108,26 @@ message DeleteTagRequest {
 }
 
 message CreateExampleRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   asgt.v2alpha.type.Example example = 2;
 }
 
 message CreateOrUpdateExampleRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   asgt.v2alpha.type.Example example = 2;
 }
 
 message BatchCreateExampleRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   repeated asgt.v2alpha.type.Example examples = 2;
 }
 
 message TruncateDatasetRequest {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
+
+message TrainingInfoRequest {
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+
+}
+ 

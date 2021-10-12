@@ -56,136 +56,6 @@
         ]
       }
     },
-    "/v2/datasets/{datasetName}/examples": {
-      "post": {
-        "operationId": "DatasetService_CreateExample",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "properties": {}
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "datasetName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/typeExample"
-            }
-          }
-        ],
-        "tags": [
-          "DatasetService"
-        ]
-      }
-    },
-    "/v2/datasets/{datasetName}/examples/{example.id}": {
-      "put": {
-        "operationId": "DatasetService_CreateOrUpdateExample",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "properties": {}
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "datasetName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "example.id",
-            "description": "An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/typeExample"
-            }
-          }
-        ],
-        "tags": [
-          "DatasetService"
-        ]
-      }
-    },
-    "/v2/datasets/{datasetName}/examples:batchCreate": {
-      "post": {
-        "summary": "Upload multiple examples at once. This matches the behavior of the v1 API.",
-        "operationId": "DatasetService_BatchCreateExample",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "properties": {}
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "datasetName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "examples": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/typeExample"
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "tags": [
-          "DatasetService"
-        ]
-      }
-    },
     "/v2/datasets/{name=bank/*}/model:batchSuggest": {
       "post": {
         "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset.\nReturns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.",
@@ -596,6 +466,134 @@
         "tags": [
           "DatasetService"
         ]
+      },
+      "post": {
+        "operationId": "DatasetService_CreateExample",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/typeExample"
+            }
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
+    "/v2/datasets/{name}/examples/{example.id}": {
+      "put": {
+        "operationId": "DatasetService_CreateOrUpdateExample",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "example.id",
+            "description": "An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/typeExample"
+            }
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
+    "/v2/datasets/{name}/examples:batchCreate": {
+      "post": {
+        "summary": "Upload multiple examples at once. This matches the behavior of the v1 API.",
+        "operationId": "DatasetService_BatchCreateExample",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "examples": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/typeExample"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
       }
     },
     "/v2/datasets/{name}/model:batchSuggest": {
@@ -645,6 +643,36 @@
         ],
         "tags": [
           "SuggesterService"
+        ]
+      }
+    },
+    "/v2/datasets/{name}/traininginfo": {
+      "get": {
+        "operationId": "DatasetService_TrainingInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/typeTrainingInfo"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
         ]
       }
     },
@@ -1097,6 +1125,22 @@
         }
       },
       "title": "Record mapping a target name to a value"
+    },
+    "typeTrainingInfo": {
+      "type": "object",
+      "properties": {
+        "startedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "trainingStatus": {
+          "type": "string"
+        }
+      }
     },
     "typeTransaction": {
       "type": "object",

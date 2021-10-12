@@ -315,3 +315,38 @@ func (mr *MockDataServiceServerMockRecorder) mustEmbedUnimplementedDataServiceSe
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDataServiceServer", reflect.TypeOf((*MockDataServiceServer)(nil).mustEmbedUnimplementedDataServiceServer))
 }
+
+// MockUnsafeDataServiceServer is a mock of UnsafeDataServiceServer interface
+type MockUnsafeDataServiceServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockUnsafeDataServiceServerMockRecorder
+}
+
+// MockUnsafeDataServiceServerMockRecorder is the mock recorder for MockUnsafeDataServiceServer
+type MockUnsafeDataServiceServerMockRecorder struct {
+	mock *MockUnsafeDataServiceServer
+}
+
+// NewMockUnsafeDataServiceServer creates a new mock instance
+func NewMockUnsafeDataServiceServer(ctrl *gomock.Controller) *MockUnsafeDataServiceServer {
+	mock := &MockUnsafeDataServiceServer{ctrl: ctrl}
+	mock.recorder = &MockUnsafeDataServiceServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use
+func (m *MockUnsafeDataServiceServer) EXPECT() *MockUnsafeDataServiceServerMockRecorder {
+	return m.recorder
+}
+
+// mustEmbedUnimplementedDataServiceServer mocks base method
+func (m *MockUnsafeDataServiceServer) mustEmbedUnimplementedDataServiceServer() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "mustEmbedUnimplementedDataServiceServer")
+}
+
+// mustEmbedUnimplementedDataServiceServer indicates an expected call of mustEmbedUnimplementedDataServiceServer
+func (mr *MockUnsafeDataServiceServerMockRecorder) mustEmbedUnimplementedDataServiceServer() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDataServiceServer", reflect.TypeOf((*MockUnsafeDataServiceServer)(nil).mustEmbedUnimplementedDataServiceServer))
+}

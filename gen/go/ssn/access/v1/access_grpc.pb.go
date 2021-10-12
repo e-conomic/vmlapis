@@ -11,7 +11,8 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+// Requires gRPC-Go v1.32.0 or later.
+const _ = grpc.SupportPackageIsVersion7
 
 // AccessClient is the client API for Access service.
 //
@@ -49,13 +50,20 @@ type AccessServer interface {
 type UnimplementedAccessServer struct {
 }
 
-func (*UnimplementedAccessServer) GenerateValetKey(context.Context, *ValetKeyRequest) (*ValetKeyResponse, error) {
+func (UnimplementedAccessServer) GenerateValetKey(context.Context, *ValetKeyRequest) (*ValetKeyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GenerateValetKey not implemented")
 }
-func (*UnimplementedAccessServer) mustEmbedUnimplementedAccessServer() {}
+func (UnimplementedAccessServer) mustEmbedUnimplementedAccessServer() {}
 
-func RegisterAccessServer(s *grpc.Server, srv AccessServer) {
-	s.RegisterService(&_Access_serviceDesc, srv)
+// UnsafeAccessServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to AccessServer will
+// result in compilation errors.
+type UnsafeAccessServer interface {
+	mustEmbedUnimplementedAccessServer()
+}
+
+func RegisterAccessServer(s grpc.ServiceRegistrar, srv AccessServer) {
+	s.RegisterService(&Access_ServiceDesc, srv)
 }
 
 func _Access_GenerateValetKey_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -76,7 +84,10 @@ func _Access_GenerateValetKey_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
-var _Access_serviceDesc = grpc.ServiceDesc{
+// Access_ServiceDesc is the grpc.ServiceDesc for Access service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var Access_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "ssn.access.v1.Access",
 	HandlerType: (*AccessServer)(nil),
 	Methods: []grpc.MethodDesc{

@@ -403,16 +403,16 @@ func (m *CreateExampleRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetDatasetName()) > 256 {
+	if len(m.GetName()) > 256 {
 		return CreateExampleRequestValidationError{
-			field:  "DatasetName",
+			field:  "Name",
 			reason: "value length must be at most 256 bytes",
 		}
 	}
 
-	if !_CreateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+	if !_CreateExampleRequest_Name_Pattern.MatchString(m.GetName()) {
 		return CreateExampleRequestValidationError{
-			field:  "DatasetName",
+			field:  "Name",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
 	}
@@ -486,7 +486,7 @@ var _ interface {
 	ErrorName() string
 } = CreateExampleRequestValidationError{}
 
-var _CreateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+var _CreateExampleRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on CreateOrUpdateExampleRequest with the
 // rules defined in the proto definition for this message. If any rules are
@@ -496,16 +496,16 @@ func (m *CreateOrUpdateExampleRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetDatasetName()) > 256 {
+	if len(m.GetName()) > 256 {
 		return CreateOrUpdateExampleRequestValidationError{
-			field:  "DatasetName",
+			field:  "Name",
 			reason: "value length must be at most 256 bytes",
 		}
 	}
 
-	if !_CreateOrUpdateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+	if !_CreateOrUpdateExampleRequest_Name_Pattern.MatchString(m.GetName()) {
 		return CreateOrUpdateExampleRequestValidationError{
-			field:  "DatasetName",
+			field:  "Name",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
 	}
@@ -580,7 +580,7 @@ var _ interface {
 	ErrorName() string
 } = CreateOrUpdateExampleRequestValidationError{}
 
-var _CreateOrUpdateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+var _CreateOrUpdateExampleRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on BatchCreateExampleRequest with the rules
 // defined in the proto definition for this message. If any rules are
@@ -590,16 +590,16 @@ func (m *BatchCreateExampleRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetDatasetName()) > 256 {
+	if len(m.GetName()) > 256 {
 		return BatchCreateExampleRequestValidationError{
-			field:  "DatasetName",
+			field:  "Name",
 			reason: "value length must be at most 256 bytes",
 		}
 	}
 
-	if !_BatchCreateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+	if !_BatchCreateExampleRequest_Name_Pattern.MatchString(m.GetName()) {
 		return BatchCreateExampleRequestValidationError{
-			field:  "DatasetName",
+			field:  "Name",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
 	}
@@ -678,7 +678,7 @@ var _ interface {
 	ErrorName() string
 } = BatchCreateExampleRequestValidationError{}
 
-var _BatchCreateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+var _BatchCreateExampleRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on TruncateDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
@@ -762,3 +762,86 @@ var _ interface {
 } = TruncateDatasetRequestValidationError{}
 
 var _TruncateDatasetRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
+// Validate checks the field values on TrainingInfoRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *TrainingInfoRequest) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if len(m.GetName()) > 256 {
+		return TrainingInfoRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_TrainingInfoRequest_Name_Pattern.MatchString(m.GetName()) {
+		return TrainingInfoRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
+
+	return nil
+}
+
+// TrainingInfoRequestValidationError is the validation error returned by
+// TrainingInfoRequest.Validate if the designated constraints aren't met.
+type TrainingInfoRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e TrainingInfoRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e TrainingInfoRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e TrainingInfoRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e TrainingInfoRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e TrainingInfoRequestValidationError) ErrorName() string {
+	return "TrainingInfoRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e TrainingInfoRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sTrainingInfoRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = TrainingInfoRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = TrainingInfoRequestValidationError{}
+
+var _TrainingInfoRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")

@@ -11,7 +11,8 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+// Requires gRPC-Go v1.32.0 or later.
+const _ = grpc.SupportPackageIsVersion7
 
 // JesterClient is the client API for Jester service.
 //
@@ -49,13 +50,20 @@ type JesterServer interface {
 type UnimplementedJesterServer struct {
 }
 
-func (*UnimplementedJesterServer) Suggest(context.Context, *SuggestionRequest) (*SuggestionResponse, error) {
+func (UnimplementedJesterServer) Suggest(context.Context, *SuggestionRequest) (*SuggestionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Suggest not implemented")
 }
-func (*UnimplementedJesterServer) mustEmbedUnimplementedJesterServer() {}
+func (UnimplementedJesterServer) mustEmbedUnimplementedJesterServer() {}
 
-func RegisterJesterServer(s *grpc.Server, srv JesterServer) {
-	s.RegisterService(&_Jester_serviceDesc, srv)
+// UnsafeJesterServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to JesterServer will
+// result in compilation errors.
+type UnsafeJesterServer interface {
+	mustEmbedUnimplementedJesterServer()
+}
+
+func RegisterJesterServer(s grpc.ServiceRegistrar, srv JesterServer) {
+	s.RegisterService(&Jester_ServiceDesc, srv)
 }
 
 func _Jester_Suggest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -76,7 +84,10 @@ func _Jester_Suggest_Handler(srv interface{}, ctx context.Context, dec func(inte
 	return interceptor(ctx, in, info, handler)
 }
 
-var _Jester_serviceDesc = grpc.ServiceDesc{
+// Jester_ServiceDesc is the grpc.ServiceDesc for Jester service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var Jester_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "asgt.jester.v1.Jester",
 	HandlerType: (*JesterServer)(nil),
 	Methods: []grpc.MethodDesc{

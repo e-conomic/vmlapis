@@ -11,7 +11,8 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+// Requires gRPC-Go v1.32.0 or later.
+const _ = grpc.SupportPackageIsVersion7
 
 // PdfServiceClient is the client API for PdfService service.
 //
@@ -29,7 +30,7 @@ func NewPdfServiceClient(cc grpc.ClientConnInterface) PdfServiceClient {
 }
 
 func (c *pdfServiceClient) RasterizePdf(ctx context.Context, in *RasterizePdfRequest, opts ...grpc.CallOption) (PdfService_RasterizePdfClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_PdfService_serviceDesc.Streams[0], "/ssn.pdfservice.v1.PdfService/RasterizePdf", opts...)
+	stream, err := c.cc.NewStream(ctx, &PdfService_ServiceDesc.Streams[0], "/ssn.pdfservice.v1.PdfService/RasterizePdf", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -72,13 +73,20 @@ type PdfServiceServer interface {
 type UnimplementedPdfServiceServer struct {
 }
 
-func (*UnimplementedPdfServiceServer) RasterizePdf(*RasterizePdfRequest, PdfService_RasterizePdfServer) error {
+func (UnimplementedPdfServiceServer) RasterizePdf(*RasterizePdfRequest, PdfService_RasterizePdfServer) error {
 	return status.Errorf(codes.Unimplemented, "method RasterizePdf not implemented")
 }
-func (*UnimplementedPdfServiceServer) mustEmbedUnimplementedPdfServiceServer() {}
+func (UnimplementedPdfServiceServer) mustEmbedUnimplementedPdfServiceServer() {}
 
-func RegisterPdfServiceServer(s *grpc.Server, srv PdfServiceServer) {
-	s.RegisterService(&_PdfService_serviceDesc, srv)
+// UnsafePdfServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to PdfServiceServer will
+// result in compilation errors.
+type UnsafePdfServiceServer interface {
+	mustEmbedUnimplementedPdfServiceServer()
+}
+
+func RegisterPdfServiceServer(s grpc.ServiceRegistrar, srv PdfServiceServer) {
+	s.RegisterService(&PdfService_ServiceDesc, srv)
 }
 
 func _PdfService_RasterizePdf_Handler(srv interface{}, stream grpc.ServerStream) error {
@@ -102,7 +110,10 @@ func (x *pdfServiceRasterizePdfServer) Send(m *RasterizePdfResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-var _PdfService_serviceDesc = grpc.ServiceDesc{
+// PdfService_ServiceDesc is the grpc.ServiceDesc for PdfService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var PdfService_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "ssn.pdfservice.v1.PdfService",
 	HandlerType: (*PdfServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},

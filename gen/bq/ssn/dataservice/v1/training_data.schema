@@ -430,12 +430,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -447,12 +449,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -464,12 +468,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -481,12 +487,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -498,12 +506,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -515,12 +525,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -532,12 +544,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -549,12 +563,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -566,12 +582,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -583,12 +601,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -600,12 +620,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -617,12 +639,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -634,12 +658,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -651,12 +677,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -668,12 +696,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -685,12 +715,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -702,12 +734,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -719,12 +753,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -736,12 +772,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -753,12 +791,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -770,12 +810,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -787,12 +829,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -804,12 +848,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -821,12 +867,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    },
@@ -838,12 +886,14 @@
      {
       "name": "model_name",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
      },
      {
       "name": "model_ver",
       "type": "INTEGER",
-      "mode": "NULLABLE"
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
      }
     ]
    }

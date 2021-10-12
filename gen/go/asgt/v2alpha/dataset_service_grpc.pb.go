@@ -5,6 +5,7 @@ package v2alpha
 import (
 	context "context"
 	_type "github.com/e-conomic/vmlapis/gen/go/asgt/type"
+	_type1 "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type"
 	empty "github.com/golang/protobuf/ptypes/empty"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -13,7 +14,8 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+// Requires gRPC-Go v1.32.0 or later.
+const _ = grpc.SupportPackageIsVersion7
 
 // DatasetServiceClient is the client API for DatasetService service.
 //
@@ -31,6 +33,7 @@ type DatasetServiceClient interface {
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
 	// removing existing models.
 	TruncateDataset(ctx context.Context, in *TruncateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	TrainingInfo(ctx context.Context, in *TrainingInfoRequest, opts ...grpc.CallOption) (*_type1.TrainingInfo, error)
 }
 
 type datasetServiceClient struct {
@@ -122,6 +125,15 @@ func (c *datasetServiceClient) TruncateDataset(ctx context.Context, in *Truncate
 	return out, nil
 }
 
+func (c *datasetServiceClient) TrainingInfo(ctx context.Context, in *TrainingInfoRequest, opts ...grpc.CallOption) (*_type1.TrainingInfo, error) {
+	out := new(_type1.TrainingInfo)
+	err := c.cc.Invoke(ctx, "/asgt.v2alpha.DatasetService/TrainingInfo", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DatasetServiceServer is the server API for DatasetService service.
 // All implementations must embed UnimplementedDatasetServiceServer
 // for forward compatibility
@@ -138,6 +150,7 @@ type DatasetServiceServer interface {
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
 	// removing existing models.
 	TruncateDataset(context.Context, *TruncateDatasetRequest) (*empty.Empty, error)
+	TrainingInfo(context.Context, *TrainingInfoRequest) (*_type1.TrainingInfo, error)
 	mustEmbedUnimplementedDatasetServiceServer()
 }
 
@@ -145,37 +158,47 @@ type DatasetServiceServer interface {
 type UnimplementedDatasetServiceServer struct {
 }
 
-func (*UnimplementedDatasetServiceServer) GetDataset(context.Context, *GetDatasetRequest) (*_type.Dataset, error) {
+func (UnimplementedDatasetServiceServer) GetDataset(context.Context, *GetDatasetRequest) (*_type.Dataset, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDataset not implemented")
 }
-func (*UnimplementedDatasetServiceServer) CreateDataset(context.Context, *CreateDatasetRequest) (*empty.Empty, error) {
+func (UnimplementedDatasetServiceServer) CreateDataset(context.Context, *CreateDatasetRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateDataset not implemented")
 }
-func (*UnimplementedDatasetServiceServer) CreateOrUpdateDataset(context.Context, *CreateDatasetRequest) (*empty.Empty, error) {
+func (UnimplementedDatasetServiceServer) CreateOrUpdateDataset(context.Context, *CreateDatasetRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateOrUpdateDataset not implemented")
 }
-func (*UnimplementedDatasetServiceServer) DeleteDataset(context.Context, *DeleteDatasetRequest) (*_type.Dataset, error) {
+func (UnimplementedDatasetServiceServer) DeleteDataset(context.Context, *DeleteDatasetRequest) (*_type.Dataset, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteDataset not implemented")
 }
-func (*UnimplementedDatasetServiceServer) DeleteTag(context.Context, *DeleteTagRequest) (*empty.Empty, error) {
+func (UnimplementedDatasetServiceServer) DeleteTag(context.Context, *DeleteTagRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteTag not implemented")
 }
-func (*UnimplementedDatasetServiceServer) CreateExample(context.Context, *CreateExampleRequest) (*empty.Empty, error) {
+func (UnimplementedDatasetServiceServer) CreateExample(context.Context, *CreateExampleRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateExample not implemented")
 }
-func (*UnimplementedDatasetServiceServer) CreateOrUpdateExample(context.Context, *CreateOrUpdateExampleRequest) (*empty.Empty, error) {
+func (UnimplementedDatasetServiceServer) CreateOrUpdateExample(context.Context, *CreateOrUpdateExampleRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateOrUpdateExample not implemented")
 }
-func (*UnimplementedDatasetServiceServer) BatchCreateExample(context.Context, *BatchCreateExampleRequest) (*empty.Empty, error) {
+func (UnimplementedDatasetServiceServer) BatchCreateExample(context.Context, *BatchCreateExampleRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BatchCreateExample not implemented")
 }
-func (*UnimplementedDatasetServiceServer) TruncateDataset(context.Context, *TruncateDatasetRequest) (*empty.Empty, error) {
+func (UnimplementedDatasetServiceServer) TruncateDataset(context.Context, *TruncateDatasetRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TruncateDataset not implemented")
 }
-func (*UnimplementedDatasetServiceServer) mustEmbedUnimplementedDatasetServiceServer() {}
+func (UnimplementedDatasetServiceServer) TrainingInfo(context.Context, *TrainingInfoRequest) (*_type1.TrainingInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method TrainingInfo not implemented")
+}
+func (UnimplementedDatasetServiceServer) mustEmbedUnimplementedDatasetServiceServer() {}
 
-func RegisterDatasetServiceServer(s *grpc.Server, srv DatasetServiceServer) {
-	s.RegisterService(&_DatasetService_serviceDesc, srv)
+// UnsafeDatasetServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to DatasetServiceServer will
+// result in compilation errors.
+type UnsafeDatasetServiceServer interface {
+	mustEmbedUnimplementedDatasetServiceServer()
+}
+
+func RegisterDatasetServiceServer(s grpc.ServiceRegistrar, srv DatasetServiceServer) {
+	s.RegisterService(&DatasetService_ServiceDesc, srv)
 }
 
 func _DatasetService_GetDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -340,7 +363,28 @@ func _DatasetService_TruncateDataset_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-var _DatasetService_serviceDesc = grpc.ServiceDesc{
+func _DatasetService_TrainingInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TrainingInfoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatasetServiceServer).TrainingInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/asgt.v2alpha.DatasetService/TrainingInfo",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatasetServiceServer).TrainingInfo(ctx, req.(*TrainingInfoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// DatasetService_ServiceDesc is the grpc.ServiceDesc for DatasetService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var DatasetService_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "asgt.v2alpha.DatasetService",
 	HandlerType: (*DatasetServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
@@ -379,6 +423,10 @@ var _DatasetService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "TruncateDataset",
 			Handler:    _DatasetService_TruncateDataset_Handler,
+		},
+		{
+			MethodName: "TrainingInfo",
+			Handler:    _DatasetService_TrainingInfo_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
