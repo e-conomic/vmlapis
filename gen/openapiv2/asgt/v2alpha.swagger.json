@@ -56,138 +56,7 @@
         ]
       }
     },
-    "/v2/datasets/{datasetName}": {
-      "get": {
-        "operationId": "DatasetService_GetDataset",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/typeDataset"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "datasetName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "DatasetService"
-        ]
-      },
-      "delete": {
-        "operationId": "DatasetService_DeleteDataset",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/typeDataset"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "datasetName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "DatasetService"
-        ]
-      },
-      "put": {
-        "operationId": "DatasetService_CreateOrUpdateDataset",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "properties": {}
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "datasetName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "tags": [
-          "DatasetService"
-        ]
-      }
-    },
     "/v2/datasets/{datasetName}/examples": {
-      "delete": {
-        "summary": "Truncate a dataset. Use this operation to remove examples in a dataset used for future training without\nremoving existing models.",
-        "operationId": "DatasetService_TruncateDataset",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "properties": {}
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "datasetName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "DatasetService"
-        ]
-      },
       "post": {
         "operationId": "DatasetService_CreateExample",
         "responses": {
@@ -633,6 +502,139 @@
         ]
       }
     },
+    "/v2/datasets/{name}": {
+      "get": {
+        "operationId": "DatasetService_GetDataset",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/typeDataset"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      },
+      "delete": {
+        "operationId": "DatasetService_DeleteDataset",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/typeDataset"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      },
+      "put": {
+        "operationId": "DatasetService_CreateOrUpdateDataset",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
+    "/v2/datasets/{name}/examples": {
+      "delete": {
+        "summary": "Truncate a dataset. Use this operation to remove examples in a dataset used for future training without\nremoving existing models.",
+        "operationId": "DatasetService_TruncateDataset",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
     "/v2/datasets/{name}/model:batchSuggest": {
       "post": {
         "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset.\nReturns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.",
@@ -780,7 +782,7 @@
         ]
       }
     },
-    "/v2/tags/{datasetName}": {
+    "/v2/tags/{name}": {
       "delete": {
         "operationId": "DatasetService_DeleteTag",
         "responses": {
@@ -799,7 +801,7 @@
         },
         "parameters": [
           {
-            "name": "datasetName",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
@@ -1194,7 +1196,7 @@
     "v2alphaCreateDatasetRequest": {
       "type": "object",
       "properties": {
-        "datasetName": {
+        "name": {
           "type": "string"
         },
         "tags": {

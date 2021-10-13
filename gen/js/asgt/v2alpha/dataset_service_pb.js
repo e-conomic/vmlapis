@@ -256,7 +256,7 @@ proto.asgt.v2alpha.GetDatasetRequest.prototype.toObject = function(opt_includeIn
  */
 proto.asgt.v2alpha.GetDatasetRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -295,7 +295,7 @@ proto.asgt.v2alpha.GetDatasetRequest.deserializeBinaryFromReader = function(msg,
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetName(value);
+      msg.setName(value);
       break;
     default:
       reader.skipField();
@@ -326,7 +326,7 @@ proto.asgt.v2alpha.GetDatasetRequest.prototype.serializeBinary = function() {
  */
 proto.asgt.v2alpha.GetDatasetRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetName();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -337,10 +337,10 @@ proto.asgt.v2alpha.GetDatasetRequest.serializeBinaryToWriter = function(message,
 
 
 /**
- * optional string dataset_name = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.v2alpha.GetDatasetRequest.prototype.getDatasetName = function() {
+proto.asgt.v2alpha.GetDatasetRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -349,7 +349,7 @@ proto.asgt.v2alpha.GetDatasetRequest.prototype.getDatasetName = function() {
  * @param {string} value
  * @return {!proto.asgt.v2alpha.GetDatasetRequest} returns this
  */
-proto.asgt.v2alpha.GetDatasetRequest.prototype.setDatasetName = function(value) {
+proto.asgt.v2alpha.GetDatasetRequest.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -393,7 +393,7 @@ proto.asgt.v2alpha.CreateDatasetRequest.prototype.toObject = function(opt_includ
  */
 proto.asgt.v2alpha.CreateDatasetRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
   };
 
@@ -433,7 +433,7 @@ proto.asgt.v2alpha.CreateDatasetRequest.deserializeBinaryFromReader = function(m
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetName(value);
+      msg.setName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -468,7 +468,7 @@ proto.asgt.v2alpha.CreateDatasetRequest.prototype.serializeBinary = function() {
  */
 proto.asgt.v2alpha.CreateDatasetRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetName();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -486,10 +486,10 @@ proto.asgt.v2alpha.CreateDatasetRequest.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional string dataset_name = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.v2alpha.CreateDatasetRequest.prototype.getDatasetName = function() {
+proto.asgt.v2alpha.CreateDatasetRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -498,7 +498,7 @@ proto.asgt.v2alpha.CreateDatasetRequest.prototype.getDatasetName = function() {
  * @param {string} value
  * @return {!proto.asgt.v2alpha.CreateDatasetRequest} returns this
  */
-proto.asgt.v2alpha.CreateDatasetRequest.prototype.setDatasetName = function(value) {
+proto.asgt.v2alpha.CreateDatasetRequest.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -572,7 +572,7 @@ proto.asgt.v2alpha.DeleteDatasetRequest.prototype.toObject = function(opt_includ
  */
 proto.asgt.v2alpha.DeleteDatasetRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -611,7 +611,7 @@ proto.asgt.v2alpha.DeleteDatasetRequest.deserializeBinaryFromReader = function(m
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetName(value);
+      msg.setName(value);
       break;
     default:
       reader.skipField();
@@ -642,7 +642,7 @@ proto.asgt.v2alpha.DeleteDatasetRequest.prototype.serializeBinary = function() {
  */
 proto.asgt.v2alpha.DeleteDatasetRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetName();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -653,10 +653,10 @@ proto.asgt.v2alpha.DeleteDatasetRequest.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional string dataset_name = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.v2alpha.DeleteDatasetRequest.prototype.getDatasetName = function() {
+proto.asgt.v2alpha.DeleteDatasetRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -665,7 +665,7 @@ proto.asgt.v2alpha.DeleteDatasetRequest.prototype.getDatasetName = function() {
  * @param {string} value
  * @return {!proto.asgt.v2alpha.DeleteDatasetRequest} returns this
  */
-proto.asgt.v2alpha.DeleteDatasetRequest.prototype.setDatasetName = function(value) {
+proto.asgt.v2alpha.DeleteDatasetRequest.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -702,7 +702,7 @@ proto.asgt.v2alpha.DeleteTagRequest.prototype.toObject = function(opt_includeIns
  */
 proto.asgt.v2alpha.DeleteTagRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -741,7 +741,7 @@ proto.asgt.v2alpha.DeleteTagRequest.deserializeBinaryFromReader = function(msg, 
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetName(value);
+      msg.setName(value);
       break;
     default:
       reader.skipField();
@@ -772,7 +772,7 @@ proto.asgt.v2alpha.DeleteTagRequest.prototype.serializeBinary = function() {
  */
 proto.asgt.v2alpha.DeleteTagRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetName();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -783,10 +783,10 @@ proto.asgt.v2alpha.DeleteTagRequest.serializeBinaryToWriter = function(message, 
 
 
 /**
- * optional string dataset_name = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.v2alpha.DeleteTagRequest.prototype.getDatasetName = function() {
+proto.asgt.v2alpha.DeleteTagRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -795,7 +795,7 @@ proto.asgt.v2alpha.DeleteTagRequest.prototype.getDatasetName = function() {
  * @param {string} value
  * @return {!proto.asgt.v2alpha.DeleteTagRequest} returns this
  */
-proto.asgt.v2alpha.DeleteTagRequest.prototype.setDatasetName = function(value) {
+proto.asgt.v2alpha.DeleteTagRequest.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1384,7 +1384,7 @@ proto.asgt.v2alpha.TruncateDatasetRequest.prototype.toObject = function(opt_incl
  */
 proto.asgt.v2alpha.TruncateDatasetRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -1423,7 +1423,7 @@ proto.asgt.v2alpha.TruncateDatasetRequest.deserializeBinaryFromReader = function
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetName(value);
+      msg.setName(value);
       break;
     default:
       reader.skipField();
@@ -1454,7 +1454,7 @@ proto.asgt.v2alpha.TruncateDatasetRequest.prototype.serializeBinary = function()
  */
 proto.asgt.v2alpha.TruncateDatasetRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetName();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -1465,10 +1465,10 @@ proto.asgt.v2alpha.TruncateDatasetRequest.serializeBinaryToWriter = function(mes
 
 
 /**
- * optional string dataset_name = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.v2alpha.TruncateDatasetRequest.prototype.getDatasetName = function() {
+proto.asgt.v2alpha.TruncateDatasetRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -1477,7 +1477,7 @@ proto.asgt.v2alpha.TruncateDatasetRequest.prototype.getDatasetName = function() 
  * @param {string} value
  * @return {!proto.asgt.v2alpha.TruncateDatasetRequest} returns this
  */
-proto.asgt.v2alpha.TruncateDatasetRequest.prototype.setDatasetName = function(value) {
+proto.asgt.v2alpha.TruncateDatasetRequest.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 

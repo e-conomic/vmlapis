@@ -23,20 +23,20 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.GetDatasetRequest}
@@ -51,7 +51,7 @@ public final class DatasetServiceOuterClass {
       super(builder);
     }
     private GetDatasetRequest() {
-      datasetName_ = "";
+      name_ = "";
     }
 
     @java.lang.Override
@@ -87,7 +87,7 @@ public final class DatasetServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             default: {
@@ -122,26 +122,26 @@ public final class DatasetServiceOuterClass {
               asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest.class, asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest.Builder.class);
     }
 
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
     @java.lang.Override
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
@@ -150,18 +150,18 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -182,8 +182,8 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
     }
@@ -194,8 +194,8 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -212,8 +212,8 @@ public final class DatasetServiceOuterClass {
       }
       asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest other = (asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest) obj;
 
-      if (!getDatasetName()
-          .equals(other.getDatasetName())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -225,8 +225,8 @@ public final class DatasetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -360,7 +360,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
         return this;
       }
@@ -388,7 +388,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest buildPartial() {
         asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest result = new asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest(this);
-        result.datasetName_ = datasetName_;
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -437,8 +437,8 @@ public final class DatasetServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest other) {
         if (other == asgt.v2alpha.DatasetServiceOuterClass.GetDatasetRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -470,22 +470,22 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <pre>
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The name.
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -496,17 +496,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -517,17 +517,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -536,12 +536,12 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
@@ -550,18 +550,18 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -627,20 +627,20 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
 
     /**
      * <pre>
@@ -696,7 +696,7 @@ public final class DatasetServiceOuterClass {
       super(builder);
     }
     private CreateDatasetRequest() {
-      datasetName_ = "";
+      name_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -734,7 +734,7 @@ public final class DatasetServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             case 18: {
@@ -781,26 +781,26 @@ public final class DatasetServiceOuterClass {
               asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest.class, asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest.Builder.class);
     }
 
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
     @java.lang.Override
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
@@ -809,18 +809,18 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -892,8 +892,8 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
@@ -907,8 +907,8 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       {
         int dataSize = 0;
@@ -933,8 +933,8 @@ public final class DatasetServiceOuterClass {
       }
       asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest other = (asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest) obj;
 
-      if (!getDatasetName()
-          .equals(other.getDatasetName())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -948,8 +948,8 @@ public final class DatasetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
@@ -1087,7 +1087,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -1118,7 +1118,7 @@ public final class DatasetServiceOuterClass {
       public asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest buildPartial() {
         asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest result = new asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest(this);
         int from_bitField0_ = bitField0_;
-        result.datasetName_ = datasetName_;
+        result.name_ = name_;
         if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -1172,8 +1172,8 @@ public final class DatasetServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest other) {
         if (other == asgt.v2alpha.DatasetServiceOuterClass.CreateDatasetRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
@@ -1216,22 +1216,22 @@ public final class DatasetServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <pre>
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The name.
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1242,17 +1242,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1263,17 +1263,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -1282,12 +1282,12 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
@@ -1296,18 +1296,18 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -1519,20 +1519,20 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.DeleteDatasetRequest}
@@ -1547,7 +1547,7 @@ public final class DatasetServiceOuterClass {
       super(builder);
     }
     private DeleteDatasetRequest() {
-      datasetName_ = "";
+      name_ = "";
     }
 
     @java.lang.Override
@@ -1583,7 +1583,7 @@ public final class DatasetServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             default: {
@@ -1618,26 +1618,26 @@ public final class DatasetServiceOuterClass {
               asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest.class, asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest.Builder.class);
     }
 
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
     @java.lang.Override
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
@@ -1646,18 +1646,18 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1678,8 +1678,8 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
     }
@@ -1690,8 +1690,8 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1708,8 +1708,8 @@ public final class DatasetServiceOuterClass {
       }
       asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest other = (asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest) obj;
 
-      if (!getDatasetName()
-          .equals(other.getDatasetName())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1721,8 +1721,8 @@ public final class DatasetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1856,7 +1856,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
         return this;
       }
@@ -1884,7 +1884,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest buildPartial() {
         asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest result = new asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest(this);
-        result.datasetName_ = datasetName_;
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -1933,8 +1933,8 @@ public final class DatasetServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest other) {
         if (other == asgt.v2alpha.DatasetServiceOuterClass.DeleteDatasetRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1966,22 +1966,22 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <pre>
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The name.
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1992,17 +1992,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -2013,17 +2013,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -2032,12 +2032,12 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
@@ -2046,18 +2046,18 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -2123,20 +2123,20 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.DeleteTagRequest}
@@ -2151,7 +2151,7 @@ public final class DatasetServiceOuterClass {
       super(builder);
     }
     private DeleteTagRequest() {
-      datasetName_ = "";
+      name_ = "";
     }
 
     @java.lang.Override
@@ -2187,7 +2187,7 @@ public final class DatasetServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             default: {
@@ -2222,26 +2222,26 @@ public final class DatasetServiceOuterClass {
               asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest.class, asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest.Builder.class);
     }
 
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
     @java.lang.Override
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
@@ -2250,18 +2250,18 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2282,8 +2282,8 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
     }
@@ -2294,8 +2294,8 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2312,8 +2312,8 @@ public final class DatasetServiceOuterClass {
       }
       asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest other = (asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest) obj;
 
-      if (!getDatasetName()
-          .equals(other.getDatasetName())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2325,8 +2325,8 @@ public final class DatasetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2460,7 +2460,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
         return this;
       }
@@ -2488,7 +2488,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest buildPartial() {
         asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest result = new asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest(this);
-        result.datasetName_ = datasetName_;
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -2537,8 +2537,8 @@ public final class DatasetServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest other) {
         if (other == asgt.v2alpha.DatasetServiceOuterClass.DeleteTagRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2570,22 +2570,22 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <pre>
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The name.
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2596,17 +2596,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -2617,17 +2617,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -2636,12 +2636,12 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
@@ -2650,18 +2650,18 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -5320,20 +5320,20 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.TruncateDatasetRequest}
@@ -5348,7 +5348,7 @@ public final class DatasetServiceOuterClass {
       super(builder);
     }
     private TruncateDatasetRequest() {
-      datasetName_ = "";
+      name_ = "";
     }
 
     @java.lang.Override
@@ -5384,7 +5384,7 @@ public final class DatasetServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             default: {
@@ -5419,26 +5419,26 @@ public final class DatasetServiceOuterClass {
               asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest.class, asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest.Builder.class);
     }
 
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The name.
      */
     @java.lang.Override
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
@@ -5447,18 +5447,18 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for name.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5479,8 +5479,8 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
     }
@@ -5491,8 +5491,8 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5509,8 +5509,8 @@ public final class DatasetServiceOuterClass {
       }
       asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest other = (asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest) obj;
 
-      if (!getDatasetName()
-          .equals(other.getDatasetName())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5522,8 +5522,8 @@ public final class DatasetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5657,7 +5657,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
         return this;
       }
@@ -5685,7 +5685,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest buildPartial() {
         asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest result = new asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest(this);
-        result.datasetName_ = datasetName_;
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -5734,8 +5734,8 @@ public final class DatasetServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest other) {
         if (other == asgt.v2alpha.DatasetServiceOuterClass.TruncateDatasetRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5767,22 +5767,22 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <pre>
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The name.
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5793,17 +5793,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for datasetName.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -5814,17 +5814,17 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -5833,12 +5833,12 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
@@ -5847,18 +5847,18 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for datasetName to set.
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -6649,61 +6649,59 @@ public final class DatasetServiceOuterClass {
       "ha/type/trainings_response.proto\032\034google" +
       "/api/annotations.proto\032\033google/protobuf/" +
       "empty.proto\032\031options/annotations.proto\032\027" +
-      "validate/validate.proto\"S\n\021GetDatasetReq" +
-      "uest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[" +
-      "A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\220\001\n\024CreateD" +
-      "atasetRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%" +
-      "r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\0228\n" +
-      "\004tags\030\002 \003(\tB*\372B\037\222\001\034\"\032r\030(@2\024^[A-Za-z0-9\\s" +
-      "_.>-]*$\372B\005\222\001\002\030\001\"V\n\024DeleteDatasetRequest\022" +
-      ">\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
-      "z0-9.][A-Za-z0-9_.>-]*$\"R\n\020DeleteTagRequ" +
-      "est\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
-      "-Za-z0-9.][A-Za-z0-9_.>-]*$\"\203\001\n\024CreateEx" +
-      "ampleRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r" +
-      "#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022+\n\007" +
-      "example\030\002 \001(\0132\032.asgt.v2alpha.type.Exampl" +
-      "e\"\213\001\n\034CreateOrUpdateExampleRequest\022>\n\014da" +
-      "taset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9." +
-      "][A-Za-z0-9_.>-]*$\022+\n\007example\030\002 \001(\0132\032.as" +
-      "gt.v2alpha.type.Example\"\211\001\n\031BatchCreateE" +
-      "xampleRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%" +
-      "r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022,\n" +
-      "\010examples\030\002 \003(\0132\032.asgt.v2alpha.type.Exam" +
-      "ple\"X\n\026TruncateDatasetRequest\022>\n\014dataset" +
-      "_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Z" +
+      "validate/validate.proto\"K\n\021GetDatasetReq" +
+      "uest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-" +
+      "9.][A-Za-z0-9_.>-]*$\"\210\001\n\024CreateDatasetRe" +
+      "quest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0" +
+      "-9.][A-Za-z0-9_.>-]*$\0228\n\004tags\030\002 \003(\tB*\372B\037" +
+      "\222\001\034\"\032r\030(@2\024^[A-Za-z0-9\\s_.>-]*$\372B\005\222\001\002\030\001\"" +
+      "N\n\024DeleteDatasetRequest\0226\n\004name\030\001 \001(\tB(\372" +
+      "B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"" +
+      "J\n\020DeleteTagRequest\0226\n\004name\030\001 \001(\tB(\372B%r#" +
+      "(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\203\001\n\024" +
+      "CreateExampleRequest\022>\n\014dataset_name\030\001 \001" +
+      "(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>" +
+      "-]*$\022+\n\007example\030\002 \001(\0132\032.asgt.v2alpha.typ" +
+      "e.Example\"\213\001\n\034CreateOrUpdateExampleReque" +
+      "st\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-" +
+      "Za-z0-9.][A-Za-z0-9_.>-]*$\022+\n\007example\030\002 " +
+      "\001(\0132\032.asgt.v2alpha.type.Example\"\211\001\n\031Batc" +
+      "hCreateExampleRequest\022>\n\014dataset_name\030\001 " +
+      "\001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_." +
+      ">-]*$\022,\n\010examples\030\002 \003(\0132\032.asgt.v2alpha.t" +
+      "ype.Example\"P\n\026TruncateDatasetRequest\0226\n" +
+      "\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Z" +
       "a-z0-9_.>-]*$\"o\n\020TrainingsRequest\022>\n\014dat" +
       "aset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.]" +
       "[A-Za-z0-9_.>-]*$\022\033\n\023number_of_trainings" +
-      "\030\002 \001(\r2\317\n\n\016DatasetService\022f\n\nGetDataset\022" +
+      "\030\002 \001(\r2\247\n\n\016DatasetService\022^\n\nGetDataset\022" +
       "\037.asgt.v2alpha.GetDatasetRequest\032\022.asgt." +
-      "type.Dataset\"#\202\323\344\223\002\035\022\033/v2/datasets/{data" +
-      "set_name}\022d\n\rCreateDataset\022\".asgt.v2alph" +
-      "a.CreateDatasetRequest\032\026.google.protobuf" +
-      ".Empty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022{\n\025Creat" +
-      "eOrUpdateDataset\022\".asgt.v2alpha.CreateDa" +
-      "tasetRequest\032\026.google.protobuf.Empty\"&\202\323" +
-      "\344\223\002 \032\033/v2/datasets/{dataset_name}:\001*\022l\n\r" +
-      "DeleteDataset\022\".asgt.v2alpha.DeleteDatas" +
-      "etRequest\032\022.asgt.type.Dataset\"#\202\323\344\223\002\035*\033/" +
-      "v2/datasets/{dataset_name}\022d\n\tDeleteTag\022" +
-      "\036.asgt.v2alpha.DeleteTagRequest\032\026.google" +
-      ".protobuf.Empty\"\037\202\323\344\223\002\031*\027/v2/tags/{datas" +
-      "et_name}\022\202\001\n\rCreateExample\022\".asgt.v2alph" +
-      "a.CreateExampleRequest\032\026.google.protobuf" +
-      ".Empty\"5\202\323\344\223\002/\"$/v2/datasets/{dataset_na" +
-      "me}/examples:\007example\022\237\001\n\025CreateOrUpdate" +
-      "Example\022*.asgt.v2alpha.CreateOrUpdateExa" +
-      "mpleRequest\032\026.google.protobuf.Empty\"B\202\323\344" +
-      "\223\002<\0321/v2/datasets/{dataset_name}/example" +
-      "s/{example.id}:\007example\022\222\001\n\022BatchCreateE" +
-      "xample\022\'.asgt.v2alpha.BatchCreateExample" +
-      "Request\032\026.google.protobuf.Empty\";\202\323\344\223\0025\"" +
-      "0/v2/datasets/{dataset_name}/examples:ba" +
-      "tchCreate:\001*\022}\n\017TruncateDataset\022$.asgt.v" +
-      "2alpha.TruncateDatasetRequest\032\026.google.p" +
-      "rotobuf.Empty\",\202\323\344\223\002&*$/v2/datasets/{dat" +
-      "aset_name}/examples\022\231\001\n\014GetTrainings\022\036.a" +
+      "type.Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{name" +
+      "}\022d\n\rCreateDataset\022\".asgt.v2alpha.Create" +
+      "DatasetRequest\032\026.google.protobuf.Empty\"\027" +
+      "\202\323\344\223\002\021\"\014/v2/datasets:\001*\022s\n\025CreateOrUpdat" +
+      "eDataset\022\".asgt.v2alpha.CreateDatasetReq" +
+      "uest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v" +
+      "2/datasets/{name}:\001*\022d\n\rDeleteDataset\022\"." +
+      "asgt.v2alpha.DeleteDatasetRequest\032\022.asgt" +
+      ".type.Dataset\"\033\202\323\344\223\002\025*\023/v2/datasets/{nam" +
+      "e}\022\\\n\tDeleteTag\022\036.asgt.v2alpha.DeleteTag" +
+      "Request\032\026.google.protobuf.Empty\"\027\202\323\344\223\002\021*" +
+      "\017/v2/tags/{name}\022\202\001\n\rCreateExample\022\".asg" +
+      "t.v2alpha.CreateExampleRequest\032\026.google." +
+      "protobuf.Empty\"5\202\323\344\223\002/\"$/v2/datasets/{da" +
+      "taset_name}/examples:\007example\022\237\001\n\025Create" +
+      "OrUpdateExample\022*.asgt.v2alpha.CreateOrU" +
+      "pdateExampleRequest\032\026.google.protobuf.Em" +
+      "pty\"B\202\323\344\223\002<\0321/v2/datasets/{dataset_name}" +
+      "/examples/{example.id}:\007example\022\222\001\n\022Batc" +
+      "hCreateExample\022\'.asgt.v2alpha.BatchCreat" +
+      "eExampleRequest\032\026.google.protobuf.Empty\"" +
+      ";\202\323\344\223\0025\"0/v2/datasets/{dataset_name}/exa" +
+      "mples:batchCreate:\001*\022u\n\017TruncateDataset\022" +
+      "$.asgt.v2alpha.TruncateDatasetRequest\032\026." +
+      "google.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/datas" +
+      "ets/{name}/examples\022\231\001\n\014GetTrainings\022\036.a" +
       "sgt.v2alpha.TrainingsRequest\032$.asgt.v2al" +
       "pha.type.TrainingsResponse\"C\202\323\344\223\002=\022;/v2/" +
       "datasets/{dataset_name}/trainings/{numbe" +
@@ -6728,25 +6726,25 @@ public final class DatasetServiceOuterClass {
     internal_static_asgt_v2alpha_GetDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_GetDatasetRequest_descriptor,
-        new java.lang.String[] { "DatasetName", });
+        new java.lang.String[] { "Name", });
     internal_static_asgt_v2alpha_CreateDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_v2alpha_CreateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_CreateDatasetRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "Tags", });
+        new java.lang.String[] { "Name", "Tags", });
     internal_static_asgt_v2alpha_DeleteDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_v2alpha_DeleteDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_DeleteDatasetRequest_descriptor,
-        new java.lang.String[] { "DatasetName", });
+        new java.lang.String[] { "Name", });
     internal_static_asgt_v2alpha_DeleteTagRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_v2alpha_DeleteTagRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_DeleteTagRequest_descriptor,
-        new java.lang.String[] { "DatasetName", });
+        new java.lang.String[] { "Name", });
     internal_static_asgt_v2alpha_CreateExampleRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_v2alpha_CreateExampleRequest_fieldAccessorTable = new
@@ -6770,7 +6768,7 @@ public final class DatasetServiceOuterClass {
     internal_static_asgt_v2alpha_TruncateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_TruncateDatasetRequest_descriptor,
-        new java.lang.String[] { "DatasetName", });
+        new java.lang.String[] { "Name", });
     internal_static_asgt_v2alpha_TrainingsRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_asgt_v2alpha_TrainingsRequest_fieldAccessorTable = new

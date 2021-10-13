@@ -21,7 +21,7 @@ service DatasetService {
 
   rpc GetDataset (GetDatasetRequest) returns (asgt.type.Dataset) {
     option (google.api.http) = {
-      get: "/v2/datasets/{dataset_name}"
+      get: "/v2/datasets/{name}"
     };
   }
 
@@ -34,20 +34,20 @@ service DatasetService {
 
   rpc CreateOrUpdateDataset (CreateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      put: "/v2/datasets/{dataset_name}"
+      put: "/v2/datasets/{name}"
       body: "*"
     };
   }
 
   rpc DeleteDataset (DeleteDatasetRequest) returns (asgt.type.Dataset) {
     option (google.api.http) = {
-      delete: "/v2/datasets/{dataset_name}"
+      delete: "/v2/datasets/{name}"
     };
   }
 
   rpc DeleteTag (DeleteTagRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      delete: "/v2/tags/{dataset_name}"
+      delete: "/v2/tags/{name}"
     };
   }
 
@@ -78,7 +78,7 @@ service DatasetService {
   // removing existing models.
   rpc TruncateDataset (TruncateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      delete: "/v2/datasets/{dataset_name}/examples"
+      delete: "/v2/datasets/{name}/examples"
     };
   }
 
@@ -90,21 +90,21 @@ service DatasetService {
 }
 
 message GetDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
 
 message CreateDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   repeated string tags = 2 [(validate.rules).repeated.unique = true, 
                             (validate.rules).repeated.items.string = { pattern: "^[A-Za-z0-9\\s_.>-]*$", max_bytes: 64 }]; // text-no-spaces
 }
 
 message DeleteDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
 
 message DeleteTagRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
 
 message CreateExampleRequest {
@@ -123,11 +123,10 @@ message BatchCreateExampleRequest {
 }
 
 message TruncateDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
 
 message TrainingsRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   uint32 number_of_trainings = 2;
 }
- 
