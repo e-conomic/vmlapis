@@ -12,7 +12,8 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+// Requires gRPC-Go v1.32.0 or later.
+const _ = grpc.SupportPackageIsVersion7
 
 // ModelRegistryClient is the client API for ModelRegistry service.
 //
@@ -61,16 +62,23 @@ type ModelRegistryServer interface {
 type UnimplementedModelRegistryServer struct {
 }
 
-func (*UnimplementedModelRegistryServer) RegisterModel(context.Context, *RegisterModelRequest) (*empty.Empty, error) {
+func (UnimplementedModelRegistryServer) RegisterModel(context.Context, *RegisterModelRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RegisterModel not implemented")
 }
-func (*UnimplementedModelRegistryServer) GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error) {
+func (UnimplementedModelRegistryServer) GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCurrentModel not implemented")
 }
-func (*UnimplementedModelRegistryServer) mustEmbedUnimplementedModelRegistryServer() {}
+func (UnimplementedModelRegistryServer) mustEmbedUnimplementedModelRegistryServer() {}
 
-func RegisterModelRegistryServer(s *grpc.Server, srv ModelRegistryServer) {
-	s.RegisterService(&_ModelRegistry_serviceDesc, srv)
+// UnsafeModelRegistryServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to ModelRegistryServer will
+// result in compilation errors.
+type UnsafeModelRegistryServer interface {
+	mustEmbedUnimplementedModelRegistryServer()
+}
+
+func RegisterModelRegistryServer(s grpc.ServiceRegistrar, srv ModelRegistryServer) {
+	s.RegisterService(&ModelRegistry_ServiceDesc, srv)
 }
 
 func _ModelRegistry_RegisterModel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -109,7 +117,10 @@ func _ModelRegistry_GetCurrentModel_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
-var _ModelRegistry_serviceDesc = grpc.ServiceDesc{
+// ModelRegistry_ServiceDesc is the grpc.ServiceDesc for ModelRegistry service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var ModelRegistry_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "asgt.modelregistry.v1.ModelRegistry",
 	HandlerType: (*ModelRegistryServer)(nil),
 	Methods: []grpc.MethodDesc{

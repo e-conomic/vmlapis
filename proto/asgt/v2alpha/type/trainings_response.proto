@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package asgt.v2alpha.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype";
+
+import "google/protobuf/timestamp.proto";
+
+message Training {
+    google.protobuf.Timestamp started_at = 1;
+    google.protobuf.Timestamp ended_at = 2;
+    string training_status = 3;
+    string trainng_status_message = 4;
+}
+
+message TrainingsResponse {
+    repeated Training trainings = 1;
+}
+ 
