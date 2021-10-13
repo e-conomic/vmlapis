@@ -5940,10 +5940,10 @@ public final class DatasetServiceOuterClass {
         getDatasetNameBytes();
 
     /**
-     * <code>uint32 number_of_tranings = 2;</code>
-     * @return The numberOfTranings.
+     * <code>uint32 number_of_trainings = 2;</code>
+     * @return The numberOfTrainings.
      */
-    int getNumberOfTranings();
+    int getNumberOfTrainings();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.TrainingsRequest}
@@ -5999,7 +5999,7 @@ public final class DatasetServiceOuterClass {
             }
             case 16: {
 
-              numberOfTranings_ = input.readUInt32();
+              numberOfTrainings_ = input.readUInt32();
               break;
             }
             default: {
@@ -6080,15 +6080,15 @@ public final class DatasetServiceOuterClass {
       }
     }
 
-    public static final int NUMBER_OF_TRANINGS_FIELD_NUMBER = 2;
-    private int numberOfTranings_;
+    public static final int NUMBER_OF_TRAININGS_FIELD_NUMBER = 2;
+    private int numberOfTrainings_;
     /**
-     * <code>uint32 number_of_tranings = 2;</code>
-     * @return The numberOfTranings.
+     * <code>uint32 number_of_trainings = 2;</code>
+     * @return The numberOfTrainings.
      */
     @java.lang.Override
-    public int getNumberOfTranings() {
-      return numberOfTranings_;
+    public int getNumberOfTrainings() {
+      return numberOfTrainings_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6108,8 +6108,8 @@ public final class DatasetServiceOuterClass {
       if (!getDatasetNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
-      if (numberOfTranings_ != 0) {
-        output.writeUInt32(2, numberOfTranings_);
+      if (numberOfTrainings_ != 0) {
+        output.writeUInt32(2, numberOfTrainings_);
       }
       unknownFields.writeTo(output);
     }
@@ -6123,9 +6123,9 @@ public final class DatasetServiceOuterClass {
       if (!getDatasetNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
-      if (numberOfTranings_ != 0) {
+      if (numberOfTrainings_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, numberOfTranings_);
+          .computeUInt32Size(2, numberOfTrainings_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6144,8 +6144,8 @@ public final class DatasetServiceOuterClass {
 
       if (!getDatasetName()
           .equals(other.getDatasetName())) return false;
-      if (getNumberOfTranings()
-          != other.getNumberOfTranings()) return false;
+      if (getNumberOfTrainings()
+          != other.getNumberOfTrainings()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6159,8 +6159,8 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + NUMBER_OF_TRANINGS_FIELD_NUMBER;
-      hash = (53 * hash) + getNumberOfTranings();
+      hash = (37 * hash) + NUMBER_OF_TRAININGS_FIELD_NUMBER;
+      hash = (53 * hash) + getNumberOfTrainings();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6296,7 +6296,7 @@ public final class DatasetServiceOuterClass {
         super.clear();
         datasetName_ = "";
 
-        numberOfTranings_ = 0;
+        numberOfTrainings_ = 0;
 
         return this;
       }
@@ -6325,7 +6325,7 @@ public final class DatasetServiceOuterClass {
       public asgt.v2alpha.DatasetServiceOuterClass.TrainingsRequest buildPartial() {
         asgt.v2alpha.DatasetServiceOuterClass.TrainingsRequest result = new asgt.v2alpha.DatasetServiceOuterClass.TrainingsRequest(this);
         result.datasetName_ = datasetName_;
-        result.numberOfTranings_ = numberOfTranings_;
+        result.numberOfTrainings_ = numberOfTrainings_;
         onBuilt();
         return result;
       }
@@ -6378,8 +6378,8 @@ public final class DatasetServiceOuterClass {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        if (other.getNumberOfTranings() != 0) {
-          setNumberOfTranings(other.getNumberOfTranings());
+        if (other.getNumberOfTrainings() != 0) {
+          setNumberOfTrainings(other.getNumberOfTrainings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6506,33 +6506,33 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private int numberOfTranings_ ;
+      private int numberOfTrainings_ ;
       /**
-       * <code>uint32 number_of_tranings = 2;</code>
-       * @return The numberOfTranings.
+       * <code>uint32 number_of_trainings = 2;</code>
+       * @return The numberOfTrainings.
        */
       @java.lang.Override
-      public int getNumberOfTranings() {
-        return numberOfTranings_;
+      public int getNumberOfTrainings() {
+        return numberOfTrainings_;
       }
       /**
-       * <code>uint32 number_of_tranings = 2;</code>
-       * @param value The numberOfTranings to set.
+       * <code>uint32 number_of_trainings = 2;</code>
+       * @param value The numberOfTrainings to set.
        * @return This builder for chaining.
        */
-      public Builder setNumberOfTranings(int value) {
+      public Builder setNumberOfTrainings(int value) {
         
-        numberOfTranings_ = value;
+        numberOfTrainings_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 number_of_tranings = 2;</code>
+       * <code>uint32 number_of_trainings = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNumberOfTranings() {
+      public Builder clearNumberOfTrainings() {
         
-        numberOfTranings_ = 0;
+        numberOfTrainings_ = 0;
         onChanged();
         return this;
       }
@@ -6672,45 +6672,45 @@ public final class DatasetServiceOuterClass {
       "\010examples\030\002 \003(\0132\032.asgt.v2alpha.type.Exam" +
       "ple\"X\n\026TruncateDatasetRequest\022>\n\014dataset" +
       "_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Z" +
-      "a-z0-9_.>-]*$\"n\n\020TrainingsRequest\022>\n\014dat" +
+      "a-z0-9_.>-]*$\"o\n\020TrainingsRequest\022>\n\014dat" +
       "aset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.]" +
-      "[A-Za-z0-9_.>-]*$\022\032\n\022number_of_tranings\030" +
-      "\002 \001(\r2\317\n\n\016DatasetService\022f\n\nGetDataset\022\037" +
-      ".asgt.v2alpha.GetDatasetRequest\032\022.asgt.t" +
-      "ype.Dataset\"#\202\323\344\223\002\035\022\033/v2/datasets/{datas" +
-      "et_name}\022d\n\rCreateDataset\022\".asgt.v2alpha" +
-      ".CreateDatasetRequest\032\026.google.protobuf." +
-      "Empty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022{\n\025Create" +
-      "OrUpdateDataset\022\".asgt.v2alpha.CreateDat" +
-      "asetRequest\032\026.google.protobuf.Empty\"&\202\323\344" +
-      "\223\002 \032\033/v2/datasets/{dataset_name}:\001*\022l\n\rD" +
-      "eleteDataset\022\".asgt.v2alpha.DeleteDatase" +
-      "tRequest\032\022.asgt.type.Dataset\"#\202\323\344\223\002\035*\033/v" +
-      "2/datasets/{dataset_name}\022d\n\tDeleteTag\022\036" +
-      ".asgt.v2alpha.DeleteTagRequest\032\026.google." +
-      "protobuf.Empty\"\037\202\323\344\223\002\031*\027/v2/tags/{datase" +
-      "t_name}\022\202\001\n\rCreateExample\022\".asgt.v2alpha" +
-      ".CreateExampleRequest\032\026.google.protobuf." +
-      "Empty\"5\202\323\344\223\002/\"$/v2/datasets/{dataset_nam" +
-      "e}/examples:\007example\022\237\001\n\025CreateOrUpdateE" +
-      "xample\022*.asgt.v2alpha.CreateOrUpdateExam" +
-      "pleRequest\032\026.google.protobuf.Empty\"B\202\323\344\223" +
-      "\002<\0321/v2/datasets/{dataset_name}/examples" +
-      "/{example.id}:\007example\022\222\001\n\022BatchCreateEx" +
-      "ample\022\'.asgt.v2alpha.BatchCreateExampleR" +
-      "equest\032\026.google.protobuf.Empty\";\202\323\344\223\0025\"0" +
-      "/v2/datasets/{dataset_name}/examples:bat" +
-      "chCreate:\001*\022}\n\017TruncateDataset\022$.asgt.v2" +
-      "alpha.TruncateDatasetRequest\032\026.google.pr" +
-      "otobuf.Empty\",\202\323\344\223\002&*$/v2/datasets/{data" +
-      "set_name}/examples\022\231\001\n\014GetTrainings\022\036.as" +
-      "gt.v2alpha.TrainingsRequest\032$.asgt.v2alp" +
-      "ha.type.TrainingsResponse\"C\202\323\344\223\002=\022;/v2/d" +
-      "atasets/{dataset_name}/trainings/{number" +
-      "_of_trainings}\032G\222AD\022BManage datasets and" +
-      " examples used for training AutoSuggest " +
-      "models.B2Z0github.com/e-conomic/vmlapis/" +
-      "gen/go/asgt/v2alphab\006proto3"
+      "[A-Za-z0-9_.>-]*$\022\033\n\023number_of_trainings" +
+      "\030\002 \001(\r2\317\n\n\016DatasetService\022f\n\nGetDataset\022" +
+      "\037.asgt.v2alpha.GetDatasetRequest\032\022.asgt." +
+      "type.Dataset\"#\202\323\344\223\002\035\022\033/v2/datasets/{data" +
+      "set_name}\022d\n\rCreateDataset\022\".asgt.v2alph" +
+      "a.CreateDatasetRequest\032\026.google.protobuf" +
+      ".Empty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022{\n\025Creat" +
+      "eOrUpdateDataset\022\".asgt.v2alpha.CreateDa" +
+      "tasetRequest\032\026.google.protobuf.Empty\"&\202\323" +
+      "\344\223\002 \032\033/v2/datasets/{dataset_name}:\001*\022l\n\r" +
+      "DeleteDataset\022\".asgt.v2alpha.DeleteDatas" +
+      "etRequest\032\022.asgt.type.Dataset\"#\202\323\344\223\002\035*\033/" +
+      "v2/datasets/{dataset_name}\022d\n\tDeleteTag\022" +
+      "\036.asgt.v2alpha.DeleteTagRequest\032\026.google" +
+      ".protobuf.Empty\"\037\202\323\344\223\002\031*\027/v2/tags/{datas" +
+      "et_name}\022\202\001\n\rCreateExample\022\".asgt.v2alph" +
+      "a.CreateExampleRequest\032\026.google.protobuf" +
+      ".Empty\"5\202\323\344\223\002/\"$/v2/datasets/{dataset_na" +
+      "me}/examples:\007example\022\237\001\n\025CreateOrUpdate" +
+      "Example\022*.asgt.v2alpha.CreateOrUpdateExa" +
+      "mpleRequest\032\026.google.protobuf.Empty\"B\202\323\344" +
+      "\223\002<\0321/v2/datasets/{dataset_name}/example" +
+      "s/{example.id}:\007example\022\222\001\n\022BatchCreateE" +
+      "xample\022\'.asgt.v2alpha.BatchCreateExample" +
+      "Request\032\026.google.protobuf.Empty\";\202\323\344\223\0025\"" +
+      "0/v2/datasets/{dataset_name}/examples:ba" +
+      "tchCreate:\001*\022}\n\017TruncateDataset\022$.asgt.v" +
+      "2alpha.TruncateDatasetRequest\032\026.google.p" +
+      "rotobuf.Empty\",\202\323\344\223\002&*$/v2/datasets/{dat" +
+      "aset_name}/examples\022\231\001\n\014GetTrainings\022\036.a" +
+      "sgt.v2alpha.TrainingsRequest\032$.asgt.v2al" +
+      "pha.type.TrainingsResponse\"C\202\323\344\223\002=\022;/v2/" +
+      "datasets/{dataset_name}/trainings/{numbe" +
+      "r_of_trainings}\032G\222AD\022BManage datasets an" +
+      "d examples used for training AutoSuggest" +
+      " models.B2Z0github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/v2alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6776,7 +6776,7 @@ public final class DatasetServiceOuterClass {
     internal_static_asgt_v2alpha_TrainingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_TrainingsRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "NumberOfTranings", });
+        new java.lang.String[] { "DatasetName", "NumberOfTrainings", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

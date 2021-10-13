@@ -1515,7 +1515,7 @@ proto.asgt.v2alpha.TrainingsRequest.prototype.toObject = function(opt_includeIns
 proto.asgt.v2alpha.TrainingsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    numberOfTranings: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    numberOfTrainings: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -1558,7 +1558,7 @@ proto.asgt.v2alpha.TrainingsRequest.deserializeBinaryFromReader = function(msg, 
       break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setNumberOfTranings(value);
+      msg.setNumberOfTrainings(value);
       break;
     default:
       reader.skipField();
@@ -1596,7 +1596,7 @@ proto.asgt.v2alpha.TrainingsRequest.serializeBinaryToWriter = function(message, 
       f
     );
   }
-  f = message.getNumberOfTranings();
+  f = message.getNumberOfTrainings();
   if (f !== 0) {
     writer.writeUint32(
       2,
@@ -1625,10 +1625,10 @@ proto.asgt.v2alpha.TrainingsRequest.prototype.setDatasetName = function(value) {
 
 
 /**
- * optional uint32 number_of_tranings = 2;
+ * optional uint32 number_of_trainings = 2;
  * @return {number}
  */
-proto.asgt.v2alpha.TrainingsRequest.prototype.getNumberOfTranings = function() {
+proto.asgt.v2alpha.TrainingsRequest.prototype.getNumberOfTrainings = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -1637,7 +1637,7 @@ proto.asgt.v2alpha.TrainingsRequest.prototype.getNumberOfTranings = function() {
  * @param {number} value
  * @return {!proto.asgt.v2alpha.TrainingsRequest} returns this
  */
-proto.asgt.v2alpha.TrainingsRequest.prototype.setNumberOfTranings = function(value) {
+proto.asgt.v2alpha.TrainingsRequest.prototype.setNumberOfTrainings = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
