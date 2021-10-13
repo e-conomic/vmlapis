@@ -4,7 +4,7 @@ import grpc
 
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 from vml_proto.asgt.v2alpha import dataset_service_pb2 as asgt_dot_v2alpha_dot_dataset__service__pb2
-from vml_proto.asgt.v2alpha.type import training_info_pb2 as asgt_dot_v2alpha_dot_type_dot_training__info__pb2
+from vml_proto.asgt.v2alpha.type import trainings_response_pb2 as asgt_dot_v2alpha_dot_type_dot_trainings__response__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
@@ -62,10 +62,10 @@ class DatasetServiceStub(object):
                 request_serializer=asgt_dot_v2alpha_dot_dataset__service__pb2.TruncateDatasetRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
-        self.TrainingInfo = channel.unary_unary(
-                '/asgt.v2alpha.DatasetService/TrainingInfo',
-                request_serializer=asgt_dot_v2alpha_dot_dataset__service__pb2.TrainingInfoRequest.SerializeToString,
-                response_deserializer=asgt_dot_v2alpha_dot_type_dot_training__info__pb2.TrainingInfo.FromString,
+        self.GetTrainings = channel.unary_unary(
+                '/asgt.v2alpha.DatasetService/GetTrainings',
+                request_serializer=asgt_dot_v2alpha_dot_dataset__service__pb2.TrainingsRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2alpha_dot_type_dot_trainings__response__pb2.TrainingsResponse.FromString,
                 )
 
 
@@ -129,7 +129,7 @@ class DatasetServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def TrainingInfo(self, request, context):
+    def GetTrainings(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -183,10 +183,10 @@ def add_DatasetServiceServicer_to_server(servicer, server):
                     request_deserializer=asgt_dot_v2alpha_dot_dataset__service__pb2.TruncateDatasetRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
-            'TrainingInfo': grpc.unary_unary_rpc_method_handler(
-                    servicer.TrainingInfo,
-                    request_deserializer=asgt_dot_v2alpha_dot_dataset__service__pb2.TrainingInfoRequest.FromString,
-                    response_serializer=asgt_dot_v2alpha_dot_type_dot_training__info__pb2.TrainingInfo.SerializeToString,
+            'GetTrainings': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetTrainings,
+                    request_deserializer=asgt_dot_v2alpha_dot_dataset__service__pb2.TrainingsRequest.FromString,
+                    response_serializer=asgt_dot_v2alpha_dot_type_dot_trainings__response__pb2.TrainingsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -343,7 +343,7 @@ class DatasetService(object):
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def TrainingInfo(request,
+    def GetTrainings(request,
             target,
             options=(),
             channel_credentials=None,
@@ -352,8 +352,8 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2alpha.DatasetService/TrainingInfo',
-            asgt_dot_v2alpha_dot_dataset__service__pb2.TrainingInfoRequest.SerializeToString,
-            asgt_dot_v2alpha_dot_type_dot_training__info__pb2.TrainingInfo.FromString,
+        return grpc.experimental.unary_unary(request, target, '/asgt.v2alpha.DatasetService/GetTrainings',
+            asgt_dot_v2alpha_dot_dataset__service__pb2.TrainingsRequest.SerializeToString,
+            asgt_dot_v2alpha_dot_type_dot_trainings__response__pb2.TrainingsResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

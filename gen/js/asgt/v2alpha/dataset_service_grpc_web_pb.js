@@ -16,7 +16,7 @@ var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js')
 
 var asgt_v2alpha_type_example_pb = require('../../asgt/v2alpha/type/example_pb.js')
 
-var asgt_v2alpha_type_training_info_pb = require('../../asgt/v2alpha/type/training_info_pb.js')
+var asgt_v2alpha_type_trainings_response_pb = require('../../asgt/v2alpha/type/trainings_response_pb.js')
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 
@@ -804,80 +804,80 @@ proto.asgt.v2alpha.DatasetServicePromiseClient.prototype.truncateDataset =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.v2alpha.TrainingInfoRequest,
- *   !proto.asgt.v2alpha.type.TrainingInfo>}
+ *   !proto.asgt.v2alpha.TrainingsRequest,
+ *   !proto.asgt.v2alpha.type.TrainingsResponse>}
  */
-const methodDescriptor_DatasetService_TrainingInfo = new grpc.web.MethodDescriptor(
-  '/asgt.v2alpha.DatasetService/TrainingInfo',
+const methodDescriptor_DatasetService_GetTrainings = new grpc.web.MethodDescriptor(
+  '/asgt.v2alpha.DatasetService/GetTrainings',
   grpc.web.MethodType.UNARY,
-  proto.asgt.v2alpha.TrainingInfoRequest,
-  asgt_v2alpha_type_training_info_pb.TrainingInfo,
+  proto.asgt.v2alpha.TrainingsRequest,
+  asgt_v2alpha_type_trainings_response_pb.TrainingsResponse,
   /**
-   * @param {!proto.asgt.v2alpha.TrainingInfoRequest} request
+   * @param {!proto.asgt.v2alpha.TrainingsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  asgt_v2alpha_type_training_info_pb.TrainingInfo.deserializeBinary
+  asgt_v2alpha_type_trainings_response_pb.TrainingsResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.v2alpha.TrainingInfoRequest,
- *   !proto.asgt.v2alpha.type.TrainingInfo>}
+ *   !proto.asgt.v2alpha.TrainingsRequest,
+ *   !proto.asgt.v2alpha.type.TrainingsResponse>}
  */
-const methodInfo_DatasetService_TrainingInfo = new grpc.web.AbstractClientBase.MethodInfo(
-  asgt_v2alpha_type_training_info_pb.TrainingInfo,
+const methodInfo_DatasetService_GetTrainings = new grpc.web.AbstractClientBase.MethodInfo(
+  asgt_v2alpha_type_trainings_response_pb.TrainingsResponse,
   /**
-   * @param {!proto.asgt.v2alpha.TrainingInfoRequest} request
+   * @param {!proto.asgt.v2alpha.TrainingsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  asgt_v2alpha_type_training_info_pb.TrainingInfo.deserializeBinary
+  asgt_v2alpha_type_trainings_response_pb.TrainingsResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.asgt.v2alpha.TrainingInfoRequest} request The
+ * @param {!proto.asgt.v2alpha.TrainingsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.v2alpha.type.TrainingInfo)}
+ * @param {function(?grpc.web.Error, ?proto.asgt.v2alpha.type.TrainingsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2alpha.type.TrainingInfo>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2alpha.type.TrainingsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.v2alpha.DatasetServiceClient.prototype.trainingInfo =
+proto.asgt.v2alpha.DatasetServiceClient.prototype.getTrainings =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.v2alpha.DatasetService/TrainingInfo',
+      '/asgt.v2alpha.DatasetService/GetTrainings',
       request,
       metadata || {},
-      methodDescriptor_DatasetService_TrainingInfo,
+      methodDescriptor_DatasetService_GetTrainings,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.v2alpha.TrainingInfoRequest} request The
+ * @param {!proto.asgt.v2alpha.TrainingsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.v2alpha.type.TrainingInfo>}
+ * @return {!Promise<!proto.asgt.v2alpha.type.TrainingsResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.v2alpha.DatasetServicePromiseClient.prototype.trainingInfo =
+proto.asgt.v2alpha.DatasetServicePromiseClient.prototype.getTrainings =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.v2alpha.DatasetService/TrainingInfo',
+      '/asgt.v2alpha.DatasetService/GetTrainings',
       request,
       metadata || {},
-      methodDescriptor_DatasetService_TrainingInfo);
+      methodDescriptor_DatasetService_GetTrainings);
 };
 
 
