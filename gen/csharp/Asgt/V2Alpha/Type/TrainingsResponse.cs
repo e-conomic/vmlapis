@@ -26,17 +26,18 @@ namespace Asgt.V2Alpha.Type {
           string.Concat(
             "Ciphc2d0L3YyYWxwaGEvdHlwZS90cmFpbmluZ3NfcmVzcG9uc2UucHJvdG8S",
             "EWFzZ3QudjJhbHBoYS50eXBlGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIqEBCghUcmFpbmluZxIuCgpzdGFydGVkX2F0GAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRlZF9hdBgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFwoPdHJhaW5pbmdfc3RhdHVzGAMg",
-            "ASgJEh4KFnRyYWlubmdfc3RhdHVzX21lc3NhZ2UYBCABKAkiQwoRVHJhaW5p",
-            "bmdzUmVzcG9uc2USLgoJdHJhaW5pbmdzGAEgAygLMhsuYXNndC52MmFscGhh",
-            "LnR5cGUuVHJhaW5pbmdCQFo+Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
-            "cy9nZW4vZ28vYXNndC92MmFscGhhL3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
+            "LnByb3RvIrQBCghUcmFpbmluZxIuCgpjcmVhdGVkX2F0GAEgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZzdGF0dXMYAiABKAkSFwoPdHJh",
+            "aW5pbmdfc3RhdHVzGAMgASgJEh4KFnRyYWlubmdfc3RhdHVzX21lc3NhZ2UY",
+            "BCABKAkSLwoLZmluaXNoX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIkMKEVRyYWluaW5nc1Jlc3BvbnNlEi4KCXRyYWluaW5ncxgB",
+            "IAMoCzIbLmFzZ3QudjJhbHBoYS50eXBlLlRyYWluaW5nQkBaPmdpdGh1Yi5j",
+            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjJhbHBoYS90eXBl",
+            "O2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.Type.Training), global::Asgt.V2Alpha.Type.Training.Parser, new[]{ "StartedAt", "EndedAt", "TrainingStatus", "TrainngStatusMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.Type.Training), global::Asgt.V2Alpha.Type.Training.Parser, new[]{ "CreatedAt", "Status", "TrainingStatus", "TrainngStatusMessage", "FinishTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.Type.TrainingsResponse), global::Asgt.V2Alpha.Type.TrainingsResponse.Parser, new[]{ "Trainings" }, null, null, null, null)
           }));
     }
@@ -73,10 +74,11 @@ namespace Asgt.V2Alpha.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Training(Training other) : this() {
-      startedAt_ = other.startedAt_ != null ? other.startedAt_.Clone() : null;
-      endedAt_ = other.endedAt_ != null ? other.endedAt_.Clone() : null;
+      createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      status_ = other.status_;
       trainingStatus_ = other.trainingStatus_;
       trainngStatusMessage_ = other.trainngStatusMessage_;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,25 +87,25 @@ namespace Asgt.V2Alpha.Type {
       return new Training(this);
     }
 
-    /// <summary>Field number for the "started_at" field.</summary>
-    public const int StartedAtFieldNumber = 1;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp startedAt_;
+    /// <summary>Field number for the "created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp StartedAt {
-      get { return startedAt_; }
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
+      get { return createdAt_; }
       set {
-        startedAt_ = value;
+        createdAt_ = value;
       }
     }
 
-    /// <summary>Field number for the "ended_at" field.</summary>
-    public const int EndedAtFieldNumber = 2;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp endedAt_;
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 2;
+    private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp EndedAt {
-      get { return endedAt_; }
+    public string Status {
+      get { return status_; }
       set {
-        endedAt_ = value;
+        status_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -129,6 +131,17 @@ namespace Asgt.V2Alpha.Type {
       }
     }
 
+    /// <summary>Field number for the "finish_time" field.</summary>
+    public const int FinishTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp finishTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FinishTime {
+      get { return finishTime_; }
+      set {
+        finishTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Training);
@@ -142,20 +155,22 @@ namespace Asgt.V2Alpha.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(StartedAt, other.StartedAt)) return false;
-      if (!object.Equals(EndedAt, other.EndedAt)) return false;
+      if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      if (Status != other.Status) return false;
       if (TrainingStatus != other.TrainingStatus) return false;
       if (TrainngStatusMessage != other.TrainngStatusMessage) return false;
+      if (!object.Equals(FinishTime, other.FinishTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (startedAt_ != null) hash ^= StartedAt.GetHashCode();
-      if (endedAt_ != null) hash ^= EndedAt.GetHashCode();
+      if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (TrainingStatus.Length != 0) hash ^= TrainingStatus.GetHashCode();
       if (TrainngStatusMessage.Length != 0) hash ^= TrainngStatusMessage.GetHashCode();
+      if (finishTime_ != null) hash ^= FinishTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,13 +184,13 @@ namespace Asgt.V2Alpha.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (startedAt_ != null) {
+      if (createdAt_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(StartedAt);
+        output.WriteMessage(CreatedAt);
       }
-      if (endedAt_ != null) {
+      if (Status.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteMessage(EndedAt);
+        output.WriteString(Status);
       }
       if (TrainingStatus.Length != 0) {
         output.WriteRawTag(26);
@@ -185,6 +200,10 @@ namespace Asgt.V2Alpha.Type {
         output.WriteRawTag(34);
         output.WriteString(TrainngStatusMessage);
       }
+      if (finishTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FinishTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -193,17 +212,20 @@ namespace Asgt.V2Alpha.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (startedAt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartedAt);
+      if (createdAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
       }
-      if (endedAt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndedAt);
+      if (Status.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Status);
       }
       if (TrainingStatus.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TrainingStatus);
       }
       if (TrainngStatusMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TrainngStatusMessage);
+      }
+      if (finishTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -216,23 +238,26 @@ namespace Asgt.V2Alpha.Type {
       if (other == null) {
         return;
       }
-      if (other.startedAt_ != null) {
-        if (startedAt_ == null) {
-          StartedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+      if (other.createdAt_ != null) {
+        if (createdAt_ == null) {
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
-        StartedAt.MergeFrom(other.StartedAt);
+        CreatedAt.MergeFrom(other.CreatedAt);
       }
-      if (other.endedAt_ != null) {
-        if (endedAt_ == null) {
-          EndedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        EndedAt.MergeFrom(other.EndedAt);
+      if (other.Status.Length != 0) {
+        Status = other.Status;
       }
       if (other.TrainingStatus.Length != 0) {
         TrainingStatus = other.TrainingStatus;
       }
       if (other.TrainngStatusMessage.Length != 0) {
         TrainngStatusMessage = other.TrainngStatusMessage;
+      }
+      if (other.finishTime_ != null) {
+        if (finishTime_ == null) {
+          FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FinishTime.MergeFrom(other.FinishTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -249,17 +274,14 @@ namespace Asgt.V2Alpha.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (startedAt_ == null) {
-              StartedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(StartedAt);
+            input.ReadMessage(CreatedAt);
             break;
           }
           case 18: {
-            if (endedAt_ == null) {
-              EndedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(EndedAt);
+            Status = input.ReadString();
             break;
           }
           case 26: {
@@ -268,6 +290,13 @@ namespace Asgt.V2Alpha.Type {
           }
           case 34: {
             TrainngStatusMessage = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (finishTime_ == null) {
+              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTime);
             break;
           }
         }
@@ -285,17 +314,14 @@ namespace Asgt.V2Alpha.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (startedAt_ == null) {
-              StartedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(StartedAt);
+            input.ReadMessage(CreatedAt);
             break;
           }
           case 18: {
-            if (endedAt_ == null) {
-              EndedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(EndedAt);
+            Status = input.ReadString();
             break;
           }
           case 26: {
@@ -304,6 +330,13 @@ namespace Asgt.V2Alpha.Type {
           }
           case 34: {
             TrainngStatusMessage = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (finishTime_ == null) {
+              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTime);
             break;
           }
         }

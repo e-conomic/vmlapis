@@ -1138,19 +1138,22 @@
     "typeTraining": {
       "type": "object",
       "properties": {
-        "startedAt": {
+        "createdAt": {
           "type": "string",
           "format": "date-time"
         },
-        "endedAt": {
-          "type": "string",
-          "format": "date-time"
+        "status": {
+          "type": "string"
         },
         "trainingStatus": {
           "type": "string"
         },
         "trainngStatusMessage": {
           "type": "string"
+        },
+        "finishTime": {
+          "type": "string",
+          "format": "date-time"
         }
       }
     },

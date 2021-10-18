@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n*asgt/v2alpha/type/trainings_response.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa1\x01\n\x08Training\x12.\n\nstarted_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nded_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x17\n\x0ftraining_status\x18\x03 \x01(\t\x12\x1e\n\x16trainng_status_message\x18\x04 \x01(\t\"C\n\x11TrainingsResponse\x12.\n\ttrainings\x18\x01 \x03(\x0b\x32\x1b.asgt.v2alpha.type.TrainingB@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
+  serialized_pb=b'\n*asgt/v2alpha/type/trainings_response.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1fgoogle/protobuf/timestamp.proto\"\xb4\x01\n\x08Training\x12.\n\ncreated_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x17\n\x0ftraining_status\x18\x03 \x01(\t\x12\x1e\n\x16trainng_status_message\x18\x04 \x01(\t\x12/\n\x0b\x66inish_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"C\n\x11TrainingsResponse\x12.\n\ttrainings\x18\x01 \x03(\x0b\x32\x1b.asgt.v2alpha.type.TrainingB@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -36,16 +36,16 @@ _TRAINING = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='started_at', full_name='asgt.v2alpha.type.Training.started_at', index=0,
+      name='created_at', full_name='asgt.v2alpha.type.Training.created_at', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ended_at', full_name='asgt.v2alpha.type.Training.ended_at', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='status', full_name='asgt.v2alpha.type.Training.status', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -63,6 +63,13 @@ _TRAINING = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='finish_time', full_name='asgt.v2alpha.type.Training.finish_time', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -76,7 +83,7 @@ _TRAINING = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=99,
-  serialized_end=260,
+  serialized_end=279,
 )
 
 
@@ -107,12 +114,12 @@ _TRAININGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=262,
-  serialized_end=329,
+  serialized_start=281,
+  serialized_end=348,
 )
 
-_TRAINING.fields_by_name['started_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_TRAINING.fields_by_name['ended_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_TRAINING.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_TRAINING.fields_by_name['finish_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _TRAININGSRESPONSE.fields_by_name['trainings'].message_type = _TRAINING
 DESCRIPTOR.message_types_by_name['Training'] = _TRAINING
 DESCRIPTOR.message_types_by_name['TrainingsResponse'] = _TRAININGSRESPONSE

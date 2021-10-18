@@ -19,34 +19,31 @@ public final class TrainingsResponseOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.google.protobuf.Timestamp started_at = 1;</code>
-     * @return Whether the startedAt field is set.
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return Whether the createdAt field is set.
      */
-    boolean hasStartedAt();
+    boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp started_at = 1;</code>
-     * @return The startedAt.
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return The createdAt.
      */
-    com.google.protobuf.Timestamp getStartedAt();
+    com.google.protobuf.Timestamp getCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp started_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
      */
-    com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-     * @return Whether the endedAt field is set.
+     * <code>string status = 2;</code>
+     * @return The status.
      */
-    boolean hasEndedAt();
+    java.lang.String getStatus();
     /**
-     * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-     * @return The endedAt.
+     * <code>string status = 2;</code>
+     * @return The bytes for status.
      */
-    com.google.protobuf.Timestamp getEndedAt();
-    /**
-     * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getEndedAtOrBuilder();
+    com.google.protobuf.ByteString
+        getStatusBytes();
 
     /**
      * <code>string training_status = 3;</code>
@@ -71,6 +68,21 @@ public final class TrainingsResponseOuterClass {
      */
     com.google.protobuf.ByteString
         getTrainngStatusMessageBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * @return Whether the finishTime field is set.
+     */
+    boolean hasFinishTime();
+    /**
+     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * @return The finishTime.
+     */
+    com.google.protobuf.Timestamp getFinishTime();
+    /**
+     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.type.Training}
@@ -85,6 +97,7 @@ public final class TrainingsResponseOuterClass {
       super(builder);
     }
     private Training() {
+      status_ = "";
       trainingStatus_ = "";
       trainngStatusMessage_ = "";
     }
@@ -121,28 +134,21 @@ public final class TrainingsResponseOuterClass {
               break;
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (startedAt_ != null) {
-                subBuilder = startedAt_.toBuilder();
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
               }
-              startedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(startedAt_);
-                startedAt_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 18: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (endedAt_ != null) {
-                subBuilder = endedAt_.toBuilder();
-              }
-              endedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(endedAt_);
-                endedAt_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              status_ = s;
               break;
             }
             case 26: {
@@ -155,6 +161,19 @@ public final class TrainingsResponseOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               trainngStatusMessage_ = s;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (finishTime_ != null) {
+                subBuilder = finishTime_.toBuilder();
+              }
+              finishTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(finishTime_);
+                finishTime_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -189,56 +208,68 @@ public final class TrainingsResponseOuterClass {
               asgt.v2alpha.type.TrainingsResponseOuterClass.Training.class, asgt.v2alpha.type.TrainingsResponseOuterClass.Training.Builder.class);
     }
 
-    public static final int STARTED_AT_FIELD_NUMBER = 1;
-    private com.google.protobuf.Timestamp startedAt_;
+    public static final int CREATED_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp started_at = 1;</code>
-     * @return Whether the startedAt field is set.
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return Whether the createdAt field is set.
      */
     @java.lang.Override
-    public boolean hasStartedAt() {
-      return startedAt_ != null;
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp started_at = 1;</code>
-     * @return The startedAt.
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return The createdAt.
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getStartedAt() {
-      return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp started_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
-      return getStartedAt();
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
     }
 
-    public static final int ENDED_AT_FIELD_NUMBER = 2;
-    private com.google.protobuf.Timestamp endedAt_;
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object status_;
     /**
-     * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-     * @return Whether the endedAt field is set.
+     * <code>string status = 2;</code>
+     * @return The status.
      */
     @java.lang.Override
-    public boolean hasEndedAt() {
-      return endedAt_ != null;
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-     * @return The endedAt.
+     * <code>string status = 2;</code>
+     * @return The bytes for status.
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getEndedAt() {
-      return endedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endedAt_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getEndedAtOrBuilder() {
-      return getEndedAt();
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int TRAINING_STATUS_FIELD_NUMBER = 3;
@@ -317,6 +348,32 @@ public final class TrainingsResponseOuterClass {
       }
     }
 
+    public static final int FINISH_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp finishTime_;
+    /**
+     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * @return Whether the finishTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinishTime() {
+      return finishTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * @return The finishTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getFinishTime() {
+      return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
+      return getFinishTime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -331,17 +388,20 @@ public final class TrainingsResponseOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (startedAt_ != null) {
-        output.writeMessage(1, getStartedAt());
+      if (createdAt_ != null) {
+        output.writeMessage(1, getCreatedAt());
       }
-      if (endedAt_ != null) {
-        output.writeMessage(2, getEndedAt());
+      if (!getStatusBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
       }
       if (!getTrainingStatusBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, trainingStatus_);
       }
       if (!getTrainngStatusMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, trainngStatusMessage_);
+      }
+      if (finishTime_ != null) {
+        output.writeMessage(5, getFinishTime());
       }
       unknownFields.writeTo(output);
     }
@@ -352,19 +412,22 @@ public final class TrainingsResponseOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (startedAt_ != null) {
+      if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStartedAt());
+          .computeMessageSize(1, getCreatedAt());
       }
-      if (endedAt_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getEndedAt());
+      if (!getStatusBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
       }
       if (!getTrainingStatusBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, trainingStatus_);
       }
       if (!getTrainngStatusMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, trainngStatusMessage_);
+      }
+      if (finishTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getFinishTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -381,20 +444,22 @@ public final class TrainingsResponseOuterClass {
       }
       asgt.v2alpha.type.TrainingsResponseOuterClass.Training other = (asgt.v2alpha.type.TrainingsResponseOuterClass.Training) obj;
 
-      if (hasStartedAt() != other.hasStartedAt()) return false;
-      if (hasStartedAt()) {
-        if (!getStartedAt()
-            .equals(other.getStartedAt())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      if (hasEndedAt() != other.hasEndedAt()) return false;
-      if (hasEndedAt()) {
-        if (!getEndedAt()
-            .equals(other.getEndedAt())) return false;
-      }
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
       if (!getTrainingStatus()
           .equals(other.getTrainingStatus())) return false;
       if (!getTrainngStatusMessage()
           .equals(other.getTrainngStatusMessage())) return false;
+      if (hasFinishTime() != other.hasFinishTime()) return false;
+      if (hasFinishTime()) {
+        if (!getFinishTime()
+            .equals(other.getFinishTime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -406,18 +471,20 @@ public final class TrainingsResponseOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStartedAt()) {
-        hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getStartedAt().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
       }
-      if (hasEndedAt()) {
-        hash = (37 * hash) + ENDED_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getEndedAt().hashCode();
-      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
       hash = (37 * hash) + TRAINING_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getTrainingStatus().hashCode();
       hash = (37 * hash) + TRAINNG_STATUS_MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getTrainngStatusMessage().hashCode();
+      if (hasFinishTime()) {
+        hash = (37 * hash) + FINISH_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getFinishTime().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -551,22 +618,24 @@ public final class TrainingsResponseOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (startedAtBuilder_ == null) {
-          startedAt_ = null;
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
         } else {
-          startedAt_ = null;
-          startedAtBuilder_ = null;
+          createdAt_ = null;
+          createdAtBuilder_ = null;
         }
-        if (endedAtBuilder_ == null) {
-          endedAt_ = null;
-        } else {
-          endedAt_ = null;
-          endedAtBuilder_ = null;
-        }
+        status_ = "";
+
         trainingStatus_ = "";
 
         trainngStatusMessage_ = "";
 
+        if (finishTimeBuilder_ == null) {
+          finishTime_ = null;
+        } else {
+          finishTime_ = null;
+          finishTimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -593,18 +662,19 @@ public final class TrainingsResponseOuterClass {
       @java.lang.Override
       public asgt.v2alpha.type.TrainingsResponseOuterClass.Training buildPartial() {
         asgt.v2alpha.type.TrainingsResponseOuterClass.Training result = new asgt.v2alpha.type.TrainingsResponseOuterClass.Training(this);
-        if (startedAtBuilder_ == null) {
-          result.startedAt_ = startedAt_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
         } else {
-          result.startedAt_ = startedAtBuilder_.build();
+          result.createdAt_ = createdAtBuilder_.build();
         }
-        if (endedAtBuilder_ == null) {
-          result.endedAt_ = endedAt_;
-        } else {
-          result.endedAt_ = endedAtBuilder_.build();
-        }
+        result.status_ = status_;
         result.trainingStatus_ = trainingStatus_;
         result.trainngStatusMessage_ = trainngStatusMessage_;
+        if (finishTimeBuilder_ == null) {
+          result.finishTime_ = finishTime_;
+        } else {
+          result.finishTime_ = finishTimeBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -653,11 +723,12 @@ public final class TrainingsResponseOuterClass {
 
       public Builder mergeFrom(asgt.v2alpha.type.TrainingsResponseOuterClass.Training other) {
         if (other == asgt.v2alpha.type.TrainingsResponseOuterClass.Training.getDefaultInstance()) return this;
-        if (other.hasStartedAt()) {
-          mergeStartedAt(other.getStartedAt());
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
         }
-        if (other.hasEndedAt()) {
-          mergeEndedAt(other.getEndedAt());
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          onChanged();
         }
         if (!other.getTrainingStatus().isEmpty()) {
           trainingStatus_ = other.trainingStatus_;
@@ -666,6 +737,9 @@ public final class TrainingsResponseOuterClass {
         if (!other.getTrainngStatusMessage().isEmpty()) {
           trainngStatusMessage_ = other.trainngStatusMessage_;
           onChanged();
+        }
+        if (other.hasFinishTime()) {
+          mergeFinishTime(other.getFinishTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -696,242 +770,199 @@ public final class TrainingsResponseOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp startedAt_;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
-       * @return Whether the startedAt field is set.
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * @return Whether the createdAt field is set.
        */
-      public boolean hasStartedAt() {
-        return startedAtBuilder_ != null || startedAt_ != null;
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
-       * @return The startedAt.
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * @return The createdAt.
        */
-      public com.google.protobuf.Timestamp getStartedAt() {
-        if (startedAtBuilder_ == null) {
-          return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
         } else {
-          return startedAtBuilder_.getMessage();
+          return createdAtBuilder_.getMessage();
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
-      public Builder setStartedAt(com.google.protobuf.Timestamp value) {
-        if (startedAtBuilder_ == null) {
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          startedAt_ = value;
+          createdAt_ = value;
           onChanged();
         } else {
-          startedAtBuilder_.setMessage(value);
+          createdAtBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
-      public Builder setStartedAt(
+      public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (startedAtBuilder_ == null) {
-          startedAt_ = builderForValue.build();
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
           onChanged();
         } else {
-          startedAtBuilder_.setMessage(builderForValue.build());
+          createdAtBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
-      public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
-        if (startedAtBuilder_ == null) {
-          if (startedAt_ != null) {
-            startedAt_ =
-              com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
           } else {
-            startedAt_ = value;
+            createdAt_ = value;
           }
           onChanged();
         } else {
-          startedAtBuilder_.mergeFrom(value);
+          createdAtBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
-      public Builder clearStartedAt() {
-        if (startedAtBuilder_ == null) {
-          startedAt_ = null;
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
           onChanged();
         } else {
-          startedAt_ = null;
-          startedAtBuilder_ = null;
+          createdAt_ = null;
+          createdAtBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
-      public com.google.protobuf.Timestamp.Builder getStartedAtBuilder() {
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
         
         onChanged();
-        return getStartedAtFieldBuilder().getBuilder();
+        return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
-      public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
-        if (startedAtBuilder_ != null) {
-          return startedAtBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
         } else {
-          return startedAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getStartedAtFieldBuilder() {
-        if (startedAtBuilder_ == null) {
-          startedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getStartedAt(),
+                  getCreatedAt(),
                   getParentForChildren(),
                   isClean());
-          startedAt_ = null;
+          createdAt_ = null;
         }
-        return startedAtBuilder_;
+        return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp endedAt_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endedAtBuilder_;
+      private java.lang.Object status_ = "";
       /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-       * @return Whether the endedAt field is set.
+       * <code>string status = 2;</code>
+       * @return The status.
        */
-      public boolean hasEndedAt() {
-        return endedAtBuilder_ != null || endedAt_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-       * @return The endedAt.
-       */
-      public com.google.protobuf.Timestamp getEndedAt() {
-        if (endedAtBuilder_ == null) {
-          return endedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endedAt_;
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
         } else {
-          return endedAtBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
+       * <code>string status = 2;</code>
+       * @return The bytes for status.
        */
-      public Builder setEndedAt(com.google.protobuf.Timestamp value) {
-        if (endedAtBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          endedAt_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
         } else {
-          endedAtBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
+       * <code>string status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
-      public Builder setEndedAt(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (endedAtBuilder_ == null) {
-          endedAt_ = builderForValue.build();
-          onChanged();
-        } else {
-          endedAtBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-       */
-      public Builder mergeEndedAt(com.google.protobuf.Timestamp value) {
-        if (endedAtBuilder_ == null) {
-          if (endedAt_ != null) {
-            endedAt_ =
-              com.google.protobuf.Timestamp.newBuilder(endedAt_).mergeFrom(value).buildPartial();
-          } else {
-            endedAt_ = value;
-          }
-          onChanged();
-        } else {
-          endedAtBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-       */
-      public Builder clearEndedAt() {
-        if (endedAtBuilder_ == null) {
-          endedAt_ = null;
-          onChanged();
-        } else {
-          endedAt_ = null;
-          endedAtBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getEndedAtBuilder() {
-        
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        status_ = value;
         onChanged();
-        return getEndedAtFieldBuilder().getBuilder();
+        return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
+       * <code>string status = 2;</code>
+       * @return This builder for chaining.
        */
-      public com.google.protobuf.TimestampOrBuilder getEndedAtOrBuilder() {
-        if (endedAtBuilder_ != null) {
-          return endedAtBuilder_.getMessageOrBuilder();
-        } else {
-          return endedAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : endedAt_;
-        }
+      public Builder clearStatus() {
+        
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp ended_at = 2;</code>
+       * <code>string status = 2;</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getEndedAtFieldBuilder() {
-        if (endedAtBuilder_ == null) {
-          endedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getEndedAt(),
-                  getParentForChildren(),
-                  isClean());
-          endedAt_ = null;
-        }
-        return endedAtBuilder_;
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        status_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object trainingStatus_ = "";
@@ -1084,6 +1115,125 @@ public final class TrainingsResponseOuterClass {
         trainngStatusMessage_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Timestamp finishTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * @return Whether the finishTime field is set.
+       */
+      public boolean hasFinishTime() {
+        return finishTimeBuilder_ != null || finishTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * @return The finishTime.
+       */
+      public com.google.protobuf.Timestamp getFinishTime() {
+        if (finishTimeBuilder_ == null) {
+          return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
+        } else {
+          return finishTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       */
+      public Builder setFinishTime(com.google.protobuf.Timestamp value) {
+        if (finishTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          finishTime_ = value;
+          onChanged();
+        } else {
+          finishTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       */
+      public Builder setFinishTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (finishTimeBuilder_ == null) {
+          finishTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          finishTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       */
+      public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
+        if (finishTimeBuilder_ == null) {
+          if (finishTime_ != null) {
+            finishTime_ =
+              com.google.protobuf.Timestamp.newBuilder(finishTime_).mergeFrom(value).buildPartial();
+          } else {
+            finishTime_ = value;
+          }
+          onChanged();
+        } else {
+          finishTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       */
+      public Builder clearFinishTime() {
+        if (finishTimeBuilder_ == null) {
+          finishTime_ = null;
+          onChanged();
+        } else {
+          finishTime_ = null;
+          finishTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
+        
+        onChanged();
+        return getFinishTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
+        if (finishTimeBuilder_ != null) {
+          return finishTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return finishTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getFinishTimeFieldBuilder() {
+        if (finishTimeBuilder_ == null) {
+          finishTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getFinishTime(),
+                  getParentForChildren(),
+                  isClean());
+          finishTime_ = null;
+        }
+        return finishTimeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1952,15 +2102,15 @@ public final class TrainingsResponseOuterClass {
     java.lang.String[] descriptorData = {
       "\n*asgt/v2alpha/type/trainings_response.p" +
       "roto\022\021asgt.v2alpha.type\032\037google/protobuf" +
-      "/timestamp.proto\"\241\001\n\010Training\022.\n\nstarted" +
-      "_at\030\001 \001(\0132\032.google.protobuf.Timestamp\022,\n" +
-      "\010ended_at\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\027\n\017training_status\030\003 \001(\t\022\036\n\026trainng_" +
-      "status_message\030\004 \001(\t\"C\n\021TrainingsRespons" +
-      "e\022.\n\ttrainings\030\001 \003(\0132\033.asgt.v2alpha.type" +
-      ".TrainingB@Z>github.com/e-conomic/vmlapi" +
-      "s/gen/go/asgt/v2alpha/type;asgttypeb\006pro" +
-      "to3"
+      "/timestamp.proto\"\264\001\n\010Training\022.\n\ncreated" +
+      "_at\030\001 \001(\0132\032.google.protobuf.Timestamp\022\016\n" +
+      "\006status\030\002 \001(\t\022\027\n\017training_status\030\003 \001(\t\022\036" +
+      "\n\026trainng_status_message\030\004 \001(\t\022/\n\013finish" +
+      "_time\030\005 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "C\n\021TrainingsResponse\022.\n\ttrainings\030\001 \003(\0132" +
+      "\033.asgt.v2alpha.type.TrainingB@Z>github.c" +
+      "om/e-conomic/vmlapis/gen/go/asgt/v2alpha" +
+      "/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1972,7 +2122,7 @@ public final class TrainingsResponseOuterClass {
     internal_static_asgt_v2alpha_type_Training_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_type_Training_descriptor,
-        new java.lang.String[] { "StartedAt", "EndedAt", "TrainingStatus", "TrainngStatusMessage", });
+        new java.lang.String[] { "CreatedAt", "Status", "TrainingStatus", "TrainngStatusMessage", "FinishTime", });
     internal_static_asgt_v2alpha_type_TrainingsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_v2alpha_type_TrainingsResponse_fieldAccessorTable = new

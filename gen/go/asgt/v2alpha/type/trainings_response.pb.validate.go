@@ -40,29 +40,31 @@ func (m *Training) Validate() error {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetStartedAt()).(interface{ Validate() error }); ok {
+	if v, ok := interface{}(m.GetCreatedAt()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return TrainingValidationError{
-				field:  "StartedAt",
+				field:  "CreatedAt",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
 		}
 	}
 
-	if v, ok := interface{}(m.GetEndedAt()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return TrainingValidationError{
-				field:  "EndedAt",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
+	// no validation rules for Status
 
 	// no validation rules for TrainingStatus
 
 	// no validation rules for TrainngStatusMessage
+
+	if v, ok := interface{}(m.GetFinishTime()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return TrainingValidationError{
+				field:  "FinishTime",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
 
 	return nil
 }

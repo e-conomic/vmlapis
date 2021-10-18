@@ -7,10 +7,11 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgtt
 import "google/protobuf/timestamp.proto";
 
 message Training {
-    google.protobuf.Timestamp started_at = 1;
-    google.protobuf.Timestamp ended_at = 2;
+    google.protobuf.Timestamp created_at = 1;
+    string status = 2;
     string training_status = 3;
     string trainng_status_message = 4;
+    google.protobuf.Timestamp finish_time = 5;
 }
 
 message TrainingsResponse {

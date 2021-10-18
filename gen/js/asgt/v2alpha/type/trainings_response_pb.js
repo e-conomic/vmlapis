@@ -90,10 +90,11 @@ proto.asgt.v2alpha.type.Training.prototype.toObject = function(opt_includeInstan
  */
 proto.asgt.v2alpha.type.Training.toObject = function(includeInstance, msg) {
   var f, obj = {
-    startedAt: (f = msg.getStartedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    endedAt: (f = msg.getEndedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    status: jspb.Message.getFieldWithDefault(msg, 2, ""),
     trainingStatus: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    trainngStatusMessage: jspb.Message.getFieldWithDefault(msg, 4, "")
+    trainngStatusMessage: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    finishTime: (f = msg.getFinishTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -133,12 +134,11 @@ proto.asgt.v2alpha.type.Training.deserializeBinaryFromReader = function(msg, rea
     case 1:
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setStartedAt(value);
+      msg.setCreatedAt(value);
       break;
     case 2:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setEndedAt(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStatus(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
@@ -147,6 +147,11 @@ proto.asgt.v2alpha.type.Training.deserializeBinaryFromReader = function(msg, rea
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setTrainngStatusMessage(value);
+      break;
+    case 5:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setFinishTime(value);
       break;
     default:
       reader.skipField();
@@ -177,7 +182,7 @@ proto.asgt.v2alpha.type.Training.prototype.serializeBinary = function() {
  */
 proto.asgt.v2alpha.type.Training.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getStartedAt();
+  f = message.getCreatedAt();
   if (f != null) {
     writer.writeMessage(
       1,
@@ -185,12 +190,11 @@ proto.asgt.v2alpha.type.Training.serializeBinaryToWriter = function(message, wri
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
-  f = message.getEndedAt();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getStatus();
+  if (f.length > 0) {
+    writer.writeString(
       2,
-      f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+      f
     );
   }
   f = message.getTrainingStatus();
@@ -207,14 +211,22 @@ proto.asgt.v2alpha.type.Training.serializeBinaryToWriter = function(message, wri
       f
     );
   }
+  f = message.getFinishTime();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
 };
 
 
 /**
- * optional google.protobuf.Timestamp started_at = 1;
+ * optional google.protobuf.Timestamp created_at = 1;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.asgt.v2alpha.type.Training.prototype.getStartedAt = function() {
+proto.asgt.v2alpha.type.Training.prototype.getCreatedAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 1));
 };
@@ -224,7 +236,7 @@ proto.asgt.v2alpha.type.Training.prototype.getStartedAt = function() {
  * @param {?proto.google.protobuf.Timestamp|undefined} value
  * @return {!proto.asgt.v2alpha.type.Training} returns this
 */
-proto.asgt.v2alpha.type.Training.prototype.setStartedAt = function(value) {
+proto.asgt.v2alpha.type.Training.prototype.setCreatedAt = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
@@ -233,8 +245,8 @@ proto.asgt.v2alpha.type.Training.prototype.setStartedAt = function(value) {
  * Clears the message field making it undefined.
  * @return {!proto.asgt.v2alpha.type.Training} returns this
  */
-proto.asgt.v2alpha.type.Training.prototype.clearStartedAt = function() {
-  return this.setStartedAt(undefined);
+proto.asgt.v2alpha.type.Training.prototype.clearCreatedAt = function() {
+  return this.setCreatedAt(undefined);
 };
 
 
@@ -242,45 +254,26 @@ proto.asgt.v2alpha.type.Training.prototype.clearStartedAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.asgt.v2alpha.type.Training.prototype.hasStartedAt = function() {
+proto.asgt.v2alpha.type.Training.prototype.hasCreatedAt = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
- * optional google.protobuf.Timestamp ended_at = 2;
- * @return {?proto.google.protobuf.Timestamp}
+ * optional string status = 2;
+ * @return {string}
  */
-proto.asgt.v2alpha.type.Training.prototype.getEndedAt = function() {
-  return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 2));
+proto.asgt.v2alpha.type.Training.prototype.getStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
- * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.asgt.v2alpha.type.Training} returns this
-*/
-proto.asgt.v2alpha.type.Training.prototype.setEndedAt = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
+ * @param {string} value
  * @return {!proto.asgt.v2alpha.type.Training} returns this
  */
-proto.asgt.v2alpha.type.Training.prototype.clearEndedAt = function() {
-  return this.setEndedAt(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.asgt.v2alpha.type.Training.prototype.hasEndedAt = function() {
-  return jspb.Message.getField(this, 2) != null;
+proto.asgt.v2alpha.type.Training.prototype.setStatus = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -317,6 +310,43 @@ proto.asgt.v2alpha.type.Training.prototype.getTrainngStatusMessage = function() 
  */
 proto.asgt.v2alpha.type.Training.prototype.setTrainngStatusMessage = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional google.protobuf.Timestamp finish_time = 5;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.asgt.v2alpha.type.Training.prototype.getFinishTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.asgt.v2alpha.type.Training} returns this
+*/
+proto.asgt.v2alpha.type.Training.prototype.setFinishTime = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.v2alpha.type.Training} returns this
+ */
+proto.asgt.v2alpha.type.Training.prototype.clearFinishTime = function() {
+  return this.setFinishTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.v2alpha.type.Training.prototype.hasFinishTime = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
