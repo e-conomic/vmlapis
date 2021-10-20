@@ -53,38 +53,38 @@ namespace Asgt.Dataservice.V1 {
             "IwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0Eh8KBW1vZGVs",
             "GAIgASgLMhAuYXNndC50eXBlLk1vZGVsImIKGVJlZ2lzdGVyUXVlcnlTdGF0",
             "c1JlcXVlc3QSDwoHZGF0YXNldBgBIAEoCRISCgptb2RlbF90eXBlGAIgASgJ",
-            "EhIKCmJhdGNoX3NpemUYAyABKAUSDAoEdGFncxgEIAMoCSJWChlDdXN0b21l",
-            "clRyYWluaW5nc1Jlc3BvbnNlEjkKCXRyYWluaW5ncxgBIAMoCzImLmFzZ3Qu",
-            "ZGF0YXNlcnZpY2UudjEuQ3VzdG9tZXJUcmFpbmluZ3Mi4gEKEUN1c3RvbWVy",
-            "VHJhaW5pbmdzEiMKB2RhdGFzZXQYASABKAsyEi5hc2d0LnR5cGUuRGF0YXNl",
-            "dBIuCgpjcmVhdGVkX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBIOCgZzdGF0dXMYAyABKAkSFwoPdHJhaW5pbmdfc3RhdHVzGAQgASgJ",
-            "Eh4KFnRyYWlubmdfc3RhdHVzX21lc3NhZ2UYBSABKAkSLwoLZmluaXNoX3Rp",
-            "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMssHCgtEYXRh",
-            "U2VydmljZRJpCg1DcmVhdGVEYXRhc2V0EiIuYXNndC5kYXRhc2VydmljZS52",
-            "MS5DcmVhdGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+ST",
-            "AhYiES92MS97dHlwZX06Y3JlYXRlOgEqEnEKCkFwcGVuZERhdGESJi5hc2d0",
-            "LmRhdGFzZXJ2aWNlLnYxLkFwcGVuZERhdGFSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IiOC0+STAh0iGC92MS97dHlwZX0ve25hbWV9OmFwcGVu",
-            "ZDoBKhJmCgpEZWxldGVEYXRhEiIuYXNndC5kYXRhc2VydmljZS52MS5EZWxl",
-            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+STAhYiES92",
-            "MS97dHlwZX06ZGVsZXRlOgEqEnQKB0dldEluZm8SIy5hc2d0LmRhdGFzZXJ2",
-            "aWNlLnYxLkdldEluZm9SZXF1ZXN0GiQuYXNndC5kYXRhc2VydmljZS52MS5H",
-            "ZXRJbmZvUmVzcG9uc2UiHoLT5JMCGBIWL3YxL3t0eXBlfS97bmFtZX06aW5m",
-            "bxJ3Cg1VcGRhdGVEYXRhc2V0EikuYXNndC5kYXRhc2VydmljZS52MS5VcGRh",
-            "dGVEYXRhc2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIjgtPk",
-            "kwIdGhgvdjEve3R5cGV9L3tuYW1lfTp1cGRhdGU6ASoSXAoSUmVnaXN0ZXJR",
-            "dWVyeVN0YXRzEi4uYXNndC5kYXRhc2VydmljZS52MS5SZWdpc3RlclF1ZXJ5",
-            "U3RhdHNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ElgKE0NhbGxz",
-            "UGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24u",
-            "ZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEm8KEENhbGN1",
-            "bGF0ZU1ldHJpY3MSLC5hc2d0LmRhdGFzZXJ2aWNlLnYxLkNhbGN1bGF0ZU1l",
-            "dHJpY3NSZXF1ZXN0Gi0uYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVN",
-            "ZXRyaWNzUmVzcG9uc2USXgoUR2V0Q3VzdG9tZXJUcmFpbmluZ3MSFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkaLi5hc2d0LmRhdGFzZXJ2aWNlLnYxLkN1c3Rv",
-            "bWVyVHJhaW5pbmdzUmVzcG9uc2VCSkIRRGF0YVNlcnZpY2VQcm90b3NaNWdp",
-            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvZGF0YS92",
-            "MTtkYXRhYgZwcm90bzM="));
+            "EhIKCmJhdGNoX3NpemUYAyABKAUSDAoEdGFncxgEIAMoCSJVChlDb25zdW1l",
+            "clRyYWluaW5nc1Jlc3BvbnNlEjgKCXRyYWluaW5ncxgBIAMoCzIlLmFzZ3Qu",
+            "ZGF0YXNlcnZpY2UudjEuQ29uc3VtZXJUcmFpbmluZyLhAQoQQ29uc3VtZXJU",
+            "cmFpbmluZxIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFzZXQS",
+            "LgoKY3JlYXRlZF9hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASDgoGc3RhdHVzGAMgASgJEhcKD3RyYWluaW5nX3N0YXR1cxgEIAEoCRIe",
+            "ChZ0cmFpbm5nX3N0YXR1c19tZXNzYWdlGAUgASgJEi8KC2ZpbmlzaF90aW1l",
+            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDLLBwoLRGF0YVNl",
+            "cnZpY2USaQoNQ3JlYXRlRGF0YXNldBIiLmFzZ3QuZGF0YXNlcnZpY2UudjEu",
+            "Q3JlYXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIcgtPkkwIW",
+            "IhEvdjEve3R5cGV9OmNyZWF0ZToBKhJxCgpBcHBlbmREYXRhEiYuYXNndC5k",
+            "YXRhc2VydmljZS52MS5BcHBlbmREYXRhUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSIjgtPkkwIdIhgvdjEve3R5cGV9L3tuYW1lfTphcHBlbmQ6",
+            "ASoSZgoKRGVsZXRlRGF0YRIiLmFzZ3QuZGF0YXNlcnZpY2UudjEuRGVsZXRl",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIcgtPkkwIWIhEvdjEv",
+            "e3R5cGV9OmRlbGV0ZToBKhJ0CgdHZXRJbmZvEiMuYXNndC5kYXRhc2Vydmlj",
+            "ZS52MS5HZXRJbmZvUmVxdWVzdBokLmFzZ3QuZGF0YXNlcnZpY2UudjEuR2V0",
+            "SW5mb1Jlc3BvbnNlIh6C0+STAhgSFi92MS97dHlwZX0ve25hbWV9OmluZm8S",
+            "dwoNVXBkYXRlRGF0YXNldBIpLmFzZ3QuZGF0YXNlcnZpY2UudjEuVXBkYXRl",
+            "RGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiI4LT5JMC",
+            "HRoYL3YxL3t0eXBlfS97bmFtZX06dXBkYXRlOgEqElwKElJlZ2lzdGVyUXVl",
+            "cnlTdGF0cxIuLmFzZ3QuZGF0YXNlcnZpY2UudjEuUmVnaXN0ZXJRdWVyeVN0",
+            "YXRzUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJYChNDYWxsc1Bl",
+            "ck1vbnRoTWV0cmljEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gikuc3NuLmRh",
+            "dGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSZXNwb25zZRJvChBDYWxjdWxh",
+            "dGVNZXRyaWNzEiwuYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVNZXRy",
+            "aWNzUmVxdWVzdBotLmFzZ3QuZGF0YXNlcnZpY2UudjEuQ2FsY3VsYXRlTWV0",
+            "cmljc1Jlc3BvbnNlEl4KFEdldENvbnN1bWVyVHJhaW5pbmdzEhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5Gi4uYXNndC5kYXRhc2VydmljZS52MS5Db25zdW1l",
+            "clRyYWluaW5nc1Jlc3BvbnNlQkpCEURhdGFTZXJ2aWNlUHJvdG9zWjVnaXRo",
+            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEvdjE7",
+            "ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,8 +97,8 @@ namespace Asgt.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.UpdateDatasetRequest), global::Asgt.Dataservice.V1.UpdateDatasetRequest.Parser, new[]{ "Name", "Type", "RetentionPolicy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CustomerTrainingsResponse), global::Asgt.Dataservice.V1.CustomerTrainingsResponse.Parser, new[]{ "Trainings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CustomerTrainings), global::Asgt.Dataservice.V1.CustomerTrainings.Parser, new[]{ "Dataset", "CreatedAt", "Status", "TrainingStatus", "TrainngStatusMessage", "FinishTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.ConsumerTrainingsResponse), global::Asgt.Dataservice.V1.ConsumerTrainingsResponse.Parser, new[]{ "Trainings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.ConsumerTraining), global::Asgt.Dataservice.V1.ConsumerTraining.Parser, new[]{ "Dataset", "CreatedAt", "Status", "TrainingStatus", "TrainngStatusMessage", "FinishTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2375,15 +2375,15 @@ namespace Asgt.Dataservice.V1 {
 
   }
 
-  public sealed partial class CustomerTrainingsResponse : pb::IMessage<CustomerTrainingsResponse>
+  public sealed partial class ConsumerTrainingsResponse : pb::IMessage<ConsumerTrainingsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CustomerTrainingsResponse> _parser = new pb::MessageParser<CustomerTrainingsResponse>(() => new CustomerTrainingsResponse());
+    private static readonly pb::MessageParser<ConsumerTrainingsResponse> _parser = new pb::MessageParser<ConsumerTrainingsResponse>(() => new ConsumerTrainingsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CustomerTrainingsResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<ConsumerTrainingsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -2396,40 +2396,40 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CustomerTrainingsResponse() {
+    public ConsumerTrainingsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CustomerTrainingsResponse(CustomerTrainingsResponse other) : this() {
+    public ConsumerTrainingsResponse(ConsumerTrainingsResponse other) : this() {
       trainings_ = other.trainings_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CustomerTrainingsResponse Clone() {
-      return new CustomerTrainingsResponse(this);
+    public ConsumerTrainingsResponse Clone() {
+      return new ConsumerTrainingsResponse(this);
     }
 
     /// <summary>Field number for the "trainings" field.</summary>
     public const int TrainingsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1.CustomerTrainings> _repeated_trainings_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Dataservice.V1.CustomerTrainings.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1.CustomerTrainings> trainings_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1.CustomerTrainings>();
+    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1.ConsumerTraining> _repeated_trainings_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Dataservice.V1.ConsumerTraining.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1.ConsumerTraining> trainings_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1.ConsumerTraining>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Dataservice.V1.CustomerTrainings> Trainings {
+    public pbc::RepeatedField<global::Asgt.Dataservice.V1.ConsumerTraining> Trainings {
       get { return trainings_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as CustomerTrainingsResponse);
+      return Equals(other as ConsumerTrainingsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CustomerTrainingsResponse other) {
+    public bool Equals(ConsumerTrainingsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2474,7 +2474,7 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CustomerTrainingsResponse other) {
+    public void MergeFrom(ConsumerTrainingsResponse other) {
       if (other == null) {
         return;
       }
@@ -2522,15 +2522,15 @@ namespace Asgt.Dataservice.V1 {
 
   }
 
-  public sealed partial class CustomerTrainings : pb::IMessage<CustomerTrainings>
+  public sealed partial class ConsumerTraining : pb::IMessage<ConsumerTraining>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CustomerTrainings> _parser = new pb::MessageParser<CustomerTrainings>(() => new CustomerTrainings());
+    private static readonly pb::MessageParser<ConsumerTraining> _parser = new pb::MessageParser<ConsumerTraining>(() => new ConsumerTraining());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CustomerTrainings> Parser { get { return _parser; } }
+    public static pb::MessageParser<ConsumerTraining> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -2543,14 +2543,14 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CustomerTrainings() {
+    public ConsumerTraining() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CustomerTrainings(CustomerTrainings other) : this() {
+    public ConsumerTraining(ConsumerTraining other) : this() {
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       status_ = other.status_;
@@ -2561,8 +2561,8 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CustomerTrainings Clone() {
-      return new CustomerTrainings(this);
+    public ConsumerTraining Clone() {
+      return new ConsumerTraining(this);
     }
 
     /// <summary>Field number for the "dataset" field.</summary>
@@ -2633,11 +2633,11 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as CustomerTrainings);
+      return Equals(other as ConsumerTraining);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CustomerTrainings other) {
+    public bool Equals(ConsumerTraining other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2732,7 +2732,7 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CustomerTrainings other) {
+    public void MergeFrom(ConsumerTraining other) {
       if (other == null) {
         return;
       }

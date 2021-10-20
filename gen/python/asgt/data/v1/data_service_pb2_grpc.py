@@ -56,10 +56,10 @@ class DataServiceStub(object):
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.SerializeToString,
                 response_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.FromString,
                 )
-        self.GetCustomerTrainings = channel.unary_unary(
-                '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+        self.GetConsumerTrainings = channel.unary_unary(
+                '/asgt.dataservice.v1.DataService/GetConsumerTrainings',
                 request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-                response_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CustomerTrainingsResponse.FromString,
+                response_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.ConsumerTrainingsResponse.FromString,
                 )
 
 
@@ -114,7 +114,7 @@ class DataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetCustomerTrainings(self, request, context):
+    def GetConsumerTrainings(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -163,10 +163,10 @@ def add_DataServiceServicer_to_server(servicer, server):
                     request_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.FromString,
                     response_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.SerializeToString,
             ),
-            'GetCustomerTrainings': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetCustomerTrainings,
+            'GetConsumerTrainings': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetConsumerTrainings,
                     request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                    response_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CustomerTrainingsResponse.SerializeToString,
+                    response_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.ConsumerTrainingsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -307,7 +307,7 @@ class DataService(object):
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def GetCustomerTrainings(request,
+    def GetConsumerTrainings(request,
             target,
             options=(),
             channel_credentials=None,
@@ -316,8 +316,8 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/GetConsumerTrainings',
             google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            asgt_dot_data_dot_v1_dot_data__service__pb2.CustomerTrainingsResponse.FromString,
+            asgt_dot_data_dot_v1_dot_data__service__pb2.ConsumerTrainingsResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

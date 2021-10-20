@@ -716,7 +716,7 @@
         }
       }
     },
-    "v1CustomerTrainings": {
+    "v1ConsumerTraining": {
       "type": "object",
       "properties": {
         "dataset": {
@@ -741,13 +741,13 @@
         }
       }
     },
-    "v1CustomerTrainingsResponse": {
+    "v1ConsumerTrainingsResponse": {
       "type": "object",
       "properties": {
         "trainings": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/v1CustomerTrainings"
+            "$ref": "#/definitions/v1ConsumerTraining"
           }
         }
       }

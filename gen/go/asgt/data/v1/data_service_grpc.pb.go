@@ -27,7 +27,7 @@ type DataServiceClient interface {
 	RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(ctx context.Context, in *CalculateMetricsRequest, opts ...grpc.CallOption) (*CalculateMetricsResponse, error)
-	GetCustomerTrainings(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CustomerTrainingsResponse, error)
+	GetConsumerTrainings(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*ConsumerTrainingsResponse, error)
 }
 
 type dataServiceClient struct {
@@ -110,9 +110,9 @@ func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *CalculateM
 	return out, nil
 }
 
-func (c *dataServiceClient) GetCustomerTrainings(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CustomerTrainingsResponse, error) {
-	out := new(CustomerTrainingsResponse)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1.DataService/GetCustomerTrainings", in, out, opts...)
+func (c *dataServiceClient) GetConsumerTrainings(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*ConsumerTrainingsResponse, error) {
+	out := new(ConsumerTrainingsResponse)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1.DataService/GetConsumerTrainings", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -131,7 +131,7 @@ type DataServiceServer interface {
 	RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error)
 	CallsPerMonthMetric(context.Context, *empty.Empty) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error)
-	GetCustomerTrainings(context.Context, *empty.Empty) (*CustomerTrainingsResponse, error)
+	GetConsumerTrainings(context.Context, *empty.Empty) (*ConsumerTrainingsResponse, error)
 	mustEmbedUnimplementedDataServiceServer()
 }
 
@@ -163,8 +163,8 @@ func (*UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *emp
 func (*UnimplementedDataServiceServer) CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
 }
-func (*UnimplementedDataServiceServer) GetCustomerTrainings(context.Context, *empty.Empty) (*CustomerTrainingsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerTrainings not implemented")
+func (*UnimplementedDataServiceServer) GetConsumerTrainings(context.Context, *empty.Empty) (*ConsumerTrainingsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetConsumerTrainings not implemented")
 }
 func (*UnimplementedDataServiceServer) mustEmbedUnimplementedDataServiceServer() {}
 
@@ -316,20 +316,20 @@ func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DataService_GetCustomerTrainings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _DataService_GetConsumerTrainings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServiceServer).GetCustomerTrainings(ctx, in)
+		return srv.(DataServiceServer).GetConsumerTrainings(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1.DataService/GetCustomerTrainings",
+		FullMethod: "/asgt.dataservice.v1.DataService/GetConsumerTrainings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).GetCustomerTrainings(ctx, req.(*empty.Empty))
+		return srv.(DataServiceServer).GetConsumerTrainings(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -371,8 +371,8 @@ var _DataService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _DataService_CalculateMetrics_Handler,
 		},
 		{
-			MethodName: "GetCustomerTrainings",
-			Handler:    _DataService_GetCustomerTrainings_Handler,
+			MethodName: "GetConsumerTrainings",
+			Handler:    _DataService_GetConsumerTrainings_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

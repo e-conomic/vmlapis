@@ -730,13 +730,13 @@ proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.google.protobuf.Empty,
- *   !proto.asgt.dataservice.v1.CustomerTrainingsResponse>}
+ *   !proto.asgt.dataservice.v1.ConsumerTrainingsResponse>}
  */
-const methodDescriptor_DataService_GetCustomerTrainings = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+const methodDescriptor_DataService_GetConsumerTrainings = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1.DataService/GetConsumerTrainings',
   grpc.web.MethodType.UNARY,
   google_protobuf_empty_pb.Empty,
-  proto.asgt.dataservice.v1.CustomerTrainingsResponse,
+  proto.asgt.dataservice.v1.ConsumerTrainingsResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -744,7 +744,7 @@ const methodDescriptor_DataService_GetCustomerTrainings = new grpc.web.MethodDes
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.dataservice.v1.CustomerTrainingsResponse.deserializeBinary
+  proto.asgt.dataservice.v1.ConsumerTrainingsResponse.deserializeBinary
 );
 
 
@@ -752,10 +752,10 @@ const methodDescriptor_DataService_GetCustomerTrainings = new grpc.web.MethodDes
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.google.protobuf.Empty,
- *   !proto.asgt.dataservice.v1.CustomerTrainingsResponse>}
+ *   !proto.asgt.dataservice.v1.ConsumerTrainingsResponse>}
  */
-const methodInfo_DataService_GetCustomerTrainings = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.dataservice.v1.CustomerTrainingsResponse,
+const methodInfo_DataService_GetConsumerTrainings = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.asgt.dataservice.v1.ConsumerTrainingsResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -763,7 +763,7 @@ const methodInfo_DataService_GetCustomerTrainings = new grpc.web.AbstractClientB
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.dataservice.v1.CustomerTrainingsResponse.deserializeBinary
+  proto.asgt.dataservice.v1.ConsumerTrainingsResponse.deserializeBinary
 );
 
 
@@ -772,18 +772,18 @@ const methodInfo_DataService_GetCustomerTrainings = new grpc.web.AbstractClientB
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.dataservice.v1.CustomerTrainingsResponse)}
+ * @param {function(?grpc.web.Error, ?proto.asgt.dataservice.v1.ConsumerTrainingsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1.CustomerTrainingsResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1.ConsumerTrainingsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1.DataServiceClient.prototype.getCustomerTrainings =
+proto.asgt.dataservice.v1.DataServiceClient.prototype.getConsumerTrainings =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+      '/asgt.dataservice.v1.DataService/GetConsumerTrainings',
       request,
       metadata || {},
-      methodDescriptor_DataService_GetCustomerTrainings,
+      methodDescriptor_DataService_GetConsumerTrainings,
       callback);
 };
 
@@ -793,16 +793,16 @@ proto.asgt.dataservice.v1.DataServiceClient.prototype.getCustomerTrainings =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.dataservice.v1.CustomerTrainingsResponse>}
+ * @return {!Promise<!proto.asgt.dataservice.v1.ConsumerTrainingsResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.getCustomerTrainings =
+proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.getConsumerTrainings =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+      '/asgt.dataservice.v1.DataService/GetConsumerTrainings',
       request,
       metadata || {},
-      methodDescriptor_DataService_GetCustomerTrainings);
+      methodDescriptor_DataService_GetConsumerTrainings);
 };
 
 
