@@ -726,5 +726,85 @@ proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.google.protobuf.Empty,
+ *   !proto.asgt.dataservice.v1.CustomerTrainingsResponse>}
+ */
+const methodDescriptor_DataService_GetCustomerTrainings = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+  grpc.web.MethodType.UNARY,
+  google_protobuf_empty_pb.Empty,
+  proto.asgt.dataservice.v1.CustomerTrainingsResponse,
+  /**
+   * @param {!proto.google.protobuf.Empty} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.dataservice.v1.CustomerTrainingsResponse.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.google.protobuf.Empty,
+ *   !proto.asgt.dataservice.v1.CustomerTrainingsResponse>}
+ */
+const methodInfo_DataService_GetCustomerTrainings = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.asgt.dataservice.v1.CustomerTrainingsResponse,
+  /**
+   * @param {!proto.google.protobuf.Empty} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.dataservice.v1.CustomerTrainingsResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.asgt.dataservice.v1.CustomerTrainingsResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1.CustomerTrainingsResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.dataservice.v1.DataServiceClient.prototype.getCustomerTrainings =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_GetCustomerTrainings,
+      callback);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.dataservice.v1.CustomerTrainingsResponse>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.getCustomerTrainings =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/GetCustomerTrainings',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_GetCustomerTrainings);
+};
+
+
 module.exports = proto.asgt.dataservice.v1;
 

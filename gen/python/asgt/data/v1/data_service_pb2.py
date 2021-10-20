@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'B\021DataServiceProtosZ5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1f\x61sgt/data/v1/data_service.proto\x12\x13\x61sgt.dataservice.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x16\x61sgt/type/sample.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a$ssn/dataservice/v1/dataservice.proto\"\x85\x01\n\x17\x43\x61lculateMetricsRequest\x12.\n\nstart_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\xd6\x01\n\x18\x43\x61lculateMetricsResponse\x12H\n\x07metrics\x18\x01 \x03(\x0b\x32\x37.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow\x1ap\n\tMetricRow\x12\x0e\n\x06target\x18\x01 \x01(\t\x12/\n\nconfidence\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x0f\n\x07\x63orrect\x18\x03 \x01(\x05\x12\x11\n\tincorrect\x18\x04 \x01(\x05\"\xa4\x01\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x0f\n\x07targets\x18\x06 \x03(\t\x12\"\n\x07samples\x18\x04 \x03(\x0b\x32\x11.asgt.type.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"S\n\x11\x41ppendDataRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\"\n\x07samples\x18\x03 \x03(\x0b\x32\x11.asgt.type.Sample\"E\n\rDeleteRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05match\",\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"h\n\x14UpdateDatasetRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x34\n\x10retention_policy\x18\x03 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x19RegisterQueryStatsRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x0c\n\x04tags\x18\x04 \x03(\t2\xeb\x06\n\x0b\x44\x61taService\x12i\n\rCreateDataset\x12\".asgt.dataservice.v1.CreateRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:create:\x01*\x12q\n\nAppendData\x12&.asgt.dataservice.v1.AppendDataRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/{type}/{name}:append:\x01*\x12\x66\n\nDeleteData\x12\".asgt.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:delete:\x01*\x12t\n\x07GetInfo\x12#.asgt.dataservice.v1.GetInfoRequest\x1a$.asgt.dataservice.v1.GetInfoResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/{type}/{name}:info\x12w\n\rUpdateDataset\x12).asgt.dataservice.v1.UpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x18/v1/{type}/{name}:update:\x01*\x12\\\n\x12RegisterQueryStats\x12..asgt.dataservice.v1.RegisterQueryStatsRequest\x1a\x16.google.protobuf.Empty\x12X\n\x13\x43\x61llsPerMonthMetric\x12\x16.google.protobuf.Empty\x1a).ssn.dataservice.v1.CallsPerMonthResponse\x12o\n\x10\x43\x61lculateMetrics\x12,.asgt.dataservice.v1.CalculateMetricsRequest\x1a-.asgt.dataservice.v1.CalculateMetricsResponseBJB\x11\x44\x61taServiceProtosZ5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;datab\x06proto3'
+  serialized_pb=b'\n\x1f\x61sgt/data/v1/data_service.proto\x12\x13\x61sgt.dataservice.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x16\x61sgt/type/sample.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a$ssn/dataservice/v1/dataservice.proto\"\x85\x01\n\x17\x43\x61lculateMetricsRequest\x12.\n\nstart_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\xd6\x01\n\x18\x43\x61lculateMetricsResponse\x12H\n\x07metrics\x18\x01 \x03(\x0b\x32\x37.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow\x1ap\n\tMetricRow\x12\x0e\n\x06target\x18\x01 \x01(\t\x12/\n\nconfidence\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x0f\n\x07\x63orrect\x18\x03 \x01(\x05\x12\x11\n\tincorrect\x18\x04 \x01(\x05\"\xa4\x01\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x0f\n\x07targets\x18\x06 \x03(\t\x12\"\n\x07samples\x18\x04 \x03(\x0b\x32\x11.asgt.type.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"S\n\x11\x41ppendDataRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\"\n\x07samples\x18\x03 \x03(\x0b\x32\x11.asgt.type.Sample\"E\n\rDeleteRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05match\",\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"h\n\x14UpdateDatasetRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x34\n\x10retention_policy\x18\x03 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x19RegisterQueryStatsRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x0c\n\x04tags\x18\x04 \x03(\t\"V\n\x19\x43ustomerTrainingsResponse\x12\x39\n\ttrainings\x18\x01 \x03(\x0b\x32&.asgt.dataservice.v1.CustomerTrainings\"\xe2\x01\n\x11\x43ustomerTrainings\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06status\x18\x03 \x01(\t\x12\x17\n\x0ftraining_status\x18\x04 \x01(\t\x12\x1e\n\x16trainng_status_message\x18\x05 \x01(\t\x12/\n\x0b\x66inish_time\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp2\xcb\x07\n\x0b\x44\x61taService\x12i\n\rCreateDataset\x12\".asgt.dataservice.v1.CreateRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:create:\x01*\x12q\n\nAppendData\x12&.asgt.dataservice.v1.AppendDataRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/{type}/{name}:append:\x01*\x12\x66\n\nDeleteData\x12\".asgt.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:delete:\x01*\x12t\n\x07GetInfo\x12#.asgt.dataservice.v1.GetInfoRequest\x1a$.asgt.dataservice.v1.GetInfoResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/{type}/{name}:info\x12w\n\rUpdateDataset\x12).asgt.dataservice.v1.UpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x18/v1/{type}/{name}:update:\x01*\x12\\\n\x12RegisterQueryStats\x12..asgt.dataservice.v1.RegisterQueryStatsRequest\x1a\x16.google.protobuf.Empty\x12X\n\x13\x43\x61llsPerMonthMetric\x12\x16.google.protobuf.Empty\x1a).ssn.dataservice.v1.CallsPerMonthResponse\x12o\n\x10\x43\x61lculateMetrics\x12,.asgt.dataservice.v1.CalculateMetricsRequest\x1a-.asgt.dataservice.v1.CalculateMetricsResponse\x12^\n\x14GetCustomerTrainings\x12\x16.google.protobuf.Empty\x1a..asgt.dataservice.v1.CustomerTrainingsResponseBJB\x11\x44\x61taServiceProtosZ5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;datab\x06proto3'
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_sample__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DESCRIPTOR,])
 
@@ -505,6 +505,105 @@ _REGISTERQUERYSTATSREQUEST = _descriptor.Descriptor(
   serialized_end=1339,
 )
 
+
+_CUSTOMERTRAININGSRESPONSE = _descriptor.Descriptor(
+  name='CustomerTrainingsResponse',
+  full_name='asgt.dataservice.v1.CustomerTrainingsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='trainings', full_name='asgt.dataservice.v1.CustomerTrainingsResponse.trainings', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1341,
+  serialized_end=1427,
+)
+
+
+_CUSTOMERTRAININGS = _descriptor.Descriptor(
+  name='CustomerTrainings',
+  full_name='asgt.dataservice.v1.CustomerTrainings',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dataset', full_name='asgt.dataservice.v1.CustomerTrainings.dataset', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='created_at', full_name='asgt.dataservice.v1.CustomerTrainings.created_at', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='asgt.dataservice.v1.CustomerTrainings.status', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='training_status', full_name='asgt.dataservice.v1.CustomerTrainings.training_status', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='trainng_status_message', full_name='asgt.dataservice.v1.CustomerTrainings.trainng_status_message', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='finish_time', full_name='asgt.dataservice.v1.CustomerTrainings.finish_time', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1430,
+  serialized_end=1656,
+)
+
 _CALCULATEMETRICSREQUEST.fields_by_name['start_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _CALCULATEMETRICSREQUEST.fields_by_name['end_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _CALCULATEMETRICSRESPONSE_METRICROW.fields_by_name['confidence'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
@@ -522,6 +621,10 @@ _DELETEREQUEST.fields_by_name['tag'].containing_oneof = _DELETEREQUEST.oneofs_by
 _UPDATEDATASETREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_type_dot_retention__policy__pb2._RETENTIONPOLICY
 _GETINFORESPONSE.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
 _GETINFORESPONSE.fields_by_name['model'].message_type = asgt_dot_type_dot_model__pb2._MODEL
+_CUSTOMERTRAININGSRESPONSE.fields_by_name['trainings'].message_type = _CUSTOMERTRAININGS
+_CUSTOMERTRAININGS.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
+_CUSTOMERTRAININGS.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_CUSTOMERTRAININGS.fields_by_name['finish_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 DESCRIPTOR.message_types_by_name['CalculateMetricsRequest'] = _CALCULATEMETRICSREQUEST
 DESCRIPTOR.message_types_by_name['CalculateMetricsResponse'] = _CALCULATEMETRICSRESPONSE
 DESCRIPTOR.message_types_by_name['CreateRequest'] = _CREATEREQUEST
@@ -531,6 +634,8 @@ DESCRIPTOR.message_types_by_name['GetInfoRequest'] = _GETINFOREQUEST
 DESCRIPTOR.message_types_by_name['UpdateDatasetRequest'] = _UPDATEDATASETREQUEST
 DESCRIPTOR.message_types_by_name['GetInfoResponse'] = _GETINFORESPONSE
 DESCRIPTOR.message_types_by_name['RegisterQueryStatsRequest'] = _REGISTERQUERYSTATSREQUEST
+DESCRIPTOR.message_types_by_name['CustomerTrainingsResponse'] = _CUSTOMERTRAININGSRESPONSE
+DESCRIPTOR.message_types_by_name['CustomerTrainings'] = _CUSTOMERTRAININGS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CalculateMetricsRequest = _reflection.GeneratedProtocolMessageType('CalculateMetricsRequest', (_message.Message,), {
@@ -604,6 +709,20 @@ RegisterQueryStatsRequest = _reflection.GeneratedProtocolMessageType('RegisterQu
   })
 _sym_db.RegisterMessage(RegisterQueryStatsRequest)
 
+CustomerTrainingsResponse = _reflection.GeneratedProtocolMessageType('CustomerTrainingsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CUSTOMERTRAININGSRESPONSE,
+  '__module__' : 'asgt.data.v1.data_service_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1.CustomerTrainingsResponse)
+  })
+_sym_db.RegisterMessage(CustomerTrainingsResponse)
+
+CustomerTrainings = _reflection.GeneratedProtocolMessageType('CustomerTrainings', (_message.Message,), {
+  'DESCRIPTOR' : _CUSTOMERTRAININGS,
+  '__module__' : 'asgt.data.v1.data_service_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1.CustomerTrainings)
+  })
+_sym_db.RegisterMessage(CustomerTrainings)
+
 
 DESCRIPTOR._options = None
 
@@ -614,8 +733,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1342,
-  serialized_end=2217,
+  serialized_start=1659,
+  serialized_end=2630,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDataset',
@@ -694,6 +813,16 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CALCULATEMETRICSREQUEST,
     output_type=_CALCULATEMETRICSRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetCustomerTrainings',
+    full_name='asgt.dataservice.v1.DataService.GetCustomerTrainings',
+    index=8,
+    containing_service=None,
+    input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    output_type=_CUSTOMERTRAININGSRESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),
