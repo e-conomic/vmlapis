@@ -24,7 +24,7 @@ all:
 
 docker:
 	@rm -rf gen
-	docker build -t vmlapis .
+	docker build --progress plain -t vmlapis .
 	DOCKERID=$$(docker create vmlapis) ;\
 	docker cp $$DOCKERID:/app/gen ./ ;\
 	docker rm $$DOCKERID

@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package asgt.v2alpha;
+package asgt.v2;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
 
 import "google/api/annotations.proto";
 import "options/annotations.proto";
@@ -10,12 +10,12 @@ import "validate/validate.proto";
 
 import "asgt/type/prediction.proto";
 import "asgt/type/model.proto";
-import "asgt/v2alpha/type/data.proto";
+import "asgt/v2/type/data.proto";
 
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
     title: "AutoSuggest";
-    version: "v2alpha";
+    version: "v2";
     description: "";
   };
   schemes: HTTPS;
@@ -96,7 +96,7 @@ message SuggestOptions {
 
 message SuggestRequest {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  asgt.v2alpha.type.Data input = 2;
+  asgt.v2.type.Data input = 2;
   SuggestOptions options = 3;
 }
 
@@ -107,7 +107,7 @@ message SuggestResponse {
 
 message BatchSuggestRequest {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  repeated asgt.v2alpha.type.Data inputs = 2;
+  repeated asgt.v2.type.Data inputs = 2;
   SuggestOptions options = 3;
 }
 

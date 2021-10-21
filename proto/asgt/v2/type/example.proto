@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package asgt.v2.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
+
+import "validate/validate.proto";
+
+import "asgt/v2/type/data.proto";
+import "asgt/v2/type/target_value.proto";
+
+// A pair of example data and example target values
+message Example {
+  asgt.v2.type.Data data = 1;
+
+  repeated asgt.v2.type.TargetValue target_values = 2 [(validate.rules).repeated = {min_items: 1, ignore_empty: false}];
+
+  // An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+  string id = 3 [(validate.rules).string = {uuid: true, ignore_empty: true}];
+}

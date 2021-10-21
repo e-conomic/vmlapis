@@ -1,16 +1,16 @@
 syntax = "proto3";
 
-package asgt.v2alpha;
+package asgt.v2;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "options/annotations.proto";
 import "validate/validate.proto";
 
-import "asgt/v2alpha/type/example.proto";
-import "asgt/v2alpha/type/trainings_response.proto";
+import "asgt/v2/type/example.proto";
+import "asgt/v2/type/trainings_response.proto";
 import "asgt/type/dataset.proto";
 
 
@@ -82,7 +82,7 @@ service DatasetService {
     };
   }
 
-  rpc GetTrainings (TrainingsRequest) returns (asgt.v2alpha.type.TrainingsResponse) {
+  rpc GetTrainings (TrainingsRequest) returns (asgt.v2.type.TrainingsResponse) {
     option (google.api.http) = {
       get: "/v2/datasets/{dataset_name}/trainings/{number_of_trainings}"
     };
@@ -109,17 +109,17 @@ message DeleteTagRequest {
 
 message CreateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  asgt.v2alpha.type.Example example = 2;
+  asgt.v2.type.Example example = 2;
 }
 
 message CreateOrUpdateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  asgt.v2alpha.type.Example example = 2;
+  asgt.v2.type.Example example = 2;
 }
 
 message BatchCreateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  repeated asgt.v2alpha.type.Example examples = 2;
+  repeated asgt.v2.type.Example examples = 2;
 }
 
 message TruncateDatasetRequest {
