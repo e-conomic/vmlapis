@@ -133,6 +133,6 @@ message ConsumerTraining {
   google.protobuf.Timestamp created_at = 2;
   string status = 3;
   string training_status = 4;
-  string trainng_status_message = 5;
+  string training_status_message = 5;
   google.protobuf.Timestamp finish_time = 6;
 }
