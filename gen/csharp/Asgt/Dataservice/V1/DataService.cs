@@ -55,36 +55,36 @@ namespace Asgt.Dataservice.V1 {
             "c1JlcXVlc3QSDwoHZGF0YXNldBgBIAEoCRISCgptb2RlbF90eXBlGAIgASgJ",
             "EhIKCmJhdGNoX3NpemUYAyABKAUSDAoEdGFncxgEIAMoCSJVChlDb25zdW1l",
             "clRyYWluaW5nc1Jlc3BvbnNlEjgKCXRyYWluaW5ncxgBIAMoCzIlLmFzZ3Qu",
-            "ZGF0YXNlcnZpY2UudjEuQ29uc3VtZXJUcmFpbmluZyLhAQoQQ29uc3VtZXJU",
+            "ZGF0YXNlcnZpY2UudjEuQ29uc3VtZXJUcmFpbmluZyLiAQoQQ29uc3VtZXJU",
             "cmFpbmluZxIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFzZXQS",
             "LgoKY3JlYXRlZF9hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASDgoGc3RhdHVzGAMgASgJEhcKD3RyYWluaW5nX3N0YXR1cxgEIAEoCRIe",
-            "ChZ0cmFpbm5nX3N0YXR1c19tZXNzYWdlGAUgASgJEi8KC2ZpbmlzaF90aW1l",
-            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDLLBwoLRGF0YVNl",
-            "cnZpY2USaQoNQ3JlYXRlRGF0YXNldBIiLmFzZ3QuZGF0YXNlcnZpY2UudjEu",
-            "Q3JlYXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIcgtPkkwIW",
-            "IhEvdjEve3R5cGV9OmNyZWF0ZToBKhJxCgpBcHBlbmREYXRhEiYuYXNndC5k",
-            "YXRhc2VydmljZS52MS5BcHBlbmREYXRhUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIjgtPkkwIdIhgvdjEve3R5cGV9L3tuYW1lfTphcHBlbmQ6",
-            "ASoSZgoKRGVsZXRlRGF0YRIiLmFzZ3QuZGF0YXNlcnZpY2UudjEuRGVsZXRl",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIcgtPkkwIWIhEvdjEv",
-            "e3R5cGV9OmRlbGV0ZToBKhJ0CgdHZXRJbmZvEiMuYXNndC5kYXRhc2Vydmlj",
-            "ZS52MS5HZXRJbmZvUmVxdWVzdBokLmFzZ3QuZGF0YXNlcnZpY2UudjEuR2V0",
-            "SW5mb1Jlc3BvbnNlIh6C0+STAhgSFi92MS97dHlwZX0ve25hbWV9OmluZm8S",
-            "dwoNVXBkYXRlRGF0YXNldBIpLmFzZ3QuZGF0YXNlcnZpY2UudjEuVXBkYXRl",
-            "RGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiI4LT5JMC",
-            "HRoYL3YxL3t0eXBlfS97bmFtZX06dXBkYXRlOgEqElwKElJlZ2lzdGVyUXVl",
-            "cnlTdGF0cxIuLmFzZ3QuZGF0YXNlcnZpY2UudjEuUmVnaXN0ZXJRdWVyeVN0",
-            "YXRzUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJYChNDYWxsc1Bl",
-            "ck1vbnRoTWV0cmljEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gikuc3NuLmRh",
-            "dGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSZXNwb25zZRJvChBDYWxjdWxh",
-            "dGVNZXRyaWNzEiwuYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVNZXRy",
-            "aWNzUmVxdWVzdBotLmFzZ3QuZGF0YXNlcnZpY2UudjEuQ2FsY3VsYXRlTWV0",
-            "cmljc1Jlc3BvbnNlEl4KFEdldENvbnN1bWVyVHJhaW5pbmdzEhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5Gi4uYXNndC5kYXRhc2VydmljZS52MS5Db25zdW1l",
-            "clRyYWluaW5nc1Jlc3BvbnNlQkpCEURhdGFTZXJ2aWNlUHJvdG9zWjVnaXRo",
-            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEvdjE7",
-            "ZGF0YWIGcHJvdG8z"));
+            "bXASDgoGc3RhdHVzGAMgASgJEhcKD3RyYWluaW5nX3N0YXR1cxgEIAEoCRIf",
+            "Chd0cmFpbmluZ19zdGF0dXNfbWVzc2FnZRgFIAEoCRIvCgtmaW5pc2hfdGlt",
+            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAyywcKC0RhdGFT",
+            "ZXJ2aWNlEmkKDUNyZWF0ZURhdGFzZXQSIi5hc2d0LmRhdGFzZXJ2aWNlLnYx",
+            "LkNyZWF0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHILT5JMC",
+            "FiIRL3YxL3t0eXBlfTpjcmVhdGU6ASoScQoKQXBwZW5kRGF0YRImLmFzZ3Qu",
+            "ZGF0YXNlcnZpY2UudjEuQXBwZW5kRGF0YVJlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiI4LT5JMCHSIYL3YxL3t0eXBlfS97bmFtZX06YXBwZW5k",
+            "OgEqEmYKCkRlbGV0ZURhdGESIi5hc2d0LmRhdGFzZXJ2aWNlLnYxLkRlbGV0",
+            "ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHILT5JMCFiIRL3Yx",
+            "L3t0eXBlfTpkZWxldGU6ASoSdAoHR2V0SW5mbxIjLmFzZ3QuZGF0YXNlcnZp",
+            "Y2UudjEuR2V0SW5mb1JlcXVlc3QaJC5hc2d0LmRhdGFzZXJ2aWNlLnYxLkdl",
+            "dEluZm9SZXNwb25zZSIegtPkkwIYEhYvdjEve3R5cGV9L3tuYW1lfTppbmZv",
+            "EncKDVVwZGF0ZURhdGFzZXQSKS5hc2d0LmRhdGFzZXJ2aWNlLnYxLlVwZGF0",
+            "ZURhdGFzZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiOC0+ST",
+            "Ah0aGC92MS97dHlwZX0ve25hbWV9OnVwZGF0ZToBKhJcChJSZWdpc3RlclF1",
+            "ZXJ5U3RhdHMSLi5hc2d0LmRhdGFzZXJ2aWNlLnYxLlJlZ2lzdGVyUXVlcnlT",
+            "dGF0c1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSWAoTQ2FsbHNQ",
+            "ZXJNb250aE1ldHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRopLnNzbi5k",
+            "YXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRoUmVzcG9uc2USbwoQQ2FsY3Vs",
+            "YXRlTWV0cmljcxIsLmFzZ3QuZGF0YXNlcnZpY2UudjEuQ2FsY3VsYXRlTWV0",
+            "cmljc1JlcXVlc3QaLS5hc2d0LmRhdGFzZXJ2aWNlLnYxLkNhbGN1bGF0ZU1l",
+            "dHJpY3NSZXNwb25zZRJeChRHZXRDb25zdW1lclRyYWluaW5ncxIWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eRouLmFzZ3QuZGF0YXNlcnZpY2UudjEuQ29uc3Vt",
+            "ZXJUcmFpbmluZ3NSZXNwb25zZUJKQhFEYXRhU2VydmljZVByb3Rvc1o1Z2l0",
+            "aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC9kYXRhL3Yx",
+            "O2RhdGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,7 +98,7 @@ namespace Asgt.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.ConsumerTrainingsResponse), global::Asgt.Dataservice.V1.ConsumerTrainingsResponse.Parser, new[]{ "Trainings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.ConsumerTraining), global::Asgt.Dataservice.V1.ConsumerTraining.Parser, new[]{ "Dataset", "CreatedAt", "Status", "TrainingStatus", "TrainngStatusMessage", "FinishTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.ConsumerTraining), global::Asgt.Dataservice.V1.ConsumerTraining.Parser, new[]{ "Dataset", "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2555,7 +2555,7 @@ namespace Asgt.Dataservice.V1 {
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       status_ = other.status_;
       trainingStatus_ = other.trainingStatus_;
-      trainngStatusMessage_ = other.trainngStatusMessage_;
+      trainingStatusMessage_ = other.trainingStatusMessage_;
       finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2609,14 +2609,14 @@ namespace Asgt.Dataservice.V1 {
       }
     }
 
-    /// <summary>Field number for the "trainng_status_message" field.</summary>
-    public const int TrainngStatusMessageFieldNumber = 5;
-    private string trainngStatusMessage_ = "";
+    /// <summary>Field number for the "training_status_message" field.</summary>
+    public const int TrainingStatusMessageFieldNumber = 5;
+    private string trainingStatusMessage_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string TrainngStatusMessage {
-      get { return trainngStatusMessage_; }
+    public string TrainingStatusMessage {
+      get { return trainingStatusMessage_; }
       set {
-        trainngStatusMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        trainingStatusMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2648,7 +2648,7 @@ namespace Asgt.Dataservice.V1 {
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (Status != other.Status) return false;
       if (TrainingStatus != other.TrainingStatus) return false;
-      if (TrainngStatusMessage != other.TrainngStatusMessage) return false;
+      if (TrainingStatusMessage != other.TrainingStatusMessage) return false;
       if (!object.Equals(FinishTime, other.FinishTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2660,7 +2660,7 @@ namespace Asgt.Dataservice.V1 {
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (TrainingStatus.Length != 0) hash ^= TrainingStatus.GetHashCode();
-      if (TrainngStatusMessage.Length != 0) hash ^= TrainngStatusMessage.GetHashCode();
+      if (TrainingStatusMessage.Length != 0) hash ^= TrainingStatusMessage.GetHashCode();
       if (finishTime_ != null) hash ^= FinishTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2691,9 +2691,9 @@ namespace Asgt.Dataservice.V1 {
         output.WriteRawTag(34);
         output.WriteString(TrainingStatus);
       }
-      if (TrainngStatusMessage.Length != 0) {
+      if (TrainingStatusMessage.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(TrainngStatusMessage);
+        output.WriteString(TrainingStatusMessage);
       }
       if (finishTime_ != null) {
         output.WriteRawTag(50);
@@ -2719,8 +2719,8 @@ namespace Asgt.Dataservice.V1 {
       if (TrainingStatus.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TrainingStatus);
       }
-      if (TrainngStatusMessage.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TrainngStatusMessage);
+      if (TrainingStatusMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TrainingStatusMessage);
       }
       if (finishTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishTime);
@@ -2754,8 +2754,8 @@ namespace Asgt.Dataservice.V1 {
       if (other.TrainingStatus.Length != 0) {
         TrainingStatus = other.TrainingStatus;
       }
-      if (other.TrainngStatusMessage.Length != 0) {
-        TrainngStatusMessage = other.TrainngStatusMessage;
+      if (other.TrainingStatusMessage.Length != 0) {
+        TrainingStatusMessage = other.TrainingStatusMessage;
       }
       if (other.finishTime_ != null) {
         if (finishTime_ == null) {
@@ -2800,7 +2800,7 @@ namespace Asgt.Dataservice.V1 {
             break;
           }
           case 42: {
-            TrainngStatusMessage = input.ReadString();
+            TrainingStatusMessage = input.ReadString();
             break;
           }
           case 50: {
@@ -2847,7 +2847,7 @@ namespace Asgt.Dataservice.V1 {
             break;
           }
           case 42: {
-            TrainngStatusMessage = input.ReadString();
+            TrainingStatusMessage = input.ReadString();
             break;
           }
           case 50: {

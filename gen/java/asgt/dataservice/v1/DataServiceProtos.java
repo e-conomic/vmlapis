@@ -10961,16 +10961,16 @@ public final class DataServiceProtos {
         getTrainingStatusBytes();
 
     /**
-     * <code>string trainng_status_message = 5;</code>
-     * @return The trainngStatusMessage.
+     * <code>string training_status_message = 5;</code>
+     * @return The trainingStatusMessage.
      */
-    java.lang.String getTrainngStatusMessage();
+    java.lang.String getTrainingStatusMessage();
     /**
-     * <code>string trainng_status_message = 5;</code>
-     * @return The bytes for trainngStatusMessage.
+     * <code>string training_status_message = 5;</code>
+     * @return The bytes for trainingStatusMessage.
      */
     com.google.protobuf.ByteString
-        getTrainngStatusMessageBytes();
+        getTrainingStatusMessageBytes();
 
     /**
      * <code>.google.protobuf.Timestamp finish_time = 6;</code>
@@ -11002,7 +11002,7 @@ public final class DataServiceProtos {
     private ConsumerTraining() {
       status_ = "";
       trainingStatus_ = "";
-      trainngStatusMessage_ = "";
+      trainingStatusMessage_ = "";
     }
 
     @java.lang.Override
@@ -11076,7 +11076,7 @@ public final class DataServiceProtos {
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              trainngStatusMessage_ = s;
+              trainingStatusMessage_ = s;
               break;
             }
             case 50: {
@@ -11252,38 +11252,38 @@ public final class DataServiceProtos {
       }
     }
 
-    public static final int TRAINNG_STATUS_MESSAGE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object trainngStatusMessage_;
+    public static final int TRAINING_STATUS_MESSAGE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object trainingStatusMessage_;
     /**
-     * <code>string trainng_status_message = 5;</code>
-     * @return The trainngStatusMessage.
+     * <code>string training_status_message = 5;</code>
+     * @return The trainingStatusMessage.
      */
     @java.lang.Override
-    public java.lang.String getTrainngStatusMessage() {
-      java.lang.Object ref = trainngStatusMessage_;
+    public java.lang.String getTrainingStatusMessage() {
+      java.lang.Object ref = trainingStatusMessage_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        trainngStatusMessage_ = s;
+        trainingStatusMessage_ = s;
         return s;
       }
     }
     /**
-     * <code>string trainng_status_message = 5;</code>
-     * @return The bytes for trainngStatusMessage.
+     * <code>string training_status_message = 5;</code>
+     * @return The bytes for trainingStatusMessage.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTrainngStatusMessageBytes() {
-      java.lang.Object ref = trainngStatusMessage_;
+        getTrainingStatusMessageBytes() {
+      java.lang.Object ref = trainingStatusMessage_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        trainngStatusMessage_ = b;
+        trainingStatusMessage_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -11342,8 +11342,8 @@ public final class DataServiceProtos {
       if (!getTrainingStatusBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, trainingStatus_);
       }
-      if (!getTrainngStatusMessageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, trainngStatusMessage_);
+      if (!getTrainingStatusMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, trainingStatusMessage_);
       }
       if (finishTime_ != null) {
         output.writeMessage(6, getFinishTime());
@@ -11371,8 +11371,8 @@ public final class DataServiceProtos {
       if (!getTrainingStatusBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, trainingStatus_);
       }
-      if (!getTrainngStatusMessageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, trainngStatusMessage_);
+      if (!getTrainingStatusMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, trainingStatusMessage_);
       }
       if (finishTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -11407,8 +11407,8 @@ public final class DataServiceProtos {
           .equals(other.getStatus())) return false;
       if (!getTrainingStatus()
           .equals(other.getTrainingStatus())) return false;
-      if (!getTrainngStatusMessage()
-          .equals(other.getTrainngStatusMessage())) return false;
+      if (!getTrainingStatusMessage()
+          .equals(other.getTrainingStatusMessage())) return false;
       if (hasFinishTime() != other.hasFinishTime()) return false;
       if (hasFinishTime()) {
         if (!getFinishTime()
@@ -11437,8 +11437,8 @@ public final class DataServiceProtos {
       hash = (53 * hash) + getStatus().hashCode();
       hash = (37 * hash) + TRAINING_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getTrainingStatus().hashCode();
-      hash = (37 * hash) + TRAINNG_STATUS_MESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getTrainngStatusMessage().hashCode();
+      hash = (37 * hash) + TRAINING_STATUS_MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrainingStatusMessage().hashCode();
       if (hasFinishTime()) {
         hash = (37 * hash) + FINISH_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getFinishTime().hashCode();
@@ -11592,7 +11592,7 @@ public final class DataServiceProtos {
 
         trainingStatus_ = "";
 
-        trainngStatusMessage_ = "";
+        trainingStatusMessage_ = "";
 
         if (finishTimeBuilder_ == null) {
           finishTime_ = null;
@@ -11638,7 +11638,7 @@ public final class DataServiceProtos {
         }
         result.status_ = status_;
         result.trainingStatus_ = trainingStatus_;
-        result.trainngStatusMessage_ = trainngStatusMessage_;
+        result.trainingStatusMessage_ = trainingStatusMessage_;
         if (finishTimeBuilder_ == null) {
           result.finishTime_ = finishTime_;
         } else {
@@ -11706,8 +11706,8 @@ public final class DataServiceProtos {
           trainingStatus_ = other.trainingStatus_;
           onChanged();
         }
-        if (!other.getTrainngStatusMessage().isEmpty()) {
-          trainngStatusMessage_ = other.trainngStatusMessage_;
+        if (!other.getTrainingStatusMessage().isEmpty()) {
+          trainingStatusMessage_ = other.trainingStatusMessage_;
           onChanged();
         }
         if (other.hasFinishTime()) {
@@ -12132,78 +12132,78 @@ public final class DataServiceProtos {
         return this;
       }
 
-      private java.lang.Object trainngStatusMessage_ = "";
+      private java.lang.Object trainingStatusMessage_ = "";
       /**
-       * <code>string trainng_status_message = 5;</code>
-       * @return The trainngStatusMessage.
+       * <code>string training_status_message = 5;</code>
+       * @return The trainingStatusMessage.
        */
-      public java.lang.String getTrainngStatusMessage() {
-        java.lang.Object ref = trainngStatusMessage_;
+      public java.lang.String getTrainingStatusMessage() {
+        java.lang.Object ref = trainingStatusMessage_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          trainngStatusMessage_ = s;
+          trainingStatusMessage_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string trainng_status_message = 5;</code>
-       * @return The bytes for trainngStatusMessage.
+       * <code>string training_status_message = 5;</code>
+       * @return The bytes for trainingStatusMessage.
        */
       public com.google.protobuf.ByteString
-          getTrainngStatusMessageBytes() {
-        java.lang.Object ref = trainngStatusMessage_;
+          getTrainingStatusMessageBytes() {
+        java.lang.Object ref = trainingStatusMessage_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          trainngStatusMessage_ = b;
+          trainingStatusMessage_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string trainng_status_message = 5;</code>
-       * @param value The trainngStatusMessage to set.
+       * <code>string training_status_message = 5;</code>
+       * @param value The trainingStatusMessage to set.
        * @return This builder for chaining.
        */
-      public Builder setTrainngStatusMessage(
+      public Builder setTrainingStatusMessage(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        trainngStatusMessage_ = value;
+        trainingStatusMessage_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string trainng_status_message = 5;</code>
+       * <code>string training_status_message = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTrainngStatusMessage() {
+      public Builder clearTrainingStatusMessage() {
         
-        trainngStatusMessage_ = getDefaultInstance().getTrainngStatusMessage();
+        trainingStatusMessage_ = getDefaultInstance().getTrainingStatusMessage();
         onChanged();
         return this;
       }
       /**
-       * <code>string trainng_status_message = 5;</code>
-       * @param value The bytes for trainngStatusMessage to set.
+       * <code>string training_status_message = 5;</code>
+       * @param value The bytes for trainingStatusMessage to set.
        * @return This builder for chaining.
        */
-      public Builder setTrainngStatusMessageBytes(
+      public Builder setTrainingStatusMessageBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        trainngStatusMessage_ = value;
+        trainingStatusMessage_ = value;
         onChanged();
         return this;
       }
@@ -12483,39 +12483,39 @@ public final class DataServiceProtos {
       "\001 \001(\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030" +
       "\003 \001(\005\022\014\n\004tags\030\004 \003(\t\"U\n\031ConsumerTrainings" +
       "Response\0228\n\ttrainings\030\001 \003(\0132%.asgt.datas" +
-      "ervice.v1.ConsumerTraining\"\341\001\n\020ConsumerT" +
+      "ervice.v1.ConsumerTraining\"\342\001\n\020ConsumerT" +
       "raining\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dat" +
       "aset\022.\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.Timestamp\022\016\n\006status\030\003 \001(\t\022\027\n\017training" +
-      "_status\030\004 \001(\t\022\036\n\026trainng_status_message\030" +
-      "\005 \001(\t\022/\n\013finish_time\030\006 \001(\0132\032.google.prot" +
-      "obuf.Timestamp2\313\007\n\013DataService\022i\n\rCreate" +
-      "Dataset\022\".asgt.dataservice.v1.CreateRequ" +
-      "est\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1" +
-      "/{type}:create:\001*\022q\n\nAppendData\022&.asgt.d" +
-      "ataservice.v1.AppendDataRequest\032\026.google" +
-      ".protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{nam" +
-      "e}:append:\001*\022f\n\nDeleteData\022\".asgt.datase" +
-      "rvice.v1.DeleteRequest\032\026.google.protobuf" +
-      ".Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007" +
-      "GetInfo\022#.asgt.dataservice.v1.GetInfoReq" +
-      "uest\032$.asgt.dataservice.v1.GetInfoRespon" +
-      "se\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rUp" +
-      "dateDataset\022).asgt.dataservice.v1.Update" +
-      "DatasetRequest\032\026.google.protobuf.Empty\"#" +
-      "\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022R" +
-      "egisterQueryStats\022..asgt.dataservice.v1." +
-      "RegisterQueryStatsRequest\032\026.google.proto" +
-      "buf.Empty\022X\n\023CallsPerMonthMetric\022\026.googl" +
-      "e.protobuf.Empty\032).ssn.dataservice.v1.Ca" +
-      "llsPerMonthResponse\022o\n\020CalculateMetrics\022" +
-      ",.asgt.dataservice.v1.CalculateMetricsRe" +
-      "quest\032-.asgt.dataservice.v1.CalculateMet" +
-      "ricsResponse\022^\n\024GetConsumerTrainings\022\026.g" +
-      "oogle.protobuf.Empty\032..asgt.dataservice." +
-      "v1.ConsumerTrainingsResponseBJB\021DataServ" +
-      "iceProtosZ5github.com/e-conomic/vmlapis/" +
-      "gen/go/asgt/data/v1;datab\006proto3"
+      "_status\030\004 \001(\t\022\037\n\027training_status_message" +
+      "\030\005 \001(\t\022/\n\013finish_time\030\006 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp2\313\007\n\013DataService\022i\n\rCreat" +
+      "eDataset\022\".asgt.dataservice.v1.CreateReq" +
+      "uest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v" +
+      "1/{type}:create:\001*\022q\n\nAppendData\022&.asgt." +
+      "dataservice.v1.AppendDataRequest\032\026.googl" +
+      "e.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{na" +
+      "me}:append:\001*\022f\n\nDeleteData\022\".asgt.datas" +
+      "ervice.v1.DeleteRequest\032\026.google.protobu" +
+      "f.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n" +
+      "\007GetInfo\022#.asgt.dataservice.v1.GetInfoRe" +
+      "quest\032$.asgt.dataservice.v1.GetInfoRespo" +
+      "nse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rU" +
+      "pdateDataset\022).asgt.dataservice.v1.Updat" +
+      "eDatasetRequest\032\026.google.protobuf.Empty\"" +
+      "#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022" +
+      "RegisterQueryStats\022..asgt.dataservice.v1" +
+      ".RegisterQueryStatsRequest\032\026.google.prot" +
+      "obuf.Empty\022X\n\023CallsPerMonthMetric\022\026.goog" +
+      "le.protobuf.Empty\032).ssn.dataservice.v1.C" +
+      "allsPerMonthResponse\022o\n\020CalculateMetrics" +
+      "\022,.asgt.dataservice.v1.CalculateMetricsR" +
+      "equest\032-.asgt.dataservice.v1.CalculateMe" +
+      "tricsResponse\022^\n\024GetConsumerTrainings\022\026." +
+      "google.protobuf.Empty\032..asgt.dataservice" +
+      ".v1.ConsumerTrainingsResponseBJB\021DataSer" +
+      "viceProtosZ5github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/data/v1;datab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12601,7 +12601,7 @@ public final class DataServiceProtos {
     internal_static_asgt_dataservice_v1_ConsumerTraining_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_ConsumerTraining_descriptor,
-        new java.lang.String[] { "Dataset", "CreatedAt", "Status", "TrainingStatus", "TrainngStatusMessage", "FinishTime", });
+        new java.lang.String[] { "Dataset", "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

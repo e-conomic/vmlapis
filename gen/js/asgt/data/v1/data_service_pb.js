@@ -2810,7 +2810,7 @@ proto.asgt.dataservice.v1.ConsumerTraining.toObject = function(includeInstance, 
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     status: jspb.Message.getFieldWithDefault(msg, 3, ""),
     trainingStatus: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    trainngStatusMessage: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    trainingStatusMessage: jspb.Message.getFieldWithDefault(msg, 5, ""),
     finishTime: (f = msg.getFinishTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
@@ -2868,7 +2868,7 @@ proto.asgt.dataservice.v1.ConsumerTraining.deserializeBinaryFromReader = functio
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTrainngStatusMessage(value);
+      msg.setTrainingStatusMessage(value);
       break;
     case 6:
       var value = new google_protobuf_timestamp_pb.Timestamp;
@@ -2934,7 +2934,7 @@ proto.asgt.dataservice.v1.ConsumerTraining.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = message.getTrainngStatusMessage();
+  f = message.getTrainingStatusMessage();
   if (f.length > 0) {
     writer.writeString(
       5,
@@ -3063,10 +3063,10 @@ proto.asgt.dataservice.v1.ConsumerTraining.prototype.setTrainingStatus = functio
 
 
 /**
- * optional string trainng_status_message = 5;
+ * optional string training_status_message = 5;
  * @return {string}
  */
-proto.asgt.dataservice.v1.ConsumerTraining.prototype.getTrainngStatusMessage = function() {
+proto.asgt.dataservice.v1.ConsumerTraining.prototype.getTrainingStatusMessage = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
@@ -3075,7 +3075,7 @@ proto.asgt.dataservice.v1.ConsumerTraining.prototype.getTrainngStatusMessage = f
  * @param {string} value
  * @return {!proto.asgt.dataservice.v1.ConsumerTraining} returns this
  */
-proto.asgt.dataservice.v1.ConsumerTraining.prototype.setTrainngStatusMessage = function(value) {
+proto.asgt.dataservice.v1.ConsumerTraining.prototype.setTrainingStatusMessage = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
 };
 

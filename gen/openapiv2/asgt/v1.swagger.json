@@ -732,7 +732,7 @@
         "trainingStatus": {
           "type": "string"
         },
-        "trainngStatusMessage": {
+        "trainingStatusMessage": {
           "type": "string"
         },
         "finishTime": {
