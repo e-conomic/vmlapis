@@ -13,7 +13,8 @@ message Dataset {
   string type = 3;
   repeated string tags = 4;
   repeated string targets = 5;
-  reserved 6 to 8;
+  reserved 6 to 7;
+  google.protobuf.Timestamp truncated_at = 8;
   asgt.type.RetentionPolicy retention_policy = 9;
 
   google.protobuf.Timestamp created_at = 10;

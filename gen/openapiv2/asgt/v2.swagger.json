@@ -962,6 +962,10 @@
             "type": "string"
           }
         },
+        "truncatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
         "retentionPolicy": {
           "$ref": "#/definitions/typeRetentionPolicy"
         },
