@@ -5,6 +5,7 @@ package asgt.v2.type;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
 
 import "google/protobuf/timestamp.proto";
+import "asgt/type/dataset.proto";
 
 message Training {
     google.protobuf.Timestamp created_at = 1;
@@ -14,7 +15,20 @@ message Training {
     google.protobuf.Timestamp finish_time = 5;
 }
 
+message ConsumerTraining {
+    asgt.type.Dataset dataset = 1;
+    google.protobuf.Timestamp created_at = 2;
+    string status = 3;
+    string training_status = 4;
+    string training_status_message = 5;
+    google.protobuf.Timestamp finish_time = 6;
+}
+
 message TrainingsResponse {
     repeated Training trainings = 1;
 }
  
+message ConsumerTrainingsResponse {
+    repeated ConsumerTraining trainings = 1;
+}
+  

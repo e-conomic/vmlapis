@@ -87,6 +87,8 @@ service DatasetService {
       get: "/v2/datasets/{dataset_name}/trainings/{number_of_trainings}"
     };
   }
+
+  rpc GetConsumerTrainings(ConsumerTrainingsRequest) returns (asgt.v2.type.ConsumerTrainingsResponse);
 }
 
 message GetDatasetRequest {
@@ -129,4 +131,8 @@ message TruncateDatasetRequest {
 message TrainingsRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   uint32 number_of_trainings = 2;
+}
+
+message ConsumerTrainingsRequest {
+  uint32 number_of_trainings = 1;
 }
