@@ -881,5 +881,85 @@ proto.asgt.v2.DatasetServicePromiseClient.prototype.getTrainings =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.v2.ConsumerTrainingsRequest,
+ *   !proto.asgt.v2.type.ConsumerTrainingsResponse>}
+ */
+const methodDescriptor_DatasetService_GetConsumerTrainings = new grpc.web.MethodDescriptor(
+  '/asgt.v2.DatasetService/GetConsumerTrainings',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.v2.ConsumerTrainingsRequest,
+  asgt_v2_type_trainings_response_pb.ConsumerTrainingsResponse,
+  /**
+   * @param {!proto.asgt.v2.ConsumerTrainingsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  asgt_v2_type_trainings_response_pb.ConsumerTrainingsResponse.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.asgt.v2.ConsumerTrainingsRequest,
+ *   !proto.asgt.v2.type.ConsumerTrainingsResponse>}
+ */
+const methodInfo_DatasetService_GetConsumerTrainings = new grpc.web.AbstractClientBase.MethodInfo(
+  asgt_v2_type_trainings_response_pb.ConsumerTrainingsResponse,
+  /**
+   * @param {!proto.asgt.v2.ConsumerTrainingsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  asgt_v2_type_trainings_response_pb.ConsumerTrainingsResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.v2.ConsumerTrainingsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.asgt.v2.type.ConsumerTrainingsResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2.type.ConsumerTrainingsResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.v2.DatasetServiceClient.prototype.getConsumerTrainings =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetConsumerTrainings',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetConsumerTrainings,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.ConsumerTrainingsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.v2.type.ConsumerTrainingsResponse>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.v2.DatasetServicePromiseClient.prototype.getConsumerTrainings =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetConsumerTrainings',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetConsumerTrainings);
+};
+
+
 module.exports = proto.asgt.v2;
 

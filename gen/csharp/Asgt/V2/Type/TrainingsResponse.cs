@@ -25,19 +25,29 @@ namespace Asgt.V2.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVhc2d0L3YyL3R5cGUvdHJhaW5pbmdzX3Jlc3BvbnNlLnByb3RvEgxhc2d0",
-            "LnYyLnR5cGUaH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8itAEK",
-            "CFRyYWluaW5nEi4KCmNyZWF0ZWRfYXQYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEg4KBnN0YXR1cxgCIAEoCRIXCg90cmFpbmluZ19zdGF0",
-            "dXMYAyABKAkSHgoWdHJhaW5uZ19zdGF0dXNfbWVzc2FnZRgEIAEoCRIvCgtm",
-            "aW5pc2hfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
-            "PgoRVHJhaW5pbmdzUmVzcG9uc2USKQoJdHJhaW5pbmdzGAEgAygLMhYuYXNn",
-            "dC52Mi50eXBlLlRyYWluaW5nQjtaOWdpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
-            "bGFwaXMvZ2VuL2dvL2FzZ3QvdjIvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
+            "LnYyLnR5cGUaF2FzZ3QvdHlwZS9kYXRhc2V0LnByb3RvGh9nb29nbGUvcHJv",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIrQBCghUcmFpbmluZxIuCgpjcmVhdGVk",
+            "X2F0GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZzdGF0",
+            "dXMYAiABKAkSFwoPdHJhaW5pbmdfc3RhdHVzGAMgASgJEh4KFnRyYWlubmdf",
+            "c3RhdHVzX21lc3NhZ2UYBCABKAkSLwoLZmluaXNoX3RpbWUYBSABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wIuIBChBDb25zdW1lclRyYWluaW5n",
+            "EiMKB2RhdGFzZXQYASABKAsyEi5hc2d0LnR5cGUuRGF0YXNldBIuCgpjcmVh",
+            "dGVkX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZz",
+            "dGF0dXMYAyABKAkSFwoPdHJhaW5pbmdfc3RhdHVzGAQgASgJEh8KF3RyYWlu",
+            "aW5nX3N0YXR1c19tZXNzYWdlGAUgASgJEi8KC2ZpbmlzaF90aW1lGAYgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI+ChFUcmFpbmluZ3NSZXNw",
+            "b25zZRIpCgl0cmFpbmluZ3MYASADKAsyFi5hc2d0LnYyLnR5cGUuVHJhaW5p",
+            "bmciTgoZQ29uc3VtZXJUcmFpbmluZ3NSZXNwb25zZRIxCgl0cmFpbmluZ3MY",
+            "ASADKAsyHi5hc2d0LnYyLnR5cGUuQ29uc3VtZXJUcmFpbmluZ0I7WjlnaXRo",
+            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3YyL3R5cGU7",
+            "YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Training), global::Asgt.V2.Type.Training.Parser, new[]{ "CreatedAt", "Status", "TrainingStatus", "TrainngStatusMessage", "FinishTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.TrainingsResponse), global::Asgt.V2.Type.TrainingsResponse.Parser, new[]{ "Trainings" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.ConsumerTraining), global::Asgt.V2.Type.ConsumerTraining.Parser, new[]{ "Dataset", "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.TrainingsResponse), global::Asgt.V2.Type.TrainingsResponse.Parser, new[]{ "Trainings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.ConsumerTrainingsResponse), global::Asgt.V2.Type.ConsumerTrainingsResponse.Parser, new[]{ "Trainings" }, null, null, null, null)
           }));
     }
     #endregion
@@ -345,6 +355,348 @@ namespace Asgt.V2.Type {
 
   }
 
+  public sealed partial class ConsumerTraining : pb::IMessage<ConsumerTraining>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConsumerTraining> _parser = new pb::MessageParser<ConsumerTraining>(() => new ConsumerTraining());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ConsumerTraining> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.V2.Type.TrainingsResponseReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConsumerTraining() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConsumerTraining(ConsumerTraining other) : this() {
+      dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
+      createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      status_ = other.status_;
+      trainingStatus_ = other.trainingStatus_;
+      trainingStatusMessage_ = other.trainingStatusMessage_;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConsumerTraining Clone() {
+      return new ConsumerTraining(this);
+    }
+
+    /// <summary>Field number for the "dataset" field.</summary>
+    public const int DatasetFieldNumber = 1;
+    private global::Asgt.Type.Dataset dataset_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Type.Dataset Dataset {
+      get { return dataset_; }
+      set {
+        dataset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 3;
+    private string status_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Status {
+      get { return status_; }
+      set {
+        status_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "training_status" field.</summary>
+    public const int TrainingStatusFieldNumber = 4;
+    private string trainingStatus_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TrainingStatus {
+      get { return trainingStatus_; }
+      set {
+        trainingStatus_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "training_status_message" field.</summary>
+    public const int TrainingStatusMessageFieldNumber = 5;
+    private string trainingStatusMessage_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TrainingStatusMessage {
+      get { return trainingStatusMessage_; }
+      set {
+        trainingStatusMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "finish_time" field.</summary>
+    public const int FinishTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp finishTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FinishTime {
+      get { return finishTime_; }
+      set {
+        finishTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ConsumerTraining);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ConsumerTraining other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Dataset, other.Dataset)) return false;
+      if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      if (Status != other.Status) return false;
+      if (TrainingStatus != other.TrainingStatus) return false;
+      if (TrainingStatusMessage != other.TrainingStatusMessage) return false;
+      if (!object.Equals(FinishTime, other.FinishTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (dataset_ != null) hash ^= Dataset.GetHashCode();
+      if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (Status.Length != 0) hash ^= Status.GetHashCode();
+      if (TrainingStatus.Length != 0) hash ^= TrainingStatus.GetHashCode();
+      if (TrainingStatusMessage.Length != 0) hash ^= TrainingStatusMessage.GetHashCode();
+      if (finishTime_ != null) hash ^= FinishTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (dataset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Dataset);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreatedAt);
+      }
+      if (Status.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Status);
+      }
+      if (TrainingStatus.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TrainingStatus);
+      }
+      if (TrainingStatusMessage.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(TrainingStatusMessage);
+      }
+      if (finishTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(FinishTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (dataset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Dataset);
+      }
+      if (createdAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
+      }
+      if (Status.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Status);
+      }
+      if (TrainingStatus.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TrainingStatus);
+      }
+      if (TrainingStatusMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TrainingStatusMessage);
+      }
+      if (finishTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ConsumerTraining other) {
+      if (other == null) {
+        return;
+      }
+      if (other.dataset_ != null) {
+        if (dataset_ == null) {
+          Dataset = new global::Asgt.Type.Dataset();
+        }
+        Dataset.MergeFrom(other.Dataset);
+      }
+      if (other.createdAt_ != null) {
+        if (createdAt_ == null) {
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedAt.MergeFrom(other.CreatedAt);
+      }
+      if (other.Status.Length != 0) {
+        Status = other.Status;
+      }
+      if (other.TrainingStatus.Length != 0) {
+        TrainingStatus = other.TrainingStatus;
+      }
+      if (other.TrainingStatusMessage.Length != 0) {
+        TrainingStatusMessage = other.TrainingStatusMessage;
+      }
+      if (other.finishTime_ != null) {
+        if (finishTime_ == null) {
+          FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FinishTime.MergeFrom(other.FinishTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (dataset_ == null) {
+              Dataset = new global::Asgt.Type.Dataset();
+            }
+            input.ReadMessage(Dataset);
+            break;
+          }
+          case 18: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 26: {
+            Status = input.ReadString();
+            break;
+          }
+          case 34: {
+            TrainingStatus = input.ReadString();
+            break;
+          }
+          case 42: {
+            TrainingStatusMessage = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (finishTime_ == null) {
+              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (dataset_ == null) {
+              Dataset = new global::Asgt.Type.Dataset();
+            }
+            input.ReadMessage(Dataset);
+            break;
+          }
+          case 18: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 26: {
+            Status = input.ReadString();
+            break;
+          }
+          case 34: {
+            TrainingStatus = input.ReadString();
+            break;
+          }
+          case 42: {
+            TrainingStatusMessage = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (finishTime_ == null) {
+              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class TrainingsResponse : pb::IMessage<TrainingsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -357,7 +709,7 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.Type.TrainingsResponseReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Asgt.V2.Type.TrainingsResponseReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -445,6 +797,153 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TrainingsResponse other) {
+      if (other == null) {
+        return;
+      }
+      trainings_.Add(other.trainings_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            trainings_.AddEntriesFrom(input, _repeated_trainings_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            trainings_.AddEntriesFrom(ref input, _repeated_trainings_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ConsumerTrainingsResponse : pb::IMessage<ConsumerTrainingsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConsumerTrainingsResponse> _parser = new pb::MessageParser<ConsumerTrainingsResponse>(() => new ConsumerTrainingsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ConsumerTrainingsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.V2.Type.TrainingsResponseReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConsumerTrainingsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConsumerTrainingsResponse(ConsumerTrainingsResponse other) : this() {
+      trainings_ = other.trainings_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConsumerTrainingsResponse Clone() {
+      return new ConsumerTrainingsResponse(this);
+    }
+
+    /// <summary>Field number for the "trainings" field.</summary>
+    public const int TrainingsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.V2.Type.ConsumerTraining> _repeated_trainings_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.V2.Type.ConsumerTraining.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.V2.Type.ConsumerTraining> trainings_ = new pbc::RepeatedField<global::Asgt.V2.Type.ConsumerTraining>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.V2.Type.ConsumerTraining> Trainings {
+      get { return trainings_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ConsumerTrainingsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ConsumerTrainingsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!trainings_.Equals(other.trainings_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= trainings_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      trainings_.WriteTo(output, _repeated_trainings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += trainings_.CalculateSize(_repeated_trainings_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ConsumerTrainingsResponse other) {
       if (other == null) {
         return;
       }

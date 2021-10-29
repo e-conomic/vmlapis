@@ -67,6 +67,11 @@ class DatasetServiceStub(object):
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_type_dot_trainings__response__pb2.TrainingsResponse.FromString,
                 )
+        self.GetConsumerTrainings = channel.unary_unary(
+                '/asgt.v2.DatasetService/GetConsumerTrainings',
+                request_serializer=asgt_dot_v2_dot_dataset__service__pb2.ConsumerTrainingsRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2_dot_type_dot_trainings__response__pb2.ConsumerTrainingsResponse.FromString,
+                )
 
 
 class DatasetServiceServicer(object):
@@ -135,6 +140,12 @@ class DatasetServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetConsumerTrainings(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DatasetServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -187,6 +198,11 @@ def add_DatasetServiceServicer_to_server(servicer, server):
                     servicer.GetTrainings,
                     request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsRequest.FromString,
                     response_serializer=asgt_dot_v2_dot_type_dot_trainings__response__pb2.TrainingsResponse.SerializeToString,
+            ),
+            'GetConsumerTrainings': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetConsumerTrainings,
+                    request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.ConsumerTrainingsRequest.FromString,
+                    response_serializer=asgt_dot_v2_dot_type_dot_trainings__response__pb2.ConsumerTrainingsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -355,5 +371,21 @@ class DatasetService(object):
         return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetTrainings',
             asgt_dot_v2_dot_dataset__service__pb2.TrainingsRequest.SerializeToString,
             asgt_dot_v2_dot_type_dot_trainings__response__pb2.TrainingsResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetConsumerTrainings(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetConsumerTrainings',
+            asgt_dot_v2_dot_dataset__service__pb2.ConsumerTrainingsRequest.SerializeToString,
+            asgt_dot_v2_dot_type_dot_trainings__response__pb2.ConsumerTrainingsResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

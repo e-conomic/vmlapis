@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1d\x61sgt/v2/dataset_service.proto\x12\x07\x61sgt.v2\x1a\x17\x61sgt/type/dataset.proto\x1a\x1a\x61sgt/v2/type/example.proto\x1a%asgt/v2/type/trainings_response.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x19options/annotations.proto\x1a\x17validate/validate.proto\"K\n\x11GetDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\x88\x01\n\x14\x43reateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\x38\n\x04tags\x18\x02 \x03(\tB*\xfa\x42\x1f\x92\x01\x1c\"\x1ar\x18(@2\x14^[A-Za-z0-9\\s_.>-]*$\xfa\x42\x05\x92\x01\x02\x18\x01\"N\n\x14\x44\x65leteDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J\n\x10\x44\x65leteTagRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"~\n\x14\x43reateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12&\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.Example\"\x86\x01\n\x1c\x43reateOrUpdateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12&\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.Example\"\x84\x01\n\x19\x42\x61tchCreateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\'\n\x08\x65xamples\x18\x02 \x03(\x0b\x32\x15.asgt.v2.type.Example\"P\n\x16TruncateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"o\n\x10TrainingsRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\x1b\n\x13number_of_trainings\x18\x02 \x01(\r2\xef\t\n\x0e\x44\x61tasetService\x12Y\n\nGetDataset\x12\x1a.asgt.v2.GetDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v2/datasets/{name}\x12_\n\rCreateDataset\x12\x1d.asgt.v2.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v2/datasets:\x01*\x12n\n\x15\x43reateOrUpdateDataset\x12\x1d.asgt.v2.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\x1a\x13/v2/datasets/{name}:\x01*\x12_\n\rDeleteDataset\x12\x1d.asgt.v2.DeleteDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v2/datasets/{name}\x12W\n\tDeleteTag\x12\x19.asgt.v2.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v2/tags/{name}\x12}\n\rCreateExample\x12\x1d.asgt.v2.CreateExampleRequest\x1a\x16.google.protobuf.Empty\"5\x82\xd3\xe4\x93\x02/\"$/v2/datasets/{dataset_name}/examples:\x07\x65xample\x12\x9a\x01\n\x15\x43reateOrUpdateExample\x12%.asgt.v2.CreateOrUpdateExampleRequest\x1a\x16.google.protobuf.Empty\"B\x82\xd3\xe4\x93\x02<\x1a\x31/v2/datasets/{dataset_name}/examples/{example.id}:\x07\x65xample\x12\x8d\x01\n\x12\x42\x61tchCreateExample\x12\".asgt.v2.BatchCreateExampleRequest\x1a\x16.google.protobuf.Empty\";\x82\xd3\xe4\x93\x02\x35\"0/v2/datasets/{dataset_name}/examples:batchCreate:\x01*\x12p\n\x0fTruncateDataset\x12\x1f.asgt.v2.TruncateDatasetRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e*\x1c/v2/datasets/{name}/examples\x12\x8f\x01\n\x0cGetTrainings\x12\x19.asgt.v2.TrainingsRequest\x1a\x1f.asgt.v2.type.TrainingsResponse\"C\x82\xd3\xe4\x93\x02=\x12;/v2/datasets/{dataset_name}/trainings/{number_of_trainings}\x1aG\x92\x41\x44\x12\x42Manage datasets and examples used for training AutoSuggest models.B-Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2b\x06proto3'
+  serialized_pb=b'\n\x1d\x61sgt/v2/dataset_service.proto\x12\x07\x61sgt.v2\x1a\x17\x61sgt/type/dataset.proto\x1a\x1a\x61sgt/v2/type/example.proto\x1a%asgt/v2/type/trainings_response.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x19options/annotations.proto\x1a\x17validate/validate.proto\"K\n\x11GetDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\x88\x01\n\x14\x43reateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\x38\n\x04tags\x18\x02 \x03(\tB*\xfa\x42\x1f\x92\x01\x1c\"\x1ar\x18(@2\x14^[A-Za-z0-9\\s_.>-]*$\xfa\x42\x05\x92\x01\x02\x18\x01\"N\n\x14\x44\x65leteDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J\n\x10\x44\x65leteTagRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"~\n\x14\x43reateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12&\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.Example\"\x86\x01\n\x1c\x43reateOrUpdateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12&\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.Example\"\x84\x01\n\x19\x42\x61tchCreateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\'\n\x08\x65xamples\x18\x02 \x03(\x0b\x32\x15.asgt.v2.type.Example\"P\n\x16TruncateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"o\n\x10TrainingsRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\x1b\n\x13number_of_trainings\x18\x02 \x01(\r\"7\n\x18\x43onsumerTrainingsRequest\x12\x1b\n\x13number_of_trainings\x18\x01 \x01(\r2\xd3\n\n\x0e\x44\x61tasetService\x12Y\n\nGetDataset\x12\x1a.asgt.v2.GetDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v2/datasets/{name}\x12_\n\rCreateDataset\x12\x1d.asgt.v2.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v2/datasets:\x01*\x12n\n\x15\x43reateOrUpdateDataset\x12\x1d.asgt.v2.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\x1a\x13/v2/datasets/{name}:\x01*\x12_\n\rDeleteDataset\x12\x1d.asgt.v2.DeleteDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v2/datasets/{name}\x12W\n\tDeleteTag\x12\x19.asgt.v2.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v2/tags/{name}\x12}\n\rCreateExample\x12\x1d.asgt.v2.CreateExampleRequest\x1a\x16.google.protobuf.Empty\"5\x82\xd3\xe4\x93\x02/\"$/v2/datasets/{dataset_name}/examples:\x07\x65xample\x12\x9a\x01\n\x15\x43reateOrUpdateExample\x12%.asgt.v2.CreateOrUpdateExampleRequest\x1a\x16.google.protobuf.Empty\"B\x82\xd3\xe4\x93\x02<\x1a\x31/v2/datasets/{dataset_name}/examples/{example.id}:\x07\x65xample\x12\x8d\x01\n\x12\x42\x61tchCreateExample\x12\".asgt.v2.BatchCreateExampleRequest\x1a\x16.google.protobuf.Empty\";\x82\xd3\xe4\x93\x02\x35\"0/v2/datasets/{dataset_name}/examples:batchCreate:\x01*\x12p\n\x0fTruncateDataset\x12\x1f.asgt.v2.TruncateDatasetRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e*\x1c/v2/datasets/{name}/examples\x12\x8f\x01\n\x0cGetTrainings\x12\x19.asgt.v2.TrainingsRequest\x1a\x1f.asgt.v2.type.TrainingsResponse\"C\x82\xd3\xe4\x93\x02=\x12;/v2/datasets/{dataset_name}/trainings/{number_of_trainings}\x12\x62\n\x14GetConsumerTrainings\x12!.asgt.v2.ConsumerTrainingsRequest\x1a\'.asgt.v2.type.ConsumerTrainingsResponse\x1aG\x92\x41\x44\x12\x42Manage datasets and examples used for training AutoSuggest models.B-Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2b\x06proto3'
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_v2_dot_type_dot_example__pb2.DESCRIPTOR,asgt_dot_v2_dot_type_dot_trainings__response__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -355,6 +355,38 @@ _TRAININGSREQUEST = _descriptor.Descriptor(
   serialized_end=1210,
 )
 
+
+_CONSUMERTRAININGSREQUEST = _descriptor.Descriptor(
+  name='ConsumerTrainingsRequest',
+  full_name='asgt.v2.ConsumerTrainingsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='number_of_trainings', full_name='asgt.v2.ConsumerTrainingsRequest.number_of_trainings', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1212,
+  serialized_end=1267,
+)
+
 _CREATEEXAMPLEREQUEST.fields_by_name['example'].message_type = asgt_dot_v2_dot_type_dot_example__pb2._EXAMPLE
 _CREATEORUPDATEEXAMPLEREQUEST.fields_by_name['example'].message_type = asgt_dot_v2_dot_type_dot_example__pb2._EXAMPLE
 _BATCHCREATEEXAMPLEREQUEST.fields_by_name['examples'].message_type = asgt_dot_v2_dot_type_dot_example__pb2._EXAMPLE
@@ -367,6 +399,7 @@ DESCRIPTOR.message_types_by_name['CreateOrUpdateExampleRequest'] = _CREATEORUPDA
 DESCRIPTOR.message_types_by_name['BatchCreateExampleRequest'] = _BATCHCREATEEXAMPLEREQUEST
 DESCRIPTOR.message_types_by_name['TruncateDatasetRequest'] = _TRUNCATEDATASETREQUEST
 DESCRIPTOR.message_types_by_name['TrainingsRequest'] = _TRAININGSREQUEST
+DESCRIPTOR.message_types_by_name['ConsumerTrainingsRequest'] = _CONSUMERTRAININGSREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetDatasetRequest = _reflection.GeneratedProtocolMessageType('GetDatasetRequest', (_message.Message,), {
@@ -432,6 +465,13 @@ TrainingsRequest = _reflection.GeneratedProtocolMessageType('TrainingsRequest', 
   })
 _sym_db.RegisterMessage(TrainingsRequest)
 
+ConsumerTrainingsRequest = _reflection.GeneratedProtocolMessageType('ConsumerTrainingsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CONSUMERTRAININGSREQUEST,
+  '__module__' : 'asgt.v2.dataset_service_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.v2.ConsumerTrainingsRequest)
+  })
+_sym_db.RegisterMessage(ConsumerTrainingsRequest)
+
 
 DESCRIPTOR._options = None
 _GETDATASETREQUEST.fields_by_name['name']._options = None
@@ -452,8 +492,8 @@ _DATASETSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=b'\222AD\022BManage datasets and examples used for training AutoSuggest models.',
   create_key=_descriptor._internal_create_key,
-  serialized_start=1213,
-  serialized_end=2476,
+  serialized_start=1270,
+  serialized_end=2633,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetDataset',
@@ -553,6 +593,16 @@ _DATASETSERVICE = _descriptor.ServiceDescriptor(
     input_type=_TRAININGSREQUEST,
     output_type=asgt_dot_v2_dot_type_dot_trainings__response__pb2._TRAININGSRESPONSE,
     serialized_options=b'\202\323\344\223\002=\022;/v2/datasets/{dataset_name}/trainings/{number_of_trainings}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetConsumerTrainings',
+    full_name='asgt.v2.DatasetService.GetConsumerTrainings',
+    index=10,
+    containing_service=None,
+    input_type=_CONSUMERTRAININGSREQUEST,
+    output_type=asgt_dot_v2_dot_type_dot_trainings__response__pb2._CONSUMERTRAININGSRESPONSE,
+    serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),
 ])

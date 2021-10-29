@@ -845,3 +845,72 @@ var _ interface {
 } = TrainingsRequestValidationError{}
 
 var _TrainingsRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
+// Validate checks the field values on ConsumerTrainingsRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *ConsumerTrainingsRequest) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for NumberOfTrainings
+
+	return nil
+}
+
+// ConsumerTrainingsRequestValidationError is the validation error returned by
+// ConsumerTrainingsRequest.Validate if the designated constraints aren't met.
+type ConsumerTrainingsRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ConsumerTrainingsRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ConsumerTrainingsRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ConsumerTrainingsRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ConsumerTrainingsRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ConsumerTrainingsRequestValidationError) ErrorName() string {
+	return "ConsumerTrainingsRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ConsumerTrainingsRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sConsumerTrainingsRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ConsumerTrainingsRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ConsumerTrainingsRequestValidationError{}

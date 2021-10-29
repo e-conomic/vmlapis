@@ -34,6 +34,7 @@ type DatasetServiceClient interface {
 	// removing existing models.
 	TruncateDataset(ctx context.Context, in *TruncateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GetTrainings(ctx context.Context, in *TrainingsRequest, opts ...grpc.CallOption) (*_type1.TrainingsResponse, error)
+	GetConsumerTrainings(ctx context.Context, in *ConsumerTrainingsRequest, opts ...grpc.CallOption) (*_type1.ConsumerTrainingsResponse, error)
 }
 
 type datasetServiceClient struct {
@@ -134,6 +135,15 @@ func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *TrainingsRe
 	return out, nil
 }
 
+func (c *datasetServiceClient) GetConsumerTrainings(ctx context.Context, in *ConsumerTrainingsRequest, opts ...grpc.CallOption) (*_type1.ConsumerTrainingsResponse, error) {
+	out := new(_type1.ConsumerTrainingsResponse)
+	err := c.cc.Invoke(ctx, "/asgt.v2.DatasetService/GetConsumerTrainings", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DatasetServiceServer is the server API for DatasetService service.
 // All implementations must embed UnimplementedDatasetServiceServer
 // for forward compatibility
@@ -151,6 +161,7 @@ type DatasetServiceServer interface {
 	// removing existing models.
 	TruncateDataset(context.Context, *TruncateDatasetRequest) (*empty.Empty, error)
 	GetTrainings(context.Context, *TrainingsRequest) (*_type1.TrainingsResponse, error)
+	GetConsumerTrainings(context.Context, *ConsumerTrainingsRequest) (*_type1.ConsumerTrainingsResponse, error)
 	mustEmbedUnimplementedDatasetServiceServer()
 }
 
@@ -187,6 +198,9 @@ func (UnimplementedDatasetServiceServer) TruncateDataset(context.Context, *Trunc
 }
 func (UnimplementedDatasetServiceServer) GetTrainings(context.Context, *TrainingsRequest) (*_type1.TrainingsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTrainings not implemented")
+}
+func (UnimplementedDatasetServiceServer) GetConsumerTrainings(context.Context, *ConsumerTrainingsRequest) (*_type1.ConsumerTrainingsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetConsumerTrainings not implemented")
 }
 func (UnimplementedDatasetServiceServer) mustEmbedUnimplementedDatasetServiceServer() {}
 
@@ -381,6 +395,24 @@ func _DatasetService_GetTrainings_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DatasetService_GetConsumerTrainings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ConsumerTrainingsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatasetServiceServer).GetConsumerTrainings(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/asgt.v2.DatasetService/GetConsumerTrainings",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatasetServiceServer).GetConsumerTrainings(ctx, req.(*ConsumerTrainingsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DatasetService_ServiceDesc is the grpc.ServiceDesc for DatasetService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -427,6 +459,10 @@ var DatasetService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetTrainings",
 			Handler:    _DatasetService_GetTrainings_Handler,
+		},
+		{
+			MethodName: "GetConsumerTrainings",
+			Handler:    _DatasetService_GetConsumerTrainings_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

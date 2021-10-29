@@ -123,6 +123,107 @@ var _ interface {
 	ErrorName() string
 } = TrainingValidationError{}
 
+// Validate checks the field values on ConsumerTraining with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *ConsumerTraining) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if v, ok := interface{}(m.GetDataset()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ConsumerTrainingValidationError{
+				field:  "Dataset",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetCreatedAt()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ConsumerTrainingValidationError{
+				field:  "CreatedAt",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	// no validation rules for Status
+
+	// no validation rules for TrainingStatus
+
+	// no validation rules for TrainingStatusMessage
+
+	if v, ok := interface{}(m.GetFinishTime()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ConsumerTrainingValidationError{
+				field:  "FinishTime",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// ConsumerTrainingValidationError is the validation error returned by
+// ConsumerTraining.Validate if the designated constraints aren't met.
+type ConsumerTrainingValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ConsumerTrainingValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ConsumerTrainingValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ConsumerTrainingValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ConsumerTrainingValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ConsumerTrainingValidationError) ErrorName() string { return "ConsumerTrainingValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ConsumerTrainingValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sConsumerTraining.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ConsumerTrainingValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ConsumerTrainingValidationError{}
+
 // Validate checks the field values on TrainingsResponse with the rules defined
 // in the proto definition for this message. If any rules are violated, an
 // error is returned.
@@ -204,3 +305,85 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = TrainingsResponseValidationError{}
+
+// Validate checks the field values on ConsumerTrainingsResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *ConsumerTrainingsResponse) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	for idx, item := range m.GetTrainings() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ConsumerTrainingsResponseValidationError{
+					field:  fmt.Sprintf("Trainings[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// ConsumerTrainingsResponseValidationError is the validation error returned by
+// ConsumerTrainingsResponse.Validate if the designated constraints aren't met.
+type ConsumerTrainingsResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ConsumerTrainingsResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ConsumerTrainingsResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ConsumerTrainingsResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ConsumerTrainingsResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ConsumerTrainingsResponseValidationError) ErrorName() string {
+	return "ConsumerTrainingsResponseValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ConsumerTrainingsResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sConsumerTrainingsResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ConsumerTrainingsResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ConsumerTrainingsResponseValidationError{}
