@@ -186,14 +186,14 @@
         ]
       }
     },
-    "/v2/datasets/{datasetName}/trainings/{numberOfTrainings}": {
+    "/v2/datasets/{datasetName}/trainings": {
       "get": {
-        "operationId": "DatasetService_GetTrainings",
+        "operationId": "DatasetService_GetDatasetTrainings",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/typeTrainingsResponse"
+              "$ref": "#/definitions/v2TrainingsResponse"
             }
           },
           "default": {
@@ -211,10 +211,10 @@
             "type": "string"
           },
           {
-            "name": "numberOfTrainings",
-            "in": "path",
-            "required": true,
-            "type": "integer",
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "string",
             "format": "int64"
           }
         ],
@@ -811,6 +811,37 @@
           "DatasetService"
         ]
       }
+    },
+    "/v2/trainings": {
+      "get": {
+        "operationId": "DatasetService_GetTrainings",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v2TrainingsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
     }
   },
   "definitions": {
@@ -920,42 +951,6 @@
         }
       },
       "title": "Common types"
-    },
-    "typeConsumerTraining": {
-      "type": "object",
-      "properties": {
-        "dataset": {
-          "$ref": "#/definitions/typeDataset"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "status": {
-          "type": "string"
-        },
-        "trainingStatus": {
-          "type": "string"
-        },
-        "trainingStatusMessage": {
-          "type": "string"
-        },
-        "finishTime": {
-          "type": "string",
-          "format": "date-time"
-        }
-      }
-    },
-    "typeConsumerTrainingsResponse": {
-      "type": "object",
-      "properties": {
-        "trainings": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/typeConsumerTraining"
-          }
-        }
-      }
     },
     "typeData": {
       "type": "object",
@@ -1188,23 +1183,15 @@
         "trainingStatus": {
           "type": "string"
         },
-        "trainngStatusMessage": {
+        "trainingStatusMessage": {
           "type": "string"
         },
         "finishTime": {
           "type": "string",
           "format": "date-time"
-        }
-      }
-    },
-    "typeTrainingsResponse": {
-      "type": "object",
-      "properties": {
-        "trainings": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/typeTraining"
-          }
+        },
+        "dataset": {
+          "$ref": "#/definitions/typeDataset"
         }
       }
     },
@@ -1274,6 +1261,17 @@
         },
         "model": {
           "$ref": "#/definitions/typeModel"
+        }
+      }
+    },
+    "v2TrainingsResponse": {
+      "type": "object",
+      "properties": {
+        "trainings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeTraining"
+          }
         }
       }
     }

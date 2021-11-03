@@ -763,36 +763,36 @@ var _ interface {
 
 var _TruncateDatasetRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
-// Validate checks the field values on TrainingsRequest with the rules defined
-// in the proto definition for this message. If any rules are violated, an
-// error is returned.
-func (m *TrainingsRequest) Validate() error {
+// Validate checks the field values on GetDatasetTrainingsRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *GetDatasetTrainingsRequest) Validate() error {
 	if m == nil {
 		return nil
 	}
 
 	if len(m.GetDatasetName()) > 256 {
-		return TrainingsRequestValidationError{
+		return GetDatasetTrainingsRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
 	}
 
-	if !_TrainingsRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return TrainingsRequestValidationError{
+	if !_GetDatasetTrainingsRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		return GetDatasetTrainingsRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
 	}
 
-	// no validation rules for NumberOfTrainings
+	// no validation rules for Limit
 
 	return nil
 }
 
-// TrainingsRequestValidationError is the validation error returned by
-// TrainingsRequest.Validate if the designated constraints aren't met.
-type TrainingsRequestValidationError struct {
+// GetDatasetTrainingsRequestValidationError is the validation error returned
+// by GetDatasetTrainingsRequest.Validate if the designated constraints aren't met.
+type GetDatasetTrainingsRequestValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -800,22 +800,24 @@ type TrainingsRequestValidationError struct {
 }
 
 // Field function returns field value.
-func (e TrainingsRequestValidationError) Field() string { return e.field }
+func (e GetDatasetTrainingsRequestValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e TrainingsRequestValidationError) Reason() string { return e.reason }
+func (e GetDatasetTrainingsRequestValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e TrainingsRequestValidationError) Cause() error { return e.cause }
+func (e GetDatasetTrainingsRequestValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e TrainingsRequestValidationError) Key() bool { return e.key }
+func (e GetDatasetTrainingsRequestValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e TrainingsRequestValidationError) ErrorName() string { return "TrainingsRequestValidationError" }
+func (e GetDatasetTrainingsRequestValidationError) ErrorName() string {
+	return "GetDatasetTrainingsRequestValidationError"
+}
 
 // Error satisfies the builtin error interface
-func (e TrainingsRequestValidationError) Error() string {
+func (e GetDatasetTrainingsRequestValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -827,14 +829,14 @@ func (e TrainingsRequestValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sTrainingsRequest.%s: %s%s",
+		"invalid %sGetDatasetTrainingsRequest.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = TrainingsRequestValidationError{}
+var _ error = GetDatasetTrainingsRequestValidationError{}
 
 var _ interface {
 	Field() string
@@ -842,26 +844,26 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = TrainingsRequestValidationError{}
+} = GetDatasetTrainingsRequestValidationError{}
 
-var _TrainingsRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+var _GetDatasetTrainingsRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
-// Validate checks the field values on ConsumerTrainingsRequest with the rules
+// Validate checks the field values on GetTrainingsRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
-func (m *ConsumerTrainingsRequest) Validate() error {
+func (m *GetTrainingsRequest) Validate() error {
 	if m == nil {
 		return nil
 	}
 
-	// no validation rules for NumberOfTrainings
+	// no validation rules for Limit
 
 	return nil
 }
 
-// ConsumerTrainingsRequestValidationError is the validation error returned by
-// ConsumerTrainingsRequest.Validate if the designated constraints aren't met.
-type ConsumerTrainingsRequestValidationError struct {
+// GetTrainingsRequestValidationError is the validation error returned by
+// GetTrainingsRequest.Validate if the designated constraints aren't met.
+type GetTrainingsRequestValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -869,24 +871,24 @@ type ConsumerTrainingsRequestValidationError struct {
 }
 
 // Field function returns field value.
-func (e ConsumerTrainingsRequestValidationError) Field() string { return e.field }
+func (e GetTrainingsRequestValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e ConsumerTrainingsRequestValidationError) Reason() string { return e.reason }
+func (e GetTrainingsRequestValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e ConsumerTrainingsRequestValidationError) Cause() error { return e.cause }
+func (e GetTrainingsRequestValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e ConsumerTrainingsRequestValidationError) Key() bool { return e.key }
+func (e GetTrainingsRequestValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e ConsumerTrainingsRequestValidationError) ErrorName() string {
-	return "ConsumerTrainingsRequestValidationError"
+func (e GetTrainingsRequestValidationError) ErrorName() string {
+	return "GetTrainingsRequestValidationError"
 }
 
 // Error satisfies the builtin error interface
-func (e ConsumerTrainingsRequestValidationError) Error() string {
+func (e GetTrainingsRequestValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -898,14 +900,14 @@ func (e ConsumerTrainingsRequestValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sConsumerTrainingsRequest.%s: %s%s",
+		"invalid %sGetTrainingsRequest.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = ConsumerTrainingsRequestValidationError{}
+var _ error = GetTrainingsRequestValidationError{}
 
 var _ interface {
 	Field() string
@@ -913,4 +915,86 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = ConsumerTrainingsRequestValidationError{}
+} = GetTrainingsRequestValidationError{}
+
+// Validate checks the field values on TrainingsResponse with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *TrainingsResponse) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	for idx, item := range m.GetTrainings() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return TrainingsResponseValidationError{
+					field:  fmt.Sprintf("Trainings[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// TrainingsResponseValidationError is the validation error returned by
+// TrainingsResponse.Validate if the designated constraints aren't met.
+type TrainingsResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e TrainingsResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e TrainingsResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e TrainingsResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e TrainingsResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e TrainingsResponseValidationError) ErrorName() string {
+	return "TrainingsResponseValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e TrainingsResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sTrainingsResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = TrainingsResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = TrainingsResponseValidationError{}
