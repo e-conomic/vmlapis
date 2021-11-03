@@ -10,7 +10,7 @@ import "options/annotations.proto";
 import "validate/validate.proto";
 
 import "asgt/v2/type/example.proto";
-import "asgt/v2/type/trainings_response.proto";
+import "asgt/v2/type/training.proto";
 import "asgt/type/dataset.proto";
 
 
@@ -82,13 +82,17 @@ service DatasetService {
     };
   }
 
-  rpc GetTrainings (TrainingsRequest) returns (asgt.v2.type.TrainingsResponse) {
+  rpc GetDatasetTrainings (GetDatasetTrainingsRequest) returns (TrainingsResponse) {
     option (google.api.http) = {
-      get: "/v2/datasets/{dataset_name}/trainings/{number_of_trainings}"
+      get: "/v2/datasets/{dataset_name}/trainings"
     };
   }
 
-  rpc GetConsumerTrainings(ConsumerTrainingsRequest) returns (asgt.v2.type.ConsumerTrainingsResponse);
+  rpc GetTrainings(GetTrainingsRequest) returns (TrainingsResponse) {
+    option (google.api.http) = {
+      get: "/v2/trainings"
+    };
+  }
 }
 
 message GetDatasetRequest {
@@ -128,11 +132,15 @@ message TruncateDatasetRequest {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
 
-message TrainingsRequest {
+message GetDatasetTrainingsRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  uint32 number_of_trainings = 2;
+  int64 limit = 2; // mapped to URL query parameter `limit`
 }
 
-message ConsumerTrainingsRequest {
-  uint32 number_of_trainings = 1;
+message GetTrainingsRequest {
+  int64 limit = 1; // mapped to URL query parameter `limit`
+}
+
+message TrainingsResponse {
+  repeated asgt.v2.type.Training trainings = 1;
 }
