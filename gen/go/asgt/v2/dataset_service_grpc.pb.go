@@ -5,7 +5,6 @@ package v2
 import (
 	context "context"
 	_type "github.com/e-conomic/vmlapis/gen/go/asgt/type"
-	_type1 "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type"
 	empty "github.com/golang/protobuf/ptypes/empty"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -33,7 +32,8 @@ type DatasetServiceClient interface {
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
 	// removing existing models.
 	TruncateDataset(ctx context.Context, in *TruncateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	GetTrainings(ctx context.Context, in *TrainingsRequest, opts ...grpc.CallOption) (*_type1.TrainingsResponse, error)
+	GetDatasetTrainings(ctx context.Context, in *GetDatasetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
+	GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
 }
 
 type datasetServiceClient struct {
@@ -125,8 +125,17 @@ func (c *datasetServiceClient) TruncateDataset(ctx context.Context, in *Truncate
 	return out, nil
 }
 
-func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *TrainingsRequest, opts ...grpc.CallOption) (*_type1.TrainingsResponse, error) {
-	out := new(_type1.TrainingsResponse)
+func (c *datasetServiceClient) GetDatasetTrainings(ctx context.Context, in *GetDatasetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error) {
+	out := new(TrainingsResponse)
+	err := c.cc.Invoke(ctx, "/asgt.v2.DatasetService/GetDatasetTrainings", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error) {
+	out := new(TrainingsResponse)
 	err := c.cc.Invoke(ctx, "/asgt.v2.DatasetService/GetTrainings", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -150,7 +159,8 @@ type DatasetServiceServer interface {
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
 	// removing existing models.
 	TruncateDataset(context.Context, *TruncateDatasetRequest) (*empty.Empty, error)
-	GetTrainings(context.Context, *TrainingsRequest) (*_type1.TrainingsResponse, error)
+	GetDatasetTrainings(context.Context, *GetDatasetTrainingsRequest) (*TrainingsResponse, error)
+	GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error)
 	mustEmbedUnimplementedDatasetServiceServer()
 }
 
@@ -185,7 +195,10 @@ func (UnimplementedDatasetServiceServer) BatchCreateExample(context.Context, *Ba
 func (UnimplementedDatasetServiceServer) TruncateDataset(context.Context, *TruncateDatasetRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TruncateDataset not implemented")
 }
-func (UnimplementedDatasetServiceServer) GetTrainings(context.Context, *TrainingsRequest) (*_type1.TrainingsResponse, error) {
+func (UnimplementedDatasetServiceServer) GetDatasetTrainings(context.Context, *GetDatasetTrainingsRequest) (*TrainingsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDatasetTrainings not implemented")
+}
+func (UnimplementedDatasetServiceServer) GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTrainings not implemented")
 }
 func (UnimplementedDatasetServiceServer) mustEmbedUnimplementedDatasetServiceServer() {}
@@ -363,8 +376,26 @@ func _DatasetService_TruncateDataset_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DatasetService_GetDatasetTrainings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDatasetTrainingsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatasetServiceServer).GetDatasetTrainings(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/asgt.v2.DatasetService/GetDatasetTrainings",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatasetServiceServer).GetDatasetTrainings(ctx, req.(*GetDatasetTrainingsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DatasetService_GetTrainings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(TrainingsRequest)
+	in := new(GetTrainingsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -376,7 +407,7 @@ func _DatasetService_GetTrainings_Handler(srv interface{}, ctx context.Context, 
 		FullMethod: "/asgt.v2.DatasetService/GetTrainings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DatasetServiceServer).GetTrainings(ctx, req.(*TrainingsRequest))
+		return srv.(DatasetServiceServer).GetTrainings(ctx, req.(*GetTrainingsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -423,6 +454,10 @@ var DatasetService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "TruncateDataset",
 			Handler:    _DatasetService_TruncateDataset_Handler,
+		},
+		{
+			MethodName: "GetDatasetTrainings",
+			Handler:    _DatasetService_GetDatasetTrainings_Handler,
 		},
 		{
 			MethodName: "GetTrainings",

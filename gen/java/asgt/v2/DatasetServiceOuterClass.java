@@ -5915,57 +5915,40 @@ public final class DatasetServiceOuterClass {
 
   }
 
-  public interface TrainingsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.v2.TrainingsRequest)
+  public interface TrainingRequestOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2.TrainingRequestOptions)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * text-no-spaces
+     * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The datasetName.
+     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+     * @return The limit.
      */
-    java.lang.String getDatasetName();
-    /**
-     * <pre>
-     * text-no-spaces
-     * </pre>
-     *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for datasetName.
-     */
-    com.google.protobuf.ByteString
-        getDatasetNameBytes();
-
-    /**
-     * <code>uint32 number_of_trainings = 2;</code>
-     * @return The numberOfTrainings.
-     */
-    int getNumberOfTrainings();
+    long getLimit();
   }
   /**
-   * Protobuf type {@code asgt.v2.TrainingsRequest}
+   * Protobuf type {@code asgt.v2.TrainingRequestOptions}
    */
-  public static final class TrainingsRequest extends
+  public static final class TrainingRequestOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.v2.TrainingsRequest)
-      TrainingsRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.v2.TrainingRequestOptions)
+      TrainingRequestOptionsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TrainingsRequest.newBuilder() to construct.
-    private TrainingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use TrainingRequestOptions.newBuilder() to construct.
+    private TrainingRequestOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TrainingsRequest() {
-      datasetName_ = "";
+    private TrainingRequestOptions() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new TrainingsRequest();
+      return new TrainingRequestOptions();
     }
 
     @java.lang.Override
@@ -5973,7 +5956,7 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrainingsRequest(
+    private TrainingRequestOptions(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5991,15 +5974,9 @@ public final class DatasetServiceOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 8: {
 
-              datasetName_ = s;
-              break;
-            }
-            case 16: {
-
-              numberOfTrainings_ = input.readUInt32();
+              limit_ = input.readInt64();
               break;
             }
             default: {
@@ -6023,15 +6000,564 @@ public final class DatasetServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsRequest_descriptor;
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsRequest_fieldAccessorTable
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.v2.DatasetServiceOuterClass.TrainingsRequest.class, asgt.v2.DatasetServiceOuterClass.TrainingsRequest.Builder.class);
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.class, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder.class);
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 1;
+    private long limit_;
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+     * </pre>
+     *
+     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public long getLimit() {
+      return limit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (limit_ != 0L) {
+        output.writeInt64(1, limit_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (limit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, limit_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions)) {
+        return super.equals(obj);
+      }
+      asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions other = (asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions) obj;
+
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLimit());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.v2.TrainingRequestOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.v2.TrainingRequestOptions)
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.class, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder.class);
+      }
+
+      // Construct using asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        limit_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getDefaultInstanceForType() {
+        return asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions build() {
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions buildPartial() {
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions result = new asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions(this);
+        result.limit_ = limit_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions) {
+          return mergeFrom((asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions other) {
+        if (other == asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance()) return this;
+        if (other.getLimit() != 0L) {
+          setLimit(other.getLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long limit_ ;
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * </pre>
+       *
+       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * @return The limit.
+       */
+      @java.lang.Override
+      public long getLimit() {
+        return limit_;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * </pre>
+       *
+       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(long value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * </pre>
+       *
+       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.v2.TrainingRequestOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.v2.TrainingRequestOptions)
+    private static final asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions();
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrainingRequestOptions>
+        PARSER = new com.google.protobuf.AbstractParser<TrainingRequestOptions>() {
+      @java.lang.Override
+      public TrainingRequestOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TrainingRequestOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrainingRequestOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrainingRequestOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetDatasetTrainingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2.GetDatasetTrainingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * text-no-spaces
+     * </pre>
+     *
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The datasetName.
+     */
+    java.lang.String getDatasetName();
+    /**
+     * <pre>
+     * text-no-spaces
+     * </pre>
+     *
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for datasetName.
+     */
+    com.google.protobuf.ByteString
+        getDatasetNameBytes();
+
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return Whether the options field is set.
+     */
+    boolean hasOptions();
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return The options.
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code asgt.v2.GetDatasetTrainingsRequest}
+   */
+  public static final class GetDatasetTrainingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.v2.GetDatasetTrainingsRequest)
+      GetDatasetTrainingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetDatasetTrainingsRequest.newBuilder() to construct.
+    private GetDatasetTrainingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDatasetTrainingsRequest() {
+      datasetName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDatasetTrainingsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetDatasetTrainingsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              datasetName_ = s;
+              break;
+            }
+            case 18: {
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder subBuilder = null;
+              if (options_ != null) {
+                subBuilder = options_.toBuilder();
+              }
+              options_ = input.readMessage(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(options_);
+                options_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetDatasetTrainingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.class, asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.Builder.class);
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
@@ -6080,15 +6606,30 @@ public final class DatasetServiceOuterClass {
       }
     }
 
-    public static final int NUMBER_OF_TRAININGS_FIELD_NUMBER = 2;
-    private int numberOfTrainings_;
+    public static final int OPTIONS_FIELD_NUMBER = 2;
+    private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
-     * <code>uint32 number_of_trainings = 2;</code>
-     * @return The numberOfTrainings.
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return Whether the options field is set.
      */
     @java.lang.Override
-    public int getNumberOfTrainings() {
-      return numberOfTrainings_;
+    public boolean hasOptions() {
+      return options_ != null;
+    }
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return The options.
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+      return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+    }
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+      return getOptions();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6108,8 +6649,8 @@ public final class DatasetServiceOuterClass {
       if (!getDatasetNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
-      if (numberOfTrainings_ != 0) {
-        output.writeUInt32(2, numberOfTrainings_);
+      if (options_ != null) {
+        output.writeMessage(2, getOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -6123,9 +6664,9 @@ public final class DatasetServiceOuterClass {
       if (!getDatasetNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
-      if (numberOfTrainings_ != 0) {
+      if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, numberOfTrainings_);
+          .computeMessageSize(2, getOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6137,15 +6678,18 @@ public final class DatasetServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.v2.DatasetServiceOuterClass.TrainingsRequest)) {
+      if (!(obj instanceof asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest)) {
         return super.equals(obj);
       }
-      asgt.v2.DatasetServiceOuterClass.TrainingsRequest other = (asgt.v2.DatasetServiceOuterClass.TrainingsRequest) obj;
+      asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest other = (asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest) obj;
 
       if (!getDatasetName()
           .equals(other.getDatasetName())) return false;
-      if (getNumberOfTrainings()
-          != other.getNumberOfTrainings()) return false;
+      if (hasOptions() != other.hasOptions()) return false;
+      if (hasOptions()) {
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6159,76 +6703,78 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + NUMBER_OF_TRAININGS_FIELD_NUMBER;
-      hash = (53 * hash) + getNumberOfTrainings();
+      if (hasOptions()) {
+        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(byte[] data)
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(java.io.InputStream input)
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseDelimitedFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest parseFrom(
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6241,7 +6787,7 @@ public final class DatasetServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.v2.DatasetServiceOuterClass.TrainingsRequest prototype) {
+    public static Builder newBuilder(asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6257,26 +6803,26 @@ public final class DatasetServiceOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.v2.TrainingsRequest}
+     * Protobuf type {@code asgt.v2.GetDatasetTrainingsRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.v2.TrainingsRequest)
-        asgt.v2.DatasetServiceOuterClass.TrainingsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.v2.GetDatasetTrainingsRequest)
+        asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsRequest_descriptor;
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsRequest_fieldAccessorTable
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetDatasetTrainingsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.v2.DatasetServiceOuterClass.TrainingsRequest.class, asgt.v2.DatasetServiceOuterClass.TrainingsRequest.Builder.class);
+                asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.class, asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.Builder.class);
       }
 
-      // Construct using asgt.v2.DatasetServiceOuterClass.TrainingsRequest.newBuilder()
+      // Construct using asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6296,25 +6842,29 @@ public final class DatasetServiceOuterClass {
         super.clear();
         datasetName_ = "";
 
-        numberOfTrainings_ = 0;
-
+        if (optionsBuilder_ == null) {
+          options_ = null;
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsRequest_descriptor;
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.v2.DatasetServiceOuterClass.TrainingsRequest getDefaultInstanceForType() {
-        return asgt.v2.DatasetServiceOuterClass.TrainingsRequest.getDefaultInstance();
+      public asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest getDefaultInstanceForType() {
+        return asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.v2.DatasetServiceOuterClass.TrainingsRequest build() {
-        asgt.v2.DatasetServiceOuterClass.TrainingsRequest result = buildPartial();
+      public asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest build() {
+        asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6322,10 +6872,14 @@ public final class DatasetServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.v2.DatasetServiceOuterClass.TrainingsRequest buildPartial() {
-        asgt.v2.DatasetServiceOuterClass.TrainingsRequest result = new asgt.v2.DatasetServiceOuterClass.TrainingsRequest(this);
+      public asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest buildPartial() {
+        asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest result = new asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest(this);
         result.datasetName_ = datasetName_;
-        result.numberOfTrainings_ = numberOfTrainings_;
+        if (optionsBuilder_ == null) {
+          result.options_ = options_;
+        } else {
+          result.options_ = optionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6364,22 +6918,22 @@ public final class DatasetServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.v2.DatasetServiceOuterClass.TrainingsRequest) {
-          return mergeFrom((asgt.v2.DatasetServiceOuterClass.TrainingsRequest)other);
+        if (other instanceof asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest) {
+          return mergeFrom((asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.v2.DatasetServiceOuterClass.TrainingsRequest other) {
-        if (other == asgt.v2.DatasetServiceOuterClass.TrainingsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest other) {
+        if (other == asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        if (other.getNumberOfTrainings() != 0) {
-          setNumberOfTrainings(other.getNumberOfTrainings());
+        if (other.hasOptions()) {
+          mergeOptions(other.getOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6396,11 +6950,11 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.TrainingsRequest parsedMessage = null;
+        asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.TrainingsRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6506,35 +7060,123 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private int numberOfTrainings_ ;
+      private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>uint32 number_of_trainings = 2;</code>
-       * @return The numberOfTrainings.
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * @return Whether the options field is set.
        */
-      @java.lang.Override
-      public int getNumberOfTrainings() {
-        return numberOfTrainings_;
+      public boolean hasOptions() {
+        return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>uint32 number_of_trainings = 2;</code>
-       * @param value The numberOfTrainings to set.
-       * @return This builder for chaining.
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * @return The options.
        */
-      public Builder setNumberOfTrainings(int value) {
-        
-        numberOfTrainings_ = value;
-        onChanged();
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+        if (optionsBuilder_ == null) {
+          return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        } else {
+          return optionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          options_ = value;
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
-       * <code>uint32 number_of_trainings = 2;</code>
-       * @return This builder for chaining.
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
-      public Builder clearNumberOfTrainings() {
-        
-        numberOfTrainings_ = 0;
-        onChanged();
+      public Builder setOptions(
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
+        if (optionsBuilder_ == null) {
+          options_ = builderForValue.build();
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (options_ != null) {
+            options_ =
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          } else {
+            options_ = value;
+          }
+          onChanged();
+        } else {
+          optionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public Builder clearOptions() {
+        if (optionsBuilder_ == null) {
+          options_ = null;
+          onChanged();
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
+        
+        onChanged();
+        return getOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+        if (optionsBuilder_ != null) {
+          return optionsBuilder_.getMessageOrBuilder();
+        } else {
+          return options_ == null ?
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        }
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
+          getOptionsFieldBuilder() {
+        if (optionsBuilder_ == null) {
+          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder>(
+                  getOptions(),
+                  getParentForChildren(),
+                  isClean());
+          options_ = null;
+        }
+        return optionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6549,41 +7191,1455 @@ public final class DatasetServiceOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.v2.TrainingsRequest)
+      // @@protoc_insertion_point(builder_scope:asgt.v2.GetDatasetTrainingsRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.v2.TrainingsRequest)
-    private static final asgt.v2.DatasetServiceOuterClass.TrainingsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.v2.GetDatasetTrainingsRequest)
+    private static final asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.v2.DatasetServiceOuterClass.TrainingsRequest();
+      DEFAULT_INSTANCE = new asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest();
     }
 
-    public static asgt.v2.DatasetServiceOuterClass.TrainingsRequest getDefaultInstance() {
+    public static asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TrainingsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<TrainingsRequest>() {
+    private static final com.google.protobuf.Parser<GetDatasetTrainingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetDatasetTrainingsRequest>() {
       @java.lang.Override
-      public TrainingsRequest parsePartialFrom(
+      public GetDatasetTrainingsRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrainingsRequest(input, extensionRegistry);
+        return new GetDatasetTrainingsRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TrainingsRequest> parser() {
+    public static com.google.protobuf.Parser<GetDatasetTrainingsRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TrainingsRequest> getParserForType() {
+    public com.google.protobuf.Parser<GetDatasetTrainingsRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.v2.DatasetServiceOuterClass.TrainingsRequest getDefaultInstanceForType() {
+    public asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetTrainingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2.GetTrainingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return Whether the options field is set.
+     */
+    boolean hasOptions();
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return The options.
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code asgt.v2.GetTrainingsRequest}
+   */
+  public static final class GetTrainingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.v2.GetTrainingsRequest)
+      GetTrainingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetTrainingsRequest.newBuilder() to construct.
+    private GetTrainingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetTrainingsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTrainingsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetTrainingsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder subBuilder = null;
+              if (options_ != null) {
+                subBuilder = options_.toBuilder();
+              }
+              options_ = input.readMessage(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(options_);
+                options_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetTrainingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetTrainingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.class, asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.Builder.class);
+    }
+
+    public static final int OPTIONS_FIELD_NUMBER = 1;
+    private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return Whether the options field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptions() {
+      return options_ != null;
+    }
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return The options.
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+      return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+    }
+    /**
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+      return getOptions();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (options_ != null) {
+        output.writeMessage(1, getOptions());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (options_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOptions());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest)) {
+        return super.equals(obj);
+      }
+      asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest other = (asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest) obj;
+
+      if (hasOptions() != other.hasOptions()) return false;
+      if (hasOptions()) {
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOptions()) {
+        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOptions().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.v2.GetTrainingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.v2.GetTrainingsRequest)
+        asgt.v2.DatasetServiceOuterClass.GetTrainingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetTrainingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetTrainingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.class, asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.Builder.class);
+      }
+
+      // Construct using asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (optionsBuilder_ == null) {
+          options_ = null;
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetTrainingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest getDefaultInstanceForType() {
+        return asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest build() {
+        asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest buildPartial() {
+        asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest result = new asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest(this);
+        if (optionsBuilder_ == null) {
+          result.options_ = options_;
+        } else {
+          result.options_ = optionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest) {
+          return mergeFrom((asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest other) {
+        if (other == asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.getDefaultInstance()) return this;
+        if (other.hasOptions()) {
+          mergeOptions(other.getOptions());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * @return Whether the options field is set.
+       */
+      public boolean hasOptions() {
+        return optionsBuilder_ != null || options_ != null;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * @return The options.
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+        if (optionsBuilder_ == null) {
+          return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        } else {
+          return optionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          options_ = value;
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public Builder setOptions(
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
+        if (optionsBuilder_ == null) {
+          options_ = builderForValue.build();
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (options_ != null) {
+            options_ =
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          } else {
+            options_ = value;
+          }
+          onChanged();
+        } else {
+          optionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public Builder clearOptions() {
+        if (optionsBuilder_ == null) {
+          options_ = null;
+          onChanged();
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
+        
+        onChanged();
+        return getOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+        if (optionsBuilder_ != null) {
+          return optionsBuilder_.getMessageOrBuilder();
+        } else {
+          return options_ == null ?
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        }
+      }
+      /**
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
+          getOptionsFieldBuilder() {
+        if (optionsBuilder_ == null) {
+          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder>(
+                  getOptions(),
+                  getParentForChildren(),
+                  isClean());
+          options_ = null;
+        }
+        return optionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.v2.GetTrainingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.v2.GetTrainingsRequest)
+    private static final asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest();
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetTrainingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetTrainingsRequest>() {
+      @java.lang.Override
+      public GetTrainingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetTrainingsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetTrainingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetTrainingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TrainingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2.TrainingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    java.util.List<asgt.v2.type.TrainingOuterClass.Training> 
+        getTrainingsList();
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    asgt.v2.type.TrainingOuterClass.Training getTrainings(int index);
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    int getTrainingsCount();
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
+        getTrainingsOrBuilderList();
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code asgt.v2.TrainingsResponse}
+   */
+  public static final class TrainingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.v2.TrainingsResponse)
+      TrainingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrainingsResponse.newBuilder() to construct.
+    private TrainingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrainingsResponse() {
+      trainings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrainingsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TrainingsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                trainings_ = new java.util.ArrayList<asgt.v2.type.TrainingOuterClass.Training>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              trainings_.add(
+                  input.readMessage(asgt.v2.type.TrainingOuterClass.Training.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          trainings_ = java.util.Collections.unmodifiableList(trainings_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.v2.DatasetServiceOuterClass.TrainingsResponse.class, asgt.v2.DatasetServiceOuterClass.TrainingsResponse.Builder.class);
+    }
+
+    public static final int TRAININGS_FIELD_NUMBER = 1;
+    private java.util.List<asgt.v2.type.TrainingOuterClass.Training> trainings_;
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<asgt.v2.type.TrainingOuterClass.Training> getTrainingsList() {
+      return trainings_;
+    }
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
+        getTrainingsOrBuilderList() {
+      return trainings_;
+    }
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    @java.lang.Override
+    public int getTrainingsCount() {
+      return trainings_.size();
+    }
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    @java.lang.Override
+    public asgt.v2.type.TrainingOuterClass.Training getTrainings(int index) {
+      return trainings_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     */
+    @java.lang.Override
+    public asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
+        int index) {
+      return trainings_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < trainings_.size(); i++) {
+        output.writeMessage(1, trainings_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < trainings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, trainings_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.v2.DatasetServiceOuterClass.TrainingsResponse)) {
+        return super.equals(obj);
+      }
+      asgt.v2.DatasetServiceOuterClass.TrainingsResponse other = (asgt.v2.DatasetServiceOuterClass.TrainingsResponse) obj;
+
+      if (!getTrainingsList()
+          .equals(other.getTrainingsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTrainingsCount() > 0) {
+        hash = (37 * hash) + TRAININGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTrainingsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.v2.DatasetServiceOuterClass.TrainingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.v2.TrainingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.v2.TrainingsResponse)
+        asgt.v2.DatasetServiceOuterClass.TrainingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.v2.DatasetServiceOuterClass.TrainingsResponse.class, asgt.v2.DatasetServiceOuterClass.TrainingsResponse.Builder.class);
+      }
+
+      // Construct using asgt.v2.DatasetServiceOuterClass.TrainingsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTrainingsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (trainingsBuilder_ == null) {
+          trainings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          trainingsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingsResponse getDefaultInstanceForType() {
+        return asgt.v2.DatasetServiceOuterClass.TrainingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingsResponse build() {
+        asgt.v2.DatasetServiceOuterClass.TrainingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingsResponse buildPartial() {
+        asgt.v2.DatasetServiceOuterClass.TrainingsResponse result = new asgt.v2.DatasetServiceOuterClass.TrainingsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (trainingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            trainings_ = java.util.Collections.unmodifiableList(trainings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.trainings_ = trainings_;
+        } else {
+          result.trainings_ = trainingsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.v2.DatasetServiceOuterClass.TrainingsResponse) {
+          return mergeFrom((asgt.v2.DatasetServiceOuterClass.TrainingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.v2.DatasetServiceOuterClass.TrainingsResponse other) {
+        if (other == asgt.v2.DatasetServiceOuterClass.TrainingsResponse.getDefaultInstance()) return this;
+        if (trainingsBuilder_ == null) {
+          if (!other.trainings_.isEmpty()) {
+            if (trainings_.isEmpty()) {
+              trainings_ = other.trainings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTrainingsIsMutable();
+              trainings_.addAll(other.trainings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.trainings_.isEmpty()) {
+            if (trainingsBuilder_.isEmpty()) {
+              trainingsBuilder_.dispose();
+              trainingsBuilder_ = null;
+              trainings_ = other.trainings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              trainingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTrainingsFieldBuilder() : null;
+            } else {
+              trainingsBuilder_.addAllMessages(other.trainings_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.v2.DatasetServiceOuterClass.TrainingsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.v2.DatasetServiceOuterClass.TrainingsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<asgt.v2.type.TrainingOuterClass.Training> trainings_ =
+        java.util.Collections.emptyList();
+      private void ensureTrainingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          trainings_ = new java.util.ArrayList<asgt.v2.type.TrainingOuterClass.Training>(trainings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.v2.type.TrainingOuterClass.Training, asgt.v2.type.TrainingOuterClass.Training.Builder, asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> trainingsBuilder_;
+
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public java.util.List<asgt.v2.type.TrainingOuterClass.Training> getTrainingsList() {
+        if (trainingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(trainings_);
+        } else {
+          return trainingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public int getTrainingsCount() {
+        if (trainingsBuilder_ == null) {
+          return trainings_.size();
+        } else {
+          return trainingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public asgt.v2.type.TrainingOuterClass.Training getTrainings(int index) {
+        if (trainingsBuilder_ == null) {
+          return trainings_.get(index);
+        } else {
+          return trainingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder setTrainings(
+          int index, asgt.v2.type.TrainingOuterClass.Training value) {
+        if (trainingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainingsIsMutable();
+          trainings_.set(index, value);
+          onChanged();
+        } else {
+          trainingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder setTrainings(
+          int index, asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
+        if (trainingsBuilder_ == null) {
+          ensureTrainingsIsMutable();
+          trainings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          trainingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder addTrainings(asgt.v2.type.TrainingOuterClass.Training value) {
+        if (trainingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainingsIsMutable();
+          trainings_.add(value);
+          onChanged();
+        } else {
+          trainingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder addTrainings(
+          int index, asgt.v2.type.TrainingOuterClass.Training value) {
+        if (trainingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainingsIsMutable();
+          trainings_.add(index, value);
+          onChanged();
+        } else {
+          trainingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder addTrainings(
+          asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
+        if (trainingsBuilder_ == null) {
+          ensureTrainingsIsMutable();
+          trainings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          trainingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder addTrainings(
+          int index, asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
+        if (trainingsBuilder_ == null) {
+          ensureTrainingsIsMutable();
+          trainings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          trainingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder addAllTrainings(
+          java.lang.Iterable<? extends asgt.v2.type.TrainingOuterClass.Training> values) {
+        if (trainingsBuilder_ == null) {
+          ensureTrainingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trainings_);
+          onChanged();
+        } else {
+          trainingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder clearTrainings() {
+        if (trainingsBuilder_ == null) {
+          trainings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          trainingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public Builder removeTrainings(int index) {
+        if (trainingsBuilder_ == null) {
+          ensureTrainingsIsMutable();
+          trainings_.remove(index);
+          onChanged();
+        } else {
+          trainingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public asgt.v2.type.TrainingOuterClass.Training.Builder getTrainingsBuilder(
+          int index) {
+        return getTrainingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
+          int index) {
+        if (trainingsBuilder_ == null) {
+          return trainings_.get(index);  } else {
+          return trainingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
+           getTrainingsOrBuilderList() {
+        if (trainingsBuilder_ != null) {
+          return trainingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(trainings_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public asgt.v2.type.TrainingOuterClass.Training.Builder addTrainingsBuilder() {
+        return getTrainingsFieldBuilder().addBuilder(
+            asgt.v2.type.TrainingOuterClass.Training.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public asgt.v2.type.TrainingOuterClass.Training.Builder addTrainingsBuilder(
+          int index) {
+        return getTrainingsFieldBuilder().addBuilder(
+            index, asgt.v2.type.TrainingOuterClass.Training.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       */
+      public java.util.List<asgt.v2.type.TrainingOuterClass.Training.Builder> 
+           getTrainingsBuilderList() {
+        return getTrainingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.v2.type.TrainingOuterClass.Training, asgt.v2.type.TrainingOuterClass.Training.Builder, asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
+          getTrainingsFieldBuilder() {
+        if (trainingsBuilder_ == null) {
+          trainingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.v2.type.TrainingOuterClass.Training, asgt.v2.type.TrainingOuterClass.Training.Builder, asgt.v2.type.TrainingOuterClass.TrainingOrBuilder>(
+                  trainings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          trainings_ = null;
+        }
+        return trainingsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.v2.TrainingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.v2.TrainingsResponse)
+    private static final asgt.v2.DatasetServiceOuterClass.TrainingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.v2.DatasetServiceOuterClass.TrainingsResponse();
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.TrainingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrainingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TrainingsResponse>() {
+      @java.lang.Override
+      public TrainingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TrainingsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrainingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrainingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6630,10 +8686,25 @@ public final class DatasetServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_v2_TruncateDatasetRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_v2_TrainingsRequest_descriptor;
+    internal_static_asgt_v2_TrainingRequestOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_v2_TrainingsRequest_fieldAccessorTable;
+      internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2_GetDatasetTrainingsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2_GetTrainingsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2_GetTrainingsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2_TrainingsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2_TrainingsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6645,75 +8716,82 @@ public final class DatasetServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n\035asgt/v2/dataset_service.proto\022\007asgt.v2" +
       "\032\027asgt/type/dataset.proto\032\032asgt/v2/type/" +
-      "example.proto\032%asgt/v2/type/trainings_re" +
-      "sponse.proto\032\034google/api/annotations.pro" +
-      "to\032\033google/protobuf/empty.proto\032\031options" +
-      "/annotations.proto\032\027validate/validate.pr" +
-      "oto\"K\n\021GetDatasetRequest\0226\n\004name\030\001 \001(\tB(" +
-      "\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$" +
-      "\"\210\001\n\024CreateDatasetRequest\0226\n\004name\030\001 \001(\tB" +
-      "(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*" +
-      "$\0228\n\004tags\030\002 \003(\tB*\372B\037\222\001\034\"\032r\030(@2\024^[A-Za-z0" +
-      "-9\\s_.>-]*$\372B\005\222\001\002\030\001\"N\n\024DeleteDatasetRequ" +
-      "est\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
-      ".][A-Za-z0-9_.>-]*$\"J\n\020DeleteTagRequest\022" +
-      "6\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
-      "-Za-z0-9_.>-]*$\"~\n\024CreateExampleRequest\022" +
-      ">\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
-      "z0-9.][A-Za-z0-9_.>-]*$\022&\n\007example\030\002 \001(\013" +
-      "2\025.asgt.v2.type.Example\"\206\001\n\034CreateOrUpda" +
-      "teExampleRequest\022>\n\014dataset_name\030\001 \001(\tB(" +
-      "\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$" +
-      "\022&\n\007example\030\002 \001(\0132\025.asgt.v2.type.Example" +
-      "\"\204\001\n\031BatchCreateExampleRequest\022>\n\014datase" +
-      "t_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-" +
-      "Za-z0-9_.>-]*$\022\'\n\010examples\030\002 \003(\0132\025.asgt." +
-      "v2.type.Example\"P\n\026TruncateDatasetReques" +
-      "t\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.]" +
-      "[A-Za-z0-9_.>-]*$\"o\n\020TrainingsRequest\022>\n" +
-      "\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0" +
-      "-9.][A-Za-z0-9_.>-]*$\022\033\n\023number_of_train" +
-      "ings\030\002 \001(\r2\357\t\n\016DatasetService\022Y\n\nGetData" +
-      "set\022\032.asgt.v2.GetDatasetRequest\032\022.asgt.t" +
-      "ype.Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{name}" +
-      "\022_\n\rCreateDataset\022\035.asgt.v2.CreateDatase" +
-      "tRequest\032\026.google.protobuf.Empty\"\027\202\323\344\223\002\021" +
-      "\"\014/v2/datasets:\001*\022n\n\025CreateOrUpdateDatas" +
-      "et\022\035.asgt.v2.CreateDatasetRequest\032\026.goog" +
-      "le.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v2/datasets/" +
-      "{name}:\001*\022_\n\rDeleteDataset\022\035.asgt.v2.Del" +
-      "eteDatasetRequest\032\022.asgt.type.Dataset\"\033\202" +
-      "\323\344\223\002\025*\023/v2/datasets/{name}\022W\n\tDeleteTag\022" +
-      "\031.asgt.v2.DeleteTagRequest\032\026.google.prot" +
-      "obuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022}\n\rC" +
-      "reateExample\022\035.asgt.v2.CreateExampleRequ" +
-      "est\032\026.google.protobuf.Empty\"5\202\323\344\223\002/\"$/v2" +
-      "/datasets/{dataset_name}/examples:\007examp" +
-      "le\022\232\001\n\025CreateOrUpdateExample\022%.asgt.v2.C" +
-      "reateOrUpdateExampleRequest\032\026.google.pro" +
-      "tobuf.Empty\"B\202\323\344\223\002<\0321/v2/datasets/{datas" +
-      "et_name}/examples/{example.id}:\007example\022" +
-      "\215\001\n\022BatchCreateExample\022\".asgt.v2.BatchCr" +
-      "eateExampleRequest\032\026.google.protobuf.Emp" +
-      "ty\";\202\323\344\223\0025\"0/v2/datasets/{dataset_name}/" +
-      "examples:batchCreate:\001*\022p\n\017TruncateDatas" +
-      "et\022\037.asgt.v2.TruncateDatasetRequest\032\026.go" +
-      "ogle.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/dataset" +
-      "s/{name}/examples\022\217\001\n\014GetTrainings\022\031.asg" +
-      "t.v2.TrainingsRequest\032\037.asgt.v2.type.Tra" +
-      "iningsResponse\"C\202\323\344\223\002=\022;/v2/datasets/{da" +
-      "taset_name}/trainings/{number_of_trainin" +
-      "gs}\032G\222AD\022BManage datasets and examples u" +
-      "sed for training AutoSuggest models.B-Z+" +
-      "github.com/e-conomic/vmlapis/gen/go/asgt" +
-      "/v2b\006proto3"
+      "example.proto\032\033asgt/v2/type/training.pro" +
+      "to\032\034google/api/annotations.proto\032\033google" +
+      "/protobuf/empty.proto\032\031options/annotatio" +
+      "ns.proto\032\027validate/validate.proto\"K\n\021Get" +
+      "DatasetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036" +
+      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\210\001\n\024Creat" +
+      "eDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022" +
+      "\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\0228\n\004tags\030" +
+      "\002 \003(\tB*\372B\037\222\001\034\"\032r\030(@2\024^[A-Za-z0-9\\s_.>-]*" +
+      "$\372B\005\222\001\002\030\001\"N\n\024DeleteDatasetRequest\0226\n\004nam" +
+      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
+      "-9_.>-]*$\"J\n\020DeleteTagRequest\0226\n\004name\030\001 " +
+      "\001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_." +
+      ">-]*$\"~\n\024CreateExampleRequest\022>\n\014dataset" +
+      "_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Z" +
+      "a-z0-9_.>-]*$\022&\n\007example\030\002 \001(\0132\025.asgt.v2" +
+      ".type.Example\"\206\001\n\034CreateOrUpdateExampleR" +
+      "equest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036" +
+      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022&\n\007exampl" +
+      "e\030\002 \001(\0132\025.asgt.v2.type.Example\"\204\001\n\031Batch" +
+      "CreateExampleRequest\022>\n\014dataset_name\030\001 \001" +
+      "(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>" +
+      "-]*$\022\'\n\010examples\030\002 \003(\0132\025.asgt.v2.type.Ex" +
+      "ample\"P\n\026TruncateDatasetRequest\0226\n\004name\030" +
+      "\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9" +
+      "_.>-]*$\"2\n\026TrainingRequestOptions\022\030\n\005lim" +
+      "it\030\001 \001(\003B\t\372B\006\"\004\030d \000\"\216\001\n\032GetDatasetTraini" +
+      "ngsRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(" +
+      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\0220\n\007op" +
+      "tions\030\002 \001(\0132\037.asgt.v2.TrainingRequestOpt" +
+      "ions\"G\n\023GetTrainingsRequest\0220\n\007options\030\001" +
+      " \001(\0132\037.asgt.v2.TrainingRequestOptions\">\n" +
+      "\021TrainingsResponse\022)\n\ttrainings\030\001 \003(\0132\026." +
+      "asgt.v2.type.Training2\306\n\n\016DatasetService" +
+      "\022Y\n\nGetDataset\022\032.asgt.v2.GetDatasetReque" +
+      "st\032\022.asgt.type.Dataset\"\033\202\323\344\223\002\025\022\023/v2/data" +
+      "sets/{name}\022_\n\rCreateDataset\022\035.asgt.v2.C" +
+      "reateDatasetRequest\032\026.google.protobuf.Em" +
+      "pty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022n\n\025CreateOr" +
+      "UpdateDataset\022\035.asgt.v2.CreateDatasetReq" +
+      "uest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v" +
+      "2/datasets/{name}:\001*\022_\n\rDeleteDataset\022\035." +
+      "asgt.v2.DeleteDatasetRequest\032\022.asgt.type" +
+      ".Dataset\"\033\202\323\344\223\002\025*\023/v2/datasets/{name}\022W\n" +
+      "\tDeleteTag\022\031.asgt.v2.DeleteTagRequest\032\026." +
+      "google.protobuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/" +
+      "{name}\022}\n\rCreateExample\022\035.asgt.v2.Create" +
+      "ExampleRequest\032\026.google.protobuf.Empty\"5" +
+      "\202\323\344\223\002/\"$/v2/datasets/{dataset_name}/exam" +
+      "ples:\007example\022\232\001\n\025CreateOrUpdateExample\022" +
+      "%.asgt.v2.CreateOrUpdateExampleRequest\032\026" +
+      ".google.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/data" +
+      "sets/{dataset_name}/examples/{example.id" +
+      "}:\007example\022\215\001\n\022BatchCreateExample\022\".asgt" +
+      ".v2.BatchCreateExampleRequest\032\026.google.p" +
+      "rotobuf.Empty\";\202\323\344\223\0025\"0/v2/datasets/{dat" +
+      "aset_name}/examples:batchCreate:\001*\022p\n\017Tr" +
+      "uncateDataset\022\037.asgt.v2.TruncateDatasetR" +
+      "equest\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036*\034" +
+      "/v2/datasets/{name}/examples\022\205\001\n\023GetData" +
+      "setTrainings\022#.asgt.v2.GetDatasetTrainin" +
+      "gsRequest\032\032.asgt.v2.TrainingsResponse\"-\202" +
+      "\323\344\223\002\'\022%/v2/datasets/{dataset_name}/train" +
+      "ings\022_\n\014GetTrainings\022\034.asgt.v2.GetTraini" +
+      "ngsRequest\032\032.asgt.v2.TrainingsResponse\"\025" +
+      "\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022BManage datas" +
+      "ets and examples used for training AutoS" +
+      "uggest models.B-Z+github.com/e-conomic/v" +
+      "mlapis/gen/go/asgt/v2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.v2.type.ExampleOuterClass.getDescriptor(),
-          asgt.v2.type.TrainingsResponseOuterClass.getDescriptor(),
+          asgt.v2.type.TrainingOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
@@ -6767,12 +8845,30 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_TruncateDatasetRequest_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_asgt_v2_TrainingsRequest_descriptor =
+    internal_static_asgt_v2_TrainingRequestOptions_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_asgt_v2_TrainingsRequest_fieldAccessorTable = new
+    internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_v2_TrainingsRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "NumberOfTrainings", });
+        internal_static_asgt_v2_TrainingRequestOptions_descriptor,
+        new java.lang.String[] { "Limit", });
+    internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_asgt_v2_GetDatasetTrainingsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor,
+        new java.lang.String[] { "DatasetName", "Options", });
+    internal_static_asgt_v2_GetTrainingsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_asgt_v2_GetTrainingsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2_GetTrainingsRequest_descriptor,
+        new java.lang.String[] { "Options", });
+    internal_static_asgt_v2_TrainingsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_asgt_v2_TrainingsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2_TrainingsResponse_descriptor,
+        new java.lang.String[] { "Trainings", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -6782,7 +8878,7 @@ public final class DatasetServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.v2.type.ExampleOuterClass.getDescriptor();
-    asgt.v2.type.TrainingsResponseOuterClass.getDescriptor();
+    asgt.v2.type.TrainingOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
