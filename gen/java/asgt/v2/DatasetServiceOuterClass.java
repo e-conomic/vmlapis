@@ -5915,6 +5915,495 @@ public final class DatasetServiceOuterClass {
 
   }
 
+  public interface TrainingRequestOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2.TrainingRequestOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 limit = 1;</code>
+     * @return The limit.
+     */
+    long getLimit();
+  }
+  /**
+   * Protobuf type {@code asgt.v2.TrainingRequestOptions}
+   */
+  public static final class TrainingRequestOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.v2.TrainingRequestOptions)
+      TrainingRequestOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrainingRequestOptions.newBuilder() to construct.
+    private TrainingRequestOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrainingRequestOptions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrainingRequestOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TrainingRequestOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              limit_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.class, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder.class);
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 1;
+    private long limit_;
+    /**
+     * <code>int64 limit = 1;</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public long getLimit() {
+      return limit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (limit_ != 0L) {
+        output.writeInt64(1, limit_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (limit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, limit_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions)) {
+        return super.equals(obj);
+      }
+      asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions other = (asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions) obj;
+
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLimit());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.v2.TrainingRequestOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.v2.TrainingRequestOptions)
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.class, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder.class);
+      }
+
+      // Construct using asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        limit_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getDefaultInstanceForType() {
+        return asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions build() {
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions buildPartial() {
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions result = new asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions(this);
+        result.limit_ = limit_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions) {
+          return mergeFrom((asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions other) {
+        if (other == asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance()) return this;
+        if (other.getLimit() != 0L) {
+          setLimit(other.getLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long limit_ ;
+      /**
+       * <code>int64 limit = 1;</code>
+       * @return The limit.
+       */
+      @java.lang.Override
+      public long getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>int64 limit = 1;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(long value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 limit = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.v2.TrainingRequestOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.v2.TrainingRequestOptions)
+    private static final asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions();
+    }
+
+    public static asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrainingRequestOptions>
+        PARSER = new com.google.protobuf.AbstractParser<TrainingRequestOptions>() {
+      @java.lang.Override
+      public TrainingRequestOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TrainingRequestOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrainingRequestOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrainingRequestOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetDatasetTrainingsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.v2.GetDatasetTrainingsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -5941,13 +6430,30 @@ public final class DatasetServiceOuterClass {
 
     /**
      * <pre>
-     * mapped to URL query parameter `limit`
+     * mapped to URL query parameter `options.limit`
      * </pre>
      *
-     * <code>int64 limit = 2;</code>
-     * @return The limit.
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return Whether the options field is set.
      */
-    long getLimit();
+    boolean hasOptions();
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return The options.
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2.GetDatasetTrainingsRequest}
@@ -6001,9 +6507,17 @@ public final class DatasetServiceOuterClass {
               datasetName_ = s;
               break;
             }
-            case 16: {
+            case 18: {
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder subBuilder = null;
+              if (options_ != null) {
+                subBuilder = options_.toBuilder();
+              }
+              options_ = input.readMessage(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(options_);
+                options_ = subBuilder.buildPartial();
+              }
 
-              limit_ = input.readInt64();
               break;
             }
             default: {
@@ -6084,19 +6598,42 @@ public final class DatasetServiceOuterClass {
       }
     }
 
-    public static final int LIMIT_FIELD_NUMBER = 2;
-    private long limit_;
+    public static final int OPTIONS_FIELD_NUMBER = 2;
+    private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
      * <pre>
-     * mapped to URL query parameter `limit`
+     * mapped to URL query parameter `options.limit`
      * </pre>
      *
-     * <code>int64 limit = 2;</code>
-     * @return The limit.
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return Whether the options field is set.
      */
     @java.lang.Override
-    public long getLimit() {
-      return limit_;
+    public boolean hasOptions() {
+      return options_ != null;
+    }
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * @return The options.
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+      return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+    }
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+      return getOptions();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6116,8 +6653,8 @@ public final class DatasetServiceOuterClass {
       if (!getDatasetNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
-      if (limit_ != 0L) {
-        output.writeInt64(2, limit_);
+      if (options_ != null) {
+        output.writeMessage(2, getOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -6131,9 +6668,9 @@ public final class DatasetServiceOuterClass {
       if (!getDatasetNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
-      if (limit_ != 0L) {
+      if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, limit_);
+          .computeMessageSize(2, getOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6152,8 +6689,11 @@ public final class DatasetServiceOuterClass {
 
       if (!getDatasetName()
           .equals(other.getDatasetName())) return false;
-      if (getLimit()
-          != other.getLimit()) return false;
+      if (hasOptions() != other.hasOptions()) return false;
+      if (hasOptions()) {
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6167,9 +6707,10 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getLimit());
+      if (hasOptions()) {
+        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6305,8 +6846,12 @@ public final class DatasetServiceOuterClass {
         super.clear();
         datasetName_ = "";
 
-        limit_ = 0L;
-
+        if (optionsBuilder_ == null) {
+          options_ = null;
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -6334,7 +6879,11 @@ public final class DatasetServiceOuterClass {
       public asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest result = new asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest(this);
         result.datasetName_ = datasetName_;
-        result.limit_ = limit_;
+        if (optionsBuilder_ == null) {
+          result.options_ = options_;
+        } else {
+          result.options_ = optionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6387,8 +6936,8 @@ public final class DatasetServiceOuterClass {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        if (other.getLimit() != 0L) {
-          setLimit(other.getLimit());
+        if (other.hasOptions()) {
+          mergeOptions(other.getOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6515,47 +7064,159 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private long limit_ ;
+      private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
        * <pre>
-       * mapped to URL query parameter `limit`
+       * mapped to URL query parameter `options.limit`
        * </pre>
        *
-       * <code>int64 limit = 2;</code>
-       * @return The limit.
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * @return Whether the options field is set.
        */
-      @java.lang.Override
-      public long getLimit() {
-        return limit_;
+      public boolean hasOptions() {
+        return optionsBuilder_ != null || options_ != null;
       }
       /**
        * <pre>
-       * mapped to URL query parameter `limit`
+       * mapped to URL query parameter `options.limit`
        * </pre>
        *
-       * <code>int64 limit = 2;</code>
-       * @param value The limit to set.
-       * @return This builder for chaining.
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * @return The options.
        */
-      public Builder setLimit(long value) {
-        
-        limit_ = value;
-        onChanged();
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+        if (optionsBuilder_ == null) {
+          return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        } else {
+          return optionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          options_ = value;
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
        * <pre>
-       * mapped to URL query parameter `limit`
+       * mapped to URL query parameter `options.limit`
        * </pre>
        *
-       * <code>int64 limit = 2;</code>
-       * @return This builder for chaining.
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
-      public Builder clearLimit() {
-        
-        limit_ = 0L;
-        onChanged();
+      public Builder setOptions(
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
+        if (optionsBuilder_ == null) {
+          options_ = builderForValue.build();
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (options_ != null) {
+            options_ =
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          } else {
+            options_ = value;
+          }
+          onChanged();
+        } else {
+          optionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public Builder clearOptions() {
+        if (optionsBuilder_ == null) {
+          options_ = null;
+          onChanged();
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
+        
+        onChanged();
+        return getOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+        if (optionsBuilder_ != null) {
+          return optionsBuilder_.getMessageOrBuilder();
+        } else {
+          return options_ == null ?
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        }
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
+          getOptionsFieldBuilder() {
+        if (optionsBuilder_ == null) {
+          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder>(
+                  getOptions(),
+                  getParentForChildren(),
+                  isClean());
+          options_ = null;
+        }
+        return optionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6616,13 +7277,30 @@ public final class DatasetServiceOuterClass {
 
     /**
      * <pre>
-     * mapped to URL query parameter `limit`
+     * mapped to URL query parameter `options.limit`
      * </pre>
      *
-     * <code>int64 limit = 1;</code>
-     * @return The limit.
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return Whether the options field is set.
      */
-    long getLimit();
+    boolean hasOptions();
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return The options.
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     */
+    asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2.GetTrainingsRequest}
@@ -6669,9 +7347,17 @@ public final class DatasetServiceOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder subBuilder = null;
+              if (options_ != null) {
+                subBuilder = options_.toBuilder();
+              }
+              options_ = input.readMessage(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(options_);
+                options_ = subBuilder.buildPartial();
+              }
 
-              limit_ = input.readInt64();
               break;
             }
             default: {
@@ -6706,19 +7392,42 @@ public final class DatasetServiceOuterClass {
               asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.class, asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.Builder.class);
     }
 
-    public static final int LIMIT_FIELD_NUMBER = 1;
-    private long limit_;
+    public static final int OPTIONS_FIELD_NUMBER = 1;
+    private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
      * <pre>
-     * mapped to URL query parameter `limit`
+     * mapped to URL query parameter `options.limit`
      * </pre>
      *
-     * <code>int64 limit = 1;</code>
-     * @return The limit.
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return Whether the options field is set.
      */
     @java.lang.Override
-    public long getLimit() {
-      return limit_;
+    public boolean hasOptions() {
+      return options_ != null;
+    }
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * @return The options.
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+      return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+    }
+    /**
+     * <pre>
+     * mapped to URL query parameter `options.limit`
+     * </pre>
+     *
+     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     */
+    @java.lang.Override
+    public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+      return getOptions();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6735,8 +7444,8 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (limit_ != 0L) {
-        output.writeInt64(1, limit_);
+      if (options_ != null) {
+        output.writeMessage(1, getOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -6747,9 +7456,9 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (limit_ != 0L) {
+      if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, limit_);
+          .computeMessageSize(1, getOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6766,8 +7475,11 @@ public final class DatasetServiceOuterClass {
       }
       asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest other = (asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest) obj;
 
-      if (getLimit()
-          != other.getLimit()) return false;
+      if (hasOptions() != other.hasOptions()) return false;
+      if (hasOptions()) {
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6779,9 +7491,10 @@ public final class DatasetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getLimit());
+      if (hasOptions()) {
+        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6915,8 +7628,12 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        limit_ = 0L;
-
+        if (optionsBuilder_ == null) {
+          options_ = null;
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -6943,7 +7660,11 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest result = new asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest(this);
-        result.limit_ = limit_;
+        if (optionsBuilder_ == null) {
+          result.options_ = options_;
+        } else {
+          result.options_ = optionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6992,8 +7713,8 @@ public final class DatasetServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest other) {
         if (other == asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.getDefaultInstance()) return this;
-        if (other.getLimit() != 0L) {
-          setLimit(other.getLimit());
+        if (other.hasOptions()) {
+          mergeOptions(other.getOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7024,47 +7745,159 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private long limit_ ;
+      private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
        * <pre>
-       * mapped to URL query parameter `limit`
+       * mapped to URL query parameter `options.limit`
        * </pre>
        *
-       * <code>int64 limit = 1;</code>
-       * @return The limit.
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * @return Whether the options field is set.
        */
-      @java.lang.Override
-      public long getLimit() {
-        return limit_;
+      public boolean hasOptions() {
+        return optionsBuilder_ != null || options_ != null;
       }
       /**
        * <pre>
-       * mapped to URL query parameter `limit`
+       * mapped to URL query parameter `options.limit`
        * </pre>
        *
-       * <code>int64 limit = 1;</code>
-       * @param value The limit to set.
-       * @return This builder for chaining.
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * @return The options.
        */
-      public Builder setLimit(long value) {
-        
-        limit_ = value;
-        onChanged();
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
+        if (optionsBuilder_ == null) {
+          return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        } else {
+          return optionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          options_ = value;
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
        * <pre>
-       * mapped to URL query parameter `limit`
+       * mapped to URL query parameter `options.limit`
        * </pre>
        *
-       * <code>int64 limit = 1;</code>
-       * @return This builder for chaining.
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
-      public Builder clearLimit() {
-        
-        limit_ = 0L;
-        onChanged();
+      public Builder setOptions(
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
+        if (optionsBuilder_ == null) {
+          options_ = builderForValue.build();
+          onChanged();
+        } else {
+          optionsBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
+        if (optionsBuilder_ == null) {
+          if (options_ != null) {
+            options_ =
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          } else {
+            options_ = value;
+          }
+          onChanged();
+        } else {
+          optionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public Builder clearOptions() {
+        if (optionsBuilder_ == null) {
+          options_ = null;
+          onChanged();
+        } else {
+          options_ = null;
+          optionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
+        
+        onChanged();
+        return getOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
+        if (optionsBuilder_ != null) {
+          return optionsBuilder_.getMessageOrBuilder();
+        } else {
+          return options_ == null ?
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
+        }
+      }
+      /**
+       * <pre>
+       * mapped to URL query parameter `options.limit`
+       * </pre>
+       *
+       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
+          getOptionsFieldBuilder() {
+        if (optionsBuilder_ == null) {
+          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder>(
+                  getOptions(),
+                  getParentForChildren(),
+                  isClean());
+          options_ = null;
+        }
+        return optionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7953,6 +8786,11 @@ public final class DatasetServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_v2_TruncateDatasetRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2_TrainingRequestOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8003,47 +8841,50 @@ public final class DatasetServiceOuterClass {
       "-]*$\022\'\n\010examples\030\002 \003(\0132\025.asgt.v2.type.Ex" +
       "ample\"P\n\026TruncateDatasetRequest\0226\n\004name\030" +
       "\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9" +
-      "_.>-]*$\"k\n\032GetDatasetTrainingsRequest\022>\n" +
-      "\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0" +
-      "-9.][A-Za-z0-9_.>-]*$\022\r\n\005limit\030\002 \001(\003\"$\n\023" +
-      "GetTrainingsRequest\022\r\n\005limit\030\001 \001(\003\">\n\021Tr" +
-      "ainingsResponse\022)\n\ttrainings\030\001 \003(\0132\026.asg" +
-      "t.v2.type.Training2\306\n\n\016DatasetService\022Y\n" +
-      "\nGetDataset\022\032.asgt.v2.GetDatasetRequest\032" +
-      "\022.asgt.type.Dataset\"\033\202\323\344\223\002\025\022\023/v2/dataset" +
-      "s/{name}\022_\n\rCreateDataset\022\035.asgt.v2.Crea" +
-      "teDatasetRequest\032\026.google.protobuf.Empty" +
-      "\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022n\n\025CreateOrUpd" +
-      "ateDataset\022\035.asgt.v2.CreateDatasetReques" +
-      "t\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v2/d" +
-      "atasets/{name}:\001*\022_\n\rDeleteDataset\022\035.asg" +
-      "t.v2.DeleteDatasetRequest\032\022.asgt.type.Da" +
-      "taset\"\033\202\323\344\223\002\025*\023/v2/datasets/{name}\022W\n\tDe" +
-      "leteTag\022\031.asgt.v2.DeleteTagRequest\032\026.goo" +
-      "gle.protobuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{na" +
-      "me}\022}\n\rCreateExample\022\035.asgt.v2.CreateExa" +
-      "mpleRequest\032\026.google.protobuf.Empty\"5\202\323\344" +
-      "\223\002/\"$/v2/datasets/{dataset_name}/example" +
-      "s:\007example\022\232\001\n\025CreateOrUpdateExample\022%.a" +
-      "sgt.v2.CreateOrUpdateExampleRequest\032\026.go" +
-      "ogle.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/dataset" +
-      "s/{dataset_name}/examples/{example.id}:\007" +
-      "example\022\215\001\n\022BatchCreateExample\022\".asgt.v2" +
-      ".BatchCreateExampleRequest\032\026.google.prot" +
-      "obuf.Empty\";\202\323\344\223\0025\"0/v2/datasets/{datase" +
-      "t_name}/examples:batchCreate:\001*\022p\n\017Trunc" +
-      "ateDataset\022\037.asgt.v2.TruncateDatasetRequ" +
-      "est\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2" +
-      "/datasets/{name}/examples\022\205\001\n\023GetDataset" +
-      "Trainings\022#.asgt.v2.GetDatasetTrainingsR" +
-      "equest\032\032.asgt.v2.TrainingsResponse\"-\202\323\344\223" +
-      "\002\'\022%/v2/datasets/{dataset_name}/training" +
-      "s\022_\n\014GetTrainings\022\034.asgt.v2.GetTrainings" +
-      "Request\032\032.asgt.v2.TrainingsResponse\"\025\202\323\344" +
-      "\223\002\017\022\r/v2/trainings\032G\222AD\022BManage datasets" +
-      " and examples used for training AutoSugg" +
-      "est models.B-Z+github.com/e-conomic/vmla" +
-      "pis/gen/go/asgt/v2b\006proto3"
+      "_.>-]*$\"\'\n\026TrainingRequestOptions\022\r\n\005lim" +
+      "it\030\001 \001(\003\"\216\001\n\032GetDatasetTrainingsRequest\022" +
+      ">\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
+      "z0-9.][A-Za-z0-9_.>-]*$\0220\n\007options\030\002 \001(\013" +
+      "2\037.asgt.v2.TrainingRequestOptions\"G\n\023Get" +
+      "TrainingsRequest\0220\n\007options\030\001 \001(\0132\037.asgt" +
+      ".v2.TrainingRequestOptions\">\n\021TrainingsR" +
+      "esponse\022)\n\ttrainings\030\001 \003(\0132\026.asgt.v2.typ" +
+      "e.Training2\306\n\n\016DatasetService\022Y\n\nGetData" +
+      "set\022\032.asgt.v2.GetDatasetRequest\032\022.asgt.t" +
+      "ype.Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{name}" +
+      "\022_\n\rCreateDataset\022\035.asgt.v2.CreateDatase" +
+      "tRequest\032\026.google.protobuf.Empty\"\027\202\323\344\223\002\021" +
+      "\"\014/v2/datasets:\001*\022n\n\025CreateOrUpdateDatas" +
+      "et\022\035.asgt.v2.CreateDatasetRequest\032\026.goog" +
+      "le.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v2/datasets/" +
+      "{name}:\001*\022_\n\rDeleteDataset\022\035.asgt.v2.Del" +
+      "eteDatasetRequest\032\022.asgt.type.Dataset\"\033\202" +
+      "\323\344\223\002\025*\023/v2/datasets/{name}\022W\n\tDeleteTag\022" +
+      "\031.asgt.v2.DeleteTagRequest\032\026.google.prot" +
+      "obuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022}\n\rC" +
+      "reateExample\022\035.asgt.v2.CreateExampleRequ" +
+      "est\032\026.google.protobuf.Empty\"5\202\323\344\223\002/\"$/v2" +
+      "/datasets/{dataset_name}/examples:\007examp" +
+      "le\022\232\001\n\025CreateOrUpdateExample\022%.asgt.v2.C" +
+      "reateOrUpdateExampleRequest\032\026.google.pro" +
+      "tobuf.Empty\"B\202\323\344\223\002<\0321/v2/datasets/{datas" +
+      "et_name}/examples/{example.id}:\007example\022" +
+      "\215\001\n\022BatchCreateExample\022\".asgt.v2.BatchCr" +
+      "eateExampleRequest\032\026.google.protobuf.Emp" +
+      "ty\";\202\323\344\223\0025\"0/v2/datasets/{dataset_name}/" +
+      "examples:batchCreate:\001*\022p\n\017TruncateDatas" +
+      "et\022\037.asgt.v2.TruncateDatasetRequest\032\026.go" +
+      "ogle.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/dataset" +
+      "s/{name}/examples\022\205\001\n\023GetDatasetTraining" +
+      "s\022#.asgt.v2.GetDatasetTrainingsRequest\032\032" +
+      ".asgt.v2.TrainingsResponse\"-\202\323\344\223\002\'\022%/v2/" +
+      "datasets/{dataset_name}/trainings\022_\n\014Get" +
+      "Trainings\022\034.asgt.v2.GetTrainingsRequest\032" +
+      "\032.asgt.v2.TrainingsResponse\"\025\202\323\344\223\002\017\022\r/v2" +
+      "/trainings\032G\222AD\022BManage datasets and exa" +
+      "mples used for training AutoSuggest mode" +
+      "ls.B-Z+github.com/e-conomic/vmlapis/gen/" +
+      "go/asgt/v2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8104,20 +8945,26 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_TruncateDatasetRequest_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor =
+    internal_static_asgt_v2_TrainingRequestOptions_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2_TrainingRequestOptions_descriptor,
+        new java.lang.String[] { "Limit", });
+    internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_asgt_v2_GetDatasetTrainingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "Limit", });
+        new java.lang.String[] { "DatasetName", "Options", });
     internal_static_asgt_v2_GetTrainingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_asgt_v2_GetTrainingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_GetTrainingsRequest_descriptor,
-        new java.lang.String[] { "Limit", });
+        new java.lang.String[] { "Options", });
     internal_static_asgt_v2_TrainingsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_asgt_v2_TrainingsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_TrainingsResponse_descriptor,

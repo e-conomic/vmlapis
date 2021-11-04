@@ -211,7 +211,7 @@
             "type": "string"
           },
           {
-            "name": "limit",
+            "name": "options.limit",
             "in": "query",
             "required": false,
             "type": "string",
@@ -831,7 +831,7 @@
         },
         "parameters": [
           {
-            "name": "limit",
+            "name": "options.limit",
             "in": "query",
             "required": false,
             "type": "string",
@@ -1261,6 +1261,15 @@
         },
         "model": {
           "$ref": "#/definitions/typeModel"
+        }
+      }
+    },
+    "v2TrainingRequestOptions": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "string",
+          "format": "int64"
         }
       }
     },
