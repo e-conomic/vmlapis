@@ -48,45 +48,45 @@ namespace Asgt.V2 {
             "Ll1bQS1aYS16MC05Xy4+LV0qJBInCghleGFtcGxlcxgCIAMoCzIVLmFzZ3Qu",
             "djIudHlwZS5FeGFtcGxlIlAKFlRydW5jYXRlRGF0YXNldFJlcXVlc3QSNgoE",
             "bmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16MC05",
-            "Xy4+LV0qJCInChZUcmFpbmluZ1JlcXVlc3RPcHRpb25zEg0KBWxpbWl0GAEg",
-            "ASgDIo4BChpHZXREYXRhc2V0VHJhaW5pbmdzUmVxdWVzdBI+CgxkYXRhc2V0",
-            "X25hbWUYASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAt",
-            "OV8uPi1dKiQSMAoHb3B0aW9ucxgCIAEoCzIfLmFzZ3QudjIuVHJhaW5pbmdS",
-            "ZXF1ZXN0T3B0aW9ucyJHChNHZXRUcmFpbmluZ3NSZXF1ZXN0EjAKB29wdGlv",
-            "bnMYASABKAsyHy5hc2d0LnYyLlRyYWluaW5nUmVxdWVzdE9wdGlvbnMiPgoR",
-            "VHJhaW5pbmdzUmVzcG9uc2USKQoJdHJhaW5pbmdzGAEgAygLMhYuYXNndC52",
-            "Mi50eXBlLlRyYWluaW5nMsYKCg5EYXRhc2V0U2VydmljZRJZCgpHZXREYXRh",
-            "c2V0EhouYXNndC52Mi5HZXREYXRhc2V0UmVxdWVzdBoSLmFzZ3QudHlwZS5E",
-            "YXRhc2V0IhuC0+STAhUSEy92Mi9kYXRhc2V0cy97bmFtZX0SXwoNQ3JlYXRl",
-            "RGF0YXNldBIdLmFzZ3QudjIuQ3JlYXRlRGF0YXNldFJlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkiF4LT5JMCESIML3YyL2RhdGFzZXRzOgEqEm4K",
-            "FUNyZWF0ZU9yVXBkYXRlRGF0YXNldBIdLmFzZ3QudjIuQ3JlYXRlRGF0YXNl",
-            "dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGBoTL3Yy",
-            "L2RhdGFzZXRzL3tuYW1lfToBKhJfCg1EZWxldGVEYXRhc2V0Eh0uYXNndC52",
-            "Mi5EZWxldGVEYXRhc2V0UmVxdWVzdBoSLmFzZ3QudHlwZS5EYXRhc2V0IhuC",
-            "0+STAhUqEy92Mi9kYXRhc2V0cy97bmFtZX0SVwoJRGVsZXRlVGFnEhkuYXNn",
-            "dC52Mi5EZWxldGVUYWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IheC0+STAhEqDy92Mi90YWdzL3tuYW1lfRJ9Cg1DcmVhdGVFeGFtcGxlEh0u",
-            "YXNndC52Mi5DcmVhdGVFeGFtcGxlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSI1gtPkkwIvIiQvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0v",
-            "ZXhhbXBsZXM6B2V4YW1wbGUSmgEKFUNyZWF0ZU9yVXBkYXRlRXhhbXBsZRIl",
-            "LmFzZ3QudjIuQ3JlYXRlT3JVcGRhdGVFeGFtcGxlUmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSJCgtPkkwI8GjEvdjIvZGF0YXNldHMve2RhdGFz",
-            "ZXRfbmFtZX0vZXhhbXBsZXMve2V4YW1wbGUuaWR9OgdleGFtcGxlEo0BChJC",
-            "YXRjaENyZWF0ZUV4YW1wbGUSIi5hc2d0LnYyLkJhdGNoQ3JlYXRlRXhhbXBs",
-            "ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiO4LT5JMCNSIwL3Yy",
-            "L2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9L2V4YW1wbGVzOmJhdGNoQ3JlYXRl",
-            "OgEqEnAKD1RydW5jYXRlRGF0YXNldBIfLmFzZ3QudjIuVHJ1bmNhdGVEYXRh",
-            "c2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIkgtPkkwIeKhwv",
-            "djIvZGF0YXNldHMve25hbWV9L2V4YW1wbGVzEoUBChNHZXREYXRhc2V0VHJh",
-            "aW5pbmdzEiMuYXNndC52Mi5HZXREYXRhc2V0VHJhaW5pbmdzUmVxdWVzdBoa",
-            "LmFzZ3QudjIuVHJhaW5pbmdzUmVzcG9uc2UiLYLT5JMCJxIlL3YyL2RhdGFz",
-            "ZXRzL3tkYXRhc2V0X25hbWV9L3RyYWluaW5ncxJfCgxHZXRUcmFpbmluZ3MS",
-            "HC5hc2d0LnYyLkdldFRyYWluaW5nc1JlcXVlc3QaGi5hc2d0LnYyLlRyYWlu",
-            "aW5nc1Jlc3BvbnNlIhWC0+STAg8SDS92Mi90cmFpbmluZ3MaR5JBRBJCTWFu",
-            "YWdlIGRhdGFzZXRzIGFuZCBleGFtcGxlcyB1c2VkIGZvciB0cmFpbmluZyBB",
-            "dXRvU3VnZ2VzdCBtb2RlbHMuQi1aK2dpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
-            "bGFwaXMvZ2VuL2dvL2FzZ3QvdjJiBnByb3RvMw=="));
+            "Xy4+LV0qJCIyChZUcmFpbmluZ1JlcXVlc3RPcHRpb25zEhgKBWxpbWl0GAEg",
+            "ASgDQgn6QgYiBBhkIAAijgEKGkdldERhdGFzZXRUcmFpbmluZ3NSZXF1ZXN0",
+            "Ej4KDGRhdGFzZXRfbmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05",
+            "Ll1bQS1aYS16MC05Xy4+LV0qJBIwCgdvcHRpb25zGAIgASgLMh8uYXNndC52",
+            "Mi5UcmFpbmluZ1JlcXVlc3RPcHRpb25zIkcKE0dldFRyYWluaW5nc1JlcXVl",
+            "c3QSMAoHb3B0aW9ucxgBIAEoCzIfLmFzZ3QudjIuVHJhaW5pbmdSZXF1ZXN0",
+            "T3B0aW9ucyI+ChFUcmFpbmluZ3NSZXNwb25zZRIpCgl0cmFpbmluZ3MYASAD",
+            "KAsyFi5hc2d0LnYyLnR5cGUuVHJhaW5pbmcyxgoKDkRhdGFzZXRTZXJ2aWNl",
+            "ElkKCkdldERhdGFzZXQSGi5hc2d0LnYyLkdldERhdGFzZXRSZXF1ZXN0GhIu",
+            "YXNndC50eXBlLkRhdGFzZXQiG4LT5JMCFRITL3YyL2RhdGFzZXRzL3tuYW1l",
+            "fRJfCg1DcmVhdGVEYXRhc2V0Eh0uYXNndC52Mi5DcmVhdGVEYXRhc2V0UmVx",
+            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIXgtPkkwIRIgwvdjIvZGF0",
+            "YXNldHM6ASoSbgoVQ3JlYXRlT3JVcGRhdGVEYXRhc2V0Eh0uYXNndC52Mi5D",
+            "cmVhdGVEYXRhc2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIe",
+            "gtPkkwIYGhMvdjIvZGF0YXNldHMve25hbWV9OgEqEl8KDURlbGV0ZURhdGFz",
+            "ZXQSHS5hc2d0LnYyLkRlbGV0ZURhdGFzZXRSZXF1ZXN0GhIuYXNndC50eXBl",
+            "LkRhdGFzZXQiG4LT5JMCFSoTL3YyL2RhdGFzZXRzL3tuYW1lfRJXCglEZWxl",
+            "dGVUYWcSGS5hc2d0LnYyLkRlbGV0ZVRhZ1JlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiF4LT5JMCESoPL3YyL3RhZ3Mve25hbWV9En0KDUNyZWF0",
+            "ZUV4YW1wbGUSHS5hc2d0LnYyLkNyZWF0ZUV4YW1wbGVSZXF1ZXN0GhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5IjWC0+STAi8iJC92Mi9kYXRhc2V0cy97ZGF0",
+            "YXNldF9uYW1lfS9leGFtcGxlczoHZXhhbXBsZRKaAQoVQ3JlYXRlT3JVcGRh",
+            "dGVFeGFtcGxlEiUuYXNndC52Mi5DcmVhdGVPclVwZGF0ZUV4YW1wbGVSZXF1",
+            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkKC0+STAjwaMS92Mi9kYXRh",
+            "c2V0cy97ZGF0YXNldF9uYW1lfS9leGFtcGxlcy97ZXhhbXBsZS5pZH06B2V4",
+            "YW1wbGUSjQEKEkJhdGNoQ3JlYXRlRXhhbXBsZRIiLmFzZ3QudjIuQmF0Y2hD",
+            "cmVhdGVFeGFtcGxlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI7",
+            "gtPkkwI1IjAvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vZXhhbXBsZXM6",
+            "YmF0Y2hDcmVhdGU6ASoScAoPVHJ1bmNhdGVEYXRhc2V0Eh8uYXNndC52Mi5U",
+            "cnVuY2F0ZURhdGFzZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IiSC0+STAh4qHC92Mi9kYXRhc2V0cy97bmFtZX0vZXhhbXBsZXMShQEKE0dl",
+            "dERhdGFzZXRUcmFpbmluZ3MSIy5hc2d0LnYyLkdldERhdGFzZXRUcmFpbmlu",
+            "Z3NSZXF1ZXN0GhouYXNndC52Mi5UcmFpbmluZ3NSZXNwb25zZSItgtPkkwIn",
+            "EiUvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vdHJhaW5pbmdzEl8KDEdl",
+            "dFRyYWluaW5ncxIcLmFzZ3QudjIuR2V0VHJhaW5pbmdzUmVxdWVzdBoaLmFz",
+            "Z3QudjIuVHJhaW5pbmdzUmVzcG9uc2UiFYLT5JMCDxINL3YyL3RyYWluaW5n",
+            "cxpHkkFEEkJNYW5hZ2UgZGF0YXNldHMgYW5kIGV4YW1wbGVzIHVzZWQgZm9y",
+            "IHRyYWluaW5nIEF1dG9TdWdnZXN0IG1vZGVscy5CLVorZ2l0aHViLmNvbS9l",
+            "LWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC92MmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.V2.Type.ExampleReflection.Descriptor, global::Asgt.V2.Type.TrainingReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1546,6 +1546,9 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "limit" field.</summary>
     public const int LimitFieldNumber = 1;
     private long limit_;
+    /// <summary>
+    /// mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Limit {
       get { return limit_; }
@@ -1716,9 +1719,6 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "options" field.</summary>
     public const int OptionsFieldNumber = 2;
     private global::Asgt.V2.TrainingRequestOptions options_;
-    /// <summary>
-    /// mapped to URL query parameter `options.limit`
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.V2.TrainingRequestOptions Options {
       get { return options_; }
@@ -1903,9 +1903,6 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "options" field.</summary>
     public const int OptionsFieldNumber = 1;
     private global::Asgt.V2.TrainingRequestOptions options_;
-    /// <summary>
-    /// mapped to URL query parameter `options.limit`
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.V2.TrainingRequestOptions Options {
       get { return options_; }

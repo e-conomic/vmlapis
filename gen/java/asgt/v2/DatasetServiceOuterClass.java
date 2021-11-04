@@ -5920,7 +5920,11 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 limit = 1;</code>
+     * <pre>
+     * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+     * </pre>
+     *
+     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
      * @return The limit.
      */
     long getLimit();
@@ -6010,7 +6014,11 @@ public final class DatasetServiceOuterClass {
     public static final int LIMIT_FIELD_NUMBER = 1;
     private long limit_;
     /**
-     * <code>int64 limit = 1;</code>
+     * <pre>
+     * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+     * </pre>
+     *
+     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
      * @return The limit.
      */
     @java.lang.Override
@@ -6323,7 +6331,11 @@ public final class DatasetServiceOuterClass {
 
       private long limit_ ;
       /**
-       * <code>int64 limit = 1;</code>
+       * <pre>
+       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * </pre>
+       *
+       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
        * @return The limit.
        */
       @java.lang.Override
@@ -6331,7 +6343,11 @@ public final class DatasetServiceOuterClass {
         return limit_;
       }
       /**
-       * <code>int64 limit = 1;</code>
+       * <pre>
+       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * </pre>
+       *
+       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
        * @param value The limit to set.
        * @return This builder for chaining.
        */
@@ -6342,7 +6358,11 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>int64 limit = 1;</code>
+       * <pre>
+       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * </pre>
+       *
+       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
@@ -6429,28 +6449,16 @@ public final class DatasetServiceOuterClass {
         getDatasetNameBytes();
 
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
      * @return The options.
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
@@ -6601,10 +6609,6 @@ public final class DatasetServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 2;
     private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
      * @return Whether the options field is set.
      */
@@ -6613,10 +6617,6 @@ public final class DatasetServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
      * @return The options.
      */
@@ -6625,10 +6625,6 @@ public final class DatasetServiceOuterClass {
       return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
      */
     @java.lang.Override
@@ -7068,10 +7064,6 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        * @return Whether the options field is set.
        */
@@ -7079,10 +7071,6 @@ public final class DatasetServiceOuterClass {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        * @return The options.
        */
@@ -7094,10 +7082,6 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
       public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
@@ -7114,10 +7098,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
       public Builder setOptions(
@@ -7132,10 +7112,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
@@ -7154,10 +7130,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
       public Builder clearOptions() {
@@ -7172,10 +7144,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
@@ -7184,10 +7152,6 @@ public final class DatasetServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
@@ -7199,10 +7163,6 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7276,28 +7236,16 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
      * @return The options.
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
@@ -7395,10 +7343,6 @@ public final class DatasetServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 1;
     private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
      * @return Whether the options field is set.
      */
@@ -7407,10 +7351,6 @@ public final class DatasetServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
      * @return The options.
      */
@@ -7419,10 +7359,6 @@ public final class DatasetServiceOuterClass {
       return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <pre>
-     * mapped to URL query parameter `options.limit`
-     * </pre>
-     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
      */
     @java.lang.Override
@@ -7749,10 +7685,6 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        * @return Whether the options field is set.
        */
@@ -7760,10 +7692,6 @@ public final class DatasetServiceOuterClass {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        * @return The options.
        */
@@ -7775,10 +7703,6 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
       public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
@@ -7795,10 +7719,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
       public Builder setOptions(
@@ -7813,10 +7733,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
@@ -7835,10 +7751,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
       public Builder clearOptions() {
@@ -7853,10 +7765,6 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
@@ -7865,10 +7773,6 @@ public final class DatasetServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
@@ -7880,10 +7784,6 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * mapped to URL query parameter `options.limit`
-       * </pre>
-       *
        * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8841,50 +8741,50 @@ public final class DatasetServiceOuterClass {
       "-]*$\022\'\n\010examples\030\002 \003(\0132\025.asgt.v2.type.Ex" +
       "ample\"P\n\026TruncateDatasetRequest\0226\n\004name\030" +
       "\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9" +
-      "_.>-]*$\"\'\n\026TrainingRequestOptions\022\r\n\005lim" +
-      "it\030\001 \001(\003\"\216\001\n\032GetDatasetTrainingsRequest\022" +
-      ">\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
-      "z0-9.][A-Za-z0-9_.>-]*$\0220\n\007options\030\002 \001(\013" +
-      "2\037.asgt.v2.TrainingRequestOptions\"G\n\023Get" +
-      "TrainingsRequest\0220\n\007options\030\001 \001(\0132\037.asgt" +
-      ".v2.TrainingRequestOptions\">\n\021TrainingsR" +
-      "esponse\022)\n\ttrainings\030\001 \003(\0132\026.asgt.v2.typ" +
-      "e.Training2\306\n\n\016DatasetService\022Y\n\nGetData" +
-      "set\022\032.asgt.v2.GetDatasetRequest\032\022.asgt.t" +
-      "ype.Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{name}" +
-      "\022_\n\rCreateDataset\022\035.asgt.v2.CreateDatase" +
-      "tRequest\032\026.google.protobuf.Empty\"\027\202\323\344\223\002\021" +
-      "\"\014/v2/datasets:\001*\022n\n\025CreateOrUpdateDatas" +
-      "et\022\035.asgt.v2.CreateDatasetRequest\032\026.goog" +
-      "le.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v2/datasets/" +
-      "{name}:\001*\022_\n\rDeleteDataset\022\035.asgt.v2.Del" +
-      "eteDatasetRequest\032\022.asgt.type.Dataset\"\033\202" +
-      "\323\344\223\002\025*\023/v2/datasets/{name}\022W\n\tDeleteTag\022" +
-      "\031.asgt.v2.DeleteTagRequest\032\026.google.prot" +
-      "obuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022}\n\rC" +
-      "reateExample\022\035.asgt.v2.CreateExampleRequ" +
-      "est\032\026.google.protobuf.Empty\"5\202\323\344\223\002/\"$/v2" +
-      "/datasets/{dataset_name}/examples:\007examp" +
-      "le\022\232\001\n\025CreateOrUpdateExample\022%.asgt.v2.C" +
-      "reateOrUpdateExampleRequest\032\026.google.pro" +
-      "tobuf.Empty\"B\202\323\344\223\002<\0321/v2/datasets/{datas" +
-      "et_name}/examples/{example.id}:\007example\022" +
-      "\215\001\n\022BatchCreateExample\022\".asgt.v2.BatchCr" +
-      "eateExampleRequest\032\026.google.protobuf.Emp" +
-      "ty\";\202\323\344\223\0025\"0/v2/datasets/{dataset_name}/" +
-      "examples:batchCreate:\001*\022p\n\017TruncateDatas" +
-      "et\022\037.asgt.v2.TruncateDatasetRequest\032\026.go" +
-      "ogle.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/dataset" +
-      "s/{name}/examples\022\205\001\n\023GetDatasetTraining" +
-      "s\022#.asgt.v2.GetDatasetTrainingsRequest\032\032" +
-      ".asgt.v2.TrainingsResponse\"-\202\323\344\223\002\'\022%/v2/" +
-      "datasets/{dataset_name}/trainings\022_\n\014Get" +
-      "Trainings\022\034.asgt.v2.GetTrainingsRequest\032" +
-      "\032.asgt.v2.TrainingsResponse\"\025\202\323\344\223\002\017\022\r/v2" +
-      "/trainings\032G\222AD\022BManage datasets and exa" +
-      "mples used for training AutoSuggest mode" +
-      "ls.B-Z+github.com/e-conomic/vmlapis/gen/" +
-      "go/asgt/v2b\006proto3"
+      "_.>-]*$\"2\n\026TrainingRequestOptions\022\030\n\005lim" +
+      "it\030\001 \001(\003B\t\372B\006\"\004\030d \000\"\216\001\n\032GetDatasetTraini" +
+      "ngsRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(" +
+      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\0220\n\007op" +
+      "tions\030\002 \001(\0132\037.asgt.v2.TrainingRequestOpt" +
+      "ions\"G\n\023GetTrainingsRequest\0220\n\007options\030\001" +
+      " \001(\0132\037.asgt.v2.TrainingRequestOptions\">\n" +
+      "\021TrainingsResponse\022)\n\ttrainings\030\001 \003(\0132\026." +
+      "asgt.v2.type.Training2\306\n\n\016DatasetService" +
+      "\022Y\n\nGetDataset\022\032.asgt.v2.GetDatasetReque" +
+      "st\032\022.asgt.type.Dataset\"\033\202\323\344\223\002\025\022\023/v2/data" +
+      "sets/{name}\022_\n\rCreateDataset\022\035.asgt.v2.C" +
+      "reateDatasetRequest\032\026.google.protobuf.Em" +
+      "pty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022n\n\025CreateOr" +
+      "UpdateDataset\022\035.asgt.v2.CreateDatasetReq" +
+      "uest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v" +
+      "2/datasets/{name}:\001*\022_\n\rDeleteDataset\022\035." +
+      "asgt.v2.DeleteDatasetRequest\032\022.asgt.type" +
+      ".Dataset\"\033\202\323\344\223\002\025*\023/v2/datasets/{name}\022W\n" +
+      "\tDeleteTag\022\031.asgt.v2.DeleteTagRequest\032\026." +
+      "google.protobuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/" +
+      "{name}\022}\n\rCreateExample\022\035.asgt.v2.Create" +
+      "ExampleRequest\032\026.google.protobuf.Empty\"5" +
+      "\202\323\344\223\002/\"$/v2/datasets/{dataset_name}/exam" +
+      "ples:\007example\022\232\001\n\025CreateOrUpdateExample\022" +
+      "%.asgt.v2.CreateOrUpdateExampleRequest\032\026" +
+      ".google.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/data" +
+      "sets/{dataset_name}/examples/{example.id" +
+      "}:\007example\022\215\001\n\022BatchCreateExample\022\".asgt" +
+      ".v2.BatchCreateExampleRequest\032\026.google.p" +
+      "rotobuf.Empty\";\202\323\344\223\0025\"0/v2/datasets/{dat" +
+      "aset_name}/examples:batchCreate:\001*\022p\n\017Tr" +
+      "uncateDataset\022\037.asgt.v2.TruncateDatasetR" +
+      "equest\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036*\034" +
+      "/v2/datasets/{name}/examples\022\205\001\n\023GetData" +
+      "setTrainings\022#.asgt.v2.GetDatasetTrainin" +
+      "gsRequest\032\032.asgt.v2.TrainingsResponse\"-\202" +
+      "\323\344\223\002\'\022%/v2/datasets/{dataset_name}/train" +
+      "ings\022_\n\014GetTrainings\022\034.asgt.v2.GetTraini" +
+      "ngsRequest\032\032.asgt.v2.TrainingsResponse\"\025" +
+      "\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022BManage datas" +
+      "ets and examples used for training AutoS" +
+      "uggest models.B-Z+github.com/e-conomic/v" +
+      "mlapis/gen/go/asgt/v2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

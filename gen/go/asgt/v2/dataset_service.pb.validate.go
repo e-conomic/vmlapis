@@ -771,7 +771,12 @@ func (m *TrainingRequestOptions) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Limit
+	if val := m.GetLimit(); val <= 0 || val > 100 {
+		return TrainingRequestOptionsValidationError{
+			field:  "Limit",
+			reason: "value must be inside range (0, 100]",
+		}
+	}
 
 	return nil
 }
