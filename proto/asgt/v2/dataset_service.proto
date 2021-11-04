@@ -132,13 +132,17 @@ message TruncateDatasetRequest {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
 
+message TrainingRequestOptions {
+  int64 limit = 1;
+}
+
 message GetDatasetTrainingsRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  int64 limit = 2; // mapped to URL query parameter `limit`
+  TrainingRequestOptions options = 2; // mapped to URL query parameter `options.limit`
 }
 
 message GetTrainingsRequest {
-  int64 limit = 1; // mapped to URL query parameter `limit`
+  TrainingRequestOptions options = 1; // mapped to URL query parameter `options.limit`
 }
 
 message TrainingsResponse {
