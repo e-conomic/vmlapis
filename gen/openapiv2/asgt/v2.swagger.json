@@ -26,6 +26,7 @@
   "paths": {
     "/v2/datasets": {
       "post": {
+        "summary": "Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled\nuntil CreateExample or BatchCreateExample is called after the creation of the dataset.",
         "operationId": "DatasetService_CreateDataset",
         "responses": {
           "200": {
@@ -58,6 +59,7 @@
     },
     "/v2/datasets/{datasetName}/examples": {
       "post": {
+        "summary": "Uploads a new single example.",
         "operationId": "DatasetService_CreateExample",
         "responses": {
           "200": {
@@ -96,6 +98,7 @@
     },
     "/v2/datasets/{datasetName}/examples/{example.id}": {
       "put": {
+        "summary": "Not implemented yet. Uploads a new single example. If the specified example already exists, the example\nis updated with the provided values.",
         "operationId": "DatasetService_CreateOrUpdateExample",
         "responses": {
           "200": {
@@ -141,7 +144,7 @@
     },
     "/v2/datasets/{datasetName}/examples:batchCreate": {
       "post": {
-        "summary": "Upload multiple examples at once. This matches the behavior of the v1 API.",
+        "summary": "Upload multiple examples at once. This matches the behavior of the v1 API's append operation.",
         "operationId": "DatasetService_BatchCreateExample",
         "responses": {
           "200": {
@@ -188,6 +191,7 @@
     },
     "/v2/datasets/{datasetName}/trainings": {
       "get": {
+        "summary": "Get the specified number of the most recent dataset's trainings.\nNumber of requested trainings has to be larger than 0 but no larger than 100.",
         "operationId": "DatasetService_GetDatasetTrainings",
         "responses": {
           "200": {
@@ -504,6 +508,7 @@
     },
     "/v2/datasets/{name}": {
       "get": {
+        "summary": "Get the basic information about a dataset. This matches the behavior of the v1 API's info operation.",
         "operationId": "DatasetService_GetDataset",
         "responses": {
           "200": {
@@ -532,6 +537,7 @@
         ]
       },
       "delete": {
+        "summary": "Delete a dataset with the specified name.",
         "operationId": "DatasetService_DeleteDataset",
         "responses": {
           "200": {
@@ -560,6 +566,7 @@
         ]
       },
       "put": {
+        "summary": "Create a new dataset. If a dataset with such name already exsits, it will be updated with the\nprovided data.",
         "operationId": "DatasetService_CreateOrUpdateDataset",
         "responses": {
           "200": {
@@ -784,6 +791,7 @@
     },
     "/v2/tags/{name}": {
       "delete": {
+        "summary": "Delete all datasets (and their examples) containing the specified tag.\nThe datasets' names are not considered in this request - only the tag names is.",
         "operationId": "DatasetService_DeleteTag",
         "responses": {
           "200": {
@@ -814,6 +822,7 @@
     },
     "/v2/trainings": {
       "get": {
+        "summary": "Get the specified number of the most recent trainings accross all consumer's datasets.\nNumber of requested trainings has to be larger than 0 but no larger than 100.",
         "operationId": "DatasetService_GetTrainings",
         "responses": {
           "200": {

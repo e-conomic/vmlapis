@@ -20,19 +20,34 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type DatasetServiceClient interface {
+	// Get the basic information about a dataset. This matches the behavior of the v1 API's info operation.
 	GetDataset(ctx context.Context, in *GetDatasetRequest, opts ...grpc.CallOption) (*_type.Dataset, error)
+	// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
+	// until CreateExample or BatchCreateExample is called after the creation of the dataset.
 	CreateDataset(ctx context.Context, in *CreateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	// Create a new dataset. If a dataset with such name already exsits, it will be updated with the
+	// provided data.
 	CreateOrUpdateDataset(ctx context.Context, in *CreateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	// Delete a dataset with the specified name.
 	DeleteDataset(ctx context.Context, in *DeleteDatasetRequest, opts ...grpc.CallOption) (*_type.Dataset, error)
+	// Delete all datasets (and their examples) containing the specified tag.
+	// The datasets' names are not considered in this request - only the tag names is.
 	DeleteTag(ctx context.Context, in *DeleteTagRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	// Uploads a new single example.
 	CreateExample(ctx context.Context, in *CreateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	// Not implemented yet. Uploads a new single example. If the specified example already exists, the example
+	// is updated with the provided values.
 	CreateOrUpdateExample(ctx context.Context, in *CreateOrUpdateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	// Upload multiple examples at once. This matches the behavior of the v1 API.
+	// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
 	BatchCreateExample(ctx context.Context, in *BatchCreateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
 	// removing existing models.
 	TruncateDataset(ctx context.Context, in *TruncateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	// Get the specified number of the most recent dataset's trainings.
+	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetDatasetTrainings(ctx context.Context, in *GetDatasetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
+	// Get the specified number of the most recent trainings accross all consumer's datasets.
+	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
 }
 
@@ -147,19 +162,34 @@ func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *GetTraining
 // All implementations must embed UnimplementedDatasetServiceServer
 // for forward compatibility
 type DatasetServiceServer interface {
+	// Get the basic information about a dataset. This matches the behavior of the v1 API's info operation.
 	GetDataset(context.Context, *GetDatasetRequest) (*_type.Dataset, error)
+	// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
+	// until CreateExample or BatchCreateExample is called after the creation of the dataset.
 	CreateDataset(context.Context, *CreateDatasetRequest) (*empty.Empty, error)
+	// Create a new dataset. If a dataset with such name already exsits, it will be updated with the
+	// provided data.
 	CreateOrUpdateDataset(context.Context, *CreateDatasetRequest) (*empty.Empty, error)
+	// Delete a dataset with the specified name.
 	DeleteDataset(context.Context, *DeleteDatasetRequest) (*_type.Dataset, error)
+	// Delete all datasets (and their examples) containing the specified tag.
+	// The datasets' names are not considered in this request - only the tag names is.
 	DeleteTag(context.Context, *DeleteTagRequest) (*empty.Empty, error)
+	// Uploads a new single example.
 	CreateExample(context.Context, *CreateExampleRequest) (*empty.Empty, error)
+	// Not implemented yet. Uploads a new single example. If the specified example already exists, the example
+	// is updated with the provided values.
 	CreateOrUpdateExample(context.Context, *CreateOrUpdateExampleRequest) (*empty.Empty, error)
-	// Upload multiple examples at once. This matches the behavior of the v1 API.
+	// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
 	BatchCreateExample(context.Context, *BatchCreateExampleRequest) (*empty.Empty, error)
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
 	// removing existing models.
 	TruncateDataset(context.Context, *TruncateDatasetRequest) (*empty.Empty, error)
+	// Get the specified number of the most recent dataset's trainings.
+	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetDatasetTrainings(context.Context, *GetDatasetTrainingsRequest) (*TrainingsResponse, error)
+	// Get the specified number of the most recent trainings accross all consumer's datasets.
+	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error)
 	mustEmbedUnimplementedDatasetServiceServer()
 }
