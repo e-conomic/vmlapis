@@ -77,49 +77,60 @@ class DatasetServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def GetDataset(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Get the basic information about a dataset. This matches the behavior of the v1 API's info operation.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateDataset(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
+        until CreateExample or BatchCreateExample is called after the creation of the dataset.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateOrUpdateDataset(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Create a new dataset. If a dataset with such name already exsits, it will be updated with the
+        provided data.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteDataset(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Delete a dataset with the specified name.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteTag(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Delete all datasets (and their examples) containing the specified tag.
+        The datasets' names are not considered in this request - only the tag names is.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateExample(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Uploads a new single example.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateOrUpdateExample(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Not implemented yet. Uploads a new single example. If the specified example already exists, the example
+        is updated with the provided values.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def BatchCreateExample(self, request, context):
-        """Upload multiple examples at once. This matches the behavior of the v1 API.
+        """Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -134,13 +145,17 @@ class DatasetServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def GetDatasetTrainings(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Get the specified number of the most recent dataset's trainings.
+        Number of requested trainings has to be larger than 0 but no larger than 100.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTrainings(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Get the specified number of the most recent trainings accross all consumer's datasets.
+        Number of requested trainings has to be larger than 0 but no larger than 100.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
