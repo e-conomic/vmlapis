@@ -12,7 +12,9 @@ all:
 		proto/ssn/access/v1/access.proto \
 		proto/ssn/dataservice/v1/dataservice.proto \
 		proto/asgt/jester/v1/jester.proto \
-		proto/asgt/data/v1/data_service.proto
+		proto/asgt/data/v1/data_service.proto \
+		proto/asgt/v2/dataset_service.proto \
+		proto/asgt/v2/suggester_service.proto
 
 	mkdir ./gen/go
 	mkdir ./gen/openapiv2
