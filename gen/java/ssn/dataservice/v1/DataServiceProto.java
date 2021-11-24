@@ -39263,6 +39263,31 @@ public final class DataServiceProto {
      * @return The tier.
      */
     ssn.type.TierOuterClass.Tier getTier();
+
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return A list containing the segments.
+     */
+    java.util.List<java.lang.String>
+        getSegmentsList();
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return The count of segments.
+     */
+    int getSegmentsCount();
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
+     */
+    java.lang.String getSegments(int index);
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSegmentsBytes(int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PrepareFeedbackRequest}
@@ -39281,6 +39306,7 @@ public final class DataServiceProto {
       documentBytes_ = com.google.protobuf.ByteString.EMPTY;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       tier_ = 0;
+      segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -39392,6 +39418,15 @@ public final class DataServiceProto {
               tier_ = rawValue;
               break;
             }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                segments_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              segments_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -39409,6 +39444,9 @@ public final class DataServiceProto {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          segments_ = segments_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -39634,6 +39672,41 @@ public final class DataServiceProto {
       return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
     }
 
+    public static final int SEGMENTS_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList segments_;
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return A list containing the segments.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSegmentsList() {
+      return segments_;
+    }
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return The count of segments.
+     */
+    public int getSegmentsCount() {
+      return segments_.size();
+    }
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
+     */
+    public java.lang.String getSegments(int index) {
+      return segments_.get(index);
+    }
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSegmentsBytes(int index) {
+      return segments_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -39671,6 +39744,9 @@ public final class DataServiceProto {
       }
       if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
         output.writeEnum(8, tier_);
+      }
+      for (int i = 0; i < segments_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, segments_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -39716,6 +39792,14 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, tier_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < segments_.size(); i++) {
+          dataSize += computeStringSizeNoTag(segments_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSegmentsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -39758,6 +39842,8 @@ public final class DataServiceProto {
             .equals(other.getPredictionMetadata())) return false;
       }
       if (tier_ != other.tier_) return false;
+      if (!getSegmentsList()
+          .equals(other.getSegmentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -39795,6 +39881,10 @@ public final class DataServiceProto {
       }
       hash = (37 * hash) + TIER_FIELD_NUMBER;
       hash = (53 * hash) + tier_;
+      if (getSegmentsCount() > 0) {
+        hash = (37 * hash) + SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -39960,6 +40050,8 @@ public final class DataServiceProto {
         }
         tier_ = 0;
 
+        segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -40015,6 +40107,11 @@ public final class DataServiceProto {
           result.predictionMetadata_ = predictionMetadataBuilder_.build();
         }
         result.tier_ = tier_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          segments_ = segments_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.segments_ = segments_;
         onBuilt();
         return result;
       }
@@ -40094,6 +40191,16 @@ public final class DataServiceProto {
         }
         if (other.tier_ != 0) {
           setTierValue(other.getTierValue());
+        }
+        if (!other.segments_.isEmpty()) {
+          if (segments_.isEmpty()) {
+            segments_ = other.segments_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSegmentsIsMutable();
+            segments_.addAll(other.segments_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -40871,6 +40978,116 @@ public final class DataServiceProto {
       public Builder clearTier() {
         
         tier_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSegmentsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @return A list containing the segments.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSegmentsList() {
+        return segments_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @return The count of segments.
+       */
+      public int getSegmentsCount() {
+        return segments_.size();
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param index The index of the element to return.
+       * @return The segments at the given index.
+       */
+      public java.lang.String getSegments(int index) {
+        return segments_.get(index);
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the segments at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSegmentsBytes(int index) {
+        return segments_.getByteString(index);
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The segments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegments(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSegmentsIsMutable();
+        segments_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param value The segments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSegments(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSegmentsIsMutable();
+        segments_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param values The segments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSegments(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSegmentsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, segments_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegments() {
+        segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param value The bytes of the segments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSegmentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSegmentsIsMutable();
+        segments_.add(value);
         onChanged();
         return this;
       }
@@ -47237,7 +47454,7 @@ public final class DataServiceProto {
       "reateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023Rea" +
       "dDocumentRequest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocu" +
       "mentResponse\022.\n\010document\030\001 \001(\0132\034.ssn.dat" +
-      "aservice.v1.Document\"\316\002\n\026PrepareFeedback" +
+      "aservice.v1.Document\"\340\002\n\026PrepareFeedback" +
       "Request\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.ty" +
       "pe.TextAnnotation\022\026\n\016document_bytes\030\003 \001(" +
       "\014\0229\n\013predictions\030\004 \001(\0132$.ssn.dataservice" +
@@ -47245,44 +47462,45 @@ public final class DataServiceProto {
       "nfidences\030\006 \001(\0132).ssn.dataservice.v1.Pre" +
       "dictionConfidences\022C\n\023prediction_metadat" +
       "a\030\007 \001(\0132&.ssn.dataservice.v1.PredictionM" +
-      "etadata\022\034\n\004tier\030\010 \001(\0162\016.ssn.type.Tier\"`\n" +
-      "\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0223\n\013true_val" +
-      "ues\030\002 \001(\0132\036.ssn.dataservice.v1.TrueValue" +
-      "s\022\014\n\004tags\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nsta" +
-      "rt_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006field" +
-      "s\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017FeedbackMetric" +
-      "s\022\026\n\016document_count\030\001 \001(\005\022\026\n\016feedback_co" +
-      "unt\030\002 \001(\005\022<\n\023overall_correctness\030\003 \001(\0132\037" +
-      ".ssn.dataservice.v1.Correctness\022:\n\021field" +
-      "_correctness\030\004 \003(\0132\037.ssn.dataservice.v1." +
-      "Correctness\"\202\001\n\013Correctness\022\r\n\005field\030\001 \001" +
-      "(\t\022\032\n\022correct_percentage\030\002 \001(\002\022\035\n\025incomp" +
-      "lete_percentage\030\003 \001(\002\022\030\n\020error_percentag" +
-      "e\030\004 \001(\002\022\017\n\007support\030\005 \001(\005\"\035\n\rDeleteReques" +
-      "t\022\014\n\004tags\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005call" +
-      "s\030\001 \001(\003\022\022\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerM" +
-      "onthResponse\022:\n\017calls_per_month\030\001 \003(\0132!." +
-      "ssn.dataservice.v1.CallsPerMonth2\265\005\n\013Dat" +
-      "aService\022g\n\016CreateDocument\022).ssn.dataser" +
-      "vice.v1.CreateDocumentRequest\032*.ssn.data" +
-      "service.v1.CreateDocumentResponse\022a\n\014Rea" +
-      "dDocument\022\'.ssn.dataservice.v1.ReadDocum" +
-      "entRequest\032(.ssn.dataservice.v1.ReadDocu" +
-      "mentResponse\022U\n\017PrepareFeedback\022*.ssn.da" +
-      "taservice.v1.PrepareFeedbackRequest\032\026.go" +
-      "ogle.protobuf.Empty\022g\n\010Feedback\022#.ssn.da" +
-      "taservice.v1.FeedbackRequest\032\026.google.pr" +
-      "otobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:creat" +
-      "e:\001*\022[\n\020CalculateMetrics\022\".ssn.dataservi" +
-      "ce.v1.MetricsRequest\032#.ssn.dataservice.v" +
-      "1.FeedbackMetrics\022c\n\006Delete\022!.ssn.datase" +
-      "rvice.v1.DeleteRequest\032\026.google.protobuf" +
-      ".Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X" +
-      "\n\023CallsPerMonthMetric\022\026.google.protobuf." +
-      "Empty\032).ssn.dataservice.v1.CallsPerMonth" +
-      "ResponseBVB\020DataServiceProtoZBgithub.com" +
-      "/e-conomic/vmlapis/gen/go/ssn/dataservic" +
-      "e/v1;dataserviceb\006proto3"
+      "etadata\022\034\n\004tier\030\010 \001(\0162\016.ssn.type.Tier\022\020\n" +
+      "\010segments\030\t \003(\t\"`\n\017FeedbackRequest\022\n\n\002id" +
+      "\030\001 \001(\t\0223\n\013true_values\030\002 \001(\0132\036.ssn.datase" +
+      "rvice.v1.TrueValues\022\014\n\004tags\030\003 \003(\t\"T\n\016Met" +
+      "ricsRequest\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_t" +
+      "ime\030\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"" +
+      "\273\001\n\017FeedbackMetrics\022\026\n\016document_count\030\001 " +
+      "\001(\005\022\026\n\016feedback_count\030\002 \001(\005\022<\n\023overall_c" +
+      "orrectness\030\003 \001(\0132\037.ssn.dataservice.v1.Co" +
+      "rrectness\022:\n\021field_correctness\030\004 \003(\0132\037.s" +
+      "sn.dataservice.v1.Correctness\"\202\001\n\013Correc" +
+      "tness\022\r\n\005field\030\001 \001(\t\022\032\n\022correct_percenta" +
+      "ge\030\002 \001(\002\022\035\n\025incomplete_percentage\030\003 \001(\002\022" +
+      "\030\n\020error_percentage\030\004 \001(\002\022\017\n\007support\030\005 \001" +
+      "(\005\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t\"2\n\rCal" +
+      "lsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022\n\nmonth_name\030" +
+      "\002 \001(\t\"S\n\025CallsPerMonthResponse\022:\n\017calls_" +
+      "per_month\030\001 \003(\0132!.ssn.dataservice.v1.Cal" +
+      "lsPerMonth2\265\005\n\013DataService\022g\n\016CreateDocu" +
+      "ment\022).ssn.dataservice.v1.CreateDocument" +
+      "Request\032*.ssn.dataservice.v1.CreateDocum" +
+      "entResponse\022a\n\014ReadDocument\022\'.ssn.datase" +
+      "rvice.v1.ReadDocumentRequest\032(.ssn.datas" +
+      "ervice.v1.ReadDocumentResponse\022U\n\017Prepar" +
+      "eFeedback\022*.ssn.dataservice.v1.PrepareFe" +
+      "edbackRequest\032\026.google.protobuf.Empty\022g\n" +
+      "\010Feedback\022#.ssn.dataservice.v1.FeedbackR" +
+      "equest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023" +
+      "/v1/feedback:create:\001*\022[\n\020CalculateMetri" +
+      "cs\022\".ssn.dataservice.v1.MetricsRequest\032#" +
+      ".ssn.dataservice.v1.FeedbackMetrics\022c\n\006D" +
+      "elete\022!.ssn.dataservice.v1.DeleteRequest" +
+      "\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/fe" +
+      "edback:delete:\001*\022X\n\023CallsPerMonthMetric\022" +
+      "\026.google.protobuf.Empty\032).ssn.dataservic" +
+      "e.v1.CallsPerMonthResponseBVB\020DataServic" +
+      "eProtoZBgithub.com/e-conomic/vmlapis/gen" +
+      "/go/ssn/dataservice/v1;dataserviceb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -47356,7 +47574,7 @@ public final class DataServiceProto {
     internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", });
+        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments", });
     internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_ssn_dataservice_v1_FeedbackRequest_fieldAccessorTable = new
