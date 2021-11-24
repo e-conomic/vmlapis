@@ -103,6 +103,7 @@ message DocumentAnnotatorRequest {
   repeated Feature features = 2;
   repeated string tags = 3;
   ssn.type.Tier tier = 4;
+  repeated string segments = 5;
 }
 
 message DocumentAnnotatorResponse {

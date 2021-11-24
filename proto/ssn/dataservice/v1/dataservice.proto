@@ -197,6 +197,7 @@ message PrepareFeedbackRequest {
   PredictionConfidences confidences = 6;
   PredictionMetadata prediction_metadata = 7;
   ssn.type.Tier tier = 8;
+  repeated string segments = 9;
 }
 
 message FeedbackRequest {

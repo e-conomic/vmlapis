@@ -704,6 +704,12 @@
         },
         "tier": {
           "$ref": "#/definitions/typeTier"
+        },
+        "segments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

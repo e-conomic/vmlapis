@@ -7198,7 +7198,7 @@ proto.ssn.dataservice.v1.ReadDocumentResponse.prototype.hasDocument = function()
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PrepareFeedbackRequest.repeatedFields_ = [5];
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.repeatedFields_ = [5,9];
 
 
 
@@ -7238,7 +7238,8 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.toObject = function(includeInsta
     tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
     confidences: (f = msg.getConfidences()) && proto.ssn.dataservice.v1.PredictionConfidences.toObject(includeInstance, f),
     predictionMetadata: (f = msg.getPredictionMetadata()) && proto.ssn.dataservice.v1.PredictionMetadata.toObject(includeInstance, f),
-    tier: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    tier: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    segmentsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -7310,6 +7311,10 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.deserializeBinaryFromReader = fu
     case 8:
       var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
       msg.setTier(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addSegments(value);
       break;
     default:
       reader.skipField();
@@ -7397,6 +7402,13 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.serializeBinaryToWriter = functi
   if (f !== 0.0) {
     writer.writeEnum(
       8,
+      f
+    );
+  }
+  f = message.getSegmentsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
       f
     );
   }
@@ -7663,6 +7675,43 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getTier = function() {
  */
 proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.setTier = function(value) {
   return jspb.Message.setProto3EnumField(this, 8, value);
+};
+
+
+/**
+ * repeated string segments = 9;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getSegmentsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.setSegmentsList = function(value) {
+  return jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.addSegments = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.clearSegmentsList = function() {
+  return this.setSegmentsList([]);
 };
 
 
