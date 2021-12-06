@@ -5,7 +5,7 @@ go 1.12
 require (
 	github.com/GoogleCloudPlatform/protoc-gen-bq-schema v0.0.0-20190119112626-026f9fcdf705
 	github.com/e-conomic/tensorflow v0.0.0-20190502071349-5bfe5110fb55
-	github.com/golang/mock v1.4.4
+	github.com/golang/mock v1.6.0
 	github.com/golang/protobuf v1.5.2
 	github.com/grpc-ecosystem/grpc-gateway v1.9.2
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.5.0 // indirect
