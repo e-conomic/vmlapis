@@ -145,6 +145,11 @@
     "name": "bank_registration_number",
     "type": "STRING",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_name",
+    "type": "STRING",
+    "mode": "NULLABLE"
    }
   ]
  },
