@@ -1015,7 +1015,8 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     iban: (f = msg.getIban()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     orderReference: (f = msg.getOrderReference()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     bankAccountNumber: (f = msg.getBankAccountNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    bankRegistrationNumber: (f = msg.getBankRegistrationNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    bankRegistrationNumber: (f = msg.getBankRegistrationNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    supplierName: (f = msg.getSupplierName()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1176,6 +1177,11 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setBankRegistrationNumber(value);
+      break;
+    case 26:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setSupplierName(value);
       break;
     default:
       reader.skipField();
@@ -1402,6 +1408,14 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeMessage(
       25,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getSupplierName();
+  if (f != null) {
+    writer.writeMessage(
+      26,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -2331,6 +2345,43 @@ proto.ssn.dataservice.v1.TrueValues.prototype.clearBankRegistrationNumber = func
  */
 proto.ssn.dataservice.v1.TrueValues.prototype.hasBankRegistrationNumber = function() {
   return jspb.Message.getField(this, 25) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue supplier_name = 26;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getSupplierName = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 26));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setSupplierName = function(value) {
+  return jspb.Message.setWrapperField(this, 26, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearSupplierName = function() {
+  return this.setSupplierName(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasSupplierName = function() {
+  return jspb.Message.getField(this, 26) != null;
 };
 
 
