@@ -704,6 +704,12 @@
         },
         "tier": {
           "$ref": "#/definitions/typeTier"
+        },
+        "segments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -1569,6 +1575,9 @@
           "type": "string"
         },
         "bankRegistrationNumber": {
+          "type": "string"
+        },
+        "supplierName": {
           "type": "string"
         }
       }

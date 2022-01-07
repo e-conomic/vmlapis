@@ -6,36 +6,37 @@ package mock_annotator
 
 import (
 	context "context"
+	reflect "reflect"
+
 	annotator "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
-	reflect "reflect"
 )
 
-// MockDocumentAnnotatorClient is a mock of DocumentAnnotatorClient interface
+// MockDocumentAnnotatorClient is a mock of DocumentAnnotatorClient interface.
 type MockDocumentAnnotatorClient struct {
 	ctrl     *gomock.Controller
 	recorder *MockDocumentAnnotatorClientMockRecorder
 }
 
-// MockDocumentAnnotatorClientMockRecorder is the mock recorder for MockDocumentAnnotatorClient
+// MockDocumentAnnotatorClientMockRecorder is the mock recorder for MockDocumentAnnotatorClient.
 type MockDocumentAnnotatorClientMockRecorder struct {
 	mock *MockDocumentAnnotatorClient
 }
 
-// NewMockDocumentAnnotatorClient creates a new mock instance
+// NewMockDocumentAnnotatorClient creates a new mock instance.
 func NewMockDocumentAnnotatorClient(ctrl *gomock.Controller) *MockDocumentAnnotatorClient {
 	mock := &MockDocumentAnnotatorClient{ctrl: ctrl}
 	mock.recorder = &MockDocumentAnnotatorClientMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockDocumentAnnotatorClient) EXPECT() *MockDocumentAnnotatorClientMockRecorder {
 	return m.recorder
 }
 
-// AnnotateDocument mocks base method
+// AnnotateDocument mocks base method.
 func (m *MockDocumentAnnotatorClient) AnnotateDocument(ctx context.Context, in *annotator.DocumentAnnotatorRequest, opts ...grpc.CallOption) (*annotator.DocumentAnnotatorResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
@@ -48,37 +49,37 @@ func (m *MockDocumentAnnotatorClient) AnnotateDocument(ctx context.Context, in *
 	return ret0, ret1
 }
 
-// AnnotateDocument indicates an expected call of AnnotateDocument
+// AnnotateDocument indicates an expected call of AnnotateDocument.
 func (mr *MockDocumentAnnotatorClientMockRecorder) AnnotateDocument(ctx, in interface{}, opts ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{ctx, in}, opts...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnnotateDocument", reflect.TypeOf((*MockDocumentAnnotatorClient)(nil).AnnotateDocument), varargs...)
 }
 
-// MockDocumentAnnotatorServer is a mock of DocumentAnnotatorServer interface
+// MockDocumentAnnotatorServer is a mock of DocumentAnnotatorServer interface.
 type MockDocumentAnnotatorServer struct {
 	ctrl     *gomock.Controller
 	recorder *MockDocumentAnnotatorServerMockRecorder
 }
 
-// MockDocumentAnnotatorServerMockRecorder is the mock recorder for MockDocumentAnnotatorServer
+// MockDocumentAnnotatorServerMockRecorder is the mock recorder for MockDocumentAnnotatorServer.
 type MockDocumentAnnotatorServerMockRecorder struct {
 	mock *MockDocumentAnnotatorServer
 }
 
-// NewMockDocumentAnnotatorServer creates a new mock instance
+// NewMockDocumentAnnotatorServer creates a new mock instance.
 func NewMockDocumentAnnotatorServer(ctrl *gomock.Controller) *MockDocumentAnnotatorServer {
 	mock := &MockDocumentAnnotatorServer{ctrl: ctrl}
 	mock.recorder = &MockDocumentAnnotatorServerMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockDocumentAnnotatorServer) EXPECT() *MockDocumentAnnotatorServerMockRecorder {
 	return m.recorder
 }
 
-// AnnotateDocument mocks base method
+// AnnotateDocument mocks base method.
 func (m *MockDocumentAnnotatorServer) AnnotateDocument(arg0 context.Context, arg1 *annotator.DocumentAnnotatorRequest) (*annotator.DocumentAnnotatorResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AnnotateDocument", arg0, arg1)
@@ -87,19 +88,19 @@ func (m *MockDocumentAnnotatorServer) AnnotateDocument(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// AnnotateDocument indicates an expected call of AnnotateDocument
+// AnnotateDocument indicates an expected call of AnnotateDocument.
 func (mr *MockDocumentAnnotatorServerMockRecorder) AnnotateDocument(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnnotateDocument", reflect.TypeOf((*MockDocumentAnnotatorServer)(nil).AnnotateDocument), arg0, arg1)
 }
 
-// mustEmbedUnimplementedDocumentAnnotatorServer mocks base method
+// mustEmbedUnimplementedDocumentAnnotatorServer mocks base method.
 func (m *MockDocumentAnnotatorServer) mustEmbedUnimplementedDocumentAnnotatorServer() {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "mustEmbedUnimplementedDocumentAnnotatorServer")
 }
 
-// mustEmbedUnimplementedDocumentAnnotatorServer indicates an expected call of mustEmbedUnimplementedDocumentAnnotatorServer
+// mustEmbedUnimplementedDocumentAnnotatorServer indicates an expected call of mustEmbedUnimplementedDocumentAnnotatorServer.
 func (mr *MockDocumentAnnotatorServerMockRecorder) mustEmbedUnimplementedDocumentAnnotatorServer() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDocumentAnnotatorServer", reflect.TypeOf((*MockDocumentAnnotatorServer)(nil).mustEmbedUnimplementedDocumentAnnotatorServer))

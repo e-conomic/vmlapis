@@ -2490,6 +2490,21 @@ public final class DataServiceProto {
      * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
      */
     com.google.protobuf.StringValueOrBuilder getBankRegistrationNumberOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return Whether the supplierName field is set.
+     */
+    boolean hasSupplierName();
+    /**
+     * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return The supplierName.
+     */
+    com.google.protobuf.StringValue getSupplierName();
+    /**
+     * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.TrueValues}
@@ -2857,6 +2872,19 @@ public final class DataServiceProto {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(bankRegistrationNumber_);
                 bankRegistrationNumber_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 210: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (supplierName_ != null) {
+                subBuilder = supplierName_.toBuilder();
+              }
+              supplierName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(supplierName_);
+                supplierName_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3543,6 +3571,32 @@ public final class DataServiceProto {
       return getBankRegistrationNumber();
     }
 
+    public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
+    private com.google.protobuf.StringValue supplierName_;
+    /**
+     * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return Whether the supplierName field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupplierName() {
+      return supplierName_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return The supplierName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierName() {
+      return supplierName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder() {
+      return getSupplierName();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3631,6 +3685,9 @@ public final class DataServiceProto {
       }
       if (bankRegistrationNumber_ != null) {
         output.writeMessage(25, getBankRegistrationNumber());
+      }
+      if (supplierName_ != null) {
+        output.writeMessage(26, getSupplierName());
       }
       unknownFields.writeTo(output);
     }
@@ -3740,6 +3797,10 @@ public final class DataServiceProto {
       if (bankRegistrationNumber_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, getBankRegistrationNumber());
+      }
+      if (supplierName_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getSupplierName());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3881,6 +3942,11 @@ public final class DataServiceProto {
         if (!getBankRegistrationNumber()
             .equals(other.getBankRegistrationNumber())) return false;
       }
+      if (hasSupplierName() != other.hasSupplierName()) return false;
+      if (hasSupplierName()) {
+        if (!getSupplierName()
+            .equals(other.getSupplierName())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3991,6 +4057,10 @@ public final class DataServiceProto {
       if (hasBankRegistrationNumber()) {
         hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + getBankRegistrationNumber().hashCode();
+      }
+      if (hasSupplierName()) {
+        hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierName().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4275,6 +4345,12 @@ public final class DataServiceProto {
           bankRegistrationNumber_ = null;
           bankRegistrationNumberBuilder_ = null;
         }
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = null;
+        } else {
+          supplierName_ = null;
+          supplierNameBuilder_ = null;
+        }
         return this;
       }
 
@@ -4426,6 +4502,11 @@ public final class DataServiceProto {
         } else {
           result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_.build();
         }
+        if (supplierNameBuilder_ == null) {
+          result.supplierName_ = supplierName_;
+        } else {
+          result.supplierName_ = supplierNameBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4548,6 +4629,9 @@ public final class DataServiceProto {
         }
         if (other.hasBankRegistrationNumber()) {
           mergeBankRegistrationNumber(other.getBankRegistrationNumber());
+        }
+        if (other.hasSupplierName()) {
+          mergeSupplierName(other.getSupplierName());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7551,6 +7635,125 @@ public final class DataServiceProto {
           bankRegistrationNumber_ = null;
         }
         return bankRegistrationNumberBuilder_;
+      }
+
+      private com.google.protobuf.StringValue supplierName_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierNameBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       * @return Whether the supplierName field is set.
+       */
+      public boolean hasSupplierName() {
+        return supplierNameBuilder_ != null || supplierName_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       * @return The supplierName.
+       */
+      public com.google.protobuf.StringValue getSupplierName() {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
+        } else {
+          return supplierNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(com.google.protobuf.StringValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          supplierName_ = value;
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = builderForValue.build();
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder mergeSupplierName(com.google.protobuf.StringValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (supplierName_ != null) {
+            supplierName_ =
+              com.google.protobuf.StringValue.newBuilder(supplierName_).mergeFrom(value).buildPartial();
+          } else {
+            supplierName_ = value;
+          }
+          onChanged();
+        } else {
+          supplierNameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder clearSupplierName() {
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = null;
+          onChanged();
+        } else {
+          supplierName_ = null;
+          supplierNameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierNameBuilder() {
+        
+        onChanged();
+        return getSupplierNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder() {
+        if (supplierNameBuilder_ != null) {
+          return supplierNameBuilder_.getMessageOrBuilder();
+        } else {
+          return supplierName_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierNameFieldBuilder() {
+        if (supplierNameBuilder_ == null) {
+          supplierNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getSupplierName(),
+                  getParentForChildren(),
+                  isClean());
+          supplierName_ = null;
+        }
+        return supplierNameBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -39263,6 +39466,31 @@ public final class DataServiceProto {
      * @return The tier.
      */
     ssn.type.TierOuterClass.Tier getTier();
+
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return A list containing the segments.
+     */
+    java.util.List<java.lang.String>
+        getSegmentsList();
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return The count of segments.
+     */
+    int getSegmentsCount();
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
+     */
+    java.lang.String getSegments(int index);
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSegmentsBytes(int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PrepareFeedbackRequest}
@@ -39281,6 +39509,7 @@ public final class DataServiceProto {
       documentBytes_ = com.google.protobuf.ByteString.EMPTY;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       tier_ = 0;
+      segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -39392,6 +39621,15 @@ public final class DataServiceProto {
               tier_ = rawValue;
               break;
             }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                segments_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              segments_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -39409,6 +39647,9 @@ public final class DataServiceProto {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          segments_ = segments_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -39634,6 +39875,41 @@ public final class DataServiceProto {
       return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
     }
 
+    public static final int SEGMENTS_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList segments_;
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return A list containing the segments.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSegmentsList() {
+      return segments_;
+    }
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @return The count of segments.
+     */
+    public int getSegmentsCount() {
+      return segments_.size();
+    }
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
+     */
+    public java.lang.String getSegments(int index) {
+      return segments_.get(index);
+    }
+    /**
+     * <code>repeated string segments = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSegmentsBytes(int index) {
+      return segments_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -39671,6 +39947,9 @@ public final class DataServiceProto {
       }
       if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
         output.writeEnum(8, tier_);
+      }
+      for (int i = 0; i < segments_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, segments_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -39716,6 +39995,14 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, tier_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < segments_.size(); i++) {
+          dataSize += computeStringSizeNoTag(segments_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSegmentsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -39758,6 +40045,8 @@ public final class DataServiceProto {
             .equals(other.getPredictionMetadata())) return false;
       }
       if (tier_ != other.tier_) return false;
+      if (!getSegmentsList()
+          .equals(other.getSegmentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -39795,6 +40084,10 @@ public final class DataServiceProto {
       }
       hash = (37 * hash) + TIER_FIELD_NUMBER;
       hash = (53 * hash) + tier_;
+      if (getSegmentsCount() > 0) {
+        hash = (37 * hash) + SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -39960,6 +40253,8 @@ public final class DataServiceProto {
         }
         tier_ = 0;
 
+        segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -40015,6 +40310,11 @@ public final class DataServiceProto {
           result.predictionMetadata_ = predictionMetadataBuilder_.build();
         }
         result.tier_ = tier_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          segments_ = segments_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.segments_ = segments_;
         onBuilt();
         return result;
       }
@@ -40094,6 +40394,16 @@ public final class DataServiceProto {
         }
         if (other.tier_ != 0) {
           setTierValue(other.getTierValue());
+        }
+        if (!other.segments_.isEmpty()) {
+          if (segments_.isEmpty()) {
+            segments_ = other.segments_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSegmentsIsMutable();
+            segments_.addAll(other.segments_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -40871,6 +41181,116 @@ public final class DataServiceProto {
       public Builder clearTier() {
         
         tier_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSegmentsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @return A list containing the segments.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSegmentsList() {
+        return segments_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @return The count of segments.
+       */
+      public int getSegmentsCount() {
+        return segments_.size();
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param index The index of the element to return.
+       * @return The segments at the given index.
+       */
+      public java.lang.String getSegments(int index) {
+        return segments_.get(index);
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the segments at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSegmentsBytes(int index) {
+        return segments_.getByteString(index);
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The segments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegments(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSegmentsIsMutable();
+        segments_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param value The segments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSegments(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSegmentsIsMutable();
+        segments_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param values The segments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSegments(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSegmentsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, segments_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegments() {
+        segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string segments = 9;</code>
+       * @param value The bytes of the segments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSegmentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSegmentsIsMutable();
+        segments_.add(value);
         onChanged();
         return this;
       }
@@ -47091,7 +47511,7 @@ public final class DataServiceProto {
       "n.dataservice.v1.PredictionConfidences\022C" +
       "\n\023prediction_metadata\030\n \001(\0132&.ssn.datase" +
       "rvice.v1.PredictionMetadata:\022\352?\017\n\rtraini" +
-      "ng_data\"\266\013\n\nTrueValues\0224\n\016total_incl_vat" +
+      "ng_data\"\353\013\n\nTrueValues\0224\n\016total_incl_vat" +
       "\030\001 \001(\0132\034.google.protobuf.DoubleValue\022/\n\t" +
       "total_vat\030\002 \001(\0132\034.google.protobuf.Double" +
       "Value\0224\n\016total_excl_vat\030\003 \001(\0132\034.google.p" +
@@ -47127,162 +47547,164 @@ public final class DataServiceProto {
       "\034.google.protobuf.StringValue\0229\n\023bank_ac" +
       "count_number\030\030 \001(\0132\034.google.protobuf.Str" +
       "ingValue\022>\n\030bank_registration_number\030\031 \001" +
-      "(\0132\034.google.protobuf.StringValue\"\274\013\n\020Pre" +
-      "dictionValues\0224\n\016total_incl_vat\030\001 \003(\0132\034." +
-      "google.protobuf.DoubleValue\022/\n\ttotal_vat" +
-      "\030\002 \003(\0132\034.google.protobuf.DoubleValue\0224\n\016" +
-      "total_excl_vat\030\003 \003(\0132\034.google.protobuf.D" +
-      "oubleValue\0220\n\norder_date\030\004 \003(\0132\021.google." +
-      "type.DateB\t\352?\006\022\004DATE\0226\n\020payment_due_date" +
-      "\030\005 \003(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0223\n\r" +
-      "document_type\030\006 \003(\0132\034.google.protobuf.St" +
-      "ringValue\022.\n\010currency\030\007 \003(\0132\034.google.pro" +
-      "tobuf.StringValue\022;\n\025credit_card_last_fo" +
-      "ur\030\010 \003(\0132\034.google.protobuf.StringValue\0224" +
-      "\n\016payment_method\030\t \003(\0132\034.google.protobuf" +
-      ".StringValue\0226\n\020ocr_line_dk_type\030\n \003(\0132\034" +
-      ".google.protobuf.StringValue\022<\n\026ocr_line" +
-      "_dk_payment_id\030\013 \003(\0132\034.google.protobuf.S" +
-      "tringValue\022=\n\027ocr_line_dk_creditor_id\030\014 " +
-      "\003(\0132\034.google.protobuf.StringValue\022<\n\026ocr" +
-      "_line_se_payment_id\030\r \003(\0132\034.google.proto" +
-      "buf.StringValue\022F\n ocr_line_se_bankgiro_" +
-      "creditor_id\030\016 \003(\0132\034.google.protobuf.Stri" +
-      "ngValue\022F\n ocr_line_se_plusgiro_creditor" +
-      "_id\030\017 \003(\0132\034.google.protobuf.StringValue\022" +
-      "<\n\026ocr_line_no_payment_id\030\020 \003(\0132\034.google" +
-      ".protobuf.StringValue\022<\n\026ocr_line_fi_pay" +
-      "ment_id\030\021 \003(\0132\034.google.protobuf.StringVa" +
-      "lue\022<\n\026ocr_line_nl_payment_id\030\022 \003(\0132\034.go" +
-      "ogle.protobuf.StringValue\022;\n\025supplier_co" +
-      "rporate_id\030\023 \003(\0132\034.google.protobuf.Strin" +
-      "gValue\022;\n\025supplier_country_code\030\024 \003(\0132\034." +
-      "google.protobuf.StringValue\0224\n\016invoice_n" +
-      "umber\030\025 \003(\0132\034.google.protobuf.StringValu" +
-      "e\022*\n\004iban\030\026 \003(\0132\034.google.protobuf.String" +
-      "Value\0225\n\017order_reference\030\027 \003(\0132\034.google." +
-      "protobuf.StringValue\0229\n\023bank_account_num" +
-      "ber\030\030 \003(\0132\034.google.protobuf.StringValue\022" +
-      ">\n\030bank_registration_number\030\031 \003(\0132\034.goog" +
-      "le.protobuf.StringValue\"\250\013\n\025PredictionCo" +
-      "nfidences\0223\n\016total_incl_vat\030\001 \003(\0132\033.goog" +
-      "le.protobuf.FloatValue\022.\n\ttotal_vat\030\002 \003(" +
-      "\0132\033.google.protobuf.FloatValue\0223\n\016total_" +
-      "excl_vat\030\003 \003(\0132\033.google.protobuf.FloatVa" +
-      "lue\022/\n\norder_date\030\004 \003(\0132\033.google.protobu" +
-      "f.FloatValue\0225\n\020payment_due_date\030\005 \003(\0132\033" +
-      ".google.protobuf.FloatValue\0222\n\rdocument_" +
-      "type\030\006 \003(\0132\033.google.protobuf.FloatValue\022" +
-      "-\n\010currency\030\007 \003(\0132\033.google.protobuf.Floa" +
-      "tValue\022:\n\025credit_card_last_four\030\010 \003(\0132\033." +
-      "google.protobuf.FloatValue\0223\n\016payment_me" +
-      "thod\030\t \003(\0132\033.google.protobuf.FloatValue\022" +
-      "5\n\020ocr_line_dk_type\030\n \003(\0132\033.google.proto" +
-      "buf.FloatValue\022;\n\026ocr_line_dk_payment_id" +
-      "\030\013 \003(\0132\033.google.protobuf.FloatValue\022<\n\027o" +
-      "cr_line_dk_creditor_id\030\014 \003(\0132\033.google.pr" +
-      "otobuf.FloatValue\022;\n\026ocr_line_se_payment" +
-      "_id\030\r \003(\0132\033.google.protobuf.FloatValue\022E" +
-      "\n ocr_line_se_bankgiro_creditor_id\030\016 \003(\013" +
-      "2\033.google.protobuf.FloatValue\022E\n ocr_lin" +
-      "e_se_plusgiro_creditor_id\030\017 \003(\0132\033.google" +
-      ".protobuf.FloatValue\022;\n\026ocr_line_no_paym" +
-      "ent_id\030\020 \003(\0132\033.google.protobuf.FloatValu" +
-      "e\022;\n\026ocr_line_fi_payment_id\030\021 \003(\0132\033.goog" +
-      "le.protobuf.FloatValue\022;\n\026ocr_line_nl_pa" +
-      "yment_id\030\022 \003(\0132\033.google.protobuf.FloatVa" +
-      "lue\022:\n\025supplier_corporate_id\030\023 \003(\0132\033.goo" +
-      "gle.protobuf.FloatValue\022:\n\025supplier_coun" +
-      "try_code\030\024 \003(\0132\033.google.protobuf.FloatVa" +
-      "lue\0223\n\016invoice_number\030\025 \003(\0132\033.google.pro" +
-      "tobuf.FloatValue\022)\n\004iban\030\026 \003(\0132\033.google." +
-      "protobuf.FloatValue\0224\n\017order_reference\030\027" +
-      " \003(\0132\033.google.protobuf.FloatValue\0228\n\023ban" +
-      "k_account_number\030\030 \003(\0132\033.google.protobuf" +
-      ".FloatValue\022=\n\030bank_registration_number\030" +
-      "\031 \003(\0132\033.google.protobuf.FloatValue\"\335\t\n\022P" +
-      "redictionMetadata\022+\n\016total_incl_vat\030\001 \003(" +
-      "\0132\023.ssn.type.ModelSpec\022&\n\ttotal_vat\030\002 \003(" +
-      "\0132\023.ssn.type.ModelSpec\022+\n\016total_excl_vat" +
-      "\030\003 \003(\0132\023.ssn.type.ModelSpec\022\'\n\norder_dat" +
-      "e\030\004 \003(\0132\023.ssn.type.ModelSpec\022-\n\020payment_" +
-      "due_date\030\005 \003(\0132\023.ssn.type.ModelSpec\022*\n\rd" +
-      "ocument_type\030\006 \003(\0132\023.ssn.type.ModelSpec\022" +
-      "%\n\010currency\030\007 \003(\0132\023.ssn.type.ModelSpec\0222" +
-      "\n\025credit_card_last_four\030\010 \003(\0132\023.ssn.type" +
-      ".ModelSpec\022+\n\016payment_method\030\t \003(\0132\023.ssn" +
-      ".type.ModelSpec\022-\n\020ocr_line_dk_type\030\n \003(" +
-      "\0132\023.ssn.type.ModelSpec\0223\n\026ocr_line_dk_pa" +
-      "yment_id\030\013 \003(\0132\023.ssn.type.ModelSpec\0224\n\027o" +
-      "cr_line_dk_creditor_id\030\014 \003(\0132\023.ssn.type." +
-      "ModelSpec\0223\n\026ocr_line_se_payment_id\030\r \003(" +
-      "\0132\023.ssn.type.ModelSpec\022=\n ocr_line_se_ba" +
-      "nkgiro_creditor_id\030\016 \003(\0132\023.ssn.type.Mode" +
-      "lSpec\022=\n ocr_line_se_plusgiro_creditor_i" +
-      "d\030\017 \003(\0132\023.ssn.type.ModelSpec\0223\n\026ocr_line" +
-      "_no_payment_id\030\020 \003(\0132\023.ssn.type.ModelSpe" +
-      "c\0223\n\026ocr_line_fi_payment_id\030\021 \003(\0132\023.ssn." +
-      "type.ModelSpec\0223\n\026ocr_line_nl_payment_id" +
-      "\030\022 \003(\0132\023.ssn.type.ModelSpec\0222\n\025supplier_" +
-      "corporate_id\030\023 \003(\0132\023.ssn.type.ModelSpec\022" +
-      "2\n\025supplier_country_code\030\024 \003(\0132\023.ssn.typ" +
-      "e.ModelSpec\022+\n\016invoice_number\030\025 \003(\0132\023.ss" +
-      "n.type.ModelSpec\022!\n\004iban\030\026 \003(\0132\023.ssn.typ" +
-      "e.ModelSpec\022,\n\017order_reference\030\027 \003(\0132\023.s" +
-      "sn.type.ModelSpec\0220\n\023bank_account_number" +
-      "\030\030 \003(\0132\023.ssn.type.ModelSpec\0225\n\030bank_regi" +
-      "stration_number\030\031 \003(\0132\023.ssn.type.ModelSp" +
-      "ec\"G\n\025CreateDocumentRequest\022.\n\010document\030" +
-      "\001 \001(\0132\034.ssn.dataservice.v1.Document\"$\n\026C" +
-      "reateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023Rea" +
-      "dDocumentRequest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocu" +
-      "mentResponse\022.\n\010document\030\001 \001(\0132\034.ssn.dat" +
-      "aservice.v1.Document\"\316\002\n\026PrepareFeedback" +
-      "Request\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.ty" +
-      "pe.TextAnnotation\022\026\n\016document_bytes\030\003 \001(" +
-      "\014\0229\n\013predictions\030\004 \001(\0132$.ssn.dataservice" +
-      ".v1.PredictionValues\022\014\n\004tags\030\005 \003(\t\022>\n\013co" +
-      "nfidences\030\006 \001(\0132).ssn.dataservice.v1.Pre" +
-      "dictionConfidences\022C\n\023prediction_metadat" +
-      "a\030\007 \001(\0132&.ssn.dataservice.v1.PredictionM" +
-      "etadata\022\034\n\004tier\030\010 \001(\0162\016.ssn.type.Tier\"`\n" +
-      "\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0223\n\013true_val" +
-      "ues\030\002 \001(\0132\036.ssn.dataservice.v1.TrueValue" +
-      "s\022\014\n\004tags\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nsta" +
-      "rt_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006field" +
-      "s\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017FeedbackMetric" +
-      "s\022\026\n\016document_count\030\001 \001(\005\022\026\n\016feedback_co" +
-      "unt\030\002 \001(\005\022<\n\023overall_correctness\030\003 \001(\0132\037" +
-      ".ssn.dataservice.v1.Correctness\022:\n\021field" +
-      "_correctness\030\004 \003(\0132\037.ssn.dataservice.v1." +
-      "Correctness\"\202\001\n\013Correctness\022\r\n\005field\030\001 \001" +
-      "(\t\022\032\n\022correct_percentage\030\002 \001(\002\022\035\n\025incomp" +
-      "lete_percentage\030\003 \001(\002\022\030\n\020error_percentag" +
-      "e\030\004 \001(\002\022\017\n\007support\030\005 \001(\005\"\035\n\rDeleteReques" +
-      "t\022\014\n\004tags\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005call" +
-      "s\030\001 \001(\003\022\022\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerM" +
-      "onthResponse\022:\n\017calls_per_month\030\001 \003(\0132!." +
-      "ssn.dataservice.v1.CallsPerMonth2\265\005\n\013Dat" +
-      "aService\022g\n\016CreateDocument\022).ssn.dataser" +
-      "vice.v1.CreateDocumentRequest\032*.ssn.data" +
-      "service.v1.CreateDocumentResponse\022a\n\014Rea" +
-      "dDocument\022\'.ssn.dataservice.v1.ReadDocum" +
-      "entRequest\032(.ssn.dataservice.v1.ReadDocu" +
-      "mentResponse\022U\n\017PrepareFeedback\022*.ssn.da" +
-      "taservice.v1.PrepareFeedbackRequest\032\026.go" +
-      "ogle.protobuf.Empty\022g\n\010Feedback\022#.ssn.da" +
-      "taservice.v1.FeedbackRequest\032\026.google.pr" +
-      "otobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:creat" +
-      "e:\001*\022[\n\020CalculateMetrics\022\".ssn.dataservi" +
-      "ce.v1.MetricsRequest\032#.ssn.dataservice.v" +
-      "1.FeedbackMetrics\022c\n\006Delete\022!.ssn.datase" +
-      "rvice.v1.DeleteRequest\032\026.google.protobuf" +
-      ".Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X" +
-      "\n\023CallsPerMonthMetric\022\026.google.protobuf." +
-      "Empty\032).ssn.dataservice.v1.CallsPerMonth" +
-      "ResponseBVB\020DataServiceProtoZBgithub.com" +
-      "/e-conomic/vmlapis/gen/go/ssn/dataservic" +
-      "e/v1;dataserviceb\006proto3"
+      "(\0132\034.google.protobuf.StringValue\0223\n\rsupp" +
+      "lier_name\030\032 \001(\0132\034.google.protobuf.String" +
+      "Value\"\274\013\n\020PredictionValues\0224\n\016total_incl" +
+      "_vat\030\001 \003(\0132\034.google.protobuf.DoubleValue" +
+      "\022/\n\ttotal_vat\030\002 \003(\0132\034.google.protobuf.Do" +
+      "ubleValue\0224\n\016total_excl_vat\030\003 \003(\0132\034.goog" +
+      "le.protobuf.DoubleValue\0220\n\norder_date\030\004 " +
+      "\003(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0226\n\020pay" +
+      "ment_due_date\030\005 \003(\0132\021.google.type.DateB\t" +
+      "\352?\006\022\004DATE\0223\n\rdocument_type\030\006 \003(\0132\034.googl" +
+      "e.protobuf.StringValue\022.\n\010currency\030\007 \003(\013" +
+      "2\034.google.protobuf.StringValue\022;\n\025credit" +
+      "_card_last_four\030\010 \003(\0132\034.google.protobuf." +
+      "StringValue\0224\n\016payment_method\030\t \003(\0132\034.go" +
+      "ogle.protobuf.StringValue\0226\n\020ocr_line_dk" +
+      "_type\030\n \003(\0132\034.google.protobuf.StringValu" +
+      "e\022<\n\026ocr_line_dk_payment_id\030\013 \003(\0132\034.goog" +
+      "le.protobuf.StringValue\022=\n\027ocr_line_dk_c" +
+      "reditor_id\030\014 \003(\0132\034.google.protobuf.Strin" +
+      "gValue\022<\n\026ocr_line_se_payment_id\030\r \003(\0132\034" +
+      ".google.protobuf.StringValue\022F\n ocr_line" +
+      "_se_bankgiro_creditor_id\030\016 \003(\0132\034.google." +
+      "protobuf.StringValue\022F\n ocr_line_se_plus" +
+      "giro_creditor_id\030\017 \003(\0132\034.google.protobuf" +
+      ".StringValue\022<\n\026ocr_line_no_payment_id\030\020" +
+      " \003(\0132\034.google.protobuf.StringValue\022<\n\026oc" +
+      "r_line_fi_payment_id\030\021 \003(\0132\034.google.prot" +
+      "obuf.StringValue\022<\n\026ocr_line_nl_payment_" +
+      "id\030\022 \003(\0132\034.google.protobuf.StringValue\022;" +
+      "\n\025supplier_corporate_id\030\023 \003(\0132\034.google.p" +
+      "rotobuf.StringValue\022;\n\025supplier_country_" +
+      "code\030\024 \003(\0132\034.google.protobuf.StringValue" +
+      "\0224\n\016invoice_number\030\025 \003(\0132\034.google.protob" +
+      "uf.StringValue\022*\n\004iban\030\026 \003(\0132\034.google.pr" +
+      "otobuf.StringValue\0225\n\017order_reference\030\027 " +
+      "\003(\0132\034.google.protobuf.StringValue\0229\n\023ban" +
+      "k_account_number\030\030 \003(\0132\034.google.protobuf" +
+      ".StringValue\022>\n\030bank_registration_number" +
+      "\030\031 \003(\0132\034.google.protobuf.StringValue\"\250\013\n" +
+      "\025PredictionConfidences\0223\n\016total_incl_vat" +
+      "\030\001 \003(\0132\033.google.protobuf.FloatValue\022.\n\tt" +
+      "otal_vat\030\002 \003(\0132\033.google.protobuf.FloatVa" +
+      "lue\0223\n\016total_excl_vat\030\003 \003(\0132\033.google.pro" +
+      "tobuf.FloatValue\022/\n\norder_date\030\004 \003(\0132\033.g" +
+      "oogle.protobuf.FloatValue\0225\n\020payment_due" +
+      "_date\030\005 \003(\0132\033.google.protobuf.FloatValue" +
+      "\0222\n\rdocument_type\030\006 \003(\0132\033.google.protobu" +
+      "f.FloatValue\022-\n\010currency\030\007 \003(\0132\033.google." +
+      "protobuf.FloatValue\022:\n\025credit_card_last_" +
+      "four\030\010 \003(\0132\033.google.protobuf.FloatValue\022" +
+      "3\n\016payment_method\030\t \003(\0132\033.google.protobu" +
+      "f.FloatValue\0225\n\020ocr_line_dk_type\030\n \003(\0132\033" +
+      ".google.protobuf.FloatValue\022;\n\026ocr_line_" +
+      "dk_payment_id\030\013 \003(\0132\033.google.protobuf.Fl" +
+      "oatValue\022<\n\027ocr_line_dk_creditor_id\030\014 \003(" +
+      "\0132\033.google.protobuf.FloatValue\022;\n\026ocr_li" +
+      "ne_se_payment_id\030\r \003(\0132\033.google.protobuf" +
+      ".FloatValue\022E\n ocr_line_se_bankgiro_cred" +
+      "itor_id\030\016 \003(\0132\033.google.protobuf.FloatVal" +
+      "ue\022E\n ocr_line_se_plusgiro_creditor_id\030\017" +
+      " \003(\0132\033.google.protobuf.FloatValue\022;\n\026ocr" +
+      "_line_no_payment_id\030\020 \003(\0132\033.google.proto" +
+      "buf.FloatValue\022;\n\026ocr_line_fi_payment_id" +
+      "\030\021 \003(\0132\033.google.protobuf.FloatValue\022;\n\026o" +
+      "cr_line_nl_payment_id\030\022 \003(\0132\033.google.pro" +
+      "tobuf.FloatValue\022:\n\025supplier_corporate_i" +
+      "d\030\023 \003(\0132\033.google.protobuf.FloatValue\022:\n\025" +
+      "supplier_country_code\030\024 \003(\0132\033.google.pro" +
+      "tobuf.FloatValue\0223\n\016invoice_number\030\025 \003(\013" +
+      "2\033.google.protobuf.FloatValue\022)\n\004iban\030\026 " +
+      "\003(\0132\033.google.protobuf.FloatValue\0224\n\017orde" +
+      "r_reference\030\027 \003(\0132\033.google.protobuf.Floa" +
+      "tValue\0228\n\023bank_account_number\030\030 \003(\0132\033.go" +
+      "ogle.protobuf.FloatValue\022=\n\030bank_registr" +
+      "ation_number\030\031 \003(\0132\033.google.protobuf.Flo" +
+      "atValue\"\335\t\n\022PredictionMetadata\022+\n\016total_" +
+      "incl_vat\030\001 \003(\0132\023.ssn.type.ModelSpec\022&\n\tt" +
+      "otal_vat\030\002 \003(\0132\023.ssn.type.ModelSpec\022+\n\016t" +
+      "otal_excl_vat\030\003 \003(\0132\023.ssn.type.ModelSpec" +
+      "\022\'\n\norder_date\030\004 \003(\0132\023.ssn.type.ModelSpe" +
+      "c\022-\n\020payment_due_date\030\005 \003(\0132\023.ssn.type.M" +
+      "odelSpec\022*\n\rdocument_type\030\006 \003(\0132\023.ssn.ty" +
+      "pe.ModelSpec\022%\n\010currency\030\007 \003(\0132\023.ssn.typ" +
+      "e.ModelSpec\0222\n\025credit_card_last_four\030\010 \003" +
+      "(\0132\023.ssn.type.ModelSpec\022+\n\016payment_metho" +
+      "d\030\t \003(\0132\023.ssn.type.ModelSpec\022-\n\020ocr_line" +
+      "_dk_type\030\n \003(\0132\023.ssn.type.ModelSpec\0223\n\026o" +
+      "cr_line_dk_payment_id\030\013 \003(\0132\023.ssn.type.M" +
+      "odelSpec\0224\n\027ocr_line_dk_creditor_id\030\014 \003(" +
+      "\0132\023.ssn.type.ModelSpec\0223\n\026ocr_line_se_pa" +
+      "yment_id\030\r \003(\0132\023.ssn.type.ModelSpec\022=\n o" +
+      "cr_line_se_bankgiro_creditor_id\030\016 \003(\0132\023." +
+      "ssn.type.ModelSpec\022=\n ocr_line_se_plusgi" +
+      "ro_creditor_id\030\017 \003(\0132\023.ssn.type.ModelSpe" +
+      "c\0223\n\026ocr_line_no_payment_id\030\020 \003(\0132\023.ssn." +
+      "type.ModelSpec\0223\n\026ocr_line_fi_payment_id" +
+      "\030\021 \003(\0132\023.ssn.type.ModelSpec\0223\n\026ocr_line_" +
+      "nl_payment_id\030\022 \003(\0132\023.ssn.type.ModelSpec" +
+      "\0222\n\025supplier_corporate_id\030\023 \003(\0132\023.ssn.ty" +
+      "pe.ModelSpec\0222\n\025supplier_country_code\030\024 " +
+      "\003(\0132\023.ssn.type.ModelSpec\022+\n\016invoice_numb" +
+      "er\030\025 \003(\0132\023.ssn.type.ModelSpec\022!\n\004iban\030\026 " +
+      "\003(\0132\023.ssn.type.ModelSpec\022,\n\017order_refere" +
+      "nce\030\027 \003(\0132\023.ssn.type.ModelSpec\0220\n\023bank_a" +
+      "ccount_number\030\030 \003(\0132\023.ssn.type.ModelSpec" +
+      "\0225\n\030bank_registration_number\030\031 \003(\0132\023.ssn" +
+      ".type.ModelSpec\"G\n\025CreateDocumentRequest" +
+      "\022.\n\010document\030\001 \001(\0132\034.ssn.dataservice.v1." +
+      "Document\"$\n\026CreateDocumentResponse\022\n\n\002id" +
+      "\030\001 \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 \001(" +
+      "\t\"F\n\024ReadDocumentResponse\022.\n\010document\030\001 " +
+      "\001(\0132\034.ssn.dataservice.v1.Document\"\340\002\n\026Pr" +
+      "epareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002" +
+      " \001(\0132\030.ssn.type.TextAnnotation\022\026\n\016docume" +
+      "nt_bytes\030\003 \001(\014\0229\n\013predictions\030\004 \001(\0132$.ss" +
+      "n.dataservice.v1.PredictionValues\022\014\n\004tag" +
+      "s\030\005 \003(\t\022>\n\013confidences\030\006 \001(\0132).ssn.datas" +
+      "ervice.v1.PredictionConfidences\022C\n\023predi" +
+      "ction_metadata\030\007 \001(\0132&.ssn.dataservice.v" +
+      "1.PredictionMetadata\022\034\n\004tier\030\010 \001(\0162\016.ssn" +
+      ".type.Tier\022\020\n\010segments\030\t \003(\t\"`\n\017Feedback" +
+      "Request\022\n\n\002id\030\001 \001(\t\0223\n\013true_values\030\002 \001(\013" +
+      "2\036.ssn.dataservice.v1.TrueValues\022\014\n\004tags" +
+      "\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nstart_time\030\002" +
+      " \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014" +
+      "\n\004tags\030\005 \003(\t\"\273\001\n\017FeedbackMetrics\022\026\n\016docu" +
+      "ment_count\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005" +
+      "\022<\n\023overall_correctness\030\003 \001(\0132\037.ssn.data" +
+      "service.v1.Correctness\022:\n\021field_correctn" +
+      "ess\030\004 \003(\0132\037.ssn.dataservice.v1.Correctne" +
+      "ss\"\202\001\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022cor" +
+      "rect_percentage\030\002 \001(\002\022\035\n\025incomplete_perc" +
+      "entage\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(\002\022\017" +
+      "\n\007support\030\005 \001(\005\"\035\n\rDeleteRequest\022\014\n\004tags" +
+      "\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022" +
+      "\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerMonthRespo" +
+      "nse\022:\n\017calls_per_month\030\001 \003(\0132!.ssn.datas" +
+      "ervice.v1.CallsPerMonth2\265\005\n\013DataService\022" +
+      "g\n\016CreateDocument\022).ssn.dataservice.v1.C" +
+      "reateDocumentRequest\032*.ssn.dataservice.v" +
+      "1.CreateDocumentResponse\022a\n\014ReadDocument" +
+      "\022\'.ssn.dataservice.v1.ReadDocumentReques" +
+      "t\032(.ssn.dataservice.v1.ReadDocumentRespo" +
+      "nse\022U\n\017PrepareFeedback\022*.ssn.dataservice" +
+      ".v1.PrepareFeedbackRequest\032\026.google.prot" +
+      "obuf.Empty\022g\n\010Feedback\022#.ssn.dataservice" +
+      ".v1.FeedbackRequest\032\026.google.protobuf.Em" +
+      "pty\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020C" +
+      "alculateMetrics\022\".ssn.dataservice.v1.Met" +
+      "ricsRequest\032#.ssn.dataservice.v1.Feedbac" +
+      "kMetrics\022c\n\006Delete\022!.ssn.dataservice.v1." +
+      "DeleteRequest\032\026.google.protobuf.Empty\"\036\202" +
+      "\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X\n\023CallsPe" +
+      "rMonthMetric\022\026.google.protobuf.Empty\032).s" +
+      "sn.dataservice.v1.CallsPerMonthResponseB" +
+      "VB\020DataServiceProtoZBgithub.com/e-conomi" +
+      "c/vmlapis/gen/go/ssn/dataservice/v1;data" +
+      "serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -47308,7 +47730,7 @@ public final class DataServiceProto {
     internal_static_ssn_dataservice_v1_TrueValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_TrueValues_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", });
     internal_static_ssn_dataservice_v1_PredictionValues_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_dataservice_v1_PredictionValues_fieldAccessorTable = new
@@ -47356,7 +47778,7 @@ public final class DataServiceProto {
     internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", });
+        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments", });
     internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_ssn_dataservice_v1_FeedbackRequest_fieldAccessorTable = new

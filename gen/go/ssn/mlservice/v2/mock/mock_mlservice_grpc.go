@@ -6,36 +6,37 @@ package mock_mlservice
 
 import (
 	context "context"
+	reflect "reflect"
+
 	mlservice "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
-	reflect "reflect"
 )
 
-// MockMlServiceClient is a mock of MlServiceClient interface
+// MockMlServiceClient is a mock of MlServiceClient interface.
 type MockMlServiceClient struct {
 	ctrl     *gomock.Controller
 	recorder *MockMlServiceClientMockRecorder
 }
 
-// MockMlServiceClientMockRecorder is the mock recorder for MockMlServiceClient
+// MockMlServiceClientMockRecorder is the mock recorder for MockMlServiceClient.
 type MockMlServiceClientMockRecorder struct {
 	mock *MockMlServiceClient
 }
 
-// NewMockMlServiceClient creates a new mock instance
+// NewMockMlServiceClient creates a new mock instance.
 func NewMockMlServiceClient(ctrl *gomock.Controller) *MockMlServiceClient {
 	mock := &MockMlServiceClient{ctrl: ctrl}
 	mock.recorder = &MockMlServiceClientMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMlServiceClient) EXPECT() *MockMlServiceClientMockRecorder {
 	return m.recorder
 }
 
-// FeatureGen mocks base method
+// FeatureGen mocks base method.
 func (m *MockMlServiceClient) FeatureGen(ctx context.Context, in *mlservice.FeatureGenRequest, opts ...grpc.CallOption) (*mlservice.FeatureGenResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
@@ -48,34 +49,14 @@ func (m *MockMlServiceClient) FeatureGen(ctx context.Context, in *mlservice.Feat
 	return ret0, ret1
 }
 
-// FeatureGen indicates an expected call of FeatureGen
+// FeatureGen indicates an expected call of FeatureGen.
 func (mr *MockMlServiceClientMockRecorder) FeatureGen(ctx, in interface{}, opts ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{ctx, in}, opts...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FeatureGen", reflect.TypeOf((*MockMlServiceClient)(nil).FeatureGen), varargs...)
 }
 
-// Predict mocks base method
-func (m *MockMlServiceClient) Predict(ctx context.Context, in *mlservice.PredictRequest, opts ...grpc.CallOption) (*mlservice.PredictResponse, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, in}
-	for _, a := range opts {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "Predict", varargs...)
-	ret0, _ := ret[0].(*mlservice.PredictResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// Predict indicates an expected call of Predict
-func (mr *MockMlServiceClientMockRecorder) Predict(ctx, in interface{}, opts ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, in}, opts...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Predict", reflect.TypeOf((*MockMlServiceClient)(nil).Predict), varargs...)
-}
-
-// FeatureGenPredict mocks base method
+// FeatureGenPredict mocks base method.
 func (m *MockMlServiceClient) FeatureGenPredict(ctx context.Context, in *mlservice.FeatureGenPredictRequest, opts ...grpc.CallOption) (*mlservice.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
@@ -88,37 +69,57 @@ func (m *MockMlServiceClient) FeatureGenPredict(ctx context.Context, in *mlservi
 	return ret0, ret1
 }
 
-// FeatureGenPredict indicates an expected call of FeatureGenPredict
+// FeatureGenPredict indicates an expected call of FeatureGenPredict.
 func (mr *MockMlServiceClientMockRecorder) FeatureGenPredict(ctx, in interface{}, opts ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{ctx, in}, opts...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FeatureGenPredict", reflect.TypeOf((*MockMlServiceClient)(nil).FeatureGenPredict), varargs...)
 }
 
-// MockMlServiceServer is a mock of MlServiceServer interface
+// Predict mocks base method.
+func (m *MockMlServiceClient) Predict(ctx context.Context, in *mlservice.PredictRequest, opts ...grpc.CallOption) (*mlservice.PredictResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "Predict", varargs...)
+	ret0, _ := ret[0].(*mlservice.PredictResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Predict indicates an expected call of Predict.
+func (mr *MockMlServiceClientMockRecorder) Predict(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Predict", reflect.TypeOf((*MockMlServiceClient)(nil).Predict), varargs...)
+}
+
+// MockMlServiceServer is a mock of MlServiceServer interface.
 type MockMlServiceServer struct {
 	ctrl     *gomock.Controller
 	recorder *MockMlServiceServerMockRecorder
 }
 
-// MockMlServiceServerMockRecorder is the mock recorder for MockMlServiceServer
+// MockMlServiceServerMockRecorder is the mock recorder for MockMlServiceServer.
 type MockMlServiceServerMockRecorder struct {
 	mock *MockMlServiceServer
 }
 
-// NewMockMlServiceServer creates a new mock instance
+// NewMockMlServiceServer creates a new mock instance.
 func NewMockMlServiceServer(ctrl *gomock.Controller) *MockMlServiceServer {
 	mock := &MockMlServiceServer{ctrl: ctrl}
 	mock.recorder = &MockMlServiceServerMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMlServiceServer) EXPECT() *MockMlServiceServerMockRecorder {
 	return m.recorder
 }
 
-// FeatureGen mocks base method
+// FeatureGen mocks base method.
 func (m *MockMlServiceServer) FeatureGen(arg0 context.Context, arg1 *mlservice.FeatureGenRequest) (*mlservice.FeatureGenResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "FeatureGen", arg0, arg1)
@@ -127,28 +128,13 @@ func (m *MockMlServiceServer) FeatureGen(arg0 context.Context, arg1 *mlservice.F
 	return ret0, ret1
 }
 
-// FeatureGen indicates an expected call of FeatureGen
+// FeatureGen indicates an expected call of FeatureGen.
 func (mr *MockMlServiceServerMockRecorder) FeatureGen(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FeatureGen", reflect.TypeOf((*MockMlServiceServer)(nil).FeatureGen), arg0, arg1)
 }
 
-// Predict mocks base method
-func (m *MockMlServiceServer) Predict(arg0 context.Context, arg1 *mlservice.PredictRequest) (*mlservice.PredictResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Predict", arg0, arg1)
-	ret0, _ := ret[0].(*mlservice.PredictResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// Predict indicates an expected call of Predict
-func (mr *MockMlServiceServerMockRecorder) Predict(arg0, arg1 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Predict", reflect.TypeOf((*MockMlServiceServer)(nil).Predict), arg0, arg1)
-}
-
-// FeatureGenPredict mocks base method
+// FeatureGenPredict mocks base method.
 func (m *MockMlServiceServer) FeatureGenPredict(arg0 context.Context, arg1 *mlservice.FeatureGenPredictRequest) (*mlservice.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "FeatureGenPredict", arg0, arg1)
@@ -157,19 +143,34 @@ func (m *MockMlServiceServer) FeatureGenPredict(arg0 context.Context, arg1 *mlse
 	return ret0, ret1
 }
 
-// FeatureGenPredict indicates an expected call of FeatureGenPredict
+// FeatureGenPredict indicates an expected call of FeatureGenPredict.
 func (mr *MockMlServiceServerMockRecorder) FeatureGenPredict(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FeatureGenPredict", reflect.TypeOf((*MockMlServiceServer)(nil).FeatureGenPredict), arg0, arg1)
 }
 
-// mustEmbedUnimplementedMlServiceServer mocks base method
+// Predict mocks base method.
+func (m *MockMlServiceServer) Predict(arg0 context.Context, arg1 *mlservice.PredictRequest) (*mlservice.PredictResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Predict", arg0, arg1)
+	ret0, _ := ret[0].(*mlservice.PredictResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Predict indicates an expected call of Predict.
+func (mr *MockMlServiceServerMockRecorder) Predict(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Predict", reflect.TypeOf((*MockMlServiceServer)(nil).Predict), arg0, arg1)
+}
+
+// mustEmbedUnimplementedMlServiceServer mocks base method.
 func (m *MockMlServiceServer) mustEmbedUnimplementedMlServiceServer() {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "mustEmbedUnimplementedMlServiceServer")
 }
 
-// mustEmbedUnimplementedMlServiceServer indicates an expected call of mustEmbedUnimplementedMlServiceServer
+// mustEmbedUnimplementedMlServiceServer indicates an expected call of mustEmbedUnimplementedMlServiceServer.
 func (mr *MockMlServiceServerMockRecorder) mustEmbedUnimplementedMlServiceServer() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedMlServiceServer", reflect.TypeOf((*MockMlServiceServer)(nil).mustEmbedUnimplementedMlServiceServer))

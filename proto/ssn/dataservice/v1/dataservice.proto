@@ -84,6 +84,7 @@ message TrueValues {
   google.protobuf.StringValue order_reference = 23;
   google.protobuf.StringValue bank_account_number = 24;
   google.protobuf.StringValue bank_registration_number = 25;
+  google.protobuf.StringValue supplier_name = 26;
 }
 
 message PredictionValues {
@@ -197,6 +198,7 @@ message PrepareFeedbackRequest {
   PredictionConfidences confidences = 6;
   PredictionMetadata prediction_metadata = 7;
   ssn.type.Tier tier = 8;
+  repeated string segments = 9;
 }
 
 message FeedbackRequest {

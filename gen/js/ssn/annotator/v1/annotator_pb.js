@@ -362,7 +362,7 @@ proto.ssn.annotator.v1.Feature.prototype.setMinConfidence = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorRequest.repeatedFields_ = [2,3];
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.repeatedFields_ = [2,3,5];
 
 
 
@@ -399,7 +399,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.toObject = function(includeInsta
     featuresList: jspb.Message.toObjectList(msg.getFeaturesList(),
     proto.ssn.annotator.v1.Feature.toObject, includeInstance),
     tagsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    tier: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    tier: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    segmentsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -453,6 +454,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.deserializeBinaryFromReader = fu
     case 4:
       var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
       msg.setTier(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addSegments(value);
       break;
     default:
       reader.skipField();
@@ -510,6 +515,13 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.serializeBinaryToWriter = functi
   if (f !== 0.0) {
     writer.writeEnum(
       4,
+      f
+    );
+  }
+  f = message.getSegmentsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      5,
       f
     );
   }
@@ -643,6 +655,43 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.getTier = function() {
  */
 proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.setTier = function(value) {
   return jspb.Message.setProto3EnumField(this, 4, value);
+};
+
+
+/**
+ * repeated string segments = 5;
+ * @return {!Array<string>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.getSegmentsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.setSegmentsList = function(value) {
+  return jspb.Message.setField(this, 5, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.addSegments = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearSegmentsList = function() {
+  return this.setSegmentsList([]);
 };
 
 

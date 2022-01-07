@@ -1015,7 +1015,8 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     iban: (f = msg.getIban()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     orderReference: (f = msg.getOrderReference()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     bankAccountNumber: (f = msg.getBankAccountNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    bankRegistrationNumber: (f = msg.getBankRegistrationNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    bankRegistrationNumber: (f = msg.getBankRegistrationNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    supplierName: (f = msg.getSupplierName()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1176,6 +1177,11 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setBankRegistrationNumber(value);
+      break;
+    case 26:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setSupplierName(value);
       break;
     default:
       reader.skipField();
@@ -1402,6 +1408,14 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeMessage(
       25,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getSupplierName();
+  if (f != null) {
+    writer.writeMessage(
+      26,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -2331,6 +2345,43 @@ proto.ssn.dataservice.v1.TrueValues.prototype.clearBankRegistrationNumber = func
  */
 proto.ssn.dataservice.v1.TrueValues.prototype.hasBankRegistrationNumber = function() {
   return jspb.Message.getField(this, 25) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue supplier_name = 26;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getSupplierName = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 26));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setSupplierName = function(value) {
+  return jspb.Message.setWrapperField(this, 26, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearSupplierName = function() {
+  return this.setSupplierName(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasSupplierName = function() {
+  return jspb.Message.getField(this, 26) != null;
 };
 
 
@@ -7198,7 +7249,7 @@ proto.ssn.dataservice.v1.ReadDocumentResponse.prototype.hasDocument = function()
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PrepareFeedbackRequest.repeatedFields_ = [5];
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.repeatedFields_ = [5,9];
 
 
 
@@ -7238,7 +7289,8 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.toObject = function(includeInsta
     tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
     confidences: (f = msg.getConfidences()) && proto.ssn.dataservice.v1.PredictionConfidences.toObject(includeInstance, f),
     predictionMetadata: (f = msg.getPredictionMetadata()) && proto.ssn.dataservice.v1.PredictionMetadata.toObject(includeInstance, f),
-    tier: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    tier: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    segmentsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -7310,6 +7362,10 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.deserializeBinaryFromReader = fu
     case 8:
       var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
       msg.setTier(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addSegments(value);
       break;
     default:
       reader.skipField();
@@ -7397,6 +7453,13 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.serializeBinaryToWriter = functi
   if (f !== 0.0) {
     writer.writeEnum(
       8,
+      f
+    );
+  }
+  f = message.getSegmentsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
       f
     );
   }
@@ -7663,6 +7726,43 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getTier = function() {
  */
 proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.setTier = function(value) {
   return jspb.Message.setProto3EnumField(this, 8, value);
+};
+
+
+/**
+ * repeated string segments = 9;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getSegmentsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.setSegmentsList = function(value) {
+  return jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.addSegments = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.clearSegmentsList = function() {
+  return this.setSegmentsList([]);
 };
 
 
