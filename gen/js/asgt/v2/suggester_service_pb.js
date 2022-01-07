@@ -326,7 +326,7 @@ proto.asgt.v2.SuggestRequest.prototype.toObject = function(opt_includeInstance) 
  */
 proto.asgt.v2.SuggestRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
     input: (f = msg.getInput()) && asgt_v2_type_data_pb.Data.toObject(includeInstance, f),
     options: (f = msg.getOptions()) && proto.asgt.v2.SuggestOptions.toObject(includeInstance, f)
   };
@@ -367,7 +367,7 @@ proto.asgt.v2.SuggestRequest.deserializeBinaryFromReader = function(msg, reader)
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
+      msg.setDatasetName(value);
       break;
     case 2:
       var value = new asgt_v2_type_data_pb.Data;
@@ -408,7 +408,7 @@ proto.asgt.v2.SuggestRequest.prototype.serializeBinary = function() {
  */
 proto.asgt.v2.SuggestRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getName();
+  f = message.getDatasetName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -435,10 +435,10 @@ proto.asgt.v2.SuggestRequest.serializeBinaryToWriter = function(message, writer)
 
 
 /**
- * optional string name = 1;
+ * optional string dataset_name = 1;
  * @return {string}
  */
-proto.asgt.v2.SuggestRequest.prototype.getName = function() {
+proto.asgt.v2.SuggestRequest.prototype.getDatasetName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -447,7 +447,7 @@ proto.asgt.v2.SuggestRequest.prototype.getName = function() {
  * @param {string} value
  * @return {!proto.asgt.v2.SuggestRequest} returns this
  */
-proto.asgt.v2.SuggestRequest.prototype.setName = function(value) {
+proto.asgt.v2.SuggestRequest.prototype.setDatasetName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -767,7 +767,7 @@ proto.asgt.v2.BatchSuggestRequest.prototype.toObject = function(opt_includeInsta
  */
 proto.asgt.v2.BatchSuggestRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     asgt_v2_type_data_pb.Data.toObject, includeInstance),
     options: (f = msg.getOptions()) && proto.asgt.v2.SuggestOptions.toObject(includeInstance, f)
@@ -809,7 +809,7 @@ proto.asgt.v2.BatchSuggestRequest.deserializeBinaryFromReader = function(msg, re
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
+      msg.setDatasetName(value);
       break;
     case 2:
       var value = new asgt_v2_type_data_pb.Data;
@@ -850,7 +850,7 @@ proto.asgt.v2.BatchSuggestRequest.prototype.serializeBinary = function() {
  */
 proto.asgt.v2.BatchSuggestRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getName();
+  f = message.getDatasetName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -877,10 +877,10 @@ proto.asgt.v2.BatchSuggestRequest.serializeBinaryToWriter = function(message, wr
 
 
 /**
- * optional string name = 1;
+ * optional string dataset_name = 1;
  * @return {string}
  */
-proto.asgt.v2.BatchSuggestRequest.prototype.getName = function() {
+proto.asgt.v2.BatchSuggestRequest.prototype.getDatasetName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -889,7 +889,7 @@ proto.asgt.v2.BatchSuggestRequest.prototype.getName = function() {
  * @param {string} value
  * @return {!proto.asgt.v2.BatchSuggestRequest} returns this
  */
-proto.asgt.v2.BatchSuggestRequest.prototype.setName = function(value) {
+proto.asgt.v2.BatchSuggestRequest.prototype.setDatasetName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 

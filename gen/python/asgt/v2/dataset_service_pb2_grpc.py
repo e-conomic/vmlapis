@@ -28,7 +28,7 @@ class DatasetServiceStub(object):
                 )
         self.CreateOrUpdateDataset = channel.unary_unary(
                 '/asgt.v2.DatasetService/CreateOrUpdateDataset',
-                request_serializer=asgt_dot_v2_dot_dataset__service__pb2.CreateDatasetRequest.SerializeToString,
+                request_serializer=asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateDatasetRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.DeleteDataset = channel.unary_unary(
@@ -122,8 +122,10 @@ class DatasetServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CreateOrUpdateExample(self, request, context):
-        """Not implemented yet. Uploads a new single example. If the specified example already exists, the example
-        is updated with the provided values.
+        """Not implemented yet.
+        Uploads or updates a new single example.
+        If the specified example already exists, the example
+        is updated with the provided values according to provided ID.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -175,7 +177,7 @@ def add_DatasetServiceServicer_to_server(servicer, server):
             ),
             'CreateOrUpdateDataset': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateOrUpdateDataset,
-                    request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.CreateDatasetRequest.FromString,
+                    request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateDatasetRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
             'DeleteDataset': grpc.unary_unary_rpc_method_handler(
@@ -271,7 +273,7 @@ class DatasetService(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/CreateOrUpdateDataset',
-            asgt_dot_v2_dot_dataset__service__pb2.CreateDatasetRequest.SerializeToString,
+            asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

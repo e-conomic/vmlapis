@@ -229,6 +229,41 @@ func (mr *MockPdfServiceServerMockRecorder) mustEmbedUnimplementedPdfServiceServ
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedPdfServiceServer", reflect.TypeOf((*MockPdfServiceServer)(nil).mustEmbedUnimplementedPdfServiceServer))
 }
 
+// MockUnsafePdfServiceServer is a mock of UnsafePdfServiceServer interface.
+type MockUnsafePdfServiceServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockUnsafePdfServiceServerMockRecorder
+}
+
+// MockUnsafePdfServiceServerMockRecorder is the mock recorder for MockUnsafePdfServiceServer.
+type MockUnsafePdfServiceServerMockRecorder struct {
+	mock *MockUnsafePdfServiceServer
+}
+
+// NewMockUnsafePdfServiceServer creates a new mock instance.
+func NewMockUnsafePdfServiceServer(ctrl *gomock.Controller) *MockUnsafePdfServiceServer {
+	mock := &MockUnsafePdfServiceServer{ctrl: ctrl}
+	mock.recorder = &MockUnsafePdfServiceServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockUnsafePdfServiceServer) EXPECT() *MockUnsafePdfServiceServerMockRecorder {
+	return m.recorder
+}
+
+// mustEmbedUnimplementedPdfServiceServer mocks base method.
+func (m *MockUnsafePdfServiceServer) mustEmbedUnimplementedPdfServiceServer() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "mustEmbedUnimplementedPdfServiceServer")
+}
+
+// mustEmbedUnimplementedPdfServiceServer indicates an expected call of mustEmbedUnimplementedPdfServiceServer.
+func (mr *MockUnsafePdfServiceServerMockRecorder) mustEmbedUnimplementedPdfServiceServer() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedPdfServiceServer", reflect.TypeOf((*MockUnsafePdfServiceServer)(nil).mustEmbedUnimplementedPdfServiceServer))
+}
+
 // MockPdfService_RasterizePdfServer is a mock of PdfService_RasterizePdfServer interface.
 type MockPdfService_RasterizePdfServer struct {
 	ctrl     *gomock.Controller

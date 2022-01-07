@@ -106,36 +106,36 @@ func (mr *MockDocumentAnnotatorServerMockRecorder) mustEmbedUnimplementedDocumen
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDocumentAnnotatorServer", reflect.TypeOf((*MockDocumentAnnotatorServer)(nil).mustEmbedUnimplementedDocumentAnnotatorServer))
 }
 
-// MockUnsafeDocumentAnnotatorServer is a mock of UnsafeDocumentAnnotatorServer interface
+// MockUnsafeDocumentAnnotatorServer is a mock of UnsafeDocumentAnnotatorServer interface.
 type MockUnsafeDocumentAnnotatorServer struct {
 	ctrl     *gomock.Controller
 	recorder *MockUnsafeDocumentAnnotatorServerMockRecorder
 }
 
-// MockUnsafeDocumentAnnotatorServerMockRecorder is the mock recorder for MockUnsafeDocumentAnnotatorServer
+// MockUnsafeDocumentAnnotatorServerMockRecorder is the mock recorder for MockUnsafeDocumentAnnotatorServer.
 type MockUnsafeDocumentAnnotatorServerMockRecorder struct {
 	mock *MockUnsafeDocumentAnnotatorServer
 }
 
-// NewMockUnsafeDocumentAnnotatorServer creates a new mock instance
+// NewMockUnsafeDocumentAnnotatorServer creates a new mock instance.
 func NewMockUnsafeDocumentAnnotatorServer(ctrl *gomock.Controller) *MockUnsafeDocumentAnnotatorServer {
 	mock := &MockUnsafeDocumentAnnotatorServer{ctrl: ctrl}
 	mock.recorder = &MockUnsafeDocumentAnnotatorServerMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockUnsafeDocumentAnnotatorServer) EXPECT() *MockUnsafeDocumentAnnotatorServerMockRecorder {
 	return m.recorder
 }
 
-// mustEmbedUnimplementedDocumentAnnotatorServer mocks base method
+// mustEmbedUnimplementedDocumentAnnotatorServer mocks base method.
 func (m *MockUnsafeDocumentAnnotatorServer) mustEmbedUnimplementedDocumentAnnotatorServer() {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "mustEmbedUnimplementedDocumentAnnotatorServer")
 }
 
-// mustEmbedUnimplementedDocumentAnnotatorServer indicates an expected call of mustEmbedUnimplementedDocumentAnnotatorServer
+// mustEmbedUnimplementedDocumentAnnotatorServer indicates an expected call of mustEmbedUnimplementedDocumentAnnotatorServer.
 func (mr *MockUnsafeDocumentAnnotatorServerMockRecorder) mustEmbedUnimplementedDocumentAnnotatorServer() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDocumentAnnotatorServer", reflect.TypeOf((*MockUnsafeDocumentAnnotatorServer)(nil).mustEmbedUnimplementedDocumentAnnotatorServer))

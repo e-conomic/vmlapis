@@ -40,45 +40,7 @@ func (m *Invoice) Validate() error {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetIssueDate()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return InvoiceValidationError{
-				field:  "IssueDate",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	if v, ok := interface{}(m.GetSupplier()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return InvoiceValidationError{
-				field:  "Supplier",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	// no validation rules for CustomerRef
-
 	// no validation rules for Text
-
-	if len(m.GetCurrency()) > 10 {
-		return InvoiceValidationError{
-			field:  "Currency",
-			reason: "value length must be at most 10 bytes",
-		}
-	}
-
-	if !_Invoice_Currency_Pattern.MatchString(m.GetCurrency()) {
-		return InvoiceValidationError{
-			field:  "Currency",
-			reason: "value does not match regex pattern \"^[A-Za-z0-9]*$\"",
-		}
-	}
-
-	// no validation rules for Total
 
 	return nil
 }
@@ -137,7 +99,74 @@ var _ interface {
 	ErrorName() string
 } = InvoiceValidationError{}
 
-var _Invoice_Currency_Pattern = regexp.MustCompile("^[A-Za-z0-9]*$")
+// Validate checks the field values on Transaction with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *Transaction) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Text
+
+	// no validation rules for Amount
+
+	return nil
+}
+
+// TransactionValidationError is the validation error returned by
+// Transaction.Validate if the designated constraints aren't met.
+type TransactionValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e TransactionValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e TransactionValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e TransactionValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e TransactionValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e TransactionValidationError) ErrorName() string { return "TransactionValidationError" }
+
+// Error satisfies the builtin error interface
+func (e TransactionValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sTransaction.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = TransactionValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = TransactionValidationError{}
 
 // Validate checks the field values on InvoiceLine with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
@@ -147,9 +176,33 @@ func (m *InvoiceLine) Validate() error {
 		return nil
 	}
 
+	// no validation rules for ItemId
+
 	// no validation rules for Text
 
-	// no validation rules for ItemId
+	if v, ok := interface{}(m.GetIssueDate()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return InvoiceLineValidationError{
+				field:  "IssueDate",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetSupplier()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return InvoiceLineValidationError{
+				field:  "Supplier",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	// no validation rules for CustomerRef
+
+	// no validation rules for Amount
 
 	return nil
 }
@@ -292,75 +345,6 @@ var _ interface {
 
 var _Supplier_Id_Pattern = regexp.MustCompile("^[A-Za-z0-9]*$")
 
-// Validate checks the field values on Transaction with the rules defined in
-// the proto definition for this message. If any rules are violated, an error
-// is returned.
-func (m *Transaction) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	// no validation rules for Text
-
-	// no validation rules for Amount
-
-	return nil
-}
-
-// TransactionValidationError is the validation error returned by
-// Transaction.Validate if the designated constraints aren't met.
-type TransactionValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e TransactionValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e TransactionValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e TransactionValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e TransactionValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e TransactionValidationError) ErrorName() string { return "TransactionValidationError" }
-
-// Error satisfies the builtin error interface
-func (e TransactionValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sTransaction.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = TransactionValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = TransactionValidationError{}
-
 // Validate checks the field values on Data with the rules defined in the proto
 // definition for this message. If any rules are violated, an error is returned.
 func (m *Data) Validate() error {
@@ -368,34 +352,44 @@ func (m *Data) Validate() error {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetTransaction()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DataValidationError{
-				field:  "Transaction",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
+	switch m.DataStructure.(type) {
 
-	if v, ok := interface{}(m.GetInvoice()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DataValidationError{
-				field:  "Invoice",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
+	case *Data_Transaction:
 
-	if v, ok := interface{}(m.GetInvoiceLine()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DataValidationError{
-				field:  "InvoiceLine",
-				reason: "embedded message failed validation",
-				cause:  err,
+		if v, ok := interface{}(m.GetTransaction()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DataValidationError{
+					field:  "Transaction",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
 			}
 		}
+
+	case *Data_Invoice:
+
+		if v, ok := interface{}(m.GetInvoice()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DataValidationError{
+					field:  "Invoice",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	case *Data_InvoiceLine:
+
+		if v, ok := interface{}(m.GetInvoiceLine()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DataValidationError{
+					field:  "InvoiceLine",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
 	}
 
 	return nil

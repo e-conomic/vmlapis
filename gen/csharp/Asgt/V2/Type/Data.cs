@@ -26,34 +26,36 @@ namespace Asgt.V2.Type {
           string.Concat(
             "Chdhc2d0L3YyL3R5cGUvZGF0YS5wcm90bxIMYXNndC52Mi50eXBlGh9nb29n",
             "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhd2YWxpZGF0ZS92YWxpZGF0",
-            "ZS5wcm90byLBAQoHSW52b2ljZRIuCgppc3N1ZV9kYXRlGAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIoCghzdXBwbGllchgCIAEoCzIWLmFz",
-            "Z3QudjIudHlwZS5TdXBwbGllchIUCgxjdXN0b21lcl9yZWYYAyABKAkSDAoE",
-            "dGV4dBgEIAEoCRIpCghjdXJyZW5jeRgGIAEoCUIX+kIUchIoCjIOXltBLVph",
-            "LXowLTldKiQSDQoFdG90YWwYByABKAIiLAoLSW52b2ljZUxpbmUSDAoEdGV4",
-            "dBgIIAEoCRIPCgdpdGVtX2lkGAkgASgJIlAKCFN1cHBsaWVyEiMKAmlkGAEg",
-            "ASgJQhf6QhRyEihAMg5eW0EtWmEtejAtOV0qJBIMCgRuYW1lGAQgASgJEhEK",
-            "CWdsb2JhbF9pZBgFIAEoCSIrCgtUcmFuc2FjdGlvbhIMCgR0ZXh0GAEgASgJ",
-            "Eg4KBmFtb3VudBgCIAEoAiKPAQoERGF0YRIuCgt0cmFuc2FjdGlvbhgBIAEo",
-            "CzIZLmFzZ3QudjIudHlwZS5UcmFuc2FjdGlvbhImCgdpbnZvaWNlGAIgASgL",
-            "MhUuYXNndC52Mi50eXBlLkludm9pY2USLwoMaW52b2ljZV9saW5lGAMgASgL",
-            "MhkuYXNndC52Mi50eXBlLkludm9pY2VMaW5lQjtaOWdpdGh1Yi5jb20vZS1j",
-            "b25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjIvdHlwZTthc2d0dHlwZWIG",
-            "cHJvdG8z"));
+            "ZS5wcm90byIXCgdJbnZvaWNlEgwKBHRleHQYASABKAkiKwoLVHJhbnNhY3Rp",
+            "b24SDAoEdGV4dBgBIAEoCRIOCgZhbW91bnQYAiABKAIirAEKC0ludm9pY2VM",
+            "aW5lEg8KB2l0ZW1faWQYASABKAkSDAoEdGV4dBgCIAEoCRIuCgppc3N1ZV9k",
+            "YXRlGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIoCghzdXBw",
+            "bGllchgEIAEoCzIWLmFzZ3QudjIudHlwZS5TdXBwbGllchIUCgxjdXN0b21l",
+            "cl9yZWYYBSABKAkSDgoGYW1vdW50GAcgASgCIlAKCFN1cHBsaWVyEiMKAmlk",
+            "GAEgASgJQhf6QhRyEihAMg5eW0EtWmEtejAtOV0qJBIMCgRuYW1lGAIgASgJ",
+            "EhEKCWdsb2JhbF9pZBgDIAEoCSKnAQoERGF0YRIwCgt0cmFuc2FjdGlvbhgB",
+            "IAEoCzIZLmFzZ3QudjIudHlwZS5UcmFuc2FjdGlvbkgAEigKB2ludm9pY2UY",
+            "AiABKAsyFS5hc2d0LnYyLnR5cGUuSW52b2ljZUgAEjEKDGludm9pY2VfbGlu",
+            "ZRgDIAEoCzIZLmFzZ3QudjIudHlwZS5JbnZvaWNlTGluZUgAQhAKDmRhdGFf",
+            "c3RydWN0dXJlQjtaOWdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
+            "L2dvL2FzZ3QvdjIvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Invoice), global::Asgt.V2.Type.Invoice.Parser, new[]{ "IssueDate", "Supplier", "CustomerRef", "Text", "Currency", "Total" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.InvoiceLine), global::Asgt.V2.Type.InvoiceLine.Parser, new[]{ "Text", "ItemId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Supplier), global::Asgt.V2.Type.Supplier.Parser, new[]{ "Id", "Name", "GlobalId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Invoice), global::Asgt.V2.Type.Invoice.Parser, new[]{ "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Transaction), global::Asgt.V2.Type.Transaction.Parser, new[]{ "Text", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Data), global::Asgt.V2.Type.Data.Parser, new[]{ "Transaction", "Invoice", "InvoiceLine" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.InvoiceLine), global::Asgt.V2.Type.InvoiceLine.Parser, new[]{ "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Amount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Supplier), global::Asgt.V2.Type.Supplier.Parser, new[]{ "Id", "Name", "GlobalId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Data), global::Asgt.V2.Type.Data.Parser, new[]{ "Transaction", "Invoice", "InvoiceLine" }, new[]{ "DataStructure" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  /// Used in scanned-invoice requests.
+  /// </summary>
   public sealed partial class Invoice : pb::IMessage<Invoice>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -83,12 +85,7 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Invoice(Invoice other) : this() {
-      issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
-      supplier_ = other.supplier_ != null ? other.supplier_.Clone() : null;
-      customerRef_ = other.customerRef_;
       text_ = other.text_;
-      currency_ = other.currency_;
-      total_ = other.total_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,84 +94,17 @@ namespace Asgt.V2.Type {
       return new Invoice(this);
     }
 
-    /// <summary>Field number for the "issue_date" field.</summary>
-    public const int IssueDateFieldNumber = 1;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp issueDate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp IssueDate {
-      get { return issueDate_; }
-      set {
-        issueDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "supplier" field.</summary>
-    public const int SupplierFieldNumber = 2;
-    private global::Asgt.V2.Type.Supplier supplier_;
-    /// <summary>
-    /// supplier of the invoice. Used in electronic-invoice-line requests.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.V2.Type.Supplier Supplier {
-      get { return supplier_; }
-      set {
-        supplier_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "customer_ref" field.</summary>
-    public const int CustomerRefFieldNumber = 3;
-    private string customerRef_ = "";
-    /// <summary>
-    /// reference to the customer. Used in electronic-invoice-line requests.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CustomerRef {
-      get { return customerRef_; }
-      set {
-        customerRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "text" field.</summary>
-    public const int TextFieldNumber = 4;
+    public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// invoice text from the SmartScan product. Used in scanned-invoice requests.
+    /// Invoice text from the SmartScan product.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
       get { return text_; }
       set {
         text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "currency" field.</summary>
-    public const int CurrencyFieldNumber = 6;
-    private string currency_ = "";
-    /// <summary>
-    /// name of the currency as a string. Used in electronic-invoice-line requests.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Currency {
-      get { return currency_; }
-      set {
-        currency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "total" field.</summary>
-    public const int TotalFieldNumber = 7;
-    private float total_;
-    /// <summary>
-    /// total of the invoice. Used in electronic-invoice-line requests.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Total {
-      get { return total_; }
-      set {
-        total_ = value;
       }
     }
 
@@ -191,24 +121,14 @@ namespace Asgt.V2.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(IssueDate, other.IssueDate)) return false;
-      if (!object.Equals(Supplier, other.Supplier)) return false;
-      if (CustomerRef != other.CustomerRef) return false;
       if (Text != other.Text) return false;
-      if (Currency != other.Currency) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Total, other.Total)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
-      if (supplier_ != null) hash ^= Supplier.GetHashCode();
-      if (CustomerRef.Length != 0) hash ^= CustomerRef.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (Currency.Length != 0) hash ^= Currency.GetHashCode();
-      if (Total != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Total);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -222,29 +142,9 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (issueDate_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(IssueDate);
-      }
-      if (supplier_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Supplier);
-      }
-      if (CustomerRef.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(CustomerRef);
-      }
       if (Text.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(10);
         output.WriteString(Text);
-      }
-      if (Currency.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(Currency);
-      }
-      if (Total != 0F) {
-        output.WriteRawTag(61);
-        output.WriteFloat(Total);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -254,23 +154,8 @@ namespace Asgt.V2.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (issueDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IssueDate);
-      }
-      if (supplier_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Supplier);
-      }
-      if (CustomerRef.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerRef);
-      }
       if (Text.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
-      }
-      if (Currency.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
-      }
-      if (Total != 0F) {
-        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -283,30 +168,9 @@ namespace Asgt.V2.Type {
       if (other == null) {
         return;
       }
-      if (other.issueDate_ != null) {
-        if (issueDate_ == null) {
-          IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        IssueDate.MergeFrom(other.IssueDate);
-      }
-      if (other.supplier_ != null) {
-        if (supplier_ == null) {
-          Supplier = new global::Asgt.V2.Type.Supplier();
-        }
-        Supplier.MergeFrom(other.Supplier);
-      }
-      if (other.CustomerRef.Length != 0) {
-        CustomerRef = other.CustomerRef;
-      }
       if (other.Text.Length != 0) {
         Text = other.Text;
       }
-      if (other.Currency.Length != 0) {
-        Currency = other.Currency;
-      }
-      if (other.Total != 0F) {
-        Total = other.Total;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -322,33 +186,7 @@ namespace Asgt.V2.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (issueDate_ == null) {
-              IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(IssueDate);
-            break;
-          }
-          case 18: {
-            if (supplier_ == null) {
-              Supplier = new global::Asgt.V2.Type.Supplier();
-            }
-            input.ReadMessage(Supplier);
-            break;
-          }
-          case 26: {
-            CustomerRef = input.ReadString();
-            break;
-          }
-          case 34: {
             Text = input.ReadString();
-            break;
-          }
-          case 50: {
-            Currency = input.ReadString();
-            break;
-          }
-          case 61: {
-            Total = input.ReadFloat();
             break;
           }
         }
@@ -366,33 +204,7 @@ namespace Asgt.V2.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (issueDate_ == null) {
-              IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(IssueDate);
-            break;
-          }
-          case 18: {
-            if (supplier_ == null) {
-              Supplier = new global::Asgt.V2.Type.Supplier();
-            }
-            input.ReadMessage(Supplier);
-            break;
-          }
-          case 26: {
-            CustomerRef = input.ReadString();
-            break;
-          }
-          case 34: {
             Text = input.ReadString();
-            break;
-          }
-          case 50: {
-            Currency = input.ReadString();
-            break;
-          }
-          case 61: {
-            Total = input.ReadFloat();
             break;
           }
         }
@@ -402,427 +214,9 @@ namespace Asgt.V2.Type {
 
   }
 
-  public sealed partial class InvoiceLine : pb::IMessage<InvoiceLine>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InvoiceLine> _parser = new pb::MessageParser<InvoiceLine>(() => new InvoiceLine());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<InvoiceLine> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.Type.DataReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public InvoiceLine() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public InvoiceLine(InvoiceLine other) : this() {
-      text_ = other.text_;
-      itemId_ = other.itemId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public InvoiceLine Clone() {
-      return new InvoiceLine(this);
-    }
-
-    /// <summary>Field number for the "text" field.</summary>
-    public const int TextFieldNumber = 8;
-    private string text_ = "";
-    /// <summary>
-    /// text of the invoice line. Used in electronic-invoice-line requests.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Text {
-      get { return text_; }
-      set {
-        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 9;
-    private string itemId_ = "";
-    /// <summary>
-    /// id of the product (item). Used in electronic-invoice-line requests.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ItemId {
-      get { return itemId_; }
-      set {
-        itemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as InvoiceLine);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(InvoiceLine other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Text != other.Text) return false;
-      if (ItemId != other.ItemId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Text.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(Text);
-      }
-      if (ItemId.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(ItemId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Text.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
-      }
-      if (ItemId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(InvoiceLine other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Text.Length != 0) {
-        Text = other.Text;
-      }
-      if (other.ItemId.Length != 0) {
-        ItemId = other.ItemId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 66: {
-            Text = input.ReadString();
-            break;
-          }
-          case 74: {
-            ItemId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 66: {
-            Text = input.ReadString();
-            break;
-          }
-          case 74: {
-            ItemId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class Supplier : pb::IMessage<Supplier>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Supplier> _parser = new pb::MessageParser<Supplier>(() => new Supplier());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Supplier> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.Type.DataReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Supplier() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Supplier(Supplier other) : this() {
-      id_ = other.id_;
-      name_ = other.name_;
-      globalId_ = other.globalId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Supplier Clone() {
-      return new Supplier(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    /// <summary>
-    ///  id of the supplier; not nullable
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 4;
-    private string name_ = "";
-    /// <summary>
-    /// name of the supplier
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "global_id" field.</summary>
-    public const int GlobalIdFieldNumber = 5;
-    private string globalId_ = "";
-    /// <summary>
-    /// global id of the supplier
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string GlobalId {
-      get { return globalId_; }
-      set {
-        globalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Supplier);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Supplier other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Name != other.Name) return false;
-      if (GlobalId != other.GlobalId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (GlobalId.Length != 0) hash ^= GlobalId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Name);
-      }
-      if (GlobalId.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(GlobalId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (GlobalId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(GlobalId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Supplier other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.GlobalId.Length != 0) {
-        GlobalId = other.GlobalId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 34: {
-            Name = input.ReadString();
-            break;
-          }
-          case 42: {
-            GlobalId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 34: {
-            Name = input.ReadString();
-            break;
-          }
-          case 42: {
-            GlobalId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
+  /// <summary>
+  /// Used in bank requests.
+  /// </summary>
   public sealed partial class Transaction : pb::IMessage<Transaction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -835,7 +229,7 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.Type.DataReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Asgt.V2.Type.DataReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -866,7 +260,7 @@ namespace Asgt.V2.Type {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// text of the bank transaction. Used in bank requests.
+    /// Text of the bank transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -880,7 +274,7 @@ namespace Asgt.V2.Type {
     public const int AmountFieldNumber = 2;
     private float amount_;
     /// <summary>
-    /// amount of the transaction. Used in bank requests.
+    /// Amount of the transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Amount {
@@ -1016,6 +410,585 @@ namespace Asgt.V2.Type {
 
   }
 
+  /// <summary>
+  /// Used in electronic-invoice-line requests.
+  /// </summary>
+  public sealed partial class InvoiceLine : pb::IMessage<InvoiceLine>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InvoiceLine> _parser = new pb::MessageParser<InvoiceLine>(() => new InvoiceLine());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InvoiceLine> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.V2.Type.DataReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvoiceLine() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvoiceLine(InvoiceLine other) : this() {
+      itemId_ = other.itemId_;
+      text_ = other.text_;
+      issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
+      supplier_ = other.supplier_ != null ? other.supplier_.Clone() : null;
+      customerRef_ = other.customerRef_;
+      amount_ = other.amount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvoiceLine Clone() {
+      return new InvoiceLine(this);
+    }
+
+    /// <summary>Field number for the "item_id" field.</summary>
+    public const int ItemIdFieldNumber = 1;
+    private string itemId_ = "";
+    /// <summary>
+    /// Id of the product (item).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ItemId {
+      get { return itemId_; }
+      set {
+        itemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 2;
+    private string text_ = "";
+    /// <summary>
+    /// Text of the invoice line.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Text {
+      get { return text_; }
+      set {
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "issue_date" field.</summary>
+    public const int IssueDateFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp issueDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp IssueDate {
+      get { return issueDate_; }
+      set {
+        issueDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "supplier" field.</summary>
+    public const int SupplierFieldNumber = 4;
+    private global::Asgt.V2.Type.Supplier supplier_;
+    /// <summary>
+    /// Supplier of the invoice.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.V2.Type.Supplier Supplier {
+      get { return supplier_; }
+      set {
+        supplier_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "customer_ref" field.</summary>
+    public const int CustomerRefFieldNumber = 5;
+    private string customerRef_ = "";
+    /// <summary>
+    /// reference to the customer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CustomerRef {
+      get { return customerRef_; }
+      set {
+        customerRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 7;
+    private float amount_;
+    /// <summary>
+    /// Amount of the invoice line.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Amount {
+      get { return amount_; }
+      set {
+        amount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InvoiceLine);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InvoiceLine other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ItemId != other.ItemId) return false;
+      if (Text != other.Text) return false;
+      if (!object.Equals(IssueDate, other.IssueDate)) return false;
+      if (!object.Equals(Supplier, other.Supplier)) return false;
+      if (CustomerRef != other.CustomerRef) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Amount, other.Amount)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
+      if (supplier_ != null) hash ^= Supplier.GetHashCode();
+      if (CustomerRef.Length != 0) hash ^= CustomerRef.GetHashCode();
+      if (Amount != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Amount);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ItemId);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (issueDate_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(IssueDate);
+      }
+      if (supplier_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Supplier);
+      }
+      if (CustomerRef.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(CustomerRef);
+      }
+      if (Amount != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(Amount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ItemId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
+      }
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (issueDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IssueDate);
+      }
+      if (supplier_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Supplier);
+      }
+      if (CustomerRef.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerRef);
+      }
+      if (Amount != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InvoiceLine other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ItemId.Length != 0) {
+        ItemId = other.ItemId;
+      }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
+      }
+      if (other.issueDate_ != null) {
+        if (issueDate_ == null) {
+          IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        IssueDate.MergeFrom(other.IssueDate);
+      }
+      if (other.supplier_ != null) {
+        if (supplier_ == null) {
+          Supplier = new global::Asgt.V2.Type.Supplier();
+        }
+        Supplier.MergeFrom(other.Supplier);
+      }
+      if (other.CustomerRef.Length != 0) {
+        CustomerRef = other.CustomerRef;
+      }
+      if (other.Amount != 0F) {
+        Amount = other.Amount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ItemId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (issueDate_ == null) {
+              IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(IssueDate);
+            break;
+          }
+          case 34: {
+            if (supplier_ == null) {
+              Supplier = new global::Asgt.V2.Type.Supplier();
+            }
+            input.ReadMessage(Supplier);
+            break;
+          }
+          case 42: {
+            CustomerRef = input.ReadString();
+            break;
+          }
+          case 61: {
+            Amount = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ItemId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (issueDate_ == null) {
+              IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(IssueDate);
+            break;
+          }
+          case 34: {
+            if (supplier_ == null) {
+              Supplier = new global::Asgt.V2.Type.Supplier();
+            }
+            input.ReadMessage(Supplier);
+            break;
+          }
+          case 42: {
+            CustomerRef = input.ReadString();
+            break;
+          }
+          case 61: {
+            Amount = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class Supplier : pb::IMessage<Supplier>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Supplier> _parser = new pb::MessageParser<Supplier>(() => new Supplier());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Supplier> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.V2.Type.DataReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Supplier() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Supplier(Supplier other) : this() {
+      id_ = other.id_;
+      name_ = other.name_;
+      globalId_ = other.globalId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Supplier Clone() {
+      return new Supplier(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// Id of the supplier; not nullable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    /// <summary>
+    /// Name of the supplier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "global_id" field.</summary>
+    public const int GlobalIdFieldNumber = 3;
+    private string globalId_ = "";
+    /// <summary>
+    /// Global ID of the supplier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string GlobalId {
+      get { return globalId_; }
+      set {
+        globalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Supplier);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Supplier other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Name != other.Name) return false;
+      if (GlobalId != other.GlobalId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (GlobalId.Length != 0) hash ^= GlobalId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (GlobalId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(GlobalId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (GlobalId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GlobalId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Supplier other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.GlobalId.Length != 0) {
+        GlobalId = other.GlobalId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            GlobalId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            GlobalId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class Data : pb::IMessage<Data>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1045,9 +1018,18 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Data(Data other) : this() {
-      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
-      invoice_ = other.invoice_ != null ? other.invoice_.Clone() : null;
-      invoiceLine_ = other.invoiceLine_ != null ? other.invoiceLine_.Clone() : null;
+      switch (other.DataStructureCase) {
+        case DataStructureOneofCase.Transaction:
+          Transaction = other.Transaction.Clone();
+          break;
+        case DataStructureOneofCase.Invoice:
+          Invoice = other.Invoice.Clone();
+          break;
+        case DataStructureOneofCase.InvoiceLine:
+          InvoiceLine = other.InvoiceLine.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1058,44 +1040,64 @@ namespace Asgt.V2.Type {
 
     /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 1;
-    private global::Asgt.V2.Type.Transaction transaction_;
     /// <summary>
     /// Transaction-level information; at this time used only with bank transactions
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.V2.Type.Transaction Transaction {
-      get { return transaction_; }
+      get { return dataStructureCase_ == DataStructureOneofCase.Transaction ? (global::Asgt.V2.Type.Transaction) dataStructure_ : null; }
       set {
-        transaction_ = value;
+        dataStructure_ = value;
+        dataStructureCase_ = value == null ? DataStructureOneofCase.None : DataStructureOneofCase.Transaction;
       }
     }
 
     /// <summary>Field number for the "invoice" field.</summary>
     public const int InvoiceFieldNumber = 2;
-    private global::Asgt.V2.Type.Invoice invoice_;
     /// <summary>
     /// Invoice-level information for e-invoices and scanned invoices and receipts
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.V2.Type.Invoice Invoice {
-      get { return invoice_; }
+      get { return dataStructureCase_ == DataStructureOneofCase.Invoice ? (global::Asgt.V2.Type.Invoice) dataStructure_ : null; }
       set {
-        invoice_ = value;
+        dataStructure_ = value;
+        dataStructureCase_ = value == null ? DataStructureOneofCase.None : DataStructureOneofCase.Invoice;
       }
     }
 
     /// <summary>Field number for the "invoice_line" field.</summary>
     public const int InvoiceLineFieldNumber = 3;
-    private global::Asgt.V2.Type.InvoiceLine invoiceLine_;
     /// <summary>
     /// Line-level information for e-invoices; use one sample per invoice line
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.V2.Type.InvoiceLine InvoiceLine {
-      get { return invoiceLine_; }
+      get { return dataStructureCase_ == DataStructureOneofCase.InvoiceLine ? (global::Asgt.V2.Type.InvoiceLine) dataStructure_ : null; }
       set {
-        invoiceLine_ = value;
+        dataStructure_ = value;
+        dataStructureCase_ = value == null ? DataStructureOneofCase.None : DataStructureOneofCase.InvoiceLine;
       }
+    }
+
+    private object dataStructure_;
+    /// <summary>Enum of possible cases for the "data_structure" oneof.</summary>
+    public enum DataStructureOneofCase {
+      None = 0,
+      Transaction = 1,
+      Invoice = 2,
+      InvoiceLine = 3,
+    }
+    private DataStructureOneofCase dataStructureCase_ = DataStructureOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataStructureOneofCase DataStructureCase {
+      get { return dataStructureCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDataStructure() {
+      dataStructureCase_ = DataStructureOneofCase.None;
+      dataStructure_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1114,15 +1116,17 @@ namespace Asgt.V2.Type {
       if (!object.Equals(Transaction, other.Transaction)) return false;
       if (!object.Equals(Invoice, other.Invoice)) return false;
       if (!object.Equals(InvoiceLine, other.InvoiceLine)) return false;
+      if (DataStructureCase != other.DataStructureCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (transaction_ != null) hash ^= Transaction.GetHashCode();
-      if (invoice_ != null) hash ^= Invoice.GetHashCode();
-      if (invoiceLine_ != null) hash ^= InvoiceLine.GetHashCode();
+      if (dataStructureCase_ == DataStructureOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (dataStructureCase_ == DataStructureOneofCase.Invoice) hash ^= Invoice.GetHashCode();
+      if (dataStructureCase_ == DataStructureOneofCase.InvoiceLine) hash ^= InvoiceLine.GetHashCode();
+      hash ^= (int) dataStructureCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1136,15 +1140,15 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (transaction_ != null) {
+      if (dataStructureCase_ == DataStructureOneofCase.Transaction) {
         output.WriteRawTag(10);
         output.WriteMessage(Transaction);
       }
-      if (invoice_ != null) {
+      if (dataStructureCase_ == DataStructureOneofCase.Invoice) {
         output.WriteRawTag(18);
         output.WriteMessage(Invoice);
       }
-      if (invoiceLine_ != null) {
+      if (dataStructureCase_ == DataStructureOneofCase.InvoiceLine) {
         output.WriteRawTag(26);
         output.WriteMessage(InvoiceLine);
       }
@@ -1156,13 +1160,13 @@ namespace Asgt.V2.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (transaction_ != null) {
+      if (dataStructureCase_ == DataStructureOneofCase.Transaction) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Transaction);
       }
-      if (invoice_ != null) {
+      if (dataStructureCase_ == DataStructureOneofCase.Invoice) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Invoice);
       }
-      if (invoiceLine_ != null) {
+      if (dataStructureCase_ == DataStructureOneofCase.InvoiceLine) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InvoiceLine);
       }
       if (_unknownFields != null) {
@@ -1176,24 +1180,27 @@ namespace Asgt.V2.Type {
       if (other == null) {
         return;
       }
-      if (other.transaction_ != null) {
-        if (transaction_ == null) {
-          Transaction = new global::Asgt.V2.Type.Transaction();
-        }
-        Transaction.MergeFrom(other.Transaction);
+      switch (other.DataStructureCase) {
+        case DataStructureOneofCase.Transaction:
+          if (Transaction == null) {
+            Transaction = new global::Asgt.V2.Type.Transaction();
+          }
+          Transaction.MergeFrom(other.Transaction);
+          break;
+        case DataStructureOneofCase.Invoice:
+          if (Invoice == null) {
+            Invoice = new global::Asgt.V2.Type.Invoice();
+          }
+          Invoice.MergeFrom(other.Invoice);
+          break;
+        case DataStructureOneofCase.InvoiceLine:
+          if (InvoiceLine == null) {
+            InvoiceLine = new global::Asgt.V2.Type.InvoiceLine();
+          }
+          InvoiceLine.MergeFrom(other.InvoiceLine);
+          break;
       }
-      if (other.invoice_ != null) {
-        if (invoice_ == null) {
-          Invoice = new global::Asgt.V2.Type.Invoice();
-        }
-        Invoice.MergeFrom(other.Invoice);
-      }
-      if (other.invoiceLine_ != null) {
-        if (invoiceLine_ == null) {
-          InvoiceLine = new global::Asgt.V2.Type.InvoiceLine();
-        }
-        InvoiceLine.MergeFrom(other.InvoiceLine);
-      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1209,24 +1216,30 @@ namespace Asgt.V2.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (transaction_ == null) {
-              Transaction = new global::Asgt.V2.Type.Transaction();
+            global::Asgt.V2.Type.Transaction subBuilder = new global::Asgt.V2.Type.Transaction();
+            if (dataStructureCase_ == DataStructureOneofCase.Transaction) {
+              subBuilder.MergeFrom(Transaction);
             }
-            input.ReadMessage(Transaction);
+            input.ReadMessage(subBuilder);
+            Transaction = subBuilder;
             break;
           }
           case 18: {
-            if (invoice_ == null) {
-              Invoice = new global::Asgt.V2.Type.Invoice();
+            global::Asgt.V2.Type.Invoice subBuilder = new global::Asgt.V2.Type.Invoice();
+            if (dataStructureCase_ == DataStructureOneofCase.Invoice) {
+              subBuilder.MergeFrom(Invoice);
             }
-            input.ReadMessage(Invoice);
+            input.ReadMessage(subBuilder);
+            Invoice = subBuilder;
             break;
           }
           case 26: {
-            if (invoiceLine_ == null) {
-              InvoiceLine = new global::Asgt.V2.Type.InvoiceLine();
+            global::Asgt.V2.Type.InvoiceLine subBuilder = new global::Asgt.V2.Type.InvoiceLine();
+            if (dataStructureCase_ == DataStructureOneofCase.InvoiceLine) {
+              subBuilder.MergeFrom(InvoiceLine);
             }
-            input.ReadMessage(InvoiceLine);
+            input.ReadMessage(subBuilder);
+            InvoiceLine = subBuilder;
             break;
           }
         }
@@ -1244,24 +1257,30 @@ namespace Asgt.V2.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (transaction_ == null) {
-              Transaction = new global::Asgt.V2.Type.Transaction();
+            global::Asgt.V2.Type.Transaction subBuilder = new global::Asgt.V2.Type.Transaction();
+            if (dataStructureCase_ == DataStructureOneofCase.Transaction) {
+              subBuilder.MergeFrom(Transaction);
             }
-            input.ReadMessage(Transaction);
+            input.ReadMessage(subBuilder);
+            Transaction = subBuilder;
             break;
           }
           case 18: {
-            if (invoice_ == null) {
-              Invoice = new global::Asgt.V2.Type.Invoice();
+            global::Asgt.V2.Type.Invoice subBuilder = new global::Asgt.V2.Type.Invoice();
+            if (dataStructureCase_ == DataStructureOneofCase.Invoice) {
+              subBuilder.MergeFrom(Invoice);
             }
-            input.ReadMessage(Invoice);
+            input.ReadMessage(subBuilder);
+            Invoice = subBuilder;
             break;
           }
           case 26: {
-            if (invoiceLine_ == null) {
-              InvoiceLine = new global::Asgt.V2.Type.InvoiceLine();
+            global::Asgt.V2.Type.InvoiceLine subBuilder = new global::Asgt.V2.Type.InvoiceLine();
+            if (dataStructureCase_ == DataStructureOneofCase.InvoiceLine) {
+              subBuilder.MergeFrom(InvoiceLine);
             }
-            input.ReadMessage(InvoiceLine);
+            input.ReadMessage(subBuilder);
+            InvoiceLine = subBuilder;
             break;
           }
         }

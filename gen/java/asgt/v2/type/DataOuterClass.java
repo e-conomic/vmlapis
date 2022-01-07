@@ -19,118 +19,30 @@ public final class DataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-     * @return Whether the issueDate field is set.
-     */
-    boolean hasIssueDate();
-    /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-     * @return The issueDate.
-     */
-    com.google.protobuf.Timestamp getIssueDate();
-    /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder();
-
-    /**
      * <pre>
-     * supplier of the invoice. Used in electronic-invoice-line requests.
+     * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-     * @return Whether the supplier field is set.
-     */
-    boolean hasSupplier();
-    /**
-     * <pre>
-     * supplier of the invoice. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-     * @return The supplier.
-     */
-    asgt.v2.type.DataOuterClass.Supplier getSupplier();
-    /**
-     * <pre>
-     * supplier of the invoice. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-     */
-    asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder();
-
-    /**
-     * <pre>
-     * reference to the customer. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string customer_ref = 3;</code>
-     * @return The customerRef.
-     */
-    java.lang.String getCustomerRef();
-    /**
-     * <pre>
-     * reference to the customer. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string customer_ref = 3;</code>
-     * @return The bytes for customerRef.
-     */
-    com.google.protobuf.ByteString
-        getCustomerRefBytes();
-
-    /**
-     * <pre>
-     * invoice text from the SmartScan product. Used in scanned-invoice requests.
-     * </pre>
-     *
-     * <code>string text = 4;</code>
+     * <code>string text = 1;</code>
      * @return The text.
      */
     java.lang.String getText();
     /**
      * <pre>
-     * invoice text from the SmartScan product. Used in scanned-invoice requests.
+     * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>string text = 1;</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
-
-    /**
-     * <pre>
-     * name of the currency as a string. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-     * @return The currency.
-     */
-    java.lang.String getCurrency();
-    /**
-     * <pre>
-     * name of the currency as a string. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-     * @return The bytes for currency.
-     */
-    com.google.protobuf.ByteString
-        getCurrencyBytes();
-
-    /**
-     * <pre>
-     * total of the invoice. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>float total = 7;</code>
-     * @return The total.
-     */
-    float getTotal();
   }
   /**
+   * <pre>
+   * Used in scanned-invoice requests.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.type.Invoice}
    */
   public static final class Invoice extends
@@ -143,9 +55,7 @@ public final class DataOuterClass {
       super(builder);
     }
     private Invoice() {
-      customerRef_ = "";
       text_ = "";
-      currency_ = "";
     }
 
     @java.lang.Override
@@ -179,52 +89,9 @@ public final class DataOuterClass {
               done = true;
               break;
             case 10: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (issueDate_ != null) {
-                subBuilder = issueDate_.toBuilder();
-              }
-              issueDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(issueDate_);
-                issueDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              asgt.v2.type.DataOuterClass.Supplier.Builder subBuilder = null;
-              if (supplier_ != null) {
-                subBuilder = supplier_.toBuilder();
-              }
-              supplier_ = input.readMessage(asgt.v2.type.DataOuterClass.Supplier.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(supplier_);
-                supplier_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              customerRef_ = s;
-              break;
-            }
-            case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
               text_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              currency_ = s;
-              break;
-            }
-            case 61: {
-
-              total_ = input.readFloat();
               break;
             }
             default: {
@@ -259,124 +126,14 @@ public final class DataOuterClass {
               asgt.v2.type.DataOuterClass.Invoice.class, asgt.v2.type.DataOuterClass.Invoice.Builder.class);
     }
 
-    public static final int ISSUE_DATE_FIELD_NUMBER = 1;
-    private com.google.protobuf.Timestamp issueDate_;
-    /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-     * @return Whether the issueDate field is set.
-     */
-    @java.lang.Override
-    public boolean hasIssueDate() {
-      return issueDate_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-     * @return The issueDate.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getIssueDate() {
-      return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
-      return getIssueDate();
-    }
-
-    public static final int SUPPLIER_FIELD_NUMBER = 2;
-    private asgt.v2.type.DataOuterClass.Supplier supplier_;
-    /**
-     * <pre>
-     * supplier of the invoice. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-     * @return Whether the supplier field is set.
-     */
-    @java.lang.Override
-    public boolean hasSupplier() {
-      return supplier_ != null;
-    }
-    /**
-     * <pre>
-     * supplier of the invoice. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-     * @return The supplier.
-     */
-    @java.lang.Override
-    public asgt.v2.type.DataOuterClass.Supplier getSupplier() {
-      return supplier_ == null ? asgt.v2.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
-    }
-    /**
-     * <pre>
-     * supplier of the invoice. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-     */
-    @java.lang.Override
-    public asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
-      return getSupplier();
-    }
-
-    public static final int CUSTOMER_REF_FIELD_NUMBER = 3;
-    private volatile java.lang.Object customerRef_;
-    /**
-     * <pre>
-     * reference to the customer. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string customer_ref = 3;</code>
-     * @return The customerRef.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerRef() {
-      java.lang.Object ref = customerRef_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        customerRef_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * reference to the customer. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string customer_ref = 3;</code>
-     * @return The bytes for customerRef.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerRefBytes() {
-      java.lang.Object ref = customerRef_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        customerRef_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TEXT_FIELD_NUMBER = 4;
+    public static final int TEXT_FIELD_NUMBER = 1;
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * invoice text from the SmartScan product. Used in scanned-invoice requests.
+     * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>string text = 1;</code>
      * @return The text.
      */
     @java.lang.Override
@@ -394,10 +151,10 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * invoice text from the SmartScan product. Used in scanned-invoice requests.
+     * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>string text = 1;</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -415,67 +172,6 @@ public final class DataOuterClass {
       }
     }
 
-    public static final int CURRENCY_FIELD_NUMBER = 6;
-    private volatile java.lang.Object currency_;
-    /**
-     * <pre>
-     * name of the currency as a string. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-     * @return The currency.
-     */
-    @java.lang.Override
-    public java.lang.String getCurrency() {
-      java.lang.Object ref = currency_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        currency_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * name of the currency as a string. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-     * @return The bytes for currency.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCurrencyBytes() {
-      java.lang.Object ref = currency_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        currency_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TOTAL_FIELD_NUMBER = 7;
-    private float total_;
-    /**
-     * <pre>
-     * total of the invoice. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>float total = 7;</code>
-     * @return The total.
-     */
-    @java.lang.Override
-    public float getTotal() {
-      return total_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -490,23 +186,8 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (issueDate_ != null) {
-        output.writeMessage(1, getIssueDate());
-      }
-      if (supplier_ != null) {
-        output.writeMessage(2, getSupplier());
-      }
-      if (!getCustomerRefBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customerRef_);
-      }
       if (!getTextBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
-      }
-      if (!getCurrencyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, currency_);
-      }
-      if (total_ != 0F) {
-        output.writeFloat(7, total_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
       unknownFields.writeTo(output);
     }
@@ -517,26 +198,8 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (issueDate_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getIssueDate());
-      }
-      if (supplier_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSupplier());
-      }
-      if (!getCustomerRefBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customerRef_);
-      }
       if (!getTextBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
-      }
-      if (!getCurrencyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, currency_);
-      }
-      if (total_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(7, total_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -553,25 +216,8 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.Invoice other = (asgt.v2.type.DataOuterClass.Invoice) obj;
 
-      if (hasIssueDate() != other.hasIssueDate()) return false;
-      if (hasIssueDate()) {
-        if (!getIssueDate()
-            .equals(other.getIssueDate())) return false;
-      }
-      if (hasSupplier() != other.hasSupplier()) return false;
-      if (hasSupplier()) {
-        if (!getSupplier()
-            .equals(other.getSupplier())) return false;
-      }
-      if (!getCustomerRef()
-          .equals(other.getCustomerRef())) return false;
       if (!getText()
           .equals(other.getText())) return false;
-      if (!getCurrency()
-          .equals(other.getCurrency())) return false;
-      if (java.lang.Float.floatToIntBits(getTotal())
-          != java.lang.Float.floatToIntBits(
-              other.getTotal())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -583,23 +229,8 @@ public final class DataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasIssueDate()) {
-        hash = (37 * hash) + ISSUE_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getIssueDate().hashCode();
-      }
-      if (hasSupplier()) {
-        hash = (37 * hash) + SUPPLIER_FIELD_NUMBER;
-        hash = (53 * hash) + getSupplier().hashCode();
-      }
-      hash = (37 * hash) + CUSTOMER_REF_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomerRef().hashCode();
       hash = (37 * hash) + TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getText().hashCode();
-      hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
-      hash = (53 * hash) + getCurrency().hashCode();
-      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getTotal());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -696,6 +327,10 @@ public final class DataOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Used in scanned-invoice requests.
+     * </pre>
+     *
      * Protobuf type {@code asgt.v2.type.Invoice}
      */
     public static final class Builder extends
@@ -733,25 +368,7 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (issueDateBuilder_ == null) {
-          issueDate_ = null;
-        } else {
-          issueDate_ = null;
-          issueDateBuilder_ = null;
-        }
-        if (supplierBuilder_ == null) {
-          supplier_ = null;
-        } else {
-          supplier_ = null;
-          supplierBuilder_ = null;
-        }
-        customerRef_ = "";
-
         text_ = "";
-
-        currency_ = "";
-
-        total_ = 0F;
 
         return this;
       }
@@ -779,20 +396,7 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.v2.type.DataOuterClass.Invoice buildPartial() {
         asgt.v2.type.DataOuterClass.Invoice result = new asgt.v2.type.DataOuterClass.Invoice(this);
-        if (issueDateBuilder_ == null) {
-          result.issueDate_ = issueDate_;
-        } else {
-          result.issueDate_ = issueDateBuilder_.build();
-        }
-        if (supplierBuilder_ == null) {
-          result.supplier_ = supplier_;
-        } else {
-          result.supplier_ = supplierBuilder_.build();
-        }
-        result.customerRef_ = customerRef_;
         result.text_ = text_;
-        result.currency_ = currency_;
-        result.total_ = total_;
         onBuilt();
         return result;
       }
@@ -841,26 +445,9 @@ public final class DataOuterClass {
 
       public Builder mergeFrom(asgt.v2.type.DataOuterClass.Invoice other) {
         if (other == asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance()) return this;
-        if (other.hasIssueDate()) {
-          mergeIssueDate(other.getIssueDate());
-        }
-        if (other.hasSupplier()) {
-          mergeSupplier(other.getSupplier());
-        }
-        if (!other.getCustomerRef().isEmpty()) {
-          customerRef_ = other.customerRef_;
-          onChanged();
-        }
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
           onChanged();
-        }
-        if (!other.getCurrency().isEmpty()) {
-          currency_ = other.currency_;
-          onChanged();
-        }
-        if (other.getTotal() != 0F) {
-          setTotal(other.getTotal());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -891,383 +478,13 @@ public final class DataOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp issueDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       * @return Whether the issueDate field is set.
-       */
-      public boolean hasIssueDate() {
-        return issueDateBuilder_ != null || issueDate_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       * @return The issueDate.
-       */
-      public com.google.protobuf.Timestamp getIssueDate() {
-        if (issueDateBuilder_ == null) {
-          return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
-        } else {
-          return issueDateBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public Builder setIssueDate(com.google.protobuf.Timestamp value) {
-        if (issueDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          issueDate_ = value;
-          onChanged();
-        } else {
-          issueDateBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public Builder setIssueDate(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (issueDateBuilder_ == null) {
-          issueDate_ = builderForValue.build();
-          onChanged();
-        } else {
-          issueDateBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
-        if (issueDateBuilder_ == null) {
-          if (issueDate_ != null) {
-            issueDate_ =
-              com.google.protobuf.Timestamp.newBuilder(issueDate_).mergeFrom(value).buildPartial();
-          } else {
-            issueDate_ = value;
-          }
-          onChanged();
-        } else {
-          issueDateBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public Builder clearIssueDate() {
-        if (issueDateBuilder_ == null) {
-          issueDate_ = null;
-          onChanged();
-        } else {
-          issueDate_ = null;
-          issueDateBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
-        
-        onChanged();
-        return getIssueDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
-        if (issueDateBuilder_ != null) {
-          return issueDateBuilder_.getMessageOrBuilder();
-        } else {
-          return issueDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getIssueDateFieldBuilder() {
-        if (issueDateBuilder_ == null) {
-          issueDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getIssueDate(),
-                  getParentForChildren(),
-                  isClean());
-          issueDate_ = null;
-        }
-        return issueDateBuilder_;
-      }
-
-      private asgt.v2.type.DataOuterClass.Supplier supplier_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder> supplierBuilder_;
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       * @return Whether the supplier field is set.
-       */
-      public boolean hasSupplier() {
-        return supplierBuilder_ != null || supplier_ != null;
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       * @return The supplier.
-       */
-      public asgt.v2.type.DataOuterClass.Supplier getSupplier() {
-        if (supplierBuilder_ == null) {
-          return supplier_ == null ? asgt.v2.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
-        } else {
-          return supplierBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       */
-      public Builder setSupplier(asgt.v2.type.DataOuterClass.Supplier value) {
-        if (supplierBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          supplier_ = value;
-          onChanged();
-        } else {
-          supplierBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       */
-      public Builder setSupplier(
-          asgt.v2.type.DataOuterClass.Supplier.Builder builderForValue) {
-        if (supplierBuilder_ == null) {
-          supplier_ = builderForValue.build();
-          onChanged();
-        } else {
-          supplierBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       */
-      public Builder mergeSupplier(asgt.v2.type.DataOuterClass.Supplier value) {
-        if (supplierBuilder_ == null) {
-          if (supplier_ != null) {
-            supplier_ =
-              asgt.v2.type.DataOuterClass.Supplier.newBuilder(supplier_).mergeFrom(value).buildPartial();
-          } else {
-            supplier_ = value;
-          }
-          onChanged();
-        } else {
-          supplierBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       */
-      public Builder clearSupplier() {
-        if (supplierBuilder_ == null) {
-          supplier_ = null;
-          onChanged();
-        } else {
-          supplier_ = null;
-          supplierBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       */
-      public asgt.v2.type.DataOuterClass.Supplier.Builder getSupplierBuilder() {
-        
-        onChanged();
-        return getSupplierFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       */
-      public asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
-        if (supplierBuilder_ != null) {
-          return supplierBuilder_.getMessageOrBuilder();
-        } else {
-          return supplier_ == null ?
-              asgt.v2.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
-        }
-      }
-      /**
-       * <pre>
-       * supplier of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>.asgt.v2.type.Supplier supplier = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder> 
-          getSupplierFieldBuilder() {
-        if (supplierBuilder_ == null) {
-          supplierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder>(
-                  getSupplier(),
-                  getParentForChildren(),
-                  isClean());
-          supplier_ = null;
-        }
-        return supplierBuilder_;
-      }
-
-      private java.lang.Object customerRef_ = "";
-      /**
-       * <pre>
-       * reference to the customer. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string customer_ref = 3;</code>
-       * @return The customerRef.
-       */
-      public java.lang.String getCustomerRef() {
-        java.lang.Object ref = customerRef_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          customerRef_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * reference to the customer. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string customer_ref = 3;</code>
-       * @return The bytes for customerRef.
-       */
-      public com.google.protobuf.ByteString
-          getCustomerRefBytes() {
-        java.lang.Object ref = customerRef_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          customerRef_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * reference to the customer. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string customer_ref = 3;</code>
-       * @param value The customerRef to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerRef(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        customerRef_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * reference to the customer. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string customer_ref = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomerRef() {
-        
-        customerRef_ = getDefaultInstance().getCustomerRef();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * reference to the customer. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string customer_ref = 3;</code>
-       * @param value The bytes for customerRef to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerRefBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        customerRef_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * invoice text from the SmartScan product. Used in scanned-invoice requests.
+       * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 1;</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -1284,10 +501,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product. Used in scanned-invoice requests.
+       * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 1;</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -1305,10 +522,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product. Used in scanned-invoice requests.
+       * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 1;</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -1324,10 +541,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product. Used in scanned-invoice requests.
+       * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -1338,10 +555,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product. Used in scanned-invoice requests.
+       * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 1;</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -1353,145 +570,6 @@ public final class DataOuterClass {
   checkByteStringIsUtf8(value);
         
         text_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object currency_ = "";
-      /**
-       * <pre>
-       * name of the currency as a string. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-       * @return The currency.
-       */
-      public java.lang.String getCurrency() {
-        java.lang.Object ref = currency_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          currency_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * name of the currency as a string. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-       * @return The bytes for currency.
-       */
-      public com.google.protobuf.ByteString
-          getCurrencyBytes() {
-        java.lang.Object ref = currency_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          currency_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * name of the currency as a string. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-       * @param value The currency to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrency(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        currency_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * name of the currency as a string. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurrency() {
-        
-        currency_ = getDefaultInstance().getCurrency();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * name of the currency as a string. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for currency to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrencyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        currency_ = value;
-        onChanged();
-        return this;
-      }
-
-      private float total_ ;
-      /**
-       * <pre>
-       * total of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>float total = 7;</code>
-       * @return The total.
-       */
-      @java.lang.Override
-      public float getTotal() {
-        return total_;
-      }
-      /**
-       * <pre>
-       * total of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>float total = 7;</code>
-       * @param value The total to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTotal(float value) {
-        
-        total_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * total of the invoice. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>float total = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTotal() {
-        
-        total_ = 0F;
         onChanged();
         return this;
       }
@@ -1548,25 +626,25 @@ public final class DataOuterClass {
 
   }
 
-  public interface InvoiceLineOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.v2.type.InvoiceLine)
+  public interface TransactionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2.type.Transaction)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * text of the invoice line. Used in electronic-invoice-line requests.
+     * Text of the bank transaction.
      * </pre>
      *
-     * <code>string text = 8;</code>
+     * <code>string text = 1;</code>
      * @return The text.
      */
     java.lang.String getText();
     /**
      * <pre>
-     * text of the invoice line. Used in electronic-invoice-line requests.
+     * Text of the bank transaction.
      * </pre>
      *
-     * <code>string text = 8;</code>
+     * <code>string text = 1;</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -1574,25 +652,805 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * id of the product (item). Used in electronic-invoice-line requests.
+     * Amount of the transaction.
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>float amount = 2;</code>
+     * @return The amount.
+     */
+    float getAmount();
+  }
+  /**
+   * <pre>
+   * Used in bank requests.
+   * </pre>
+   *
+   * Protobuf type {@code asgt.v2.type.Transaction}
+   */
+  public static final class Transaction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.v2.type.Transaction)
+      TransactionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Transaction.newBuilder() to construct.
+    private Transaction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Transaction() {
+      text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Transaction();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Transaction(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 21: {
+
+              amount_ = input.readFloat();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.v2.type.DataOuterClass.Transaction.class, asgt.v2.type.DataOuterClass.Transaction.Builder.class);
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Text of the bank transaction.
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text of the bank transaction.
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private float amount_;
+    /**
+     * <pre>
+     * Amount of the transaction.
+     * </pre>
+     *
+     * <code>float amount = 2;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public float getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+      }
+      if (amount_ != 0F) {
+        output.writeFloat(2, amount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      }
+      if (amount_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, amount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.v2.type.DataOuterClass.Transaction)) {
+        return super.equals(obj);
+      }
+      asgt.v2.type.DataOuterClass.Transaction other = (asgt.v2.type.DataOuterClass.Transaction) obj;
+
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (java.lang.Float.floatToIntBits(getAmount())
+          != java.lang.Float.floatToIntBits(
+              other.getAmount())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAmount());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.v2.type.DataOuterClass.Transaction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Used in bank requests.
+     * </pre>
+     *
+     * Protobuf type {@code asgt.v2.type.Transaction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.v2.type.Transaction)
+        asgt.v2.type.DataOuterClass.TransactionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.v2.type.DataOuterClass.Transaction.class, asgt.v2.type.DataOuterClass.Transaction.Builder.class);
+      }
+
+      // Construct using asgt.v2.type.DataOuterClass.Transaction.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        text_ = "";
+
+        amount_ = 0F;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.v2.type.DataOuterClass.Transaction getDefaultInstanceForType() {
+        return asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.v2.type.DataOuterClass.Transaction build() {
+        asgt.v2.type.DataOuterClass.Transaction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.v2.type.DataOuterClass.Transaction buildPartial() {
+        asgt.v2.type.DataOuterClass.Transaction result = new asgt.v2.type.DataOuterClass.Transaction(this);
+        result.text_ = text_;
+        result.amount_ = amount_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.v2.type.DataOuterClass.Transaction) {
+          return mergeFrom((asgt.v2.type.DataOuterClass.Transaction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.v2.type.DataOuterClass.Transaction other) {
+        if (other == asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance()) return this;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.getAmount() != 0F) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.v2.type.DataOuterClass.Transaction parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.v2.type.DataOuterClass.Transaction) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Text of the bank transaction.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text of the bank transaction.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text of the bank transaction.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text of the bank transaction.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text of the bank transaction.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float amount_ ;
+      /**
+       * <pre>
+       * Amount of the transaction.
+       * </pre>
+       *
+       * <code>float amount = 2;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public float getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * Amount of the transaction.
+       * </pre>
+       *
+       * <code>float amount = 2;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(float value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of the transaction.
+       * </pre>
+       *
+       * <code>float amount = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.v2.type.Transaction)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.v2.type.Transaction)
+    private static final asgt.v2.type.DataOuterClass.Transaction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.v2.type.DataOuterClass.Transaction();
+    }
+
+    public static asgt.v2.type.DataOuterClass.Transaction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Transaction>
+        PARSER = new com.google.protobuf.AbstractParser<Transaction>() {
+      @java.lang.Override
+      public Transaction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Transaction(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Transaction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Transaction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.v2.type.DataOuterClass.Transaction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InvoiceLineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2.type.InvoiceLine)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of the product (item).
+     * </pre>
+     *
+     * <code>string item_id = 1;</code>
      * @return The itemId.
      */
     java.lang.String getItemId();
     /**
      * <pre>
-     * id of the product (item). Used in electronic-invoice-line requests.
+     * Id of the product (item).
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>string item_id = 1;</code>
      * @return The bytes for itemId.
      */
     com.google.protobuf.ByteString
         getItemIdBytes();
+
+    /**
+     * <pre>
+     * Text of the invoice line.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Text of the invoice line.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return Whether the issueDate field is set.
+     */
+    boolean hasIssueDate();
+    /**
+     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return The issueDate.
+     */
+    com.google.protobuf.Timestamp getIssueDate();
+    /**
+     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder();
+
+    /**
+     * <pre>
+     * Supplier of the invoice.
+     * </pre>
+     *
+     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return Whether the supplier field is set.
+     */
+    boolean hasSupplier();
+    /**
+     * <pre>
+     * Supplier of the invoice.
+     * </pre>
+     *
+     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return The supplier.
+     */
+    asgt.v2.type.DataOuterClass.Supplier getSupplier();
+    /**
+     * <pre>
+     * Supplier of the invoice.
+     * </pre>
+     *
+     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     */
+    asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder();
+
+    /**
+     * <pre>
+     * reference to the customer.
+     * </pre>
+     *
+     * <code>string customer_ref = 5;</code>
+     * @return The customerRef.
+     */
+    java.lang.String getCustomerRef();
+    /**
+     * <pre>
+     * reference to the customer.
+     * </pre>
+     *
+     * <code>string customer_ref = 5;</code>
+     * @return The bytes for customerRef.
+     */
+    com.google.protobuf.ByteString
+        getCustomerRefBytes();
+
+    /**
+     * <pre>
+     * Amount of the invoice line.
+     * </pre>
+     *
+     * <code>float amount = 7;</code>
+     * @return The amount.
+     */
+    float getAmount();
   }
   /**
+   * <pre>
+   * Used in electronic-invoice-line requests.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.type.InvoiceLine}
    */
   public static final class InvoiceLine extends
@@ -1605,8 +1463,9 @@ public final class DataOuterClass {
       super(builder);
     }
     private InvoiceLine() {
-      text_ = "";
       itemId_ = "";
+      text_ = "";
+      customerRef_ = "";
     }
 
     @java.lang.Override
@@ -1639,16 +1498,53 @@ public final class DataOuterClass {
             case 0:
               done = true;
               break;
-            case 66: {
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              itemId_ = s;
+              break;
+            }
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
               text_ = s;
               break;
             }
-            case 74: {
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (issueDate_ != null) {
+                subBuilder = issueDate_.toBuilder();
+              }
+              issueDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(issueDate_);
+                issueDate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              asgt.v2.type.DataOuterClass.Supplier.Builder subBuilder = null;
+              if (supplier_ != null) {
+                subBuilder = supplier_.toBuilder();
+              }
+              supplier_ = input.readMessage(asgt.v2.type.DataOuterClass.Supplier.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(supplier_);
+                supplier_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              itemId_ = s;
+              customerRef_ = s;
+              break;
+            }
+            case 61: {
+
+              amount_ = input.readFloat();
               break;
             }
             default: {
@@ -1683,60 +1579,14 @@ public final class DataOuterClass {
               asgt.v2.type.DataOuterClass.InvoiceLine.class, asgt.v2.type.DataOuterClass.InvoiceLine.Builder.class);
     }
 
-    public static final int TEXT_FIELD_NUMBER = 8;
-    private volatile java.lang.Object text_;
-    /**
-     * <pre>
-     * text of the invoice line. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string text = 8;</code>
-     * @return The text.
-     */
-    @java.lang.Override
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        text_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * text of the invoice line. Used in electronic-invoice-line requests.
-     * </pre>
-     *
-     * <code>string text = 8;</code>
-     * @return The bytes for text.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        text_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ITEM_ID_FIELD_NUMBER = 9;
+    public static final int ITEM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object itemId_;
     /**
      * <pre>
-     * id of the product (item). Used in electronic-invoice-line requests.
+     * Id of the product (item).
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>string item_id = 1;</code>
      * @return The itemId.
      */
     @java.lang.Override
@@ -1754,10 +1604,10 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * id of the product (item). Used in electronic-invoice-line requests.
+     * Id of the product (item).
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>string item_id = 1;</code>
      * @return The bytes for itemId.
      */
     @java.lang.Override
@@ -1775,6 +1625,177 @@ public final class DataOuterClass {
       }
     }
 
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Text of the invoice line.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text of the invoice line.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUE_DATE_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp issueDate_;
+    /**
+     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return Whether the issueDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasIssueDate() {
+      return issueDate_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return The issueDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getIssueDate() {
+      return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
+      return getIssueDate();
+    }
+
+    public static final int SUPPLIER_FIELD_NUMBER = 4;
+    private asgt.v2.type.DataOuterClass.Supplier supplier_;
+    /**
+     * <pre>
+     * Supplier of the invoice.
+     * </pre>
+     *
+     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return Whether the supplier field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupplier() {
+      return supplier_ != null;
+    }
+    /**
+     * <pre>
+     * Supplier of the invoice.
+     * </pre>
+     *
+     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return The supplier.
+     */
+    @java.lang.Override
+    public asgt.v2.type.DataOuterClass.Supplier getSupplier() {
+      return supplier_ == null ? asgt.v2.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
+    }
+    /**
+     * <pre>
+     * Supplier of the invoice.
+     * </pre>
+     *
+     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     */
+    @java.lang.Override
+    public asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
+      return getSupplier();
+    }
+
+    public static final int CUSTOMER_REF_FIELD_NUMBER = 5;
+    private volatile java.lang.Object customerRef_;
+    /**
+     * <pre>
+     * reference to the customer.
+     * </pre>
+     *
+     * <code>string customer_ref = 5;</code>
+     * @return The customerRef.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerRef() {
+      java.lang.Object ref = customerRef_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerRef_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reference to the customer.
+     * </pre>
+     *
+     * <code>string customer_ref = 5;</code>
+     * @return The bytes for customerRef.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerRefBytes() {
+      java.lang.Object ref = customerRef_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerRef_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 7;
+    private float amount_;
+    /**
+     * <pre>
+     * Amount of the invoice line.
+     * </pre>
+     *
+     * <code>float amount = 7;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public float getAmount() {
+      return amount_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1789,11 +1810,23 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, text_);
-      }
       if (!getItemIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, itemId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, itemId_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
+      }
+      if (issueDate_ != null) {
+        output.writeMessage(3, getIssueDate());
+      }
+      if (supplier_ != null) {
+        output.writeMessage(4, getSupplier());
+      }
+      if (!getCustomerRefBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, customerRef_);
+      }
+      if (amount_ != 0F) {
+        output.writeFloat(7, amount_);
       }
       unknownFields.writeTo(output);
     }
@@ -1804,11 +1837,26 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, text_);
-      }
       if (!getItemIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, itemId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, itemId_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
+      }
+      if (issueDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getIssueDate());
+      }
+      if (supplier_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSupplier());
+      }
+      if (!getCustomerRefBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, customerRef_);
+      }
+      if (amount_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(7, amount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1825,10 +1873,25 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.InvoiceLine other = (asgt.v2.type.DataOuterClass.InvoiceLine) obj;
 
-      if (!getText()
-          .equals(other.getText())) return false;
       if (!getItemId()
           .equals(other.getItemId())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (hasIssueDate() != other.hasIssueDate()) return false;
+      if (hasIssueDate()) {
+        if (!getIssueDate()
+            .equals(other.getIssueDate())) return false;
+      }
+      if (hasSupplier() != other.hasSupplier()) return false;
+      if (hasSupplier()) {
+        if (!getSupplier()
+            .equals(other.getSupplier())) return false;
+      }
+      if (!getCustomerRef()
+          .equals(other.getCustomerRef())) return false;
+      if (java.lang.Float.floatToIntBits(getAmount())
+          != java.lang.Float.floatToIntBits(
+              other.getAmount())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1840,10 +1903,23 @@ public final class DataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + getText().hashCode();
       hash = (37 * hash) + ITEM_ID_FIELD_NUMBER;
       hash = (53 * hash) + getItemId().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      if (hasIssueDate()) {
+        hash = (37 * hash) + ISSUE_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getIssueDate().hashCode();
+      }
+      if (hasSupplier()) {
+        hash = (37 * hash) + SUPPLIER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplier().hashCode();
+      }
+      hash = (37 * hash) + CUSTOMER_REF_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerRef().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAmount());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1940,6 +2016,10 @@ public final class DataOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Used in electronic-invoice-line requests.
+     * </pre>
+     *
      * Protobuf type {@code asgt.v2.type.InvoiceLine}
      */
     public static final class Builder extends
@@ -1977,9 +2057,25 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        itemId_ = "";
+
         text_ = "";
 
-        itemId_ = "";
+        if (issueDateBuilder_ == null) {
+          issueDate_ = null;
+        } else {
+          issueDate_ = null;
+          issueDateBuilder_ = null;
+        }
+        if (supplierBuilder_ == null) {
+          supplier_ = null;
+        } else {
+          supplier_ = null;
+          supplierBuilder_ = null;
+        }
+        customerRef_ = "";
+
+        amount_ = 0F;
 
         return this;
       }
@@ -2007,8 +2103,20 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceLine buildPartial() {
         asgt.v2.type.DataOuterClass.InvoiceLine result = new asgt.v2.type.DataOuterClass.InvoiceLine(this);
-        result.text_ = text_;
         result.itemId_ = itemId_;
+        result.text_ = text_;
+        if (issueDateBuilder_ == null) {
+          result.issueDate_ = issueDate_;
+        } else {
+          result.issueDate_ = issueDateBuilder_.build();
+        }
+        if (supplierBuilder_ == null) {
+          result.supplier_ = supplier_;
+        } else {
+          result.supplier_ = supplierBuilder_.build();
+        }
+        result.customerRef_ = customerRef_;
+        result.amount_ = amount_;
         onBuilt();
         return result;
       }
@@ -2057,13 +2165,26 @@ public final class DataOuterClass {
 
       public Builder mergeFrom(asgt.v2.type.DataOuterClass.InvoiceLine other) {
         if (other == asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance()) return this;
+        if (!other.getItemId().isEmpty()) {
+          itemId_ = other.itemId_;
+          onChanged();
+        }
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
           onChanged();
         }
-        if (!other.getItemId().isEmpty()) {
-          itemId_ = other.itemId_;
+        if (other.hasIssueDate()) {
+          mergeIssueDate(other.getIssueDate());
+        }
+        if (other.hasSupplier()) {
+          mergeSupplier(other.getSupplier());
+        }
+        if (!other.getCustomerRef().isEmpty()) {
+          customerRef_ = other.customerRef_;
           onChanged();
+        }
+        if (other.getAmount() != 0F) {
+          setAmount(other.getAmount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2094,109 +2215,13 @@ public final class DataOuterClass {
         return this;
       }
 
-      private java.lang.Object text_ = "";
-      /**
-       * <pre>
-       * text of the invoice line. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string text = 8;</code>
-       * @return The text.
-       */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          text_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * text of the invoice line. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string text = 8;</code>
-       * @return The bytes for text.
-       */
-      public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          text_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * text of the invoice line. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string text = 8;</code>
-       * @param value The text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setText(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        text_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * text of the invoice line. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string text = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearText() {
-        
-        text_ = getDefaultInstance().getText();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * text of the invoice line. Used in electronic-invoice-line requests.
-       * </pre>
-       *
-       * <code>string text = 8;</code>
-       * @param value The bytes for text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTextBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        text_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object itemId_ = "";
       /**
        * <pre>
-       * id of the product (item). Used in electronic-invoice-line requests.
+       * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 1;</code>
        * @return The itemId.
        */
       public java.lang.String getItemId() {
@@ -2213,10 +2238,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item). Used in electronic-invoice-line requests.
+       * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 1;</code>
        * @return The bytes for itemId.
        */
       public com.google.protobuf.ByteString
@@ -2234,10 +2259,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item). Used in electronic-invoice-line requests.
+       * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 1;</code>
        * @param value The itemId to set.
        * @return This builder for chaining.
        */
@@ -2253,10 +2278,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item). Used in electronic-invoice-line requests.
+       * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
@@ -2267,10 +2292,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item). Used in electronic-invoice-line requests.
+       * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 1;</code>
        * @param value The bytes for itemId to set.
        * @return This builder for chaining.
        */
@@ -2282,6 +2307,515 @@ public final class DataOuterClass {
   checkByteStringIsUtf8(value);
         
         itemId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Text of the invoice line.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text of the invoice line.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text of the invoice line.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text of the invoice line.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text of the invoice line.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp issueDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * @return Whether the issueDate field is set.
+       */
+      public boolean hasIssueDate() {
+        return issueDateBuilder_ != null || issueDate_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * @return The issueDate.
+       */
+      public com.google.protobuf.Timestamp getIssueDate() {
+        if (issueDateBuilder_ == null) {
+          return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
+        } else {
+          return issueDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       */
+      public Builder setIssueDate(com.google.protobuf.Timestamp value) {
+        if (issueDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          issueDate_ = value;
+          onChanged();
+        } else {
+          issueDateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       */
+      public Builder setIssueDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (issueDateBuilder_ == null) {
+          issueDate_ = builderForValue.build();
+          onChanged();
+        } else {
+          issueDateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       */
+      public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
+        if (issueDateBuilder_ == null) {
+          if (issueDate_ != null) {
+            issueDate_ =
+              com.google.protobuf.Timestamp.newBuilder(issueDate_).mergeFrom(value).buildPartial();
+          } else {
+            issueDate_ = value;
+          }
+          onChanged();
+        } else {
+          issueDateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       */
+      public Builder clearIssueDate() {
+        if (issueDateBuilder_ == null) {
+          issueDate_ = null;
+          onChanged();
+        } else {
+          issueDate_ = null;
+          issueDateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
+        
+        onChanged();
+        return getIssueDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
+        if (issueDateBuilder_ != null) {
+          return issueDateBuilder_.getMessageOrBuilder();
+        } else {
+          return issueDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getIssueDateFieldBuilder() {
+        if (issueDateBuilder_ == null) {
+          issueDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getIssueDate(),
+                  getParentForChildren(),
+                  isClean());
+          issueDate_ = null;
+        }
+        return issueDateBuilder_;
+      }
+
+      private asgt.v2.type.DataOuterClass.Supplier supplier_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder> supplierBuilder_;
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * @return Whether the supplier field is set.
+       */
+      public boolean hasSupplier() {
+        return supplierBuilder_ != null || supplier_ != null;
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * @return The supplier.
+       */
+      public asgt.v2.type.DataOuterClass.Supplier getSupplier() {
+        if (supplierBuilder_ == null) {
+          return supplier_ == null ? asgt.v2.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
+        } else {
+          return supplierBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       */
+      public Builder setSupplier(asgt.v2.type.DataOuterClass.Supplier value) {
+        if (supplierBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          supplier_ = value;
+          onChanged();
+        } else {
+          supplierBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       */
+      public Builder setSupplier(
+          asgt.v2.type.DataOuterClass.Supplier.Builder builderForValue) {
+        if (supplierBuilder_ == null) {
+          supplier_ = builderForValue.build();
+          onChanged();
+        } else {
+          supplierBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       */
+      public Builder mergeSupplier(asgt.v2.type.DataOuterClass.Supplier value) {
+        if (supplierBuilder_ == null) {
+          if (supplier_ != null) {
+            supplier_ =
+              asgt.v2.type.DataOuterClass.Supplier.newBuilder(supplier_).mergeFrom(value).buildPartial();
+          } else {
+            supplier_ = value;
+          }
+          onChanged();
+        } else {
+          supplierBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       */
+      public Builder clearSupplier() {
+        if (supplierBuilder_ == null) {
+          supplier_ = null;
+          onChanged();
+        } else {
+          supplier_ = null;
+          supplierBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       */
+      public asgt.v2.type.DataOuterClass.Supplier.Builder getSupplierBuilder() {
+        
+        onChanged();
+        return getSupplierFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       */
+      public asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
+        if (supplierBuilder_ != null) {
+          return supplierBuilder_.getMessageOrBuilder();
+        } else {
+          return supplier_ == null ?
+              asgt.v2.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
+        }
+      }
+      /**
+       * <pre>
+       * Supplier of the invoice.
+       * </pre>
+       *
+       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder> 
+          getSupplierFieldBuilder() {
+        if (supplierBuilder_ == null) {
+          supplierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder>(
+                  getSupplier(),
+                  getParentForChildren(),
+                  isClean());
+          supplier_ = null;
+        }
+        return supplierBuilder_;
+      }
+
+      private java.lang.Object customerRef_ = "";
+      /**
+       * <pre>
+       * reference to the customer.
+       * </pre>
+       *
+       * <code>string customer_ref = 5;</code>
+       * @return The customerRef.
+       */
+      public java.lang.String getCustomerRef() {
+        java.lang.Object ref = customerRef_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerRef_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reference to the customer.
+       * </pre>
+       *
+       * <code>string customer_ref = 5;</code>
+       * @return The bytes for customerRef.
+       */
+      public com.google.protobuf.ByteString
+          getCustomerRefBytes() {
+        java.lang.Object ref = customerRef_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerRef_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reference to the customer.
+       * </pre>
+       *
+       * <code>string customer_ref = 5;</code>
+       * @param value The customerRef to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerRef(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        customerRef_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reference to the customer.
+       * </pre>
+       *
+       * <code>string customer_ref = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerRef() {
+        
+        customerRef_ = getDefaultInstance().getCustomerRef();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reference to the customer.
+       * </pre>
+       *
+       * <code>string customer_ref = 5;</code>
+       * @param value The bytes for customerRef to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerRefBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        customerRef_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float amount_ ;
+      /**
+       * <pre>
+       * Amount of the invoice line.
+       * </pre>
+       *
+       * <code>float amount = 7;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public float getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * Amount of the invoice line.
+       * </pre>
+       *
+       * <code>float amount = 7;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(float value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of the invoice line.
+       * </pre>
+       *
+       * <code>float amount = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0F;
         onChanged();
         return this;
       }
@@ -2344,7 +2878,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     *  id of the supplier; not nullable
+     * Id of the supplier; not nullable.
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -2353,7 +2887,7 @@ public final class DataOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     *  id of the supplier; not nullable
+     * Id of the supplier; not nullable.
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -2364,19 +2898,19 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * name of the supplier
+     * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
      * <pre>
-     * name of the supplier
+     * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 2;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2384,19 +2918,19 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * global id of the supplier
+     * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 3;</code>
      * @return The globalId.
      */
     java.lang.String getGlobalId();
     /**
      * <pre>
-     * global id of the supplier
+     * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 3;</code>
      * @return The bytes for globalId.
      */
     com.google.protobuf.ByteString
@@ -2456,13 +2990,13 @@ public final class DataOuterClass {
               id_ = s;
               break;
             }
-            case 34: {
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
             }
-            case 42: {
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               globalId_ = s;
@@ -2504,7 +3038,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     *  id of the supplier; not nullable
+     * Id of the supplier; not nullable.
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -2525,7 +3059,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     *  id of the supplier; not nullable
+     * Id of the supplier; not nullable.
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -2546,14 +3080,14 @@ public final class DataOuterClass {
       }
     }
 
-    public static final int NAME_FIELD_NUMBER = 4;
+    public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * name of the supplier
+     * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 2;</code>
      * @return The name.
      */
     @java.lang.Override
@@ -2571,10 +3105,10 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * name of the supplier
+     * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 2;</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -2592,14 +3126,14 @@ public final class DataOuterClass {
       }
     }
 
-    public static final int GLOBAL_ID_FIELD_NUMBER = 5;
+    public static final int GLOBAL_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object globalId_;
     /**
      * <pre>
-     * global id of the supplier
+     * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 3;</code>
      * @return The globalId.
      */
     @java.lang.Override
@@ -2617,10 +3151,10 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * global id of the supplier
+     * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 3;</code>
      * @return The bytes for globalId.
      */
     @java.lang.Override
@@ -2656,10 +3190,10 @@ public final class DataOuterClass {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (!getGlobalIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, globalId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, globalId_);
       }
       unknownFields.writeTo(output);
     }
@@ -2674,10 +3208,10 @@ public final class DataOuterClass {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (!getGlobalIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, globalId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, globalId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2977,7 +3511,7 @@ public final class DataOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       *  id of the supplier; not nullable
+       * Id of the supplier; not nullable.
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -2997,7 +3531,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       *  id of the supplier; not nullable
+       * Id of the supplier; not nullable.
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -3018,7 +3552,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       *  id of the supplier; not nullable
+       * Id of the supplier; not nullable.
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -3037,7 +3571,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       *  id of the supplier; not nullable
+       * Id of the supplier; not nullable.
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -3051,7 +3585,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       *  id of the supplier; not nullable
+       * Id of the supplier; not nullable.
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
@@ -3073,10 +3607,10 @@ public final class DataOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * name of the supplier
+       * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 2;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3093,10 +3627,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the supplier
+       * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 2;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3114,10 +3648,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the supplier
+       * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3133,10 +3667,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the supplier
+       * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3147,10 +3681,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the supplier
+       * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3169,10 +3703,10 @@ public final class DataOuterClass {
       private java.lang.Object globalId_ = "";
       /**
        * <pre>
-       * global id of the supplier
+       * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 3;</code>
        * @return The globalId.
        */
       public java.lang.String getGlobalId() {
@@ -3189,10 +3723,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * global id of the supplier
+       * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 3;</code>
        * @return The bytes for globalId.
        */
       public com.google.protobuf.ByteString
@@ -3210,10 +3744,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * global id of the supplier
+       * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 3;</code>
        * @param value The globalId to set.
        * @return This builder for chaining.
        */
@@ -3229,10 +3763,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * global id of the supplier
+       * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearGlobalId() {
@@ -3243,10 +3777,10 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * global id of the supplier
+       * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 3;</code>
        * @param value The bytes for globalId to set.
        * @return This builder for chaining.
        */
@@ -3309,702 +3843,6 @@ public final class DataOuterClass {
 
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.Supplier getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TransactionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.v2.type.Transaction)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * text of the bank transaction. Used in bank requests.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The text.
-     */
-    java.lang.String getText();
-    /**
-     * <pre>
-     * text of the bank transaction. Used in bank requests.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The bytes for text.
-     */
-    com.google.protobuf.ByteString
-        getTextBytes();
-
-    /**
-     * <pre>
-     * amount of the transaction. Used in bank requests.
-     * </pre>
-     *
-     * <code>float amount = 2;</code>
-     * @return The amount.
-     */
-    float getAmount();
-  }
-  /**
-   * Protobuf type {@code asgt.v2.type.Transaction}
-   */
-  public static final class Transaction extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.v2.type.Transaction)
-      TransactionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Transaction.newBuilder() to construct.
-    private Transaction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Transaction() {
-      text_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Transaction();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Transaction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            case 21: {
-
-              amount_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              asgt.v2.type.DataOuterClass.Transaction.class, asgt.v2.type.DataOuterClass.Transaction.Builder.class);
-    }
-
-    public static final int TEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object text_;
-    /**
-     * <pre>
-     * text of the bank transaction. Used in bank requests.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The text.
-     */
-    @java.lang.Override
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        text_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * text of the bank transaction. Used in bank requests.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The bytes for text.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        text_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private float amount_;
-    /**
-     * <pre>
-     * amount of the transaction. Used in bank requests.
-     * </pre>
-     *
-     * <code>float amount = 2;</code>
-     * @return The amount.
-     */
-    @java.lang.Override
-    public float getAmount() {
-      return amount_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
-      }
-      if (amount_ != 0F) {
-        output.writeFloat(2, amount_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getTextBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
-      }
-      if (amount_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, amount_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof asgt.v2.type.DataOuterClass.Transaction)) {
-        return super.equals(obj);
-      }
-      asgt.v2.type.DataOuterClass.Transaction other = (asgt.v2.type.DataOuterClass.Transaction) obj;
-
-      if (!getText()
-          .equals(other.getText())) return false;
-      if (java.lang.Float.floatToIntBits(getAmount())
-          != java.lang.Float.floatToIntBits(
-              other.getAmount())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + getText().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getAmount());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.v2.type.DataOuterClass.Transaction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(asgt.v2.type.DataOuterClass.Transaction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code asgt.v2.type.Transaction}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.v2.type.Transaction)
-        asgt.v2.type.DataOuterClass.TransactionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.v2.type.DataOuterClass.Transaction.class, asgt.v2.type.DataOuterClass.Transaction.Builder.class);
-      }
-
-      // Construct using asgt.v2.type.DataOuterClass.Transaction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        text_ = "";
-
-        amount_ = 0F;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_descriptor;
-      }
-
-      @java.lang.Override
-      public asgt.v2.type.DataOuterClass.Transaction getDefaultInstanceForType() {
-        return asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public asgt.v2.type.DataOuterClass.Transaction build() {
-        asgt.v2.type.DataOuterClass.Transaction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public asgt.v2.type.DataOuterClass.Transaction buildPartial() {
-        asgt.v2.type.DataOuterClass.Transaction result = new asgt.v2.type.DataOuterClass.Transaction(this);
-        result.text_ = text_;
-        result.amount_ = amount_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.v2.type.DataOuterClass.Transaction) {
-          return mergeFrom((asgt.v2.type.DataOuterClass.Transaction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(asgt.v2.type.DataOuterClass.Transaction other) {
-        if (other == asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance()) return this;
-        if (!other.getText().isEmpty()) {
-          text_ = other.text_;
-          onChanged();
-        }
-        if (other.getAmount() != 0F) {
-          setAmount(other.getAmount());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        asgt.v2.type.DataOuterClass.Transaction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.type.DataOuterClass.Transaction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object text_ = "";
-      /**
-       * <pre>
-       * text of the bank transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @return The text.
-       */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          text_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * text of the bank transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @return The bytes for text.
-       */
-      public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          text_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * text of the bank transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @param value The text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setText(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        text_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * text of the bank transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearText() {
-        
-        text_ = getDefaultInstance().getText();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * text of the bank transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @param value The bytes for text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTextBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        text_ = value;
-        onChanged();
-        return this;
-      }
-
-      private float amount_ ;
-      /**
-       * <pre>
-       * amount of the transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>float amount = 2;</code>
-       * @return The amount.
-       */
-      @java.lang.Override
-      public float getAmount() {
-        return amount_;
-      }
-      /**
-       * <pre>
-       * amount of the transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>float amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(float value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * amount of the transaction. Used in bank requests.
-       * </pre>
-       *
-       * <code>float amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0F;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:asgt.v2.type.Transaction)
-    }
-
-    // @@protoc_insertion_point(class_scope:asgt.v2.type.Transaction)
-    private static final asgt.v2.type.DataOuterClass.Transaction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new asgt.v2.type.DataOuterClass.Transaction();
-    }
-
-    public static asgt.v2.type.DataOuterClass.Transaction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Transaction>
-        PARSER = new com.google.protobuf.AbstractParser<Transaction>() {
-      @java.lang.Override
-      public Transaction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Transaction(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Transaction> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Transaction> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public asgt.v2.type.DataOuterClass.Transaction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4094,6 +3932,8 @@ public final class DataOuterClass {
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
      */
     asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder();
+
+    public asgt.v2.type.DataOuterClass.Data.DataStructureCase getDataStructureCase();
   }
   /**
    * Protobuf type {@code asgt.v2.type.Data}
@@ -4142,41 +3982,44 @@ public final class DataOuterClass {
               break;
             case 10: {
               asgt.v2.type.DataOuterClass.Transaction.Builder subBuilder = null;
-              if (transaction_ != null) {
-                subBuilder = transaction_.toBuilder();
+              if (dataStructureCase_ == 1) {
+                subBuilder = ((asgt.v2.type.DataOuterClass.Transaction) dataStructure_).toBuilder();
               }
-              transaction_ = input.readMessage(asgt.v2.type.DataOuterClass.Transaction.parser(), extensionRegistry);
+              dataStructure_ =
+                  input.readMessage(asgt.v2.type.DataOuterClass.Transaction.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(transaction_);
-                transaction_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((asgt.v2.type.DataOuterClass.Transaction) dataStructure_);
+                dataStructure_ = subBuilder.buildPartial();
               }
-
+              dataStructureCase_ = 1;
               break;
             }
             case 18: {
               asgt.v2.type.DataOuterClass.Invoice.Builder subBuilder = null;
-              if (invoice_ != null) {
-                subBuilder = invoice_.toBuilder();
+              if (dataStructureCase_ == 2) {
+                subBuilder = ((asgt.v2.type.DataOuterClass.Invoice) dataStructure_).toBuilder();
               }
-              invoice_ = input.readMessage(asgt.v2.type.DataOuterClass.Invoice.parser(), extensionRegistry);
+              dataStructure_ =
+                  input.readMessage(asgt.v2.type.DataOuterClass.Invoice.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(invoice_);
-                invoice_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((asgt.v2.type.DataOuterClass.Invoice) dataStructure_);
+                dataStructure_ = subBuilder.buildPartial();
               }
-
+              dataStructureCase_ = 2;
               break;
             }
             case 26: {
               asgt.v2.type.DataOuterClass.InvoiceLine.Builder subBuilder = null;
-              if (invoiceLine_ != null) {
-                subBuilder = invoiceLine_.toBuilder();
+              if (dataStructureCase_ == 3) {
+                subBuilder = ((asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_).toBuilder();
               }
-              invoiceLine_ = input.readMessage(asgt.v2.type.DataOuterClass.InvoiceLine.parser(), extensionRegistry);
+              dataStructure_ =
+                  input.readMessage(asgt.v2.type.DataOuterClass.InvoiceLine.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(invoiceLine_);
-                invoiceLine_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_);
+                dataStructure_ = subBuilder.buildPartial();
               }
-
+              dataStructureCase_ = 3;
               break;
             }
             default: {
@@ -4211,8 +4054,50 @@ public final class DataOuterClass {
               asgt.v2.type.DataOuterClass.Data.class, asgt.v2.type.DataOuterClass.Data.Builder.class);
     }
 
+    private int dataStructureCase_ = 0;
+    private java.lang.Object dataStructure_;
+    public enum DataStructureCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TRANSACTION(1),
+      INVOICE(2),
+      INVOICE_LINE(3),
+      DATASTRUCTURE_NOT_SET(0);
+      private final int value;
+      private DataStructureCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DataStructureCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DataStructureCase forNumber(int value) {
+        switch (value) {
+          case 1: return TRANSACTION;
+          case 2: return INVOICE;
+          case 3: return INVOICE_LINE;
+          case 0: return DATASTRUCTURE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DataStructureCase
+    getDataStructureCase() {
+      return DataStructureCase.forNumber(
+          dataStructureCase_);
+    }
+
     public static final int TRANSACTION_FIELD_NUMBER = 1;
-    private asgt.v2.type.DataOuterClass.Transaction transaction_;
     /**
      * <pre>
      * Transaction-level information; at this time used only with bank transactions
@@ -4223,7 +4108,7 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public boolean hasTransaction() {
-      return transaction_ != null;
+      return dataStructureCase_ == 1;
     }
     /**
      * <pre>
@@ -4235,7 +4120,10 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.Transaction getTransaction() {
-      return transaction_ == null ? asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance() : transaction_;
+      if (dataStructureCase_ == 1) {
+         return (asgt.v2.type.DataOuterClass.Transaction) dataStructure_;
+      }
+      return asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
     }
     /**
      * <pre>
@@ -4246,11 +4134,13 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
-      return getTransaction();
+      if (dataStructureCase_ == 1) {
+         return (asgt.v2.type.DataOuterClass.Transaction) dataStructure_;
+      }
+      return asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
     }
 
     public static final int INVOICE_FIELD_NUMBER = 2;
-    private asgt.v2.type.DataOuterClass.Invoice invoice_;
     /**
      * <pre>
      * Invoice-level information for e-invoices and scanned invoices and receipts
@@ -4261,7 +4151,7 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public boolean hasInvoice() {
-      return invoice_ != null;
+      return dataStructureCase_ == 2;
     }
     /**
      * <pre>
@@ -4273,7 +4163,10 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.Invoice getInvoice() {
-      return invoice_ == null ? asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance() : invoice_;
+      if (dataStructureCase_ == 2) {
+         return (asgt.v2.type.DataOuterClass.Invoice) dataStructure_;
+      }
+      return asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance();
     }
     /**
      * <pre>
@@ -4284,11 +4177,13 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
-      return getInvoice();
+      if (dataStructureCase_ == 2) {
+         return (asgt.v2.type.DataOuterClass.Invoice) dataStructure_;
+      }
+      return asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance();
     }
 
     public static final int INVOICE_LINE_FIELD_NUMBER = 3;
-    private asgt.v2.type.DataOuterClass.InvoiceLine invoiceLine_;
     /**
      * <pre>
      * Line-level information for e-invoices; use one sample per invoice line
@@ -4299,7 +4194,7 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public boolean hasInvoiceLine() {
-      return invoiceLine_ != null;
+      return dataStructureCase_ == 3;
     }
     /**
      * <pre>
@@ -4311,7 +4206,10 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceLine getInvoiceLine() {
-      return invoiceLine_ == null ? asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance() : invoiceLine_;
+      if (dataStructureCase_ == 3) {
+         return (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_;
+      }
+      return asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance();
     }
     /**
      * <pre>
@@ -4322,7 +4220,10 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
-      return getInvoiceLine();
+      if (dataStructureCase_ == 3) {
+         return (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_;
+      }
+      return asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4339,14 +4240,14 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (transaction_ != null) {
-        output.writeMessage(1, getTransaction());
+      if (dataStructureCase_ == 1) {
+        output.writeMessage(1, (asgt.v2.type.DataOuterClass.Transaction) dataStructure_);
       }
-      if (invoice_ != null) {
-        output.writeMessage(2, getInvoice());
+      if (dataStructureCase_ == 2) {
+        output.writeMessage(2, (asgt.v2.type.DataOuterClass.Invoice) dataStructure_);
       }
-      if (invoiceLine_ != null) {
-        output.writeMessage(3, getInvoiceLine());
+      if (dataStructureCase_ == 3) {
+        output.writeMessage(3, (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_);
       }
       unknownFields.writeTo(output);
     }
@@ -4357,17 +4258,17 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (transaction_ != null) {
+      if (dataStructureCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTransaction());
+          .computeMessageSize(1, (asgt.v2.type.DataOuterClass.Transaction) dataStructure_);
       }
-      if (invoice_ != null) {
+      if (dataStructureCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getInvoice());
+          .computeMessageSize(2, (asgt.v2.type.DataOuterClass.Invoice) dataStructure_);
       }
-      if (invoiceLine_ != null) {
+      if (dataStructureCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getInvoiceLine());
+          .computeMessageSize(3, (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4384,20 +4285,22 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.Data other = (asgt.v2.type.DataOuterClass.Data) obj;
 
-      if (hasTransaction() != other.hasTransaction()) return false;
-      if (hasTransaction()) {
-        if (!getTransaction()
-            .equals(other.getTransaction())) return false;
-      }
-      if (hasInvoice() != other.hasInvoice()) return false;
-      if (hasInvoice()) {
-        if (!getInvoice()
-            .equals(other.getInvoice())) return false;
-      }
-      if (hasInvoiceLine() != other.hasInvoiceLine()) return false;
-      if (hasInvoiceLine()) {
-        if (!getInvoiceLine()
-            .equals(other.getInvoiceLine())) return false;
+      if (!getDataStructureCase().equals(other.getDataStructureCase())) return false;
+      switch (dataStructureCase_) {
+        case 1:
+          if (!getTransaction()
+              .equals(other.getTransaction())) return false;
+          break;
+        case 2:
+          if (!getInvoice()
+              .equals(other.getInvoice())) return false;
+          break;
+        case 3:
+          if (!getInvoiceLine()
+              .equals(other.getInvoiceLine())) return false;
+          break;
+        case 0:
+        default:
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -4410,17 +4313,21 @@ public final class DataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTransaction()) {
-        hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
-        hash = (53 * hash) + getTransaction().hashCode();
-      }
-      if (hasInvoice()) {
-        hash = (37 * hash) + INVOICE_FIELD_NUMBER;
-        hash = (53 * hash) + getInvoice().hashCode();
-      }
-      if (hasInvoiceLine()) {
-        hash = (37 * hash) + INVOICE_LINE_FIELD_NUMBER;
-        hash = (53 * hash) + getInvoiceLine().hashCode();
+      switch (dataStructureCase_) {
+        case 1:
+          hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
+          hash = (53 * hash) + getTransaction().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + INVOICE_FIELD_NUMBER;
+          hash = (53 * hash) + getInvoice().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + INVOICE_LINE_FIELD_NUMBER;
+          hash = (53 * hash) + getInvoiceLine().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4555,24 +4462,8 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (transactionBuilder_ == null) {
-          transaction_ = null;
-        } else {
-          transaction_ = null;
-          transactionBuilder_ = null;
-        }
-        if (invoiceBuilder_ == null) {
-          invoice_ = null;
-        } else {
-          invoice_ = null;
-          invoiceBuilder_ = null;
-        }
-        if (invoiceLineBuilder_ == null) {
-          invoiceLine_ = null;
-        } else {
-          invoiceLine_ = null;
-          invoiceLineBuilder_ = null;
-        }
+        dataStructureCase_ = 0;
+        dataStructure_ = null;
         return this;
       }
 
@@ -4599,21 +4490,28 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.v2.type.DataOuterClass.Data buildPartial() {
         asgt.v2.type.DataOuterClass.Data result = new asgt.v2.type.DataOuterClass.Data(this);
-        if (transactionBuilder_ == null) {
-          result.transaction_ = transaction_;
-        } else {
-          result.transaction_ = transactionBuilder_.build();
+        if (dataStructureCase_ == 1) {
+          if (transactionBuilder_ == null) {
+            result.dataStructure_ = dataStructure_;
+          } else {
+            result.dataStructure_ = transactionBuilder_.build();
+          }
         }
-        if (invoiceBuilder_ == null) {
-          result.invoice_ = invoice_;
-        } else {
-          result.invoice_ = invoiceBuilder_.build();
+        if (dataStructureCase_ == 2) {
+          if (invoiceBuilder_ == null) {
+            result.dataStructure_ = dataStructure_;
+          } else {
+            result.dataStructure_ = invoiceBuilder_.build();
+          }
         }
-        if (invoiceLineBuilder_ == null) {
-          result.invoiceLine_ = invoiceLine_;
-        } else {
-          result.invoiceLine_ = invoiceLineBuilder_.build();
+        if (dataStructureCase_ == 3) {
+          if (invoiceLineBuilder_ == null) {
+            result.dataStructure_ = dataStructure_;
+          } else {
+            result.dataStructure_ = invoiceLineBuilder_.build();
+          }
         }
+        result.dataStructureCase_ = dataStructureCase_;
         onBuilt();
         return result;
       }
@@ -4662,14 +4560,22 @@ public final class DataOuterClass {
 
       public Builder mergeFrom(asgt.v2.type.DataOuterClass.Data other) {
         if (other == asgt.v2.type.DataOuterClass.Data.getDefaultInstance()) return this;
-        if (other.hasTransaction()) {
-          mergeTransaction(other.getTransaction());
-        }
-        if (other.hasInvoice()) {
-          mergeInvoice(other.getInvoice());
-        }
-        if (other.hasInvoiceLine()) {
-          mergeInvoiceLine(other.getInvoiceLine());
+        switch (other.getDataStructureCase()) {
+          case TRANSACTION: {
+            mergeTransaction(other.getTransaction());
+            break;
+          }
+          case INVOICE: {
+            mergeInvoice(other.getInvoice());
+            break;
+          }
+          case INVOICE_LINE: {
+            mergeInvoiceLine(other.getInvoiceLine());
+            break;
+          }
+          case DATASTRUCTURE_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4699,8 +4605,22 @@ public final class DataOuterClass {
         }
         return this;
       }
+      private int dataStructureCase_ = 0;
+      private java.lang.Object dataStructure_;
+      public DataStructureCase
+          getDataStructureCase() {
+        return DataStructureCase.forNumber(
+            dataStructureCase_);
+      }
 
-      private asgt.v2.type.DataOuterClass.Transaction transaction_;
+      public Builder clearDataStructure() {
+        dataStructureCase_ = 0;
+        dataStructure_ = null;
+        onChanged();
+        return this;
+      }
+
+
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Transaction, asgt.v2.type.DataOuterClass.Transaction.Builder, asgt.v2.type.DataOuterClass.TransactionOrBuilder> transactionBuilder_;
       /**
@@ -4711,8 +4631,9 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.Transaction transaction = 1;</code>
        * @return Whether the transaction field is set.
        */
+      @java.lang.Override
       public boolean hasTransaction() {
-        return transactionBuilder_ != null || transaction_ != null;
+        return dataStructureCase_ == 1;
       }
       /**
        * <pre>
@@ -4722,11 +4643,18 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.Transaction transaction = 1;</code>
        * @return The transaction.
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.Transaction getTransaction() {
         if (transactionBuilder_ == null) {
-          return transaction_ == null ? asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance() : transaction_;
+          if (dataStructureCase_ == 1) {
+            return (asgt.v2.type.DataOuterClass.Transaction) dataStructure_;
+          }
+          return asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
         } else {
-          return transactionBuilder_.getMessage();
+          if (dataStructureCase_ == 1) {
+            return transactionBuilder_.getMessage();
+          }
+          return asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
         }
       }
       /**
@@ -4741,12 +4669,12 @@ public final class DataOuterClass {
           if (value == null) {
             throw new NullPointerException();
           }
-          transaction_ = value;
+          dataStructure_ = value;
           onChanged();
         } else {
           transactionBuilder_.setMessage(value);
         }
-
+        dataStructureCase_ = 1;
         return this;
       }
       /**
@@ -4759,12 +4687,12 @@ public final class DataOuterClass {
       public Builder setTransaction(
           asgt.v2.type.DataOuterClass.Transaction.Builder builderForValue) {
         if (transactionBuilder_ == null) {
-          transaction_ = builderForValue.build();
+          dataStructure_ = builderForValue.build();
           onChanged();
         } else {
           transactionBuilder_.setMessage(builderForValue.build());
         }
-
+        dataStructureCase_ = 1;
         return this;
       }
       /**
@@ -4776,17 +4704,21 @@ public final class DataOuterClass {
        */
       public Builder mergeTransaction(asgt.v2.type.DataOuterClass.Transaction value) {
         if (transactionBuilder_ == null) {
-          if (transaction_ != null) {
-            transaction_ =
-              asgt.v2.type.DataOuterClass.Transaction.newBuilder(transaction_).mergeFrom(value).buildPartial();
+          if (dataStructureCase_ == 1 &&
+              dataStructure_ != asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance()) {
+            dataStructure_ = asgt.v2.type.DataOuterClass.Transaction.newBuilder((asgt.v2.type.DataOuterClass.Transaction) dataStructure_)
+                .mergeFrom(value).buildPartial();
           } else {
-            transaction_ = value;
+            dataStructure_ = value;
           }
           onChanged();
         } else {
-          transactionBuilder_.mergeFrom(value);
+          if (dataStructureCase_ == 1) {
+            transactionBuilder_.mergeFrom(value);
+          }
+          transactionBuilder_.setMessage(value);
         }
-
+        dataStructureCase_ = 1;
         return this;
       }
       /**
@@ -4798,13 +4730,18 @@ public final class DataOuterClass {
        */
       public Builder clearTransaction() {
         if (transactionBuilder_ == null) {
-          transaction_ = null;
-          onChanged();
+          if (dataStructureCase_ == 1) {
+            dataStructureCase_ = 0;
+            dataStructure_ = null;
+            onChanged();
+          }
         } else {
-          transaction_ = null;
-          transactionBuilder_ = null;
+          if (dataStructureCase_ == 1) {
+            dataStructureCase_ = 0;
+            dataStructure_ = null;
+          }
+          transactionBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -4815,8 +4752,6 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.Transaction transaction = 1;</code>
        */
       public asgt.v2.type.DataOuterClass.Transaction.Builder getTransactionBuilder() {
-        
-        onChanged();
         return getTransactionFieldBuilder().getBuilder();
       }
       /**
@@ -4826,12 +4761,15 @@ public final class DataOuterClass {
        *
        * <code>.asgt.v2.type.Transaction transaction = 1;</code>
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
-        if (transactionBuilder_ != null) {
+        if ((dataStructureCase_ == 1) && (transactionBuilder_ != null)) {
           return transactionBuilder_.getMessageOrBuilder();
         } else {
-          return transaction_ == null ?
-              asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance() : transaction_;
+          if (dataStructureCase_ == 1) {
+            return (asgt.v2.type.DataOuterClass.Transaction) dataStructure_;
+          }
+          return asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
         }
       }
       /**
@@ -4845,17 +4783,21 @@ public final class DataOuterClass {
           asgt.v2.type.DataOuterClass.Transaction, asgt.v2.type.DataOuterClass.Transaction.Builder, asgt.v2.type.DataOuterClass.TransactionOrBuilder> 
           getTransactionFieldBuilder() {
         if (transactionBuilder_ == null) {
+          if (!(dataStructureCase_ == 1)) {
+            dataStructure_ = asgt.v2.type.DataOuterClass.Transaction.getDefaultInstance();
+          }
           transactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               asgt.v2.type.DataOuterClass.Transaction, asgt.v2.type.DataOuterClass.Transaction.Builder, asgt.v2.type.DataOuterClass.TransactionOrBuilder>(
-                  getTransaction(),
+                  (asgt.v2.type.DataOuterClass.Transaction) dataStructure_,
                   getParentForChildren(),
                   isClean());
-          transaction_ = null;
+          dataStructure_ = null;
         }
+        dataStructureCase_ = 1;
+        onChanged();;
         return transactionBuilder_;
       }
 
-      private asgt.v2.type.DataOuterClass.Invoice invoice_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Invoice, asgt.v2.type.DataOuterClass.Invoice.Builder, asgt.v2.type.DataOuterClass.InvoiceOrBuilder> invoiceBuilder_;
       /**
@@ -4866,8 +4808,9 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.Invoice invoice = 2;</code>
        * @return Whether the invoice field is set.
        */
+      @java.lang.Override
       public boolean hasInvoice() {
-        return invoiceBuilder_ != null || invoice_ != null;
+        return dataStructureCase_ == 2;
       }
       /**
        * <pre>
@@ -4877,11 +4820,18 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.Invoice invoice = 2;</code>
        * @return The invoice.
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.Invoice getInvoice() {
         if (invoiceBuilder_ == null) {
-          return invoice_ == null ? asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance() : invoice_;
+          if (dataStructureCase_ == 2) {
+            return (asgt.v2.type.DataOuterClass.Invoice) dataStructure_;
+          }
+          return asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance();
         } else {
-          return invoiceBuilder_.getMessage();
+          if (dataStructureCase_ == 2) {
+            return invoiceBuilder_.getMessage();
+          }
+          return asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance();
         }
       }
       /**
@@ -4896,12 +4846,12 @@ public final class DataOuterClass {
           if (value == null) {
             throw new NullPointerException();
           }
-          invoice_ = value;
+          dataStructure_ = value;
           onChanged();
         } else {
           invoiceBuilder_.setMessage(value);
         }
-
+        dataStructureCase_ = 2;
         return this;
       }
       /**
@@ -4914,12 +4864,12 @@ public final class DataOuterClass {
       public Builder setInvoice(
           asgt.v2.type.DataOuterClass.Invoice.Builder builderForValue) {
         if (invoiceBuilder_ == null) {
-          invoice_ = builderForValue.build();
+          dataStructure_ = builderForValue.build();
           onChanged();
         } else {
           invoiceBuilder_.setMessage(builderForValue.build());
         }
-
+        dataStructureCase_ = 2;
         return this;
       }
       /**
@@ -4931,17 +4881,21 @@ public final class DataOuterClass {
        */
       public Builder mergeInvoice(asgt.v2.type.DataOuterClass.Invoice value) {
         if (invoiceBuilder_ == null) {
-          if (invoice_ != null) {
-            invoice_ =
-              asgt.v2.type.DataOuterClass.Invoice.newBuilder(invoice_).mergeFrom(value).buildPartial();
+          if (dataStructureCase_ == 2 &&
+              dataStructure_ != asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance()) {
+            dataStructure_ = asgt.v2.type.DataOuterClass.Invoice.newBuilder((asgt.v2.type.DataOuterClass.Invoice) dataStructure_)
+                .mergeFrom(value).buildPartial();
           } else {
-            invoice_ = value;
+            dataStructure_ = value;
           }
           onChanged();
         } else {
-          invoiceBuilder_.mergeFrom(value);
+          if (dataStructureCase_ == 2) {
+            invoiceBuilder_.mergeFrom(value);
+          }
+          invoiceBuilder_.setMessage(value);
         }
-
+        dataStructureCase_ = 2;
         return this;
       }
       /**
@@ -4953,13 +4907,18 @@ public final class DataOuterClass {
        */
       public Builder clearInvoice() {
         if (invoiceBuilder_ == null) {
-          invoice_ = null;
-          onChanged();
+          if (dataStructureCase_ == 2) {
+            dataStructureCase_ = 0;
+            dataStructure_ = null;
+            onChanged();
+          }
         } else {
-          invoice_ = null;
-          invoiceBuilder_ = null;
+          if (dataStructureCase_ == 2) {
+            dataStructureCase_ = 0;
+            dataStructure_ = null;
+          }
+          invoiceBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -4970,8 +4929,6 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.Invoice invoice = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.Invoice.Builder getInvoiceBuilder() {
-        
-        onChanged();
         return getInvoiceFieldBuilder().getBuilder();
       }
       /**
@@ -4981,12 +4938,15 @@ public final class DataOuterClass {
        *
        * <code>.asgt.v2.type.Invoice invoice = 2;</code>
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
-        if (invoiceBuilder_ != null) {
+        if ((dataStructureCase_ == 2) && (invoiceBuilder_ != null)) {
           return invoiceBuilder_.getMessageOrBuilder();
         } else {
-          return invoice_ == null ?
-              asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance() : invoice_;
+          if (dataStructureCase_ == 2) {
+            return (asgt.v2.type.DataOuterClass.Invoice) dataStructure_;
+          }
+          return asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance();
         }
       }
       /**
@@ -5000,17 +4960,21 @@ public final class DataOuterClass {
           asgt.v2.type.DataOuterClass.Invoice, asgt.v2.type.DataOuterClass.Invoice.Builder, asgt.v2.type.DataOuterClass.InvoiceOrBuilder> 
           getInvoiceFieldBuilder() {
         if (invoiceBuilder_ == null) {
+          if (!(dataStructureCase_ == 2)) {
+            dataStructure_ = asgt.v2.type.DataOuterClass.Invoice.getDefaultInstance();
+          }
           invoiceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               asgt.v2.type.DataOuterClass.Invoice, asgt.v2.type.DataOuterClass.Invoice.Builder, asgt.v2.type.DataOuterClass.InvoiceOrBuilder>(
-                  getInvoice(),
+                  (asgt.v2.type.DataOuterClass.Invoice) dataStructure_,
                   getParentForChildren(),
                   isClean());
-          invoice_ = null;
+          dataStructure_ = null;
         }
+        dataStructureCase_ = 2;
+        onChanged();;
         return invoiceBuilder_;
       }
 
-      private asgt.v2.type.DataOuterClass.InvoiceLine invoiceLine_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.InvoiceLine, asgt.v2.type.DataOuterClass.InvoiceLine.Builder, asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder> invoiceLineBuilder_;
       /**
@@ -5021,8 +4985,9 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
        * @return Whether the invoiceLine field is set.
        */
+      @java.lang.Override
       public boolean hasInvoiceLine() {
-        return invoiceLineBuilder_ != null || invoiceLine_ != null;
+        return dataStructureCase_ == 3;
       }
       /**
        * <pre>
@@ -5032,11 +4997,18 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
        * @return The invoiceLine.
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceLine getInvoiceLine() {
         if (invoiceLineBuilder_ == null) {
-          return invoiceLine_ == null ? asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance() : invoiceLine_;
+          if (dataStructureCase_ == 3) {
+            return (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_;
+          }
+          return asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance();
         } else {
-          return invoiceLineBuilder_.getMessage();
+          if (dataStructureCase_ == 3) {
+            return invoiceLineBuilder_.getMessage();
+          }
+          return asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance();
         }
       }
       /**
@@ -5051,12 +5023,12 @@ public final class DataOuterClass {
           if (value == null) {
             throw new NullPointerException();
           }
-          invoiceLine_ = value;
+          dataStructure_ = value;
           onChanged();
         } else {
           invoiceLineBuilder_.setMessage(value);
         }
-
+        dataStructureCase_ = 3;
         return this;
       }
       /**
@@ -5069,12 +5041,12 @@ public final class DataOuterClass {
       public Builder setInvoiceLine(
           asgt.v2.type.DataOuterClass.InvoiceLine.Builder builderForValue) {
         if (invoiceLineBuilder_ == null) {
-          invoiceLine_ = builderForValue.build();
+          dataStructure_ = builderForValue.build();
           onChanged();
         } else {
           invoiceLineBuilder_.setMessage(builderForValue.build());
         }
-
+        dataStructureCase_ = 3;
         return this;
       }
       /**
@@ -5086,17 +5058,21 @@ public final class DataOuterClass {
        */
       public Builder mergeInvoiceLine(asgt.v2.type.DataOuterClass.InvoiceLine value) {
         if (invoiceLineBuilder_ == null) {
-          if (invoiceLine_ != null) {
-            invoiceLine_ =
-              asgt.v2.type.DataOuterClass.InvoiceLine.newBuilder(invoiceLine_).mergeFrom(value).buildPartial();
+          if (dataStructureCase_ == 3 &&
+              dataStructure_ != asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance()) {
+            dataStructure_ = asgt.v2.type.DataOuterClass.InvoiceLine.newBuilder((asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_)
+                .mergeFrom(value).buildPartial();
           } else {
-            invoiceLine_ = value;
+            dataStructure_ = value;
           }
           onChanged();
         } else {
-          invoiceLineBuilder_.mergeFrom(value);
+          if (dataStructureCase_ == 3) {
+            invoiceLineBuilder_.mergeFrom(value);
+          }
+          invoiceLineBuilder_.setMessage(value);
         }
-
+        dataStructureCase_ = 3;
         return this;
       }
       /**
@@ -5108,13 +5084,18 @@ public final class DataOuterClass {
        */
       public Builder clearInvoiceLine() {
         if (invoiceLineBuilder_ == null) {
-          invoiceLine_ = null;
-          onChanged();
+          if (dataStructureCase_ == 3) {
+            dataStructureCase_ = 0;
+            dataStructure_ = null;
+            onChanged();
+          }
         } else {
-          invoiceLine_ = null;
-          invoiceLineBuilder_ = null;
+          if (dataStructureCase_ == 3) {
+            dataStructureCase_ = 0;
+            dataStructure_ = null;
+          }
+          invoiceLineBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -5125,8 +5106,6 @@ public final class DataOuterClass {
        * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
        */
       public asgt.v2.type.DataOuterClass.InvoiceLine.Builder getInvoiceLineBuilder() {
-        
-        onChanged();
         return getInvoiceLineFieldBuilder().getBuilder();
       }
       /**
@@ -5136,12 +5115,15 @@ public final class DataOuterClass {
        *
        * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
-        if (invoiceLineBuilder_ != null) {
+        if ((dataStructureCase_ == 3) && (invoiceLineBuilder_ != null)) {
           return invoiceLineBuilder_.getMessageOrBuilder();
         } else {
-          return invoiceLine_ == null ?
-              asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance() : invoiceLine_;
+          if (dataStructureCase_ == 3) {
+            return (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_;
+          }
+          return asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance();
         }
       }
       /**
@@ -5155,13 +5137,18 @@ public final class DataOuterClass {
           asgt.v2.type.DataOuterClass.InvoiceLine, asgt.v2.type.DataOuterClass.InvoiceLine.Builder, asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder> 
           getInvoiceLineFieldBuilder() {
         if (invoiceLineBuilder_ == null) {
+          if (!(dataStructureCase_ == 3)) {
+            dataStructure_ = asgt.v2.type.DataOuterClass.InvoiceLine.getDefaultInstance();
+          }
           invoiceLineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               asgt.v2.type.DataOuterClass.InvoiceLine, asgt.v2.type.DataOuterClass.InvoiceLine.Builder, asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder>(
-                  getInvoiceLine(),
+                  (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_,
                   getParentForChildren(),
                   isClean());
-          invoiceLine_ = null;
+          dataStructure_ = null;
         }
+        dataStructureCase_ = 3;
+        onChanged();;
         return invoiceLineBuilder_;
       }
       @java.lang.Override
@@ -5223,6 +5210,11 @@ public final class DataOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_v2_type_Invoice_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2_type_Transaction_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2_type_Transaction_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2_type_InvoiceLine_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5232,11 +5224,6 @@ public final class DataOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_v2_type_Supplier_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_v2_type_Transaction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_v2_type_Transaction_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2_type_Data_descriptor;
   private static final 
@@ -5253,22 +5240,21 @@ public final class DataOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027asgt/v2/type/data.proto\022\014asgt.v2.type\032" +
       "\037google/protobuf/timestamp.proto\032\027valida" +
-      "te/validate.proto\"\301\001\n\007Invoice\022.\n\nissue_d" +
-      "ate\030\001 \001(\0132\032.google.protobuf.Timestamp\022(\n" +
-      "\010supplier\030\002 \001(\0132\026.asgt.v2.type.Supplier\022" +
-      "\024\n\014customer_ref\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022)\n\010c" +
-      "urrency\030\006 \001(\tB\027\372B\024r\022(\n2\016^[A-Za-z0-9]*$\022\r" +
-      "\n\005total\030\007 \001(\002\",\n\013InvoiceLine\022\014\n\004text\030\010 \001" +
-      "(\t\022\017\n\007item_id\030\t \001(\t\"P\n\010Supplier\022#\n\002id\030\001 " +
-      "\001(\tB\027\372B\024r\022(@2\016^[A-Za-z0-9]*$\022\014\n\004name\030\004 \001" +
-      "(\t\022\021\n\tglobal_id\030\005 \001(\t\"+\n\013Transaction\022\014\n\004" +
-      "text\030\001 \001(\t\022\016\n\006amount\030\002 \001(\002\"\217\001\n\004Data\022.\n\013t" +
-      "ransaction\030\001 \001(\0132\031.asgt.v2.type.Transact" +
-      "ion\022&\n\007invoice\030\002 \001(\0132\025.asgt.v2.type.Invo" +
-      "ice\022/\n\014invoice_line\030\003 \001(\0132\031.asgt.v2.type" +
-      ".InvoiceLineB;Z9github.com/e-conomic/vml" +
-      "apis/gen/go/asgt/v2/type;asgttypeb\006proto" +
-      "3"
+      "te/validate.proto\"\027\n\007Invoice\022\014\n\004text\030\001 \001" +
+      "(\t\"+\n\013Transaction\022\014\n\004text\030\001 \001(\t\022\016\n\006amoun" +
+      "t\030\002 \001(\002\"\254\001\n\013InvoiceLine\022\017\n\007item_id\030\001 \001(\t" +
+      "\022\014\n\004text\030\002 \001(\t\022.\n\nissue_date\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022(\n\010supplier\030\004 \001(\013" +
+      "2\026.asgt.v2.type.Supplier\022\024\n\014customer_ref" +
+      "\030\005 \001(\t\022\016\n\006amount\030\007 \001(\002\"P\n\010Supplier\022#\n\002id" +
+      "\030\001 \001(\tB\027\372B\024r\022(@2\016^[A-Za-z0-9]*$\022\014\n\004name\030" +
+      "\002 \001(\t\022\021\n\tglobal_id\030\003 \001(\t\"\247\001\n\004Data\0220\n\013tra" +
+      "nsaction\030\001 \001(\0132\031.asgt.v2.type.Transactio" +
+      "nH\000\022(\n\007invoice\030\002 \001(\0132\025.asgt.v2.type.Invo" +
+      "iceH\000\0221\n\014invoice_line\030\003 \001(\0132\031.asgt.v2.ty" +
+      "pe.InvoiceLineH\000B\020\n\016data_structureB;Z9gi" +
+      "thub.com/e-conomic/vmlapis/gen/go/asgt/v" +
+      "2/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5281,31 +5267,31 @@ public final class DataOuterClass {
     internal_static_asgt_v2_type_Invoice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_type_Invoice_descriptor,
-        new java.lang.String[] { "IssueDate", "Supplier", "CustomerRef", "Text", "Currency", "Total", });
-    internal_static_asgt_v2_type_InvoiceLine_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_v2_type_InvoiceLine_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_v2_type_InvoiceLine_descriptor,
-        new java.lang.String[] { "Text", "ItemId", });
-    internal_static_asgt_v2_type_Supplier_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_asgt_v2_type_Supplier_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_v2_type_Supplier_descriptor,
-        new java.lang.String[] { "Id", "Name", "GlobalId", });
+        new java.lang.String[] { "Text", });
     internal_static_asgt_v2_type_Transaction_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_v2_type_Transaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_type_Transaction_descriptor,
         new java.lang.String[] { "Text", "Amount", });
+    internal_static_asgt_v2_type_InvoiceLine_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_v2_type_InvoiceLine_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2_type_InvoiceLine_descriptor,
+        new java.lang.String[] { "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Amount", });
+    internal_static_asgt_v2_type_Supplier_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_asgt_v2_type_Supplier_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2_type_Supplier_descriptor,
+        new java.lang.String[] { "Id", "Name", "GlobalId", });
     internal_static_asgt_v2_type_Data_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_v2_type_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_type_Data_descriptor,
-        new java.lang.String[] { "Transaction", "Invoice", "InvoiceLine", });
+        new java.lang.String[] { "Transaction", "Invoice", "InvoiceLine", "DataStructure", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);

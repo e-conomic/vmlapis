@@ -119,16 +119,16 @@ func (m *SuggestRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetName()) > 256 {
+	if len(m.GetDatasetName()) > 256 {
 		return SuggestRequestValidationError{
-			field:  "Name",
+			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
 	}
 
-	if !_SuggestRequest_Name_Pattern.MatchString(m.GetName()) {
+	if !_SuggestRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
 		return SuggestRequestValidationError{
-			field:  "Name",
+			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
 	}
@@ -210,7 +210,7 @@ var _ interface {
 	ErrorName() string
 } = SuggestRequestValidationError{}
 
-var _SuggestRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+var _SuggestRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on SuggestResponse with the rules defined
 // in the proto definition for this message. If any rules are violated, an
@@ -305,16 +305,16 @@ func (m *BatchSuggestRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetName()) > 256 {
+	if len(m.GetDatasetName()) > 256 {
 		return BatchSuggestRequestValidationError{
-			field:  "Name",
+			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
 	}
 
-	if !_BatchSuggestRequest_Name_Pattern.MatchString(m.GetName()) {
+	if !_BatchSuggestRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
 		return BatchSuggestRequestValidationError{
-			field:  "Name",
+			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
 	}
@@ -403,7 +403,7 @@ var _ interface {
 	ErrorName() string
 } = BatchSuggestRequestValidationError{}
 
-var _BatchSuggestRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+var _BatchSuggestRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on BatchSuggestResponse with the rules
 // defined in the proto definition for this message. If any rules are

@@ -638,20 +638,20 @@ public final class SuggesterServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The datasetName.
      */
-    java.lang.String getName();
+    java.lang.String getDatasetName();
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
-        getNameBytes();
+        getDatasetNameBytes();
 
     /**
      * <code>.asgt.v2.type.Data input = 2;</code>
@@ -696,7 +696,7 @@ public final class SuggesterServiceOuterClass {
       super(builder);
     }
     private SuggestRequest() {
-      name_ = "";
+      datasetName_ = "";
     }
 
     @java.lang.Override
@@ -732,7 +732,7 @@ public final class SuggesterServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = s;
+              datasetName_ = s;
               break;
             }
             case 18: {
@@ -793,26 +793,26 @@ public final class SuggesterServiceOuterClass {
               asgt.v2.SuggesterServiceOuterClass.SuggestRequest.class, asgt.v2.SuggesterServiceOuterClass.SuggestRequest.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetName_;
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The datasetName.
      */
     @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        datasetName_ = s;
         return s;
       }
     }
@@ -821,18 +821,18 @@ public final class SuggesterServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for datasetName.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        datasetName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -905,8 +905,8 @@ public final class SuggesterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       if (input_ != null) {
         output.writeMessage(2, getInput());
@@ -923,8 +923,8 @@ public final class SuggesterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -949,8 +949,8 @@ public final class SuggesterServiceOuterClass {
       }
       asgt.v2.SuggesterServiceOuterClass.SuggestRequest other = (asgt.v2.SuggesterServiceOuterClass.SuggestRequest) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
+      if (!getDatasetName()
+          .equals(other.getDatasetName())) return false;
       if (hasInput() != other.hasInput()) return false;
       if (hasInput()) {
         if (!getInput()
@@ -972,8 +972,8 @@ public final class SuggesterServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
       if (hasInput()) {
         hash = (37 * hash) + INPUT_FIELD_NUMBER;
         hash = (53 * hash) + getInput().hashCode();
@@ -1115,7 +1115,7 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        name_ = "";
+        datasetName_ = "";
 
         if (inputBuilder_ == null) {
           input_ = null;
@@ -1155,7 +1155,7 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public asgt.v2.SuggesterServiceOuterClass.SuggestRequest buildPartial() {
         asgt.v2.SuggesterServiceOuterClass.SuggestRequest result = new asgt.v2.SuggesterServiceOuterClass.SuggestRequest(this);
-        result.name_ = name_;
+        result.datasetName_ = datasetName_;
         if (inputBuilder_ == null) {
           result.input_ = input_;
         } else {
@@ -1214,8 +1214,8 @@ public final class SuggesterServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2.SuggesterServiceOuterClass.SuggestRequest other) {
         if (other == asgt.v2.SuggesterServiceOuterClass.SuggestRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
           onChanged();
         }
         if (other.hasInput()) {
@@ -1253,22 +1253,22 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object name_ = "";
+      private java.lang.Object datasetName_ = "";
       /**
        * <pre>
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @return The name.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @return The datasetName.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          name_ = s;
+          datasetName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1279,17 +1279,17 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for name.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          name_ = b;
+          datasetName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1300,17 +1300,17 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The name to set.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The datasetName to set.
        * @return This builder for chaining.
        */
-      public Builder setName(
+      public Builder setDatasetName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        name_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -1319,12 +1319,12 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearName() {
+      public Builder clearDatasetName() {
         
-        name_ = getDefaultInstance().getName();
+        datasetName_ = getDefaultInstance().getDatasetName();
         onChanged();
         return this;
       }
@@ -1333,18 +1333,18 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for name to set.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
-      public Builder setNameBytes(
+      public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        name_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -2472,20 +2472,20 @@ public final class SuggesterServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The datasetName.
      */
-    java.lang.String getName();
+    java.lang.String getDatasetName();
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
-        getNameBytes();
+        getDatasetNameBytes();
 
     /**
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
@@ -2539,7 +2539,7 @@ public final class SuggesterServiceOuterClass {
       super(builder);
     }
     private BatchSuggestRequest() {
-      name_ = "";
+      datasetName_ = "";
       inputs_ = java.util.Collections.emptyList();
     }
 
@@ -2577,7 +2577,7 @@ public final class SuggesterServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = s;
+              datasetName_ = s;
               break;
             }
             case 18: {
@@ -2637,26 +2637,26 @@ public final class SuggesterServiceOuterClass {
               asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest.class, asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetName_;
     /**
      * <pre>
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The datasetName.
      */
     @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        datasetName_ = s;
         return s;
       }
     }
@@ -2665,18 +2665,18 @@ public final class SuggesterServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for name.
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for datasetName.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        datasetName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2763,8 +2763,8 @@ public final class SuggesterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       for (int i = 0; i < inputs_.size(); i++) {
         output.writeMessage(2, inputs_.get(i));
@@ -2781,8 +2781,8 @@ public final class SuggesterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       for (int i = 0; i < inputs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -2807,8 +2807,8 @@ public final class SuggesterServiceOuterClass {
       }
       asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest other = (asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
+      if (!getDatasetName()
+          .equals(other.getDatasetName())) return false;
       if (!getInputsList()
           .equals(other.getInputsList())) return false;
       if (hasOptions() != other.hasOptions()) return false;
@@ -2827,8 +2827,8 @@ public final class SuggesterServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
       if (getInputsCount() > 0) {
         hash = (37 * hash) + INPUTS_FIELD_NUMBER;
         hash = (53 * hash) + getInputsList().hashCode();
@@ -2971,7 +2971,7 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        name_ = "";
+        datasetName_ = "";
 
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
@@ -3012,7 +3012,7 @@ public final class SuggesterServiceOuterClass {
       public asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest buildPartial() {
         asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest result = new asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest(this);
         int from_bitField0_ = bitField0_;
-        result.name_ = name_;
+        result.datasetName_ = datasetName_;
         if (inputsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             inputs_ = java.util.Collections.unmodifiableList(inputs_);
@@ -3075,8 +3075,8 @@ public final class SuggesterServiceOuterClass {
 
       public Builder mergeFrom(asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest other) {
         if (other == asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
           onChanged();
         }
         if (inputsBuilder_ == null) {
@@ -3138,22 +3138,22 @@ public final class SuggesterServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.lang.Object name_ = "";
+      private java.lang.Object datasetName_ = "";
       /**
        * <pre>
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @return The name.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @return The datasetName.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          name_ = s;
+          datasetName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3164,17 +3164,17 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for name.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          name_ = b;
+          datasetName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -3185,17 +3185,17 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The name to set.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The datasetName to set.
        * @return This builder for chaining.
        */
-      public Builder setName(
+      public Builder setDatasetName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        name_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -3204,12 +3204,12 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearName() {
+      public Builder clearDatasetName() {
         
-        name_ = getDefaultInstance().getName();
+        datasetName_ = getDefaultInstance().getDatasetName();
         onChanged();
         return this;
       }
@@ -3218,18 +3218,18 @@ public final class SuggesterServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for name to set.
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
-      public Builder setNameBytes(
+      public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        name_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -4683,45 +4683,34 @@ public final class SuggesterServiceOuterClass {
       "\"\201\001\n\016SuggestOptions\022\025\n\rsuggest_limit\030\001 \001" +
       "(\005\022=\n\016min_confidence\030\002 \001(\0162\033.asgt.type.C" +
       "onfidence.LevelB\010\372B\005\202\001\002\020\001:\031\222A\0262\024{\"sugges" +
-      "t_limit\": 3}\"\225\001\n\016SuggestRequest\0226\n\004name\030" +
-      "\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9" +
-      "_.>-]*$\022!\n\005input\030\002 \001(\0132\022.asgt.v2.type.Da" +
-      "ta\022(\n\007options\030\003 \001(\0132\027.asgt.v2.SuggestOpt" +
-      "ions\"]\n\017SuggestResponse\022)\n\nprediction\030\001 " +
-      "\001(\0132\025.asgt.type.Prediction\022\037\n\005model\030\002 \001(" +
-      "\0132\020.asgt.type.Model\"\233\001\n\023BatchSuggestRequ" +
-      "est\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
-      ".][A-Za-z0-9_.>-]*$\022\"\n\006inputs\030\002 \003(\0132\022.as" +
-      "gt.v2.type.Data\022(\n\007options\030\003 \001(\0132\027.asgt." +
-      "v2.SuggestOptions\"c\n\024BatchSuggestRespons" +
-      "e\022*\n\013predictions\030\001 \003(\0132\025.asgt.type.Predi" +
-      "ction\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model2\212" +
-      "\007\n\020SuggesterService\022\366\001\n\007Suggest\022\027.asgt.v" +
-      "2.SuggestRequest\032\030.asgt.v2.SuggestRespon" +
-      "se\"\267\001\202\323\344\223\002\260\001\"\033/v2/datasets/{name}:sugges" +
-      "t:\001*Z$\"\"/v2/datasets/{name=bank/*}:sugge" +
-      "stZ7\"5/v2/datasets/{name=electronic-invo" +
-      "ice-line/*}:suggestZ/\"-/v2/datasets/{nam" +
-      "e=scanned-invoice/*}:suggest\022\231\002\n\014BatchSu" +
-      "ggest\022\034.asgt.v2.BatchSuggestRequest\032\035.as" +
-      "gt.v2.BatchSuggestResponse\"\313\001\202\323\344\223\002\304\001\" /v" +
-      "2/datasets/{name}:batchSuggest:\001*Z)\"\'/v2" +
-      "/datasets/{name=bank/*}:batchSuggestZ<\":" +
-      "/v2/datasets/{name=electronic-invoice-li" +
-      "ne/*}:batchSuggestZ4\"2/v2/datasets/{name" +
-      "=scanned-invoice/*}:batchSuggest\022\266\002\n\021Mod" +
-      "elBatchSuggest\022\034.asgt.v2.BatchSuggestReq" +
-      "uest\032\035.asgt.v2.BatchSuggestResponse\"\343\001\202\323" +
-      "\344\223\002\334\001\"&/v2/datasets/{name}/model:batchSu" +
-      "ggest:\001*Z/\"-/v2/datasets/{name=bank/*}/m" +
-      "odel:batchSuggestZB\"@/v2/datasets/{name=" +
-      "electronic-invoice-line/*}/model:batchSu" +
-      "ggestZ:\"8/v2/datasets/{name=scanned-invo" +
-      "ice/*}/model:batchSuggest\032(\222A%\022#Make pre" +
-      "dictions against a dataset.BjZ+github.co" +
-      "m/e-conomic/vmlapis/gen/go/asgt/v2\222A:\022\021\n" +
-      "\013AutoSuggest2\002v2*\001\0022\020application/json:\020a" +
-      "pplication/jsonb\006proto3"
+      "t_limit\": 3}\"\235\001\n\016SuggestRequest\022>\n\014datas" +
+      "et_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
+      "-Za-z0-9_.>-]*$\022!\n\005input\030\002 \001(\0132\022.asgt.v2" +
+      ".type.Data\022(\n\007options\030\003 \001(\0132\027.asgt.v2.Su" +
+      "ggestOptions\"]\n\017SuggestResponse\022)\n\npredi" +
+      "ction\030\001 \001(\0132\025.asgt.type.Prediction\022\037\n\005mo" +
+      "del\030\002 \001(\0132\020.asgt.type.Model\"\243\001\n\023BatchSug" +
+      "gestRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#" +
+      "(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022\"\n\006i" +
+      "nputs\030\002 \003(\0132\022.asgt.v2.type.Data\022(\n\007optio" +
+      "ns\030\003 \001(\0132\027.asgt.v2.SuggestOptions\"c\n\024Bat" +
+      "chSuggestResponse\022*\n\013predictions\030\001 \003(\0132\025" +
+      ".asgt.type.Prediction\022\037\n\005model\030\002 \001(\0132\020.a" +
+      "sgt.type.Model2\273\003\n\020SuggesterService\022l\n\007S" +
+      "uggest\022\027.asgt.v2.SuggestRequest\032\030.asgt.v" +
+      "2.SuggestResponse\".\202\323\344\223\002(\"#/v2/datasets/" +
+      "{dataset_name}:suggest:\001*\022\200\001\n\014BatchSugge" +
+      "st\022\034.asgt.v2.BatchSuggestRequest\032\035.asgt." +
+      "v2.BatchSuggestResponse\"3\202\323\344\223\002-\"(/v2/dat" +
+      "asets/{dataset_name}:batchSuggest:\001*\022\213\001\n" +
+      "\021ModelBatchSuggest\022\034.asgt.v2.BatchSugges" +
+      "tRequest\032\035.asgt.v2.BatchSuggestResponse\"" +
+      "9\202\323\344\223\0023\"./v2/datasets/{dataset_name}/mod" +
+      "el:batchSuggest:\001*\032(\222A%\022#Make prediction" +
+      "s against a dataset.BjZ+github.com/e-con" +
+      "omic/vmlapis/gen/go/asgt/v2\222A:\022\021\n\013AutoSu" +
+      "ggest2\002v2*\001\0022\020application/json:\020applicat" +
+      "ion/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4744,7 +4733,7 @@ public final class SuggesterServiceOuterClass {
     internal_static_asgt_v2_SuggestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_SuggestRequest_descriptor,
-        new java.lang.String[] { "Name", "Input", "Options", });
+        new java.lang.String[] { "DatasetName", "Input", "Options", });
     internal_static_asgt_v2_SuggestResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_v2_SuggestResponse_fieldAccessorTable = new
@@ -4756,7 +4745,7 @@ public final class SuggesterServiceOuterClass {
     internal_static_asgt_v2_BatchSuggestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_BatchSuggestRequest_descriptor,
-        new java.lang.String[] { "Name", "Inputs", "Options", });
+        new java.lang.String[] { "DatasetName", "Inputs", "Options", });
     internal_static_asgt_v2_BatchSuggestResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_v2_BatchSuggestResponse_fieldAccessorTable = new

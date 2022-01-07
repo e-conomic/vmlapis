@@ -244,16 +244,16 @@ proto.asgt.v2.DatasetServicePromiseClient.prototype.createDataset =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.v2.CreateDatasetRequest,
+ *   !proto.asgt.v2.CreateOrUpdateDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_DatasetService_CreateOrUpdateDataset = new grpc.web.MethodDescriptor(
   '/asgt.v2.DatasetService/CreateOrUpdateDataset',
   grpc.web.MethodType.UNARY,
-  proto.asgt.v2.CreateDatasetRequest,
+  proto.asgt.v2.CreateOrUpdateDatasetRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.v2.CreateDatasetRequest} request
+   * @param {!proto.asgt.v2.CreateOrUpdateDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -266,13 +266,13 @@ const methodDescriptor_DatasetService_CreateOrUpdateDataset = new grpc.web.Metho
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.v2.CreateDatasetRequest,
+ *   !proto.asgt.v2.CreateOrUpdateDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_DatasetService_CreateOrUpdateDataset = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.v2.CreateDatasetRequest} request
+   * @param {!proto.asgt.v2.CreateOrUpdateDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -283,7 +283,7 @@ const methodInfo_DatasetService_CreateOrUpdateDataset = new grpc.web.AbstractCli
 
 
 /**
- * @param {!proto.asgt.v2.CreateDatasetRequest} request The
+ * @param {!proto.asgt.v2.CreateOrUpdateDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -304,7 +304,7 @@ proto.asgt.v2.DatasetServiceClient.prototype.createOrUpdateDataset =
 
 
 /**
- * @param {!proto.asgt.v2.CreateDatasetRequest} request The
+ * @param {!proto.asgt.v2.CreateOrUpdateDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata

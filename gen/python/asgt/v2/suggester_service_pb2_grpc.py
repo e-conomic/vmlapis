@@ -42,7 +42,7 @@ class SuggesterServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def BatchSuggest(self, request, context):
-        """Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+        """BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

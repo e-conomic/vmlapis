@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2\222A:\022\021\n\013AutoSuggest2\002v2*\001\0022\020application/json:\020application/json',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1f\x61sgt/v2/suggester_service.proto\x12\x07\x61sgt.v2\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x19options/annotations.proto\x1a\x17validate/validate.proto\"\x81\x01\n\x0eSuggestOptions\x12\x15\n\rsuggest_limit\x18\x01 \x01(\x05\x12=\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01:\x19\x92\x41\x16\x32\x14{\"suggest_limit\": 3}\"\x95\x01\n\x0eSuggestRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12!\n\x05input\x18\x02 \x01(\x0b\x32\x12.asgt.v2.type.Data\x12(\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptions\"]\n\x0fSuggestResponse\x12)\n\nprediction\x18\x01 \x01(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"\x9b\x01\n\x13\x42\x61tchSuggestRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\"\n\x06inputs\x18\x02 \x03(\x0b\x32\x12.asgt.v2.type.Data\x12(\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptions\"c\n\x14\x42\x61tchSuggestResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model2\x8a\x07\n\x10SuggesterService\x12\xf6\x01\n\x07Suggest\x12\x17.asgt.v2.SuggestRequest\x1a\x18.asgt.v2.SuggestResponse\"\xb7\x01\x82\xd3\xe4\x93\x02\xb0\x01\"\x1b/v2/datasets/{name}:suggest:\x01*Z$\"\"/v2/datasets/{name=bank/*}:suggestZ7\"5/v2/datasets/{name=electronic-invoice-line/*}:suggestZ/\"-/v2/datasets/{name=scanned-invoice/*}:suggest\x12\x99\x02\n\x0c\x42\x61tchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"\xcb\x01\x82\xd3\xe4\x93\x02\xc4\x01\" /v2/datasets/{name}:batchSuggest:\x01*Z)\"\'/v2/datasets/{name=bank/*}:batchSuggestZ<\":/v2/datasets/{name=electronic-invoice-line/*}:batchSuggestZ4\"2/v2/datasets/{name=scanned-invoice/*}:batchSuggest\x12\xb6\x02\n\x11ModelBatchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"\xe3\x01\x82\xd3\xe4\x93\x02\xdc\x01\"&/v2/datasets/{name}/model:batchSuggest:\x01*Z/\"-/v2/datasets/{name=bank/*}/model:batchSuggestZB\"@/v2/datasets/{name=electronic-invoice-line/*}/model:batchSuggestZ:\"8/v2/datasets/{name=scanned-invoice/*}/model:batchSuggest\x1a(\x92\x41%\x12#Make predictions against a dataset.BjZ+github.com/e-conomic/vmlapis/gen/go/asgt/v2\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v2*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3'
+  serialized_pb=b'\n\x1f\x61sgt/v2/suggester_service.proto\x12\x07\x61sgt.v2\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x19options/annotations.proto\x1a\x17validate/validate.proto\"\x81\x01\n\x0eSuggestOptions\x12\x15\n\rsuggest_limit\x18\x01 \x01(\x05\x12=\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01:\x19\x92\x41\x16\x32\x14{\"suggest_limit\": 3}\"\x9d\x01\n\x0eSuggestRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12!\n\x05input\x18\x02 \x01(\x0b\x32\x12.asgt.v2.type.Data\x12(\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptions\"]\n\x0fSuggestResponse\x12)\n\nprediction\x18\x01 \x01(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"\xa3\x01\n\x13\x42\x61tchSuggestRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\"\n\x06inputs\x18\x02 \x03(\x0b\x32\x12.asgt.v2.type.Data\x12(\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptions\"c\n\x14\x42\x61tchSuggestResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model2\xbb\x03\n\x10SuggesterService\x12l\n\x07Suggest\x12\x17.asgt.v2.SuggestRequest\x1a\x18.asgt.v2.SuggestResponse\".\x82\xd3\xe4\x93\x02(\"#/v2/datasets/{dataset_name}:suggest:\x01*\x12\x80\x01\n\x0c\x42\x61tchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"3\x82\xd3\xe4\x93\x02-\"(/v2/datasets/{dataset_name}:batchSuggest:\x01*\x12\x8b\x01\n\x11ModelBatchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"9\x82\xd3\xe4\x93\x02\x33\"./v2/datasets/{dataset_name}/model:batchSuggest:\x01*\x1a(\x92\x41%\x12#Make predictions against a dataset.BjZ+github.com/e-conomic/vmlapis/gen/go/asgt/v2\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v2*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3'
   ,
   dependencies=[asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,asgt_dot_v2_dot_type_dot_data__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -80,7 +80,7 @@ _SUGGESTREQUEST = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='asgt.v2.SuggestRequest.name', index=0,
+      name='dataset_name', full_name='asgt.v2.SuggestRequest.dataset_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -113,7 +113,7 @@ _SUGGESTREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=335,
-  serialized_end=484,
+  serialized_end=492,
 )
 
 
@@ -151,8 +151,8 @@ _SUGGESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=486,
-  serialized_end=579,
+  serialized_start=494,
+  serialized_end=587,
 )
 
 
@@ -165,7 +165,7 @@ _BATCHSUGGESTREQUEST = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='asgt.v2.BatchSuggestRequest.name', index=0,
+      name='dataset_name', full_name='asgt.v2.BatchSuggestRequest.dataset_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -197,8 +197,8 @@ _BATCHSUGGESTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=582,
-  serialized_end=737,
+  serialized_start=590,
+  serialized_end=753,
 )
 
 
@@ -236,8 +236,8 @@ _BATCHSUGGESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=739,
-  serialized_end=838,
+  serialized_start=755,
+  serialized_end=854,
 )
 
 _SUGGESTOPTIONS.fields_by_name['min_confidence'].enum_type = asgt_dot_type_dot_prediction__pb2._CONFIDENCE_LEVEL
@@ -295,8 +295,8 @@ _sym_db.RegisterMessage(BatchSuggestResponse)
 DESCRIPTOR._options = None
 _SUGGESTOPTIONS.fields_by_name['min_confidence']._options = None
 _SUGGESTOPTIONS._options = None
-_SUGGESTREQUEST.fields_by_name['name']._options = None
-_BATCHSUGGESTREQUEST.fields_by_name['name']._options = None
+_SUGGESTREQUEST.fields_by_name['dataset_name']._options = None
+_BATCHSUGGESTREQUEST.fields_by_name['dataset_name']._options = None
 
 _SUGGESTERSERVICE = _descriptor.ServiceDescriptor(
   name='SuggesterService',
@@ -305,8 +305,8 @@ _SUGGESTERSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=b'\222A%\022#Make predictions against a dataset.',
   create_key=_descriptor._internal_create_key,
-  serialized_start=841,
-  serialized_end=1747,
+  serialized_start=857,
+  serialized_end=1300,
   methods=[
   _descriptor.MethodDescriptor(
     name='Suggest',
@@ -315,7 +315,7 @@ _SUGGESTERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_SUGGESTREQUEST,
     output_type=_SUGGESTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\260\001\"\033/v2/datasets/{name}:suggest:\001*Z$\"\"/v2/datasets/{name=bank/*}:suggestZ7\"5/v2/datasets/{name=electronic-invoice-line/*}:suggestZ/\"-/v2/datasets/{name=scanned-invoice/*}:suggest',
+    serialized_options=b'\202\323\344\223\002(\"#/v2/datasets/{dataset_name}:suggest:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -325,7 +325,7 @@ _SUGGESTERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_BATCHSUGGESTREQUEST,
     output_type=_BATCHSUGGESTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\304\001\" /v2/datasets/{name}:batchSuggest:\001*Z)\"\'/v2/datasets/{name=bank/*}:batchSuggestZ<\":/v2/datasets/{name=electronic-invoice-line/*}:batchSuggestZ4\"2/v2/datasets/{name=scanned-invoice/*}:batchSuggest',
+    serialized_options=b'\202\323\344\223\002-\"(/v2/datasets/{dataset_name}:batchSuggest:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -335,7 +335,7 @@ _SUGGESTERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_BATCHSUGGESTREQUEST,
     output_type=_BATCHSUGGESTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\334\001\"&/v2/datasets/{name}/model:batchSuggest:\001*Z/\"-/v2/datasets/{name=bank/*}/model:batchSuggestZB\"@/v2/datasets/{name=electronic-invoice-line/*}/model:batchSuggestZ:\"8/v2/datasets/{name=scanned-invoice/*}/model:batchSuggest',
+    serialized_options=b'\202\323\344\223\0023\"./v2/datasets/{dataset_name}/model:batchSuggest:\001*',
     create_key=_descriptor._internal_create_key,
   ),
 ])

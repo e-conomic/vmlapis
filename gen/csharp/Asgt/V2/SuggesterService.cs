@@ -31,48 +31,38 @@ namespace Asgt.V2 {
             "aWRhdGUvdmFsaWRhdGUucHJvdG8igQEKDlN1Z2dlc3RPcHRpb25zEhUKDXN1",
             "Z2dlc3RfbGltaXQYASABKAUSPQoObWluX2NvbmZpZGVuY2UYAiABKA4yGy5h",
             "c2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbEII+kIFggECEAE6GZJBFjIUeyJz",
-            "dWdnZXN0X2xpbWl0IjogM30ilQEKDlN1Z2dlc3RSZXF1ZXN0EjYKBG5hbWUY",
-            "ASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1d",
-            "KiQSIQoFaW5wdXQYAiABKAsyEi5hc2d0LnYyLnR5cGUuRGF0YRIoCgdvcHRp",
-            "b25zGAMgASgLMhcuYXNndC52Mi5TdWdnZXN0T3B0aW9ucyJdCg9TdWdnZXN0",
-            "UmVzcG9uc2USKQoKcHJlZGljdGlvbhgBIAEoCzIVLmFzZ3QudHlwZS5QcmVk",
-            "aWN0aW9uEh8KBW1vZGVsGAIgASgLMhAuYXNndC50eXBlLk1vZGVsIpsBChNC",
-            "YXRjaFN1Z2dlc3RSZXF1ZXN0EjYKBG5hbWUYASABKAlCKPpCJXIjKIACMh5e",
-            "W0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1dKiQSIgoGaW5wdXRzGAIgAygL",
-            "MhIuYXNndC52Mi50eXBlLkRhdGESKAoHb3B0aW9ucxgDIAEoCzIXLmFzZ3Qu",
-            "djIuU3VnZ2VzdE9wdGlvbnMiYwoUQmF0Y2hTdWdnZXN0UmVzcG9uc2USKgoL",
-            "cHJlZGljdGlvbnMYASADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvbhIfCgVt",
-            "b2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbDKKBwoQU3VnZ2VzdGVyU2Vy",
-            "dmljZRL2AQoHU3VnZ2VzdBIXLmFzZ3QudjIuU3VnZ2VzdFJlcXVlc3QaGC5h",
-            "c2d0LnYyLlN1Z2dlc3RSZXNwb25zZSK3AYLT5JMCsAEiGy92Mi9kYXRhc2V0",
-            "cy97bmFtZX06c3VnZ2VzdDoBKlokIiIvdjIvZGF0YXNldHMve25hbWU9YmFu",
-            "ay8qfTpzdWdnZXN0WjciNS92Mi9kYXRhc2V0cy97bmFtZT1lbGVjdHJvbmlj",
-            "LWludm9pY2UtbGluZS8qfTpzdWdnZXN0Wi8iLS92Mi9kYXRhc2V0cy97bmFt",
-            "ZT1zY2FubmVkLWludm9pY2UvKn06c3VnZ2VzdBKZAgoMQmF0Y2hTdWdnZXN0",
-            "EhwuYXNndC52Mi5CYXRjaFN1Z2dlc3RSZXF1ZXN0Gh0uYXNndC52Mi5CYXRj",
-            "aFN1Z2dlc3RSZXNwb25zZSLLAYLT5JMCxAEiIC92Mi9kYXRhc2V0cy97bmFt",
-            "ZX06YmF0Y2hTdWdnZXN0OgEqWikiJy92Mi9kYXRhc2V0cy97bmFtZT1iYW5r",
-            "Lyp9OmJhdGNoU3VnZ2VzdFo8IjovdjIvZGF0YXNldHMve25hbWU9ZWxlY3Ry",
-            "b25pYy1pbnZvaWNlLWxpbmUvKn06YmF0Y2hTdWdnZXN0WjQiMi92Mi9kYXRh",
-            "c2V0cy97bmFtZT1zY2FubmVkLWludm9pY2UvKn06YmF0Y2hTdWdnZXN0ErYC",
-            "ChFNb2RlbEJhdGNoU3VnZ2VzdBIcLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVx",
-            "dWVzdBodLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVzcG9uc2Ui4wGC0+STAtwB",
-            "IiYvdjIvZGF0YXNldHMve25hbWV9L21vZGVsOmJhdGNoU3VnZ2VzdDoBKlov",
-            "Ii0vdjIvZGF0YXNldHMve25hbWU9YmFuay8qfS9tb2RlbDpiYXRjaFN1Z2dl",
-            "c3RaQiJAL3YyL2RhdGFzZXRzL3tuYW1lPWVsZWN0cm9uaWMtaW52b2ljZS1s",
-            "aW5lLyp9L21vZGVsOmJhdGNoU3VnZ2VzdFo6IjgvdjIvZGF0YXNldHMve25h",
-            "bWU9c2Nhbm5lZC1pbnZvaWNlLyp9L21vZGVsOmJhdGNoU3VnZ2VzdBookkEl",
-            "EiNNYWtlIHByZWRpY3Rpb25zIGFnYWluc3QgYSBkYXRhc2V0LkJqWitnaXRo",
-            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3YykkE6EhEK",
-            "C0F1dG9TdWdnZXN0MgJ2MioBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGlj",
-            "YXRpb24vanNvbmIGcHJvdG8z"));
+            "dWdnZXN0X2xpbWl0IjogM30inQEKDlN1Z2dlc3RSZXF1ZXN0Ej4KDGRhdGFz",
+            "ZXRfbmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16",
+            "MC05Xy4+LV0qJBIhCgVpbnB1dBgCIAEoCzISLmFzZ3QudjIudHlwZS5EYXRh",
+            "EigKB29wdGlvbnMYAyABKAsyFy5hc2d0LnYyLlN1Z2dlc3RPcHRpb25zIl0K",
+            "D1N1Z2dlc3RSZXNwb25zZRIpCgpwcmVkaWN0aW9uGAEgASgLMhUuYXNndC50",
+            "eXBlLlByZWRpY3Rpb24SHwoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9k",
+            "ZWwiowEKE0JhdGNoU3VnZ2VzdFJlcXVlc3QSPgoMZGF0YXNldF9uYW1lGAEg",
+            "ASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSok",
+            "EiIKBmlucHV0cxgCIAMoCzISLmFzZ3QudjIudHlwZS5EYXRhEigKB29wdGlv",
+            "bnMYAyABKAsyFy5hc2d0LnYyLlN1Z2dlc3RPcHRpb25zImMKFEJhdGNoU3Vn",
+            "Z2VzdFJlc3BvbnNlEioKC3ByZWRpY3Rpb25zGAEgAygLMhUuYXNndC50eXBl",
+            "LlByZWRpY3Rpb24SHwoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9kZWwy",
+            "uwMKEFN1Z2dlc3RlclNlcnZpY2USbAoHU3VnZ2VzdBIXLmFzZ3QudjIuU3Vn",
+            "Z2VzdFJlcXVlc3QaGC5hc2d0LnYyLlN1Z2dlc3RSZXNwb25zZSIugtPkkwIo",
+            "IiMvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06c3VnZ2VzdDoBKhKAAQoM",
+            "QmF0Y2hTdWdnZXN0EhwuYXNndC52Mi5CYXRjaFN1Z2dlc3RSZXF1ZXN0Gh0u",
+            "YXNndC52Mi5CYXRjaFN1Z2dlc3RSZXNwb25zZSIzgtPkkwItIigvdjIvZGF0",
+            "YXNldHMve2RhdGFzZXRfbmFtZX06YmF0Y2hTdWdnZXN0OgEqEosBChFNb2Rl",
+            "bEJhdGNoU3VnZ2VzdBIcLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVxdWVzdBod",
+            "LmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVzcG9uc2UiOYLT5JMCMyIuL3YyL2Rh",
+            "dGFzZXRzL3tkYXRhc2V0X25hbWV9L21vZGVsOmJhdGNoU3VnZ2VzdDoBKhoo",
+            "kkElEiNNYWtlIHByZWRpY3Rpb25zIGFnYWluc3QgYSBkYXRhc2V0LkJqWitn",
+            "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3YykkE6",
+            "EhEKC0F1dG9TdWdnZXN0MgJ2MioBAjIQYXBwbGljYXRpb24vanNvbjoQYXBw",
+            "bGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestRequest), global::Asgt.V2.SuggestRequest.Parser, new[]{ "Name", "Input", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestRequest), global::Asgt.V2.SuggestRequest.Parser, new[]{ "DatasetName", "Input", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestResponse), global::Asgt.V2.SuggestResponse.Parser, new[]{ "Prediction", "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestRequest), global::Asgt.V2.BatchSuggestRequest.Parser, new[]{ "Name", "Inputs", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestRequest), global::Asgt.V2.BatchSuggestRequest.Parser, new[]{ "DatasetName", "Inputs", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestResponse), global::Asgt.V2.BatchSuggestResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null)
           }));
     }
@@ -299,7 +289,7 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SuggestRequest(SuggestRequest other) : this() {
-      name_ = other.name_;
+      datasetName_ = other.datasetName_;
       input_ = other.input_ != null ? other.input_.Clone() : null;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -310,17 +300,17 @@ namespace Asgt.V2 {
       return new SuggestRequest(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 1;
+    private string datasetName_ = "";
     /// <summary>
     /// text-no-spaces
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
+    public string DatasetName {
+      get { return datasetName_; }
       set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -359,7 +349,7 @@ namespace Asgt.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
+      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Input, other.Input)) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -368,7 +358,7 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (input_ != null) hash ^= Input.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
@@ -384,9 +374,9 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Name.Length != 0) {
+      if (DatasetName.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteString(DatasetName);
       }
       if (input_ != null) {
         output.WriteRawTag(18);
@@ -404,8 +394,8 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
       }
       if (input_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
@@ -424,8 +414,8 @@ namespace Asgt.V2 {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
       }
       if (other.input_ != null) {
         if (input_ == null) {
@@ -454,7 +444,7 @@ namespace Asgt.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            DatasetName = input.ReadString();
             break;
           }
           case 18: {
@@ -486,7 +476,7 @@ namespace Asgt.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
+            DatasetName = input.ReadString();
             break;
           }
           case 18: {
@@ -744,7 +734,7 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchSuggestRequest(BatchSuggestRequest other) : this() {
-      name_ = other.name_;
+      datasetName_ = other.datasetName_;
       inputs_ = other.inputs_.Clone();
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -755,17 +745,17 @@ namespace Asgt.V2 {
       return new BatchSuggestRequest(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 1;
+    private string datasetName_ = "";
     /// <summary>
     /// text-no-spaces
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
+    public string DatasetName {
+      get { return datasetName_; }
       set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -803,7 +793,7 @@ namespace Asgt.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
+      if (DatasetName != other.DatasetName) return false;
       if(!inputs_.Equals(other.inputs_)) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -812,7 +802,7 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       hash ^= inputs_.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
@@ -828,9 +818,9 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Name.Length != 0) {
+      if (DatasetName.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteString(DatasetName);
       }
       inputs_.WriteTo(output, _repeated_inputs_codec);
       if (options_ != null) {
@@ -845,8 +835,8 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
       }
       size += inputs_.CalculateSize(_repeated_inputs_codec);
       if (options_ != null) {
@@ -863,8 +853,8 @@ namespace Asgt.V2 {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
       }
       inputs_.Add(other.inputs_);
       if (other.options_ != null) {
@@ -888,7 +878,7 @@ namespace Asgt.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            DatasetName = input.ReadString();
             break;
           }
           case 18: {
@@ -917,7 +907,7 @@ namespace Asgt.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
+            DatasetName = input.ReadString();
             break;
           }
           case 18: {
