@@ -31,36 +31,16 @@ service SuggesterService {
   // Suggest target values for some input using a dataset, returning an empty result if no model exists.
   rpc Suggest (SuggestRequest) returns (SuggestResponse) {
     option (google.api.http) = {
-      post: "/v2/datasets/{name}:suggest"
+      post: "/v2/datasets/{dataset_name}:suggest"
       body: "*"
-
-      additional_bindings {
-        post: "/v2/datasets/{name=bank/*}:suggest"
-      }
-      additional_bindings {
-        post: "/v2/datasets/{name=electronic-invoice-line/*}:suggest"
-      }
-      additional_bindings {
-        post: "/v2/datasets/{name=scanned-invoice/*}:suggest"
-      }
     };
   }
 
-  // Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+  // BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
   rpc BatchSuggest (BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
-      post: "/v2/datasets/{name}:batchSuggest"
+      post: "/v2/datasets/{dataset_name}:batchSuggest"
       body: "*"
-
-      additional_bindings {
-        post: "/v2/datasets/{name=bank/*}:batchSuggest"
-      }
-      additional_bindings {
-        post: "/v2/datasets/{name=electronic-invoice-line/*}:batchSuggest"
-      }
-      additional_bindings {
-        post: "/v2/datasets/{name=scanned-invoice/*}:batchSuggest"
-      }
     };
   }
 
@@ -68,18 +48,8 @@ service SuggesterService {
   // Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
   rpc ModelBatchSuggest (BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
-      post: "/v2/datasets/{name}/model:batchSuggest"
+      post: "/v2/datasets/{dataset_name}/model:batchSuggest"
       body: "*"
-
-      additional_bindings {
-        post: "/v2/datasets/{name=bank/*}/model:batchSuggest"
-      }
-      additional_bindings {
-        post: "/v2/datasets/{name=electronic-invoice-line/*}/model:batchSuggest"
-      }
-      additional_bindings {
-        post: "/v2/datasets/{name=scanned-invoice/*}/model:batchSuggest"
-      }
     };
   }
 }
@@ -95,7 +65,7 @@ message SuggestOptions {
 }
 
 message SuggestRequest {
-  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   asgt.v2.type.Data input = 2;
   SuggestOptions options = 3;
 }
@@ -106,7 +76,7 @@ message SuggestResponse {
 }
 
 message BatchSuggestRequest {
-  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   repeated asgt.v2.type.Data inputs = 2;
   SuggestOptions options = 3;
 }
