@@ -40,7 +40,6 @@ service DatasetService {
   rpc CreateOrUpdateDataset (CreateOrUpdateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       put: "/v2/datasets/{dataset_name}"
-      body: "*"
     };
   }
 

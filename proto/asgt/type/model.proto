@@ -20,4 +20,5 @@ message Model {
   int32 training_size = 6 [(gen_bq_schema.bigquery).ignore = true]; 
   repeated asgt.type.TargetMetrics confidence_scores = 7 [(gen_bq_schema.bigquery).ignore = true]; 
   InputType input_type = 8;
+  string dataset_type = 9;
 }
