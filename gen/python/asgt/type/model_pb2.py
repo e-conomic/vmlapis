@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xb2\x02\n\x05Model\x12\x16\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1b\n\x0c\x64\x61taset_size\x18\x05 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12\x1c\n\rtraining_size\x18\x06 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12:\n\x11\x63onfidence_scores\x18\x07 \x03(\x0b\x32\x18.asgt.type.TargetMetricsB\x05\xea?\x02\x18\x01\x12.\n\ninput_type\x18\x08 \x01(\x0e\x32\x1a.asgt.type.Model.InputType\"4\n\tInputType\x12\x13\n\x0f\x46\x45\x41TURE_TENSORS\x10\x00\x12\x12\n\x0e\x45XAMPLE_TENSOR\x10\x01J\x04\x08\x01\x10\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3'
+  serialized_pb=b'\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xc8\x02\n\x05Model\x12\x16\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1b\n\x0c\x64\x61taset_size\x18\x05 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12\x1c\n\rtraining_size\x18\x06 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12:\n\x11\x63onfidence_scores\x18\x07 \x03(\x0b\x32\x18.asgt.type.TargetMetricsB\x05\xea?\x02\x18\x01\x12.\n\ninput_type\x18\x08 \x01(\x0e\x32\x1a.asgt.type.Model.InputType\x12\x14\n\x0c\x64\x61taset_type\x18\t \x01(\t\"4\n\tInputType\x12\x13\n\x0f\x46\x45\x41TURE_TENSORS\x10\x00\x12\x12\n\x0e\x45XAMPLE_TENSOR\x10\x01J\x04\x08\x01\x10\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3'
   ,
   dependencies=[asgt_dot_type_dot_target__metrics__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -48,8 +48,8 @@ _MODEL_INPUTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=380,
-  serialized_end=432,
+  serialized_start=402,
+  serialized_end=454,
 )
 _sym_db.RegisterEnumDescriptor(_MODEL_INPUTTYPE)
 
@@ -104,6 +104,13 @@ _MODEL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='dataset_type', full_name='asgt.type.Model.dataset_type', index=6,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -118,7 +125,7 @@ _MODEL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=132,
-  serialized_end=438,
+  serialized_end=460,
 )
 
 _MODEL.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP

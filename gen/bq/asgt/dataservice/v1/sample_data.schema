@@ -178,6 +178,11 @@
     "name": "input_type",
     "type": "STRING",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "dataset_type",
+    "type": "STRING",
+    "mode": "NULLABLE"
    }
   ]
  },

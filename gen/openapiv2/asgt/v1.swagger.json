@@ -592,6 +592,9 @@
         },
         "inputType": {
           "$ref": "#/definitions/ModelInputType"
+        },
+        "datasetType": {
+          "type": "string"
         }
       }
     },
