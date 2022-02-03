@@ -715,10 +715,6 @@
             "type": "string"
           }
         },
-        "truncatedAt": {
-          "type": "string",
-          "format": "date-time"
-        },
         "retentionPolicy": {
           "$ref": "#/definitions/typeRetentionPolicy"
         },
@@ -734,6 +730,10 @@
           "type": "string",
           "format": "int64",
           "title": "Number of samples in the dataset reflecting added entries that meet the retention policy"
+        },
+        "truncatedAt": {
+          "type": "string",
+          "format": "date-time"
         }
       }
     },

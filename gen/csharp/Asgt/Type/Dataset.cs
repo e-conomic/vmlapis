@@ -28,17 +28,17 @@ namespace Asgt.Type {
             "cGUvcmV0ZW50aW9uX3BvbGljeS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
             "bWVzdGFtcC5wcm90byKyAgoHRGF0YXNldBIQCghjb25zdW1lchgBIAEoCRIM",
             "CgRuYW1lGAIgASgJEgwKBHR5cGUYAyABKAkSDAoEdGFncxgEIAMoCRIPCgd0",
-            "YXJnZXRzGAUgAygJEjAKDHRydW5jYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASNAoQcmV0ZW50aW9uX3BvbGljeRgJIAEoCzIa",
-            "LmFzZ3QudHlwZS5SZXRlbnRpb25Qb2xpY3kSLgoKY3JlYXRlZF9hdBgKIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgL",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEc2l6ZRgMIAEo",
-            "A0oECAYQCEI4WjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
+            "YXJnZXRzGAUgAygJEjQKEHJldGVudGlvbl9wb2xpY3kYCSABKAsyGi5hc2d0",
+            "LnR5cGUuUmV0ZW50aW9uUG9saWN5Ei4KCmNyZWF0ZWRfYXQYCiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYCyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBHNpemUYDCABKAMSMAoM",
+            "dHJ1bmNhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEoECAYQCUI4WjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
             "by9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "TruncatedAt", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size", "TruncatedAt" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,11 +79,11 @@ namespace Asgt.Type {
       type_ = other.type_;
       tags_ = other.tags_.Clone();
       targets_ = other.targets_.Clone();
-      truncatedAt_ = other.truncatedAt_ != null ? other.truncatedAt_.Clone() : null;
       retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
       size_ = other.size_;
+      truncatedAt_ = other.truncatedAt_ != null ? other.truncatedAt_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -145,17 +145,6 @@ namespace Asgt.Type {
       get { return targets_; }
     }
 
-    /// <summary>Field number for the "truncated_at" field.</summary>
-    public const int TruncatedAtFieldNumber = 8;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp truncatedAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp TruncatedAt {
-      get { return truncatedAt_; }
-      set {
-        truncatedAt_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retention_policy" field.</summary>
     public const int RetentionPolicyFieldNumber = 9;
     private global::Asgt.Type.RetentionPolicy retentionPolicy_;
@@ -203,6 +192,17 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "truncated_at" field.</summary>
+    public const int TruncatedAtFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp truncatedAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp TruncatedAt {
+      get { return truncatedAt_; }
+      set {
+        truncatedAt_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Dataset);
@@ -221,11 +221,11 @@ namespace Asgt.Type {
       if (Type != other.Type) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if(!targets_.Equals(other.targets_)) return false;
-      if (!object.Equals(TruncatedAt, other.TruncatedAt)) return false;
       if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
       if (Size != other.Size) return false;
+      if (!object.Equals(TruncatedAt, other.TruncatedAt)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -237,11 +237,11 @@ namespace Asgt.Type {
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= tags_.GetHashCode();
       hash ^= targets_.GetHashCode();
-      if (truncatedAt_ != null) hash ^= TruncatedAt.GetHashCode();
       if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
       if (Size != 0L) hash ^= Size.GetHashCode();
+      if (truncatedAt_ != null) hash ^= TruncatedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -269,10 +269,6 @@ namespace Asgt.Type {
       }
       tags_.WriteTo(output, _repeated_tags_codec);
       targets_.WriteTo(output, _repeated_targets_codec);
-      if (truncatedAt_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(TruncatedAt);
-      }
       if (retentionPolicy_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(RetentionPolicy);
@@ -288,6 +284,10 @@ namespace Asgt.Type {
       if (Size != 0L) {
         output.WriteRawTag(96);
         output.WriteInt64(Size);
+      }
+      if (truncatedAt_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(TruncatedAt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -308,9 +308,6 @@ namespace Asgt.Type {
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       size += targets_.CalculateSize(_repeated_targets_codec);
-      if (truncatedAt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TruncatedAt);
-      }
       if (retentionPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetentionPolicy);
       }
@@ -322,6 +319,9 @@ namespace Asgt.Type {
       }
       if (Size != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Size);
+      }
+      if (truncatedAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TruncatedAt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -345,12 +345,6 @@ namespace Asgt.Type {
       }
       tags_.Add(other.tags_);
       targets_.Add(other.targets_);
-      if (other.truncatedAt_ != null) {
-        if (truncatedAt_ == null) {
-          TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        TruncatedAt.MergeFrom(other.TruncatedAt);
-      }
       if (other.retentionPolicy_ != null) {
         if (retentionPolicy_ == null) {
           RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
@@ -371,6 +365,12 @@ namespace Asgt.Type {
       }
       if (other.Size != 0L) {
         Size = other.Size;
+      }
+      if (other.truncatedAt_ != null) {
+        if (truncatedAt_ == null) {
+          TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        TruncatedAt.MergeFrom(other.TruncatedAt);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -406,13 +406,6 @@ namespace Asgt.Type {
             targets_.AddEntriesFrom(input, _repeated_targets_codec);
             break;
           }
-          case 66: {
-            if (truncatedAt_ == null) {
-              TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(TruncatedAt);
-            break;
-          }
           case 74: {
             if (retentionPolicy_ == null) {
               RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
@@ -436,6 +429,13 @@ namespace Asgt.Type {
           }
           case 96: {
             Size = input.ReadInt64();
+            break;
+          }
+          case 106: {
+            if (truncatedAt_ == null) {
+              TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(TruncatedAt);
             break;
           }
         }
@@ -472,13 +472,6 @@ namespace Asgt.Type {
             targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
             break;
           }
-          case 66: {
-            if (truncatedAt_ == null) {
-              TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(TruncatedAt);
-            break;
-          }
           case 74: {
             if (retentionPolicy_ == null) {
               RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
@@ -502,6 +495,13 @@ namespace Asgt.Type {
           }
           case 96: {
             Size = input.ReadInt64();
+            break;
+          }
+          case 106: {
+            if (truncatedAt_ == null) {
+              TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(TruncatedAt);
             break;
           }
         }

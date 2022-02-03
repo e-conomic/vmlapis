@@ -82,11 +82,11 @@ proto.asgt.type.Dataset.toObject = function(includeInstance, msg) {
     type: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tagsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
     targetsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
-    truncatedAt: (f = msg.getTruncatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_type_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f),
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     updatedAt: (f = msg.getUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    size: jspb.Message.getFieldWithDefault(msg, 12, 0)
+    size: jspb.Message.getFieldWithDefault(msg, 12, 0),
+    truncatedAt: (f = msg.getTruncatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -143,11 +143,6 @@ proto.asgt.type.Dataset.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.addTargets(value);
       break;
-    case 8:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setTruncatedAt(value);
-      break;
     case 9:
       var value = new asgt_type_retention_policy_pb.RetentionPolicy;
       reader.readMessage(value,asgt_type_retention_policy_pb.RetentionPolicy.deserializeBinaryFromReader);
@@ -166,6 +161,11 @@ proto.asgt.type.Dataset.deserializeBinaryFromReader = function(msg, reader) {
     case 12:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setSize(value);
+      break;
+    case 13:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setTruncatedAt(value);
       break;
     default:
       reader.skipField();
@@ -231,14 +231,6 @@ proto.asgt.type.Dataset.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getTruncatedAt();
-  if (f != null) {
-    writer.writeMessage(
-      8,
-      f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
-    );
-  }
   f = message.getRetentionPolicy();
   if (f != null) {
     writer.writeMessage(
@@ -268,6 +260,14 @@ proto.asgt.type.Dataset.serializeBinaryToWriter = function(message, writer) {
     writer.writeInt64(
       12,
       f
+    );
+  }
+  f = message.getTruncatedAt();
+  if (f != null) {
+    writer.writeMessage(
+      13,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
 };
@@ -402,43 +402,6 @@ proto.asgt.type.Dataset.prototype.clearTargetsList = function() {
 
 
 /**
- * optional google.protobuf.Timestamp truncated_at = 8;
- * @return {?proto.google.protobuf.Timestamp}
- */
-proto.asgt.type.Dataset.prototype.getTruncatedAt = function() {
-  return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 8));
-};
-
-
-/**
- * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.asgt.type.Dataset} returns this
-*/
-proto.asgt.type.Dataset.prototype.setTruncatedAt = function(value) {
-  return jspb.Message.setWrapperField(this, 8, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.asgt.type.Dataset} returns this
- */
-proto.asgt.type.Dataset.prototype.clearTruncatedAt = function() {
-  return this.setTruncatedAt(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.asgt.type.Dataset.prototype.hasTruncatedAt = function() {
-  return jspb.Message.getField(this, 8) != null;
-};
-
-
-/**
  * optional RetentionPolicy retention_policy = 9;
  * @return {?proto.asgt.type.RetentionPolicy}
  */
@@ -564,6 +527,43 @@ proto.asgt.type.Dataset.prototype.getSize = function() {
  */
 proto.asgt.type.Dataset.prototype.setSize = function(value) {
   return jspb.Message.setProto3IntField(this, 12, value);
+};
+
+
+/**
+ * optional google.protobuf.Timestamp truncated_at = 13;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.asgt.type.Dataset.prototype.getTruncatedAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 13));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.asgt.type.Dataset} returns this
+*/
+proto.asgt.type.Dataset.prototype.setTruncatedAt = function(value) {
+  return jspb.Message.setWrapperField(this, 13, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.type.Dataset} returns this
+ */
+proto.asgt.type.Dataset.prototype.clearTruncatedAt = function() {
+  return this.setTruncatedAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.Dataset.prototype.hasTruncatedAt = function() {
+  return jspb.Message.getField(this, 13) != null;
 };
 
 

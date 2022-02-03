@@ -105,21 +105,6 @@ public final class DatasetOuterClass {
         getTargetsBytes(int index);
 
     /**
-     * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-     * @return Whether the truncatedAt field is set.
-     */
-    boolean hasTruncatedAt();
-    /**
-     * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-     * @return The truncatedAt.
-     */
-    com.google.protobuf.Timestamp getTruncatedAt();
-    /**
-     * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder();
-
-    /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
      * @return Whether the retentionPolicy field is set.
      */
@@ -173,6 +158,21 @@ public final class DatasetOuterClass {
      * @return The size.
      */
     long getSize();
+
+    /**
+     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * @return Whether the truncatedAt field is set.
+     */
+    boolean hasTruncatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * @return The truncatedAt.
+     */
+    com.google.protobuf.Timestamp getTruncatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.type.Dataset}
@@ -261,19 +261,6 @@ public final class DatasetOuterClass {
               targets_.add(s);
               break;
             }
-            case 66: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (truncatedAt_ != null) {
-                subBuilder = truncatedAt_.toBuilder();
-              }
-              truncatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(truncatedAt_);
-                truncatedAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
             case 74: {
               asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder subBuilder = null;
               if (retentionPolicy_ != null) {
@@ -316,6 +303,19 @@ public final class DatasetOuterClass {
             case 96: {
 
               size_ = input.readInt64();
+              break;
+            }
+            case 106: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (truncatedAt_ != null) {
+                subBuilder = truncatedAt_.toBuilder();
+              }
+              truncatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(truncatedAt_);
+                truncatedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -540,32 +540,6 @@ public final class DatasetOuterClass {
       return targets_.getByteString(index);
     }
 
-    public static final int TRUNCATED_AT_FIELD_NUMBER = 8;
-    private com.google.protobuf.Timestamp truncatedAt_;
-    /**
-     * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-     * @return Whether the truncatedAt field is set.
-     */
-    @java.lang.Override
-    public boolean hasTruncatedAt() {
-      return truncatedAt_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-     * @return The truncatedAt.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getTruncatedAt() {
-      return truncatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
-      return getTruncatedAt();
-    }
-
     public static final int RETENTION_POLICY_FIELD_NUMBER = 9;
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
@@ -659,6 +633,32 @@ public final class DatasetOuterClass {
       return size_;
     }
 
+    public static final int TRUNCATED_AT_FIELD_NUMBER = 13;
+    private com.google.protobuf.Timestamp truncatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * @return Whether the truncatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasTruncatedAt() {
+      return truncatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * @return The truncatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTruncatedAt() {
+      return truncatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
+      return getTruncatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -688,9 +688,6 @@ public final class DatasetOuterClass {
       for (int i = 0; i < targets_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, targets_.getRaw(i));
       }
-      if (truncatedAt_ != null) {
-        output.writeMessage(8, getTruncatedAt());
-      }
       if (retentionPolicy_ != null) {
         output.writeMessage(9, getRetentionPolicy());
       }
@@ -702,6 +699,9 @@ public final class DatasetOuterClass {
       }
       if (size_ != 0L) {
         output.writeInt64(12, size_);
+      }
+      if (truncatedAt_ != null) {
+        output.writeMessage(13, getTruncatedAt());
       }
       unknownFields.writeTo(output);
     }
@@ -737,10 +737,6 @@ public final class DatasetOuterClass {
         size += dataSize;
         size += 1 * getTargetsList().size();
       }
-      if (truncatedAt_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getTruncatedAt());
-      }
       if (retentionPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getRetentionPolicy());
@@ -756,6 +752,10 @@ public final class DatasetOuterClass {
       if (size_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(12, size_);
+      }
+      if (truncatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getTruncatedAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -782,11 +782,6 @@ public final class DatasetOuterClass {
           .equals(other.getTagsList())) return false;
       if (!getTargetsList()
           .equals(other.getTargetsList())) return false;
-      if (hasTruncatedAt() != other.hasTruncatedAt()) return false;
-      if (hasTruncatedAt()) {
-        if (!getTruncatedAt()
-            .equals(other.getTruncatedAt())) return false;
-      }
       if (hasRetentionPolicy() != other.hasRetentionPolicy()) return false;
       if (hasRetentionPolicy()) {
         if (!getRetentionPolicy()
@@ -804,6 +799,11 @@ public final class DatasetOuterClass {
       }
       if (getSize()
           != other.getSize()) return false;
+      if (hasTruncatedAt() != other.hasTruncatedAt()) return false;
+      if (hasTruncatedAt()) {
+        if (!getTruncatedAt()
+            .equals(other.getTruncatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -829,10 +829,6 @@ public final class DatasetOuterClass {
         hash = (37 * hash) + TARGETS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetsList().hashCode();
       }
-      if (hasTruncatedAt()) {
-        hash = (37 * hash) + TRUNCATED_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getTruncatedAt().hashCode();
-      }
       if (hasRetentionPolicy()) {
         hash = (37 * hash) + RETENTION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionPolicy().hashCode();
@@ -848,6 +844,10 @@ public final class DatasetOuterClass {
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSize());
+      if (hasTruncatedAt()) {
+        hash = (37 * hash) + TRUNCATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getTruncatedAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -991,12 +991,6 @@ public final class DatasetOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (truncatedAtBuilder_ == null) {
-          truncatedAt_ = null;
-        } else {
-          truncatedAt_ = null;
-          truncatedAtBuilder_ = null;
-        }
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = null;
         } else {
@@ -1017,6 +1011,12 @@ public final class DatasetOuterClass {
         }
         size_ = 0L;
 
+        if (truncatedAtBuilder_ == null) {
+          truncatedAt_ = null;
+        } else {
+          truncatedAt_ = null;
+          truncatedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -1057,11 +1057,6 @@ public final class DatasetOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.targets_ = targets_;
-        if (truncatedAtBuilder_ == null) {
-          result.truncatedAt_ = truncatedAt_;
-        } else {
-          result.truncatedAt_ = truncatedAtBuilder_.build();
-        }
         if (retentionPolicyBuilder_ == null) {
           result.retentionPolicy_ = retentionPolicy_;
         } else {
@@ -1078,6 +1073,11 @@ public final class DatasetOuterClass {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
         result.size_ = size_;
+        if (truncatedAtBuilder_ == null) {
+          result.truncatedAt_ = truncatedAt_;
+        } else {
+          result.truncatedAt_ = truncatedAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1158,9 +1158,6 @@ public final class DatasetOuterClass {
           }
           onChanged();
         }
-        if (other.hasTruncatedAt()) {
-          mergeTruncatedAt(other.getTruncatedAt());
-        }
         if (other.hasRetentionPolicy()) {
           mergeRetentionPolicy(other.getRetentionPolicy());
         }
@@ -1172,6 +1169,9 @@ public final class DatasetOuterClass {
         }
         if (other.getSize() != 0L) {
           setSize(other.getSize());
+        }
+        if (other.hasTruncatedAt()) {
+          mergeTruncatedAt(other.getTruncatedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1651,125 +1651,6 @@ public final class DatasetOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp truncatedAt_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> truncatedAtBuilder_;
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       * @return Whether the truncatedAt field is set.
-       */
-      public boolean hasTruncatedAt() {
-        return truncatedAtBuilder_ != null || truncatedAt_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       * @return The truncatedAt.
-       */
-      public com.google.protobuf.Timestamp getTruncatedAt() {
-        if (truncatedAtBuilder_ == null) {
-          return truncatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
-        } else {
-          return truncatedAtBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       */
-      public Builder setTruncatedAt(com.google.protobuf.Timestamp value) {
-        if (truncatedAtBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          truncatedAt_ = value;
-          onChanged();
-        } else {
-          truncatedAtBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       */
-      public Builder setTruncatedAt(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (truncatedAtBuilder_ == null) {
-          truncatedAt_ = builderForValue.build();
-          onChanged();
-        } else {
-          truncatedAtBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       */
-      public Builder mergeTruncatedAt(com.google.protobuf.Timestamp value) {
-        if (truncatedAtBuilder_ == null) {
-          if (truncatedAt_ != null) {
-            truncatedAt_ =
-              com.google.protobuf.Timestamp.newBuilder(truncatedAt_).mergeFrom(value).buildPartial();
-          } else {
-            truncatedAt_ = value;
-          }
-          onChanged();
-        } else {
-          truncatedAtBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       */
-      public Builder clearTruncatedAt() {
-        if (truncatedAtBuilder_ == null) {
-          truncatedAt_ = null;
-          onChanged();
-        } else {
-          truncatedAt_ = null;
-          truncatedAtBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTruncatedAtBuilder() {
-        
-        onChanged();
-        return getTruncatedAtFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
-        if (truncatedAtBuilder_ != null) {
-          return truncatedAtBuilder_.getMessageOrBuilder();
-        } else {
-          return truncatedAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp truncated_at = 8;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTruncatedAtFieldBuilder() {
-        if (truncatedAtBuilder_ == null) {
-          truncatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTruncatedAt(),
-                  getParentForChildren(),
-                  isClean());
-          truncatedAt_ = null;
-        }
-        return truncatedAtBuilder_;
-      }
-
       private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
@@ -2169,6 +2050,125 @@ public final class DatasetOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp truncatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> truncatedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * @return Whether the truncatedAt field is set.
+       */
+      public boolean hasTruncatedAt() {
+        return truncatedAtBuilder_ != null || truncatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * @return The truncatedAt.
+       */
+      public com.google.protobuf.Timestamp getTruncatedAt() {
+        if (truncatedAtBuilder_ == null) {
+          return truncatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
+        } else {
+          return truncatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       */
+      public Builder setTruncatedAt(com.google.protobuf.Timestamp value) {
+        if (truncatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          truncatedAt_ = value;
+          onChanged();
+        } else {
+          truncatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       */
+      public Builder setTruncatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (truncatedAtBuilder_ == null) {
+          truncatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          truncatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       */
+      public Builder mergeTruncatedAt(com.google.protobuf.Timestamp value) {
+        if (truncatedAtBuilder_ == null) {
+          if (truncatedAt_ != null) {
+            truncatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(truncatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            truncatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          truncatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       */
+      public Builder clearTruncatedAt() {
+        if (truncatedAtBuilder_ == null) {
+          truncatedAt_ = null;
+          onChanged();
+        } else {
+          truncatedAt_ = null;
+          truncatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTruncatedAtBuilder() {
+        
+        onChanged();
+        return getTruncatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
+        if (truncatedAtBuilder_ != null) {
+          return truncatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return truncatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTruncatedAtFieldBuilder() {
+        if (truncatedAtBuilder_ == null) {
+          truncatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTruncatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          truncatedAt_ = null;
+        }
+        return truncatedAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2240,13 +2240,13 @@ public final class DatasetOuterClass {
       "gt/type/retention_policy.proto\032\037google/p" +
       "rotobuf/timestamp.proto\"\262\002\n\007Dataset\022\020\n\010c" +
       "onsumer\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004type\030\003 \001(" +
-      "\t\022\014\n\004tags\030\004 \003(\t\022\017\n\007targets\030\005 \003(\t\0220\n\014trun" +
-      "cated_at\030\010 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\0224\n\020retention_policy\030\t \001(\0132\032.asgt.type" +
-      ".RetentionPolicy\022.\n\ncreated_at\030\n \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022.\n\nupdated_at\030\013" +
-      " \001(\0132\032.google.protobuf.Timestamp\022\014\n\004size" +
-      "\030\014 \001(\003J\004\010\006\020\010B8Z6github.com/e-conomic/vml" +
+      "\t\022\014\n\004tags\030\004 \003(\t\022\017\n\007targets\030\005 \003(\t\0224\n\020rete" +
+      "ntion_policy\030\t \001(\0132\032.asgt.type.Retention" +
+      "Policy\022.\n\ncreated_at\030\n \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022\014\n\004size\030\014 \001(\003\0220\n\014" +
+      "truncated_at\030\r \001(\0132\032.google.protobuf.Tim" +
+      "estampJ\004\010\006\020\tB8Z6github.com/e-conomic/vml" +
       "apis/gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -2260,7 +2260,7 @@ public final class DatasetOuterClass {
     internal_static_asgt_type_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Dataset_descriptor,
-        new java.lang.String[] { "Consumer", "Name", "Type", "Tags", "Targets", "TruncatedAt", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size", });
+        new java.lang.String[] { "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size", "TruncatedAt", });
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
