@@ -432,14 +432,11 @@
     "protobufAny": {
       "type": "object",
       "properties": {
-        "typeUrl": {
+        "@type": {
           "type": "string"
-        },
-        "value": {
-          "type": "string",
-          "format": "byte"
         }
-      }
+      },
+      "additionalProperties": {}
     },
     "rpcStatus": {
       "type": "object",
@@ -515,6 +512,10 @@
           "type": "string",
           "format": "int64",
           "title": "Number of samples in the dataset reflecting added entries that meet the retention policy"
+        },
+        "truncatedAt": {
+          "type": "string",
+          "format": "date-time"
         }
       }
     },
@@ -588,6 +589,9 @@
         },
         "inputType": {
           "$ref": "#/definitions/ModelInputType"
+        },
+        "datasetType": {
+          "type": "string"
         }
       }
     },

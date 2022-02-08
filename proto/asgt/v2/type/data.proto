@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package asgt.v2.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
+
+import "google/protobuf/timestamp.proto";
+import "validate/validate.proto";
+
+// Used in scanned-invoice requests.
+message Invoice {
+  // Invoice text from the SmartScan product. 
+  string text = 1;
+}
+
+// Used in bank requests.
+message Transaction {
+  // Text of the bank transaction.
+  string text = 1;
+
+  // Amount of the transaction. 
+  float amount = 2;
+}
+
+// Used in electronic-invoice-line requests.
+message InvoiceLine {
+  // Id of the product (item).
+  string item_id = 1; // NOTE(lku) Can't do much - has non-english letters and even slashes
+  
+  // Text of the invoice line. 
+  string text = 2;
+
+  google.protobuf.Timestamp issue_date = 3;
+
+  // Supplier of the invoice.
+  Supplier supplier = 4;
+
+  // reference to the customer.
+  string customer_ref = 5; // NOTE(lku) Can't do much - has non-english letters and even slashes
+
+  // Amount of the invoice line. 
+  float amount = 7;
+}
+
+message Supplier {
+  // Id of the supplier; not nullable.
+  string id = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9]*$", max_bytes: 64 }];
+
+  // Name of the supplier.
+  string name = 2; // NOTE(lku) has non-english letters and even slashes
+
+  // Global ID of the supplier.
+  string global_id = 3;
+}
+
+message Data {
+  oneof data_structure {
+    // Transaction-level information; at this time used only with bank transactions
+    Transaction transaction = 1;
+
+    // Invoice-level information for e-invoices and scanned invoices and receipts
+    Invoice invoice = 2;
+
+    // Line-level information for e-invoices; use one sample per invoice line
+    InvoiceLine invoice_line = 3;
+  }
+}

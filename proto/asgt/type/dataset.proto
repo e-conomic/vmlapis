@@ -21,4 +21,6 @@ message Dataset {
 
   // Number of samples in the dataset reflecting added entries that meet the retention policy
   int64 size = 12;
+
+  google.protobuf.Timestamp truncated_at = 13;
 }

@@ -85,6 +85,18 @@ public final class ModelOuterClass {
      * @return The inputType.
      */
     asgt.type.ModelOuterClass.Model.InputType getInputType();
+
+    /**
+     * <code>string dataset_type = 9;</code>
+     * @return The datasetType.
+     */
+    java.lang.String getDatasetType();
+    /**
+     * <code>string dataset_type = 9;</code>
+     * @return The bytes for datasetType.
+     */
+    com.google.protobuf.ByteString
+        getDatasetTypeBytes();
   }
   /**
    * Protobuf type {@code asgt.type.Model}
@@ -101,6 +113,7 @@ public final class ModelOuterClass {
     private Model() {
       confidenceScores_ = java.util.Collections.emptyList();
       inputType_ = 0;
+      datasetType_ = "";
     }
 
     @java.lang.Override
@@ -175,6 +188,12 @@ public final class ModelOuterClass {
               int rawValue = input.readEnum();
 
               inputType_ = rawValue;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              datasetType_ = s;
               break;
             }
             default: {
@@ -438,6 +457,44 @@ public final class ModelOuterClass {
       return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
     }
 
+    public static final int DATASET_TYPE_FIELD_NUMBER = 9;
+    private volatile java.lang.Object datasetType_;
+    /**
+     * <code>string dataset_type = 9;</code>
+     * @return The datasetType.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetType() {
+      java.lang.Object ref = datasetType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dataset_type = 9;</code>
+     * @return The bytes for datasetType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetTypeBytes() {
+      java.lang.Object ref = datasetType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -469,6 +526,9 @@ public final class ModelOuterClass {
       }
       if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
         output.writeEnum(8, inputType_);
+      }
+      if (!getDatasetTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, datasetType_);
       }
       unknownFields.writeTo(output);
     }
@@ -503,6 +563,9 @@ public final class ModelOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, inputType_);
       }
+      if (!getDatasetTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, datasetType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -532,6 +595,8 @@ public final class ModelOuterClass {
       if (!getConfidenceScoresList()
           .equals(other.getConfidenceScoresList())) return false;
       if (inputType_ != other.inputType_) return false;
+      if (!getDatasetType()
+          .equals(other.getDatasetType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -560,6 +625,8 @@ public final class ModelOuterClass {
       }
       hash = (37 * hash) + INPUT_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + inputType_;
+      hash = (37 * hash) + DATASET_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -714,6 +781,8 @@ public final class ModelOuterClass {
         }
         inputType_ = 0;
 
+        datasetType_ = "";
+
         return this;
       }
 
@@ -759,6 +828,7 @@ public final class ModelOuterClass {
           result.confidenceScores_ = confidenceScoresBuilder_.build();
         }
         result.inputType_ = inputType_;
+        result.datasetType_ = datasetType_;
         onBuilt();
         return result;
       }
@@ -847,6 +917,10 @@ public final class ModelOuterClass {
         }
         if (other.inputType_ != 0) {
           setInputTypeValue(other.getInputTypeValue());
+        }
+        if (!other.getDatasetType().isEmpty()) {
+          datasetType_ = other.datasetType_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1383,6 +1457,82 @@ public final class ModelOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object datasetType_ = "";
+      /**
+       * <code>string dataset_type = 9;</code>
+       * @return The datasetType.
+       */
+      public java.lang.String getDatasetType() {
+        java.lang.Object ref = datasetType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dataset_type = 9;</code>
+       * @return The bytes for datasetType.
+       */
+      public com.google.protobuf.ByteString
+          getDatasetTypeBytes() {
+        java.lang.Object ref = datasetType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dataset_type = 9;</code>
+       * @param value The datasetType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        datasetType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_type = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetType() {
+        
+        datasetType_ = getDefaultInstance().getDatasetType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_type = 9;</code>
+       * @param value The bytes for datasetType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        datasetType_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1453,16 +1603,17 @@ public final class ModelOuterClass {
       "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
       "/type/target_metrics.proto\032\034gen_bq_schem" +
       "a/bq_field.proto\032\037google/protobuf/timest" +
-      "amp.proto\"\262\002\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
+      "amp.proto\"\310\002\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
       "\002\010\001\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\033\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001" +
       "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
       "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
       "icsB\005\352?\002\030\001\022.\n\ninput_type\030\010 \001(\0162\032.asgt.ty" +
-      "pe.Model.InputType\"4\n\tInputType\022\023\n\017FEATU" +
-      "RE_TENSORS\020\000\022\022\n\016EXAMPLE_TENSOR\020\001J\004\010\001\020\003B8" +
-      "Z6github.com/e-conomic/vmlapis/gen/go/as" +
-      "gt/type;asgttypeb\006proto3"
+      "pe.Model.InputType\022\024\n\014dataset_type\030\t \001(\t" +
+      "\"4\n\tInputType\022\023\n\017FEATURE_TENSORS\020\000\022\022\n\016EX" +
+      "AMPLE_TENSOR\020\001J\004\010\001\020\003B8Z6github.com/e-con" +
+      "omic/vmlapis/gen/go/asgt/type;asgttypeb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1476,7 +1627,7 @@ public final class ModelOuterClass {
     internal_static_asgt_type_Model_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Model_descriptor,
-        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", });
+        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);

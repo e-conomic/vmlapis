@@ -175,3 +175,38 @@ func (mr *MockMlServiceServerMockRecorder) mustEmbedUnimplementedMlServiceServer
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedMlServiceServer", reflect.TypeOf((*MockMlServiceServer)(nil).mustEmbedUnimplementedMlServiceServer))
 }
+
+// MockUnsafeMlServiceServer is a mock of UnsafeMlServiceServer interface.
+type MockUnsafeMlServiceServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockUnsafeMlServiceServerMockRecorder
+}
+
+// MockUnsafeMlServiceServerMockRecorder is the mock recorder for MockUnsafeMlServiceServer.
+type MockUnsafeMlServiceServerMockRecorder struct {
+	mock *MockUnsafeMlServiceServer
+}
+
+// NewMockUnsafeMlServiceServer creates a new mock instance.
+func NewMockUnsafeMlServiceServer(ctrl *gomock.Controller) *MockUnsafeMlServiceServer {
+	mock := &MockUnsafeMlServiceServer{ctrl: ctrl}
+	mock.recorder = &MockUnsafeMlServiceServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockUnsafeMlServiceServer) EXPECT() *MockUnsafeMlServiceServerMockRecorder {
+	return m.recorder
+}
+
+// mustEmbedUnimplementedMlServiceServer mocks base method.
+func (m *MockUnsafeMlServiceServer) mustEmbedUnimplementedMlServiceServer() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "mustEmbedUnimplementedMlServiceServer")
+}
+
+// mustEmbedUnimplementedMlServiceServer indicates an expected call of mustEmbedUnimplementedMlServiceServer.
+func (mr *MockUnsafeMlServiceServerMockRecorder) mustEmbedUnimplementedMlServiceServer() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedMlServiceServer", reflect.TypeOf((*MockUnsafeMlServiceServer)(nil).mustEmbedUnimplementedMlServiceServer))
+}

@@ -5,14 +5,16 @@ all:
 	    --protoc-bin-path=/usr/bin/protoc \
 	    --protoc-wkt-path=/usr/include \
 	    all
-	protoc -I./deps/googleapis -I./proto -I./deps/protoc-gen-openapiv2 \
+	protoc -I./deps/googleapis -I./proto -I./deps/protoc-gen-openapiv2 -I./deps/validation \
 		--include_imports --include_source_info \
 		--descriptor_set_out=gen/descriptor.bin \
 		proto/ssn/annotator/v1/annotator.proto \
 		proto/ssn/access/v1/access.proto \
 		proto/ssn/dataservice/v1/dataservice.proto \
 		proto/asgt/jester/v1/jester.proto \
-		proto/asgt/data/v1/data_service.proto
+		proto/asgt/data/v1/data_service.proto \
+		proto/asgt/v2/dataset_service.proto \
+		proto/asgt/v2/suggester_service.proto
 
 	mkdir ./gen/go
 	mkdir ./gen/openapiv2
@@ -24,7 +26,7 @@ all:
 
 docker:
 	@rm -rf gen
-	docker build -t vmlapis .
+	docker build --progress plain -t vmlapis .
 	DOCKERID=$$(docker create vmlapis) ;\
 	docker cp $$DOCKERID:/app/gen ./ ;\
 	docker rm $$DOCKERID

@@ -26,20 +26,20 @@ namespace Asgt.Type {
           string.Concat(
             "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
             "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrICCgVN",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsgCCgVN",
             "b2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpjcmVhdGVkX2F0GAQg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIbCgxkYXRhc2V0X3Np",
             "emUYBSABKAVCBeo/AhgBEhwKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgB",
             "EjoKEWNvbmZpZGVuY2Vfc2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdl",
             "dE1ldHJpY3NCBeo/AhgBEi4KCmlucHV0X3R5cGUYCCABKA4yGi5hc2d0LnR5",
-            "cGUuTW9kZWwuSW5wdXRUeXBlIjQKCUlucHV0VHlwZRITCg9GRUFUVVJFX1RF",
-            "TlNPUlMQABISCg5FWEFNUExFX1RFTlNPUhABSgQIARADQjhaNmdpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlw",
-            "ZWIGcHJvdG8z"));
+            "cGUuTW9kZWwuSW5wdXRUeXBlEhQKDGRhdGFzZXRfdHlwZRgJIAEoCSI0CglJ",
+            "bnB1dFR5cGUSEwoPRkVBVFVSRV9URU5TT1JTEAASEgoORVhBTVBMRV9URU5T",
+            "T1IQAUoECAEQA0I4WjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
+            "bi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
           }));
     }
     #endregion
@@ -81,6 +81,7 @@ namespace Asgt.Type {
       trainingSize_ = other.trainingSize_;
       confidenceScores_ = other.confidenceScores_.Clone();
       inputType_ = other.inputType_;
+      datasetType_ = other.datasetType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -154,6 +155,17 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "dataset_type" field.</summary>
+    public const int DatasetTypeFieldNumber = 9;
+    private string datasetType_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetType {
+      get { return datasetType_; }
+      set {
+        datasetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Model);
@@ -173,6 +185,7 @@ namespace Asgt.Type {
       if (TrainingSize != other.TrainingSize) return false;
       if(!confidenceScores_.Equals(other.confidenceScores_)) return false;
       if (InputType != other.InputType) return false;
+      if (DatasetType != other.DatasetType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -185,6 +198,7 @@ namespace Asgt.Type {
       if (TrainingSize != 0) hash ^= TrainingSize.GetHashCode();
       hash ^= confidenceScores_.GetHashCode();
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
+      if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -219,6 +233,10 @@ namespace Asgt.Type {
         output.WriteRawTag(64);
         output.WriteEnum((int) InputType);
       }
+      if (DatasetType.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DatasetType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -242,6 +260,9 @@ namespace Asgt.Type {
       size += confidenceScores_.CalculateSize(_repeated_confidenceScores_codec);
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputType);
+      }
+      if (DatasetType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -272,6 +293,9 @@ namespace Asgt.Type {
       confidenceScores_.Add(other.confidenceScores_);
       if (other.InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         InputType = other.InputType;
+      }
+      if (other.DatasetType.Length != 0) {
+        DatasetType = other.DatasetType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -314,6 +338,10 @@ namespace Asgt.Type {
             InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
             break;
           }
+          case 74: {
+            DatasetType = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -353,6 +381,10 @@ namespace Asgt.Type {
           }
           case 64: {
             InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            DatasetType = input.ReadString();
             break;
           }
         }

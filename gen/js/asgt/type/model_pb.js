@@ -86,7 +86,8 @@ proto.asgt.type.Model.toObject = function(includeInstance, msg) {
     trainingSize: jspb.Message.getFieldWithDefault(msg, 6, 0),
     confidenceScoresList: jspb.Message.toObjectList(msg.getConfidenceScoresList(),
     asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance),
-    inputType: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    inputType: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    datasetType: jspb.Message.getFieldWithDefault(msg, 9, "")
   };
 
   if (includeInstance) {
@@ -148,6 +149,10 @@ proto.asgt.type.Model.deserializeBinaryFromReader = function(msg, reader) {
     case 8:
       var value = /** @type {!proto.asgt.type.Model.InputType} */ (reader.readEnum());
       msg.setInputType(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDatasetType(value);
       break;
     default:
       reader.skipField();
@@ -219,6 +224,13 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
   if (f !== 0.0) {
     writer.writeEnum(
       8,
+      f
+    );
+  }
+  f = message.getDatasetType();
+  if (f.length > 0) {
+    writer.writeString(
+      9,
       f
     );
   }
@@ -377,6 +389,24 @@ proto.asgt.type.Model.prototype.getInputType = function() {
  */
 proto.asgt.type.Model.prototype.setInputType = function(value) {
   return jspb.Message.setProto3EnumField(this, 8, value);
+};
+
+
+/**
+ * optional string dataset_type = 9;
+ * @return {string}
+ */
+proto.asgt.type.Model.prototype.getDatasetType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.asgt.type.Model} returns this
+ */
+proto.asgt.type.Model.prototype.setDatasetType = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 
