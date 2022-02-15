@@ -122,6 +122,21 @@ public final class ModelRegistryOuterClass {
      * @return The inputType.
      */
     asgt.type.ModelOuterClass.Model.InputType getInputType();
+
+    /**
+     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * @return Whether the trainStatistics field is set.
+     */
+    boolean hasTrainStatistics();
+    /**
+     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * @return The trainStatistics.
+     */
+    asgt.type.TrainStatisticsOuterClass.TrainStatistics getTrainStatistics();
+    /**
+     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     */
+    asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder getTrainStatisticsOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.modelregistry.v1.RegisterModelRequest}
@@ -228,6 +243,19 @@ public final class ModelRegistryOuterClass {
               int rawValue = input.readEnum();
 
               inputType_ = rawValue;
+              break;
+            }
+            case 58: {
+              asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder subBuilder = null;
+              if (trainStatistics_ != null) {
+                subBuilder = trainStatistics_.toBuilder();
+              }
+              trainStatistics_ = input.readMessage(asgt.type.TrainStatisticsOuterClass.TrainStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(trainStatistics_);
+                trainStatistics_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -480,6 +508,32 @@ public final class ModelRegistryOuterClass {
       return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
     }
 
+    public static final int TRAIN_STATISTICS_FIELD_NUMBER = 7;
+    private asgt.type.TrainStatisticsOuterClass.TrainStatistics trainStatistics_;
+    /**
+     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * @return Whether the trainStatistics field is set.
+     */
+    @java.lang.Override
+    public boolean hasTrainStatistics() {
+      return trainStatistics_ != null;
+    }
+    /**
+     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * @return The trainStatistics.
+     */
+    @java.lang.Override
+    public asgt.type.TrainStatisticsOuterClass.TrainStatistics getTrainStatistics() {
+      return trainStatistics_ == null ? asgt.type.TrainStatisticsOuterClass.TrainStatistics.getDefaultInstance() : trainStatistics_;
+    }
+    /**
+     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     */
+    @java.lang.Override
+    public asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder getTrainStatisticsOrBuilder() {
+      return getTrainStatistics();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -514,6 +568,9 @@ public final class ModelRegistryOuterClass {
       }
       if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
         output.writeEnum(6, inputType_);
+      }
+      if (trainStatistics_ != null) {
+        output.writeMessage(7, getTrainStatistics());
       }
       unknownFields.writeTo(output);
     }
@@ -554,6 +611,10 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, inputType_);
       }
+      if (trainStatistics_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTrainStatistics());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -586,6 +647,11 @@ public final class ModelRegistryOuterClass {
       if (!getTargetMetricsList()
           .equals(other.getTargetMetricsList())) return false;
       if (inputType_ != other.inputType_) return false;
+      if (hasTrainStatistics() != other.hasTrainStatistics()) return false;
+      if (hasTrainStatistics()) {
+        if (!getTrainStatistics()
+            .equals(other.getTrainStatistics())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -618,6 +684,10 @@ public final class ModelRegistryOuterClass {
       }
       hash = (37 * hash) + INPUT_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + inputType_;
+      if (hasTrainStatistics()) {
+        hash = (37 * hash) + TRAIN_STATISTICS_FIELD_NUMBER;
+        hash = (53 * hash) + getTrainStatistics().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -797,6 +867,12 @@ public final class ModelRegistryOuterClass {
         }
         inputType_ = 0;
 
+        if (trainStatisticsBuilder_ == null) {
+          trainStatistics_ = null;
+        } else {
+          trainStatistics_ = null;
+          trainStatisticsBuilder_ = null;
+        }
         return this;
       }
 
@@ -847,6 +923,11 @@ public final class ModelRegistryOuterClass {
           result.targetMetrics_ = targetMetricsBuilder_.build();
         }
         result.inputType_ = inputType_;
+        if (trainStatisticsBuilder_ == null) {
+          result.trainStatistics_ = trainStatistics_;
+        } else {
+          result.trainStatistics_ = trainStatisticsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -934,6 +1015,9 @@ public final class ModelRegistryOuterClass {
         }
         if (other.inputType_ != 0) {
           setInputTypeValue(other.getInputTypeValue());
+        }
+        if (other.hasTrainStatistics()) {
+          mergeTrainStatistics(other.getTrainStatistics());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1654,6 +1738,125 @@ public final class ModelRegistryOuterClass {
         inputType_ = 0;
         onChanged();
         return this;
+      }
+
+      private asgt.type.TrainStatisticsOuterClass.TrainStatistics trainStatistics_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.TrainStatisticsOuterClass.TrainStatistics, asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder, asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder> trainStatisticsBuilder_;
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * @return Whether the trainStatistics field is set.
+       */
+      public boolean hasTrainStatistics() {
+        return trainStatisticsBuilder_ != null || trainStatistics_ != null;
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * @return The trainStatistics.
+       */
+      public asgt.type.TrainStatisticsOuterClass.TrainStatistics getTrainStatistics() {
+        if (trainStatisticsBuilder_ == null) {
+          return trainStatistics_ == null ? asgt.type.TrainStatisticsOuterClass.TrainStatistics.getDefaultInstance() : trainStatistics_;
+        } else {
+          return trainStatisticsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       */
+      public Builder setTrainStatistics(asgt.type.TrainStatisticsOuterClass.TrainStatistics value) {
+        if (trainStatisticsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trainStatistics_ = value;
+          onChanged();
+        } else {
+          trainStatisticsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       */
+      public Builder setTrainStatistics(
+          asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder builderForValue) {
+        if (trainStatisticsBuilder_ == null) {
+          trainStatistics_ = builderForValue.build();
+          onChanged();
+        } else {
+          trainStatisticsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       */
+      public Builder mergeTrainStatistics(asgt.type.TrainStatisticsOuterClass.TrainStatistics value) {
+        if (trainStatisticsBuilder_ == null) {
+          if (trainStatistics_ != null) {
+            trainStatistics_ =
+              asgt.type.TrainStatisticsOuterClass.TrainStatistics.newBuilder(trainStatistics_).mergeFrom(value).buildPartial();
+          } else {
+            trainStatistics_ = value;
+          }
+          onChanged();
+        } else {
+          trainStatisticsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       */
+      public Builder clearTrainStatistics() {
+        if (trainStatisticsBuilder_ == null) {
+          trainStatistics_ = null;
+          onChanged();
+        } else {
+          trainStatistics_ = null;
+          trainStatisticsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder getTrainStatisticsBuilder() {
+        
+        onChanged();
+        return getTrainStatisticsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder getTrainStatisticsOrBuilder() {
+        if (trainStatisticsBuilder_ != null) {
+          return trainStatisticsBuilder_.getMessageOrBuilder();
+        } else {
+          return trainStatistics_ == null ?
+              asgt.type.TrainStatisticsOuterClass.TrainStatistics.getDefaultInstance() : trainStatistics_;
+        }
+      }
+      /**
+       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.TrainStatisticsOuterClass.TrainStatistics, asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder, asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder> 
+          getTrainStatisticsFieldBuilder() {
+        if (trainStatisticsBuilder_ == null) {
+          trainStatisticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.TrainStatisticsOuterClass.TrainStatistics, asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder, asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder>(
+                  getTrainStatistics(),
+                  getParentForChildren(),
+                  isClean());
+          trainStatistics_ = null;
+        }
+        return trainStatisticsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2983,27 +3186,29 @@ public final class ModelRegistryOuterClass {
       "roto\022\025asgt.modelregistry.v1\032\027asgt/type/d" +
       "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
       "t/type/revision.proto\032\036asgt/type/target_" +
-      "metrics.proto\032\033google/protobuf/empty.pro" +
-      "to\"\326\002\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
-      " \001(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001" +
-      "(\0132\023.asgt.type.Revision\022\025\n\rmodel_version" +
-      "\030\003 \001(\003\022I\n\007metrics\030\004 \003(\01328.asgt.modelregi" +
-      "stry.v1.RegisterModelRequest.MetricsEntr" +
-      "y\0220\n\016target_metrics\030\005 \003(\0132\030.asgt.type.Ta" +
-      "rgetMetrics\022.\n\ninput_type\030\006 \001(\0162\032.asgt.t" +
-      "ype.Model.InputType\032.\n\014MetricsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\"=\n\026GetCurren" +
-      "tModelRequest\022#\n\007dataset\030\001 \001(\0132\022.asgt.ty" +
-      "pe.Dataset\":\n\027GetCurrentModelResponse\022\037\n" +
-      "\005model\030\001 \001(\0132\020.asgt.type.Model2\327\001\n\rModel" +
-      "Registry\022T\n\rRegisterModel\022+.asgt.modelre" +
-      "gistry.v1.RegisterModelRequest\032\026.google." +
-      "protobuf.Empty\022p\n\017GetCurrentModel\022-.asgt" +
-      ".modelregistry.v1.GetCurrentModelRequest" +
-      "\032..asgt.modelregistry.v1.GetCurrentModel" +
-      "ResponseBIZGgithub.com/e-conomic/vmlapis" +
-      "/gen/go/asgt/modelregistry/v1;modelregis" +
-      "tryb\006proto3"
+      "metrics.proto\032 asgt/type/train_statistic" +
+      "s.proto\032\033google/protobuf/empty.proto\"\214\003\n" +
+      "\024RegisterModelRequest\022#\n\007dataset\030\001 \001(\0132\022" +
+      ".asgt.type.Dataset\022%\n\010revision\030\002 \001(\0132\023.a" +
+      "sgt.type.Revision\022\025\n\rmodel_version\030\003 \001(\003" +
+      "\022I\n\007metrics\030\004 \003(\01328.asgt.modelregistry.v" +
+      "1.RegisterModelRequest.MetricsEntry\0220\n\016t" +
+      "arget_metrics\030\005 \003(\0132\030.asgt.type.TargetMe" +
+      "trics\022.\n\ninput_type\030\006 \001(\0162\032.asgt.type.Mo" +
+      "del.InputType\0224\n\020train_statistics\030\007 \001(\0132" +
+      "\032.asgt.type.TrainStatistics\032.\n\014MetricsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\"=\n\026G" +
+      "etCurrentModelRequest\022#\n\007dataset\030\001 \001(\0132\022" +
+      ".asgt.type.Dataset\":\n\027GetCurrentModelRes" +
+      "ponse\022\037\n\005model\030\001 \001(\0132\020.asgt.type.Model2\327" +
+      "\001\n\rModelRegistry\022T\n\rRegisterModel\022+.asgt" +
+      ".modelregistry.v1.RegisterModelRequest\032\026" +
+      ".google.protobuf.Empty\022p\n\017GetCurrentMode" +
+      "l\022-.asgt.modelregistry.v1.GetCurrentMode" +
+      "lRequest\032..asgt.modelregistry.v1.GetCurr" +
+      "entModelResponseBIZGgithub.com/e-conomic" +
+      "/vmlapis/gen/go/asgt/modelregistry/v1;mo" +
+      "delregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3012,6 +3217,7 @@ public final class ModelRegistryOuterClass {
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.RevisionOuterClass.getDescriptor(),
           asgt.type.TargetMetricsOuterClass.getDescriptor(),
+          asgt.type.TrainStatisticsOuterClass.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         });
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor =
@@ -3019,7 +3225,7 @@ public final class ModelRegistryOuterClass {
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics", });
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_descriptor =
       internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor.getNestedTypes().get(0);
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_fieldAccessorTable = new
@@ -3042,6 +3248,7 @@ public final class ModelRegistryOuterClass {
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.RevisionOuterClass.getDescriptor();
     asgt.type.TargetMetricsOuterClass.getDescriptor();
+    asgt.type.TrainStatisticsOuterClass.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

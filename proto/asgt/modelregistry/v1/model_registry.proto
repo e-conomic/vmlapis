@@ -9,6 +9,7 @@ import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
 import "asgt/type/revision.proto";
 import "asgt/type/target_metrics.proto";
+import "asgt/type/train_statistics.proto";
 
 service ModelRegistry {
   rpc RegisterModel (RegisterModelRequest) returns (google.protobuf.Empty);
@@ -27,6 +28,7 @@ message RegisterModelRequest {
   map<string, int32> metrics = 4;
   repeated asgt.type.TargetMetrics target_metrics = 5;
   asgt.type.Model.InputType input_type = 6;
+  asgt.type.TrainStatistics train_statistics = 7;
 }
 
 //message DeleteModelRequest {

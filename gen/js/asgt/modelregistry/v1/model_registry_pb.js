@@ -20,6 +20,8 @@ var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 goog.object.extend(proto, asgt_type_revision_pb);
 var asgt_type_target_metrics_pb = require('../../../asgt/type/target_metrics_pb.js');
 goog.object.extend(proto, asgt_type_target_metrics_pb);
+var asgt_type_train_statistics_pb = require('../../../asgt/type/train_statistics_pb.js');
+goog.object.extend(proto, asgt_type_train_statistics_pb);
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.object.extend(proto, google_protobuf_empty_pb);
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelRequest', null, global);
@@ -133,7 +135,8 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     metricsMap: (f = msg.getMetricsMap()) ? f.toObject(includeInstance, undefined) : [],
     targetMetricsList: jspb.Message.toObjectList(msg.getTargetMetricsList(),
     asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance),
-    inputType: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    inputType: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    trainStatistics: (f = msg.getTrainStatistics()) && asgt_type_train_statistics_pb.TrainStatistics.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -198,6 +201,11 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
     case 6:
       var value = /** @type {!proto.asgt.type.Model.InputType} */ (reader.readEnum());
       msg.setInputType(value);
+      break;
+    case 7:
+      var value = new asgt_type_train_statistics_pb.TrainStatistics;
+      reader.readMessage(value,asgt_type_train_statistics_pb.TrainStatistics.deserializeBinaryFromReader);
+      msg.setTrainStatistics(value);
       break;
     default:
       reader.skipField();
@@ -268,6 +276,14 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
     writer.writeEnum(
       6,
       f
+    );
+  }
+  f = message.getTrainStatistics();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      asgt_type_train_statistics_pb.TrainStatistics.serializeBinaryToWriter
     );
   }
 };
@@ -440,6 +456,43 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getInputType = functi
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setInputType = function(value) {
   return jspb.Message.setProto3EnumField(this, 6, value);
+};
+
+
+/**
+ * optional asgt.type.TrainStatistics train_statistics = 7;
+ * @return {?proto.asgt.type.TrainStatistics}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getTrainStatistics = function() {
+  return /** @type{?proto.asgt.type.TrainStatistics} */ (
+    jspb.Message.getWrapperField(this, asgt_type_train_statistics_pb.TrainStatistics, 7));
+};
+
+
+/**
+ * @param {?proto.asgt.type.TrainStatistics|undefined} value
+ * @return {!proto.asgt.modelregistry.v1.RegisterModelRequest} returns this
+*/
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setTrainStatistics = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.modelregistry.v1.RegisterModelRequest} returns this
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearTrainStatistics = function() {
+  return this.setTrainStatistics(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.hasTrainStatistics = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

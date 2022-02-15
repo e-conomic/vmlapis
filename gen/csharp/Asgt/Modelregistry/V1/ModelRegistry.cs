@@ -27,29 +27,31 @@ namespace Asgt.Modelregistry.V1 {
             "Ciphc2d0L21vZGVscmVnaXN0cnkvdjEvbW9kZWxfcmVnaXN0cnkucHJvdG8S",
             "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRoXYXNndC90eXBlL2RhdGFzZXQucHJv",
             "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
-            "LnByb3RvGh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aG2dvb2ds",
-            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90byLWAgoUUmVnaXN0ZXJNb2RlbFJlcXVl",
-            "c3QSIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0EiUKCHJl",
-            "dmlzaW9uGAIgASgLMhMuYXNndC50eXBlLlJldmlzaW9uEhUKDW1vZGVsX3Zl",
-            "cnNpb24YAyABKAMSSQoHbWV0cmljcxgEIAMoCzI4LmFzZ3QubW9kZWxyZWdp",
-            "c3RyeS52MS5SZWdpc3Rlck1vZGVsUmVxdWVzdC5NZXRyaWNzRW50cnkSMAoO",
-            "dGFyZ2V0X21ldHJpY3MYBSADKAsyGC5hc2d0LnR5cGUuVGFyZ2V0TWV0cmlj",
-            "cxIuCgppbnB1dF90eXBlGAYgASgOMhouYXNndC50eXBlLk1vZGVsLklucHV0",
-            "VHlwZRouCgxNZXRyaWNzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgFOgI4ASI9ChZHZXRDdXJyZW50TW9kZWxSZXF1ZXN0EiMKB2RhdGFzZXQY",
-            "ASABKAsyEi5hc2d0LnR5cGUuRGF0YXNldCI6ChdHZXRDdXJyZW50TW9kZWxS",
-            "ZXNwb25zZRIfCgVtb2RlbBgBIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbDLXAQoN",
-            "TW9kZWxSZWdpc3RyeRJUCg1SZWdpc3Rlck1vZGVsEisuYXNndC5tb2RlbHJl",
-            "Z2lzdHJ5LnYxLlJlZ2lzdGVyTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5EnAKD0dldEN1cnJlbnRNb2RlbBItLmFzZ3QubW9kZWxyZWdp",
-            "c3RyeS52MS5HZXRDdXJyZW50TW9kZWxSZXF1ZXN0Gi4uYXNndC5tb2RlbHJl",
-            "Z2lzdHJ5LnYxLkdldEN1cnJlbnRNb2RlbFJlc3BvbnNlQklaR2dpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvbW9kZWxyZWdpc3Ry",
-            "eS92MTttb2RlbHJlZ2lzdHJ5YgZwcm90bzM="));
+            "LnByb3RvGh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aIGFzZ3Qv",
+            "dHlwZS90cmFpbl9zdGF0aXN0aWNzLnByb3RvGhtnb29nbGUvcHJvdG9idWYv",
+            "ZW1wdHkucHJvdG8ijAMKFFJlZ2lzdGVyTW9kZWxSZXF1ZXN0EiMKB2RhdGFz",
+            "ZXQYASABKAsyEi5hc2d0LnR5cGUuRGF0YXNldBIlCghyZXZpc2lvbhgCIAEo",
+            "CzITLmFzZ3QudHlwZS5SZXZpc2lvbhIVCg1tb2RlbF92ZXJzaW9uGAMgASgD",
+            "EkkKB21ldHJpY3MYBCADKAsyOC5hc2d0Lm1vZGVscmVnaXN0cnkudjEuUmVn",
+            "aXN0ZXJNb2RlbFJlcXVlc3QuTWV0cmljc0VudHJ5EjAKDnRhcmdldF9tZXRy",
+            "aWNzGAUgAygLMhguYXNndC50eXBlLlRhcmdldE1ldHJpY3MSLgoKaW5wdXRf",
+            "dHlwZRgGIAEoDjIaLmFzZ3QudHlwZS5Nb2RlbC5JbnB1dFR5cGUSNAoQdHJh",
+            "aW5fc3RhdGlzdGljcxgHIAEoCzIaLmFzZ3QudHlwZS5UcmFpblN0YXRpc3Rp",
+            "Y3MaLgoMTWV0cmljc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "BToCOAEiPQoWR2V0Q3VycmVudE1vZGVsUmVxdWVzdBIjCgdkYXRhc2V0GAEg",
+            "ASgLMhIuYXNndC50eXBlLkRhdGFzZXQiOgoXR2V0Q3VycmVudE1vZGVsUmVz",
+            "cG9uc2USHwoFbW9kZWwYASABKAsyEC5hc2d0LnR5cGUuTW9kZWwy1wEKDU1v",
+            "ZGVsUmVnaXN0cnkSVAoNUmVnaXN0ZXJNb2RlbBIrLmFzZ3QubW9kZWxyZWdp",
+            "c3RyeS52MS5SZWdpc3Rlck1vZGVsUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eRJwCg9HZXRDdXJyZW50TW9kZWwSLS5hc2d0Lm1vZGVscmVnaXN0",
+            "cnkudjEuR2V0Q3VycmVudE1vZGVsUmVxdWVzdBouLmFzZ3QubW9kZWxyZWdp",
+            "c3RyeS52MS5HZXRDdXJyZW50TW9kZWxSZXNwb25zZUJJWkdnaXRodWIuY29t",
+            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L21vZGVscmVnaXN0cnkv",
+            "djE7bW9kZWxyZWdpc3RyeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Asgt.Type.TrainStatisticsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null, null)
           }));
@@ -93,6 +95,7 @@ namespace Asgt.Modelregistry.V1 {
       metrics_ = other.metrics_.Clone();
       targetMetrics_ = other.targetMetrics_.Clone();
       inputType_ = other.inputType_;
+      trainStatistics_ = other.trainStatistics_ != null ? other.trainStatistics_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -165,6 +168,17 @@ namespace Asgt.Modelregistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "train_statistics" field.</summary>
+    public const int TrainStatisticsFieldNumber = 7;
+    private global::Asgt.Type.TrainStatistics trainStatistics_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Type.TrainStatistics TrainStatistics {
+      get { return trainStatistics_; }
+      set {
+        trainStatistics_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RegisterModelRequest);
@@ -184,6 +198,7 @@ namespace Asgt.Modelregistry.V1 {
       if (!Metrics.Equals(other.Metrics)) return false;
       if(!targetMetrics_.Equals(other.targetMetrics_)) return false;
       if (InputType != other.InputType) return false;
+      if (!object.Equals(TrainStatistics, other.TrainStatistics)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -196,6 +211,7 @@ namespace Asgt.Modelregistry.V1 {
       hash ^= Metrics.GetHashCode();
       hash ^= targetMetrics_.GetHashCode();
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
+      if (trainStatistics_ != null) hash ^= TrainStatistics.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -227,6 +243,10 @@ namespace Asgt.Modelregistry.V1 {
         output.WriteRawTag(48);
         output.WriteEnum((int) InputType);
       }
+      if (trainStatistics_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TrainStatistics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -248,6 +268,9 @@ namespace Asgt.Modelregistry.V1 {
       size += targetMetrics_.CalculateSize(_repeated_targetMetrics_codec);
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputType);
+      }
+      if (trainStatistics_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainStatistics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -279,6 +302,12 @@ namespace Asgt.Modelregistry.V1 {
       targetMetrics_.Add(other.targetMetrics_);
       if (other.InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         InputType = other.InputType;
+      }
+      if (other.trainStatistics_ != null) {
+        if (trainStatistics_ == null) {
+          TrainStatistics = new global::Asgt.Type.TrainStatistics();
+        }
+        TrainStatistics.MergeFrom(other.TrainStatistics);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -324,6 +353,13 @@ namespace Asgt.Modelregistry.V1 {
             InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
             break;
           }
+          case 58: {
+            if (trainStatistics_ == null) {
+              TrainStatistics = new global::Asgt.Type.TrainStatistics();
+            }
+            input.ReadMessage(TrainStatistics);
+            break;
+          }
         }
       }
     #endif
@@ -366,6 +402,13 @@ namespace Asgt.Modelregistry.V1 {
           }
           case 48: {
             InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (trainStatistics_ == null) {
+              TrainStatistics = new global::Asgt.Type.TrainStatistics();
+            }
+            input.ReadMessage(TrainStatistics);
             break;
           }
         }
