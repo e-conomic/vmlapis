@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+
+message TrainStatistics {
+    message InformationGain{
+        //feature information gains for a single target
+        map<string,float> feature_gains = 1;
+    }
+
+    float feature_count = 1;
+    //number of input features for the model
+
+    repeated string feature_names = 2;
+    //feature names
+
+    repeated string target_names = 3;
+    //target names
+
+    map<string,float> target_count = 4;
+    // for each target count of its 
+
+    map<string, InformationGain> information_gains = 5;
+    //feature information gains for each of the targets
+
+    float similarity_index = 6;
+    // similarity index between train and test dataset
+}
+

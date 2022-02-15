@@ -89,23 +89,19 @@ namespace Ssn.Mlservice.V2 {
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Tensorflow.ExampleReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "TruthLabels", "TextAnnotation", "Id" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenResponse), global::Ssn.Mlservice.V2.FeatureGenResponse.Parser, new[]{ "Example" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictRequest), global::Ssn.Mlservice.V2.PredictRequest.Parser, new[]{ "Example", "TopNMostConfident" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenPredictRequest), global::Ssn.Mlservice.V2.FeatureGenPredictRequest.Parser, new[]{ "FeatureGenRequest", "PredictRequest" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "TruthLabels", "TextAnnotation", "Id" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenResponse), global::Ssn.Mlservice.V2.FeatureGenResponse.Parser, new[]{ "Example" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictRequest), global::Ssn.Mlservice.V2.PredictRequest.Parser, new[]{ "Example", "TopNMostConfident" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenPredictRequest), global::Ssn.Mlservice.V2.FeatureGenPredictRequest.Parser, new[]{ "FeatureGenRequest", "PredictRequest" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class FeatureGenRequest : pb::IMessage<FeatureGenRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class FeatureGenRequest : pb::IMessage<FeatureGenRequest> {
     private static readonly pb::MessageParser<FeatureGenRequest> _parser = new pb::MessageParser<FeatureGenRequest>(() => new FeatureGenRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -254,13 +250,13 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.truthLabels_ != null) {
         if (truthLabels_ == null) {
-          TruthLabels = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
+          truthLabels_ = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
         }
         TruthLabels.MergeFrom(other.TruthLabels);
       }
       if (other.textAnnotation_ != null) {
         if (textAnnotation_ == null) {
-          TextAnnotation = new global::Ssn.Type.TextAnnotation();
+          textAnnotation_ = new global::Ssn.Type.TextAnnotation();
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
@@ -272,9 +268,6 @@ namespace Ssn.Mlservice.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -283,48 +276,16 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (truthLabels_ == null) {
-              TruthLabels = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
+              truthLabels_ = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
             }
-            input.ReadMessage(TruthLabels);
+            input.ReadMessage(truthLabels_);
             break;
           }
           case 18: {
             if (textAnnotation_ == null) {
-              TextAnnotation = new global::Ssn.Type.TextAnnotation();
+              textAnnotation_ = new global::Ssn.Type.TextAnnotation();
             }
-            input.ReadMessage(TextAnnotation);
-            break;
-          }
-          case 26: {
-            Id = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (truthLabels_ == null) {
-              TruthLabels = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
-            }
-            input.ReadMessage(TruthLabels);
-            break;
-          }
-          case 18: {
-            if (textAnnotation_ == null) {
-              TextAnnotation = new global::Ssn.Type.TextAnnotation();
-            }
-            input.ReadMessage(TextAnnotation);
+            input.ReadMessage(textAnnotation_);
             break;
           }
           case 26: {
@@ -334,17 +295,12 @@ namespace Ssn.Mlservice.V2 {
         }
       }
     }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the FeatureGenRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class TruthLabels : pb::IMessage<TruthLabels>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
+      public sealed partial class TruthLabels : pb::IMessage<TruthLabels> {
         private static readonly pb::MessageParser<TruthLabels> _parser = new pb::MessageParser<TruthLabels>(() => new TruthLabels());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -901,13 +857,13 @@ namespace Ssn.Mlservice.V2 {
           }
           if (other.orderDate_ != null) {
             if (orderDate_ == null) {
-              OrderDate = new global::Google.Type.Date();
+              orderDate_ = new global::Google.Type.Date();
             }
             OrderDate.MergeFrom(other.OrderDate);
           }
           if (other.paymentDueDate_ != null) {
             if (paymentDueDate_ == null) {
-              PaymentDueDate = new global::Google.Type.Date();
+              paymentDueDate_ = new global::Google.Type.Date();
             }
             PaymentDueDate.MergeFrom(other.PaymentDueDate);
           }
@@ -967,9 +923,6 @@ namespace Ssn.Mlservice.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -990,124 +943,16 @@ namespace Ssn.Mlservice.V2 {
               }
               case 34: {
                 if (orderDate_ == null) {
-                  OrderDate = new global::Google.Type.Date();
+                  orderDate_ = new global::Google.Type.Date();
                 }
-                input.ReadMessage(OrderDate);
+                input.ReadMessage(orderDate_);
                 break;
               }
               case 42: {
                 if (paymentDueDate_ == null) {
-                  PaymentDueDate = new global::Google.Type.Date();
+                  paymentDueDate_ = new global::Google.Type.Date();
                 }
-                input.ReadMessage(PaymentDueDate);
-                break;
-              }
-              case 50: {
-                DocumentType = input.ReadString();
-                break;
-              }
-              case 58: {
-                Currency = input.ReadString();
-                break;
-              }
-              case 66: {
-                CreditCardNumber = input.ReadString();
-                break;
-              }
-              case 74: {
-                PaymentMethod = input.ReadString();
-                break;
-              }
-              case 82: {
-                OcrLineDkType = input.ReadString();
-                break;
-              }
-              case 90: {
-                OcrLineDkPaymentId = input.ReadString();
-                break;
-              }
-              case 98: {
-                OcrLineDkCreditorId = input.ReadString();
-                break;
-              }
-              case 106: {
-                OcrLineSePaymentId = input.ReadString();
-                break;
-              }
-              case 114: {
-                OcrLineSeBankgiroCreditorId = input.ReadString();
-                break;
-              }
-              case 122: {
-                OcrLineSePlusgiroCreditorId = input.ReadString();
-                break;
-              }
-              case 130: {
-                OcrLineNoPaymentId = input.ReadString();
-                break;
-              }
-              case 138: {
-                OcrLineFiPaymentId = input.ReadString();
-                break;
-              }
-              case 146: {
-                OcrLineNlPaymentId = input.ReadString();
-                break;
-              }
-              case 154: {
-                SupplierCorporateId = input.ReadString();
-                break;
-              }
-              case 162: {
-                SupplierCountryCode = input.ReadString();
-                break;
-              }
-              case 170: {
-                InvoiceNumber = input.ReadString();
-                break;
-              }
-              case 178: {
-                Iban = input.ReadString();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 9: {
-                TotalInclVat = input.ReadDouble();
-                break;
-              }
-              case 17: {
-                TotalVat = input.ReadDouble();
-                break;
-              }
-              case 25: {
-                TotalExclVat = input.ReadDouble();
-                break;
-              }
-              case 34: {
-                if (orderDate_ == null) {
-                  OrderDate = new global::Google.Type.Date();
-                }
-                input.ReadMessage(OrderDate);
-                break;
-              }
-              case 42: {
-                if (paymentDueDate_ == null) {
-                  PaymentDueDate = new global::Google.Type.Date();
-                }
-                input.ReadMessage(PaymentDueDate);
+                input.ReadMessage(paymentDueDate_);
                 break;
               }
               case 50: {
@@ -1181,7 +1026,6 @@ namespace Ssn.Mlservice.V2 {
             }
           }
         }
-        #endif
 
       }
 
@@ -1190,11 +1034,7 @@ namespace Ssn.Mlservice.V2 {
 
   }
 
-  public sealed partial class FeatureGenResponse : pb::IMessage<FeatureGenResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class FeatureGenResponse : pb::IMessage<FeatureGenResponse> {
     private static readonly pb::MessageParser<FeatureGenResponse> _parser = new pb::MessageParser<FeatureGenResponse>(() => new FeatureGenResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1301,7 +1141,7 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.example_ != null) {
         if (example_ == null) {
-          Example = new global::Tensorflow.Example();
+          example_ = new global::Tensorflow.Example();
         }
         Example.MergeFrom(other.Example);
       }
@@ -1310,9 +1150,6 @@ namespace Ssn.Mlservice.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1321,44 +1158,18 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (example_ == null) {
-              Example = new global::Tensorflow.Example();
+              example_ = new global::Tensorflow.Example();
             }
-            input.ReadMessage(Example);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (example_ == null) {
-              Example = new global::Tensorflow.Example();
-            }
-            input.ReadMessage(Example);
+            input.ReadMessage(example_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class PredictRequest : pb::IMessage<PredictRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class PredictRequest : pb::IMessage<PredictRequest> {
     private static readonly pb::MessageParser<PredictRequest> _parser = new pb::MessageParser<PredictRequest>(() => new PredictRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1486,7 +1297,7 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.example_ != null) {
         if (example_ == null) {
-          Example = new global::Tensorflow.Example();
+          example_ = new global::Tensorflow.Example();
         }
         Example.MergeFrom(other.Example);
       }
@@ -1498,9 +1309,6 @@ namespace Ssn.Mlservice.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1509,34 +1317,9 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (example_ == null) {
-              Example = new global::Tensorflow.Example();
+              example_ = new global::Tensorflow.Example();
             }
-            input.ReadMessage(Example);
-            break;
-          }
-          case 16: {
-            TopNMostConfident = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (example_ == null) {
-              Example = new global::Tensorflow.Example();
-            }
-            input.ReadMessage(Example);
+            input.ReadMessage(example_);
             break;
           }
           case 16: {
@@ -1546,18 +1329,13 @@ namespace Ssn.Mlservice.V2 {
         }
       }
     }
-    #endif
 
   }
 
   /// <summary>
   /// maps to FieldsPrediction
   /// </summary>
-  public sealed partial class PredictResponse : pb::IMessage<PredictResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class PredictResponse : pb::IMessage<PredictResponse> {
     private static readonly pb::MessageParser<PredictResponse> _parser = new pb::MessageParser<PredictResponse>(() => new PredictResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2014,9 +1792,6 @@ namespace Ssn.Mlservice.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2117,122 +1892,11 @@ namespace Ssn.Mlservice.V2 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            orderDate_.AddEntriesFrom(ref input, _repeated_orderDate_codec);
-            break;
-          }
-          case 18: {
-            paymentDueDate_.AddEntriesFrom(ref input, _repeated_paymentDueDate_codec);
-            break;
-          }
-          case 26: {
-            currency_.AddEntriesFrom(ref input, _repeated_currency_codec);
-            break;
-          }
-          case 34: {
-            totalVat_.AddEntriesFrom(ref input, _repeated_totalVat_codec);
-            break;
-          }
-          case 42: {
-            totalInclVat_.AddEntriesFrom(ref input, _repeated_totalInclVat_codec);
-            break;
-          }
-          case 50: {
-            totalExclVat_.AddEntriesFrom(ref input, _repeated_totalExclVat_codec);
-            break;
-          }
-          case 58: {
-            supplierCorporateId_.AddEntriesFrom(ref input, _repeated_supplierCorporateId_codec);
-            break;
-          }
-          case 66: {
-            supplierCountryCode_.AddEntriesFrom(ref input, _repeated_supplierCountryCode_codec);
-            break;
-          }
-          case 74: {
-            documentType_.AddEntriesFrom(ref input, _repeated_documentType_codec);
-            break;
-          }
-          case 82: {
-            paymentMethod_.AddEntriesFrom(ref input, _repeated_paymentMethod_codec);
-            break;
-          }
-          case 90: {
-            creditCardNumber_.AddEntriesFrom(ref input, _repeated_creditCardNumber_codec);
-            break;
-          }
-          case 98: {
-            invoiceNumber_.AddEntriesFrom(ref input, _repeated_invoiceNumber_codec);
-            break;
-          }
-          case 106: {
-            ocrLineDkType_.AddEntriesFrom(ref input, _repeated_ocrLineDkType_codec);
-            break;
-          }
-          case 114: {
-            ocrLineDkPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineDkPaymentId_codec);
-            break;
-          }
-          case 122: {
-            ocrLineDkCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineDkCreditorId_codec);
-            break;
-          }
-          case 130: {
-            ocrLineSePaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineSePaymentId_codec);
-            break;
-          }
-          case 138: {
-            ocrLineSeBankgiroCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineSeBankgiroCreditorId_codec);
-            break;
-          }
-          case 146: {
-            ocrLineSePlusgiroCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineSePlusgiroCreditorId_codec);
-            break;
-          }
-          case 154: {
-            ocrLineNoPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineNoPaymentId_codec);
-            break;
-          }
-          case 162: {
-            ocrLineFiPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineFiPaymentId_codec);
-            break;
-          }
-          case 170: {
-            ocrLineNlPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineNlPaymentId_codec);
-            break;
-          }
-          case 178: {
-            iban_.AddEntriesFrom(ref input, _repeated_iban_codec);
-            break;
-          }
-          case 186: {
-            lines_.AddEntriesFrom(ref input, _repeated_lines_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
-  public sealed partial class FeatureGenPredictRequest : pb::IMessage<FeatureGenPredictRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class FeatureGenPredictRequest : pb::IMessage<FeatureGenPredictRequest> {
     private static readonly pb::MessageParser<FeatureGenPredictRequest> _parser = new pb::MessageParser<FeatureGenPredictRequest>(() => new FeatureGenPredictRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2360,13 +2024,13 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.featureGenRequest_ != null) {
         if (featureGenRequest_ == null) {
-          FeatureGenRequest = new global::Ssn.Mlservice.V2.FeatureGenRequest();
+          featureGenRequest_ = new global::Ssn.Mlservice.V2.FeatureGenRequest();
         }
         FeatureGenRequest.MergeFrom(other.FeatureGenRequest);
       }
       if (other.predictRequest_ != null) {
         if (predictRequest_ == null) {
-          PredictRequest = new global::Ssn.Mlservice.V2.PredictRequest();
+          predictRequest_ = new global::Ssn.Mlservice.V2.PredictRequest();
         }
         PredictRequest.MergeFrom(other.PredictRequest);
       }
@@ -2375,9 +2039,6 @@ namespace Ssn.Mlservice.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2386,50 +2047,21 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (featureGenRequest_ == null) {
-              FeatureGenRequest = new global::Ssn.Mlservice.V2.FeatureGenRequest();
+              featureGenRequest_ = new global::Ssn.Mlservice.V2.FeatureGenRequest();
             }
-            input.ReadMessage(FeatureGenRequest);
+            input.ReadMessage(featureGenRequest_);
             break;
           }
           case 18: {
             if (predictRequest_ == null) {
-              PredictRequest = new global::Ssn.Mlservice.V2.PredictRequest();
+              predictRequest_ = new global::Ssn.Mlservice.V2.PredictRequest();
             }
-            input.ReadMessage(PredictRequest);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (featureGenRequest_ == null) {
-              FeatureGenRequest = new global::Ssn.Mlservice.V2.FeatureGenRequest();
-            }
-            input.ReadMessage(FeatureGenRequest);
-            break;
-          }
-          case 18: {
-            if (predictRequest_ == null) {
-              PredictRequest = new global::Ssn.Mlservice.V2.PredictRequest();
-            }
-            input.ReadMessage(PredictRequest);
+            input.ReadMessage(predictRequest_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 

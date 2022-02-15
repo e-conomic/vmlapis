@@ -34,8 +34,8 @@ namespace Asgt.V2.Type {
             "dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.V2.Type.DataReflection.Descriptor, global::Asgt.V2.Type.TargetValueReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Example), global::Asgt.V2.Type.Example.Parser, new[]{ "Data", "TargetValues", "Id" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Example), global::Asgt.V2.Type.Example.Parser, new[]{ "Data", "TargetValues", "Id" }, null, null, null)
           }));
     }
     #endregion
@@ -45,11 +45,7 @@ namespace Asgt.V2.Type {
   /// <summary>
   /// A pair of example data and example target values
   /// </summary>
-  public sealed partial class Example : pb::IMessage<Example>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Example : pb::IMessage<Example> {
     private static readonly pb::MessageParser<Example> _parser = new pb::MessageParser<Example>(() => new Example());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -195,7 +191,7 @@ namespace Asgt.V2.Type {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          Data = new global::Asgt.V2.Type.Data();
+          data_ = new global::Asgt.V2.Type.Data();
         }
         Data.MergeFrom(other.Data);
       }
@@ -208,9 +204,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -219,9 +212,9 @@ namespace Asgt.V2.Type {
             break;
           case 10: {
             if (data_ == null) {
-              Data = new global::Asgt.V2.Type.Data();
+              data_ = new global::Asgt.V2.Type.Data();
             }
-            input.ReadMessage(Data);
+            input.ReadMessage(data_);
             break;
           }
           case 18: {
@@ -234,37 +227,7 @@ namespace Asgt.V2.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (data_ == null) {
-              Data = new global::Asgt.V2.Type.Data();
-            }
-            input.ReadMessage(Data);
-            break;
-          }
-          case 18: {
-            targetValues_.AddEntriesFrom(ref input, _repeated_targetValues_codec);
-            break;
-          }
-          case 26: {
-            Id = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

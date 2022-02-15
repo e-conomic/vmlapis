@@ -35,19 +35,15 @@ namespace Asgt.V2.Type {
             "by9hc2d0L3YyL3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Training), global::Asgt.V2.Type.Training.Parser, new[]{ "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Training), global::Asgt.V2.Type.Training.Parser, new[]{ "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class Training : pb::IMessage<Training>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Training : pb::IMessage<Training> {
     private static readonly pb::MessageParser<Training> _parser = new pb::MessageParser<Training>(() => new Training());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -259,7 +255,7 @@ namespace Asgt.V2.Type {
       }
       if (other.createdAt_ != null) {
         if (createdAt_ == null) {
-          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreatedAt.MergeFrom(other.CreatedAt);
       }
@@ -274,13 +270,13 @@ namespace Asgt.V2.Type {
       }
       if (other.finishTime_ != null) {
         if (finishTime_ == null) {
-          FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         FinishTime.MergeFrom(other.FinishTime);
       }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
-          Dataset = new global::Asgt.Type.Dataset();
+          dataset_ = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
@@ -289,9 +285,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -300,9 +293,9 @@ namespace Asgt.V2.Type {
             break;
           case 10: {
             if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(CreatedAt);
+            input.ReadMessage(createdAt_);
             break;
           }
           case 18: {
@@ -319,69 +312,21 @@ namespace Asgt.V2.Type {
           }
           case 42: {
             if (finishTime_ == null) {
-              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(FinishTime);
+            input.ReadMessage(finishTime_);
             break;
           }
           case 50: {
             if (dataset_ == null) {
-              Dataset = new global::Asgt.Type.Dataset();
+              dataset_ = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(Dataset);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreatedAt);
-            break;
-          }
-          case 18: {
-            Status = input.ReadString();
-            break;
-          }
-          case 26: {
-            TrainingStatus = input.ReadString();
-            break;
-          }
-          case 34: {
-            TrainingStatusMessage = input.ReadString();
-            break;
-          }
-          case 42: {
-            if (finishTime_ == null) {
-              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(FinishTime);
-            break;
-          }
-          case 50: {
-            if (dataset_ == null) {
-              Dataset = new global::Asgt.Type.Dataset();
-            }
-            input.ReadMessage(Dataset);
+            input.ReadMessage(dataset_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 

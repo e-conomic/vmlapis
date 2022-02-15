@@ -1,4 +1,3 @@
-// source: ssn/type/tier.proto
 /**
  * @fileoverview
  * @enhanceable

@@ -43,22 +43,18 @@ namespace Ssn.Ocrservice.V1 {
             "cy9nZW4vZ28vc3NuL29jcnNlcnZpY2UvdjE7b2Nyc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageRequest), global::Ssn.Ocrservice.V1.OcrScanImageRequest.Parser, new[]{ "Data" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageResponse), global::Ssn.Ocrservice.V1.OcrScanImageResponse.Parser, new[]{ "TessHocr" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageRequest), global::Ssn.Ocrservice.V1.OcrScanImageRequest.Parser, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageResponse), global::Ssn.Ocrservice.V1.OcrScanImageResponse.Parser, new[]{ "TessHocr" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class GetTextAnnotationRequest : pb::IMessage<GetTextAnnotationRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class GetTextAnnotationRequest : pb::IMessage<GetTextAnnotationRequest> {
     private static readonly pb::MessageParser<GetTextAnnotationRequest> _parser = new pb::MessageParser<GetTextAnnotationRequest>(() => new GetTextAnnotationRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -186,7 +182,7 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          Document = new global::Ssn.Annotator.V1.Document();
+          document_ = new global::Ssn.Annotator.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -198,9 +194,6 @@ namespace Ssn.Ocrservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -209,34 +202,9 @@ namespace Ssn.Ocrservice.V1 {
             break;
           case 18: {
             if (document_ == null) {
-              Document = new global::Ssn.Annotator.V1.Document();
+              document_ = new global::Ssn.Annotator.V1.Document();
             }
-            input.ReadMessage(Document);
-            break;
-          }
-          case 24: {
-            Preview = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 18: {
-            if (document_ == null) {
-              Document = new global::Ssn.Annotator.V1.Document();
-            }
-            input.ReadMessage(Document);
+            input.ReadMessage(document_);
             break;
           }
           case 24: {
@@ -246,15 +214,10 @@ namespace Ssn.Ocrservice.V1 {
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class GetTextAnnotationResponse : pb::IMessage<GetTextAnnotationResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class GetTextAnnotationResponse : pb::IMessage<GetTextAnnotationResponse> {
     private static readonly pb::MessageParser<GetTextAnnotationResponse> _parser = new pb::MessageParser<GetTextAnnotationResponse>(() => new GetTextAnnotationResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -311,7 +274,6 @@ namespace Ssn.Ocrservice.V1 {
         image_ = value;
       }
     }
-
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
@@ -383,7 +345,7 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (other.textAnnotation_ != null) {
         if (textAnnotation_ == null) {
-          TextAnnotation = new global::Ssn.Type.TextAnnotation();
+          textAnnotation_ = new global::Ssn.Type.TextAnnotation();
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
@@ -397,9 +359,6 @@ namespace Ssn.Ocrservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -408,9 +367,9 @@ namespace Ssn.Ocrservice.V1 {
             break;
           case 18: {
             if (textAnnotation_ == null) {
-              TextAnnotation = new global::Ssn.Type.TextAnnotation();
+              textAnnotation_ = new global::Ssn.Type.TextAnnotation();
             }
-            input.ReadMessage(TextAnnotation);
+            input.ReadMessage(textAnnotation_);
             break;
           }
           case 26: {
@@ -422,44 +381,11 @@ namespace Ssn.Ocrservice.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 18: {
-            if (textAnnotation_ == null) {
-              TextAnnotation = new global::Ssn.Type.TextAnnotation();
-            }
-            input.ReadMessage(TextAnnotation);
-            break;
-          }
-          case 26: {
-            pb::ByteString value = _single_image_codec.Read(ref input);
-            if (image_ == null || value != pb::ByteString.Empty) {
-              Image = value;
-            }
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
-  public sealed partial class OcrScanImageRequest : pb::IMessage<OcrScanImageRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class OcrScanImageRequest : pb::IMessage<OcrScanImageRequest> {
     private static readonly pb::MessageParser<OcrScanImageRequest> _parser = new pb::MessageParser<OcrScanImageRequest>(() => new OcrScanImageRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -572,9 +498,6 @@ namespace Ssn.Ocrservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -587,34 +510,11 @@ namespace Ssn.Ocrservice.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Data = input.ReadBytes();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
-  public sealed partial class OcrScanImageResponse : pb::IMessage<OcrScanImageResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class OcrScanImageResponse : pb::IMessage<OcrScanImageResponse> {
     private static readonly pb::MessageParser<OcrScanImageResponse> _parser = new pb::MessageParser<OcrScanImageResponse>(() => new OcrScanImageResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -727,9 +627,6 @@ namespace Ssn.Ocrservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -742,26 +639,7 @@ namespace Ssn.Ocrservice.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            TessHocr = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

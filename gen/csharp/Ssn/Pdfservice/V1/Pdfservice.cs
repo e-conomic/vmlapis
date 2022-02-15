@@ -43,20 +43,16 @@ namespace Ssn.Pdfservice.V1 {
             "MTtwZGZzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest), global::Ssn.Pdfservice.V1.RasterizePdfRequest.Parser, new[]{ "Data", "Dpi", "Format", "Color", "Pages" }, null, new[]{ typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfResponse), global::Ssn.Pdfservice.V1.RasterizePdfResponse.Parser, new[]{ "Index", "Data", "Width", "Height", "Scale" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest), global::Ssn.Pdfservice.V1.RasterizePdfRequest.Parser, new[]{ "Data", "Dpi", "Format", "Color", "Pages" }, null, new[]{ typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfResponse), global::Ssn.Pdfservice.V1.RasterizePdfResponse.Parser, new[]{ "Index", "Data", "Width", "Height", "Scale" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class RasterizePdfRequest : pb::IMessage<RasterizePdfRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class RasterizePdfRequest : pb::IMessage<RasterizePdfRequest> {
     private static readonly pb::MessageParser<RasterizePdfRequest> _parser = new pb::MessageParser<RasterizePdfRequest>(() => new RasterizePdfRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -118,7 +114,7 @@ namespace Ssn.Pdfservice.V1 {
 
     /// <summary>Field number for the "format" field.</summary>
     public const int FormatFieldNumber = 3;
-    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format format_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png;
+    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format format_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format Format {
       get { return format_; }
@@ -129,7 +125,7 @@ namespace Ssn.Pdfservice.V1 {
 
     /// <summary>Field number for the "color" field.</summary>
     public const int ColorFieldNumber = 4;
-    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace color_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray;
+    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace color_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace Color {
       get { return color_; }
@@ -140,7 +136,7 @@ namespace Ssn.Pdfservice.V1 {
 
     /// <summary>Field number for the "pages" field.</summary>
     public const int PagesFieldNumber = 5;
-    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption pages_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast;
+    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption pages_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption Pages {
       get { return pages_; }
@@ -175,9 +171,9 @@ namespace Ssn.Pdfservice.V1 {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (Dpi != 0) hash ^= Dpi.GetHashCode();
-      if (Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) hash ^= Format.GetHashCode();
-      if (Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) hash ^= Color.GetHashCode();
-      if (Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) hash ^= Pages.GetHashCode();
+      if (Format != 0) hash ^= Format.GetHashCode();
+      if (Color != 0) hash ^= Color.GetHashCode();
+      if (Pages != 0) hash ^= Pages.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,15 +195,15 @@ namespace Ssn.Pdfservice.V1 {
         output.WriteRawTag(16);
         output.WriteUInt32(Dpi);
       }
-      if (Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) {
+      if (Format != 0) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Format);
       }
-      if (Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) {
+      if (Color != 0) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Color);
       }
-      if (Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) {
+      if (Pages != 0) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Pages);
       }
@@ -225,13 +221,13 @@ namespace Ssn.Pdfservice.V1 {
       if (Dpi != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Dpi);
       }
-      if (Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) {
+      if (Format != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Format);
       }
-      if (Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) {
+      if (Color != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Color);
       }
-      if (Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) {
+      if (Pages != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Pages);
       }
       if (_unknownFields != null) {
@@ -251,13 +247,13 @@ namespace Ssn.Pdfservice.V1 {
       if (other.Dpi != 0) {
         Dpi = other.Dpi;
       }
-      if (other.Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) {
+      if (other.Format != 0) {
         Format = other.Format;
       }
-      if (other.Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) {
+      if (other.Color != 0) {
         Color = other.Color;
       }
-      if (other.Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) {
+      if (other.Pages != 0) {
         Pages = other.Pages;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -265,9 +261,6 @@ namespace Ssn.Pdfservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -283,55 +276,20 @@ namespace Ssn.Pdfservice.V1 {
             break;
           }
           case 24: {
-            Format = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format) input.ReadEnum();
+            format_ = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format) input.ReadEnum();
             break;
           }
           case 32: {
-            Color = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace) input.ReadEnum();
+            color_ = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace) input.ReadEnum();
             break;
           }
           case 40: {
-            Pages = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Data = input.ReadBytes();
-            break;
-          }
-          case 16: {
-            Dpi = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            Format = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format) input.ReadEnum();
-            break;
-          }
-          case 32: {
-            Color = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            Pages = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) input.ReadEnum();
+            pages_ = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) input.ReadEnum();
             break;
           }
         }
       }
     }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RasterizePdfRequest message type.</summary>
@@ -360,11 +318,7 @@ namespace Ssn.Pdfservice.V1 {
 
   }
 
-  public sealed partial class RasterizePdfResponse : pb::IMessage<RasterizePdfResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class RasterizePdfResponse : pb::IMessage<RasterizePdfResponse> {
     private static readonly pb::MessageParser<RasterizePdfResponse> _parser = new pb::MessageParser<RasterizePdfResponse>(() => new RasterizePdfResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -576,9 +530,6 @@ namespace Ssn.Pdfservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -607,42 +558,7 @@ namespace Ssn.Pdfservice.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Index = input.ReadUInt32();
-            break;
-          }
-          case 18: {
-            Data = input.ReadBytes();
-            break;
-          }
-          case 24: {
-            Width = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            Height = input.ReadUInt32();
-            break;
-          }
-          case 41: {
-            Scale = input.ReadDouble();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

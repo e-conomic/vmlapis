@@ -24,7 +24,6 @@ public final class Geometry {
      * </pre>
      *
      * <code>int32 x = 1;</code>
-     * @return The x.
      */
     int getX();
 
@@ -34,7 +33,6 @@ public final class Geometry {
      * </pre>
      *
      * <code>int32 y = 2;</code>
-     * @return The y.
      */
     int getY();
   }
@@ -46,7 +44,7 @@ public final class Geometry {
    *
    * Protobuf type {@code ssn.type.Vertex}
    */
-  public static final class Vertex extends
+  public  static final class Vertex extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Vertex)
       VertexOrBuilder {
@@ -56,13 +54,8 @@ public final class Geometry {
       super(builder);
     }
     private Vertex() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Vertex();
+      x_ = 0;
+      y_ = 0;
     }
 
     @java.lang.Override
@@ -78,6 +71,7 @@ public final class Geometry {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -99,7 +93,7 @@ public final class Geometry {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -138,9 +132,7 @@ public final class Geometry {
      * </pre>
      *
      * <code>int32 x = 1;</code>
-     * @return The x.
      */
-    @java.lang.Override
     public int getX() {
       return x_;
     }
@@ -153,9 +145,7 @@ public final class Geometry {
      * </pre>
      *
      * <code>int32 y = 2;</code>
-     * @return The y.
      */
-    @java.lang.Override
     public int getY() {
       return y_;
     }
@@ -212,12 +202,13 @@ public final class Geometry {
       }
       ssn.type.Geometry.Vertex other = (ssn.type.Geometry.Vertex) obj;
 
-      if (getX()
-          != other.getX()) return false;
-      if (getY()
-          != other.getY()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (getX()
+          == other.getX());
+      result = result && (getY()
+          == other.getY());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -407,35 +398,35 @@ public final class Geometry {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -491,9 +482,7 @@ public final class Geometry {
        * </pre>
        *
        * <code>int32 x = 1;</code>
-       * @return The x.
        */
-      @java.lang.Override
       public int getX() {
         return x_;
       }
@@ -503,8 +492,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>int32 x = 1;</code>
-       * @param value The x to set.
-       * @return This builder for chaining.
        */
       public Builder setX(int value) {
         
@@ -518,7 +505,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>int32 x = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearX() {
         
@@ -534,9 +520,7 @@ public final class Geometry {
        * </pre>
        *
        * <code>int32 y = 2;</code>
-       * @return The y.
        */
-      @java.lang.Override
       public int getY() {
         return y_;
       }
@@ -546,8 +530,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>int32 y = 2;</code>
-       * @param value The y to set.
-       * @return This builder for chaining.
        */
       public Builder setY(int value) {
         
@@ -561,7 +543,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>int32 y = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearY() {
         
@@ -572,7 +553,7 @@ public final class Geometry {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -632,7 +613,6 @@ public final class Geometry {
      * </pre>
      *
      * <code>float x = 1;</code>
-     * @return The x.
      */
     float getX();
 
@@ -642,7 +622,6 @@ public final class Geometry {
      * </pre>
      *
      * <code>float y = 2;</code>
-     * @return The y.
      */
     float getY();
   }
@@ -655,7 +634,7 @@ public final class Geometry {
    *
    * Protobuf type {@code ssn.type.NormalizedVertex}
    */
-  public static final class NormalizedVertex extends
+  public  static final class NormalizedVertex extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.NormalizedVertex)
       NormalizedVertexOrBuilder {
@@ -665,13 +644,8 @@ public final class Geometry {
       super(builder);
     }
     private NormalizedVertex() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new NormalizedVertex();
+      x_ = 0F;
+      y_ = 0F;
     }
 
     @java.lang.Override
@@ -687,6 +661,7 @@ public final class Geometry {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -708,7 +683,7 @@ public final class Geometry {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -747,9 +722,7 @@ public final class Geometry {
      * </pre>
      *
      * <code>float x = 1;</code>
-     * @return The x.
      */
-    @java.lang.Override
     public float getX() {
       return x_;
     }
@@ -762,9 +735,7 @@ public final class Geometry {
      * </pre>
      *
      * <code>float y = 2;</code>
-     * @return The y.
      */
-    @java.lang.Override
     public float getY() {
       return y_;
     }
@@ -821,14 +792,17 @@ public final class Geometry {
       }
       ssn.type.Geometry.NormalizedVertex other = (ssn.type.Geometry.NormalizedVertex) obj;
 
-      if (java.lang.Float.floatToIntBits(getX())
-          != java.lang.Float.floatToIntBits(
-              other.getX())) return false;
-      if (java.lang.Float.floatToIntBits(getY())
-          != java.lang.Float.floatToIntBits(
-              other.getY())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (
+          java.lang.Float.floatToIntBits(getX())
+          == java.lang.Float.floatToIntBits(
+              other.getX()));
+      result = result && (
+          java.lang.Float.floatToIntBits(getY())
+          == java.lang.Float.floatToIntBits(
+              other.getY()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -1021,35 +995,35 @@ public final class Geometry {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1105,9 +1079,7 @@ public final class Geometry {
        * </pre>
        *
        * <code>float x = 1;</code>
-       * @return The x.
        */
-      @java.lang.Override
       public float getX() {
         return x_;
       }
@@ -1117,8 +1089,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>float x = 1;</code>
-       * @param value The x to set.
-       * @return This builder for chaining.
        */
       public Builder setX(float value) {
         
@@ -1132,7 +1102,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>float x = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearX() {
         
@@ -1148,9 +1117,7 @@ public final class Geometry {
        * </pre>
        *
        * <code>float y = 2;</code>
-       * @return The y.
        */
-      @java.lang.Override
       public float getY() {
         return y_;
       }
@@ -1160,8 +1127,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>float y = 2;</code>
-       * @param value The y to set.
-       * @return This builder for chaining.
        */
       public Builder setY(float value) {
         
@@ -1175,7 +1140,6 @@ public final class Geometry {
        * </pre>
        *
        * <code>float y = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearY() {
         
@@ -1186,7 +1150,7 @@ public final class Geometry {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1335,7 +1299,7 @@ public final class Geometry {
    *
    * Protobuf type {@code ssn.type.BoundingPoly}
    */
-  public static final class BoundingPoly extends
+  public  static final class BoundingPoly extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.BoundingPoly)
       BoundingPolyOrBuilder {
@@ -1347,13 +1311,6 @@ public final class Geometry {
     private BoundingPoly() {
       vertices_ = java.util.Collections.emptyList();
       normalizedVertices_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BoundingPoly();
     }
 
     @java.lang.Override
@@ -1381,7 +1338,7 @@ public final class Geometry {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 vertices_ = new java.util.ArrayList<ssn.type.Geometry.Vertex>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1390,7 +1347,7 @@ public final class Geometry {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 normalizedVertices_ = new java.util.ArrayList<ssn.type.Geometry.NormalizedVertex>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -1399,7 +1356,7 @@ public final class Geometry {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1413,10 +1370,10 @@ public final class Geometry {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           vertices_ = java.util.Collections.unmodifiableList(vertices_);
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           normalizedVertices_ = java.util.Collections.unmodifiableList(normalizedVertices_);
         }
         this.unknownFields = unknownFields.build();
@@ -1445,7 +1402,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.Vertex vertices = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<ssn.type.Geometry.Vertex> getVerticesList() {
       return vertices_;
     }
@@ -1456,7 +1412,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.Vertex vertices = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends ssn.type.Geometry.VertexOrBuilder> 
         getVerticesOrBuilderList() {
       return vertices_;
@@ -1468,7 +1423,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.Vertex vertices = 1;</code>
      */
-    @java.lang.Override
     public int getVerticesCount() {
       return vertices_.size();
     }
@@ -1479,7 +1433,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.Vertex vertices = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.Vertex getVertices(int index) {
       return vertices_.get(index);
     }
@@ -1490,7 +1443,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.Vertex vertices = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.VertexOrBuilder getVerticesOrBuilder(
         int index) {
       return vertices_.get(index);
@@ -1505,7 +1457,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<ssn.type.Geometry.NormalizedVertex> getNormalizedVerticesList() {
       return normalizedVertices_;
     }
@@ -1516,7 +1467,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends ssn.type.Geometry.NormalizedVertexOrBuilder> 
         getNormalizedVerticesOrBuilderList() {
       return normalizedVertices_;
@@ -1528,7 +1478,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
      */
-    @java.lang.Override
     public int getNormalizedVerticesCount() {
       return normalizedVertices_.size();
     }
@@ -1539,7 +1488,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.NormalizedVertex getNormalizedVertices(int index) {
       return normalizedVertices_.get(index);
     }
@@ -1550,7 +1498,6 @@ public final class Geometry {
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.NormalizedVertexOrBuilder getNormalizedVerticesOrBuilder(
         int index) {
       return normalizedVertices_.get(index);
@@ -1608,12 +1555,13 @@ public final class Geometry {
       }
       ssn.type.Geometry.BoundingPoly other = (ssn.type.Geometry.BoundingPoly) obj;
 
-      if (!getVerticesList()
-          .equals(other.getVerticesList())) return false;
-      if (!getNormalizedVerticesList()
-          .equals(other.getNormalizedVerticesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getVerticesList()
+          .equals(other.getVerticesList());
+      result = result && getNormalizedVerticesList()
+          .equals(other.getNormalizedVerticesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -1810,7 +1758,7 @@ public final class Geometry {
         ssn.type.Geometry.BoundingPoly result = new ssn.type.Geometry.BoundingPoly(this);
         int from_bitField0_ = bitField0_;
         if (verticesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
             vertices_ = java.util.Collections.unmodifiableList(vertices_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1819,7 +1767,7 @@ public final class Geometry {
           result.vertices_ = verticesBuilder_.build();
         }
         if (normalizedVerticesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
             normalizedVertices_ = java.util.Collections.unmodifiableList(normalizedVertices_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -1833,35 +1781,35 @@ public final class Geometry {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1960,7 +1908,7 @@ public final class Geometry {
       private java.util.List<ssn.type.Geometry.Vertex> vertices_ =
         java.util.Collections.emptyList();
       private void ensureVerticesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           vertices_ = new java.util.ArrayList<ssn.type.Geometry.Vertex>(vertices_);
           bitField0_ |= 0x00000001;
          }
@@ -2261,7 +2209,7 @@ public final class Geometry {
           verticesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.Geometry.Vertex, ssn.type.Geometry.Vertex.Builder, ssn.type.Geometry.VertexOrBuilder>(
                   vertices_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           vertices_ = null;
@@ -2272,7 +2220,7 @@ public final class Geometry {
       private java.util.List<ssn.type.Geometry.NormalizedVertex> normalizedVertices_ =
         java.util.Collections.emptyList();
       private void ensureNormalizedVerticesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
           normalizedVertices_ = new java.util.ArrayList<ssn.type.Geometry.NormalizedVertex>(normalizedVertices_);
           bitField0_ |= 0x00000002;
          }
@@ -2573,7 +2521,7 @@ public final class Geometry {
           normalizedVerticesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.Geometry.NormalizedVertex, ssn.type.Geometry.NormalizedVertex.Builder, ssn.type.Geometry.NormalizedVertexOrBuilder>(
                   normalizedVertices_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
           normalizedVertices_ = null;
@@ -2583,7 +2531,7 @@ public final class Geometry {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2666,10 +2614,18 @@ public final class Geometry {
       "ic/vmlapis/gen/go/ssn/type;ssntypeb\006prot" +
       "o3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        }, assigner);
     internal_static_ssn_type_Vertex_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_type_Vertex_fieldAccessorTable = new

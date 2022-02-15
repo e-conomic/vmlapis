@@ -20,97 +20,79 @@ public final class BqEntries {
 
     /**
      * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The consumer.
      */
     java.lang.String getConsumer();
     /**
      * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for consumer.
      */
     com.google.protobuf.ByteString
         getConsumerBytes();
 
     /**
      * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetName.
      */
     java.lang.String getDatasetName();
     /**
      * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
      * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetType.
      */
     java.lang.String getDatasetType();
     /**
      * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for datasetType.
      */
     com.google.protobuf.ByteString
         getDatasetTypeBytes();
 
     /**
      * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetId.
      */
     java.lang.String getDatasetId();
     /**
      * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for datasetId.
      */
     com.google.protobuf.ByteString
         getDatasetIdBytes();
 
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
      * <code>.asgt.type.Data data = 5;</code>
-     * @return Whether the data field is set.
      */
     boolean hasData();
     /**
      * <code>.asgt.type.Data data = 5;</code>
-     * @return The data.
      */
     asgt.type.DataOuterClass.Data getData();
     /**
@@ -144,12 +126,10 @@ public final class BqEntries {
 
     /**
      * <code>.asgt.type.Model model = 9;</code>
-     * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
      * <code>.asgt.type.Model model = 9;</code>
-     * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
@@ -183,7 +163,6 @@ public final class BqEntries {
 
     /**
      * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The timeAdded.
      */
     long getTimeAdded();
   }
@@ -194,7 +173,7 @@ public final class BqEntries {
    *
    * Protobuf type {@code asgt.dataservice.v1.Entry}
    */
-  public static final class Entry extends
+  public  static final class Entry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.Entry)
       EntryOrBuilder {
@@ -212,13 +191,7 @@ public final class BqEntries {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       targetValues_ = java.util.Collections.emptyList();
       prediction_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Entry();
+      timeAdded_ = 0L;
     }
 
     @java.lang.Override
@@ -265,9 +238,9 @@ public final class BqEntries {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000020;
               }
               tags_.add(s);
               break;
@@ -286,9 +259,9 @@ public final class BqEntries {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000080;
               }
               targetValues_.add(
                   input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
@@ -313,9 +286,9 @@ public final class BqEntries {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
                 prediction_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000200;
               }
               prediction_.add(
                   input.readMessage(asgt.type.PredictionOuterClass.Prediction.Target.parser(), extensionRegistry));
@@ -334,7 +307,7 @@ public final class BqEntries {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -348,13 +321,13 @@ public final class BqEntries {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           prediction_ = java.util.Collections.unmodifiableList(prediction_);
         }
         this.unknownFields = unknownFields.build();
@@ -374,13 +347,12 @@ public final class BqEntries {
               asgt.dataservice.v1.BqEntries.Entry.class, asgt.dataservice.v1.BqEntries.Entry.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -395,9 +367,7 @@ public final class BqEntries {
     }
     /**
      * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -416,9 +386,7 @@ public final class BqEntries {
     private volatile java.lang.Object consumer_;
     /**
      * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The consumer.
      */
-    @java.lang.Override
     public java.lang.String getConsumer() {
       java.lang.Object ref = consumer_;
       if (ref instanceof java.lang.String) {
@@ -433,9 +401,7 @@ public final class BqEntries {
     }
     /**
      * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for consumer.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getConsumerBytes() {
       java.lang.Object ref = consumer_;
@@ -454,9 +420,7 @@ public final class BqEntries {
     private volatile java.lang.Object datasetName_;
     /**
      * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetName.
      */
-    @java.lang.Override
     public java.lang.String getDatasetName() {
       java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
@@ -471,9 +435,7 @@ public final class BqEntries {
     }
     /**
      * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for datasetName.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetNameBytes() {
       java.lang.Object ref = datasetName_;
@@ -492,9 +454,7 @@ public final class BqEntries {
     private volatile java.lang.Object datasetType_;
     /**
      * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetType.
      */
-    @java.lang.Override
     public java.lang.String getDatasetType() {
       java.lang.Object ref = datasetType_;
       if (ref instanceof java.lang.String) {
@@ -509,9 +469,7 @@ public final class BqEntries {
     }
     /**
      * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for datasetType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetTypeBytes() {
       java.lang.Object ref = datasetType_;
@@ -530,9 +488,7 @@ public final class BqEntries {
     private volatile java.lang.Object datasetId_;
     /**
      * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetId.
      */
-    @java.lang.Override
     public java.lang.String getDatasetId() {
       java.lang.Object ref = datasetId_;
       if (ref instanceof java.lang.String) {
@@ -547,9 +503,7 @@ public final class BqEntries {
     }
     /**
      * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The bytes for datasetId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetIdBytes() {
       java.lang.Object ref = datasetId_;
@@ -568,7 +522,6 @@ public final class BqEntries {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -576,23 +529,18 @@ public final class BqEntries {
     }
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -603,24 +551,19 @@ public final class BqEntries {
     private asgt.type.DataOuterClass.Data data_;
     /**
      * <code>.asgt.type.Data data = 5;</code>
-     * @return Whether the data field is set.
      */
-    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
     /**
      * <code>.asgt.type.Data data = 5;</code>
-     * @return The data.
      */
-    @java.lang.Override
     public asgt.type.DataOuterClass.Data getData() {
       return data_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
     }
     /**
      * <code>.asgt.type.Data data = 5;</code>
      */
-    @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -630,14 +573,12 @@ public final class BqEntries {
     /**
      * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    @java.lang.Override
     public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
       return targetValues_;
     }
     /**
      * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
         getTargetValuesOrBuilderList() {
       return targetValues_;
@@ -645,21 +586,18 @@ public final class BqEntries {
     /**
      * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    @java.lang.Override
     public int getTargetValuesCount() {
       return targetValues_.size();
     }
     /**
      * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
       return targetValues_.get(index);
     }
     /**
      * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index) {
       return targetValues_.get(index);
@@ -669,24 +607,19 @@ public final class BqEntries {
     private asgt.type.ModelOuterClass.Model model_;
     /**
      * <code>.asgt.type.Model model = 9;</code>
-     * @return Whether the model field is set.
      */
-    @java.lang.Override
     public boolean hasModel() {
       return model_ != null;
     }
     /**
      * <code>.asgt.type.Model model = 9;</code>
-     * @return The model.
      */
-    @java.lang.Override
     public asgt.type.ModelOuterClass.Model getModel() {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
      * <code>.asgt.type.Model model = 9;</code>
      */
-    @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
@@ -696,14 +629,12 @@ public final class BqEntries {
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
      */
-    @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getPredictionList() {
       return prediction_;
     }
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
         getPredictionOrBuilderList() {
       return prediction_;
@@ -711,21 +642,18 @@ public final class BqEntries {
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
      */
-    @java.lang.Override
     public int getPredictionCount() {
       return prediction_.size();
     }
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
      */
-    @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.Target getPrediction(int index) {
       return prediction_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
      */
-    @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getPredictionOrBuilder(
         int index) {
       return prediction_.get(index);
@@ -735,9 +663,7 @@ public final class BqEntries {
     private long timeAdded_;
     /**
      * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The timeAdded.
      */
-    @java.lang.Override
     public long getTimeAdded() {
       return timeAdded_;
     }
@@ -856,36 +782,37 @@ public final class BqEntries {
       }
       asgt.dataservice.v1.BqEntries.Entry other = (asgt.dataservice.v1.BqEntries.Entry) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getConsumer()
-          .equals(other.getConsumer())) return false;
-      if (!getDatasetName()
-          .equals(other.getDatasetName())) return false;
-      if (!getDatasetType()
-          .equals(other.getDatasetType())) return false;
-      if (!getDatasetId()
-          .equals(other.getDatasetId())) return false;
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (hasData() != other.hasData()) return false;
+      boolean result = true;
+      result = result && getId()
+          .equals(other.getId());
+      result = result && getConsumer()
+          .equals(other.getConsumer());
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
+      result = result && getDatasetType()
+          .equals(other.getDatasetType());
+      result = result && getDatasetId()
+          .equals(other.getDatasetId());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
+      result = result && (hasData() == other.hasData());
       if (hasData()) {
-        if (!getData()
-            .equals(other.getData())) return false;
+        result = result && getData()
+            .equals(other.getData());
       }
-      if (!getTargetValuesList()
-          .equals(other.getTargetValuesList())) return false;
-      if (hasModel() != other.hasModel()) return false;
+      result = result && getTargetValuesList()
+          .equals(other.getTargetValuesList());
+      result = result && (hasModel() == other.hasModel());
       if (hasModel()) {
-        if (!getModel()
-            .equals(other.getModel())) return false;
+        result = result && getModel()
+            .equals(other.getModel());
       }
-      if (!getPredictionList()
-          .equals(other.getPredictionList())) return false;
-      if (getTimeAdded()
-          != other.getTimeAdded()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && getPredictionList()
+          .equals(other.getPredictionList());
+      result = result && (getTimeAdded()
+          == other.getTimeAdded());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -1078,7 +1005,7 @@ public final class BqEntries {
         datasetId_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (dataBuilder_ == null) {
           data_ = null;
         } else {
@@ -1087,7 +1014,7 @@ public final class BqEntries {
         }
         if (targetValuesBuilder_ == null) {
           targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           targetValuesBuilder_.clear();
         }
@@ -1099,7 +1026,7 @@ public final class BqEntries {
         }
         if (predictionBuilder_ == null) {
           prediction_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           predictionBuilder_.clear();
         }
@@ -1132,14 +1059,15 @@ public final class BqEntries {
       public asgt.dataservice.v1.BqEntries.Entry buildPartial() {
         asgt.dataservice.v1.BqEntries.Entry result = new asgt.dataservice.v1.BqEntries.Entry(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         result.consumer_ = consumer_;
         result.datasetName_ = datasetName_;
         result.datasetType_ = datasetType_;
         result.datasetId_ = datasetId_;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.tags_ = tags_;
         if (dataBuilder_ == null) {
@@ -1148,9 +1076,9 @@ public final class BqEntries {
           result.data_ = dataBuilder_.build();
         }
         if (targetValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
             targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.targetValues_ = targetValues_;
         } else {
@@ -1162,50 +1090,51 @@ public final class BqEntries {
           result.model_ = modelBuilder_.build();
         }
         if (predictionBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
             prediction_ = java.util.Collections.unmodifiableList(prediction_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000200);
           }
           result.prediction_ = prediction_;
         } else {
           result.prediction_ = predictionBuilder_.build();
         }
         result.timeAdded_ = timeAdded_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1242,7 +1171,7 @@ public final class BqEntries {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -1256,7 +1185,7 @@ public final class BqEntries {
           if (!other.targetValues_.isEmpty()) {
             if (targetValues_.isEmpty()) {
               targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureTargetValuesIsMutable();
               targetValues_.addAll(other.targetValues_);
@@ -1269,7 +1198,7 @@ public final class BqEntries {
               targetValuesBuilder_.dispose();
               targetValuesBuilder_ = null;
               targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000080);
               targetValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTargetValuesFieldBuilder() : null;
@@ -1285,7 +1214,7 @@ public final class BqEntries {
           if (!other.prediction_.isEmpty()) {
             if (prediction_.isEmpty()) {
               prediction_ = other.prediction_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000200);
             } else {
               ensurePredictionIsMutable();
               prediction_.addAll(other.prediction_);
@@ -1298,7 +1227,7 @@ public final class BqEntries {
               predictionBuilder_.dispose();
               predictionBuilder_ = null;
               prediction_ = other.prediction_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000200);
               predictionBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPredictionFieldBuilder() : null;
@@ -1343,7 +1272,6 @@ public final class BqEntries {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1359,7 +1287,6 @@ public final class BqEntries {
       }
       /**
        * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1376,8 +1303,6 @@ public final class BqEntries {
       }
       /**
        * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1391,7 +1316,6 @@ public final class BqEntries {
       }
       /**
        * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1401,8 +1325,6 @@ public final class BqEntries {
       }
       /**
        * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1419,7 +1341,6 @@ public final class BqEntries {
       private java.lang.Object consumer_ = "";
       /**
        * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The consumer.
        */
       public java.lang.String getConsumer() {
         java.lang.Object ref = consumer_;
@@ -1435,7 +1356,6 @@ public final class BqEntries {
       }
       /**
        * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The bytes for consumer.
        */
       public com.google.protobuf.ByteString
           getConsumerBytes() {
@@ -1452,8 +1372,6 @@ public final class BqEntries {
       }
       /**
        * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The consumer to set.
-       * @return This builder for chaining.
        */
       public Builder setConsumer(
           java.lang.String value) {
@@ -1467,7 +1385,6 @@ public final class BqEntries {
       }
       /**
        * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearConsumer() {
         
@@ -1477,8 +1394,6 @@ public final class BqEntries {
       }
       /**
        * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The bytes for consumer to set.
-       * @return This builder for chaining.
        */
       public Builder setConsumerBytes(
           com.google.protobuf.ByteString value) {
@@ -1495,7 +1410,6 @@ public final class BqEntries {
       private java.lang.Object datasetName_ = "";
       /**
        * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
         java.lang.Object ref = datasetName_;
@@ -1511,7 +1425,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
           getDatasetNameBytes() {
@@ -1528,8 +1441,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The datasetName to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetName(
           java.lang.String value) {
@@ -1543,7 +1454,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
         
@@ -1553,8 +1463,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The bytes for datasetName to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1571,7 +1479,6 @@ public final class BqEntries {
       private java.lang.Object datasetType_ = "";
       /**
        * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The datasetType.
        */
       public java.lang.String getDatasetType() {
         java.lang.Object ref = datasetType_;
@@ -1587,7 +1494,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The bytes for datasetType.
        */
       public com.google.protobuf.ByteString
           getDatasetTypeBytes() {
@@ -1604,8 +1510,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The datasetType to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetType(
           java.lang.String value) {
@@ -1619,7 +1523,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearDatasetType() {
         
@@ -1629,8 +1532,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The bytes for datasetType to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1647,7 +1548,6 @@ public final class BqEntries {
       private java.lang.Object datasetId_ = "";
       /**
        * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The datasetId.
        */
       public java.lang.String getDatasetId() {
         java.lang.Object ref = datasetId_;
@@ -1663,7 +1563,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The bytes for datasetId.
        */
       public com.google.protobuf.ByteString
           getDatasetIdBytes() {
@@ -1680,8 +1579,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The datasetId to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetId(
           java.lang.String value) {
@@ -1695,7 +1592,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearDatasetId() {
         
@@ -1705,8 +1601,6 @@ public final class BqEntries {
       }
       /**
        * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The bytes for datasetId to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1722,14 +1616,13 @@ public final class BqEntries {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000020;
          }
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -1737,23 +1630,18 @@ public final class BqEntries {
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param index The index of the element to return.
-       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -1761,9 +1649,6 @@ public final class BqEntries {
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param index The index to set the value at.
-       * @param value The tags to set.
-       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -1777,8 +1662,6 @@ public final class BqEntries {
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -1792,8 +1675,6 @@ public final class BqEntries {
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param values The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -1805,18 +1686,15 @@ public final class BqEntries {
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The bytes of the tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -1830,19 +1708,17 @@ public final class BqEntries {
         return this;
       }
 
-      private asgt.type.DataOuterClass.Data data_;
+      private asgt.type.DataOuterClass.Data data_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> dataBuilder_;
       /**
        * <code>.asgt.type.Data data = 5;</code>
-       * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
       }
       /**
        * <code>.asgt.type.Data data = 5;</code>
-       * @return The data.
        */
       public asgt.type.DataOuterClass.Data getData() {
         if (dataBuilder_ == null) {
@@ -1952,9 +1828,9 @@ public final class BqEntries {
       private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_ =
         java.util.Collections.emptyList();
       private void ensureTargetValuesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
           targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targetValues_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -2104,7 +1980,7 @@ public final class BqEntries {
       public Builder clearTargetValues() {
         if (targetValuesBuilder_ == null) {
           targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           targetValuesBuilder_.clear();
@@ -2181,7 +2057,7 @@ public final class BqEntries {
           targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
                   targetValues_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000080) == 0x00000080),
                   getParentForChildren(),
                   isClean());
           targetValues_ = null;
@@ -2189,19 +2065,17 @@ public final class BqEntries {
         return targetValuesBuilder_;
       }
 
-      private asgt.type.ModelOuterClass.Model model_;
+      private asgt.type.ModelOuterClass.Model model_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
        * <code>.asgt.type.Model model = 9;</code>
-       * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
        * <code>.asgt.type.Model model = 9;</code>
-       * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
@@ -2311,9 +2185,9 @@ public final class BqEntries {
       private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> prediction_ =
         java.util.Collections.emptyList();
       private void ensurePredictionIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
           prediction_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>(prediction_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000200;
          }
       }
 
@@ -2463,7 +2337,7 @@ public final class BqEntries {
       public Builder clearPrediction() {
         if (predictionBuilder_ == null) {
           prediction_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
         } else {
           predictionBuilder_.clear();
@@ -2540,7 +2414,7 @@ public final class BqEntries {
           predictionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder>(
                   prediction_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000200) == 0x00000200),
                   getParentForChildren(),
                   isClean());
           prediction_ = null;
@@ -2551,16 +2425,12 @@ public final class BqEntries {
       private long timeAdded_ ;
       /**
        * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The timeAdded.
        */
-      @java.lang.Override
       public long getTimeAdded() {
         return timeAdded_;
       }
       /**
        * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The timeAdded to set.
-       * @return This builder for chaining.
        */
       public Builder setTimeAdded(long value) {
         
@@ -2570,7 +2440,6 @@ public final class BqEntries {
       }
       /**
        * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearTimeAdded() {
         
@@ -2581,7 +2450,7 @@ public final class BqEntries {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2666,7 +2535,15 @@ public final class BqEntries {
       "dataB7Z5github.com/e-conomic/vmlapis/gen" +
       "/go/asgt/data/v1;datab\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DataOuterClass.getDescriptor(),
@@ -2675,7 +2552,7 @@ public final class BqEntries {
           asgt.type.TargetValueOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           gen_bq_schema.BqTable.getDescriptor(),
-        });
+        }, assigner);
     internal_static_asgt_dataservice_v1_Entry_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_dataservice_v1_Entry_fieldAccessorTable = new

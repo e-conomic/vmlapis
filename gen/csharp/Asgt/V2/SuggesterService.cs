@@ -58,23 +58,19 @@ namespace Asgt.V2 {
             "bGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestRequest), global::Asgt.V2.SuggestRequest.Parser, new[]{ "DatasetName", "Input", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestResponse), global::Asgt.V2.SuggestResponse.Parser, new[]{ "Prediction", "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestRequest), global::Asgt.V2.BatchSuggestRequest.Parser, new[]{ "DatasetName", "Inputs", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestResponse), global::Asgt.V2.BatchSuggestResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestRequest), global::Asgt.V2.SuggestRequest.Parser, new[]{ "DatasetName", "Input", "Options" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestResponse), global::Asgt.V2.SuggestResponse.Parser, new[]{ "Prediction", "Model" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestRequest), global::Asgt.V2.BatchSuggestRequest.Parser, new[]{ "DatasetName", "Inputs", "Options" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestResponse), global::Asgt.V2.BatchSuggestResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class SuggestOptions : pb::IMessage<SuggestOptions>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestOptions : pb::IMessage<SuggestOptions> {
     private static readonly pb::MessageParser<SuggestOptions> _parser = new pb::MessageParser<SuggestOptions>(() => new SuggestOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,7 +121,7 @@ namespace Asgt.V2 {
 
     /// <summary>Field number for the "min_confidence" field.</summary>
     public const int MinConfidenceFieldNumber = 2;
-    private global::Asgt.Type.Confidence.Types.Level minConfidence_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
+    private global::Asgt.Type.Confidence.Types.Level minConfidence_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Confidence.Types.Level MinConfidence {
       get { return minConfidence_; }
@@ -156,7 +152,7 @@ namespace Asgt.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (SuggestLimit != 0) hash ^= SuggestLimit.GetHashCode();
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
+      if (MinConfidence != 0) hash ^= MinConfidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -174,7 +170,7 @@ namespace Asgt.V2 {
         output.WriteRawTag(8);
         output.WriteInt32(SuggestLimit);
       }
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (MinConfidence != 0) {
         output.WriteRawTag(16);
         output.WriteEnum((int) MinConfidence);
       }
@@ -189,7 +185,7 @@ namespace Asgt.V2 {
       if (SuggestLimit != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SuggestLimit);
       }
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (MinConfidence != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinConfidence);
       }
       if (_unknownFields != null) {
@@ -206,7 +202,7 @@ namespace Asgt.V2 {
       if (other.SuggestLimit != 0) {
         SuggestLimit = other.SuggestLimit;
       }
-      if (other.MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (other.MinConfidence != 0) {
         MinConfidence = other.MinConfidence;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -214,9 +210,6 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -228,43 +221,16 @@ namespace Asgt.V2 {
             break;
           }
           case 16: {
-            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            SuggestLimit = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            minConfidence_ = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class SuggestRequest : pb::IMessage<SuggestRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestRequest : pb::IMessage<SuggestRequest> {
     private static readonly pb::MessageParser<SuggestRequest> _parser = new pb::MessageParser<SuggestRequest>(() => new SuggestRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -419,13 +385,13 @@ namespace Asgt.V2 {
       }
       if (other.input_ != null) {
         if (input_ == null) {
-          Input = new global::Asgt.V2.Type.Data();
+          input_ = new global::Asgt.V2.Type.Data();
         }
         Input.MergeFrom(other.Input);
       }
       if (other.options_ != null) {
         if (options_ == null) {
-          Options = new global::Asgt.V2.SuggestOptions();
+          options_ = new global::Asgt.V2.SuggestOptions();
         }
         Options.MergeFrom(other.Options);
       }
@@ -434,9 +400,6 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -449,62 +412,25 @@ namespace Asgt.V2 {
           }
           case 18: {
             if (input_ == null) {
-              Input = new global::Asgt.V2.Type.Data();
+              input_ = new global::Asgt.V2.Type.Data();
             }
-            input.ReadMessage(Input);
+            input.ReadMessage(input_);
             break;
           }
           case 26: {
             if (options_ == null) {
-              Options = new global::Asgt.V2.SuggestOptions();
+              options_ = new global::Asgt.V2.SuggestOptions();
             }
-            input.ReadMessage(Options);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            DatasetName = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (input_ == null) {
-              Input = new global::Asgt.V2.Type.Data();
-            }
-            input.ReadMessage(Input);
-            break;
-          }
-          case 26: {
-            if (options_ == null) {
-              Options = new global::Asgt.V2.SuggestOptions();
-            }
-            input.ReadMessage(Options);
+            input.ReadMessage(options_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class SuggestResponse : pb::IMessage<SuggestResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestResponse : pb::IMessage<SuggestResponse> {
     private static readonly pb::MessageParser<SuggestResponse> _parser = new pb::MessageParser<SuggestResponse>(() => new SuggestResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -632,13 +558,13 @@ namespace Asgt.V2 {
       }
       if (other.prediction_ != null) {
         if (prediction_ == null) {
-          Prediction = new global::Asgt.Type.Prediction();
+          prediction_ = new global::Asgt.Type.Prediction();
         }
         Prediction.MergeFrom(other.Prediction);
       }
       if (other.model_ != null) {
         if (model_ == null) {
-          Model = new global::Asgt.Type.Model();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -647,9 +573,6 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -658,58 +581,25 @@ namespace Asgt.V2 {
             break;
           case 10: {
             if (prediction_ == null) {
-              Prediction = new global::Asgt.Type.Prediction();
+              prediction_ = new global::Asgt.Type.Prediction();
             }
-            input.ReadMessage(Prediction);
+            input.ReadMessage(prediction_);
             break;
           }
           case 18: {
             if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
+              model_ = new global::Asgt.Type.Model();
             }
-            input.ReadMessage(Model);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (prediction_ == null) {
-              Prediction = new global::Asgt.Type.Prediction();
-            }
-            input.ReadMessage(Prediction);
-            break;
-          }
-          case 18: {
-            if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
-            }
-            input.ReadMessage(Model);
+            input.ReadMessage(model_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class BatchSuggestRequest : pb::IMessage<BatchSuggestRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class BatchSuggestRequest : pb::IMessage<BatchSuggestRequest> {
     private static readonly pb::MessageParser<BatchSuggestRequest> _parser = new pb::MessageParser<BatchSuggestRequest>(() => new BatchSuggestRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -859,7 +749,7 @@ namespace Asgt.V2 {
       inputs_.Add(other.inputs_);
       if (other.options_ != null) {
         if (options_ == null) {
-          Options = new global::Asgt.V2.SuggestOptions();
+          options_ = new global::Asgt.V2.SuggestOptions();
         }
         Options.MergeFrom(other.Options);
       }
@@ -868,9 +758,6 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -887,52 +774,18 @@ namespace Asgt.V2 {
           }
           case 26: {
             if (options_ == null) {
-              Options = new global::Asgt.V2.SuggestOptions();
+              options_ = new global::Asgt.V2.SuggestOptions();
             }
-            input.ReadMessage(Options);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            DatasetName = input.ReadString();
-            break;
-          }
-          case 18: {
-            inputs_.AddEntriesFrom(ref input, _repeated_inputs_codec);
-            break;
-          }
-          case 26: {
-            if (options_ == null) {
-              Options = new global::Asgt.V2.SuggestOptions();
-            }
-            input.ReadMessage(Options);
+            input.ReadMessage(options_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class BatchSuggestResponse : pb::IMessage<BatchSuggestResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class BatchSuggestResponse : pb::IMessage<BatchSuggestResponse> {
     private static readonly pb::MessageParser<BatchSuggestResponse> _parser = new pb::MessageParser<BatchSuggestResponse>(() => new BatchSuggestResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1055,7 +908,7 @@ namespace Asgt.V2 {
       predictions_.Add(other.predictions_);
       if (other.model_ != null) {
         if (model_ == null) {
-          Model = new global::Asgt.Type.Model();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -1064,9 +917,6 @@ namespace Asgt.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1079,40 +929,14 @@ namespace Asgt.V2 {
           }
           case 18: {
             if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
+              model_ = new global::Asgt.Type.Model();
             }
-            input.ReadMessage(Model);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            predictions_.AddEntriesFrom(ref input, _repeated_predictions_codec);
-            break;
-          }
-          case 18: {
-            if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
-            }
-            input.ReadMessage(Model);
+            input.ReadMessage(model_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 

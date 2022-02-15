@@ -20,12 +20,10 @@ public final class TargetValueOuterClass {
 
     /**
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -36,7 +34,6 @@ public final class TargetValueOuterClass {
      * </pre>
      *
      * <code>string value = 2;</code>
-     * @return The value.
      */
     java.lang.String getValue();
     /**
@@ -45,7 +42,6 @@ public final class TargetValueOuterClass {
      * </pre>
      *
      * <code>string value = 2;</code>
-     * @return The bytes for value.
      */
     com.google.protobuf.ByteString
         getValueBytes();
@@ -57,7 +53,7 @@ public final class TargetValueOuterClass {
    *
    * Protobuf type {@code asgt.v2.type.TargetValue}
    */
-  public static final class TargetValue extends
+  public  static final class TargetValue extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.TargetValue)
       TargetValueOrBuilder {
@@ -69,13 +65,6 @@ public final class TargetValueOuterClass {
     private TargetValue() {
       name_ = "";
       value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TargetValue();
     }
 
     @java.lang.Override
@@ -91,6 +80,7 @@ public final class TargetValueOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -114,7 +104,7 @@ public final class TargetValueOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -149,9 +139,7 @@ public final class TargetValueOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -166,9 +154,7 @@ public final class TargetValueOuterClass {
     }
     /**
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
-     * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -191,9 +177,7 @@ public final class TargetValueOuterClass {
      * </pre>
      *
      * <code>string value = 2;</code>
-     * @return The value.
      */
-    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -212,9 +196,7 @@ public final class TargetValueOuterClass {
      * </pre>
      *
      * <code>string value = 2;</code>
-     * @return The bytes for value.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -279,12 +261,13 @@ public final class TargetValueOuterClass {
       }
       asgt.v2.type.TargetValueOuterClass.TargetValue other = (asgt.v2.type.TargetValueOuterClass.TargetValue) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getValue()
+          .equals(other.getValue());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -473,35 +456,35 @@ public final class TargetValueOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -555,7 +538,6 @@ public final class TargetValueOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -571,7 +553,6 @@ public final class TargetValueOuterClass {
       }
       /**
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -588,8 +569,6 @@ public final class TargetValueOuterClass {
       }
       /**
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -603,7 +582,6 @@ public final class TargetValueOuterClass {
       }
       /**
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -613,8 +591,6 @@ public final class TargetValueOuterClass {
       }
       /**
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -635,7 +611,6 @@ public final class TargetValueOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
-       * @return The value.
        */
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
@@ -655,7 +630,6 @@ public final class TargetValueOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
-       * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
@@ -676,8 +650,6 @@ public final class TargetValueOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
        */
       public Builder setValue(
           java.lang.String value) {
@@ -695,7 +667,6 @@ public final class TargetValueOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearValue() {
         
@@ -709,8 +680,6 @@ public final class TargetValueOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
-       * @param value The bytes for value to set.
-       * @return This builder for chaining.
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
@@ -726,7 +695,7 @@ public final class TargetValueOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -797,11 +766,19 @@ public final class TargetValueOuterClass {
       "Z9github.com/e-conomic/vmlapis/gen/go/as" +
       "gt/v2/type;asgttypeb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
-        });
+        }, assigner);
     internal_static_asgt_v2_type_TargetValue_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_v2_type_TargetValue_fieldAccessorTable = new

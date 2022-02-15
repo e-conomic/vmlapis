@@ -68,7 +68,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
-     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -77,7 +76,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
-     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -96,7 +94,7 @@ public final class TextAnnotationOuterClass {
    *
    * Protobuf type {@code ssn.type.TextAnnotation}
    */
-  public static final class TextAnnotation extends
+  public  static final class TextAnnotation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.TextAnnotation)
       TextAnnotationOrBuilder {
@@ -108,13 +106,6 @@ public final class TextAnnotationOuterClass {
     private TextAnnotation() {
       pages_ = java.util.Collections.emptyList();
       text_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TextAnnotation();
     }
 
     @java.lang.Override
@@ -142,7 +133,7 @@ public final class TextAnnotationOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 pages_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Page>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -157,7 +148,7 @@ public final class TextAnnotationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -171,7 +162,7 @@ public final class TextAnnotationOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           pages_ = java.util.Collections.unmodifiableList(pages_);
         }
         this.unknownFields = unknownFields.build();
@@ -203,7 +194,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
-       * @return The languageCode.
        */
       java.lang.String getLanguageCode();
       /**
@@ -214,7 +204,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
-       * @return The bytes for languageCode.
        */
       com.google.protobuf.ByteString
           getLanguageCodeBytes();
@@ -225,7 +214,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 2;</code>
-       * @return The confidence.
        */
       float getConfidence();
     }
@@ -236,7 +224,7 @@ public final class TextAnnotationOuterClass {
      *
      * Protobuf type {@code ssn.type.TextAnnotation.DetectedLanguage}
      */
-    public static final class DetectedLanguage extends
+    public  static final class DetectedLanguage extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:ssn.type.TextAnnotation.DetectedLanguage)
         DetectedLanguageOrBuilder {
@@ -247,13 +235,7 @@ public final class TextAnnotationOuterClass {
       }
       private DetectedLanguage() {
         languageCode_ = "";
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new DetectedLanguage();
+        confidence_ = 0F;
       }
 
       @java.lang.Override
@@ -269,6 +251,7 @@ public final class TextAnnotationOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -291,7 +274,7 @@ public final class TextAnnotationOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -332,9 +315,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
-       * @return The languageCode.
        */
-      @java.lang.Override
       public java.lang.String getLanguageCode() {
         java.lang.Object ref = languageCode_;
         if (ref instanceof java.lang.String) {
@@ -355,9 +336,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
-       * @return The bytes for languageCode.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getLanguageCodeBytes() {
         java.lang.Object ref = languageCode_;
@@ -380,9 +359,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 2;</code>
-       * @return The confidence.
        */
-      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
@@ -438,13 +415,15 @@ public final class TextAnnotationOuterClass {
         }
         ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage other = (ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage) obj;
 
-        if (!getLanguageCode()
-            .equals(other.getLanguageCode())) return false;
-        if (java.lang.Float.floatToIntBits(getConfidence())
-            != java.lang.Float.floatToIntBits(
-                other.getConfidence())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && getLanguageCode()
+            .equals(other.getLanguageCode());
+        result = result && (
+            java.lang.Float.floatToIntBits(getConfidence())
+            == java.lang.Float.floatToIntBits(
+                other.getConfidence()));
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -634,35 +613,35 @@ public final class TextAnnotationOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -721,7 +700,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>string language_code = 1;</code>
-         * @return The languageCode.
          */
         public java.lang.String getLanguageCode() {
           java.lang.Object ref = languageCode_;
@@ -743,7 +721,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>string language_code = 1;</code>
-         * @return The bytes for languageCode.
          */
         public com.google.protobuf.ByteString
             getLanguageCodeBytes() {
@@ -766,8 +743,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>string language_code = 1;</code>
-         * @param value The languageCode to set.
-         * @return This builder for chaining.
          */
         public Builder setLanguageCode(
             java.lang.String value) {
@@ -787,7 +762,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>string language_code = 1;</code>
-         * @return This builder for chaining.
          */
         public Builder clearLanguageCode() {
           
@@ -803,8 +777,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>string language_code = 1;</code>
-         * @param value The bytes for languageCode to set.
-         * @return This builder for chaining.
          */
         public Builder setLanguageCodeBytes(
             com.google.protobuf.ByteString value) {
@@ -825,9 +797,7 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>float confidence = 2;</code>
-         * @return The confidence.
          */
-        @java.lang.Override
         public float getConfidence() {
           return confidence_;
         }
@@ -837,8 +807,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>float confidence = 2;</code>
-         * @param value The confidence to set.
-         * @return This builder for chaining.
          */
         public Builder setConfidence(float value) {
           
@@ -852,7 +820,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>float confidence = 2;</code>
-         * @return This builder for chaining.
          */
         public Builder clearConfidence() {
           
@@ -863,7 +830,7 @@ public final class TextAnnotationOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -923,7 +890,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-       * @return The enum numeric value on the wire for type.
        */
       int getTypeValue();
       /**
@@ -932,7 +898,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-       * @return The type.
        */
       ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType getType();
 
@@ -942,7 +907,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>bool is_prefix = 2;</code>
-       * @return The isPrefix.
        */
       boolean getIsPrefix();
     }
@@ -953,7 +917,7 @@ public final class TextAnnotationOuterClass {
      *
      * Protobuf type {@code ssn.type.TextAnnotation.DetectedBreak}
      */
-    public static final class DetectedBreak extends
+    public  static final class DetectedBreak extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:ssn.type.TextAnnotation.DetectedBreak)
         DetectedBreakOrBuilder {
@@ -964,13 +928,7 @@ public final class TextAnnotationOuterClass {
       }
       private DetectedBreak() {
         type_ = 0;
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new DetectedBreak();
+        isPrefix_ = false;
       }
 
       @java.lang.Override
@@ -986,6 +944,7 @@ public final class TextAnnotationOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -1008,7 +967,7 @@ public final class TextAnnotationOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1160,8 +1119,6 @@ public final class TextAnnotationOuterClass {
         }
 
         /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -1169,10 +1126,6 @@ public final class TextAnnotationOuterClass {
           return forNumber(value);
         }
 
-        /**
-         * @param value The numeric wire value of the corresponding enum entry.
-         * @return The enum associated with the given numeric wire value.
-         */
         public static BreakType forNumber(int value) {
           switch (value) {
             case 0: return UNKNOWN;
@@ -1199,10 +1152,6 @@ public final class TextAnnotationOuterClass {
 
         public final com.google.protobuf.Descriptors.EnumValueDescriptor
             getValueDescriptor() {
-          if (this == UNRECOGNIZED) {
-            throw new java.lang.IllegalStateException(
-                "Can't get the descriptor of an unrecognized enum value.");
-          }
           return getDescriptor().getValues().get(ordinal());
         }
         public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1245,9 +1194,8 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-       * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
+      public int getTypeValue() {
         return type_;
       }
       /**
@@ -1256,9 +1204,8 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-       * @return The type.
        */
-      @java.lang.Override public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType getType() {
+      public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType getType() {
         @SuppressWarnings("deprecation")
         ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType result = ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType.valueOf(type_);
         return result == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType.UNRECOGNIZED : result;
@@ -1272,9 +1219,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>bool is_prefix = 2;</code>
-       * @return The isPrefix.
        */
-      @java.lang.Override
       public boolean getIsPrefix() {
         return isPrefix_;
       }
@@ -1331,11 +1276,12 @@ public final class TextAnnotationOuterClass {
         }
         ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak other = (ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak) obj;
 
-        if (type_ != other.type_) return false;
-        if (getIsPrefix()
-            != other.getIsPrefix()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && type_ == other.type_;
+        result = result && (getIsPrefix()
+            == other.getIsPrefix());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -1525,35 +1471,35 @@ public final class TextAnnotationOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1609,9 +1555,8 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-         * @return The enum numeric value on the wire for type.
          */
-        @java.lang.Override public int getTypeValue() {
+        public int getTypeValue() {
           return type_;
         }
         /**
@@ -1620,11 +1565,8 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-         * @param value The enum numeric value on the wire for type to set.
-         * @return This builder for chaining.
          */
         public Builder setTypeValue(int value) {
-          
           type_ = value;
           onChanged();
           return this;
@@ -1635,9 +1577,7 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-         * @return The type.
          */
-        @java.lang.Override
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType getType() {
           @SuppressWarnings("deprecation")
           ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType result = ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType.valueOf(type_);
@@ -1649,8 +1589,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-         * @param value The type to set.
-         * @return This builder for chaining.
          */
         public Builder setType(ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType value) {
           if (value == null) {
@@ -1667,7 +1605,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
-         * @return This builder for chaining.
          */
         public Builder clearType() {
           
@@ -1683,9 +1620,7 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>bool is_prefix = 2;</code>
-         * @return The isPrefix.
          */
-        @java.lang.Override
         public boolean getIsPrefix() {
           return isPrefix_;
         }
@@ -1695,8 +1630,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>bool is_prefix = 2;</code>
-         * @param value The isPrefix to set.
-         * @return This builder for chaining.
          */
         public Builder setIsPrefix(boolean value) {
           
@@ -1710,7 +1643,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>bool is_prefix = 2;</code>
-         * @return This builder for chaining.
          */
         public Builder clearIsPrefix() {
           
@@ -1721,7 +1653,7 @@ public final class TextAnnotationOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -1825,7 +1757,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
-       * @return Whether the detectedBreak field is set.
        */
       boolean hasDetectedBreak();
       /**
@@ -1834,7 +1765,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
-       * @return The detectedBreak.
        */
       ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak getDetectedBreak();
       /**
@@ -1853,7 +1783,7 @@ public final class TextAnnotationOuterClass {
      *
      * Protobuf type {@code ssn.type.TextAnnotation.TextProperty}
      */
-    public static final class TextProperty extends
+    public  static final class TextProperty extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:ssn.type.TextAnnotation.TextProperty)
         TextPropertyOrBuilder {
@@ -1864,13 +1794,6 @@ public final class TextAnnotationOuterClass {
       }
       private TextProperty() {
         detectedLanguages_ = java.util.Collections.emptyList();
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new TextProperty();
       }
 
       @java.lang.Override
@@ -1898,7 +1821,7 @@ public final class TextAnnotationOuterClass {
                 done = true;
                 break;
               case 10: {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                   detectedLanguages_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -1920,7 +1843,7 @@ public final class TextAnnotationOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1934,7 +1857,7 @@ public final class TextAnnotationOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             detectedLanguages_ = java.util.Collections.unmodifiableList(detectedLanguages_);
           }
           this.unknownFields = unknownFields.build();
@@ -1954,6 +1877,7 @@ public final class TextAnnotationOuterClass {
                 ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.class, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder.class);
       }
 
+      private int bitField0_;
       public static final int DETECTED_LANGUAGES_FIELD_NUMBER = 1;
       private java.util.List<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage> detectedLanguages_;
       /**
@@ -1963,7 +1887,6 @@ public final class TextAnnotationOuterClass {
        *
        * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
        */
-      @java.lang.Override
       public java.util.List<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage> getDetectedLanguagesList() {
         return detectedLanguages_;
       }
@@ -1974,7 +1897,6 @@ public final class TextAnnotationOuterClass {
        *
        * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
        */
-      @java.lang.Override
       public java.util.List<? extends ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder> 
           getDetectedLanguagesOrBuilderList() {
         return detectedLanguages_;
@@ -1986,7 +1908,6 @@ public final class TextAnnotationOuterClass {
        *
        * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
        */
-      @java.lang.Override
       public int getDetectedLanguagesCount() {
         return detectedLanguages_.size();
       }
@@ -1997,7 +1918,6 @@ public final class TextAnnotationOuterClass {
        *
        * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
        */
-      @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage getDetectedLanguages(int index) {
         return detectedLanguages_.get(index);
       }
@@ -2008,7 +1928,6 @@ public final class TextAnnotationOuterClass {
        *
        * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
        */
-      @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder getDetectedLanguagesOrBuilder(
           int index) {
         return detectedLanguages_.get(index);
@@ -2022,9 +1941,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
-       * @return Whether the detectedBreak field is set.
        */
-      @java.lang.Override
       public boolean hasDetectedBreak() {
         return detectedBreak_ != null;
       }
@@ -2034,9 +1951,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
-       * @return The detectedBreak.
        */
-      @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak getDetectedBreak() {
         return detectedBreak_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.getDefaultInstance() : detectedBreak_;
       }
@@ -2047,7 +1962,6 @@ public final class TextAnnotationOuterClass {
        *
        * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
        */
-      @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreakOrBuilder getDetectedBreakOrBuilder() {
         return getDetectedBreak();
       }
@@ -2104,15 +2018,16 @@ public final class TextAnnotationOuterClass {
         }
         ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty other = (ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty) obj;
 
-        if (!getDetectedLanguagesList()
-            .equals(other.getDetectedLanguagesList())) return false;
-        if (hasDetectedBreak() != other.hasDetectedBreak()) return false;
+        boolean result = true;
+        result = result && getDetectedLanguagesList()
+            .equals(other.getDetectedLanguagesList());
+        result = result && (hasDetectedBreak() == other.hasDetectedBreak());
         if (hasDetectedBreak()) {
-          if (!getDetectedBreak()
-              .equals(other.getDetectedBreak())) return false;
+          result = result && getDetectedBreak()
+              .equals(other.getDetectedBreak());
         }
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -2307,8 +2222,9 @@ public final class TextAnnotationOuterClass {
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty buildPartial() {
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty result = new ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty(this);
           int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           if (detectedLanguagesBuilder_ == null) {
-            if (((bitField0_ & 0x00000001) != 0)) {
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
               detectedLanguages_ = java.util.Collections.unmodifiableList(detectedLanguages_);
               bitField0_ = (bitField0_ & ~0x00000001);
             }
@@ -2321,41 +2237,42 @@ public final class TextAnnotationOuterClass {
           } else {
             result.detectedBreak_ = detectedBreakBuilder_.build();
           }
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2431,7 +2348,7 @@ public final class TextAnnotationOuterClass {
         private java.util.List<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage> detectedLanguages_ =
           java.util.Collections.emptyList();
         private void ensureDetectedLanguagesIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
             detectedLanguages_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage>(detectedLanguages_);
             bitField0_ |= 0x00000001;
            }
@@ -2732,7 +2649,7 @@ public final class TextAnnotationOuterClass {
             detectedLanguagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder>(
                     detectedLanguages_,
-                    ((bitField0_ & 0x00000001) != 0),
+                    ((bitField0_ & 0x00000001) == 0x00000001),
                     getParentForChildren(),
                     isClean());
             detectedLanguages_ = null;
@@ -2740,7 +2657,7 @@ public final class TextAnnotationOuterClass {
           return detectedLanguagesBuilder_;
         }
 
-        private ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak detectedBreak_;
+        private ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak detectedBreak_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
             ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreakOrBuilder> detectedBreakBuilder_;
         /**
@@ -2749,7 +2666,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
-         * @return Whether the detectedBreak field is set.
          */
         public boolean hasDetectedBreak() {
           return detectedBreakBuilder_ != null || detectedBreak_ != null;
@@ -2760,7 +2676,6 @@ public final class TextAnnotationOuterClass {
          * </pre>
          *
          * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
-         * @return The detectedBreak.
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak getDetectedBreak() {
           if (detectedBreakBuilder_ == null) {
@@ -2897,7 +2812,7 @@ public final class TextAnnotationOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -2947,6 +2862,7 @@ public final class TextAnnotationOuterClass {
 
     }
 
+    private int bitField0_;
     public static final int PAGES_FIELD_NUMBER = 1;
     private java.util.List<ssn.type.TextAnnotationOuterClass.Page> pages_;
     /**
@@ -2956,7 +2872,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Page pages = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Page> getPagesList() {
       return pages_;
     }
@@ -2967,7 +2882,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Page pages = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.PageOrBuilder> 
         getPagesOrBuilderList() {
       return pages_;
@@ -2979,7 +2893,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Page pages = 1;</code>
      */
-    @java.lang.Override
     public int getPagesCount() {
       return pages_.size();
     }
@@ -2990,7 +2903,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Page pages = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Page getPages(int index) {
       return pages_.get(index);
     }
@@ -3001,7 +2913,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Page pages = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.PageOrBuilder getPagesOrBuilder(
         int index) {
       return pages_.get(index);
@@ -3015,9 +2926,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
-     * @return The text.
      */
-    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -3036,9 +2945,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
-     * @return The bytes for text.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -3104,12 +3011,13 @@ public final class TextAnnotationOuterClass {
       }
       ssn.type.TextAnnotationOuterClass.TextAnnotation other = (ssn.type.TextAnnotationOuterClass.TextAnnotation) obj;
 
-      if (!getPagesList()
-          .equals(other.getPagesList())) return false;
-      if (!getText()
-          .equals(other.getText())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getPagesList()
+          .equals(other.getPagesList());
+      result = result && getText()
+          .equals(other.getText());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -3305,8 +3213,9 @@ public final class TextAnnotationOuterClass {
       public ssn.type.TextAnnotationOuterClass.TextAnnotation buildPartial() {
         ssn.type.TextAnnotationOuterClass.TextAnnotation result = new ssn.type.TextAnnotationOuterClass.TextAnnotation(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (pagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
             pages_ = java.util.Collections.unmodifiableList(pages_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3315,41 +3224,42 @@ public final class TextAnnotationOuterClass {
           result.pages_ = pagesBuilder_.build();
         }
         result.text_ = text_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3426,7 +3336,7 @@ public final class TextAnnotationOuterClass {
       private java.util.List<ssn.type.TextAnnotationOuterClass.Page> pages_ =
         java.util.Collections.emptyList();
       private void ensurePagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           pages_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Page>(pages_);
           bitField0_ |= 0x00000001;
          }
@@ -3727,7 +3637,7 @@ public final class TextAnnotationOuterClass {
           pagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.TextAnnotationOuterClass.Page, ssn.type.TextAnnotationOuterClass.Page.Builder, ssn.type.TextAnnotationOuterClass.PageOrBuilder>(
                   pages_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           pages_ = null;
@@ -3742,7 +3652,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
-       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -3762,7 +3671,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
-       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -3783,8 +3691,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
-       * @param value The text to set.
-       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -3802,7 +3708,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -3816,8 +3721,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
-       * @param value The bytes for text to set.
-       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -3833,7 +3736,7 @@ public final class TextAnnotationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -3893,7 +3796,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
     boolean hasProperty();
     /**
@@ -3902,7 +3804,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
     /**
@@ -3921,7 +3822,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>int32 width = 2;</code>
-     * @return The width.
      */
     int getWidth();
 
@@ -3932,7 +3832,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>int32 height = 3;</code>
-     * @return The height.
      */
     int getHeight();
 
@@ -3986,7 +3885,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 5;</code>
-     * @return The confidence.
      */
     float getConfidence();
   }
@@ -3997,7 +3895,7 @@ public final class TextAnnotationOuterClass {
    *
    * Protobuf type {@code ssn.type.Page}
    */
-  public static final class Page extends
+  public  static final class Page extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Page)
       PageOrBuilder {
@@ -4007,14 +3905,10 @@ public final class TextAnnotationOuterClass {
       super(builder);
     }
     private Page() {
+      width_ = 0;
+      height_ = 0;
       blocks_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Page();
+      confidence_ = 0F;
     }
 
     @java.lang.Override
@@ -4065,9 +3959,9 @@ public final class TextAnnotationOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 blocks_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Block>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000008;
               }
               blocks_.add(
                   input.readMessage(ssn.type.TextAnnotationOuterClass.Block.parser(), extensionRegistry));
@@ -4079,7 +3973,7 @@ public final class TextAnnotationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4093,7 +3987,7 @@ public final class TextAnnotationOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           blocks_ = java.util.Collections.unmodifiableList(blocks_);
         }
         this.unknownFields = unknownFields.build();
@@ -4113,6 +4007,7 @@ public final class TextAnnotationOuterClass {
               ssn.type.TextAnnotationOuterClass.Page.class, ssn.type.TextAnnotationOuterClass.Page.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROPERTY_FIELD_NUMBER = 1;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
     /**
@@ -4121,9 +4016,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
-    @java.lang.Override
     public boolean hasProperty() {
       return property_ != null;
     }
@@ -4133,9 +4026,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
       return property_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.getDefaultInstance() : property_;
     }
@@ -4146,7 +4037,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
       return getProperty();
     }
@@ -4160,9 +4050,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>int32 width = 2;</code>
-     * @return The width.
      */
-    @java.lang.Override
     public int getWidth() {
       return width_;
     }
@@ -4176,9 +4064,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>int32 height = 3;</code>
-     * @return The height.
      */
-    @java.lang.Override
     public int getHeight() {
       return height_;
     }
@@ -4192,7 +4078,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Block blocks = 4;</code>
      */
-    @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Block> getBlocksList() {
       return blocks_;
     }
@@ -4203,7 +4088,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Block blocks = 4;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.BlockOrBuilder> 
         getBlocksOrBuilderList() {
       return blocks_;
@@ -4215,7 +4099,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Block blocks = 4;</code>
      */
-    @java.lang.Override
     public int getBlocksCount() {
       return blocks_.size();
     }
@@ -4226,7 +4109,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Block blocks = 4;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Block getBlocks(int index) {
       return blocks_.get(index);
     }
@@ -4237,7 +4119,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Block blocks = 4;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.BlockOrBuilder getBlocksOrBuilder(
         int index) {
       return blocks_.get(index);
@@ -4251,9 +4132,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 5;</code>
-     * @return The confidence.
      */
-    @java.lang.Override
     public float getConfidence() {
       return confidence_;
     }
@@ -4331,22 +4210,24 @@ public final class TextAnnotationOuterClass {
       }
       ssn.type.TextAnnotationOuterClass.Page other = (ssn.type.TextAnnotationOuterClass.Page) obj;
 
-      if (hasProperty() != other.hasProperty()) return false;
+      boolean result = true;
+      result = result && (hasProperty() == other.hasProperty());
       if (hasProperty()) {
-        if (!getProperty()
-            .equals(other.getProperty())) return false;
+        result = result && getProperty()
+            .equals(other.getProperty());
       }
-      if (getWidth()
-          != other.getWidth()) return false;
-      if (getHeight()
-          != other.getHeight()) return false;
-      if (!getBlocksList()
-          .equals(other.getBlocksList())) return false;
-      if (java.lang.Float.floatToIntBits(getConfidence())
-          != java.lang.Float.floatToIntBits(
-              other.getConfidence())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && (getWidth()
+          == other.getWidth());
+      result = result && (getHeight()
+          == other.getHeight());
+      result = result && getBlocksList()
+          .equals(other.getBlocksList());
+      result = result && (
+          java.lang.Float.floatToIntBits(getConfidence())
+          == java.lang.Float.floatToIntBits(
+              other.getConfidence()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -4521,7 +4402,7 @@ public final class TextAnnotationOuterClass {
 
         if (blocksBuilder_ == null) {
           blocks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           blocksBuilder_.clear();
         }
@@ -4554,6 +4435,7 @@ public final class TextAnnotationOuterClass {
       public ssn.type.TextAnnotationOuterClass.Page buildPartial() {
         ssn.type.TextAnnotationOuterClass.Page result = new ssn.type.TextAnnotationOuterClass.Page(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (propertyBuilder_ == null) {
           result.property_ = property_;
         } else {
@@ -4562,50 +4444,51 @@ public final class TextAnnotationOuterClass {
         result.width_ = width_;
         result.height_ = height_;
         if (blocksBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             blocks_ = java.util.Collections.unmodifiableList(blocks_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.blocks_ = blocks_;
         } else {
           result.blocks_ = blocksBuilder_.build();
         }
         result.confidence_ = confidence_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4632,7 +4515,7 @@ public final class TextAnnotationOuterClass {
           if (!other.blocks_.isEmpty()) {
             if (blocks_.isEmpty()) {
               blocks_ = other.blocks_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureBlocksIsMutable();
               blocks_.addAll(other.blocks_);
@@ -4645,7 +4528,7 @@ public final class TextAnnotationOuterClass {
               blocksBuilder_.dispose();
               blocksBuilder_ = null;
               blocks_ = other.blocks_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000008);
               blocksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBlocksFieldBuilder() : null;
@@ -4687,7 +4570,7 @@ public final class TextAnnotationOuterClass {
       }
       private int bitField0_;
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> propertyBuilder_;
       /**
@@ -4696,7 +4579,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return Whether the property field is set.
        */
       public boolean hasProperty() {
         return propertyBuilder_ != null || property_ != null;
@@ -4707,7 +4589,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
         if (propertyBuilder_ == null) {
@@ -4850,9 +4731,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>int32 width = 2;</code>
-       * @return The width.
        */
-      @java.lang.Override
       public int getWidth() {
         return width_;
       }
@@ -4863,8 +4742,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>int32 width = 2;</code>
-       * @param value The width to set.
-       * @return This builder for chaining.
        */
       public Builder setWidth(int value) {
         
@@ -4879,7 +4756,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>int32 width = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearWidth() {
         
@@ -4896,9 +4772,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>int32 height = 3;</code>
-       * @return The height.
        */
-      @java.lang.Override
       public int getHeight() {
         return height_;
       }
@@ -4909,8 +4783,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>int32 height = 3;</code>
-       * @param value The height to set.
-       * @return This builder for chaining.
        */
       public Builder setHeight(int value) {
         
@@ -4925,7 +4797,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>int32 height = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearHeight() {
         
@@ -4937,9 +4808,9 @@ public final class TextAnnotationOuterClass {
       private java.util.List<ssn.type.TextAnnotationOuterClass.Block> blocks_ =
         java.util.Collections.emptyList();
       private void ensureBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           blocks_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Block>(blocks_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -5133,7 +5004,7 @@ public final class TextAnnotationOuterClass {
       public Builder clearBlocks() {
         if (blocksBuilder_ == null) {
           blocks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           blocksBuilder_.clear();
@@ -5238,7 +5109,7 @@ public final class TextAnnotationOuterClass {
           blocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.TextAnnotationOuterClass.Block, ssn.type.TextAnnotationOuterClass.Block.Builder, ssn.type.TextAnnotationOuterClass.BlockOrBuilder>(
                   blocks_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           blocks_ = null;
@@ -5253,9 +5124,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 5;</code>
-       * @return The confidence.
        */
-      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
@@ -5265,8 +5134,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 5;</code>
-       * @param value The confidence to set.
-       * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
         
@@ -5280,7 +5147,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -5291,7 +5157,7 @@ public final class TextAnnotationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -5351,7 +5217,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
     boolean hasProperty();
     /**
@@ -5360,7 +5225,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
     /**
@@ -5392,7 +5256,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -5415,7 +5278,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
     /**
@@ -5491,7 +5353,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-     * @return The enum numeric value on the wire for blockType.
      */
     int getBlockTypeValue();
     /**
@@ -5500,7 +5361,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-     * @return The blockType.
      */
     ssn.type.TextAnnotationOuterClass.Block.BlockType getBlockType();
 
@@ -5510,7 +5370,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 5;</code>
-     * @return The confidence.
      */
     float getConfidence();
   }
@@ -5521,7 +5380,7 @@ public final class TextAnnotationOuterClass {
    *
    * Protobuf type {@code ssn.type.Block}
    */
-  public static final class Block extends
+  public  static final class Block extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Block)
       BlockOrBuilder {
@@ -5533,13 +5392,7 @@ public final class TextAnnotationOuterClass {
     private Block() {
       paragraphs_ = java.util.Collections.emptyList();
       blockType_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Block();
+      confidence_ = 0F;
     }
 
     @java.lang.Override
@@ -5593,9 +5446,9 @@ public final class TextAnnotationOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 paragraphs_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Paragraph>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               paragraphs_.add(
                   input.readMessage(ssn.type.TextAnnotationOuterClass.Paragraph.parser(), extensionRegistry));
@@ -5613,7 +5466,7 @@ public final class TextAnnotationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5627,7 +5480,7 @@ public final class TextAnnotationOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           paragraphs_ = java.util.Collections.unmodifiableList(paragraphs_);
         }
         this.unknownFields = unknownFields.build();
@@ -5766,8 +5619,6 @@ public final class TextAnnotationOuterClass {
       }
 
       /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5775,10 +5626,6 @@ public final class TextAnnotationOuterClass {
         return forNumber(value);
       }
 
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
       public static BlockType forNumber(int value) {
         switch (value) {
           case 0: return UNKNOWN;
@@ -5805,10 +5652,6 @@ public final class TextAnnotationOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -5843,6 +5686,7 @@ public final class TextAnnotationOuterClass {
       // @@protoc_insertion_point(enum_scope:ssn.type.Block.BlockType)
     }
 
+    private int bitField0_;
     public static final int PROPERTY_FIELD_NUMBER = 1;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
     /**
@@ -5851,9 +5695,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
-    @java.lang.Override
     public boolean hasProperty() {
       return property_ != null;
     }
@@ -5863,9 +5705,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
       return property_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.getDefaultInstance() : property_;
     }
@@ -5876,7 +5716,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
       return getProperty();
     }
@@ -5903,9 +5742,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
-    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -5929,9 +5766,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPoly getBoundingBox() {
       return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
     }
@@ -5956,7 +5791,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -5970,7 +5804,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Paragraph> getParagraphsList() {
       return paragraphs_;
     }
@@ -5981,7 +5814,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder> 
         getParagraphsOrBuilderList() {
       return paragraphs_;
@@ -5993,7 +5825,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
      */
-    @java.lang.Override
     public int getParagraphsCount() {
       return paragraphs_.size();
     }
@@ -6004,7 +5835,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Paragraph getParagraphs(int index) {
       return paragraphs_.get(index);
     }
@@ -6015,7 +5845,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder getParagraphsOrBuilder(
         int index) {
       return paragraphs_.get(index);
@@ -6029,9 +5858,8 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-     * @return The enum numeric value on the wire for blockType.
      */
-    @java.lang.Override public int getBlockTypeValue() {
+    public int getBlockTypeValue() {
       return blockType_;
     }
     /**
@@ -6040,9 +5868,8 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-     * @return The blockType.
      */
-    @java.lang.Override public ssn.type.TextAnnotationOuterClass.Block.BlockType getBlockType() {
+    public ssn.type.TextAnnotationOuterClass.Block.BlockType getBlockType() {
       @SuppressWarnings("deprecation")
       ssn.type.TextAnnotationOuterClass.Block.BlockType result = ssn.type.TextAnnotationOuterClass.Block.BlockType.valueOf(blockType_);
       return result == null ? ssn.type.TextAnnotationOuterClass.Block.BlockType.UNRECOGNIZED : result;
@@ -6056,9 +5883,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 5;</code>
-     * @return The confidence.
      */
-    @java.lang.Override
     public float getConfidence() {
       return confidence_;
     }
@@ -6136,24 +5961,26 @@ public final class TextAnnotationOuterClass {
       }
       ssn.type.TextAnnotationOuterClass.Block other = (ssn.type.TextAnnotationOuterClass.Block) obj;
 
-      if (hasProperty() != other.hasProperty()) return false;
+      boolean result = true;
+      result = result && (hasProperty() == other.hasProperty());
       if (hasProperty()) {
-        if (!getProperty()
-            .equals(other.getProperty())) return false;
+        result = result && getProperty()
+            .equals(other.getProperty());
       }
-      if (hasBoundingBox() != other.hasBoundingBox()) return false;
+      result = result && (hasBoundingBox() == other.hasBoundingBox());
       if (hasBoundingBox()) {
-        if (!getBoundingBox()
-            .equals(other.getBoundingBox())) return false;
+        result = result && getBoundingBox()
+            .equals(other.getBoundingBox());
       }
-      if (!getParagraphsList()
-          .equals(other.getParagraphsList())) return false;
-      if (blockType_ != other.blockType_) return false;
-      if (java.lang.Float.floatToIntBits(getConfidence())
-          != java.lang.Float.floatToIntBits(
-              other.getConfidence())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && getParagraphsList()
+          .equals(other.getParagraphsList());
+      result = result && blockType_ == other.blockType_;
+      result = result && (
+          java.lang.Float.floatToIntBits(getConfidence())
+          == java.lang.Float.floatToIntBits(
+              other.getConfidence()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -6332,7 +6159,7 @@ public final class TextAnnotationOuterClass {
         }
         if (paragraphsBuilder_ == null) {
           paragraphs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           paragraphsBuilder_.clear();
         }
@@ -6367,6 +6194,7 @@ public final class TextAnnotationOuterClass {
       public ssn.type.TextAnnotationOuterClass.Block buildPartial() {
         ssn.type.TextAnnotationOuterClass.Block result = new ssn.type.TextAnnotationOuterClass.Block(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (propertyBuilder_ == null) {
           result.property_ = property_;
         } else {
@@ -6378,9 +6206,9 @@ public final class TextAnnotationOuterClass {
           result.boundingBox_ = boundingBoxBuilder_.build();
         }
         if (paragraphsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             paragraphs_ = java.util.Collections.unmodifiableList(paragraphs_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.paragraphs_ = paragraphs_;
         } else {
@@ -6388,41 +6216,42 @@ public final class TextAnnotationOuterClass {
         }
         result.blockType_ = blockType_;
         result.confidence_ = confidence_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6446,7 +6275,7 @@ public final class TextAnnotationOuterClass {
           if (!other.paragraphs_.isEmpty()) {
             if (paragraphs_.isEmpty()) {
               paragraphs_ = other.paragraphs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureParagraphsIsMutable();
               paragraphs_.addAll(other.paragraphs_);
@@ -6459,7 +6288,7 @@ public final class TextAnnotationOuterClass {
               paragraphsBuilder_.dispose();
               paragraphsBuilder_ = null;
               paragraphs_ = other.paragraphs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               paragraphsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getParagraphsFieldBuilder() : null;
@@ -6504,7 +6333,7 @@ public final class TextAnnotationOuterClass {
       }
       private int bitField0_;
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> propertyBuilder_;
       /**
@@ -6513,7 +6342,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return Whether the property field is set.
        */
       public boolean hasProperty() {
         return propertyBuilder_ != null || property_ != null;
@@ -6524,7 +6352,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
         if (propertyBuilder_ == null) {
@@ -6659,7 +6486,7 @@ public final class TextAnnotationOuterClass {
         return propertyBuilder_;
       }
 
-      private ssn.type.Geometry.BoundingPoly boundingBox_;
+      private ssn.type.Geometry.BoundingPoly boundingBox_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> boundingBoxBuilder_;
       /**
@@ -6682,7 +6509,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -6707,7 +6533,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -6943,9 +6768,9 @@ public final class TextAnnotationOuterClass {
       private java.util.List<ssn.type.TextAnnotationOuterClass.Paragraph> paragraphs_ =
         java.util.Collections.emptyList();
       private void ensureParagraphsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           paragraphs_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Paragraph>(paragraphs_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -7139,7 +6964,7 @@ public final class TextAnnotationOuterClass {
       public Builder clearParagraphs() {
         if (paragraphsBuilder_ == null) {
           paragraphs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           paragraphsBuilder_.clear();
@@ -7244,7 +7069,7 @@ public final class TextAnnotationOuterClass {
           paragraphsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.TextAnnotationOuterClass.Paragraph, ssn.type.TextAnnotationOuterClass.Paragraph.Builder, ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder>(
                   paragraphs_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           paragraphs_ = null;
@@ -7259,9 +7084,8 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-       * @return The enum numeric value on the wire for blockType.
        */
-      @java.lang.Override public int getBlockTypeValue() {
+      public int getBlockTypeValue() {
         return blockType_;
       }
       /**
@@ -7270,11 +7094,8 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-       * @param value The enum numeric value on the wire for blockType to set.
-       * @return This builder for chaining.
        */
       public Builder setBlockTypeValue(int value) {
-        
         blockType_ = value;
         onChanged();
         return this;
@@ -7285,9 +7106,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-       * @return The blockType.
        */
-      @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.Block.BlockType getBlockType() {
         @SuppressWarnings("deprecation")
         ssn.type.TextAnnotationOuterClass.Block.BlockType result = ssn.type.TextAnnotationOuterClass.Block.BlockType.valueOf(blockType_);
@@ -7299,8 +7118,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-       * @param value The blockType to set.
-       * @return This builder for chaining.
        */
       public Builder setBlockType(ssn.type.TextAnnotationOuterClass.Block.BlockType value) {
         if (value == null) {
@@ -7317,7 +7134,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Block.BlockType block_type = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearBlockType() {
         
@@ -7333,9 +7149,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 5;</code>
-       * @return The confidence.
        */
-      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
@@ -7345,8 +7159,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 5;</code>
-       * @param value The confidence to set.
-       * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
         
@@ -7360,7 +7172,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -7371,7 +7182,7 @@ public final class TextAnnotationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -7431,7 +7242,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
     boolean hasProperty();
     /**
@@ -7440,7 +7250,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
     /**
@@ -7472,7 +7281,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -7495,7 +7303,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
     /**
@@ -7571,7 +7378,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 4;</code>
-     * @return The confidence.
      */
     float getConfidence();
   }
@@ -7582,7 +7388,7 @@ public final class TextAnnotationOuterClass {
    *
    * Protobuf type {@code ssn.type.Paragraph}
    */
-  public static final class Paragraph extends
+  public  static final class Paragraph extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Paragraph)
       ParagraphOrBuilder {
@@ -7593,13 +7399,7 @@ public final class TextAnnotationOuterClass {
     }
     private Paragraph() {
       words_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Paragraph();
+      confidence_ = 0F;
     }
 
     @java.lang.Override
@@ -7653,9 +7453,9 @@ public final class TextAnnotationOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 words_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Word>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               words_.add(
                   input.readMessage(ssn.type.TextAnnotationOuterClass.Word.parser(), extensionRegistry));
@@ -7667,7 +7467,7 @@ public final class TextAnnotationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7681,7 +7481,7 @@ public final class TextAnnotationOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           words_ = java.util.Collections.unmodifiableList(words_);
         }
         this.unknownFields = unknownFields.build();
@@ -7701,6 +7501,7 @@ public final class TextAnnotationOuterClass {
               ssn.type.TextAnnotationOuterClass.Paragraph.class, ssn.type.TextAnnotationOuterClass.Paragraph.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROPERTY_FIELD_NUMBER = 1;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
     /**
@@ -7709,9 +7510,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
-    @java.lang.Override
     public boolean hasProperty() {
       return property_ != null;
     }
@@ -7721,9 +7520,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
       return property_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.getDefaultInstance() : property_;
     }
@@ -7734,7 +7531,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
       return getProperty();
     }
@@ -7761,9 +7557,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
-    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -7787,9 +7581,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPoly getBoundingBox() {
       return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
     }
@@ -7814,7 +7606,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -7828,7 +7619,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Word words = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Word> getWordsList() {
       return words_;
     }
@@ -7839,7 +7629,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Word words = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.WordOrBuilder> 
         getWordsOrBuilderList() {
       return words_;
@@ -7851,7 +7640,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Word words = 3;</code>
      */
-    @java.lang.Override
     public int getWordsCount() {
       return words_.size();
     }
@@ -7862,7 +7650,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Word words = 3;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Word getWords(int index) {
       return words_.get(index);
     }
@@ -7873,7 +7660,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Word words = 3;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.WordOrBuilder getWordsOrBuilder(
         int index) {
       return words_.get(index);
@@ -7887,9 +7673,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 4;</code>
-     * @return The confidence.
      */
-    @java.lang.Override
     public float getConfidence() {
       return confidence_;
     }
@@ -7960,23 +7744,25 @@ public final class TextAnnotationOuterClass {
       }
       ssn.type.TextAnnotationOuterClass.Paragraph other = (ssn.type.TextAnnotationOuterClass.Paragraph) obj;
 
-      if (hasProperty() != other.hasProperty()) return false;
+      boolean result = true;
+      result = result && (hasProperty() == other.hasProperty());
       if (hasProperty()) {
-        if (!getProperty()
-            .equals(other.getProperty())) return false;
+        result = result && getProperty()
+            .equals(other.getProperty());
       }
-      if (hasBoundingBox() != other.hasBoundingBox()) return false;
+      result = result && (hasBoundingBox() == other.hasBoundingBox());
       if (hasBoundingBox()) {
-        if (!getBoundingBox()
-            .equals(other.getBoundingBox())) return false;
+        result = result && getBoundingBox()
+            .equals(other.getBoundingBox());
       }
-      if (!getWordsList()
-          .equals(other.getWordsList())) return false;
-      if (java.lang.Float.floatToIntBits(getConfidence())
-          != java.lang.Float.floatToIntBits(
-              other.getConfidence())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && getWordsList()
+          .equals(other.getWordsList());
+      result = result && (
+          java.lang.Float.floatToIntBits(getConfidence())
+          == java.lang.Float.floatToIntBits(
+              other.getConfidence()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -8153,7 +7939,7 @@ public final class TextAnnotationOuterClass {
         }
         if (wordsBuilder_ == null) {
           words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           wordsBuilder_.clear();
         }
@@ -8186,6 +7972,7 @@ public final class TextAnnotationOuterClass {
       public ssn.type.TextAnnotationOuterClass.Paragraph buildPartial() {
         ssn.type.TextAnnotationOuterClass.Paragraph result = new ssn.type.TextAnnotationOuterClass.Paragraph(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (propertyBuilder_ == null) {
           result.property_ = property_;
         } else {
@@ -8197,50 +7984,51 @@ public final class TextAnnotationOuterClass {
           result.boundingBox_ = boundingBoxBuilder_.build();
         }
         if (wordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             words_ = java.util.Collections.unmodifiableList(words_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.words_ = words_;
         } else {
           result.words_ = wordsBuilder_.build();
         }
         result.confidence_ = confidence_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8264,7 +8052,7 @@ public final class TextAnnotationOuterClass {
           if (!other.words_.isEmpty()) {
             if (words_.isEmpty()) {
               words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureWordsIsMutable();
               words_.addAll(other.words_);
@@ -8277,7 +8065,7 @@ public final class TextAnnotationOuterClass {
               wordsBuilder_.dispose();
               wordsBuilder_ = null;
               words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               wordsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getWordsFieldBuilder() : null;
@@ -8319,7 +8107,7 @@ public final class TextAnnotationOuterClass {
       }
       private int bitField0_;
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> propertyBuilder_;
       /**
@@ -8328,7 +8116,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return Whether the property field is set.
        */
       public boolean hasProperty() {
         return propertyBuilder_ != null || property_ != null;
@@ -8339,7 +8126,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
         if (propertyBuilder_ == null) {
@@ -8474,7 +8260,7 @@ public final class TextAnnotationOuterClass {
         return propertyBuilder_;
       }
 
-      private ssn.type.Geometry.BoundingPoly boundingBox_;
+      private ssn.type.Geometry.BoundingPoly boundingBox_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> boundingBoxBuilder_;
       /**
@@ -8497,7 +8283,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -8522,7 +8307,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -8758,9 +8542,9 @@ public final class TextAnnotationOuterClass {
       private java.util.List<ssn.type.TextAnnotationOuterClass.Word> words_ =
         java.util.Collections.emptyList();
       private void ensureWordsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           words_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Word>(words_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -8954,7 +8738,7 @@ public final class TextAnnotationOuterClass {
       public Builder clearWords() {
         if (wordsBuilder_ == null) {
           words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           wordsBuilder_.clear();
@@ -9059,7 +8843,7 @@ public final class TextAnnotationOuterClass {
           wordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.TextAnnotationOuterClass.Word, ssn.type.TextAnnotationOuterClass.Word.Builder, ssn.type.TextAnnotationOuterClass.WordOrBuilder>(
                   words_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           words_ = null;
@@ -9074,9 +8858,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @return The confidence.
        */
-      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
@@ -9086,8 +8868,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @param value The confidence to set.
-       * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
         
@@ -9101,7 +8881,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -9112,7 +8891,7 @@ public final class TextAnnotationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -9172,7 +8951,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
     boolean hasProperty();
     /**
@@ -9181,7 +8959,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
     /**
@@ -9213,7 +8990,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -9236,7 +9012,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
     /**
@@ -9317,7 +9092,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 4;</code>
-     * @return The confidence.
      */
     float getConfidence();
   }
@@ -9328,7 +9102,7 @@ public final class TextAnnotationOuterClass {
    *
    * Protobuf type {@code ssn.type.Word}
    */
-  public static final class Word extends
+  public  static final class Word extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Word)
       WordOrBuilder {
@@ -9339,13 +9113,7 @@ public final class TextAnnotationOuterClass {
     }
     private Word() {
       symbols_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Word();
+      confidence_ = 0F;
     }
 
     @java.lang.Override
@@ -9399,9 +9167,9 @@ public final class TextAnnotationOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 symbols_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Symbol>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               symbols_.add(
                   input.readMessage(ssn.type.TextAnnotationOuterClass.Symbol.parser(), extensionRegistry));
@@ -9413,7 +9181,7 @@ public final class TextAnnotationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9427,7 +9195,7 @@ public final class TextAnnotationOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           symbols_ = java.util.Collections.unmodifiableList(symbols_);
         }
         this.unknownFields = unknownFields.build();
@@ -9447,6 +9215,7 @@ public final class TextAnnotationOuterClass {
               ssn.type.TextAnnotationOuterClass.Word.class, ssn.type.TextAnnotationOuterClass.Word.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROPERTY_FIELD_NUMBER = 1;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
     /**
@@ -9455,9 +9224,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
-    @java.lang.Override
     public boolean hasProperty() {
       return property_ != null;
     }
@@ -9467,9 +9234,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
       return property_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.getDefaultInstance() : property_;
     }
@@ -9480,7 +9245,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
       return getProperty();
     }
@@ -9507,9 +9271,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
-    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -9533,9 +9295,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPoly getBoundingBox() {
       return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
     }
@@ -9560,7 +9320,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -9575,7 +9334,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Symbol symbols = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Symbol> getSymbolsList() {
       return symbols_;
     }
@@ -9587,7 +9345,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Symbol symbols = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.SymbolOrBuilder> 
         getSymbolsOrBuilderList() {
       return symbols_;
@@ -9600,7 +9357,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Symbol symbols = 3;</code>
      */
-    @java.lang.Override
     public int getSymbolsCount() {
       return symbols_.size();
     }
@@ -9612,7 +9368,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Symbol symbols = 3;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Symbol getSymbols(int index) {
       return symbols_.get(index);
     }
@@ -9624,7 +9379,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>repeated .ssn.type.Symbol symbols = 3;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.SymbolOrBuilder getSymbolsOrBuilder(
         int index) {
       return symbols_.get(index);
@@ -9638,9 +9392,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 4;</code>
-     * @return The confidence.
      */
-    @java.lang.Override
     public float getConfidence() {
       return confidence_;
     }
@@ -9711,23 +9463,25 @@ public final class TextAnnotationOuterClass {
       }
       ssn.type.TextAnnotationOuterClass.Word other = (ssn.type.TextAnnotationOuterClass.Word) obj;
 
-      if (hasProperty() != other.hasProperty()) return false;
+      boolean result = true;
+      result = result && (hasProperty() == other.hasProperty());
       if (hasProperty()) {
-        if (!getProperty()
-            .equals(other.getProperty())) return false;
+        result = result && getProperty()
+            .equals(other.getProperty());
       }
-      if (hasBoundingBox() != other.hasBoundingBox()) return false;
+      result = result && (hasBoundingBox() == other.hasBoundingBox());
       if (hasBoundingBox()) {
-        if (!getBoundingBox()
-            .equals(other.getBoundingBox())) return false;
+        result = result && getBoundingBox()
+            .equals(other.getBoundingBox());
       }
-      if (!getSymbolsList()
-          .equals(other.getSymbolsList())) return false;
-      if (java.lang.Float.floatToIntBits(getConfidence())
-          != java.lang.Float.floatToIntBits(
-              other.getConfidence())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && getSymbolsList()
+          .equals(other.getSymbolsList());
+      result = result && (
+          java.lang.Float.floatToIntBits(getConfidence())
+          == java.lang.Float.floatToIntBits(
+              other.getConfidence()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -9904,7 +9658,7 @@ public final class TextAnnotationOuterClass {
         }
         if (symbolsBuilder_ == null) {
           symbols_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           symbolsBuilder_.clear();
         }
@@ -9937,6 +9691,7 @@ public final class TextAnnotationOuterClass {
       public ssn.type.TextAnnotationOuterClass.Word buildPartial() {
         ssn.type.TextAnnotationOuterClass.Word result = new ssn.type.TextAnnotationOuterClass.Word(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (propertyBuilder_ == null) {
           result.property_ = property_;
         } else {
@@ -9948,50 +9703,51 @@ public final class TextAnnotationOuterClass {
           result.boundingBox_ = boundingBoxBuilder_.build();
         }
         if (symbolsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             symbols_ = java.util.Collections.unmodifiableList(symbols_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.symbols_ = symbols_;
         } else {
           result.symbols_ = symbolsBuilder_.build();
         }
         result.confidence_ = confidence_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10015,7 +9771,7 @@ public final class TextAnnotationOuterClass {
           if (!other.symbols_.isEmpty()) {
             if (symbols_.isEmpty()) {
               symbols_ = other.symbols_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureSymbolsIsMutable();
               symbols_.addAll(other.symbols_);
@@ -10028,7 +9784,7 @@ public final class TextAnnotationOuterClass {
               symbolsBuilder_.dispose();
               symbolsBuilder_ = null;
               symbols_ = other.symbols_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               symbolsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSymbolsFieldBuilder() : null;
@@ -10070,7 +9826,7 @@ public final class TextAnnotationOuterClass {
       }
       private int bitField0_;
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> propertyBuilder_;
       /**
@@ -10079,7 +9835,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return Whether the property field is set.
        */
       public boolean hasProperty() {
         return propertyBuilder_ != null || property_ != null;
@@ -10090,7 +9845,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
         if (propertyBuilder_ == null) {
@@ -10225,7 +9979,7 @@ public final class TextAnnotationOuterClass {
         return propertyBuilder_;
       }
 
-      private ssn.type.Geometry.BoundingPoly boundingBox_;
+      private ssn.type.Geometry.BoundingPoly boundingBox_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> boundingBoxBuilder_;
       /**
@@ -10248,7 +10002,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -10273,7 +10026,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -10509,9 +10261,9 @@ public final class TextAnnotationOuterClass {
       private java.util.List<ssn.type.TextAnnotationOuterClass.Symbol> symbols_ =
         java.util.Collections.emptyList();
       private void ensureSymbolsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           symbols_ = new java.util.ArrayList<ssn.type.TextAnnotationOuterClass.Symbol>(symbols_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -10716,7 +10468,7 @@ public final class TextAnnotationOuterClass {
       public Builder clearSymbols() {
         if (symbolsBuilder_ == null) {
           symbols_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           symbolsBuilder_.clear();
@@ -10828,7 +10580,7 @@ public final class TextAnnotationOuterClass {
           symbolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.TextAnnotationOuterClass.Symbol, ssn.type.TextAnnotationOuterClass.Symbol.Builder, ssn.type.TextAnnotationOuterClass.SymbolOrBuilder>(
                   symbols_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           symbols_ = null;
@@ -10843,9 +10595,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @return The confidence.
        */
-      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
@@ -10855,8 +10605,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @param value The confidence to set.
-       * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
         
@@ -10870,7 +10618,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -10881,7 +10628,7 @@ public final class TextAnnotationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -10941,7 +10688,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
     boolean hasProperty();
     /**
@@ -10950,7 +10696,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
     /**
@@ -10982,7 +10727,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -11005,7 +10749,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
     /**
@@ -11037,7 +10780,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 3;</code>
-     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -11046,7 +10788,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 3;</code>
-     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -11057,7 +10798,6 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 4;</code>
-     * @return The confidence.
      */
     float getConfidence();
   }
@@ -11068,7 +10808,7 @@ public final class TextAnnotationOuterClass {
    *
    * Protobuf type {@code ssn.type.Symbol}
    */
-  public static final class Symbol extends
+  public  static final class Symbol extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Symbol)
       SymbolOrBuilder {
@@ -11079,13 +10819,7 @@ public final class TextAnnotationOuterClass {
     }
     private Symbol() {
       text_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Symbol();
+      confidence_ = 0F;
     }
 
     @java.lang.Override
@@ -11101,6 +10835,7 @@ public final class TextAnnotationOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11149,7 +10884,7 @@ public final class TextAnnotationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11188,9 +10923,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return Whether the property field is set.
      */
-    @java.lang.Override
     public boolean hasProperty() {
       return property_ != null;
     }
@@ -11200,9 +10933,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-     * @return The property.
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
       return property_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.getDefaultInstance() : property_;
     }
@@ -11213,7 +10944,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
      */
-    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
       return getProperty();
     }
@@ -11240,9 +10970,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return Whether the boundingBox field is set.
      */
-    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -11266,9 +10994,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-     * @return The boundingBox.
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPoly getBoundingBox() {
       return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
     }
@@ -11293,7 +11019,6 @@ public final class TextAnnotationOuterClass {
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
      */
-    @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -11306,9 +11031,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 3;</code>
-     * @return The text.
      */
-    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -11327,9 +11050,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>string text = 3;</code>
-     * @return The bytes for text.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -11352,9 +11073,7 @@ public final class TextAnnotationOuterClass {
      * </pre>
      *
      * <code>float confidence = 4;</code>
-     * @return The confidence.
      */
-    @java.lang.Override
     public float getConfidence() {
       return confidence_;
     }
@@ -11424,23 +11143,25 @@ public final class TextAnnotationOuterClass {
       }
       ssn.type.TextAnnotationOuterClass.Symbol other = (ssn.type.TextAnnotationOuterClass.Symbol) obj;
 
-      if (hasProperty() != other.hasProperty()) return false;
+      boolean result = true;
+      result = result && (hasProperty() == other.hasProperty());
       if (hasProperty()) {
-        if (!getProperty()
-            .equals(other.getProperty())) return false;
+        result = result && getProperty()
+            .equals(other.getProperty());
       }
-      if (hasBoundingBox() != other.hasBoundingBox()) return false;
+      result = result && (hasBoundingBox() == other.hasBoundingBox());
       if (hasBoundingBox()) {
-        if (!getBoundingBox()
-            .equals(other.getBoundingBox())) return false;
+        result = result && getBoundingBox()
+            .equals(other.getBoundingBox());
       }
-      if (!getText()
-          .equals(other.getText())) return false;
-      if (java.lang.Float.floatToIntBits(getConfidence())
-          != java.lang.Float.floatToIntBits(
-              other.getConfidence())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && getText()
+          .equals(other.getText());
+      result = result && (
+          java.lang.Float.floatToIntBits(getConfidence())
+          == java.lang.Float.floatToIntBits(
+              other.getConfidence()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -11660,35 +11381,35 @@ public final class TextAnnotationOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11744,7 +11465,7 @@ public final class TextAnnotationOuterClass {
         return this;
       }
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty property_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> propertyBuilder_;
       /**
@@ -11753,7 +11474,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return Whether the property field is set.
        */
       public boolean hasProperty() {
         return propertyBuilder_ != null || property_ != null;
@@ -11764,7 +11484,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
-       * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
         if (propertyBuilder_ == null) {
@@ -11899,7 +11618,7 @@ public final class TextAnnotationOuterClass {
         return propertyBuilder_;
       }
 
-      private ssn.type.Geometry.BoundingPoly boundingBox_;
+      private ssn.type.Geometry.BoundingPoly boundingBox_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> boundingBoxBuilder_;
       /**
@@ -11922,7 +11641,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -11947,7 +11665,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
-       * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -12187,7 +11904,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 3;</code>
-       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -12207,7 +11923,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 3;</code>
-       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -12228,8 +11943,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 3;</code>
-       * @param value The text to set.
-       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -12247,7 +11960,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -12261,8 +11973,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>string text = 3;</code>
-       * @param value The bytes for text to set.
-       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -12283,9 +11993,7 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @return The confidence.
        */
-      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
@@ -12295,8 +12003,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @param value The confidence to set.
-       * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
         
@@ -12310,7 +12016,6 @@ public final class TextAnnotationOuterClass {
        * </pre>
        *
        * <code>float confidence = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -12321,7 +12026,7 @@ public final class TextAnnotationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -12465,11 +12170,19 @@ public final class TextAnnotationOuterClass {
       "\030\004 \001(\002B6Z4github.com/e-conomic/vmlapis/g" +
       "en/go/ssn/type;ssntypeb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           ssn.type.Geometry.getDescriptor(),
-        });
+        }, assigner);
     internal_static_ssn_type_TextAnnotation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_type_TextAnnotation_fieldAccessorTable = new

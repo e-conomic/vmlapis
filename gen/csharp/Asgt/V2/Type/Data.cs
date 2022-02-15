@@ -41,12 +41,12 @@ namespace Asgt.V2.Type {
             "L2dvL2FzZ3QvdjIvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Invoice), global::Asgt.V2.Type.Invoice.Parser, new[]{ "Text" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Transaction), global::Asgt.V2.Type.Transaction.Parser, new[]{ "Text", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.InvoiceLine), global::Asgt.V2.Type.InvoiceLine.Parser, new[]{ "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Supplier), global::Asgt.V2.Type.Supplier.Parser, new[]{ "Id", "Name", "GlobalId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Data), global::Asgt.V2.Type.Data.Parser, new[]{ "Transaction", "Invoice", "InvoiceLine" }, new[]{ "DataStructure" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Invoice), global::Asgt.V2.Type.Invoice.Parser, new[]{ "Text" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Transaction), global::Asgt.V2.Type.Transaction.Parser, new[]{ "Text", "Amount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.InvoiceLine), global::Asgt.V2.Type.InvoiceLine.Parser, new[]{ "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Amount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Supplier), global::Asgt.V2.Type.Supplier.Parser, new[]{ "Id", "Name", "GlobalId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Data), global::Asgt.V2.Type.Data.Parser, new[]{ "Transaction", "Invoice", "InvoiceLine" }, new[]{ "DataStructure" }, null, null)
           }));
     }
     #endregion
@@ -56,11 +56,7 @@ namespace Asgt.V2.Type {
   /// <summary>
   /// Used in scanned-invoice requests.
   /// </summary>
-  public sealed partial class Invoice : pb::IMessage<Invoice>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Invoice : pb::IMessage<Invoice> {
     private static readonly pb::MessageParser<Invoice> _parser = new pb::MessageParser<Invoice>(() => new Invoice());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -176,9 +172,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -191,37 +184,14 @@ namespace Asgt.V2.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Text = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
   /// <summary>
   /// Used in bank requests.
   /// </summary>
-  public sealed partial class Transaction : pb::IMessage<Transaction>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Transaction : pb::IMessage<Transaction> {
     private static readonly pb::MessageParser<Transaction> _parser = new pb::MessageParser<Transaction>(() => new Transaction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -364,9 +334,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -383,41 +350,14 @@ namespace Asgt.V2.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Text = input.ReadString();
-            break;
-          }
-          case 21: {
-            Amount = input.ReadFloat();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
   /// <summary>
   /// Used in electronic-invoice-line requests.
   /// </summary>
-  public sealed partial class InvoiceLine : pb::IMessage<InvoiceLine>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class InvoiceLine : pb::IMessage<InvoiceLine> {
     private static readonly pb::MessageParser<InvoiceLine> _parser = new pb::MessageParser<InvoiceLine>(() => new InvoiceLine());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -650,13 +590,13 @@ namespace Asgt.V2.Type {
       }
       if (other.issueDate_ != null) {
         if (issueDate_ == null) {
-          IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          issueDate_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         IssueDate.MergeFrom(other.IssueDate);
       }
       if (other.supplier_ != null) {
         if (supplier_ == null) {
-          Supplier = new global::Asgt.V2.Type.Supplier();
+          supplier_ = new global::Asgt.V2.Type.Supplier();
         }
         Supplier.MergeFrom(other.Supplier);
       }
@@ -671,9 +611,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -690,60 +627,16 @@ namespace Asgt.V2.Type {
           }
           case 26: {
             if (issueDate_ == null) {
-              IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              issueDate_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(IssueDate);
+            input.ReadMessage(issueDate_);
             break;
           }
           case 34: {
             if (supplier_ == null) {
-              Supplier = new global::Asgt.V2.Type.Supplier();
+              supplier_ = new global::Asgt.V2.Type.Supplier();
             }
-            input.ReadMessage(Supplier);
-            break;
-          }
-          case 42: {
-            CustomerRef = input.ReadString();
-            break;
-          }
-          case 61: {
-            Amount = input.ReadFloat();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            ItemId = input.ReadString();
-            break;
-          }
-          case 18: {
-            Text = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (issueDate_ == null) {
-              IssueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(IssueDate);
-            break;
-          }
-          case 34: {
-            if (supplier_ == null) {
-              Supplier = new global::Asgt.V2.Type.Supplier();
-            }
-            input.ReadMessage(Supplier);
+            input.ReadMessage(supplier_);
             break;
           }
           case 42: {
@@ -757,15 +650,10 @@ namespace Asgt.V2.Type {
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class Supplier : pb::IMessage<Supplier>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Supplier : pb::IMessage<Supplier> {
     private static readonly pb::MessageParser<Supplier> _parser = new pb::MessageParser<Supplier>(() => new Supplier());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -935,9 +823,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -958,42 +843,11 @@ namespace Asgt.V2.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            GlobalId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
-  public sealed partial class Data : pb::IMessage<Data>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Data : pb::IMessage<Data> {
     private static readonly pb::MessageParser<Data> _parser = new pb::MessageParser<Data>(() => new Data());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1206,9 +1060,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1244,49 +1095,7 @@ namespace Asgt.V2.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            global::Asgt.V2.Type.Transaction subBuilder = new global::Asgt.V2.Type.Transaction();
-            if (dataStructureCase_ == DataStructureOneofCase.Transaction) {
-              subBuilder.MergeFrom(Transaction);
-            }
-            input.ReadMessage(subBuilder);
-            Transaction = subBuilder;
-            break;
-          }
-          case 18: {
-            global::Asgt.V2.Type.Invoice subBuilder = new global::Asgt.V2.Type.Invoice();
-            if (dataStructureCase_ == DataStructureOneofCase.Invoice) {
-              subBuilder.MergeFrom(Invoice);
-            }
-            input.ReadMessage(subBuilder);
-            Invoice = subBuilder;
-            break;
-          }
-          case 26: {
-            global::Asgt.V2.Type.InvoiceLine subBuilder = new global::Asgt.V2.Type.InvoiceLine();
-            if (dataStructureCase_ == DataStructureOneofCase.InvoiceLine) {
-              subBuilder.MergeFrom(InvoiceLine);
-            }
-            input.ReadMessage(subBuilder);
-            InvoiceLine = subBuilder;
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

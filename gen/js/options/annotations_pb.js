@@ -1,4 +1,3 @@
-// source: options/annotations.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -13,9 +12,7 @@ var goog = jspb;
 var global = Function('return this')();
 
 var google_protobuf_descriptor_pb = require('google-protobuf/google/protobuf/descriptor_pb.js');
-goog.object.extend(proto, google_protobuf_descriptor_pb);
 var options_openapiv2_pb = require('../options/openapiv2_pb.js');
-goog.object.extend(proto, options_openapiv2_pb);
 goog.exportSymbol('proto.grpc.gateway.protoc_gen_openapiv2.options.openapiv2Field', null, global);
 goog.exportSymbol('proto.grpc.gateway.protoc_gen_openapiv2.options.openapiv2Operation', null, global);
 goog.exportSymbol('proto.grpc.gateway.protoc_gen_openapiv2.options.openapiv2Schema', null, global);

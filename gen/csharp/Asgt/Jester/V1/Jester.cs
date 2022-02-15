@@ -44,10 +44,10 @@ namespace Asgt.Jester.V1 {
             "Y2F0aW9uL2pzb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags" }, null, null, null)
           }));
     }
     #endregion
@@ -57,11 +57,7 @@ namespace Asgt.Jester.V1 {
   /// <summary>
   /// AutoSuggest
   /// </summary>
-  public sealed partial class SuggestionResponse : pb::IMessage<SuggestionResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestionResponse : pb::IMessage<SuggestionResponse> {
     private static readonly pb::MessageParser<SuggestionResponse> _parser = new pb::MessageParser<SuggestionResponse>(() => new SuggestionResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -184,7 +180,7 @@ namespace Asgt.Jester.V1 {
       predictions_.Add(other.predictions_);
       if (other.model_ != null) {
         if (model_ == null) {
-          Model = new global::Asgt.Type.Model();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -193,9 +189,6 @@ namespace Asgt.Jester.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -208,48 +201,18 @@ namespace Asgt.Jester.V1 {
           }
           case 18: {
             if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
+              model_ = new global::Asgt.Type.Model();
             }
-            input.ReadMessage(Model);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            predictions_.AddEntriesFrom(ref input, _repeated_predictions_codec);
-            break;
-          }
-          case 18: {
-            if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
-            }
-            input.ReadMessage(Model);
+            input.ReadMessage(model_);
             break;
           }
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class SuggestionOptions : pb::IMessage<SuggestionOptions>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestionOptions : pb::IMessage<SuggestionOptions> {
     private static readonly pb::MessageParser<SuggestionOptions> _parser = new pb::MessageParser<SuggestionOptions>(() => new SuggestionOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -297,7 +260,7 @@ namespace Asgt.Jester.V1 {
 
     /// <summary>Field number for the "min_confidence" field.</summary>
     public const int MinConfidenceFieldNumber = 2;
-    private global::Asgt.Type.Confidence.Types.Level minConfidence_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
+    private global::Asgt.Type.Confidence.Types.Level minConfidence_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Confidence.Types.Level MinConfidence {
       get { return minConfidence_; }
@@ -328,7 +291,7 @@ namespace Asgt.Jester.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (SuggestionLimit != 0) hash ^= SuggestionLimit.GetHashCode();
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
+      if (MinConfidence != 0) hash ^= MinConfidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -346,7 +309,7 @@ namespace Asgt.Jester.V1 {
         output.WriteRawTag(8);
         output.WriteInt32(SuggestionLimit);
       }
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (MinConfidence != 0) {
         output.WriteRawTag(16);
         output.WriteEnum((int) MinConfidence);
       }
@@ -361,7 +324,7 @@ namespace Asgt.Jester.V1 {
       if (SuggestionLimit != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SuggestionLimit);
       }
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (MinConfidence != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinConfidence);
       }
       if (_unknownFields != null) {
@@ -378,7 +341,7 @@ namespace Asgt.Jester.V1 {
       if (other.SuggestionLimit != 0) {
         SuggestionLimit = other.SuggestionLimit;
       }
-      if (other.MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (other.MinConfidence != 0) {
         MinConfidence = other.MinConfidence;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -386,9 +349,6 @@ namespace Asgt.Jester.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -400,43 +360,16 @@ namespace Asgt.Jester.V1 {
             break;
           }
           case 16: {
-            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            SuggestionLimit = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            minConfidence_ = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
         }
       }
     }
-    #endif
 
   }
 
-  public sealed partial class SuggestionRequest : pb::IMessage<SuggestionRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestionRequest : pb::IMessage<SuggestionRequest> {
     private static readonly pb::MessageParser<SuggestionRequest> _parser = new pb::MessageParser<SuggestionRequest>(() => new SuggestionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -622,7 +555,7 @@ namespace Asgt.Jester.V1 {
       inputs_.Add(other.inputs_);
       if (other.options_ != null) {
         if (options_ == null) {
-          Options = new global::Asgt.Jester.V1.SuggestionOptions();
+          options_ = new global::Asgt.Jester.V1.SuggestionOptions();
         }
         Options.MergeFrom(other.Options);
       }
@@ -632,9 +565,6 @@ namespace Asgt.Jester.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -655,9 +585,9 @@ namespace Asgt.Jester.V1 {
           }
           case 34: {
             if (options_ == null) {
-              Options = new global::Asgt.Jester.V1.SuggestionOptions();
+              options_ = new global::Asgt.Jester.V1.SuggestionOptions();
             }
-            input.ReadMessage(Options);
+            input.ReadMessage(options_);
             break;
           }
           case 42: {
@@ -666,45 +596,7 @@ namespace Asgt.Jester.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Type = input.ReadString();
-            break;
-          }
-          case 26: {
-            inputs_.AddEntriesFrom(ref input, _repeated_inputs_codec);
-            break;
-          }
-          case 34: {
-            if (options_ == null) {
-              Options = new global::Asgt.Jester.V1.SuggestionOptions();
-            }
-            input.ReadMessage(Options);
-            break;
-          }
-          case 42: {
-            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

@@ -20,12 +20,10 @@ public final class TrainModelEventOuterClass {
 
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
@@ -35,30 +33,25 @@ public final class TrainModelEventOuterClass {
 
     /**
      * <code>int64 model_version = 4;</code>
-     * @return The modelVersion.
      */
     long getModelVersion();
 
     /**
      * <code>string status = 5;</code>
-     * @return The status.
      */
     java.lang.String getStatus();
     /**
      * <code>string status = 5;</code>
-     * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
      * <code>string status_message = 6;</code>
-     * @return The statusMessage.
      */
     java.lang.String getStatusMessage();
     /**
      * <code>string status_message = 6;</code>
-     * @return The bytes for statusMessage.
      */
     com.google.protobuf.ByteString
         getStatusMessageBytes();
@@ -90,7 +83,7 @@ public final class TrainModelEventOuterClass {
   /**
    * Protobuf type {@code asgt.type.TrainModelEvent}
    */
-  public static final class TrainModelEvent extends
+  public  static final class TrainModelEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.type.TrainModelEvent)
       TrainModelEventOrBuilder {
@@ -100,16 +93,10 @@ public final class TrainModelEventOuterClass {
       super(builder);
     }
     private TrainModelEvent() {
+      modelVersion_ = 0L;
       status_ = "";
       statusMessage_ = "";
       artifacts_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TrainModelEvent();
     }
 
     @java.lang.Override
@@ -167,16 +154,16 @@ public final class TrainModelEventOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 artifacts_ = new java.util.ArrayList<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000010;
               }
               artifacts_.add(
                   input.readMessage(asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -190,7 +177,7 @@ public final class TrainModelEventOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           artifacts_ = java.util.Collections.unmodifiableList(artifacts_);
         }
         this.unknownFields = unknownFields.build();
@@ -216,24 +203,20 @@ public final class TrainModelEventOuterClass {
 
       /**
        * <code>string type = 1;</code>
-       * @return The type.
        */
       java.lang.String getType();
       /**
        * <code>string type = 1;</code>
-       * @return The bytes for type.
        */
       com.google.protobuf.ByteString
           getTypeBytes();
 
       /**
        * <code>string path = 2;</code>
-       * @return The path.
        */
       java.lang.String getPath();
       /**
        * <code>string path = 2;</code>
-       * @return The bytes for path.
        */
       com.google.protobuf.ByteString
           getPathBytes();
@@ -241,7 +224,7 @@ public final class TrainModelEventOuterClass {
     /**
      * Protobuf type {@code asgt.type.TrainModelEvent.Artifact}
      */
-    public static final class Artifact extends
+    public  static final class Artifact extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:asgt.type.TrainModelEvent.Artifact)
         ArtifactOrBuilder {
@@ -253,13 +236,6 @@ public final class TrainModelEventOuterClass {
       private Artifact() {
         type_ = "";
         path_ = "";
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new Artifact();
       }
 
       @java.lang.Override
@@ -275,6 +251,7 @@ public final class TrainModelEventOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -298,7 +275,7 @@ public final class TrainModelEventOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -333,9 +310,7 @@ public final class TrainModelEventOuterClass {
       private volatile java.lang.Object type_;
       /**
        * <code>string type = 1;</code>
-       * @return The type.
        */
-      @java.lang.Override
       public java.lang.String getType() {
         java.lang.Object ref = type_;
         if (ref instanceof java.lang.String) {
@@ -350,9 +325,7 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string type = 1;</code>
-       * @return The bytes for type.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getTypeBytes() {
         java.lang.Object ref = type_;
@@ -371,9 +344,7 @@ public final class TrainModelEventOuterClass {
       private volatile java.lang.Object path_;
       /**
        * <code>string path = 2;</code>
-       * @return The path.
        */
-      @java.lang.Override
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
         if (ref instanceof java.lang.String) {
@@ -388,9 +359,7 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string path = 2;</code>
-       * @return The bytes for path.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getPathBytes() {
         java.lang.Object ref = path_;
@@ -455,12 +424,13 @@ public final class TrainModelEventOuterClass {
         }
         asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact other = (asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact) obj;
 
-        if (!getType()
-            .equals(other.getType())) return false;
-        if (!getPath()
-            .equals(other.getPath())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && getType()
+            .equals(other.getType());
+        result = result && getPath()
+            .equals(other.getPath());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -645,35 +615,35 @@ public final class TrainModelEventOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -727,7 +697,6 @@ public final class TrainModelEventOuterClass {
         private java.lang.Object type_ = "";
         /**
          * <code>string type = 1;</code>
-         * @return The type.
          */
         public java.lang.String getType() {
           java.lang.Object ref = type_;
@@ -743,7 +712,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string type = 1;</code>
-         * @return The bytes for type.
          */
         public com.google.protobuf.ByteString
             getTypeBytes() {
@@ -760,8 +728,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string type = 1;</code>
-         * @param value The type to set.
-         * @return This builder for chaining.
          */
         public Builder setType(
             java.lang.String value) {
@@ -775,7 +741,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string type = 1;</code>
-         * @return This builder for chaining.
          */
         public Builder clearType() {
           
@@ -785,8 +750,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string type = 1;</code>
-         * @param value The bytes for type to set.
-         * @return This builder for chaining.
          */
         public Builder setTypeBytes(
             com.google.protobuf.ByteString value) {
@@ -803,7 +766,6 @@ public final class TrainModelEventOuterClass {
         private java.lang.Object path_ = "";
         /**
          * <code>string path = 2;</code>
-         * @return The path.
          */
         public java.lang.String getPath() {
           java.lang.Object ref = path_;
@@ -819,7 +781,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string path = 2;</code>
-         * @return The bytes for path.
          */
         public com.google.protobuf.ByteString
             getPathBytes() {
@@ -836,8 +797,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string path = 2;</code>
-         * @param value The path to set.
-         * @return This builder for chaining.
          */
         public Builder setPath(
             java.lang.String value) {
@@ -851,7 +810,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string path = 2;</code>
-         * @return This builder for chaining.
          */
         public Builder clearPath() {
           
@@ -861,8 +819,6 @@ public final class TrainModelEventOuterClass {
         }
         /**
          * <code>string path = 2;</code>
-         * @param value The bytes for path to set.
-         * @return This builder for chaining.
          */
         public Builder setPathBytes(
             com.google.protobuf.ByteString value) {
@@ -878,7 +834,7 @@ public final class TrainModelEventOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -928,28 +884,24 @@ public final class TrainModelEventOuterClass {
 
     }
 
+    private int bitField0_;
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return Whether the dataset field is set.
      */
-    @java.lang.Override
     public boolean hasDataset() {
       return dataset_ != null;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return The dataset.
      */
-    @java.lang.Override
     public asgt.type.DatasetOuterClass.Dataset getDataset() {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
      */
-    @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
       return getDataset();
     }
@@ -958,9 +910,7 @@ public final class TrainModelEventOuterClass {
     private long modelVersion_;
     /**
      * <code>int64 model_version = 4;</code>
-     * @return The modelVersion.
      */
-    @java.lang.Override
     public long getModelVersion() {
       return modelVersion_;
     }
@@ -969,9 +919,7 @@ public final class TrainModelEventOuterClass {
     private volatile java.lang.Object status_;
     /**
      * <code>string status = 5;</code>
-     * @return The status.
      */
-    @java.lang.Override
     public java.lang.String getStatus() {
       java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
@@ -986,9 +934,7 @@ public final class TrainModelEventOuterClass {
     }
     /**
      * <code>string status = 5;</code>
-     * @return The bytes for status.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStatusBytes() {
       java.lang.Object ref = status_;
@@ -1007,9 +953,7 @@ public final class TrainModelEventOuterClass {
     private volatile java.lang.Object statusMessage_;
     /**
      * <code>string status_message = 6;</code>
-     * @return The statusMessage.
      */
-    @java.lang.Override
     public java.lang.String getStatusMessage() {
       java.lang.Object ref = statusMessage_;
       if (ref instanceof java.lang.String) {
@@ -1024,9 +968,7 @@ public final class TrainModelEventOuterClass {
     }
     /**
      * <code>string status_message = 6;</code>
-     * @return The bytes for statusMessage.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStatusMessageBytes() {
       java.lang.Object ref = statusMessage_;
@@ -1046,14 +988,12 @@ public final class TrainModelEventOuterClass {
     /**
      * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
      */
-    @java.lang.Override
     public java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> getArtifactsList() {
       return artifacts_;
     }
     /**
      * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> 
         getArtifactsOrBuilderList() {
       return artifacts_;
@@ -1061,21 +1001,18 @@ public final class TrainModelEventOuterClass {
     /**
      * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
      */
-    @java.lang.Override
     public int getArtifactsCount() {
       return artifacts_.size();
     }
     /**
      * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
      */
-    @java.lang.Override
     public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact getArtifacts(int index) {
       return artifacts_.get(index);
     }
     /**
      * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
      */
-    @java.lang.Override
     public asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder getArtifactsOrBuilder(
         int index) {
       return artifacts_.get(index);
@@ -1152,21 +1089,22 @@ public final class TrainModelEventOuterClass {
       }
       asgt.type.TrainModelEventOuterClass.TrainModelEvent other = (asgt.type.TrainModelEventOuterClass.TrainModelEvent) obj;
 
-      if (hasDataset() != other.hasDataset()) return false;
+      boolean result = true;
+      result = result && (hasDataset() == other.hasDataset());
       if (hasDataset()) {
-        if (!getDataset()
-            .equals(other.getDataset())) return false;
+        result = result && getDataset()
+            .equals(other.getDataset());
       }
-      if (getModelVersion()
-          != other.getModelVersion()) return false;
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
-      if (!getStatusMessage()
-          .equals(other.getStatusMessage())) return false;
-      if (!getArtifactsList()
-          .equals(other.getArtifactsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && (getModelVersion()
+          == other.getModelVersion());
+      result = result && getStatus()
+          .equals(other.getStatus());
+      result = result && getStatusMessage()
+          .equals(other.getStatusMessage());
+      result = result && getArtifactsList()
+          .equals(other.getArtifactsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -1339,7 +1277,7 @@ public final class TrainModelEventOuterClass {
 
         if (artifactsBuilder_ == null) {
           artifacts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           artifactsBuilder_.clear();
         }
@@ -1370,6 +1308,7 @@ public final class TrainModelEventOuterClass {
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent buildPartial() {
         asgt.type.TrainModelEventOuterClass.TrainModelEvent result = new asgt.type.TrainModelEventOuterClass.TrainModelEvent(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (datasetBuilder_ == null) {
           result.dataset_ = dataset_;
         } else {
@@ -1379,49 +1318,50 @@ public final class TrainModelEventOuterClass {
         result.status_ = status_;
         result.statusMessage_ = statusMessage_;
         if (artifactsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             artifacts_ = java.util.Collections.unmodifiableList(artifacts_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.artifacts_ = artifacts_;
         } else {
           result.artifacts_ = artifactsBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1453,7 +1393,7 @@ public final class TrainModelEventOuterClass {
           if (!other.artifacts_.isEmpty()) {
             if (artifacts_.isEmpty()) {
               artifacts_ = other.artifacts_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureArtifactsIsMutable();
               artifacts_.addAll(other.artifacts_);
@@ -1466,7 +1406,7 @@ public final class TrainModelEventOuterClass {
               artifactsBuilder_.dispose();
               artifactsBuilder_ = null;
               artifacts_ = other.artifacts_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
               artifactsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getArtifactsFieldBuilder() : null;
@@ -1505,19 +1445,17 @@ public final class TrainModelEventOuterClass {
       }
       private int bitField0_;
 
-      private asgt.type.DatasetOuterClass.Dataset dataset_;
+      private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
        * <code>.asgt.type.Dataset dataset = 1;</code>
-       * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1;</code>
-       * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
         if (datasetBuilder_ == null) {
@@ -1627,16 +1565,12 @@ public final class TrainModelEventOuterClass {
       private long modelVersion_ ;
       /**
        * <code>int64 model_version = 4;</code>
-       * @return The modelVersion.
        */
-      @java.lang.Override
       public long getModelVersion() {
         return modelVersion_;
       }
       /**
        * <code>int64 model_version = 4;</code>
-       * @param value The modelVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setModelVersion(long value) {
         
@@ -1646,7 +1580,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>int64 model_version = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
         
@@ -1658,7 +1591,6 @@ public final class TrainModelEventOuterClass {
       private java.lang.Object status_ = "";
       /**
        * <code>string status = 5;</code>
-       * @return The status.
        */
       public java.lang.String getStatus() {
         java.lang.Object ref = status_;
@@ -1674,7 +1606,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status = 5;</code>
-       * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
           getStatusBytes() {
@@ -1691,8 +1622,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status = 5;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
        */
       public Builder setStatus(
           java.lang.String value) {
@@ -1706,7 +1635,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -1716,8 +1644,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status = 5;</code>
-       * @param value The bytes for status to set.
-       * @return This builder for chaining.
        */
       public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
@@ -1734,7 +1660,6 @@ public final class TrainModelEventOuterClass {
       private java.lang.Object statusMessage_ = "";
       /**
        * <code>string status_message = 6;</code>
-       * @return The statusMessage.
        */
       public java.lang.String getStatusMessage() {
         java.lang.Object ref = statusMessage_;
@@ -1750,7 +1675,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status_message = 6;</code>
-       * @return The bytes for statusMessage.
        */
       public com.google.protobuf.ByteString
           getStatusMessageBytes() {
@@ -1767,8 +1691,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status_message = 6;</code>
-       * @param value The statusMessage to set.
-       * @return This builder for chaining.
        */
       public Builder setStatusMessage(
           java.lang.String value) {
@@ -1782,7 +1704,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status_message = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearStatusMessage() {
         
@@ -1792,8 +1713,6 @@ public final class TrainModelEventOuterClass {
       }
       /**
        * <code>string status_message = 6;</code>
-       * @param value The bytes for statusMessage to set.
-       * @return This builder for chaining.
        */
       public Builder setStatusMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -1810,9 +1729,9 @@ public final class TrainModelEventOuterClass {
       private java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> artifacts_ =
         java.util.Collections.emptyList();
       private void ensureArtifactsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           artifacts_ = new java.util.ArrayList<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact>(artifacts_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -1962,7 +1881,7 @@ public final class TrainModelEventOuterClass {
       public Builder clearArtifacts() {
         if (artifactsBuilder_ == null) {
           artifacts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           artifactsBuilder_.clear();
@@ -2039,7 +1958,7 @@ public final class TrainModelEventOuterClass {
           artifactsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder, asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder>(
                   artifacts_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           artifacts_ = null;
@@ -2049,7 +1968,7 @@ public final class TrainModelEventOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2128,11 +2047,19 @@ public final class TrainModelEventOuterClass {
       "h\030\002 \001(\tB8Z6github.com/e-conomic/vmlapis/" +
       "gen/go/asgt/type;asgttypeb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
-        });
+        }, assigner);
     internal_static_asgt_type_TrainModelEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_type_TrainModelEvent_fieldAccessorTable = new

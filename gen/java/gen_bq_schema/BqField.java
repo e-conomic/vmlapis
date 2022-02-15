@@ -26,7 +26,6 @@ public final class BqField {
      * </pre>
      *
      * <code>bool require = 1;</code>
-     * @return The require.
      */
     boolean getRequire();
 
@@ -39,7 +38,6 @@ public final class BqField {
      * </pre>
      *
      * <code>string type_override = 2;</code>
-     * @return The typeOverride.
      */
     java.lang.String getTypeOverride();
     /**
@@ -51,7 +49,6 @@ public final class BqField {
      * </pre>
      *
      * <code>string type_override = 2;</code>
-     * @return The bytes for typeOverride.
      */
     com.google.protobuf.ByteString
         getTypeOverrideBytes();
@@ -62,7 +59,6 @@ public final class BqField {
      * </pre>
      *
      * <code>bool ignore = 3;</code>
-     * @return The ignore.
      */
     boolean getIgnore();
 
@@ -72,7 +68,6 @@ public final class BqField {
      * </pre>
      *
      * <code>string description = 4;</code>
-     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -81,7 +76,6 @@ public final class BqField {
      * </pre>
      *
      * <code>string description = 4;</code>
-     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -92,7 +86,6 @@ public final class BqField {
      * </pre>
      *
      * <code>string name = 5;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -101,7 +94,6 @@ public final class BqField {
      * </pre>
      *
      * <code>string name = 5;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -114,7 +106,7 @@ public final class BqField {
    *
    * Protobuf type {@code gen_bq_schema.BigQueryFieldOptions}
    */
-  public static final class BigQueryFieldOptions extends
+  public  static final class BigQueryFieldOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:gen_bq_schema.BigQueryFieldOptions)
       BigQueryFieldOptionsOrBuilder {
@@ -124,16 +116,11 @@ public final class BqField {
       super(builder);
     }
     private BigQueryFieldOptions() {
+      require_ = false;
       typeOverride_ = "";
+      ignore_ = false;
       description_ = "";
       name_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BigQueryFieldOptions();
     }
 
     @java.lang.Override
@@ -149,6 +136,7 @@ public final class BqField {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -188,7 +176,7 @@ public final class BqField {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -228,9 +216,7 @@ public final class BqField {
      * </pre>
      *
      * <code>bool require = 1;</code>
-     * @return The require.
      */
-    @java.lang.Override
     public boolean getRequire() {
       return require_;
     }
@@ -246,9 +232,7 @@ public final class BqField {
      * </pre>
      *
      * <code>string type_override = 2;</code>
-     * @return The typeOverride.
      */
-    @java.lang.Override
     public java.lang.String getTypeOverride() {
       java.lang.Object ref = typeOverride_;
       if (ref instanceof java.lang.String) {
@@ -270,9 +254,7 @@ public final class BqField {
      * </pre>
      *
      * <code>string type_override = 2;</code>
-     * @return The bytes for typeOverride.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeOverrideBytes() {
       java.lang.Object ref = typeOverride_;
@@ -295,9 +277,7 @@ public final class BqField {
      * </pre>
      *
      * <code>bool ignore = 3;</code>
-     * @return The ignore.
      */
-    @java.lang.Override
     public boolean getIgnore() {
       return ignore_;
     }
@@ -310,9 +290,7 @@ public final class BqField {
      * </pre>
      *
      * <code>string description = 4;</code>
-     * @return The description.
      */
-    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -331,9 +309,7 @@ public final class BqField {
      * </pre>
      *
      * <code>string description = 4;</code>
-     * @return The bytes for description.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -356,9 +332,7 @@ public final class BqField {
      * </pre>
      *
      * <code>string name = 5;</code>
-     * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -377,9 +351,7 @@ public final class BqField {
      * </pre>
      *
      * <code>string name = 5;</code>
-     * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -464,18 +436,19 @@ public final class BqField {
       }
       gen_bq_schema.BqField.BigQueryFieldOptions other = (gen_bq_schema.BqField.BigQueryFieldOptions) obj;
 
-      if (getRequire()
-          != other.getRequire()) return false;
-      if (!getTypeOverride()
-          .equals(other.getTypeOverride())) return false;
-      if (getIgnore()
-          != other.getIgnore()) return false;
-      if (!getDescription()
-          .equals(other.getDescription())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (getRequire()
+          == other.getRequire());
+      result = result && getTypeOverride()
+          .equals(other.getTypeOverride());
+      result = result && (getIgnore()
+          == other.getIgnore());
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -682,35 +655,35 @@ public final class BqField {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -779,9 +752,7 @@ public final class BqField {
        * </pre>
        *
        * <code>bool require = 1;</code>
-       * @return The require.
        */
-      @java.lang.Override
       public boolean getRequire() {
         return require_;
       }
@@ -792,8 +763,6 @@ public final class BqField {
        * </pre>
        *
        * <code>bool require = 1;</code>
-       * @param value The require to set.
-       * @return This builder for chaining.
        */
       public Builder setRequire(boolean value) {
         
@@ -808,7 +777,6 @@ public final class BqField {
        * </pre>
        *
        * <code>bool require = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearRequire() {
         
@@ -827,7 +795,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string type_override = 2;</code>
-       * @return The typeOverride.
        */
       public java.lang.String getTypeOverride() {
         java.lang.Object ref = typeOverride_;
@@ -850,7 +817,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string type_override = 2;</code>
-       * @return The bytes for typeOverride.
        */
       public com.google.protobuf.ByteString
           getTypeOverrideBytes() {
@@ -874,8 +840,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string type_override = 2;</code>
-       * @param value The typeOverride to set.
-       * @return This builder for chaining.
        */
       public Builder setTypeOverride(
           java.lang.String value) {
@@ -896,7 +860,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string type_override = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTypeOverride() {
         
@@ -913,8 +876,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string type_override = 2;</code>
-       * @param value The bytes for typeOverride to set.
-       * @return This builder for chaining.
        */
       public Builder setTypeOverrideBytes(
           com.google.protobuf.ByteString value) {
@@ -935,9 +896,7 @@ public final class BqField {
        * </pre>
        *
        * <code>bool ignore = 3;</code>
-       * @return The ignore.
        */
-      @java.lang.Override
       public boolean getIgnore() {
         return ignore_;
       }
@@ -947,8 +906,6 @@ public final class BqField {
        * </pre>
        *
        * <code>bool ignore = 3;</code>
-       * @param value The ignore to set.
-       * @return This builder for chaining.
        */
       public Builder setIgnore(boolean value) {
         
@@ -962,7 +919,6 @@ public final class BqField {
        * </pre>
        *
        * <code>bool ignore = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearIgnore() {
         
@@ -978,7 +934,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string description = 4;</code>
-       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -998,7 +953,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string description = 4;</code>
-       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1019,8 +973,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string description = 4;</code>
-       * @param value The description to set.
-       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1038,7 +990,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string description = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1052,8 +1003,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string description = 4;</code>
-       * @param value The bytes for description to set.
-       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1074,7 +1023,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string name = 5;</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1094,7 +1042,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string name = 5;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1115,8 +1062,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string name = 5;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1134,7 +1079,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string name = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1148,8 +1092,6 @@ public final class BqField {
        * </pre>
        *
        * <code>string name = 5;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1165,7 +1107,7 @@ public final class BqField {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1254,11 +1196,19 @@ public final class BqField {
       "sBAZ?github.com/e-conomic/vmlapis/gen/go" +
       "/gen_bq_schema;gen_bq_schemab\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
-        });
+        }, assigner);
     internal_static_gen_bq_schema_BigQueryFieldOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_gen_bq_schema_BigQueryFieldOptions_fieldAccessorTable = new

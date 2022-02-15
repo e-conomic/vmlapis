@@ -39,9 +39,9 @@ namespace Asgt.Type {
             "L2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Name", "Candidates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null, null)})})
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Name", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null)})})
           }));
     }
     #endregion
@@ -51,11 +51,7 @@ namespace Asgt.Type {
   /// <summary>
   /// Common types
   /// </summary>
-  public sealed partial class Confidence : pb::IMessage<Confidence>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Confidence : pb::IMessage<Confidence> {
     private static readonly pb::MessageParser<Confidence> _parser = new pb::MessageParser<Confidence>(() => new Confidence());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -92,7 +88,7 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
-    private global::Asgt.Type.Confidence.Types.Level level_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
+    private global::Asgt.Type.Confidence.Types.Level level_ = 0;
     /// <summary>
     /// A bucketized representation of confidence, which is intended to give clients
     /// highly stable results across model upgrades.
@@ -120,7 +116,6 @@ namespace Asgt.Type {
       }
     }
 
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Confidence);
@@ -142,7 +137,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= Level.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (value_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Value);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -157,7 +152,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Level != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (Level != 0) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Level);
       }
@@ -172,7 +167,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Level != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
       }
       if (value_ != null) {
@@ -189,7 +184,7 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.Level != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (other.Level != 0) {
         Level = other.Level;
       }
       if (other.value_ != null) {
@@ -202,9 +197,6 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -212,7 +204,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Level = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            level_ = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
           case 18: {
@@ -224,33 +216,7 @@ namespace Asgt.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Level = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            float? value = _single_value_codec.Read(ref input);
-            if (value_ == null || value != 0F) {
-              Value = value;
-            }
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Confidence message type.</summary>
@@ -270,11 +236,7 @@ namespace Asgt.Type {
 
   }
 
-  public sealed partial class Prediction : pb::IMessage<Prediction>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Prediction : pb::IMessage<Prediction> {
     private static readonly pb::MessageParser<Prediction> _parser = new pb::MessageParser<Prediction>(() => new Prediction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -379,9 +341,6 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -394,36 +353,13 @@ namespace Asgt.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Prediction message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Target : pb::IMessage<Target>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
+      public sealed partial class Target : pb::IMessage<Target> {
         private static readonly pb::MessageParser<Target> _parser = new pb::MessageParser<Target>(() => new Target());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -552,9 +488,6 @@ namespace Asgt.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -571,40 +504,13 @@ namespace Asgt.Type {
               }
             }
           }
-        #endif
         }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                Name = input.ReadString();
-                break;
-              }
-              case 18: {
-                candidates_.AddEntriesFrom(ref input, _repeated_candidates_codec);
-                break;
-              }
-            }
-          }
-        }
-        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the Target message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
-          public sealed partial class Candidate : pb::IMessage<Candidate>
-          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              , pb::IBufferMessage
-          #endif
-          {
+          public sealed partial class Candidate : pb::IMessage<Candidate> {
             private static readonly pb::MessageParser<Candidate> _parser = new pb::MessageParser<Candidate>(() => new Candidate());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -735,7 +641,7 @@ namespace Asgt.Type {
               }
               if (other.confidence_ != null) {
                 if (confidence_ == null) {
-                  Confidence = new global::Asgt.Type.Confidence();
+                  confidence_ = new global::Asgt.Type.Confidence();
                 }
                 Confidence.MergeFrom(other.Confidence);
               }
@@ -744,9 +650,6 @@ namespace Asgt.Type {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              input.ReadRawMessage(this);
-            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -759,40 +662,14 @@ namespace Asgt.Type {
                   }
                   case 18: {
                     if (confidence_ == null) {
-                      Confidence = new global::Asgt.Type.Confidence();
+                      confidence_ = new global::Asgt.Type.Confidence();
                     }
-                    input.ReadMessage(Confidence);
-                    break;
-                  }
-                }
-              }
-            #endif
-            }
-
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-              uint tag;
-              while ((tag = input.ReadTag()) != 0) {
-                switch(tag) {
-                  default:
-                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                    break;
-                  case 10: {
-                    Value = input.ReadString();
-                    break;
-                  }
-                  case 18: {
-                    if (confidence_ == null) {
-                      Confidence = new global::Asgt.Type.Confidence();
-                    }
-                    input.ReadMessage(Confidence);
+                    input.ReadMessage(confidence_);
                     break;
                   }
                 }
               }
             }
-            #endif
 
           }
 

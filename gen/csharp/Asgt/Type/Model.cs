@@ -38,19 +38,15 @@ namespace Asgt.Type {
             "bi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class Model : pb::IMessage<Model>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Model : pb::IMessage<Model> {
     private static readonly pb::MessageParser<Model> _parser = new pb::MessageParser<Model>(() => new Model());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,7 +142,7 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "input_type" field.</summary>
     public const int InputTypeFieldNumber = 8;
-    private global::Asgt.Type.Model.Types.InputType inputType_ = global::Asgt.Type.Model.Types.InputType.FeatureTensors;
+    private global::Asgt.Type.Model.Types.InputType inputType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Model.Types.InputType InputType {
       get { return inputType_; }
@@ -197,7 +193,7 @@ namespace Asgt.Type {
       if (DatasetSize != 0) hash ^= DatasetSize.GetHashCode();
       if (TrainingSize != 0) hash ^= TrainingSize.GetHashCode();
       hash ^= confidenceScores_.GetHashCode();
-      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
+      if (InputType != 0) hash ^= InputType.GetHashCode();
       if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -229,7 +225,7 @@ namespace Asgt.Type {
         output.WriteInt32(TrainingSize);
       }
       confidenceScores_.WriteTo(output, _repeated_confidenceScores_codec);
-      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
+      if (InputType != 0) {
         output.WriteRawTag(64);
         output.WriteEnum((int) InputType);
       }
@@ -258,7 +254,7 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainingSize);
       }
       size += confidenceScores_.CalculateSize(_repeated_confidenceScores_codec);
-      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
+      if (InputType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputType);
       }
       if (DatasetType.Length != 0) {
@@ -280,7 +276,7 @@ namespace Asgt.Type {
       }
       if (other.createdAt_ != null) {
         if (createdAt_ == null) {
-          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreatedAt.MergeFrom(other.CreatedAt);
       }
@@ -291,7 +287,7 @@ namespace Asgt.Type {
         TrainingSize = other.TrainingSize;
       }
       confidenceScores_.Add(other.confidenceScores_);
-      if (other.InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
+      if (other.InputType != 0) {
         InputType = other.InputType;
       }
       if (other.DatasetType.Length != 0) {
@@ -302,9 +298,6 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -317,9 +310,9 @@ namespace Asgt.Type {
           }
           case 34: {
             if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(CreatedAt);
+            input.ReadMessage(createdAt_);
             break;
           }
           case 40: {
@@ -335,52 +328,7 @@ namespace Asgt.Type {
             break;
           }
           case 64: {
-            InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
-            break;
-          }
-          case 74: {
-            DatasetType = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 24: {
-            Version = input.ReadInt64();
-            break;
-          }
-          case 34: {
-            if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreatedAt);
-            break;
-          }
-          case 40: {
-            DatasetSize = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            TrainingSize = input.ReadInt32();
-            break;
-          }
-          case 58: {
-            confidenceScores_.AddEntriesFrom(ref input, _repeated_confidenceScores_codec);
-            break;
-          }
-          case 64: {
-            InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
+            inputType_ = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
             break;
           }
           case 74: {
@@ -390,7 +338,6 @@ namespace Asgt.Type {
         }
       }
     }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Model message type.</summary>

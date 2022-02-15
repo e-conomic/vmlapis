@@ -20,12 +20,10 @@ public final class DataServiceProtos {
 
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
-     * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
-     * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
@@ -35,12 +33,10 @@ public final class DataServiceProtos {
 
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
-     * @return Whether the endTime field is set.
      */
     boolean hasEndTime();
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
-     * @return The endTime.
      */
     com.google.protobuf.Timestamp getEndTime();
     /**
@@ -50,25 +46,19 @@ public final class DataServiceProtos {
 
     /**
      * <code>repeated string tags = 3;</code>
-     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 3;</code>
-     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -76,7 +66,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsRequest}
    */
-  public static final class CalculateMetricsRequest extends
+  public  static final class CalculateMetricsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CalculateMetricsRequest)
       CalculateMetricsRequestOrBuilder {
@@ -87,13 +77,6 @@ public final class DataServiceProtos {
     }
     private CalculateMetricsRequest() {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CalculateMetricsRequest();
     }
 
     @java.lang.Override
@@ -148,15 +131,15 @@ public final class DataServiceProtos {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               tags_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -170,7 +153,7 @@ public final class DataServiceProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -190,28 +173,24 @@ public final class DataServiceProtos {
               asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.class, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
-     * @return Whether the startTime field is set.
      */
-    @java.lang.Override
     public boolean hasStartTime() {
       return startTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
-     * @return The startTime.
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getStartTime() {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
       return getStartTime();
     }
@@ -220,24 +199,19 @@ public final class DataServiceProtos {
     private com.google.protobuf.Timestamp endTime_;
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
-     * @return Whether the endTime field is set.
      */
-    @java.lang.Override
     public boolean hasEndTime() {
       return endTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
-     * @return The endTime.
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getEndTime() {
       return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
       return getEndTime();
     }
@@ -246,7 +220,6 @@ public final class DataServiceProtos {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3;</code>
-     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -254,23 +227,18 @@ public final class DataServiceProtos {
     }
     /**
      * <code>repeated string tags = 3;</code>
-     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -340,20 +308,21 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest other = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest) obj;
 
-      if (hasStartTime() != other.hasStartTime()) return false;
+      boolean result = true;
+      result = result && (hasStartTime() == other.hasStartTime());
       if (hasStartTime()) {
-        if (!getStartTime()
-            .equals(other.getStartTime())) return false;
+        result = result && getStartTime()
+            .equals(other.getStartTime());
       }
-      if (hasEndTime() != other.hasEndTime()) return false;
+      result = result && (hasEndTime() == other.hasEndTime());
       if (hasEndTime()) {
-        if (!getEndTime()
-            .equals(other.getEndTime())) return false;
+        result = result && getEndTime()
+            .equals(other.getEndTime());
       }
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && getTagsList()
+          .equals(other.getTagsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -521,7 +490,7 @@ public final class DataServiceProtos {
           endTimeBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -549,6 +518,7 @@ public final class DataServiceProtos {
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (startTimeBuilder_ == null) {
           result.startTime_ = startTime_;
         } else {
@@ -559,46 +529,47 @@ public final class DataServiceProtos {
         } else {
           result.endTime_ = endTimeBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.tags_ = tags_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -621,7 +592,7 @@ public final class DataServiceProtos {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -658,19 +629,17 @@ public final class DataServiceProtos {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.Timestamp startTime_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
-       * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
-       * @return The startTime.
        */
       public com.google.protobuf.Timestamp getStartTime() {
         if (startTimeBuilder_ == null) {
@@ -777,19 +746,17 @@ public final class DataServiceProtos {
         return startTimeBuilder_;
       }
 
-      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.Timestamp endTime_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp end_time = 2;</code>
-       * @return Whether the endTime field is set.
        */
       public boolean hasEndTime() {
         return endTimeBuilder_ != null || endTime_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp end_time = 2;</code>
-       * @return The endTime.
        */
       public com.google.protobuf.Timestamp getEndTime() {
         if (endTimeBuilder_ == null) {
@@ -898,14 +865,13 @@ public final class DataServiceProtos {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -913,23 +879,18 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param index The index of the element to return.
-       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -937,9 +898,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The tags to set.
-       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -953,8 +911,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param value The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -968,8 +924,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param values The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -981,18 +935,15 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param value The bytes of the tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -1008,7 +959,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1089,7 +1040,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsResponse}
    */
-  public static final class CalculateMetricsResponse extends
+  public  static final class CalculateMetricsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CalculateMetricsResponse)
       CalculateMetricsResponseOrBuilder {
@@ -1100,13 +1051,6 @@ public final class DataServiceProtos {
     }
     private CalculateMetricsResponse() {
       metrics_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CalculateMetricsResponse();
     }
 
     @java.lang.Override
@@ -1134,7 +1078,7 @@ public final class DataServiceProtos {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 metrics_ = new java.util.ArrayList<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1143,7 +1087,7 @@ public final class DataServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1157,7 +1101,7 @@ public final class DataServiceProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           metrics_ = java.util.Collections.unmodifiableList(metrics_);
         }
         this.unknownFields = unknownFields.build();
@@ -1183,24 +1127,20 @@ public final class DataServiceProtos {
 
       /**
        * <code>string target = 1;</code>
-       * @return The target.
        */
       java.lang.String getTarget();
       /**
        * <code>string target = 1;</code>
-       * @return The bytes for target.
        */
       com.google.protobuf.ByteString
           getTargetBytes();
 
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
-       * @return Whether the confidence field is set.
        */
       boolean hasConfidence();
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
-       * @return The confidence.
        */
       com.google.protobuf.FloatValue getConfidence();
       /**
@@ -1210,20 +1150,18 @@ public final class DataServiceProtos {
 
       /**
        * <code>int32 correct = 3;</code>
-       * @return The correct.
        */
       int getCorrect();
 
       /**
        * <code>int32 incorrect = 4;</code>
-       * @return The incorrect.
        */
       int getIncorrect();
     }
     /**
      * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsResponse.MetricRow}
      */
-    public static final class MetricRow extends
+    public  static final class MetricRow extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CalculateMetricsResponse.MetricRow)
         MetricRowOrBuilder {
@@ -1234,13 +1172,8 @@ public final class DataServiceProtos {
       }
       private MetricRow() {
         target_ = "";
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new MetricRow();
+        correct_ = 0;
+        incorrect_ = 0;
       }
 
       @java.lang.Override
@@ -1256,6 +1189,7 @@ public final class DataServiceProtos {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -1296,7 +1230,7 @@ public final class DataServiceProtos {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1331,9 +1265,7 @@ public final class DataServiceProtos {
       private volatile java.lang.Object target_;
       /**
        * <code>string target = 1;</code>
-       * @return The target.
        */
-      @java.lang.Override
       public java.lang.String getTarget() {
         java.lang.Object ref = target_;
         if (ref instanceof java.lang.String) {
@@ -1348,9 +1280,7 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string target = 1;</code>
-       * @return The bytes for target.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getTargetBytes() {
         java.lang.Object ref = target_;
@@ -1369,24 +1299,19 @@ public final class DataServiceProtos {
       private com.google.protobuf.FloatValue confidence_;
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
-       * @return Whether the confidence field is set.
        */
-      @java.lang.Override
       public boolean hasConfidence() {
         return confidence_ != null;
       }
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
-       * @return The confidence.
        */
-      @java.lang.Override
       public com.google.protobuf.FloatValue getConfidence() {
         return confidence_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : confidence_;
       }
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
        */
-      @java.lang.Override
       public com.google.protobuf.FloatValueOrBuilder getConfidenceOrBuilder() {
         return getConfidence();
       }
@@ -1395,9 +1320,7 @@ public final class DataServiceProtos {
       private int correct_;
       /**
        * <code>int32 correct = 3;</code>
-       * @return The correct.
        */
-      @java.lang.Override
       public int getCorrect() {
         return correct_;
       }
@@ -1406,9 +1329,7 @@ public final class DataServiceProtos {
       private int incorrect_;
       /**
        * <code>int32 incorrect = 4;</code>
-       * @return The incorrect.
        */
-      @java.lang.Override
       public int getIncorrect() {
         return incorrect_;
       }
@@ -1478,19 +1399,20 @@ public final class DataServiceProtos {
         }
         asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow other = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow) obj;
 
-        if (!getTarget()
-            .equals(other.getTarget())) return false;
-        if (hasConfidence() != other.hasConfidence()) return false;
+        boolean result = true;
+        result = result && getTarget()
+            .equals(other.getTarget());
+        result = result && (hasConfidence() == other.hasConfidence());
         if (hasConfidence()) {
-          if (!getConfidence()
-              .equals(other.getConfidence())) return false;
+          result = result && getConfidence()
+              .equals(other.getConfidence());
         }
-        if (getCorrect()
-            != other.getCorrect()) return false;
-        if (getIncorrect()
-            != other.getIncorrect()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        result = result && (getCorrect()
+            == other.getCorrect());
+        result = result && (getIncorrect()
+            == other.getIncorrect());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -1695,35 +1617,35 @@ public final class DataServiceProtos {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1782,7 +1704,6 @@ public final class DataServiceProtos {
         private java.lang.Object target_ = "";
         /**
          * <code>string target = 1;</code>
-         * @return The target.
          */
         public java.lang.String getTarget() {
           java.lang.Object ref = target_;
@@ -1798,7 +1719,6 @@ public final class DataServiceProtos {
         }
         /**
          * <code>string target = 1;</code>
-         * @return The bytes for target.
          */
         public com.google.protobuf.ByteString
             getTargetBytes() {
@@ -1815,8 +1735,6 @@ public final class DataServiceProtos {
         }
         /**
          * <code>string target = 1;</code>
-         * @param value The target to set.
-         * @return This builder for chaining.
          */
         public Builder setTarget(
             java.lang.String value) {
@@ -1830,7 +1748,6 @@ public final class DataServiceProtos {
         }
         /**
          * <code>string target = 1;</code>
-         * @return This builder for chaining.
          */
         public Builder clearTarget() {
           
@@ -1840,8 +1757,6 @@ public final class DataServiceProtos {
         }
         /**
          * <code>string target = 1;</code>
-         * @param value The bytes for target to set.
-         * @return This builder for chaining.
          */
         public Builder setTargetBytes(
             com.google.protobuf.ByteString value) {
@@ -1855,19 +1770,17 @@ public final class DataServiceProtos {
           return this;
         }
 
-        private com.google.protobuf.FloatValue confidence_;
+        private com.google.protobuf.FloatValue confidence_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> confidenceBuilder_;
         /**
          * <code>.google.protobuf.FloatValue confidence = 2;</code>
-         * @return Whether the confidence field is set.
          */
         public boolean hasConfidence() {
           return confidenceBuilder_ != null || confidence_ != null;
         }
         /**
          * <code>.google.protobuf.FloatValue confidence = 2;</code>
-         * @return The confidence.
          */
         public com.google.protobuf.FloatValue getConfidence() {
           if (confidenceBuilder_ == null) {
@@ -1977,16 +1890,12 @@ public final class DataServiceProtos {
         private int correct_ ;
         /**
          * <code>int32 correct = 3;</code>
-         * @return The correct.
          */
-        @java.lang.Override
         public int getCorrect() {
           return correct_;
         }
         /**
          * <code>int32 correct = 3;</code>
-         * @param value The correct to set.
-         * @return This builder for chaining.
          */
         public Builder setCorrect(int value) {
           
@@ -1996,7 +1905,6 @@ public final class DataServiceProtos {
         }
         /**
          * <code>int32 correct = 3;</code>
-         * @return This builder for chaining.
          */
         public Builder clearCorrect() {
           
@@ -2008,16 +1916,12 @@ public final class DataServiceProtos {
         private int incorrect_ ;
         /**
          * <code>int32 incorrect = 4;</code>
-         * @return The incorrect.
          */
-        @java.lang.Override
         public int getIncorrect() {
           return incorrect_;
         }
         /**
          * <code>int32 incorrect = 4;</code>
-         * @param value The incorrect to set.
-         * @return This builder for chaining.
          */
         public Builder setIncorrect(int value) {
           
@@ -2027,7 +1931,6 @@ public final class DataServiceProtos {
         }
         /**
          * <code>int32 incorrect = 4;</code>
-         * @return This builder for chaining.
          */
         public Builder clearIncorrect() {
           
@@ -2038,7 +1941,7 @@ public final class DataServiceProtos {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -2093,14 +1996,12 @@ public final class DataServiceProtos {
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> getMetricsList() {
       return metrics_;
     }
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
         getMetricsOrBuilderList() {
       return metrics_;
@@ -2108,21 +2009,18 @@ public final class DataServiceProtos {
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    @java.lang.Override
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    @java.lang.Override
     public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getMetrics(int index) {
       return metrics_.get(index);
     }
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    @java.lang.Override
     public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
         int index) {
       return metrics_.get(index);
@@ -2173,10 +2071,11 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse other = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse) obj;
 
-      if (!getMetricsList()
-          .equals(other.getMetricsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getMetricsList()
+          .equals(other.getMetricsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -2358,7 +2257,7 @@ public final class DataServiceProtos {
         asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse(this);
         int from_bitField0_ = bitField0_;
         if (metricsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
             metrics_ = java.util.Collections.unmodifiableList(metrics_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2372,35 +2271,35 @@ public final class DataServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2473,7 +2372,7 @@ public final class DataServiceProtos {
       private java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> metrics_ =
         java.util.Collections.emptyList();
       private void ensureMetricsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           metrics_ = new java.util.ArrayList<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow>(metrics_);
           bitField0_ |= 0x00000001;
          }
@@ -2702,7 +2601,7 @@ public final class DataServiceProtos {
           metricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder>(
                   metrics_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           metrics_ = null;
@@ -2712,7 +2611,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2768,74 +2667,58 @@ public final class DataServiceProtos {
 
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>repeated string tags = 3;</code>
-     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 3;</code>
-     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
      * <code>repeated string targets = 6;</code>
-     * @return A list containing the targets.
      */
     java.util.List<java.lang.String>
         getTargetsList();
     /**
      * <code>repeated string targets = 6;</code>
-     * @return The count of targets.
      */
     int getTargetsCount();
     /**
      * <code>repeated string targets = 6;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
      */
     java.lang.String getTargets(int index);
     /**
      * <code>repeated string targets = 6;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
      */
     com.google.protobuf.ByteString
         getTargetsBytes(int index);
@@ -2866,12 +2749,10 @@ public final class DataServiceProtos {
 
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
-     * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
-     * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
@@ -2882,7 +2763,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.CreateRequest}
    */
-  public static final class CreateRequest extends
+  public  static final class CreateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CreateRequest)
       CreateRequestOrBuilder {
@@ -2897,13 +2778,6 @@ public final class DataServiceProtos {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       samples_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreateRequest();
     }
 
     @java.lang.Override
@@ -2944,17 +2818,17 @@ public final class DataServiceProtos {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               tags_.add(s);
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000010;
               }
               samples_.add(
                   input.readMessage(asgt.type.SampleOuterClass.Sample.parser(), extensionRegistry));
@@ -2975,15 +2849,15 @@ public final class DataServiceProtos {
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000008;
               }
               targets_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2997,13 +2871,13 @@ public final class DataServiceProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           samples_ = java.util.Collections.unmodifiableList(samples_);
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -3023,13 +2897,12 @@ public final class DataServiceProtos {
               asgt.dataservice.v1.DataServiceProtos.CreateRequest.class, asgt.dataservice.v1.DataServiceProtos.CreateRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3044,9 +2917,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3065,9 +2936,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
-    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -3082,9 +2951,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -3103,7 +2970,6 @@ public final class DataServiceProtos {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3;</code>
-     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -3111,23 +2977,18 @@ public final class DataServiceProtos {
     }
     /**
      * <code>repeated string tags = 3;</code>
-     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -3138,7 +2999,6 @@ public final class DataServiceProtos {
     private com.google.protobuf.LazyStringList targets_;
     /**
      * <code>repeated string targets = 6;</code>
-     * @return A list containing the targets.
      */
     public com.google.protobuf.ProtocolStringList
         getTargetsList() {
@@ -3146,23 +3006,18 @@ public final class DataServiceProtos {
     }
     /**
      * <code>repeated string targets = 6;</code>
-     * @return The count of targets.
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
      * <code>repeated string targets = 6;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
      */
     public java.lang.String getTargets(int index) {
       return targets_.get(index);
     }
     /**
      * <code>repeated string targets = 6;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
      */
     public com.google.protobuf.ByteString
         getTargetsBytes(int index) {
@@ -3174,14 +3029,12 @@ public final class DataServiceProtos {
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    @java.lang.Override
     public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList() {
       return samples_;
@@ -3189,21 +3042,18 @@ public final class DataServiceProtos {
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    @java.lang.Override
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    @java.lang.Override
     public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    @java.lang.Override
     public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index) {
       return samples_.get(index);
@@ -3213,24 +3063,19 @@ public final class DataServiceProtos {
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
-     * @return Whether the retentionPolicy field is set.
      */
-    @java.lang.Override
     public boolean hasRetentionPolicy() {
       return retentionPolicy_ != null;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
-     * @return The retentionPolicy.
      */
-    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
      */
-    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
@@ -3321,23 +3166,24 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.CreateRequest other = (asgt.dataservice.v1.DataServiceProtos.CreateRequest) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (!getTargetsList()
-          .equals(other.getTargetsList())) return false;
-      if (!getSamplesList()
-          .equals(other.getSamplesList())) return false;
-      if (hasRetentionPolicy() != other.hasRetentionPolicy()) return false;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
+      result = result && getTargetsList()
+          .equals(other.getTargetsList());
+      result = result && getSamplesList()
+          .equals(other.getSamplesList());
+      result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
       if (hasRetentionPolicy()) {
-        if (!getRetentionPolicy()
-            .equals(other.getRetentionPolicy())) return false;
+        result = result && getRetentionPolicy()
+            .equals(other.getRetentionPolicy());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -3506,12 +3352,12 @@ public final class DataServiceProtos {
         type_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           samplesBuilder_.clear();
         }
@@ -3548,22 +3394,23 @@ public final class DataServiceProtos {
       public asgt.dataservice.v1.DataServiceProtos.CreateRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.CreateRequest result = new asgt.dataservice.v1.DataServiceProtos.CreateRequest(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.name_ = name_;
         result.type_ = type_;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.tags_ = tags_;
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.targets_ = targets_;
         if (samplesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             samples_ = java.util.Collections.unmodifiableList(samples_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.samples_ = samples_;
         } else {
@@ -3574,41 +3421,42 @@ public final class DataServiceProtos {
         } else {
           result.retentionPolicy_ = retentionPolicyBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3633,7 +3481,7 @@ public final class DataServiceProtos {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -3643,7 +3491,7 @@ public final class DataServiceProtos {
         if (!other.targets_.isEmpty()) {
           if (targets_.isEmpty()) {
             targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTargetsIsMutable();
             targets_.addAll(other.targets_);
@@ -3654,7 +3502,7 @@ public final class DataServiceProtos {
           if (!other.samples_.isEmpty()) {
             if (samples_.isEmpty()) {
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureSamplesIsMutable();
               samples_.addAll(other.samples_);
@@ -3667,7 +3515,7 @@ public final class DataServiceProtos {
               samplesBuilder_.dispose();
               samplesBuilder_ = null;
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
               samplesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSamplesFieldBuilder() : null;
@@ -3712,7 +3560,6 @@ public final class DataServiceProtos {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3728,7 +3575,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3745,8 +3591,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3760,7 +3604,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3770,8 +3613,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3788,7 +3629,6 @@ public final class DataServiceProtos {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
-       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -3804,7 +3644,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -3821,8 +3660,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -3836,7 +3673,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -3846,8 +3682,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The bytes for type to set.
-       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -3863,14 +3697,13 @@ public final class DataServiceProtos {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -3878,23 +3711,18 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param index The index of the element to return.
-       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -3902,9 +3730,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The tags to set.
-       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -3918,8 +3743,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param value The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -3933,8 +3756,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param values The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -3946,18 +3767,15 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 3;</code>
-       * @param value The bytes of the tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -3973,14 +3791,13 @@ public final class DataServiceProtos {
 
       private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @return A list containing the targets.
        */
       public com.google.protobuf.ProtocolStringList
           getTargetsList() {
@@ -3988,23 +3805,18 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @return The count of targets.
        */
       public int getTargetsCount() {
         return targets_.size();
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @param index The index of the element to return.
-       * @return The targets at the given index.
        */
       public java.lang.String getTargets(int index) {
         return targets_.get(index);
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the targets at the given index.
        */
       public com.google.protobuf.ByteString
           getTargetsBytes(int index) {
@@ -4012,9 +3824,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @param index The index to set the value at.
-       * @param value The targets to set.
-       * @return This builder for chaining.
        */
       public Builder setTargets(
           int index, java.lang.String value) {
@@ -4028,8 +3837,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @param value The targets to add.
-       * @return This builder for chaining.
        */
       public Builder addTargets(
           java.lang.String value) {
@@ -4043,8 +3850,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @param values The targets to add.
-       * @return This builder for chaining.
        */
       public Builder addAllTargets(
           java.lang.Iterable<java.lang.String> values) {
@@ -4056,18 +3861,15 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTargets() {
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string targets = 6;</code>
-       * @param value The bytes of the targets to add.
-       * @return This builder for chaining.
        */
       public Builder addTargetsBytes(
           com.google.protobuf.ByteString value) {
@@ -4084,9 +3886,9 @@ public final class DataServiceProtos {
       private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -4236,7 +4038,7 @@ public final class DataServiceProtos {
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           samplesBuilder_.clear();
@@ -4313,7 +4115,7 @@ public final class DataServiceProtos {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           samples_ = null;
@@ -4321,19 +4123,17 @@ public final class DataServiceProtos {
         return samplesBuilder_;
       }
 
-      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
+      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
-       * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
-       * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -4442,7 +4242,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -4498,24 +4298,20 @@ public final class DataServiceProtos {
 
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -4547,7 +4343,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.AppendDataRequest}
    */
-  public static final class AppendDataRequest extends
+  public  static final class AppendDataRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.AppendDataRequest)
       AppendDataRequestOrBuilder {
@@ -4560,13 +4356,6 @@ public final class DataServiceProtos {
       name_ = "";
       type_ = "";
       samples_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AppendDataRequest();
     }
 
     @java.lang.Override
@@ -4606,16 +4395,16 @@ public final class DataServiceProtos {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               samples_.add(
                   input.readMessage(asgt.type.SampleOuterClass.Sample.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4629,7 +4418,7 @@ public final class DataServiceProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           samples_ = java.util.Collections.unmodifiableList(samples_);
         }
         this.unknownFields = unknownFields.build();
@@ -4649,13 +4438,12 @@ public final class DataServiceProtos {
               asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.class, asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4670,9 +4458,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4691,9 +4477,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
-    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -4708,9 +4492,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -4730,14 +4512,12 @@ public final class DataServiceProtos {
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList() {
       return samples_;
@@ -4745,21 +4525,18 @@ public final class DataServiceProtos {
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    @java.lang.Override
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    @java.lang.Override
     public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    @java.lang.Override
     public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index) {
       return samples_.get(index);
@@ -4822,14 +4599,15 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.AppendDataRequest other = (asgt.dataservice.v1.DataServiceProtos.AppendDataRequest) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!getSamplesList()
-          .equals(other.getSamplesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
+      result = result && getSamplesList()
+          .equals(other.getSamplesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -4987,7 +4765,7 @@ public final class DataServiceProtos {
 
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           samplesBuilder_.clear();
         }
@@ -5018,52 +4796,54 @@ public final class DataServiceProtos {
       public asgt.dataservice.v1.DataServiceProtos.AppendDataRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.AppendDataRequest result = new asgt.dataservice.v1.DataServiceProtos.AppendDataRequest(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.name_ = name_;
         result.type_ = type_;
         if (samplesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             samples_ = java.util.Collections.unmodifiableList(samples_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.samples_ = samples_;
         } else {
           result.samples_ = samplesBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5089,7 +4869,7 @@ public final class DataServiceProtos {
           if (!other.samples_.isEmpty()) {
             if (samples_.isEmpty()) {
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureSamplesIsMutable();
               samples_.addAll(other.samples_);
@@ -5102,7 +4882,7 @@ public final class DataServiceProtos {
               samplesBuilder_.dispose();
               samplesBuilder_ = null;
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               samplesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSamplesFieldBuilder() : null;
@@ -5144,7 +4924,6 @@ public final class DataServiceProtos {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5160,7 +4939,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5177,8 +4955,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5192,7 +4968,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5202,8 +4977,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5220,7 +4993,6 @@ public final class DataServiceProtos {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
-       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -5236,7 +5008,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -5253,8 +5024,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -5268,7 +5037,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -5278,8 +5046,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The bytes for type to set.
-       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -5296,9 +5062,9 @@ public final class DataServiceProtos {
       private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -5448,7 +5214,7 @@ public final class DataServiceProtos {
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           samplesBuilder_.clear();
@@ -5525,7 +5291,7 @@ public final class DataServiceProtos {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           samples_ = null;
@@ -5535,7 +5301,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -5591,36 +5357,30 @@ public final class DataServiceProtos {
 
     /**
      * <code>string type = 1;</code>
-     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 1;</code>
-     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string tag = 3;</code>
-     * @return The tag.
      */
     java.lang.String getTag();
     /**
      * <code>string tag = 3;</code>
-     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -5630,7 +5390,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.DeleteRequest}
    */
-  public static final class DeleteRequest extends
+  public  static final class DeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.DeleteRequest)
       DeleteRequestOrBuilder {
@@ -5641,13 +5401,6 @@ public final class DataServiceProtos {
     }
     private DeleteRequest() {
       type_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeleteRequest();
     }
 
     @java.lang.Override
@@ -5663,6 +5416,7 @@ public final class DataServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5692,7 +5446,7 @@ public final class DataServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5726,8 +5480,7 @@ public final class DataServiceProtos {
     private int matchCase_ = 0;
     private java.lang.Object match_;
     public enum MatchCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        implements com.google.protobuf.Internal.EnumLite {
       NAME(2),
       TAG(3),
       MATCH_NOT_SET(0);
@@ -5736,8 +5489,6 @@ public final class DataServiceProtos {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5768,9 +5519,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 1;</code>
-     * @return The type.
      */
-    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -5785,9 +5534,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string type = 1;</code>
-     * @return The bytes for type.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -5805,7 +5552,6 @@ public final class DataServiceProtos {
     public static final int NAME_FIELD_NUMBER = 2;
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = "";
@@ -5826,7 +5572,6 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -5850,7 +5595,6 @@ public final class DataServiceProtos {
     public static final int TAG_FIELD_NUMBER = 3;
     /**
      * <code>string tag = 3;</code>
-     * @return The tag.
      */
     public java.lang.String getTag() {
       java.lang.Object ref = "";
@@ -5871,7 +5615,6 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string tag = 3;</code>
-     * @return The bytes for tag.
      */
     public com.google.protobuf.ByteString
         getTagBytes() {
@@ -5948,23 +5691,26 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.DeleteRequest other = (asgt.dataservice.v1.DataServiceProtos.DeleteRequest) obj;
 
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!getMatchCase().equals(other.getMatchCase())) return false;
+      boolean result = true;
+      result = result && getType()
+          .equals(other.getType());
+      result = result && getMatchCase().equals(
+          other.getMatchCase());
+      if (!result) return false;
       switch (matchCase_) {
         case 2:
-          if (!getName()
-              .equals(other.getName())) return false;
+          result = result && getName()
+              .equals(other.getName());
           break;
         case 3:
-          if (!getTag()
-              .equals(other.getTag())) return false;
+          result = result && getTag()
+              .equals(other.getTag());
           break;
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -6165,35 +5911,35 @@ public final class DataServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6275,7 +6021,6 @@ public final class DataServiceProtos {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 1;</code>
-       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -6291,7 +6036,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 1;</code>
-       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -6308,8 +6052,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 1;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -6323,7 +6065,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -6333,8 +6074,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 1;</code>
-       * @param value The bytes for type to set.
-       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -6350,9 +6089,7 @@ public final class DataServiceProtos {
 
       /**
        * <code>string name = 2;</code>
-       * @return The name.
        */
-      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = "";
         if (matchCase_ == 2) {
@@ -6372,9 +6109,7 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 2;</code>
-       * @return The bytes for name.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = "";
@@ -6395,8 +6130,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6410,7 +6143,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         if (matchCase_ == 2) {
@@ -6422,8 +6154,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6439,9 +6169,7 @@ public final class DataServiceProtos {
 
       /**
        * <code>string tag = 3;</code>
-       * @return The tag.
        */
-      @java.lang.Override
       public java.lang.String getTag() {
         java.lang.Object ref = "";
         if (matchCase_ == 3) {
@@ -6461,9 +6189,7 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string tag = 3;</code>
-       * @return The bytes for tag.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagBytes() {
         java.lang.Object ref = "";
@@ -6484,8 +6210,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string tag = 3;</code>
-       * @param value The tag to set.
-       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -6499,7 +6223,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string tag = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTag() {
         if (matchCase_ == 3) {
@@ -6511,8 +6234,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string tag = 3;</code>
-       * @param value The bytes for tag to set.
-       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -6528,7 +6249,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -6584,24 +6305,20 @@ public final class DataServiceProtos {
 
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -6609,7 +6326,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.GetInfoRequest}
    */
-  public static final class GetInfoRequest extends
+  public  static final class GetInfoRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.GetInfoRequest)
       GetInfoRequestOrBuilder {
@@ -6621,13 +6338,6 @@ public final class DataServiceProtos {
     private GetInfoRequest() {
       name_ = "";
       type_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInfoRequest();
     }
 
     @java.lang.Override
@@ -6643,6 +6353,7 @@ public final class DataServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6666,7 +6377,7 @@ public final class DataServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6701,9 +6412,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6718,9 +6427,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6739,9 +6446,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
-    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -6756,9 +6461,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -6823,12 +6526,13 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.GetInfoRequest other = (asgt.dataservice.v1.DataServiceProtos.GetInfoRequest) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -7013,35 +6717,35 @@ public final class DataServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7095,7 +6799,6 @@ public final class DataServiceProtos {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7111,7 +6814,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7128,8 +6830,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7143,7 +6843,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7153,8 +6852,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7171,7 +6868,6 @@ public final class DataServiceProtos {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
-       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -7187,7 +6883,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -7204,8 +6899,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -7219,7 +6912,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -7229,8 +6921,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The bytes for type to set.
-       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -7246,7 +6936,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -7302,36 +6992,30 @@ public final class DataServiceProtos {
 
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
-     * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
-     * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
@@ -7342,7 +7026,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.UpdateDatasetRequest}
    */
-  public static final class UpdateDatasetRequest extends
+  public  static final class UpdateDatasetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.UpdateDatasetRequest)
       UpdateDatasetRequestOrBuilder {
@@ -7354,13 +7038,6 @@ public final class DataServiceProtos {
     private UpdateDatasetRequest() {
       name_ = "";
       type_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UpdateDatasetRequest();
     }
 
     @java.lang.Override
@@ -7376,6 +7053,7 @@ public final class DataServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7412,7 +7090,7 @@ public final class DataServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7447,9 +7125,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -7464,9 +7140,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -7485,9 +7159,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
-     * @return The type.
      */
-    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -7502,9 +7174,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string type = 2;</code>
-     * @return The bytes for type.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -7523,24 +7193,19 @@ public final class DataServiceProtos {
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
-     * @return Whether the retentionPolicy field is set.
      */
-    @java.lang.Override
     public boolean hasRetentionPolicy() {
       return retentionPolicy_ != null;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
-     * @return The retentionPolicy.
      */
-    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
      */
-    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
@@ -7602,17 +7267,18 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest other = (asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (hasRetentionPolicy() != other.hasRetentionPolicy()) return false;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
+      result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
       if (hasRetentionPolicy()) {
-        if (!getRetentionPolicy()
-            .equals(other.getRetentionPolicy())) return false;
+        result = result && getRetentionPolicy()
+            .equals(other.getRetentionPolicy());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -7812,35 +7478,35 @@ public final class DataServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7897,7 +7563,6 @@ public final class DataServiceProtos {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7913,7 +7578,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7930,8 +7594,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7945,7 +7607,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7955,8 +7616,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7973,7 +7632,6 @@ public final class DataServiceProtos {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
-       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -7989,7 +7647,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -8006,8 +7663,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -8021,7 +7676,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -8031,8 +7685,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string type = 2;</code>
-       * @param value The bytes for type to set.
-       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -8046,19 +7698,17 @@ public final class DataServiceProtos {
         return this;
       }
 
-      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
+      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
-       * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
-       * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -8167,7 +7817,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -8223,12 +7873,10 @@ public final class DataServiceProtos {
 
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
@@ -8242,7 +7890,6 @@ public final class DataServiceProtos {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
-     * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
@@ -8251,7 +7898,6 @@ public final class DataServiceProtos {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
-     * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
@@ -8266,7 +7912,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.GetInfoResponse}
    */
-  public static final class GetInfoResponse extends
+  public  static final class GetInfoResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.GetInfoResponse)
       GetInfoResponseOrBuilder {
@@ -8276,13 +7922,6 @@ public final class DataServiceProtos {
       super(builder);
     }
     private GetInfoResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInfoResponse();
     }
 
     @java.lang.Override
@@ -8298,6 +7937,7 @@ public final class DataServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8335,7 +7975,7 @@ public final class DataServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8370,24 +8010,19 @@ public final class DataServiceProtos {
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return Whether the dataset field is set.
      */
-    @java.lang.Override
     public boolean hasDataset() {
       return dataset_ != null;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
-     * @return The dataset.
      */
-    @java.lang.Override
     public asgt.type.DatasetOuterClass.Dataset getDataset() {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
      */
-    @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
       return getDataset();
     }
@@ -8400,9 +8035,7 @@ public final class DataServiceProtos {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
-     * @return Whether the model field is set.
      */
-    @java.lang.Override
     public boolean hasModel() {
       return model_ != null;
     }
@@ -8412,9 +8045,7 @@ public final class DataServiceProtos {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
-     * @return The model.
      */
-    @java.lang.Override
     public asgt.type.ModelOuterClass.Model getModel() {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
@@ -8425,7 +8056,6 @@ public final class DataServiceProtos {
      *
      * <code>.asgt.type.Model model = 2;</code>
      */
-    @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
@@ -8482,18 +8112,19 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.GetInfoResponse other = (asgt.dataservice.v1.DataServiceProtos.GetInfoResponse) obj;
 
-      if (hasDataset() != other.hasDataset()) return false;
+      boolean result = true;
+      result = result && (hasDataset() == other.hasDataset());
       if (hasDataset()) {
-        if (!getDataset()
-            .equals(other.getDataset())) return false;
+        result = result && getDataset()
+            .equals(other.getDataset());
       }
-      if (hasModel() != other.hasModel()) return false;
+      result = result && (hasModel() == other.hasModel());
       if (hasModel()) {
-        if (!getModel()
-            .equals(other.getModel())) return false;
+        result = result && getModel()
+            .equals(other.getModel());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -8698,35 +8329,35 @@ public final class DataServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8775,19 +8406,17 @@ public final class DataServiceProtos {
         return this;
       }
 
-      private asgt.type.DatasetOuterClass.Dataset dataset_;
+      private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
        * <code>.asgt.type.Dataset dataset = 1;</code>
-       * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1;</code>
-       * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
         if (datasetBuilder_ == null) {
@@ -8894,7 +8523,7 @@ public final class DataServiceProtos {
         return datasetBuilder_;
       }
 
-      private asgt.type.ModelOuterClass.Model model_;
+      private asgt.type.ModelOuterClass.Model model_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
@@ -8903,7 +8532,6 @@ public final class DataServiceProtos {
        * </pre>
        *
        * <code>.asgt.type.Model model = 2;</code>
-       * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
@@ -8914,7 +8542,6 @@ public final class DataServiceProtos {
        * </pre>
        *
        * <code>.asgt.type.Model model = 2;</code>
-       * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
@@ -9051,7 +8678,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -9107,55 +8734,44 @@ public final class DataServiceProtos {
 
     /**
      * <code>string dataset = 1;</code>
-     * @return The dataset.
      */
     java.lang.String getDataset();
     /**
      * <code>string dataset = 1;</code>
-     * @return The bytes for dataset.
      */
     com.google.protobuf.ByteString
         getDatasetBytes();
 
     /**
      * <code>string model_type = 2;</code>
-     * @return The modelType.
      */
     java.lang.String getModelType();
     /**
      * <code>string model_type = 2;</code>
-     * @return The bytes for modelType.
      */
     com.google.protobuf.ByteString
         getModelTypeBytes();
 
     /**
      * <code>int32 batch_size = 3;</code>
-     * @return The batchSize.
      */
     int getBatchSize();
 
     /**
      * <code>repeated string tags = 4;</code>
-     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 4;</code>
-     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 4;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -9163,7 +8779,7 @@ public final class DataServiceProtos {
   /**
    * Protobuf type {@code asgt.dataservice.v1.RegisterQueryStatsRequest}
    */
-  public static final class RegisterQueryStatsRequest extends
+  public  static final class RegisterQueryStatsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.RegisterQueryStatsRequest)
       RegisterQueryStatsRequestOrBuilder {
@@ -9175,14 +8791,8 @@ public final class DataServiceProtos {
     private RegisterQueryStatsRequest() {
       dataset_ = "";
       modelType_ = "";
+      batchSize_ = 0;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RegisterQueryStatsRequest();
     }
 
     @java.lang.Override
@@ -9228,15 +8838,15 @@ public final class DataServiceProtos {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000008;
               }
               tags_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9250,7 +8860,7 @@ public final class DataServiceProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -9270,13 +8880,12 @@ public final class DataServiceProtos {
               asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.class, asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATASET_FIELD_NUMBER = 1;
     private volatile java.lang.Object dataset_;
     /**
      * <code>string dataset = 1;</code>
-     * @return The dataset.
      */
-    @java.lang.Override
     public java.lang.String getDataset() {
       java.lang.Object ref = dataset_;
       if (ref instanceof java.lang.String) {
@@ -9291,9 +8900,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string dataset = 1;</code>
-     * @return The bytes for dataset.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetBytes() {
       java.lang.Object ref = dataset_;
@@ -9312,9 +8919,7 @@ public final class DataServiceProtos {
     private volatile java.lang.Object modelType_;
     /**
      * <code>string model_type = 2;</code>
-     * @return The modelType.
      */
-    @java.lang.Override
     public java.lang.String getModelType() {
       java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
@@ -9329,9 +8934,7 @@ public final class DataServiceProtos {
     }
     /**
      * <code>string model_type = 2;</code>
-     * @return The bytes for modelType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelTypeBytes() {
       java.lang.Object ref = modelType_;
@@ -9350,9 +8953,7 @@ public final class DataServiceProtos {
     private int batchSize_;
     /**
      * <code>int32 batch_size = 3;</code>
-     * @return The batchSize.
      */
-    @java.lang.Override
     public int getBatchSize() {
       return batchSize_;
     }
@@ -9361,7 +8962,6 @@ public final class DataServiceProtos {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 4;</code>
-     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -9369,23 +8969,18 @@ public final class DataServiceProtos {
     }
     /**
      * <code>repeated string tags = 4;</code>
-     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 4;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -9460,16 +9055,17 @@ public final class DataServiceProtos {
       }
       asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest other = (asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest) obj;
 
-      if (!getDataset()
-          .equals(other.getDataset())) return false;
-      if (!getModelType()
-          .equals(other.getModelType())) return false;
-      if (getBatchSize()
-          != other.getBatchSize()) return false;
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getDataset()
+          .equals(other.getDataset());
+      result = result && getModelType()
+          .equals(other.getModelType());
+      result = result && (getBatchSize()
+          == other.getBatchSize());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -9629,7 +9225,7 @@ public final class DataServiceProtos {
         batchSize_ = 0;
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -9657,49 +9253,51 @@ public final class DataServiceProtos {
       public asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest result = new asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.dataset_ = dataset_;
         result.modelType_ = modelType_;
         result.batchSize_ = batchSize_;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.tags_ = tags_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9727,7 +9325,7 @@ public final class DataServiceProtos {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -9767,7 +9365,6 @@ public final class DataServiceProtos {
       private java.lang.Object dataset_ = "";
       /**
        * <code>string dataset = 1;</code>
-       * @return The dataset.
        */
       public java.lang.String getDataset() {
         java.lang.Object ref = dataset_;
@@ -9783,7 +9380,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string dataset = 1;</code>
-       * @return The bytes for dataset.
        */
       public com.google.protobuf.ByteString
           getDatasetBytes() {
@@ -9800,8 +9396,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string dataset = 1;</code>
-       * @param value The dataset to set.
-       * @return This builder for chaining.
        */
       public Builder setDataset(
           java.lang.String value) {
@@ -9815,7 +9409,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string dataset = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDataset() {
         
@@ -9825,8 +9418,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string dataset = 1;</code>
-       * @param value The bytes for dataset to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetBytes(
           com.google.protobuf.ByteString value) {
@@ -9843,7 +9434,6 @@ public final class DataServiceProtos {
       private java.lang.Object modelType_ = "";
       /**
        * <code>string model_type = 2;</code>
-       * @return The modelType.
        */
       public java.lang.String getModelType() {
         java.lang.Object ref = modelType_;
@@ -9859,7 +9449,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string model_type = 2;</code>
-       * @return The bytes for modelType.
        */
       public com.google.protobuf.ByteString
           getModelTypeBytes() {
@@ -9876,8 +9465,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string model_type = 2;</code>
-       * @param value The modelType to set.
-       * @return This builder for chaining.
        */
       public Builder setModelType(
           java.lang.String value) {
@@ -9891,7 +9478,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string model_type = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearModelType() {
         
@@ -9901,8 +9487,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>string model_type = 2;</code>
-       * @param value The bytes for modelType to set.
-       * @return This builder for chaining.
        */
       public Builder setModelTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -9919,16 +9503,12 @@ public final class DataServiceProtos {
       private int batchSize_ ;
       /**
        * <code>int32 batch_size = 3;</code>
-       * @return The batchSize.
        */
-      @java.lang.Override
       public int getBatchSize() {
         return batchSize_;
       }
       /**
        * <code>int32 batch_size = 3;</code>
-       * @param value The batchSize to set.
-       * @return This builder for chaining.
        */
       public Builder setBatchSize(int value) {
         
@@ -9938,7 +9518,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>int32 batch_size = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearBatchSize() {
         
@@ -9949,14 +9528,13 @@ public final class DataServiceProtos {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -9964,23 +9542,18 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @param index The index of the element to return.
-       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -9988,9 +9561,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The tags to set.
-       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -10004,8 +9574,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @param value The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -10019,8 +9587,6 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @param values The tags to add.
-       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -10032,18 +9598,15 @@ public final class DataServiceProtos {
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 4;</code>
-       * @param value The bytes of the tags to add.
-       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -10059,7 +9622,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -10227,7 +9790,15 @@ public final class DataServiceProtos {
       "github.com/e-conomic/vmlapis/gen/go/asgt" +
       "/data/v1;datab\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
@@ -10239,7 +9810,7 @@ public final class DataServiceProtos {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.dataservice.v1.DataServiceProto.getDescriptor(),
-        });
+        }, assigner);
     internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable = new

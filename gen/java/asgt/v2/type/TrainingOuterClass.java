@@ -20,12 +20,10 @@ public final class TrainingOuterClass {
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -35,48 +33,40 @@ public final class TrainingOuterClass {
 
     /**
      * <code>string status = 2;</code>
-     * @return The status.
      */
     java.lang.String getStatus();
     /**
      * <code>string status = 2;</code>
-     * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
      * <code>string training_status = 3;</code>
-     * @return The trainingStatus.
      */
     java.lang.String getTrainingStatus();
     /**
      * <code>string training_status = 3;</code>
-     * @return The bytes for trainingStatus.
      */
     com.google.protobuf.ByteString
         getTrainingStatusBytes();
 
     /**
      * <code>string training_status_message = 4;</code>
-     * @return The trainingStatusMessage.
      */
     java.lang.String getTrainingStatusMessage();
     /**
      * <code>string training_status_message = 4;</code>
-     * @return The bytes for trainingStatusMessage.
      */
     com.google.protobuf.ByteString
         getTrainingStatusMessageBytes();
 
     /**
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
-     * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
     /**
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
-     * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
     /**
@@ -86,12 +76,10 @@ public final class TrainingOuterClass {
 
     /**
      * <code>.asgt.type.Dataset dataset = 6;</code>
-     * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
      * <code>.asgt.type.Dataset dataset = 6;</code>
-     * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
@@ -102,7 +90,7 @@ public final class TrainingOuterClass {
   /**
    * Protobuf type {@code asgt.v2.type.Training}
    */
-  public static final class Training extends
+  public  static final class Training extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.Training)
       TrainingOrBuilder {
@@ -118,13 +106,6 @@ public final class TrainingOuterClass {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Training();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -137,6 +118,7 @@ public final class TrainingOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -205,7 +187,7 @@ public final class TrainingOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -240,24 +222,19 @@ public final class TrainingOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     * @return Whether the createdAt field is set.
      */
-    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     * @return The createdAt.
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -266,9 +243,7 @@ public final class TrainingOuterClass {
     private volatile java.lang.Object status_;
     /**
      * <code>string status = 2;</code>
-     * @return The status.
      */
-    @java.lang.Override
     public java.lang.String getStatus() {
       java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
@@ -283,9 +258,7 @@ public final class TrainingOuterClass {
     }
     /**
      * <code>string status = 2;</code>
-     * @return The bytes for status.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStatusBytes() {
       java.lang.Object ref = status_;
@@ -304,9 +277,7 @@ public final class TrainingOuterClass {
     private volatile java.lang.Object trainingStatus_;
     /**
      * <code>string training_status = 3;</code>
-     * @return The trainingStatus.
      */
-    @java.lang.Override
     public java.lang.String getTrainingStatus() {
       java.lang.Object ref = trainingStatus_;
       if (ref instanceof java.lang.String) {
@@ -321,9 +292,7 @@ public final class TrainingOuterClass {
     }
     /**
      * <code>string training_status = 3;</code>
-     * @return The bytes for trainingStatus.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTrainingStatusBytes() {
       java.lang.Object ref = trainingStatus_;
@@ -342,9 +311,7 @@ public final class TrainingOuterClass {
     private volatile java.lang.Object trainingStatusMessage_;
     /**
      * <code>string training_status_message = 4;</code>
-     * @return The trainingStatusMessage.
      */
-    @java.lang.Override
     public java.lang.String getTrainingStatusMessage() {
       java.lang.Object ref = trainingStatusMessage_;
       if (ref instanceof java.lang.String) {
@@ -359,9 +326,7 @@ public final class TrainingOuterClass {
     }
     /**
      * <code>string training_status_message = 4;</code>
-     * @return The bytes for trainingStatusMessage.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTrainingStatusMessageBytes() {
       java.lang.Object ref = trainingStatusMessage_;
@@ -380,24 +345,19 @@ public final class TrainingOuterClass {
     private com.google.protobuf.Timestamp finishTime_;
     /**
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
-     * @return Whether the finishTime field is set.
      */
-    @java.lang.Override
     public boolean hasFinishTime() {
       return finishTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
-     * @return The finishTime.
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getFinishTime() {
       return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
     /**
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
       return getFinishTime();
     }
@@ -406,24 +366,19 @@ public final class TrainingOuterClass {
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
      * <code>.asgt.type.Dataset dataset = 6;</code>
-     * @return Whether the dataset field is set.
      */
-    @java.lang.Override
     public boolean hasDataset() {
       return dataset_ != null;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 6;</code>
-     * @return The dataset.
      */
-    @java.lang.Override
     public asgt.type.DatasetOuterClass.Dataset getDataset() {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 6;</code>
      */
-    @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
       return getDataset();
     }
@@ -505,29 +460,30 @@ public final class TrainingOuterClass {
       }
       asgt.v2.type.TrainingOuterClass.Training other = (asgt.v2.type.TrainingOuterClass.Training) obj;
 
-      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      boolean result = true;
+      result = result && (hasCreatedAt() == other.hasCreatedAt());
       if (hasCreatedAt()) {
-        if (!getCreatedAt()
-            .equals(other.getCreatedAt())) return false;
+        result = result && getCreatedAt()
+            .equals(other.getCreatedAt());
       }
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
-      if (!getTrainingStatus()
-          .equals(other.getTrainingStatus())) return false;
-      if (!getTrainingStatusMessage()
-          .equals(other.getTrainingStatusMessage())) return false;
-      if (hasFinishTime() != other.hasFinishTime()) return false;
+      result = result && getStatus()
+          .equals(other.getStatus());
+      result = result && getTrainingStatus()
+          .equals(other.getTrainingStatus());
+      result = result && getTrainingStatusMessage()
+          .equals(other.getTrainingStatusMessage());
+      result = result && (hasFinishTime() == other.hasFinishTime());
       if (hasFinishTime()) {
-        if (!getFinishTime()
-            .equals(other.getFinishTime())) return false;
+        result = result && getFinishTime()
+            .equals(other.getFinishTime());
       }
-      if (hasDataset() != other.hasDataset()) return false;
+      result = result && (hasDataset() == other.hasDataset());
       if (hasDataset()) {
-        if (!getDataset()
-            .equals(other.getDataset())) return false;
+        result = result && getDataset()
+            .equals(other.getDataset());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -762,35 +718,35 @@ public final class TrainingOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -854,19 +810,17 @@ public final class TrainingOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.Timestamp createdAt_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -976,7 +930,6 @@ public final class TrainingOuterClass {
       private java.lang.Object status_ = "";
       /**
        * <code>string status = 2;</code>
-       * @return The status.
        */
       public java.lang.String getStatus() {
         java.lang.Object ref = status_;
@@ -992,7 +945,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string status = 2;</code>
-       * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
           getStatusBytes() {
@@ -1009,8 +961,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string status = 2;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
        */
       public Builder setStatus(
           java.lang.String value) {
@@ -1024,7 +974,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string status = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -1034,8 +983,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string status = 2;</code>
-       * @param value The bytes for status to set.
-       * @return This builder for chaining.
        */
       public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
@@ -1052,7 +999,6 @@ public final class TrainingOuterClass {
       private java.lang.Object trainingStatus_ = "";
       /**
        * <code>string training_status = 3;</code>
-       * @return The trainingStatus.
        */
       public java.lang.String getTrainingStatus() {
         java.lang.Object ref = trainingStatus_;
@@ -1068,7 +1014,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status = 3;</code>
-       * @return The bytes for trainingStatus.
        */
       public com.google.protobuf.ByteString
           getTrainingStatusBytes() {
@@ -1085,8 +1030,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status = 3;</code>
-       * @param value The trainingStatus to set.
-       * @return This builder for chaining.
        */
       public Builder setTrainingStatus(
           java.lang.String value) {
@@ -1100,7 +1043,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTrainingStatus() {
         
@@ -1110,8 +1052,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status = 3;</code>
-       * @param value The bytes for trainingStatus to set.
-       * @return This builder for chaining.
        */
       public Builder setTrainingStatusBytes(
           com.google.protobuf.ByteString value) {
@@ -1128,7 +1068,6 @@ public final class TrainingOuterClass {
       private java.lang.Object trainingStatusMessage_ = "";
       /**
        * <code>string training_status_message = 4;</code>
-       * @return The trainingStatusMessage.
        */
       public java.lang.String getTrainingStatusMessage() {
         java.lang.Object ref = trainingStatusMessage_;
@@ -1144,7 +1083,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status_message = 4;</code>
-       * @return The bytes for trainingStatusMessage.
        */
       public com.google.protobuf.ByteString
           getTrainingStatusMessageBytes() {
@@ -1161,8 +1099,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status_message = 4;</code>
-       * @param value The trainingStatusMessage to set.
-       * @return This builder for chaining.
        */
       public Builder setTrainingStatusMessage(
           java.lang.String value) {
@@ -1176,7 +1112,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status_message = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTrainingStatusMessage() {
         
@@ -1186,8 +1121,6 @@ public final class TrainingOuterClass {
       }
       /**
        * <code>string training_status_message = 4;</code>
-       * @param value The bytes for trainingStatusMessage to set.
-       * @return This builder for chaining.
        */
       public Builder setTrainingStatusMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -1201,19 +1134,17 @@ public final class TrainingOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp finishTime_;
+      private com.google.protobuf.Timestamp finishTime_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
-       * @return Whether the finishTime field is set.
        */
       public boolean hasFinishTime() {
         return finishTimeBuilder_ != null || finishTime_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
-       * @return The finishTime.
        */
       public com.google.protobuf.Timestamp getFinishTime() {
         if (finishTimeBuilder_ == null) {
@@ -1320,19 +1251,17 @@ public final class TrainingOuterClass {
         return finishTimeBuilder_;
       }
 
-      private asgt.type.DatasetOuterClass.Dataset dataset_;
+      private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
        * <code>.asgt.type.Dataset dataset = 6;</code>
-       * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 6;</code>
-       * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
         if (datasetBuilder_ == null) {
@@ -1441,7 +1370,7 @@ public final class TrainingOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1516,12 +1445,20 @@ public final class TrainingOuterClass {
       "etB;Z9github.com/e-conomic/vmlapis/gen/g" +
       "o/asgt/v2/type;asgttypeb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        });
+        }, assigner);
     internal_static_asgt_v2_type_Training_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_v2_type_Training_fieldAccessorTable = new

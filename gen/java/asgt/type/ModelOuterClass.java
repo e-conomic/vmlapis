@@ -20,18 +20,15 @@ public final class ModelOuterClass {
 
     /**
      * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The version.
      */
     long getVersion();
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
-     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
-     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -41,13 +38,11 @@ public final class ModelOuterClass {
 
     /**
      * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetSize.
      */
     int getDatasetSize();
 
     /**
      * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The trainingSize.
      */
     int getTrainingSize();
 
@@ -77,23 +72,19 @@ public final class ModelOuterClass {
 
     /**
      * <code>.asgt.type.Model.InputType input_type = 8;</code>
-     * @return The enum numeric value on the wire for inputType.
      */
     int getInputTypeValue();
     /**
      * <code>.asgt.type.Model.InputType input_type = 8;</code>
-     * @return The inputType.
      */
     asgt.type.ModelOuterClass.Model.InputType getInputType();
 
     /**
      * <code>string dataset_type = 9;</code>
-     * @return The datasetType.
      */
     java.lang.String getDatasetType();
     /**
      * <code>string dataset_type = 9;</code>
-     * @return The bytes for datasetType.
      */
     com.google.protobuf.ByteString
         getDatasetTypeBytes();
@@ -101,7 +92,7 @@ public final class ModelOuterClass {
   /**
    * Protobuf type {@code asgt.type.Model}
    */
-  public static final class Model extends
+  public  static final class Model extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.type.Model)
       ModelOrBuilder {
@@ -111,16 +102,12 @@ public final class ModelOuterClass {
       super(builder);
     }
     private Model() {
+      version_ = 0L;
+      datasetSize_ = 0;
+      trainingSize_ = 0;
       confidenceScores_ = java.util.Collections.emptyList();
       inputType_ = 0;
       datasetType_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Model();
     }
 
     @java.lang.Override
@@ -176,9 +163,9 @@ public final class ModelOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 confidenceScores_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000010;
               }
               confidenceScores_.add(
                   input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
@@ -197,7 +184,7 @@ public final class ModelOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -211,7 +198,7 @@ public final class ModelOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           confidenceScores_ = java.util.Collections.unmodifiableList(confidenceScores_);
         }
         this.unknownFields = unknownFields.build();
@@ -266,8 +253,6 @@ public final class ModelOuterClass {
       }
 
       /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -275,10 +260,6 @@ public final class ModelOuterClass {
         return forNumber(value);
       }
 
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
       public static InputType forNumber(int value) {
         switch (value) {
           case 0: return FEATURE_TENSORS;
@@ -301,10 +282,6 @@ public final class ModelOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -339,13 +316,12 @@ public final class ModelOuterClass {
       // @@protoc_insertion_point(enum_scope:asgt.type.Model.InputType)
     }
 
+    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 3;
     private long version_;
     /**
      * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The version.
      */
-    @java.lang.Override
     public long getVersion() {
       return version_;
     }
@@ -354,24 +330,19 @@ public final class ModelOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
-     * @return Whether the createdAt field is set.
      */
-    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
-     * @return The createdAt.
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -380,9 +351,7 @@ public final class ModelOuterClass {
     private int datasetSize_;
     /**
      * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The datasetSize.
      */
-    @java.lang.Override
     public int getDatasetSize() {
       return datasetSize_;
     }
@@ -391,9 +360,7 @@ public final class ModelOuterClass {
     private int trainingSize_;
     /**
      * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The trainingSize.
      */
-    @java.lang.Override
     public int getTrainingSize() {
       return trainingSize_;
     }
@@ -403,14 +370,12 @@ public final class ModelOuterClass {
     /**
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    @java.lang.Override
     public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getConfidenceScoresList() {
       return confidenceScores_;
     }
     /**
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    @java.lang.Override
     public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
         getConfidenceScoresOrBuilderList() {
       return confidenceScores_;
@@ -418,21 +383,18 @@ public final class ModelOuterClass {
     /**
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    @java.lang.Override
     public int getConfidenceScoresCount() {
       return confidenceScores_.size();
     }
     /**
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetrics getConfidenceScores(int index) {
       return confidenceScores_.get(index);
     }
     /**
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
         int index) {
       return confidenceScores_.get(index);
@@ -442,16 +404,14 @@ public final class ModelOuterClass {
     private int inputType_;
     /**
      * <code>.asgt.type.Model.InputType input_type = 8;</code>
-     * @return The enum numeric value on the wire for inputType.
      */
-    @java.lang.Override public int getInputTypeValue() {
+    public int getInputTypeValue() {
       return inputType_;
     }
     /**
      * <code>.asgt.type.Model.InputType input_type = 8;</code>
-     * @return The inputType.
      */
-    @java.lang.Override public asgt.type.ModelOuterClass.Model.InputType getInputType() {
+    public asgt.type.ModelOuterClass.Model.InputType getInputType() {
       @SuppressWarnings("deprecation")
       asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
       return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
@@ -461,9 +421,7 @@ public final class ModelOuterClass {
     private volatile java.lang.Object datasetType_;
     /**
      * <code>string dataset_type = 9;</code>
-     * @return The datasetType.
      */
-    @java.lang.Override
     public java.lang.String getDatasetType() {
       java.lang.Object ref = datasetType_;
       if (ref instanceof java.lang.String) {
@@ -478,9 +436,7 @@ public final class ModelOuterClass {
     }
     /**
      * <code>string dataset_type = 9;</code>
-     * @return The bytes for datasetType.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetTypeBytes() {
       java.lang.Object ref = datasetType_;
@@ -581,24 +537,25 @@ public final class ModelOuterClass {
       }
       asgt.type.ModelOuterClass.Model other = (asgt.type.ModelOuterClass.Model) obj;
 
-      if (getVersion()
-          != other.getVersion()) return false;
-      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      boolean result = true;
+      result = result && (getVersion()
+          == other.getVersion());
+      result = result && (hasCreatedAt() == other.hasCreatedAt());
       if (hasCreatedAt()) {
-        if (!getCreatedAt()
-            .equals(other.getCreatedAt())) return false;
+        result = result && getCreatedAt()
+            .equals(other.getCreatedAt());
       }
-      if (getDatasetSize()
-          != other.getDatasetSize()) return false;
-      if (getTrainingSize()
-          != other.getTrainingSize()) return false;
-      if (!getConfidenceScoresList()
-          .equals(other.getConfidenceScoresList())) return false;
-      if (inputType_ != other.inputType_) return false;
-      if (!getDatasetType()
-          .equals(other.getDatasetType())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && (getDatasetSize()
+          == other.getDatasetSize());
+      result = result && (getTrainingSize()
+          == other.getTrainingSize());
+      result = result && getConfidenceScoresList()
+          .equals(other.getConfidenceScoresList());
+      result = result && inputType_ == other.inputType_;
+      result = result && getDatasetType()
+          .equals(other.getDatasetType());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -775,7 +732,7 @@ public final class ModelOuterClass {
 
         if (confidenceScoresBuilder_ == null) {
           confidenceScores_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           confidenceScoresBuilder_.clear();
         }
@@ -810,6 +767,7 @@ public final class ModelOuterClass {
       public asgt.type.ModelOuterClass.Model buildPartial() {
         asgt.type.ModelOuterClass.Model result = new asgt.type.ModelOuterClass.Model(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.version_ = version_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
@@ -819,9 +777,9 @@ public final class ModelOuterClass {
         result.datasetSize_ = datasetSize_;
         result.trainingSize_ = trainingSize_;
         if (confidenceScoresBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             confidenceScores_ = java.util.Collections.unmodifiableList(confidenceScores_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.confidenceScores_ = confidenceScores_;
         } else {
@@ -829,41 +787,42 @@ public final class ModelOuterClass {
         }
         result.inputType_ = inputType_;
         result.datasetType_ = datasetType_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -893,7 +852,7 @@ public final class ModelOuterClass {
           if (!other.confidenceScores_.isEmpty()) {
             if (confidenceScores_.isEmpty()) {
               confidenceScores_ = other.confidenceScores_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureConfidenceScoresIsMutable();
               confidenceScores_.addAll(other.confidenceScores_);
@@ -906,7 +865,7 @@ public final class ModelOuterClass {
               confidenceScoresBuilder_.dispose();
               confidenceScoresBuilder_ = null;
               confidenceScores_ = other.confidenceScores_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
               confidenceScoresBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getConfidenceScoresFieldBuilder() : null;
@@ -955,16 +914,12 @@ public final class ModelOuterClass {
       private long version_ ;
       /**
        * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The version.
        */
-      @java.lang.Override
       public long getVersion() {
         return version_;
       }
       /**
        * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The version to set.
-       * @return This builder for chaining.
        */
       public Builder setVersion(long value) {
         
@@ -974,7 +929,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -983,19 +937,17 @@ public final class ModelOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.Timestamp createdAt_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
-       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
-       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1105,16 +1057,12 @@ public final class ModelOuterClass {
       private int datasetSize_ ;
       /**
        * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The datasetSize.
        */
-      @java.lang.Override
       public int getDatasetSize() {
         return datasetSize_;
       }
       /**
        * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The datasetSize to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetSize(int value) {
         
@@ -1124,7 +1072,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearDatasetSize() {
         
@@ -1136,16 +1083,12 @@ public final class ModelOuterClass {
       private int trainingSize_ ;
       /**
        * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return The trainingSize.
        */
-      @java.lang.Override
       public int getTrainingSize() {
         return trainingSize_;
       }
       /**
        * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @param value The trainingSize to set.
-       * @return This builder for chaining.
        */
       public Builder setTrainingSize(int value) {
         
@@ -1155,7 +1098,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
-       * @return This builder for chaining.
        */
       public Builder clearTrainingSize() {
         
@@ -1167,9 +1109,9 @@ public final class ModelOuterClass {
       private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> confidenceScores_ =
         java.util.Collections.emptyList();
       private void ensureConfidenceScoresIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           confidenceScores_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>(confidenceScores_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -1319,7 +1261,7 @@ public final class ModelOuterClass {
       public Builder clearConfidenceScores() {
         if (confidenceScoresBuilder_ == null) {
           confidenceScores_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           confidenceScoresBuilder_.clear();
@@ -1396,7 +1338,7 @@ public final class ModelOuterClass {
           confidenceScoresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder>(
                   confidenceScores_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           confidenceScores_ = null;
@@ -1407,27 +1349,21 @@ public final class ModelOuterClass {
       private int inputType_ = 0;
       /**
        * <code>.asgt.type.Model.InputType input_type = 8;</code>
-       * @return The enum numeric value on the wire for inputType.
        */
-      @java.lang.Override public int getInputTypeValue() {
+      public int getInputTypeValue() {
         return inputType_;
       }
       /**
        * <code>.asgt.type.Model.InputType input_type = 8;</code>
-       * @param value The enum numeric value on the wire for inputType to set.
-       * @return This builder for chaining.
        */
       public Builder setInputTypeValue(int value) {
-        
         inputType_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model.InputType input_type = 8;</code>
-       * @return The inputType.
        */
-      @java.lang.Override
       public asgt.type.ModelOuterClass.Model.InputType getInputType() {
         @SuppressWarnings("deprecation")
         asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
@@ -1435,8 +1371,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>.asgt.type.Model.InputType input_type = 8;</code>
-       * @param value The inputType to set.
-       * @return This builder for chaining.
        */
       public Builder setInputType(asgt.type.ModelOuterClass.Model.InputType value) {
         if (value == null) {
@@ -1449,7 +1383,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>.asgt.type.Model.InputType input_type = 8;</code>
-       * @return This builder for chaining.
        */
       public Builder clearInputType() {
         
@@ -1461,7 +1394,6 @@ public final class ModelOuterClass {
       private java.lang.Object datasetType_ = "";
       /**
        * <code>string dataset_type = 9;</code>
-       * @return The datasetType.
        */
       public java.lang.String getDatasetType() {
         java.lang.Object ref = datasetType_;
@@ -1477,7 +1409,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>string dataset_type = 9;</code>
-       * @return The bytes for datasetType.
        */
       public com.google.protobuf.ByteString
           getDatasetTypeBytes() {
@@ -1494,8 +1425,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>string dataset_type = 9;</code>
-       * @param value The datasetType to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetType(
           java.lang.String value) {
@@ -1509,7 +1438,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>string dataset_type = 9;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDatasetType() {
         
@@ -1519,8 +1447,6 @@ public final class ModelOuterClass {
       }
       /**
        * <code>string dataset_type = 9;</code>
-       * @param value The bytes for datasetType to set.
-       * @return This builder for chaining.
        */
       public Builder setDatasetTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1536,7 +1462,7 @@ public final class ModelOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1615,13 +1541,21 @@ public final class ModelOuterClass {
       "omic/vmlapis/gen/go/asgt/type;asgttypeb\006" +
       "proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.TargetMetricsOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        });
+        }, assigner);
     internal_static_asgt_type_Model_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_type_Model_fieldAccessorTable = new
