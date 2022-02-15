@@ -24,6 +24,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>float feature_count = 1;</code>
+     * @return The featureCount.
      */
     float getFeatureCount();
 
@@ -33,6 +34,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @return A list containing the featureNames.
      */
     java.util.List<java.lang.String>
         getFeatureNamesList();
@@ -42,6 +44,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @return The count of featureNames.
      */
     int getFeatureNamesCount();
     /**
@@ -50,6 +53,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The featureNames at the given index.
      */
     java.lang.String getFeatureNames(int index);
     /**
@@ -58,6 +63,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the featureNames at the given index.
      */
     com.google.protobuf.ByteString
         getFeatureNamesBytes(int index);
@@ -68,6 +75,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @return A list containing the targetNames.
      */
     java.util.List<java.lang.String>
         getTargetNamesList();
@@ -77,6 +85,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @return The count of targetNames.
      */
     int getTargetNamesCount();
     /**
@@ -85,6 +94,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @param index The index of the element to return.
+     * @return The targetNames at the given index.
      */
     java.lang.String getTargetNames(int index);
     /**
@@ -93,6 +104,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targetNames at the given index.
      */
     com.google.protobuf.ByteString
         getTargetNamesBytes(int index);
@@ -211,13 +224,14 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>float similarity_index = 6;</code>
+     * @return The similarityIndex.
      */
     float getSimilarityIndex();
   }
   /**
    * Protobuf type {@code asgt.type.TrainStatistics}
    */
-  public  static final class TrainStatistics extends
+  public static final class TrainStatistics extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.type.TrainStatistics)
       TrainStatisticsOrBuilder {
@@ -227,10 +241,15 @@ public final class TrainStatisticsOuterClass {
       super(builder);
     }
     private TrainStatistics() {
-      featureCount_ = 0F;
       featureNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       targetNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      similarityIndex_ = 0F;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrainStatistics();
     }
 
     @java.lang.Override
@@ -264,27 +283,27 @@ public final class TrainStatisticsOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 featureNames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               featureNames_.add(s);
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 targetNames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               targetNames_.add(s);
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 targetCount_ = com.google.protobuf.MapField.newMapField(
                     TargetCountDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000004;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.Float>
               targetCount__ = input.readMessage(
@@ -294,10 +313,10 @@ public final class TrainStatisticsOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 informationGains_ = com.google.protobuf.MapField.newMapField(
                     InformationGainsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000008;
               }
               com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain>
               informationGains__ = input.readMessage(
@@ -312,7 +331,7 @@ public final class TrainStatisticsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -326,10 +345,10 @@ public final class TrainStatisticsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           featureNames_ = featureNames_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           targetNames_ = targetNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -424,7 +443,7 @@ public final class TrainStatisticsOuterClass {
     /**
      * Protobuf type {@code asgt.type.TrainStatistics.InformationGain}
      */
-    public  static final class InformationGain extends
+    public static final class InformationGain extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:asgt.type.TrainStatistics.InformationGain)
         InformationGainOrBuilder {
@@ -434,6 +453,13 @@ public final class TrainStatisticsOuterClass {
         super(builder);
       }
       private InformationGain() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InformationGain();
       }
 
       @java.lang.Override
@@ -461,7 +487,7 @@ public final class TrainStatisticsOuterClass {
                 done = true;
                 break;
               case 10: {
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   featureGains_ = com.google.protobuf.MapField.newMapField(
                       FeatureGainsDefaultEntryHolder.defaultEntry);
                   mutable_bitField0_ |= 0x00000001;
@@ -474,7 +500,7 @@ public final class TrainStatisticsOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -551,6 +577,7 @@ public final class TrainStatisticsOuterClass {
        * <code>map&lt;string, float&gt; feature_gains = 1;</code>
        */
 
+      @java.lang.Override
       public boolean containsFeatureGains(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -559,6 +586,7 @@ public final class TrainStatisticsOuterClass {
       /**
        * Use {@link #getFeatureGainsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Float> getFeatureGains() {
         return getFeatureGainsMap();
@@ -570,6 +598,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, float&gt; feature_gains = 1;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.Float> getFeatureGainsMap() {
         return internalGetFeatureGains().getMap();
@@ -581,6 +610,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, float&gt; feature_gains = 1;</code>
        */
+      @java.lang.Override
 
       public float getFeatureGainsOrDefault(
           java.lang.String key,
@@ -597,6 +627,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, float&gt; feature_gains = 1;</code>
        */
+      @java.lang.Override
 
       public float getFeatureGainsOrThrow(
           java.lang.String key) {
@@ -663,11 +694,10 @@ public final class TrainStatisticsOuterClass {
         }
         asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain other = (asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain) obj;
 
-        boolean result = true;
-        result = result && internalGetFeatureGains().equals(
-            other.internalGetFeatureGains());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!internalGetFeatureGains().equals(
+            other.internalGetFeatureGains())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -872,35 +902,35 @@ public final class TrainStatisticsOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -980,6 +1010,7 @@ public final class TrainStatisticsOuterClass {
          * <code>map&lt;string, float&gt; feature_gains = 1;</code>
          */
 
+        @java.lang.Override
         public boolean containsFeatureGains(
             java.lang.String key) {
           if (key == null) { throw new java.lang.NullPointerException(); }
@@ -988,6 +1019,7 @@ public final class TrainStatisticsOuterClass {
         /**
          * Use {@link #getFeatureGainsMap()} instead.
          */
+        @java.lang.Override
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.Float> getFeatureGains() {
           return getFeatureGainsMap();
@@ -999,6 +1031,7 @@ public final class TrainStatisticsOuterClass {
          *
          * <code>map&lt;string, float&gt; feature_gains = 1;</code>
          */
+        @java.lang.Override
 
         public java.util.Map<java.lang.String, java.lang.Float> getFeatureGainsMap() {
           return internalGetFeatureGains().getMap();
@@ -1010,6 +1043,7 @@ public final class TrainStatisticsOuterClass {
          *
          * <code>map&lt;string, float&gt; feature_gains = 1;</code>
          */
+        @java.lang.Override
 
         public float getFeatureGainsOrDefault(
             java.lang.String key,
@@ -1026,6 +1060,7 @@ public final class TrainStatisticsOuterClass {
          *
          * <code>map&lt;string, float&gt; feature_gains = 1;</code>
          */
+        @java.lang.Override
 
         public float getFeatureGainsOrThrow(
             java.lang.String key) {
@@ -1099,7 +1134,7 @@ public final class TrainStatisticsOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -1149,7 +1184,6 @@ public final class TrainStatisticsOuterClass {
 
     }
 
-    private int bitField0_;
     public static final int FEATURE_COUNT_FIELD_NUMBER = 1;
     private float featureCount_;
     /**
@@ -1158,7 +1192,9 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>float feature_count = 1;</code>
+     * @return The featureCount.
      */
+    @java.lang.Override
     public float getFeatureCount() {
       return featureCount_;
     }
@@ -1171,6 +1207,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @return A list containing the featureNames.
      */
     public com.google.protobuf.ProtocolStringList
         getFeatureNamesList() {
@@ -1182,6 +1219,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @return The count of featureNames.
      */
     public int getFeatureNamesCount() {
       return featureNames_.size();
@@ -1192,6 +1230,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The featureNames at the given index.
      */
     public java.lang.String getFeatureNames(int index) {
       return featureNames_.get(index);
@@ -1202,6 +1242,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string feature_names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the featureNames at the given index.
      */
     public com.google.protobuf.ByteString
         getFeatureNamesBytes(int index) {
@@ -1216,6 +1258,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @return A list containing the targetNames.
      */
     public com.google.protobuf.ProtocolStringList
         getTargetNamesList() {
@@ -1227,6 +1270,7 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @return The count of targetNames.
      */
     public int getTargetNamesCount() {
       return targetNames_.size();
@@ -1237,6 +1281,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @param index The index of the element to return.
+     * @return The targetNames at the given index.
      */
     public java.lang.String getTargetNames(int index) {
       return targetNames_.get(index);
@@ -1247,6 +1293,8 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>repeated string target_names = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targetNames at the given index.
      */
     public com.google.protobuf.ByteString
         getTargetNamesBytes(int index) {
@@ -1287,6 +1335,7 @@ public final class TrainStatisticsOuterClass {
      * <code>map&lt;string, float&gt; target_count = 4;</code>
      */
 
+    @java.lang.Override
     public boolean containsTargetCount(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -1295,6 +1344,7 @@ public final class TrainStatisticsOuterClass {
     /**
      * Use {@link #getTargetCountMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Float> getTargetCount() {
       return getTargetCountMap();
@@ -1306,6 +1356,7 @@ public final class TrainStatisticsOuterClass {
      *
      * <code>map&lt;string, float&gt; target_count = 4;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.Float> getTargetCountMap() {
       return internalGetTargetCount().getMap();
@@ -1317,6 +1368,7 @@ public final class TrainStatisticsOuterClass {
      *
      * <code>map&lt;string, float&gt; target_count = 4;</code>
      */
+    @java.lang.Override
 
     public float getTargetCountOrDefault(
         java.lang.String key,
@@ -1333,6 +1385,7 @@ public final class TrainStatisticsOuterClass {
      *
      * <code>map&lt;string, float&gt; target_count = 4;</code>
      */
+    @java.lang.Override
 
     public float getTargetCountOrThrow(
         java.lang.String key) {
@@ -1379,6 +1432,7 @@ public final class TrainStatisticsOuterClass {
      * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsInformationGains(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -1387,6 +1441,7 @@ public final class TrainStatisticsOuterClass {
     /**
      * Use {@link #getInformationGainsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain> getInformationGains() {
       return getInformationGainsMap();
@@ -1398,6 +1453,7 @@ public final class TrainStatisticsOuterClass {
      *
      * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain> getInformationGainsMap() {
       return internalGetInformationGains().getMap();
@@ -1409,6 +1465,7 @@ public final class TrainStatisticsOuterClass {
      *
      * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
      */
+    @java.lang.Override
 
     public asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain getInformationGainsOrDefault(
         java.lang.String key,
@@ -1425,6 +1482,7 @@ public final class TrainStatisticsOuterClass {
      *
      * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
      */
+    @java.lang.Override
 
     public asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain getInformationGainsOrThrow(
         java.lang.String key) {
@@ -1445,7 +1503,9 @@ public final class TrainStatisticsOuterClass {
      * </pre>
      *
      * <code>float similarity_index = 6;</code>
+     * @return The similarityIndex.
      */
+    @java.lang.Override
     public float getSimilarityIndex() {
       return similarityIndex_;
     }
@@ -1556,25 +1616,22 @@ public final class TrainStatisticsOuterClass {
       }
       asgt.type.TrainStatisticsOuterClass.TrainStatistics other = (asgt.type.TrainStatisticsOuterClass.TrainStatistics) obj;
 
-      boolean result = true;
-      result = result && (
-          java.lang.Float.floatToIntBits(getFeatureCount())
-          == java.lang.Float.floatToIntBits(
-              other.getFeatureCount()));
-      result = result && getFeatureNamesList()
-          .equals(other.getFeatureNamesList());
-      result = result && getTargetNamesList()
-          .equals(other.getTargetNamesList());
-      result = result && internalGetTargetCount().equals(
-          other.internalGetTargetCount());
-      result = result && internalGetInformationGains().equals(
-          other.internalGetInformationGains());
-      result = result && (
-          java.lang.Float.floatToIntBits(getSimilarityIndex())
-          == java.lang.Float.floatToIntBits(
-              other.getSimilarityIndex()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (java.lang.Float.floatToIntBits(getFeatureCount())
+          != java.lang.Float.floatToIntBits(
+              other.getFeatureCount())) return false;
+      if (!getFeatureNamesList()
+          .equals(other.getFeatureNamesList())) return false;
+      if (!getTargetNamesList()
+          .equals(other.getTargetNamesList())) return false;
+      if (!internalGetTargetCount().equals(
+          other.internalGetTargetCount())) return false;
+      if (!internalGetInformationGains().equals(
+          other.internalGetInformationGains())) return false;
+      if (java.lang.Float.floatToIntBits(getSimilarityIndex())
+          != java.lang.Float.floatToIntBits(
+              other.getSimilarityIndex())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1768,9 +1825,9 @@ public final class TrainStatisticsOuterClass {
         featureCount_ = 0F;
 
         featureNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         targetNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutableTargetCount().clear();
         internalGetMutableInformationGains().clear();
         similarityIndex_ = 0F;
@@ -1802,16 +1859,15 @@ public final class TrainStatisticsOuterClass {
       public asgt.type.TrainStatisticsOuterClass.TrainStatistics buildPartial() {
         asgt.type.TrainStatisticsOuterClass.TrainStatistics result = new asgt.type.TrainStatisticsOuterClass.TrainStatistics(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.featureCount_ = featureCount_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           featureNames_ = featureNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.featureNames_ = featureNames_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           targetNames_ = targetNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.targetNames_ = targetNames_;
         result.targetCount_ = internalGetTargetCount();
@@ -1819,42 +1875,41 @@ public final class TrainStatisticsOuterClass {
         result.informationGains_ = internalGetInformationGains();
         result.informationGains_.makeImmutable();
         result.similarityIndex_ = similarityIndex_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1874,7 +1929,7 @@ public final class TrainStatisticsOuterClass {
         if (!other.featureNames_.isEmpty()) {
           if (featureNames_.isEmpty()) {
             featureNames_ = other.featureNames_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFeatureNamesIsMutable();
             featureNames_.addAll(other.featureNames_);
@@ -1884,7 +1939,7 @@ public final class TrainStatisticsOuterClass {
         if (!other.targetNames_.isEmpty()) {
           if (targetNames_.isEmpty()) {
             targetNames_ = other.targetNames_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTargetNamesIsMutable();
             targetNames_.addAll(other.targetNames_);
@@ -1935,7 +1990,9 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>float feature_count = 1;</code>
+       * @return The featureCount.
        */
+      @java.lang.Override
       public float getFeatureCount() {
         return featureCount_;
       }
@@ -1945,6 +2002,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>float feature_count = 1;</code>
+       * @param value The featureCount to set.
+       * @return This builder for chaining.
        */
       public Builder setFeatureCount(float value) {
         
@@ -1958,6 +2017,7 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>float feature_count = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFeatureCount() {
         
@@ -1968,9 +2028,9 @@ public final class TrainStatisticsOuterClass {
 
       private com.google.protobuf.LazyStringList featureNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFeatureNamesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           featureNames_ = new com.google.protobuf.LazyStringArrayList(featureNames_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -1979,6 +2039,7 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @return A list containing the featureNames.
        */
       public com.google.protobuf.ProtocolStringList
           getFeatureNamesList() {
@@ -1990,6 +2051,7 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @return The count of featureNames.
        */
       public int getFeatureNamesCount() {
         return featureNames_.size();
@@ -2000,6 +2062,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @param index The index of the element to return.
+       * @return The featureNames at the given index.
        */
       public java.lang.String getFeatureNames(int index) {
         return featureNames_.get(index);
@@ -2010,6 +2074,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the featureNames at the given index.
        */
       public com.google.protobuf.ByteString
           getFeatureNamesBytes(int index) {
@@ -2021,6 +2087,9 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The featureNames to set.
+       * @return This builder for chaining.
        */
       public Builder setFeatureNames(
           int index, java.lang.String value) {
@@ -2038,6 +2107,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @param value The featureNames to add.
+       * @return This builder for chaining.
        */
       public Builder addFeatureNames(
           java.lang.String value) {
@@ -2055,6 +2126,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @param values The featureNames to add.
+       * @return This builder for chaining.
        */
       public Builder addAllFeatureNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -2070,10 +2143,11 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFeatureNames() {
         featureNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2083,6 +2157,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string feature_names = 2;</code>
+       * @param value The bytes of the featureNames to add.
+       * @return This builder for chaining.
        */
       public Builder addFeatureNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -2098,9 +2174,9 @@ public final class TrainStatisticsOuterClass {
 
       private com.google.protobuf.LazyStringList targetNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetNamesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           targetNames_ = new com.google.protobuf.LazyStringArrayList(targetNames_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -2109,6 +2185,7 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @return A list containing the targetNames.
        */
       public com.google.protobuf.ProtocolStringList
           getTargetNamesList() {
@@ -2120,6 +2197,7 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @return The count of targetNames.
        */
       public int getTargetNamesCount() {
         return targetNames_.size();
@@ -2130,6 +2208,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @param index The index of the element to return.
+       * @return The targetNames at the given index.
        */
       public java.lang.String getTargetNames(int index) {
         return targetNames_.get(index);
@@ -2140,6 +2220,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targetNames at the given index.
        */
       public com.google.protobuf.ByteString
           getTargetNamesBytes(int index) {
@@ -2151,6 +2233,9 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The targetNames to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetNames(
           int index, java.lang.String value) {
@@ -2168,6 +2253,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @param value The targetNames to add.
+       * @return This builder for chaining.
        */
       public Builder addTargetNames(
           java.lang.String value) {
@@ -2185,6 +2272,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @param values The targetNames to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTargetNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -2200,10 +2289,11 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargetNames() {
         targetNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2213,6 +2303,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>repeated string target_names = 3;</code>
+       * @param value The bytes of the targetNames to add.
+       * @return This builder for chaining.
        */
       public Builder addTargetNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -2260,6 +2352,7 @@ public final class TrainStatisticsOuterClass {
        * <code>map&lt;string, float&gt; target_count = 4;</code>
        */
 
+      @java.lang.Override
       public boolean containsTargetCount(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -2268,6 +2361,7 @@ public final class TrainStatisticsOuterClass {
       /**
        * Use {@link #getTargetCountMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Float> getTargetCount() {
         return getTargetCountMap();
@@ -2279,6 +2373,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, float&gt; target_count = 4;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.Float> getTargetCountMap() {
         return internalGetTargetCount().getMap();
@@ -2290,6 +2385,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, float&gt; target_count = 4;</code>
        */
+      @java.lang.Override
 
       public float getTargetCountOrDefault(
           java.lang.String key,
@@ -2306,6 +2402,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, float&gt; target_count = 4;</code>
        */
+      @java.lang.Override
 
       public float getTargetCountOrThrow(
           java.lang.String key) {
@@ -2411,6 +2508,7 @@ public final class TrainStatisticsOuterClass {
        * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsInformationGains(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -2419,6 +2517,7 @@ public final class TrainStatisticsOuterClass {
       /**
        * Use {@link #getInformationGainsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain> getInformationGains() {
         return getInformationGainsMap();
@@ -2430,6 +2529,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain> getInformationGainsMap() {
         return internalGetInformationGains().getMap();
@@ -2441,6 +2541,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
        */
+      @java.lang.Override
 
       public asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain getInformationGainsOrDefault(
           java.lang.String key,
@@ -2457,6 +2558,7 @@ public final class TrainStatisticsOuterClass {
        *
        * <code>map&lt;string, .asgt.type.TrainStatistics.InformationGain&gt; information_gains = 5;</code>
        */
+      @java.lang.Override
 
       public asgt.type.TrainStatisticsOuterClass.TrainStatistics.InformationGain getInformationGainsOrThrow(
           java.lang.String key) {
@@ -2535,7 +2637,9 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>float similarity_index = 6;</code>
+       * @return The similarityIndex.
        */
+      @java.lang.Override
       public float getSimilarityIndex() {
         return similarityIndex_;
       }
@@ -2545,6 +2649,8 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>float similarity_index = 6;</code>
+       * @param value The similarityIndex to set.
+       * @return This builder for chaining.
        */
       public Builder setSimilarityIndex(float value) {
         
@@ -2558,6 +2664,7 @@ public final class TrainStatisticsOuterClass {
        * </pre>
        *
        * <code>float similarity_index = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSimilarityIndex() {
         
@@ -2568,7 +2675,7 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2670,18 +2777,10 @@ public final class TrainStatisticsOuterClass {
       "mationGain:\0028\001B8Z6github.com/e-conomic/v" +
       "mlapis/gen/go/asgt/type;asgttypeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_asgt_type_TrainStatistics_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_type_TrainStatistics_fieldAccessorTable = new

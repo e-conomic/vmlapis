@@ -20,10 +20,12 @@ public final class OcrServiceProto {
 
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return The document.
      */
     ssn.annotator.v1.Annotator.Document getDocument();
     /**
@@ -33,13 +35,14 @@ public final class OcrServiceProto {
 
     /**
      * <code>bool preview = 3;</code>
+     * @return The preview.
      */
     boolean getPreview();
   }
   /**
    * Protobuf type {@code ssn.ocrservice.v1.GetTextAnnotationRequest}
    */
-  public  static final class GetTextAnnotationRequest extends
+  public static final class GetTextAnnotationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.GetTextAnnotationRequest)
       GetTextAnnotationRequestOrBuilder {
@@ -49,7 +52,13 @@ public final class OcrServiceProto {
       super(builder);
     }
     private GetTextAnnotationRequest() {
-      preview_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTextAnnotationRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class OcrServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -95,7 +103,7 @@ public final class OcrServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -130,19 +138,24 @@ public final class OcrServiceProto {
     private ssn.annotator.v1.Annotator.Document document_;
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return Whether the document field is set.
      */
+    @java.lang.Override
     public boolean hasDocument() {
       return document_ != null;
     }
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return The document.
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.Document getDocument() {
       return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
       return getDocument();
     }
@@ -151,7 +164,9 @@ public final class OcrServiceProto {
     private boolean preview_;
     /**
      * <code>bool preview = 3;</code>
+     * @return The preview.
      */
+    @java.lang.Override
     public boolean getPreview() {
       return preview_;
     }
@@ -208,16 +223,15 @@ public final class OcrServiceProto {
       }
       ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest other = (ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest) obj;
 
-      boolean result = true;
-      result = result && (hasDocument() == other.hasDocument());
+      if (hasDocument() != other.hasDocument()) return false;
       if (hasDocument()) {
-        result = result && getDocument()
-            .equals(other.getDocument());
+        if (!getDocument()
+            .equals(other.getDocument())) return false;
       }
-      result = result && (getPreview()
-          == other.getPreview());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getPreview()
+          != other.getPreview()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -413,35 +427,35 @@ public final class OcrServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -490,17 +504,19 @@ public final class OcrServiceProto {
         return this;
       }
 
-      private ssn.annotator.v1.Annotator.Document document_ = null;
+      private ssn.annotator.v1.Annotator.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> documentBuilder_;
       /**
        * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * @return The document.
        */
       public ssn.annotator.v1.Annotator.Document getDocument() {
         if (documentBuilder_ == null) {
@@ -610,12 +626,16 @@ public final class OcrServiceProto {
       private boolean preview_ ;
       /**
        * <code>bool preview = 3;</code>
+       * @return The preview.
        */
+      @java.lang.Override
       public boolean getPreview() {
         return preview_;
       }
       /**
        * <code>bool preview = 3;</code>
+       * @param value The preview to set.
+       * @return This builder for chaining.
        */
       public Builder setPreview(boolean value) {
         
@@ -625,6 +645,7 @@ public final class OcrServiceProto {
       }
       /**
        * <code>bool preview = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPreview() {
         
@@ -635,7 +656,7 @@ public final class OcrServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -691,10 +712,12 @@ public final class OcrServiceProto {
 
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return Whether the textAnnotation field is set.
      */
     boolean hasTextAnnotation();
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return The textAnnotation.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
     /**
@@ -704,10 +727,12 @@ public final class OcrServiceProto {
 
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return Whether the image field is set.
      */
     boolean hasImage();
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return The image.
      */
     com.google.protobuf.BytesValue getImage();
     /**
@@ -718,7 +743,7 @@ public final class OcrServiceProto {
   /**
    * Protobuf type {@code ssn.ocrservice.v1.GetTextAnnotationResponse}
    */
-  public  static final class GetTextAnnotationResponse extends
+  public static final class GetTextAnnotationResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.GetTextAnnotationResponse)
       GetTextAnnotationResponseOrBuilder {
@@ -728,6 +753,13 @@ public final class OcrServiceProto {
       super(builder);
     }
     private GetTextAnnotationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTextAnnotationResponse();
     }
 
     @java.lang.Override
@@ -743,7 +775,6 @@ public final class OcrServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -781,7 +812,7 @@ public final class OcrServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -816,19 +847,24 @@ public final class OcrServiceProto {
     private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return Whether the textAnnotation field is set.
      */
+    @java.lang.Override
     public boolean hasTextAnnotation() {
       return textAnnotation_ != null;
     }
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return The textAnnotation.
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
       return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
       return getTextAnnotation();
     }
@@ -837,19 +873,24 @@ public final class OcrServiceProto {
     private com.google.protobuf.BytesValue image_;
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return Whether the image field is set.
      */
+    @java.lang.Override
     public boolean hasImage() {
       return image_ != null;
     }
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return The image.
      */
+    @java.lang.Override
     public com.google.protobuf.BytesValue getImage() {
       return image_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : image_;
     }
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BytesValueOrBuilder getImageOrBuilder() {
       return getImage();
     }
@@ -906,19 +947,18 @@ public final class OcrServiceProto {
       }
       ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse other = (ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse) obj;
 
-      boolean result = true;
-      result = result && (hasTextAnnotation() == other.hasTextAnnotation());
+      if (hasTextAnnotation() != other.hasTextAnnotation()) return false;
       if (hasTextAnnotation()) {
-        result = result && getTextAnnotation()
-            .equals(other.getTextAnnotation());
+        if (!getTextAnnotation()
+            .equals(other.getTextAnnotation())) return false;
       }
-      result = result && (hasImage() == other.hasImage());
+      if (hasImage() != other.hasImage()) return false;
       if (hasImage()) {
-        result = result && getImage()
-            .equals(other.getImage());
+        if (!getImage()
+            .equals(other.getImage())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1123,35 +1163,35 @@ public final class OcrServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1200,17 +1240,19 @@ public final class OcrServiceProto {
         return this;
       }
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_ = null;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
         return textAnnotationBuilder_ != null || textAnnotation_ != null;
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * @return The textAnnotation.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -1317,17 +1359,19 @@ public final class OcrServiceProto {
         return textAnnotationBuilder_;
       }
 
-      private com.google.protobuf.BytesValue image_ = null;
+      private com.google.protobuf.BytesValue image_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> imageBuilder_;
       /**
        * <code>.google.protobuf.BytesValue image = 3;</code>
+       * @return Whether the image field is set.
        */
       public boolean hasImage() {
         return imageBuilder_ != null || image_ != null;
       }
       /**
        * <code>.google.protobuf.BytesValue image = 3;</code>
+       * @return The image.
        */
       public com.google.protobuf.BytesValue getImage() {
         if (imageBuilder_ == null) {
@@ -1436,7 +1480,7 @@ public final class OcrServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1492,13 +1536,14 @@ public final class OcrServiceProto {
 
     /**
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
     com.google.protobuf.ByteString getData();
   }
   /**
    * Protobuf type {@code ssn.ocrservice.v1.OcrScanImageRequest}
    */
-  public  static final class OcrScanImageRequest extends
+  public static final class OcrScanImageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.OcrScanImageRequest)
       OcrScanImageRequestOrBuilder {
@@ -1509,6 +1554,13 @@ public final class OcrServiceProto {
     }
     private OcrScanImageRequest() {
       data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OcrScanImageRequest();
     }
 
     @java.lang.Override
@@ -1524,7 +1576,6 @@ public final class OcrServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1541,7 +1592,7 @@ public final class OcrServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1576,7 +1627,9 @@ public final class OcrServiceProto {
     private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -1626,11 +1679,10 @@ public final class OcrServiceProto {
       }
       ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest other = (ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest) obj;
 
-      boolean result = true;
-      result = result && getData()
-          .equals(other.getData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1810,35 +1862,35 @@ public final class OcrServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1887,12 +1939,16 @@ public final class OcrServiceProto {
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 1;</code>
+       * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
       /**
        * <code>bytes data = 1;</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -1905,6 +1961,7 @@ public final class OcrServiceProto {
       }
       /**
        * <code>bytes data = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearData() {
         
@@ -1915,7 +1972,7 @@ public final class OcrServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1971,10 +2028,12 @@ public final class OcrServiceProto {
 
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The tessHocr.
      */
     java.lang.String getTessHocr();
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The bytes for tessHocr.
      */
     com.google.protobuf.ByteString
         getTessHocrBytes();
@@ -1982,7 +2041,7 @@ public final class OcrServiceProto {
   /**
    * Protobuf type {@code ssn.ocrservice.v1.OcrScanImageResponse}
    */
-  public  static final class OcrScanImageResponse extends
+  public static final class OcrScanImageResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.OcrScanImageResponse)
       OcrScanImageResponseOrBuilder {
@@ -1993,6 +2052,13 @@ public final class OcrServiceProto {
     }
     private OcrScanImageResponse() {
       tessHocr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OcrScanImageResponse();
     }
 
     @java.lang.Override
@@ -2008,7 +2074,6 @@ public final class OcrServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2026,7 +2091,7 @@ public final class OcrServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2061,7 +2126,9 @@ public final class OcrServiceProto {
     private volatile java.lang.Object tessHocr_;
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The tessHocr.
      */
+    @java.lang.Override
     public java.lang.String getTessHocr() {
       java.lang.Object ref = tessHocr_;
       if (ref instanceof java.lang.String) {
@@ -2076,7 +2143,9 @@ public final class OcrServiceProto {
     }
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The bytes for tessHocr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTessHocrBytes() {
       java.lang.Object ref = tessHocr_;
@@ -2135,11 +2204,10 @@ public final class OcrServiceProto {
       }
       ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse other = (ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse) obj;
 
-      boolean result = true;
-      result = result && getTessHocr()
-          .equals(other.getTessHocr());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTessHocr()
+          .equals(other.getTessHocr())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2319,35 +2387,35 @@ public final class OcrServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2397,6 +2465,7 @@ public final class OcrServiceProto {
       private java.lang.Object tessHocr_ = "";
       /**
        * <code>string tess_hocr = 1;</code>
+       * @return The tessHocr.
        */
       public java.lang.String getTessHocr() {
         java.lang.Object ref = tessHocr_;
@@ -2412,6 +2481,7 @@ public final class OcrServiceProto {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @return The bytes for tessHocr.
        */
       public com.google.protobuf.ByteString
           getTessHocrBytes() {
@@ -2428,6 +2498,8 @@ public final class OcrServiceProto {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @param value The tessHocr to set.
+       * @return This builder for chaining.
        */
       public Builder setTessHocr(
           java.lang.String value) {
@@ -2441,6 +2513,7 @@ public final class OcrServiceProto {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTessHocr() {
         
@@ -2450,6 +2523,8 @@ public final class OcrServiceProto {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @param value The bytes for tessHocr to set.
+       * @return This builder for chaining.
        */
       public Builder setTessHocrBytes(
           com.google.protobuf.ByteString value) {
@@ -2465,7 +2540,7 @@ public final class OcrServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2565,21 +2640,13 @@ public final class OcrServiceProto {
       "s/gen/go/ssn/ocrservice/v1;ocrserviceb\006p" +
       "roto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.annotator.v1.Annotator.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable = new

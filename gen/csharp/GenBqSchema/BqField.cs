@@ -33,20 +33,33 @@ namespace GenBqSchema {
             "aWVsZE9wdGlvbnNCQVo/Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
             "ZW4vZ28vZ2VuX2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { pbr::FileDescriptor.DescriptorProtoFileDescriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GenBqSchema.BigQueryFieldOptions), global::GenBqSchema.BigQueryFieldOptions.Parser, new[]{ "Require", "TypeOverride", "Ignore", "Description", "Name" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { BqFieldExtensions.Bigquery }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::GenBqSchema.BigQueryFieldOptions), global::GenBqSchema.BigQueryFieldOptions.Parser, new[]{ "Require", "TypeOverride", "Ignore", "Description", "Name" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  /// <summary>Holder for extension identifiers generated from the top level of gen_bq_schema/bq_field.proto</summary>
+  public static partial class BqFieldExtensions {
+    /// <summary>
+    /// BigQuery field schema generation options.
+    /// </summary>
+    public static readonly pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::GenBqSchema.BigQueryFieldOptions> Bigquery =
+      new pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::GenBqSchema.BigQueryFieldOptions>(1021, pb::FieldCodec.ForMessage(8170, global::GenBqSchema.BigQueryFieldOptions.Parser));
+  }
+
   #region Messages
   /// <summary>
   /// Message containing options related to BigQuery schema generation
   /// and management via Protobuf.
   /// </summary>
-  public sealed partial class BigQueryFieldOptions : pb::IMessage<BigQueryFieldOptions> {
+  public sealed partial class BigQueryFieldOptions : pb::IMessage<BigQueryFieldOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BigQueryFieldOptions> _parser = new pb::MessageParser<BigQueryFieldOptions>(() => new BigQueryFieldOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -274,6 +287,9 @@ namespace GenBqSchema {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -302,7 +318,42 @@ namespace GenBqSchema {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Require = input.ReadBool();
+            break;
+          }
+          case 18: {
+            TypeOverride = input.ReadString();
+            break;
+          }
+          case 24: {
+            Ignore = input.ReadBool();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

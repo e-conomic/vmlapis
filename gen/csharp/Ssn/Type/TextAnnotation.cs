@@ -61,15 +61,15 @@ namespace Ssn.Type {
             "dHlwZTtzc250eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ssn.Type.GeometryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation), global::Ssn.Type.TextAnnotation.Parser, new[]{ "Pages", "Text" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation.Types.DetectedLanguage), global::Ssn.Type.TextAnnotation.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation.Types.DetectedBreak), global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Parser, new[]{ "Type", "IsPrefix" }, null, new[]{ typeof(global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation.Types.TextProperty), global::Ssn.Type.TextAnnotation.Types.TextProperty.Parser, new[]{ "DetectedLanguages", "DetectedBreak" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Page), global::Ssn.Type.Page.Parser, new[]{ "Property", "Width", "Height", "Blocks", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Block), global::Ssn.Type.Block.Parser, new[]{ "Property", "BoundingBox", "Paragraphs", "BlockType", "Confidence" }, null, new[]{ typeof(global::Ssn.Type.Block.Types.BlockType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Paragraph), global::Ssn.Type.Paragraph.Parser, new[]{ "Property", "BoundingBox", "Words", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Word), global::Ssn.Type.Word.Parser, new[]{ "Property", "BoundingBox", "Symbols", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Symbol), global::Ssn.Type.Symbol.Parser, new[]{ "Property", "BoundingBox", "Text", "Confidence" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation), global::Ssn.Type.TextAnnotation.Parser, new[]{ "Pages", "Text" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation.Types.DetectedLanguage), global::Ssn.Type.TextAnnotation.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation.Types.DetectedBreak), global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Parser, new[]{ "Type", "IsPrefix" }, null, new[]{ typeof(global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.TextAnnotation.Types.TextProperty), global::Ssn.Type.TextAnnotation.Types.TextProperty.Parser, new[]{ "DetectedLanguages", "DetectedBreak" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Page), global::Ssn.Type.Page.Parser, new[]{ "Property", "Width", "Height", "Blocks", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Block), global::Ssn.Type.Block.Parser, new[]{ "Property", "BoundingBox", "Paragraphs", "BlockType", "Confidence" }, null, new[]{ typeof(global::Ssn.Type.Block.Types.BlockType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Paragraph), global::Ssn.Type.Paragraph.Parser, new[]{ "Property", "BoundingBox", "Words", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Word), global::Ssn.Type.Word.Parser, new[]{ "Property", "BoundingBox", "Symbols", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Symbol), global::Ssn.Type.Symbol.Parser, new[]{ "Property", "BoundingBox", "Text", "Confidence" }, null, null, null, null)
           }));
     }
     #endregion
@@ -86,7 +86,11 @@ namespace Ssn.Type {
   /// [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
   /// message definition below for more detail.
   /// </summary>
-  public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation> {
+  public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TextAnnotation> _parser = new pb::MessageParser<TextAnnotation>(() => new TextAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -221,6 +225,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -237,7 +244,30 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            pages_.AddEntriesFrom(ref input, _repeated_pages_codec);
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TextAnnotation message type.</summary>
@@ -246,7 +276,11 @@ namespace Ssn.Type {
       /// <summary>
       /// Detected language for a structural component.
       /// </summary>
-      public sealed partial class DetectedLanguage : pb::IMessage<DetectedLanguage> {
+      public sealed partial class DetectedLanguage : pb::IMessage<DetectedLanguage>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DetectedLanguage> _parser = new pb::MessageParser<DetectedLanguage>(() => new DetectedLanguage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -391,6 +425,9 @@ namespace Ssn.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -407,14 +444,41 @@ namespace Ssn.Type {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                LanguageCode = input.ReadString();
+                break;
+              }
+              case 21: {
+                Confidence = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Detected start or end of a structural component.
       /// </summary>
-      public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak> {
+      public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DetectedBreak> _parser = new pb::MessageParser<DetectedBreak>(() => new DetectedBreak());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -451,7 +515,7 @@ namespace Ssn.Type {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 1;
-        private global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType type_ = 0;
+        private global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType type_ = global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown;
         /// <summary>
         /// Detected break type.
         /// </summary>
@@ -498,7 +562,7 @@ namespace Ssn.Type {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Type != 0) hash ^= Type.GetHashCode();
+          if (Type != global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) hash ^= Type.GetHashCode();
           if (IsPrefix != false) hash ^= IsPrefix.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -513,7 +577,7 @@ namespace Ssn.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Type != 0) {
+          if (Type != global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Type);
           }
@@ -529,7 +593,7 @@ namespace Ssn.Type {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Type != 0) {
+          if (Type != global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
           if (IsPrefix != false) {
@@ -546,7 +610,7 @@ namespace Ssn.Type {
           if (other == null) {
             return;
           }
-          if (other.Type != 0) {
+          if (other.Type != global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) {
             Type = other.Type;
           }
           if (other.IsPrefix != false) {
@@ -557,6 +621,9 @@ namespace Ssn.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -564,7 +631,29 @@ namespace Ssn.Type {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                type_ = (global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType) input.ReadEnum();
+                Type = (global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                IsPrefix = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Ssn.Type.TextAnnotation.Types.DetectedBreak.Types.BreakType) input.ReadEnum();
                 break;
               }
               case 16: {
@@ -574,6 +663,7 @@ namespace Ssn.Type {
             }
           }
         }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the DetectedBreak message type.</summary>
@@ -618,7 +708,11 @@ namespace Ssn.Type {
       /// <summary>
       /// Additional information detected on the structural component.
       /// </summary>
-      public sealed partial class TextProperty : pb::IMessage<TextProperty> {
+      public sealed partial class TextProperty : pb::IMessage<TextProperty>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<TextProperty> _parser = new pb::MessageParser<TextProperty>(() => new TextProperty());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -747,7 +841,7 @@ namespace Ssn.Type {
           detectedLanguages_.Add(other.detectedLanguages_);
           if (other.detectedBreak_ != null) {
             if (detectedBreak_ == null) {
-              detectedBreak_ = new global::Ssn.Type.TextAnnotation.Types.DetectedBreak();
+              DetectedBreak = new global::Ssn.Type.TextAnnotation.Types.DetectedBreak();
             }
             DetectedBreak.MergeFrom(other.DetectedBreak);
           }
@@ -756,6 +850,9 @@ namespace Ssn.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -768,14 +865,40 @@ namespace Ssn.Type {
               }
               case 18: {
                 if (detectedBreak_ == null) {
-                  detectedBreak_ = new global::Ssn.Type.TextAnnotation.Types.DetectedBreak();
+                  DetectedBreak = new global::Ssn.Type.TextAnnotation.Types.DetectedBreak();
                 }
-                input.ReadMessage(detectedBreak_);
+                input.ReadMessage(DetectedBreak);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                break;
+              }
+              case 18: {
+                if (detectedBreak_ == null) {
+                  DetectedBreak = new global::Ssn.Type.TextAnnotation.Types.DetectedBreak();
+                }
+                input.ReadMessage(DetectedBreak);
                 break;
               }
             }
           }
         }
+        #endif
 
       }
 
@@ -787,7 +910,11 @@ namespace Ssn.Type {
   /// <summary>
   /// Detected page from OCR.
   /// </summary>
-  public sealed partial class Page : pb::IMessage<Page> {
+  public sealed partial class Page : pb::IMessage<Page>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Page> _parser = new pb::MessageParser<Page>(() => new Page());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -989,7 +1116,7 @@ namespace Ssn.Type {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+          Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
@@ -1008,6 +1135,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1016,9 +1146,9 @@ namespace Ssn.Type {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 16: {
@@ -1039,14 +1169,56 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (property_ == null) {
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+            }
+            input.ReadMessage(Property);
+            break;
+          }
+          case 16: {
+            Width = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Height = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            blocks_.AddEntriesFrom(ref input, _repeated_blocks_codec);
+            break;
+          }
+          case 45: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Logical element on the page.
   /// </summary>
-  public sealed partial class Block : pb::IMessage<Block> {
+  public sealed partial class Block : pb::IMessage<Block>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Block> _parser = new pb::MessageParser<Block>(() => new Block());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1146,7 +1318,7 @@ namespace Ssn.Type {
 
     /// <summary>Field number for the "block_type" field.</summary>
     public const int BlockTypeFieldNumber = 4;
-    private global::Ssn.Type.Block.Types.BlockType blockType_ = 0;
+    private global::Ssn.Type.Block.Types.BlockType blockType_ = global::Ssn.Type.Block.Types.BlockType.Unknown;
     /// <summary>
     /// Detected block type (text, image etc) for this block.
     /// </summary>
@@ -1199,7 +1371,7 @@ namespace Ssn.Type {
       if (property_ != null) hash ^= Property.GetHashCode();
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       hash ^= paragraphs_.GetHashCode();
-      if (BlockType != 0) hash ^= BlockType.GetHashCode();
+      if (BlockType != global::Ssn.Type.Block.Types.BlockType.Unknown) hash ^= BlockType.GetHashCode();
       if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1223,7 +1395,7 @@ namespace Ssn.Type {
         output.WriteMessage(BoundingBox);
       }
       paragraphs_.WriteTo(output, _repeated_paragraphs_codec);
-      if (BlockType != 0) {
+      if (BlockType != global::Ssn.Type.Block.Types.BlockType.Unknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) BlockType);
       }
@@ -1246,7 +1418,7 @@ namespace Ssn.Type {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingBox);
       }
       size += paragraphs_.CalculateSize(_repeated_paragraphs_codec);
-      if (BlockType != 0) {
+      if (BlockType != global::Ssn.Type.Block.Types.BlockType.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlockType);
       }
       if (Confidence != 0F) {
@@ -1265,18 +1437,18 @@ namespace Ssn.Type {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+          Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Ssn.Type.BoundingPoly();
+          BoundingBox = new global::Ssn.Type.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
       paragraphs_.Add(other.paragraphs_);
-      if (other.BlockType != 0) {
+      if (other.BlockType != global::Ssn.Type.Block.Types.BlockType.Unknown) {
         BlockType = other.BlockType;
       }
       if (other.Confidence != 0F) {
@@ -1287,6 +1459,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1295,16 +1470,16 @@ namespace Ssn.Type {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Ssn.Type.BoundingPoly();
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {
@@ -1312,7 +1487,47 @@ namespace Ssn.Type {
             break;
           }
           case 32: {
-            blockType_ = (global::Ssn.Type.Block.Types.BlockType) input.ReadEnum();
+            BlockType = (global::Ssn.Type.Block.Types.BlockType) input.ReadEnum();
+            break;
+          }
+          case 45: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (property_ == null) {
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+            }
+            input.ReadMessage(Property);
+            break;
+          }
+          case 18: {
+            if (boundingBox_ == null) {
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
+            }
+            input.ReadMessage(BoundingBox);
+            break;
+          }
+          case 26: {
+            paragraphs_.AddEntriesFrom(ref input, _repeated_paragraphs_codec);
+            break;
+          }
+          case 32: {
+            BlockType = (global::Ssn.Type.Block.Types.BlockType) input.ReadEnum();
             break;
           }
           case 45: {
@@ -1322,6 +1537,7 @@ namespace Ssn.Type {
         }
       }
     }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Block message type.</summary>
@@ -1365,7 +1581,11 @@ namespace Ssn.Type {
   /// <summary>
   /// Structural unit of text representing a number of words in certain order.
   /// </summary>
-  public sealed partial class Paragraph : pb::IMessage<Paragraph> {
+  public sealed partial class Paragraph : pb::IMessage<Paragraph>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Paragraph> _parser = new pb::MessageParser<Paragraph>(() => new Paragraph());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1555,13 +1775,13 @@ namespace Ssn.Type {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+          Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Ssn.Type.BoundingPoly();
+          BoundingBox = new global::Ssn.Type.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -1574,6 +1794,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1582,16 +1805,16 @@ namespace Ssn.Type {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Ssn.Type.BoundingPoly();
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {
@@ -1604,14 +1827,55 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (property_ == null) {
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+            }
+            input.ReadMessage(Property);
+            break;
+          }
+          case 18: {
+            if (boundingBox_ == null) {
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
+            }
+            input.ReadMessage(BoundingBox);
+            break;
+          }
+          case 26: {
+            words_.AddEntriesFrom(ref input, _repeated_words_codec);
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A word representation.
   /// </summary>
-  public sealed partial class Word : pb::IMessage<Word> {
+  public sealed partial class Word : pb::IMessage<Word>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Word> _parser = new pb::MessageParser<Word>(() => new Word());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1802,13 +2066,13 @@ namespace Ssn.Type {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+          Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Ssn.Type.BoundingPoly();
+          BoundingBox = new global::Ssn.Type.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -1821,6 +2085,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1829,16 +2096,16 @@ namespace Ssn.Type {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Ssn.Type.BoundingPoly();
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {
@@ -1851,14 +2118,55 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (property_ == null) {
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+            }
+            input.ReadMessage(Property);
+            break;
+          }
+          case 18: {
+            if (boundingBox_ == null) {
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
+            }
+            input.ReadMessage(BoundingBox);
+            break;
+          }
+          case 26: {
+            symbols_.AddEntriesFrom(ref input, _repeated_symbols_codec);
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A single symbol representation.
   /// </summary>
-  public sealed partial class Symbol : pb::IMessage<Symbol> {
+  public sealed partial class Symbol : pb::IMessage<Symbol>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Symbol> _parser = new pb::MessageParser<Symbol>(() => new Symbol());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2054,13 +2362,13 @@ namespace Ssn.Type {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+          Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Ssn.Type.BoundingPoly();
+          BoundingBox = new global::Ssn.Type.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -2075,6 +2383,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2083,16 +2394,52 @@ namespace Ssn.Type {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Ssn.Type.BoundingPoly();
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
+            break;
+          }
+          case 26: {
+            Text = input.ReadString();
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (property_ == null) {
+              Property = new global::Ssn.Type.TextAnnotation.Types.TextProperty();
+            }
+            input.ReadMessage(Property);
+            break;
+          }
+          case 18: {
+            if (boundingBox_ == null) {
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
+            }
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {
@@ -2106,6 +2453,7 @@ namespace Ssn.Type {
         }
       }
     }
+    #endif
 
   }
 

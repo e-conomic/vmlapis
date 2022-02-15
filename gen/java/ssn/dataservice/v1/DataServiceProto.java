@@ -20,10 +20,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the ta field is set.
      */
     boolean hasTa();
     /**
      * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The ta.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTa();
     /**
@@ -33,54 +35,67 @@ public final class DataServiceProto {
 
     /**
      * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The bytes.
      */
     com.google.protobuf.ByteString getBytes();
 
     /**
      * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The consumer.
      */
     java.lang.String getConsumer();
     /**
      * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The bytes for consumer.
      */
     com.google.protobuf.ByteString
         getConsumerBytes();
 
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 6;</code>
+     * @return Whether the trueValues field is set.
      */
     boolean hasTrueValues();
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 6;</code>
+     * @return The trueValues.
      */
     ssn.dataservice.v1.DataServiceProto.TrueValues getTrueValues();
     /**
@@ -90,10 +105,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7;</code>
+     * @return Whether the predictionValues field is set.
      */
     boolean hasPredictionValues();
     /**
      * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7;</code>
+     * @return The predictionValues.
      */
     ssn.dataservice.v1.DataServiceProto.PredictionValues getPredictionValues();
     /**
@@ -103,15 +120,18 @@ public final class DataServiceProto {
 
     /**
      * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The feedbackTime.
      */
     long getFeedbackTime();
 
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9;</code>
+     * @return Whether the predictionConfidences field is set.
      */
     boolean hasPredictionConfidences();
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9;</code>
+     * @return The predictionConfidences.
      */
     ssn.dataservice.v1.DataServiceProto.PredictionConfidences getPredictionConfidences();
     /**
@@ -121,10 +141,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10;</code>
+     * @return Whether the predictionMetadata field is set.
      */
     boolean hasPredictionMetadata();
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10;</code>
+     * @return The predictionMetadata.
      */
     ssn.dataservice.v1.DataServiceProto.PredictionMetadata getPredictionMetadata();
     /**
@@ -135,7 +157,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.Document}
    */
-  public  static final class Document extends
+  public static final class Document extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.Document)
       DocumentOrBuilder {
@@ -149,7 +171,13 @@ public final class DataServiceProto {
       id_ = "";
       consumer_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      feedbackTime_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Document();
     }
 
     @java.lang.Override
@@ -208,9 +236,9 @@ public final class DataServiceProto {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
               break;
@@ -273,7 +301,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -287,7 +315,7 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -307,24 +335,28 @@ public final class DataServiceProto {
               ssn.dataservice.v1.DataServiceProto.Document.class, ssn.dataservice.v1.DataServiceProto.Document.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TA_FIELD_NUMBER = 1;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_;
     /**
      * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the ta field is set.
      */
+    @java.lang.Override
     public boolean hasTa() {
       return ta_ != null;
     }
     /**
      * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The ta.
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
       return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
     }
     /**
      * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
       return getTa();
     }
@@ -333,7 +365,9 @@ public final class DataServiceProto {
     private com.google.protobuf.ByteString bytes_;
     /**
      * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The bytes.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getBytes() {
       return bytes_;
     }
@@ -342,7 +376,9 @@ public final class DataServiceProto {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -357,7 +393,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -376,7 +414,9 @@ public final class DataServiceProto {
     private volatile java.lang.Object consumer_;
     /**
      * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The consumer.
      */
+    @java.lang.Override
     public java.lang.String getConsumer() {
       java.lang.Object ref = consumer_;
       if (ref instanceof java.lang.String) {
@@ -391,7 +431,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The bytes for consumer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getConsumerBytes() {
       java.lang.Object ref = consumer_;
@@ -410,6 +452,7 @@ public final class DataServiceProto {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -417,18 +460,23 @@ public final class DataServiceProto {
     }
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -439,19 +487,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.TrueValues trueValues_;
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 6;</code>
+     * @return Whether the trueValues field is set.
      */
+    @java.lang.Override
     public boolean hasTrueValues() {
       return trueValues_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 6;</code>
+     * @return The trueValues.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.TrueValues getTrueValues() {
       return trueValues_ == null ? ssn.dataservice.v1.DataServiceProto.TrueValues.getDefaultInstance() : trueValues_;
     }
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 6;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.TrueValuesOrBuilder getTrueValuesOrBuilder() {
       return getTrueValues();
     }
@@ -460,19 +513,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.PredictionValues predictionValues_;
     /**
      * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7;</code>
+     * @return Whether the predictionValues field is set.
      */
+    @java.lang.Override
     public boolean hasPredictionValues() {
       return predictionValues_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7;</code>
+     * @return The predictionValues.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionValues getPredictionValues() {
       return predictionValues_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionValues.getDefaultInstance() : predictionValues_;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionValuesOrBuilder getPredictionValuesOrBuilder() {
       return getPredictionValues();
     }
@@ -481,7 +539,9 @@ public final class DataServiceProto {
     private long feedbackTime_;
     /**
      * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The feedbackTime.
      */
+    @java.lang.Override
     public long getFeedbackTime() {
       return feedbackTime_;
     }
@@ -490,19 +550,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.PredictionConfidences predictionConfidences_;
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9;</code>
+     * @return Whether the predictionConfidences field is set.
      */
+    @java.lang.Override
     public boolean hasPredictionConfidences() {
       return predictionConfidences_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9;</code>
+     * @return The predictionConfidences.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionConfidences getPredictionConfidences() {
       return predictionConfidences_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionConfidences.getDefaultInstance() : predictionConfidences_;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionConfidencesOrBuilder getPredictionConfidencesOrBuilder() {
       return getPredictionConfidences();
     }
@@ -511,19 +576,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.PredictionMetadata predictionMetadata_;
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10;</code>
+     * @return Whether the predictionMetadata field is set.
      */
+    @java.lang.Override
     public boolean hasPredictionMetadata() {
       return predictionMetadata_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10;</code>
+     * @return The predictionMetadata.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionMetadata getPredictionMetadata() {
       return predictionMetadata_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionMetadata.getDefaultInstance() : predictionMetadata_;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder() {
       return getPredictionMetadata();
     }
@@ -638,44 +708,43 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.Document other = (ssn.dataservice.v1.DataServiceProto.Document) obj;
 
-      boolean result = true;
-      result = result && (hasTa() == other.hasTa());
+      if (hasTa() != other.hasTa()) return false;
       if (hasTa()) {
-        result = result && getTa()
-            .equals(other.getTa());
+        if (!getTa()
+            .equals(other.getTa())) return false;
       }
-      result = result && getBytes()
-          .equals(other.getBytes());
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getConsumer()
-          .equals(other.getConsumer());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && (hasTrueValues() == other.hasTrueValues());
+      if (!getBytes()
+          .equals(other.getBytes())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getConsumer()
+          .equals(other.getConsumer())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (hasTrueValues() != other.hasTrueValues()) return false;
       if (hasTrueValues()) {
-        result = result && getTrueValues()
-            .equals(other.getTrueValues());
+        if (!getTrueValues()
+            .equals(other.getTrueValues())) return false;
       }
-      result = result && (hasPredictionValues() == other.hasPredictionValues());
+      if (hasPredictionValues() != other.hasPredictionValues()) return false;
       if (hasPredictionValues()) {
-        result = result && getPredictionValues()
-            .equals(other.getPredictionValues());
+        if (!getPredictionValues()
+            .equals(other.getPredictionValues())) return false;
       }
-      result = result && (getFeedbackTime()
-          == other.getFeedbackTime());
-      result = result && (hasPredictionConfidences() == other.hasPredictionConfidences());
+      if (getFeedbackTime()
+          != other.getFeedbackTime()) return false;
+      if (hasPredictionConfidences() != other.hasPredictionConfidences()) return false;
       if (hasPredictionConfidences()) {
-        result = result && getPredictionConfidences()
-            .equals(other.getPredictionConfidences());
+        if (!getPredictionConfidences()
+            .equals(other.getPredictionConfidences())) return false;
       }
-      result = result && (hasPredictionMetadata() == other.hasPredictionMetadata());
+      if (hasPredictionMetadata() != other.hasPredictionMetadata()) return false;
       if (hasPredictionMetadata()) {
-        result = result && getPredictionMetadata()
-            .equals(other.getPredictionMetadata());
+        if (!getPredictionMetadata()
+            .equals(other.getPredictionMetadata())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -864,7 +933,7 @@ public final class DataServiceProto {
         consumer_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (trueValuesBuilder_ == null) {
           trueValues_ = null;
         } else {
@@ -918,7 +987,6 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.Document buildPartial() {
         ssn.dataservice.v1.DataServiceProto.Document result = new ssn.dataservice.v1.DataServiceProto.Document(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (taBuilder_ == null) {
           result.ta_ = ta_;
         } else {
@@ -927,9 +995,9 @@ public final class DataServiceProto {
         result.bytes_ = bytes_;
         result.id_ = id_;
         result.consumer_ = consumer_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
         if (trueValuesBuilder_ == null) {
@@ -953,42 +1021,41 @@ public final class DataServiceProto {
         } else {
           result.predictionMetadata_ = predictionMetadataBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1019,7 +1086,7 @@ public final class DataServiceProto {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -1071,17 +1138,19 @@ public final class DataServiceProto {
       }
       private int bitField0_;
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_ = null;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> taBuilder_;
       /**
        * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return Whether the ta field is set.
        */
       public boolean hasTa() {
         return taBuilder_ != null || ta_ != null;
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The ta.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
         if (taBuilder_ == null) {
@@ -1191,12 +1260,16 @@ public final class DataServiceProto {
       private com.google.protobuf.ByteString bytes_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The bytes.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getBytes() {
         return bytes_;
       }
       /**
        * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The bytes to set.
+       * @return This builder for chaining.
        */
       public Builder setBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -1209,6 +1282,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearBytes() {
         
@@ -1220,6 +1294,7 @@ public final class DataServiceProto {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1235,6 +1310,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1251,6 +1327,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1264,6 +1342,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1273,6 +1352,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1289,6 +1370,7 @@ public final class DataServiceProto {
       private java.lang.Object consumer_ = "";
       /**
        * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The consumer.
        */
       public java.lang.String getConsumer() {
         java.lang.Object ref = consumer_;
@@ -1304,6 +1386,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The bytes for consumer.
        */
       public com.google.protobuf.ByteString
           getConsumerBytes() {
@@ -1320,6 +1403,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The consumer to set.
+       * @return This builder for chaining.
        */
       public Builder setConsumer(
           java.lang.String value) {
@@ -1333,6 +1418,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearConsumer() {
         
@@ -1342,6 +1428,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The bytes for consumer to set.
+       * @return This builder for chaining.
        */
       public Builder setConsumerBytes(
           com.google.protobuf.ByteString value) {
@@ -1357,13 +1445,14 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -1371,18 +1460,23 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -1390,6 +1484,9 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -1403,6 +1500,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -1416,6 +1515,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -1427,15 +1528,18 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -1449,17 +1553,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.TrueValues trueValues_ = null;
+      private ssn.dataservice.v1.DataServiceProto.TrueValues trueValues_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.TrueValues, ssn.dataservice.v1.DataServiceProto.TrueValues.Builder, ssn.dataservice.v1.DataServiceProto.TrueValuesOrBuilder> trueValuesBuilder_;
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 6;</code>
+       * @return Whether the trueValues field is set.
        */
       public boolean hasTrueValues() {
         return trueValuesBuilder_ != null || trueValues_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 6;</code>
+       * @return The trueValues.
        */
       public ssn.dataservice.v1.DataServiceProto.TrueValues getTrueValues() {
         if (trueValuesBuilder_ == null) {
@@ -1566,17 +1672,19 @@ public final class DataServiceProto {
         return trueValuesBuilder_;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.PredictionValues predictionValues_ = null;
+      private ssn.dataservice.v1.DataServiceProto.PredictionValues predictionValues_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.PredictionValues, ssn.dataservice.v1.DataServiceProto.PredictionValues.Builder, ssn.dataservice.v1.DataServiceProto.PredictionValuesOrBuilder> predictionValuesBuilder_;
       /**
        * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7;</code>
+       * @return Whether the predictionValues field is set.
        */
       public boolean hasPredictionValues() {
         return predictionValuesBuilder_ != null || predictionValues_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7;</code>
+       * @return The predictionValues.
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionValues getPredictionValues() {
         if (predictionValuesBuilder_ == null) {
@@ -1686,12 +1794,16 @@ public final class DataServiceProto {
       private long feedbackTime_ ;
       /**
        * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The feedbackTime.
        */
+      @java.lang.Override
       public long getFeedbackTime() {
         return feedbackTime_;
       }
       /**
        * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @param value The feedbackTime to set.
+       * @return This builder for chaining.
        */
       public Builder setFeedbackTime(long value) {
         
@@ -1701,6 +1813,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearFeedbackTime() {
         
@@ -1709,17 +1822,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.PredictionConfidences predictionConfidences_ = null;
+      private ssn.dataservice.v1.DataServiceProto.PredictionConfidences predictionConfidences_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.PredictionConfidences, ssn.dataservice.v1.DataServiceProto.PredictionConfidences.Builder, ssn.dataservice.v1.DataServiceProto.PredictionConfidencesOrBuilder> predictionConfidencesBuilder_;
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9;</code>
+       * @return Whether the predictionConfidences field is set.
        */
       public boolean hasPredictionConfidences() {
         return predictionConfidencesBuilder_ != null || predictionConfidences_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9;</code>
+       * @return The predictionConfidences.
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionConfidences getPredictionConfidences() {
         if (predictionConfidencesBuilder_ == null) {
@@ -1826,17 +1941,19 @@ public final class DataServiceProto {
         return predictionConfidencesBuilder_;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.PredictionMetadata predictionMetadata_ = null;
+      private ssn.dataservice.v1.DataServiceProto.PredictionMetadata predictionMetadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.PredictionMetadata, ssn.dataservice.v1.DataServiceProto.PredictionMetadata.Builder, ssn.dataservice.v1.DataServiceProto.PredictionMetadataOrBuilder> predictionMetadataBuilder_;
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10;</code>
+       * @return Whether the predictionMetadata field is set.
        */
       public boolean hasPredictionMetadata() {
         return predictionMetadataBuilder_ != null || predictionMetadata_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10;</code>
+       * @return The predictionMetadata.
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionMetadata getPredictionMetadata() {
         if (predictionMetadataBuilder_ == null) {
@@ -1945,7 +2062,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2001,10 +2118,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * @return Whether the totalInclVat field is set.
      */
     boolean hasTotalInclVat();
     /**
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * @return The totalInclVat.
      */
     com.google.protobuf.DoubleValue getTotalInclVat();
     /**
@@ -2014,10 +2133,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.DoubleValue total_vat = 2;</code>
+     * @return Whether the totalVat field is set.
      */
     boolean hasTotalVat();
     /**
      * <code>.google.protobuf.DoubleValue total_vat = 2;</code>
+     * @return The totalVat.
      */
     com.google.protobuf.DoubleValue getTotalVat();
     /**
@@ -2027,10 +2148,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * @return Whether the totalExclVat field is set.
      */
     boolean hasTotalExclVat();
     /**
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * @return The totalExclVat.
      */
     com.google.protobuf.DoubleValue getTotalExclVat();
     /**
@@ -2040,10 +2163,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the orderDate field is set.
      */
     boolean hasOrderDate();
     /**
      * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The orderDate.
      */
     com.google.type.Date getOrderDate();
     /**
@@ -2053,10 +2178,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the paymentDueDate field is set.
      */
     boolean hasPaymentDueDate();
     /**
      * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The paymentDueDate.
      */
     com.google.type.Date getPaymentDueDate();
     /**
@@ -2066,10 +2193,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue document_type = 6;</code>
+     * @return Whether the documentType field is set.
      */
     boolean hasDocumentType();
     /**
      * <code>.google.protobuf.StringValue document_type = 6;</code>
+     * @return The documentType.
      */
     com.google.protobuf.StringValue getDocumentType();
     /**
@@ -2079,10 +2208,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue currency = 7;</code>
+     * @return Whether the currency field is set.
      */
     boolean hasCurrency();
     /**
      * <code>.google.protobuf.StringValue currency = 7;</code>
+     * @return The currency.
      */
     com.google.protobuf.StringValue getCurrency();
     /**
@@ -2092,10 +2223,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
+     * @return Whether the creditCardLastFour field is set.
      */
     boolean hasCreditCardLastFour();
     /**
      * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
+     * @return The creditCardLastFour.
      */
     com.google.protobuf.StringValue getCreditCardLastFour();
     /**
@@ -2105,10 +2238,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue payment_method = 9;</code>
+     * @return Whether the paymentMethod field is set.
      */
     boolean hasPaymentMethod();
     /**
      * <code>.google.protobuf.StringValue payment_method = 9;</code>
+     * @return The paymentMethod.
      */
     com.google.protobuf.StringValue getPaymentMethod();
     /**
@@ -2118,10 +2253,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     * @return Whether the ocrLineDkType field is set.
      */
     boolean hasOcrLineDkType();
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     * @return The ocrLineDkType.
      */
     com.google.protobuf.StringValue getOcrLineDkType();
     /**
@@ -2131,10 +2268,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     * @return Whether the ocrLineDkPaymentId field is set.
      */
     boolean hasOcrLineDkPaymentId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     * @return The ocrLineDkPaymentId.
      */
     com.google.protobuf.StringValue getOcrLineDkPaymentId();
     /**
@@ -2144,10 +2283,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     * @return Whether the ocrLineDkCreditorId field is set.
      */
     boolean hasOcrLineDkCreditorId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     * @return The ocrLineDkCreditorId.
      */
     com.google.protobuf.StringValue getOcrLineDkCreditorId();
     /**
@@ -2157,10 +2298,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     * @return Whether the ocrLineSePaymentId field is set.
      */
     boolean hasOcrLineSePaymentId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     * @return The ocrLineSePaymentId.
      */
     com.google.protobuf.StringValue getOcrLineSePaymentId();
     /**
@@ -2170,10 +2313,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * @return Whether the ocrLineSeBankgiroCreditorId field is set.
      */
     boolean hasOcrLineSeBankgiroCreditorId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * @return The ocrLineSeBankgiroCreditorId.
      */
     com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId();
     /**
@@ -2183,10 +2328,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * @return Whether the ocrLineSePlusgiroCreditorId field is set.
      */
     boolean hasOcrLineSePlusgiroCreditorId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * @return The ocrLineSePlusgiroCreditorId.
      */
     com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId();
     /**
@@ -2196,10 +2343,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     * @return Whether the ocrLineNoPaymentId field is set.
      */
     boolean hasOcrLineNoPaymentId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     * @return The ocrLineNoPaymentId.
      */
     com.google.protobuf.StringValue getOcrLineNoPaymentId();
     /**
@@ -2209,10 +2358,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     * @return Whether the ocrLineFiPaymentId field is set.
      */
     boolean hasOcrLineFiPaymentId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     * @return The ocrLineFiPaymentId.
      */
     com.google.protobuf.StringValue getOcrLineFiPaymentId();
     /**
@@ -2222,10 +2373,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     * @return Whether the ocrLineNlPaymentId field is set.
      */
     boolean hasOcrLineNlPaymentId();
     /**
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     * @return The ocrLineNlPaymentId.
      */
     com.google.protobuf.StringValue getOcrLineNlPaymentId();
     /**
@@ -2235,10 +2388,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     * @return Whether the supplierCorporateId field is set.
      */
     boolean hasSupplierCorporateId();
     /**
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     * @return The supplierCorporateId.
      */
     com.google.protobuf.StringValue getSupplierCorporateId();
     /**
@@ -2248,10 +2403,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue supplier_country_code = 20;</code>
+     * @return Whether the supplierCountryCode field is set.
      */
     boolean hasSupplierCountryCode();
     /**
      * <code>.google.protobuf.StringValue supplier_country_code = 20;</code>
+     * @return The supplierCountryCode.
      */
     com.google.protobuf.StringValue getSupplierCountryCode();
     /**
@@ -2261,10 +2418,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue invoice_number = 21;</code>
+     * @return Whether the invoiceNumber field is set.
      */
     boolean hasInvoiceNumber();
     /**
      * <code>.google.protobuf.StringValue invoice_number = 21;</code>
+     * @return The invoiceNumber.
      */
     com.google.protobuf.StringValue getInvoiceNumber();
     /**
@@ -2274,10 +2433,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue iban = 22;</code>
+     * @return Whether the iban field is set.
      */
     boolean hasIban();
     /**
      * <code>.google.protobuf.StringValue iban = 22;</code>
+     * @return The iban.
      */
     com.google.protobuf.StringValue getIban();
     /**
@@ -2287,10 +2448,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue order_reference = 23;</code>
+     * @return Whether the orderReference field is set.
      */
     boolean hasOrderReference();
     /**
      * <code>.google.protobuf.StringValue order_reference = 23;</code>
+     * @return The orderReference.
      */
     com.google.protobuf.StringValue getOrderReference();
     /**
@@ -2300,10 +2463,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue bank_account_number = 24;</code>
+     * @return Whether the bankAccountNumber field is set.
      */
     boolean hasBankAccountNumber();
     /**
      * <code>.google.protobuf.StringValue bank_account_number = 24;</code>
+     * @return The bankAccountNumber.
      */
     com.google.protobuf.StringValue getBankAccountNumber();
     /**
@@ -2313,10 +2478,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
+     * @return Whether the bankRegistrationNumber field is set.
      */
     boolean hasBankRegistrationNumber();
     /**
      * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
+     * @return The bankRegistrationNumber.
      */
     com.google.protobuf.StringValue getBankRegistrationNumber();
     /**
@@ -2326,10 +2493,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return Whether the supplierName field is set.
      */
     boolean hasSupplierName();
     /**
      * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return The supplierName.
      */
     com.google.protobuf.StringValue getSupplierName();
     /**
@@ -2340,7 +2509,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.TrueValues}
    */
-  public  static final class TrueValues extends
+  public static final class TrueValues extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.TrueValues)
       TrueValuesOrBuilder {
@@ -2350,6 +2519,13 @@ public final class DataServiceProto {
       super(builder);
     }
     private TrueValues() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrueValues();
     }
 
     @java.lang.Override
@@ -2365,7 +2541,6 @@ public final class DataServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2715,7 +2890,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2750,19 +2925,24 @@ public final class DataServiceProto {
     private com.google.protobuf.DoubleValue totalInclVat_;
     /**
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * @return Whether the totalInclVat field is set.
      */
+    @java.lang.Override
     public boolean hasTotalInclVat() {
       return totalInclVat_ != null;
     }
     /**
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * @return The totalInclVat.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getTotalInclVat() {
       return totalInclVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalInclVat_;
     }
     /**
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder() {
       return getTotalInclVat();
     }
@@ -2771,19 +2951,24 @@ public final class DataServiceProto {
     private com.google.protobuf.DoubleValue totalVat_;
     /**
      * <code>.google.protobuf.DoubleValue total_vat = 2;</code>
+     * @return Whether the totalVat field is set.
      */
+    @java.lang.Override
     public boolean hasTotalVat() {
       return totalVat_ != null;
     }
     /**
      * <code>.google.protobuf.DoubleValue total_vat = 2;</code>
+     * @return The totalVat.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getTotalVat() {
       return totalVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalVat_;
     }
     /**
      * <code>.google.protobuf.DoubleValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder() {
       return getTotalVat();
     }
@@ -2792,19 +2977,24 @@ public final class DataServiceProto {
     private com.google.protobuf.DoubleValue totalExclVat_;
     /**
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * @return Whether the totalExclVat field is set.
      */
+    @java.lang.Override
     public boolean hasTotalExclVat() {
       return totalExclVat_ != null;
     }
     /**
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * @return The totalExclVat.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getTotalExclVat() {
       return totalExclVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalExclVat_;
     }
     /**
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder() {
       return getTotalExclVat();
     }
@@ -2813,19 +3003,24 @@ public final class DataServiceProto {
     private com.google.type.Date orderDate_;
     /**
      * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the orderDate field is set.
      */
+    @java.lang.Override
     public boolean hasOrderDate() {
       return orderDate_ != null;
     }
     /**
      * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The orderDate.
      */
+    @java.lang.Override
     public com.google.type.Date getOrderDate() {
       return orderDate_ == null ? com.google.type.Date.getDefaultInstance() : orderDate_;
     }
     /**
      * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
       return getOrderDate();
     }
@@ -2834,19 +3029,24 @@ public final class DataServiceProto {
     private com.google.type.Date paymentDueDate_;
     /**
      * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the paymentDueDate field is set.
      */
+    @java.lang.Override
     public boolean hasPaymentDueDate() {
       return paymentDueDate_ != null;
     }
     /**
      * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The paymentDueDate.
      */
+    @java.lang.Override
     public com.google.type.Date getPaymentDueDate() {
       return paymentDueDate_ == null ? com.google.type.Date.getDefaultInstance() : paymentDueDate_;
     }
     /**
      * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
       return getPaymentDueDate();
     }
@@ -2855,19 +3055,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue documentType_;
     /**
      * <code>.google.protobuf.StringValue document_type = 6;</code>
+     * @return Whether the documentType field is set.
      */
+    @java.lang.Override
     public boolean hasDocumentType() {
       return documentType_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue document_type = 6;</code>
+     * @return The documentType.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDocumentType() {
       return documentType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : documentType_;
     }
     /**
      * <code>.google.protobuf.StringValue document_type = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder() {
       return getDocumentType();
     }
@@ -2876,19 +3081,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue currency_;
     /**
      * <code>.google.protobuf.StringValue currency = 7;</code>
+     * @return Whether the currency field is set.
      */
+    @java.lang.Override
     public boolean hasCurrency() {
       return currency_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue currency = 7;</code>
+     * @return The currency.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCurrency() {
       return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
     }
     /**
      * <code>.google.protobuf.StringValue currency = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
       return getCurrency();
     }
@@ -2897,19 +3107,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue creditCardLastFour_;
     /**
      * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
+     * @return Whether the creditCardLastFour field is set.
      */
+    @java.lang.Override
     public boolean hasCreditCardLastFour() {
       return creditCardLastFour_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
+     * @return The creditCardLastFour.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCreditCardLastFour() {
       return creditCardLastFour_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCardLastFour_;
     }
     /**
      * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder() {
       return getCreditCardLastFour();
     }
@@ -2918,19 +3133,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue paymentMethod_;
     /**
      * <code>.google.protobuf.StringValue payment_method = 9;</code>
+     * @return Whether the paymentMethod field is set.
      */
+    @java.lang.Override
     public boolean hasPaymentMethod() {
       return paymentMethod_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue payment_method = 9;</code>
+     * @return The paymentMethod.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPaymentMethod() {
       return paymentMethod_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentMethod_;
     }
     /**
      * <code>.google.protobuf.StringValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder() {
       return getPaymentMethod();
     }
@@ -2939,19 +3159,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineDkType_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     * @return Whether the ocrLineDkType field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineDkType() {
       return ocrLineDkType_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     * @return The ocrLineDkType.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineDkType() {
       return ocrLineDkType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkType_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder() {
       return getOcrLineDkType();
     }
@@ -2960,19 +3185,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineDkPaymentId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     * @return Whether the ocrLineDkPaymentId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineDkPaymentId() {
       return ocrLineDkPaymentId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     * @return The ocrLineDkPaymentId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineDkPaymentId() {
       return ocrLineDkPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkPaymentId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder() {
       return getOcrLineDkPaymentId();
     }
@@ -2981,19 +3211,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineDkCreditorId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     * @return Whether the ocrLineDkCreditorId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineDkCreditorId() {
       return ocrLineDkCreditorId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     * @return The ocrLineDkCreditorId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineDkCreditorId() {
       return ocrLineDkCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkCreditorId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder() {
       return getOcrLineDkCreditorId();
     }
@@ -3002,19 +3237,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineSePaymentId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     * @return Whether the ocrLineSePaymentId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineSePaymentId() {
       return ocrLineSePaymentId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     * @return The ocrLineSePaymentId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineSePaymentId() {
       return ocrLineSePaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSePaymentId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder() {
       return getOcrLineSePaymentId();
     }
@@ -3023,19 +3263,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineSeBankgiroCreditorId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * @return Whether the ocrLineSeBankgiroCreditorId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineSeBankgiroCreditorId() {
       return ocrLineSeBankgiroCreditorId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * @return The ocrLineSeBankgiroCreditorId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId() {
       return ocrLineSeBankgiroCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSeBankgiroCreditorId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder() {
       return getOcrLineSeBankgiroCreditorId();
     }
@@ -3044,19 +3289,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineSePlusgiroCreditorId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * @return Whether the ocrLineSePlusgiroCreditorId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineSePlusgiroCreditorId() {
       return ocrLineSePlusgiroCreditorId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * @return The ocrLineSePlusgiroCreditorId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId() {
       return ocrLineSePlusgiroCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSePlusgiroCreditorId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder() {
       return getOcrLineSePlusgiroCreditorId();
     }
@@ -3065,19 +3315,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineNoPaymentId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     * @return Whether the ocrLineNoPaymentId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineNoPaymentId() {
       return ocrLineNoPaymentId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     * @return The ocrLineNoPaymentId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineNoPaymentId() {
       return ocrLineNoPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineNoPaymentId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder() {
       return getOcrLineNoPaymentId();
     }
@@ -3086,19 +3341,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineFiPaymentId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     * @return Whether the ocrLineFiPaymentId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineFiPaymentId() {
       return ocrLineFiPaymentId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     * @return The ocrLineFiPaymentId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineFiPaymentId() {
       return ocrLineFiPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineFiPaymentId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder() {
       return getOcrLineFiPaymentId();
     }
@@ -3107,19 +3367,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue ocrLineNlPaymentId_;
     /**
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     * @return Whether the ocrLineNlPaymentId field is set.
      */
+    @java.lang.Override
     public boolean hasOcrLineNlPaymentId() {
       return ocrLineNlPaymentId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     * @return The ocrLineNlPaymentId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineNlPaymentId() {
       return ocrLineNlPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineNlPaymentId_;
     }
     /**
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder() {
       return getOcrLineNlPaymentId();
     }
@@ -3128,19 +3393,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue supplierCorporateId_;
     /**
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     * @return Whether the supplierCorporateId field is set.
      */
+    @java.lang.Override
     public boolean hasSupplierCorporateId() {
       return supplierCorporateId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     * @return The supplierCorporateId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getSupplierCorporateId() {
       return supplierCorporateId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierCorporateId_;
     }
     /**
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder() {
       return getSupplierCorporateId();
     }
@@ -3149,19 +3419,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue supplierCountryCode_;
     /**
      * <code>.google.protobuf.StringValue supplier_country_code = 20;</code>
+     * @return Whether the supplierCountryCode field is set.
      */
+    @java.lang.Override
     public boolean hasSupplierCountryCode() {
       return supplierCountryCode_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue supplier_country_code = 20;</code>
+     * @return The supplierCountryCode.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getSupplierCountryCode() {
       return supplierCountryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierCountryCode_;
     }
     /**
      * <code>.google.protobuf.StringValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder() {
       return getSupplierCountryCode();
     }
@@ -3170,19 +3445,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue invoiceNumber_;
     /**
      * <code>.google.protobuf.StringValue invoice_number = 21;</code>
+     * @return Whether the invoiceNumber field is set.
      */
+    @java.lang.Override
     public boolean hasInvoiceNumber() {
       return invoiceNumber_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue invoice_number = 21;</code>
+     * @return The invoiceNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getInvoiceNumber() {
       return invoiceNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : invoiceNumber_;
     }
     /**
      * <code>.google.protobuf.StringValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder() {
       return getInvoiceNumber();
     }
@@ -3191,19 +3471,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue iban_;
     /**
      * <code>.google.protobuf.StringValue iban = 22;</code>
+     * @return Whether the iban field is set.
      */
+    @java.lang.Override
     public boolean hasIban() {
       return iban_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue iban = 22;</code>
+     * @return The iban.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getIban() {
       return iban_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : iban_;
     }
     /**
      * <code>.google.protobuf.StringValue iban = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getIbanOrBuilder() {
       return getIban();
     }
@@ -3212,19 +3497,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue orderReference_;
     /**
      * <code>.google.protobuf.StringValue order_reference = 23;</code>
+     * @return Whether the orderReference field is set.
      */
+    @java.lang.Override
     public boolean hasOrderReference() {
       return orderReference_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue order_reference = 23;</code>
+     * @return The orderReference.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOrderReference() {
       return orderReference_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderReference_;
     }
     /**
      * <code>.google.protobuf.StringValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOrderReferenceOrBuilder() {
       return getOrderReference();
     }
@@ -3233,19 +3523,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue bankAccountNumber_;
     /**
      * <code>.google.protobuf.StringValue bank_account_number = 24;</code>
+     * @return Whether the bankAccountNumber field is set.
      */
+    @java.lang.Override
     public boolean hasBankAccountNumber() {
       return bankAccountNumber_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue bank_account_number = 24;</code>
+     * @return The bankAccountNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getBankAccountNumber() {
       return bankAccountNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bankAccountNumber_;
     }
     /**
      * <code>.google.protobuf.StringValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBankAccountNumberOrBuilder() {
       return getBankAccountNumber();
     }
@@ -3254,19 +3549,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue bankRegistrationNumber_;
     /**
      * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
+     * @return Whether the bankRegistrationNumber field is set.
      */
+    @java.lang.Override
     public boolean hasBankRegistrationNumber() {
       return bankRegistrationNumber_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
+     * @return The bankRegistrationNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getBankRegistrationNumber() {
       return bankRegistrationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bankRegistrationNumber_;
     }
     /**
      * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBankRegistrationNumberOrBuilder() {
       return getBankRegistrationNumber();
     }
@@ -3275,19 +3575,24 @@ public final class DataServiceProto {
     private com.google.protobuf.StringValue supplierName_;
     /**
      * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return Whether the supplierName field is set.
      */
+    @java.lang.Override
     public boolean hasSupplierName() {
       return supplierName_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+     * @return The supplierName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getSupplierName() {
       return supplierName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
     }
     /**
      * <code>.google.protobuf.StringValue supplier_name = 26;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder() {
       return getSupplierName();
     }
@@ -3512,139 +3817,138 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.TrueValues other = (ssn.dataservice.v1.DataServiceProto.TrueValues) obj;
 
-      boolean result = true;
-      result = result && (hasTotalInclVat() == other.hasTotalInclVat());
+      if (hasTotalInclVat() != other.hasTotalInclVat()) return false;
       if (hasTotalInclVat()) {
-        result = result && getTotalInclVat()
-            .equals(other.getTotalInclVat());
+        if (!getTotalInclVat()
+            .equals(other.getTotalInclVat())) return false;
       }
-      result = result && (hasTotalVat() == other.hasTotalVat());
+      if (hasTotalVat() != other.hasTotalVat()) return false;
       if (hasTotalVat()) {
-        result = result && getTotalVat()
-            .equals(other.getTotalVat());
+        if (!getTotalVat()
+            .equals(other.getTotalVat())) return false;
       }
-      result = result && (hasTotalExclVat() == other.hasTotalExclVat());
+      if (hasTotalExclVat() != other.hasTotalExclVat()) return false;
       if (hasTotalExclVat()) {
-        result = result && getTotalExclVat()
-            .equals(other.getTotalExclVat());
+        if (!getTotalExclVat()
+            .equals(other.getTotalExclVat())) return false;
       }
-      result = result && (hasOrderDate() == other.hasOrderDate());
+      if (hasOrderDate() != other.hasOrderDate()) return false;
       if (hasOrderDate()) {
-        result = result && getOrderDate()
-            .equals(other.getOrderDate());
+        if (!getOrderDate()
+            .equals(other.getOrderDate())) return false;
       }
-      result = result && (hasPaymentDueDate() == other.hasPaymentDueDate());
+      if (hasPaymentDueDate() != other.hasPaymentDueDate()) return false;
       if (hasPaymentDueDate()) {
-        result = result && getPaymentDueDate()
-            .equals(other.getPaymentDueDate());
+        if (!getPaymentDueDate()
+            .equals(other.getPaymentDueDate())) return false;
       }
-      result = result && (hasDocumentType() == other.hasDocumentType());
+      if (hasDocumentType() != other.hasDocumentType()) return false;
       if (hasDocumentType()) {
-        result = result && getDocumentType()
-            .equals(other.getDocumentType());
+        if (!getDocumentType()
+            .equals(other.getDocumentType())) return false;
       }
-      result = result && (hasCurrency() == other.hasCurrency());
+      if (hasCurrency() != other.hasCurrency()) return false;
       if (hasCurrency()) {
-        result = result && getCurrency()
-            .equals(other.getCurrency());
+        if (!getCurrency()
+            .equals(other.getCurrency())) return false;
       }
-      result = result && (hasCreditCardLastFour() == other.hasCreditCardLastFour());
+      if (hasCreditCardLastFour() != other.hasCreditCardLastFour()) return false;
       if (hasCreditCardLastFour()) {
-        result = result && getCreditCardLastFour()
-            .equals(other.getCreditCardLastFour());
+        if (!getCreditCardLastFour()
+            .equals(other.getCreditCardLastFour())) return false;
       }
-      result = result && (hasPaymentMethod() == other.hasPaymentMethod());
+      if (hasPaymentMethod() != other.hasPaymentMethod()) return false;
       if (hasPaymentMethod()) {
-        result = result && getPaymentMethod()
-            .equals(other.getPaymentMethod());
+        if (!getPaymentMethod()
+            .equals(other.getPaymentMethod())) return false;
       }
-      result = result && (hasOcrLineDkType() == other.hasOcrLineDkType());
+      if (hasOcrLineDkType() != other.hasOcrLineDkType()) return false;
       if (hasOcrLineDkType()) {
-        result = result && getOcrLineDkType()
-            .equals(other.getOcrLineDkType());
+        if (!getOcrLineDkType()
+            .equals(other.getOcrLineDkType())) return false;
       }
-      result = result && (hasOcrLineDkPaymentId() == other.hasOcrLineDkPaymentId());
+      if (hasOcrLineDkPaymentId() != other.hasOcrLineDkPaymentId()) return false;
       if (hasOcrLineDkPaymentId()) {
-        result = result && getOcrLineDkPaymentId()
-            .equals(other.getOcrLineDkPaymentId());
+        if (!getOcrLineDkPaymentId()
+            .equals(other.getOcrLineDkPaymentId())) return false;
       }
-      result = result && (hasOcrLineDkCreditorId() == other.hasOcrLineDkCreditorId());
+      if (hasOcrLineDkCreditorId() != other.hasOcrLineDkCreditorId()) return false;
       if (hasOcrLineDkCreditorId()) {
-        result = result && getOcrLineDkCreditorId()
-            .equals(other.getOcrLineDkCreditorId());
+        if (!getOcrLineDkCreditorId()
+            .equals(other.getOcrLineDkCreditorId())) return false;
       }
-      result = result && (hasOcrLineSePaymentId() == other.hasOcrLineSePaymentId());
+      if (hasOcrLineSePaymentId() != other.hasOcrLineSePaymentId()) return false;
       if (hasOcrLineSePaymentId()) {
-        result = result && getOcrLineSePaymentId()
-            .equals(other.getOcrLineSePaymentId());
+        if (!getOcrLineSePaymentId()
+            .equals(other.getOcrLineSePaymentId())) return false;
       }
-      result = result && (hasOcrLineSeBankgiroCreditorId() == other.hasOcrLineSeBankgiroCreditorId());
+      if (hasOcrLineSeBankgiroCreditorId() != other.hasOcrLineSeBankgiroCreditorId()) return false;
       if (hasOcrLineSeBankgiroCreditorId()) {
-        result = result && getOcrLineSeBankgiroCreditorId()
-            .equals(other.getOcrLineSeBankgiroCreditorId());
+        if (!getOcrLineSeBankgiroCreditorId()
+            .equals(other.getOcrLineSeBankgiroCreditorId())) return false;
       }
-      result = result && (hasOcrLineSePlusgiroCreditorId() == other.hasOcrLineSePlusgiroCreditorId());
+      if (hasOcrLineSePlusgiroCreditorId() != other.hasOcrLineSePlusgiroCreditorId()) return false;
       if (hasOcrLineSePlusgiroCreditorId()) {
-        result = result && getOcrLineSePlusgiroCreditorId()
-            .equals(other.getOcrLineSePlusgiroCreditorId());
+        if (!getOcrLineSePlusgiroCreditorId()
+            .equals(other.getOcrLineSePlusgiroCreditorId())) return false;
       }
-      result = result && (hasOcrLineNoPaymentId() == other.hasOcrLineNoPaymentId());
+      if (hasOcrLineNoPaymentId() != other.hasOcrLineNoPaymentId()) return false;
       if (hasOcrLineNoPaymentId()) {
-        result = result && getOcrLineNoPaymentId()
-            .equals(other.getOcrLineNoPaymentId());
+        if (!getOcrLineNoPaymentId()
+            .equals(other.getOcrLineNoPaymentId())) return false;
       }
-      result = result && (hasOcrLineFiPaymentId() == other.hasOcrLineFiPaymentId());
+      if (hasOcrLineFiPaymentId() != other.hasOcrLineFiPaymentId()) return false;
       if (hasOcrLineFiPaymentId()) {
-        result = result && getOcrLineFiPaymentId()
-            .equals(other.getOcrLineFiPaymentId());
+        if (!getOcrLineFiPaymentId()
+            .equals(other.getOcrLineFiPaymentId())) return false;
       }
-      result = result && (hasOcrLineNlPaymentId() == other.hasOcrLineNlPaymentId());
+      if (hasOcrLineNlPaymentId() != other.hasOcrLineNlPaymentId()) return false;
       if (hasOcrLineNlPaymentId()) {
-        result = result && getOcrLineNlPaymentId()
-            .equals(other.getOcrLineNlPaymentId());
+        if (!getOcrLineNlPaymentId()
+            .equals(other.getOcrLineNlPaymentId())) return false;
       }
-      result = result && (hasSupplierCorporateId() == other.hasSupplierCorporateId());
+      if (hasSupplierCorporateId() != other.hasSupplierCorporateId()) return false;
       if (hasSupplierCorporateId()) {
-        result = result && getSupplierCorporateId()
-            .equals(other.getSupplierCorporateId());
+        if (!getSupplierCorporateId()
+            .equals(other.getSupplierCorporateId())) return false;
       }
-      result = result && (hasSupplierCountryCode() == other.hasSupplierCountryCode());
+      if (hasSupplierCountryCode() != other.hasSupplierCountryCode()) return false;
       if (hasSupplierCountryCode()) {
-        result = result && getSupplierCountryCode()
-            .equals(other.getSupplierCountryCode());
+        if (!getSupplierCountryCode()
+            .equals(other.getSupplierCountryCode())) return false;
       }
-      result = result && (hasInvoiceNumber() == other.hasInvoiceNumber());
+      if (hasInvoiceNumber() != other.hasInvoiceNumber()) return false;
       if (hasInvoiceNumber()) {
-        result = result && getInvoiceNumber()
-            .equals(other.getInvoiceNumber());
+        if (!getInvoiceNumber()
+            .equals(other.getInvoiceNumber())) return false;
       }
-      result = result && (hasIban() == other.hasIban());
+      if (hasIban() != other.hasIban()) return false;
       if (hasIban()) {
-        result = result && getIban()
-            .equals(other.getIban());
+        if (!getIban()
+            .equals(other.getIban())) return false;
       }
-      result = result && (hasOrderReference() == other.hasOrderReference());
+      if (hasOrderReference() != other.hasOrderReference()) return false;
       if (hasOrderReference()) {
-        result = result && getOrderReference()
-            .equals(other.getOrderReference());
+        if (!getOrderReference()
+            .equals(other.getOrderReference())) return false;
       }
-      result = result && (hasBankAccountNumber() == other.hasBankAccountNumber());
+      if (hasBankAccountNumber() != other.hasBankAccountNumber()) return false;
       if (hasBankAccountNumber()) {
-        result = result && getBankAccountNumber()
-            .equals(other.getBankAccountNumber());
+        if (!getBankAccountNumber()
+            .equals(other.getBankAccountNumber())) return false;
       }
-      result = result && (hasBankRegistrationNumber() == other.hasBankRegistrationNumber());
+      if (hasBankRegistrationNumber() != other.hasBankRegistrationNumber()) return false;
       if (hasBankRegistrationNumber()) {
-        result = result && getBankRegistrationNumber()
-            .equals(other.getBankRegistrationNumber());
+        if (!getBankRegistrationNumber()
+            .equals(other.getBankRegistrationNumber())) return false;
       }
-      result = result && (hasSupplierName() == other.hasSupplierName());
+      if (hasSupplierName() != other.hasSupplierName()) return false;
       if (hasSupplierName()) {
-        result = result && getSupplierName()
-            .equals(other.getSupplierName());
+        if (!getSupplierName()
+            .equals(other.getSupplierName())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4209,35 +4513,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4358,17 +4662,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private com.google.protobuf.DoubleValue totalInclVat_ = null;
+      private com.google.protobuf.DoubleValue totalInclVat_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalInclVatBuilder_;
       /**
        * <code>.google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * @return Whether the totalInclVat field is set.
        */
       public boolean hasTotalInclVat() {
         return totalInclVatBuilder_ != null || totalInclVat_ != null;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * @return The totalInclVat.
        */
       public com.google.protobuf.DoubleValue getTotalInclVat() {
         if (totalInclVatBuilder_ == null) {
@@ -4475,17 +4781,19 @@ public final class DataServiceProto {
         return totalInclVatBuilder_;
       }
 
-      private com.google.protobuf.DoubleValue totalVat_ = null;
+      private com.google.protobuf.DoubleValue totalVat_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalVatBuilder_;
       /**
        * <code>.google.protobuf.DoubleValue total_vat = 2;</code>
+       * @return Whether the totalVat field is set.
        */
       public boolean hasTotalVat() {
         return totalVatBuilder_ != null || totalVat_ != null;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_vat = 2;</code>
+       * @return The totalVat.
        */
       public com.google.protobuf.DoubleValue getTotalVat() {
         if (totalVatBuilder_ == null) {
@@ -4592,17 +4900,19 @@ public final class DataServiceProto {
         return totalVatBuilder_;
       }
 
-      private com.google.protobuf.DoubleValue totalExclVat_ = null;
+      private com.google.protobuf.DoubleValue totalExclVat_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalExclVatBuilder_;
       /**
        * <code>.google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * @return Whether the totalExclVat field is set.
        */
       public boolean hasTotalExclVat() {
         return totalExclVatBuilder_ != null || totalExclVat_ != null;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * @return The totalExclVat.
        */
       public com.google.protobuf.DoubleValue getTotalExclVat() {
         if (totalExclVatBuilder_ == null) {
@@ -4709,17 +5019,19 @@ public final class DataServiceProto {
         return totalExclVatBuilder_;
       }
 
-      private com.google.type.Date orderDate_ = null;
+      private com.google.type.Date orderDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> orderDateBuilder_;
       /**
        * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return Whether the orderDate field is set.
        */
       public boolean hasOrderDate() {
         return orderDateBuilder_ != null || orderDate_ != null;
       }
       /**
        * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The orderDate.
        */
       public com.google.type.Date getOrderDate() {
         if (orderDateBuilder_ == null) {
@@ -4826,17 +5138,19 @@ public final class DataServiceProto {
         return orderDateBuilder_;
       }
 
-      private com.google.type.Date paymentDueDate_ = null;
+      private com.google.type.Date paymentDueDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> paymentDueDateBuilder_;
       /**
        * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return Whether the paymentDueDate field is set.
        */
       public boolean hasPaymentDueDate() {
         return paymentDueDateBuilder_ != null || paymentDueDate_ != null;
       }
       /**
        * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The paymentDueDate.
        */
       public com.google.type.Date getPaymentDueDate() {
         if (paymentDueDateBuilder_ == null) {
@@ -4943,17 +5257,19 @@ public final class DataServiceProto {
         return paymentDueDateBuilder_;
       }
 
-      private com.google.protobuf.StringValue documentType_ = null;
+      private com.google.protobuf.StringValue documentType_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> documentTypeBuilder_;
       /**
        * <code>.google.protobuf.StringValue document_type = 6;</code>
+       * @return Whether the documentType field is set.
        */
       public boolean hasDocumentType() {
         return documentTypeBuilder_ != null || documentType_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue document_type = 6;</code>
+       * @return The documentType.
        */
       public com.google.protobuf.StringValue getDocumentType() {
         if (documentTypeBuilder_ == null) {
@@ -5060,17 +5376,19 @@ public final class DataServiceProto {
         return documentTypeBuilder_;
       }
 
-      private com.google.protobuf.StringValue currency_ = null;
+      private com.google.protobuf.StringValue currency_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyBuilder_;
       /**
        * <code>.google.protobuf.StringValue currency = 7;</code>
+       * @return Whether the currency field is set.
        */
       public boolean hasCurrency() {
         return currencyBuilder_ != null || currency_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue currency = 7;</code>
+       * @return The currency.
        */
       public com.google.protobuf.StringValue getCurrency() {
         if (currencyBuilder_ == null) {
@@ -5177,17 +5495,19 @@ public final class DataServiceProto {
         return currencyBuilder_;
       }
 
-      private com.google.protobuf.StringValue creditCardLastFour_ = null;
+      private com.google.protobuf.StringValue creditCardLastFour_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creditCardLastFourBuilder_;
       /**
        * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
+       * @return Whether the creditCardLastFour field is set.
        */
       public boolean hasCreditCardLastFour() {
         return creditCardLastFourBuilder_ != null || creditCardLastFour_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
+       * @return The creditCardLastFour.
        */
       public com.google.protobuf.StringValue getCreditCardLastFour() {
         if (creditCardLastFourBuilder_ == null) {
@@ -5294,17 +5614,19 @@ public final class DataServiceProto {
         return creditCardLastFourBuilder_;
       }
 
-      private com.google.protobuf.StringValue paymentMethod_ = null;
+      private com.google.protobuf.StringValue paymentMethod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentMethodBuilder_;
       /**
        * <code>.google.protobuf.StringValue payment_method = 9;</code>
+       * @return Whether the paymentMethod field is set.
        */
       public boolean hasPaymentMethod() {
         return paymentMethodBuilder_ != null || paymentMethod_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue payment_method = 9;</code>
+       * @return The paymentMethod.
        */
       public com.google.protobuf.StringValue getPaymentMethod() {
         if (paymentMethodBuilder_ == null) {
@@ -5411,17 +5733,19 @@ public final class DataServiceProto {
         return paymentMethodBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineDkType_ = null;
+      private com.google.protobuf.StringValue ocrLineDkType_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkTypeBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       * @return Whether the ocrLineDkType field is set.
        */
       public boolean hasOcrLineDkType() {
         return ocrLineDkTypeBuilder_ != null || ocrLineDkType_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       * @return The ocrLineDkType.
        */
       public com.google.protobuf.StringValue getOcrLineDkType() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -5528,17 +5852,19 @@ public final class DataServiceProto {
         return ocrLineDkTypeBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineDkPaymentId_ = null;
+      private com.google.protobuf.StringValue ocrLineDkPaymentId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkPaymentIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       * @return Whether the ocrLineDkPaymentId field is set.
        */
       public boolean hasOcrLineDkPaymentId() {
         return ocrLineDkPaymentIdBuilder_ != null || ocrLineDkPaymentId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       * @return The ocrLineDkPaymentId.
        */
       public com.google.protobuf.StringValue getOcrLineDkPaymentId() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -5645,17 +5971,19 @@ public final class DataServiceProto {
         return ocrLineDkPaymentIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineDkCreditorId_ = null;
+      private com.google.protobuf.StringValue ocrLineDkCreditorId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkCreditorIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       * @return Whether the ocrLineDkCreditorId field is set.
        */
       public boolean hasOcrLineDkCreditorId() {
         return ocrLineDkCreditorIdBuilder_ != null || ocrLineDkCreditorId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       * @return The ocrLineDkCreditorId.
        */
       public com.google.protobuf.StringValue getOcrLineDkCreditorId() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -5762,17 +6090,19 @@ public final class DataServiceProto {
         return ocrLineDkCreditorIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineSePaymentId_ = null;
+      private com.google.protobuf.StringValue ocrLineSePaymentId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSePaymentIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       * @return Whether the ocrLineSePaymentId field is set.
        */
       public boolean hasOcrLineSePaymentId() {
         return ocrLineSePaymentIdBuilder_ != null || ocrLineSePaymentId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       * @return The ocrLineSePaymentId.
        */
       public com.google.protobuf.StringValue getOcrLineSePaymentId() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -5879,17 +6209,19 @@ public final class DataServiceProto {
         return ocrLineSePaymentIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineSeBankgiroCreditorId_ = null;
+      private com.google.protobuf.StringValue ocrLineSeBankgiroCreditorId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSeBankgiroCreditorIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * @return Whether the ocrLineSeBankgiroCreditorId field is set.
        */
       public boolean hasOcrLineSeBankgiroCreditorId() {
         return ocrLineSeBankgiroCreditorIdBuilder_ != null || ocrLineSeBankgiroCreditorId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * @return The ocrLineSeBankgiroCreditorId.
        */
       public com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -5996,17 +6328,19 @@ public final class DataServiceProto {
         return ocrLineSeBankgiroCreditorIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineSePlusgiroCreditorId_ = null;
+      private com.google.protobuf.StringValue ocrLineSePlusgiroCreditorId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSePlusgiroCreditorIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * @return Whether the ocrLineSePlusgiroCreditorId field is set.
        */
       public boolean hasOcrLineSePlusgiroCreditorId() {
         return ocrLineSePlusgiroCreditorIdBuilder_ != null || ocrLineSePlusgiroCreditorId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * @return The ocrLineSePlusgiroCreditorId.
        */
       public com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -6113,17 +6447,19 @@ public final class DataServiceProto {
         return ocrLineSePlusgiroCreditorIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineNoPaymentId_ = null;
+      private com.google.protobuf.StringValue ocrLineNoPaymentId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineNoPaymentIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       * @return Whether the ocrLineNoPaymentId field is set.
        */
       public boolean hasOcrLineNoPaymentId() {
         return ocrLineNoPaymentIdBuilder_ != null || ocrLineNoPaymentId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       * @return The ocrLineNoPaymentId.
        */
       public com.google.protobuf.StringValue getOcrLineNoPaymentId() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -6230,17 +6566,19 @@ public final class DataServiceProto {
         return ocrLineNoPaymentIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineFiPaymentId_ = null;
+      private com.google.protobuf.StringValue ocrLineFiPaymentId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineFiPaymentIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       * @return Whether the ocrLineFiPaymentId field is set.
        */
       public boolean hasOcrLineFiPaymentId() {
         return ocrLineFiPaymentIdBuilder_ != null || ocrLineFiPaymentId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       * @return The ocrLineFiPaymentId.
        */
       public com.google.protobuf.StringValue getOcrLineFiPaymentId() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -6347,17 +6685,19 @@ public final class DataServiceProto {
         return ocrLineFiPaymentIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue ocrLineNlPaymentId_ = null;
+      private com.google.protobuf.StringValue ocrLineNlPaymentId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineNlPaymentIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       * @return Whether the ocrLineNlPaymentId field is set.
        */
       public boolean hasOcrLineNlPaymentId() {
         return ocrLineNlPaymentIdBuilder_ != null || ocrLineNlPaymentId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       * @return The ocrLineNlPaymentId.
        */
       public com.google.protobuf.StringValue getOcrLineNlPaymentId() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -6464,17 +6804,19 @@ public final class DataServiceProto {
         return ocrLineNlPaymentIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue supplierCorporateId_ = null;
+      private com.google.protobuf.StringValue supplierCorporateId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierCorporateIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       * @return Whether the supplierCorporateId field is set.
        */
       public boolean hasSupplierCorporateId() {
         return supplierCorporateIdBuilder_ != null || supplierCorporateId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       * @return The supplierCorporateId.
        */
       public com.google.protobuf.StringValue getSupplierCorporateId() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -6581,17 +6923,19 @@ public final class DataServiceProto {
         return supplierCorporateIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue supplierCountryCode_ = null;
+      private com.google.protobuf.StringValue supplierCountryCode_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierCountryCodeBuilder_;
       /**
        * <code>.google.protobuf.StringValue supplier_country_code = 20;</code>
+       * @return Whether the supplierCountryCode field is set.
        */
       public boolean hasSupplierCountryCode() {
         return supplierCountryCodeBuilder_ != null || supplierCountryCode_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_country_code = 20;</code>
+       * @return The supplierCountryCode.
        */
       public com.google.protobuf.StringValue getSupplierCountryCode() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -6698,17 +7042,19 @@ public final class DataServiceProto {
         return supplierCountryCodeBuilder_;
       }
 
-      private com.google.protobuf.StringValue invoiceNumber_ = null;
+      private com.google.protobuf.StringValue invoiceNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> invoiceNumberBuilder_;
       /**
        * <code>.google.protobuf.StringValue invoice_number = 21;</code>
+       * @return Whether the invoiceNumber field is set.
        */
       public boolean hasInvoiceNumber() {
         return invoiceNumberBuilder_ != null || invoiceNumber_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue invoice_number = 21;</code>
+       * @return The invoiceNumber.
        */
       public com.google.protobuf.StringValue getInvoiceNumber() {
         if (invoiceNumberBuilder_ == null) {
@@ -6815,17 +7161,19 @@ public final class DataServiceProto {
         return invoiceNumberBuilder_;
       }
 
-      private com.google.protobuf.StringValue iban_ = null;
+      private com.google.protobuf.StringValue iban_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ibanBuilder_;
       /**
        * <code>.google.protobuf.StringValue iban = 22;</code>
+       * @return Whether the iban field is set.
        */
       public boolean hasIban() {
         return ibanBuilder_ != null || iban_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue iban = 22;</code>
+       * @return The iban.
        */
       public com.google.protobuf.StringValue getIban() {
         if (ibanBuilder_ == null) {
@@ -6932,17 +7280,19 @@ public final class DataServiceProto {
         return ibanBuilder_;
       }
 
-      private com.google.protobuf.StringValue orderReference_ = null;
+      private com.google.protobuf.StringValue orderReference_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> orderReferenceBuilder_;
       /**
        * <code>.google.protobuf.StringValue order_reference = 23;</code>
+       * @return Whether the orderReference field is set.
        */
       public boolean hasOrderReference() {
         return orderReferenceBuilder_ != null || orderReference_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue order_reference = 23;</code>
+       * @return The orderReference.
        */
       public com.google.protobuf.StringValue getOrderReference() {
         if (orderReferenceBuilder_ == null) {
@@ -7049,17 +7399,19 @@ public final class DataServiceProto {
         return orderReferenceBuilder_;
       }
 
-      private com.google.protobuf.StringValue bankAccountNumber_ = null;
+      private com.google.protobuf.StringValue bankAccountNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> bankAccountNumberBuilder_;
       /**
        * <code>.google.protobuf.StringValue bank_account_number = 24;</code>
+       * @return Whether the bankAccountNumber field is set.
        */
       public boolean hasBankAccountNumber() {
         return bankAccountNumberBuilder_ != null || bankAccountNumber_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue bank_account_number = 24;</code>
+       * @return The bankAccountNumber.
        */
       public com.google.protobuf.StringValue getBankAccountNumber() {
         if (bankAccountNumberBuilder_ == null) {
@@ -7166,17 +7518,19 @@ public final class DataServiceProto {
         return bankAccountNumberBuilder_;
       }
 
-      private com.google.protobuf.StringValue bankRegistrationNumber_ = null;
+      private com.google.protobuf.StringValue bankRegistrationNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> bankRegistrationNumberBuilder_;
       /**
        * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
+       * @return Whether the bankRegistrationNumber field is set.
        */
       public boolean hasBankRegistrationNumber() {
         return bankRegistrationNumberBuilder_ != null || bankRegistrationNumber_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue bank_registration_number = 25;</code>
+       * @return The bankRegistrationNumber.
        */
       public com.google.protobuf.StringValue getBankRegistrationNumber() {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -7283,17 +7637,19 @@ public final class DataServiceProto {
         return bankRegistrationNumberBuilder_;
       }
 
-      private com.google.protobuf.StringValue supplierName_ = null;
+      private com.google.protobuf.StringValue supplierName_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierNameBuilder_;
       /**
        * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       * @return Whether the supplierName field is set.
        */
       public boolean hasSupplierName() {
         return supplierNameBuilder_ != null || supplierName_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_name = 26;</code>
+       * @return The supplierName.
        */
       public com.google.protobuf.StringValue getSupplierName() {
         if (supplierNameBuilder_ == null) {
@@ -7402,7 +7758,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8059,7 +8415,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionValues}
    */
-  public  static final class PredictionValues extends
+  public static final class PredictionValues extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.PredictionValues)
       PredictionValuesOrBuilder {
@@ -8097,6 +8453,13 @@ public final class DataServiceProto {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PredictionValues();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -8121,7 +8484,7 @@ public final class DataServiceProto {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 totalInclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -8130,7 +8493,7 @@ public final class DataServiceProto {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 totalVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -8139,7 +8502,7 @@ public final class DataServiceProto {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 totalExclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -8148,7 +8511,7 @@ public final class DataServiceProto {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 orderDate_ = new java.util.ArrayList<com.google.type.Date>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -8157,7 +8520,7 @@ public final class DataServiceProto {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 paymentDueDate_ = new java.util.ArrayList<com.google.type.Date>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -8166,7 +8529,7 @@ public final class DataServiceProto {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 documentType_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -8175,7 +8538,7 @@ public final class DataServiceProto {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 currency_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -8184,7 +8547,7 @@ public final class DataServiceProto {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -8193,7 +8556,7 @@ public final class DataServiceProto {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 paymentMethod_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -8202,7 +8565,7 @@ public final class DataServiceProto {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000200;
               }
@@ -8211,7 +8574,7 @@ public final class DataServiceProto {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000400;
               }
@@ -8220,7 +8583,7 @@ public final class DataServiceProto {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
                 ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000800;
               }
@@ -8229,7 +8592,7 @@ public final class DataServiceProto {
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
                 ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00001000;
               }
@@ -8238,7 +8601,7 @@ public final class DataServiceProto {
               break;
             }
             case 114: {
-              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
                 ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00002000;
               }
@@ -8247,7 +8610,7 @@ public final class DataServiceProto {
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00004000;
               }
@@ -8256,7 +8619,7 @@ public final class DataServiceProto {
               break;
             }
             case 130: {
-              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+              if (!((mutable_bitField0_ & 0x00008000) != 0)) {
                 ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00008000;
               }
@@ -8265,7 +8628,7 @@ public final class DataServiceProto {
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              if (!((mutable_bitField0_ & 0x00010000) != 0)) {
                 ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00010000;
               }
@@ -8274,7 +8637,7 @@ public final class DataServiceProto {
               break;
             }
             case 146: {
-              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+              if (!((mutable_bitField0_ & 0x00020000) != 0)) {
                 ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00020000;
               }
@@ -8283,7 +8646,7 @@ public final class DataServiceProto {
               break;
             }
             case 154: {
-              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              if (!((mutable_bitField0_ & 0x00040000) != 0)) {
                 supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00040000;
               }
@@ -8292,7 +8655,7 @@ public final class DataServiceProto {
               break;
             }
             case 162: {
-              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+              if (!((mutable_bitField0_ & 0x00080000) != 0)) {
                 supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00080000;
               }
@@ -8301,7 +8664,7 @@ public final class DataServiceProto {
               break;
             }
             case 170: {
-              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+              if (!((mutable_bitField0_ & 0x00100000) != 0)) {
                 invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00100000;
               }
@@ -8310,7 +8673,7 @@ public final class DataServiceProto {
               break;
             }
             case 178: {
-              if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              if (!((mutable_bitField0_ & 0x00200000) != 0)) {
                 iban_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00200000;
               }
@@ -8319,7 +8682,7 @@ public final class DataServiceProto {
               break;
             }
             case 186: {
-              if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+              if (!((mutable_bitField0_ & 0x00400000) != 0)) {
                 orderReference_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00400000;
               }
@@ -8328,7 +8691,7 @@ public final class DataServiceProto {
               break;
             }
             case 194: {
-              if (!((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+              if (!((mutable_bitField0_ & 0x00800000) != 0)) {
                 bankAccountNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00800000;
               }
@@ -8337,7 +8700,7 @@ public final class DataServiceProto {
               break;
             }
             case 202: {
-              if (!((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+              if (!((mutable_bitField0_ & 0x01000000) != 0)) {
                 bankRegistrationNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x01000000;
               }
@@ -8346,7 +8709,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8360,79 +8723,79 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           documentType_ = java.util.Collections.unmodifiableList(documentType_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           currency_ = java.util.Collections.unmodifiableList(currency_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
           ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000800) != 0)) {
           ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
           ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((mutable_bitField0_ & 0x00002000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((mutable_bitField0_ & 0x00008000) != 0)) {
           ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((mutable_bitField0_ & 0x00010000) != 0)) {
           ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((mutable_bitField0_ & 0x00020000) != 0)) {
           ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((mutable_bitField0_ & 0x00040000) != 0)) {
           supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
         }
-        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((mutable_bitField0_ & 0x00080000) != 0)) {
           supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
         }
-        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((mutable_bitField0_ & 0x00100000) != 0)) {
           invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
         }
-        if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((mutable_bitField0_ & 0x00200000) != 0)) {
           iban_ = java.util.Collections.unmodifiableList(iban_);
         }
-        if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+        if (((mutable_bitField0_ & 0x00400000) != 0)) {
           orderReference_ = java.util.Collections.unmodifiableList(orderReference_);
         }
-        if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((mutable_bitField0_ & 0x00800000) != 0)) {
           bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
         }
-        if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+        if (((mutable_bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
         }
         this.unknownFields = unknownFields.build();
@@ -8457,12 +8820,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.DoubleValue> getTotalInclVatList() {
       return totalInclVat_;
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
         getTotalInclVatOrBuilderList() {
       return totalInclVat_;
@@ -8470,18 +8835,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public int getTotalInclVatCount() {
       return totalInclVat_.size();
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getTotalInclVat(int index) {
       return totalInclVat_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder(
         int index) {
       return totalInclVat_.get(index);
@@ -8492,12 +8860,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.DoubleValue> getTotalVatList() {
       return totalVat_;
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
         getTotalVatOrBuilderList() {
       return totalVat_;
@@ -8505,18 +8875,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public int getTotalVatCount() {
       return totalVat_.size();
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getTotalVat(int index) {
       return totalVat_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder(
         int index) {
       return totalVat_.get(index);
@@ -8527,12 +8900,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.DoubleValue> getTotalExclVatList() {
       return totalExclVat_;
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
         getTotalExclVatOrBuilderList() {
       return totalExclVat_;
@@ -8540,18 +8915,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public int getTotalExclVatCount() {
       return totalExclVat_.size();
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getTotalExclVat(int index) {
       return totalExclVat_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder(
         int index) {
       return totalExclVat_.get(index);
@@ -8562,12 +8940,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.type.Date> getOrderDateList() {
       return orderDate_;
     }
     /**
      * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.type.DateOrBuilder> 
         getOrderDateOrBuilderList() {
       return orderDate_;
@@ -8575,18 +8955,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public int getOrderDateCount() {
       return orderDate_.size();
     }
     /**
      * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.type.Date getOrderDate(int index) {
       return orderDate_.get(index);
     }
     /**
      * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.type.DateOrBuilder getOrderDateOrBuilder(
         int index) {
       return orderDate_.get(index);
@@ -8597,12 +8980,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.type.Date> getPaymentDueDateList() {
       return paymentDueDate_;
     }
     /**
      * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.type.DateOrBuilder> 
         getPaymentDueDateOrBuilderList() {
       return paymentDueDate_;
@@ -8610,18 +8995,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public int getPaymentDueDateCount() {
       return paymentDueDate_.size();
     }
     /**
      * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.type.Date getPaymentDueDate(int index) {
       return paymentDueDate_.get(index);
     }
     /**
      * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder(
         int index) {
       return paymentDueDate_.get(index);
@@ -8632,12 +9020,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getDocumentTypeList() {
       return documentType_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getDocumentTypeOrBuilderList() {
       return documentType_;
@@ -8645,18 +9035,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
      */
+    @java.lang.Override
     public int getDocumentTypeCount() {
       return documentType_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDocumentType(int index) {
       return documentType_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder(
         int index) {
       return documentType_.get(index);
@@ -8667,12 +9060,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue currency = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getCurrencyList() {
       return currency_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue currency = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getCurrencyOrBuilderList() {
       return currency_;
@@ -8680,18 +9075,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue currency = 7;</code>
      */
+    @java.lang.Override
     public int getCurrencyCount() {
       return currency_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue currency = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCurrency(int index) {
       return currency_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue currency = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder(
         int index) {
       return currency_.get(index);
@@ -8702,12 +9100,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getCreditCardLastFourList() {
       return creditCardLastFour_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getCreditCardLastFourOrBuilderList() {
       return creditCardLastFour_;
@@ -8715,18 +9115,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public int getCreditCardLastFourCount() {
       return creditCardLastFour_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCreditCardLastFour(int index) {
       return creditCardLastFour_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder(
         int index) {
       return creditCardLastFour_.get(index);
@@ -8737,12 +9140,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getPaymentMethodList() {
       return paymentMethod_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getPaymentMethodOrBuilderList() {
       return paymentMethod_;
@@ -8750,18 +9155,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public int getPaymentMethodCount() {
       return paymentMethod_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPaymentMethod(int index) {
       return paymentMethod_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder(
         int index) {
       return paymentMethod_.get(index);
@@ -8772,12 +9180,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineDkTypeList() {
       return ocrLineDkType_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineDkTypeOrBuilderList() {
       return ocrLineDkType_;
@@ -8785,18 +9195,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkTypeCount() {
       return ocrLineDkType_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineDkType(int index) {
       return ocrLineDkType_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder(
         int index) {
       return ocrLineDkType_.get(index);
@@ -8807,12 +9220,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineDkPaymentIdList() {
       return ocrLineDkPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList() {
       return ocrLineDkPaymentId_;
@@ -8820,18 +9235,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkPaymentIdCount() {
       return ocrLineDkPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineDkPaymentId(int index) {
       return ocrLineDkPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index) {
       return ocrLineDkPaymentId_.get(index);
@@ -8842,12 +9260,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineDkCreditorIdList() {
       return ocrLineDkCreditorId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList() {
       return ocrLineDkCreditorId_;
@@ -8855,18 +9275,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkCreditorIdCount() {
       return ocrLineDkCreditorId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineDkCreditorId(int index) {
       return ocrLineDkCreditorId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index) {
       return ocrLineDkCreditorId_.get(index);
@@ -8877,12 +9300,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineSePaymentIdList() {
       return ocrLineSePaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList() {
       return ocrLineSePaymentId_;
@@ -8890,18 +9315,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePaymentIdCount() {
       return ocrLineSePaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineSePaymentId(int index) {
       return ocrLineSePaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index) {
       return ocrLineSePaymentId_.get(index);
@@ -8912,12 +9340,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineSeBankgiroCreditorIdList() {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList() {
       return ocrLineSeBankgiroCreditorId_;
@@ -8925,18 +9355,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public int getOcrLineSeBankgiroCreditorIdCount() {
       return ocrLineSeBankgiroCreditorId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId(int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
@@ -8947,12 +9380,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineSePlusgiroCreditorIdList() {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList() {
       return ocrLineSePlusgiroCreditorId_;
@@ -8960,18 +9395,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePlusgiroCreditorIdCount() {
       return ocrLineSePlusgiroCreditorId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId(int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
@@ -8982,12 +9420,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineNoPaymentIdList() {
       return ocrLineNoPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList() {
       return ocrLineNoPaymentId_;
@@ -8995,18 +9435,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public int getOcrLineNoPaymentIdCount() {
       return ocrLineNoPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineNoPaymentId(int index) {
       return ocrLineNoPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index) {
       return ocrLineNoPaymentId_.get(index);
@@ -9017,12 +9460,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineFiPaymentIdList() {
       return ocrLineFiPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList() {
       return ocrLineFiPaymentId_;
@@ -9030,18 +9475,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public int getOcrLineFiPaymentIdCount() {
       return ocrLineFiPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineFiPaymentId(int index) {
       return ocrLineFiPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index) {
       return ocrLineFiPaymentId_.get(index);
@@ -9052,12 +9500,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOcrLineNlPaymentIdList() {
       return ocrLineNlPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList() {
       return ocrLineNlPaymentId_;
@@ -9065,18 +9515,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public int getOcrLineNlPaymentIdCount() {
       return ocrLineNlPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOcrLineNlPaymentId(int index) {
       return ocrLineNlPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index) {
       return ocrLineNlPaymentId_.get(index);
@@ -9087,12 +9540,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getSupplierCorporateIdList() {
       return supplierCorporateId_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getSupplierCorporateIdOrBuilderList() {
       return supplierCorporateId_;
@@ -9100,18 +9555,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public int getSupplierCorporateIdCount() {
       return supplierCorporateId_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getSupplierCorporateId(int index) {
       return supplierCorporateId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder(
         int index) {
       return supplierCorporateId_.get(index);
@@ -9122,12 +9580,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getSupplierCountryCodeList() {
       return supplierCountryCode_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getSupplierCountryCodeOrBuilderList() {
       return supplierCountryCode_;
@@ -9135,18 +9595,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public int getSupplierCountryCodeCount() {
       return supplierCountryCode_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getSupplierCountryCode(int index) {
       return supplierCountryCode_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder(
         int index) {
       return supplierCountryCode_.get(index);
@@ -9157,12 +9620,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getInvoiceNumberList() {
       return invoiceNumber_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getInvoiceNumberOrBuilderList() {
       return invoiceNumber_;
@@ -9170,18 +9635,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public int getInvoiceNumberCount() {
       return invoiceNumber_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getInvoiceNumber(int index) {
       return invoiceNumber_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder(
         int index) {
       return invoiceNumber_.get(index);
@@ -9192,12 +9660,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getIbanList() {
       return iban_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getIbanOrBuilderList() {
       return iban_;
@@ -9205,18 +9675,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue iban = 22;</code>
      */
+    @java.lang.Override
     public int getIbanCount() {
       return iban_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue iban = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getIban(int index) {
       return iban_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue iban = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getIbanOrBuilder(
         int index) {
       return iban_.get(index);
@@ -9227,12 +9700,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getOrderReferenceList() {
       return orderReference_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getOrderReferenceOrBuilderList() {
       return orderReference_;
@@ -9240,18 +9715,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public int getOrderReferenceCount() {
       return orderReference_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOrderReference(int index) {
       return orderReference_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOrderReferenceOrBuilder(
         int index) {
       return orderReference_.get(index);
@@ -9262,12 +9740,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getBankAccountNumberList() {
       return bankAccountNumber_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getBankAccountNumberOrBuilderList() {
       return bankAccountNumber_;
@@ -9275,18 +9755,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public int getBankAccountNumberCount() {
       return bankAccountNumber_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getBankAccountNumber(int index) {
       return bankAccountNumber_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBankAccountNumberOrBuilder(
         int index) {
       return bankAccountNumber_.get(index);
@@ -9297,12 +9780,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getBankRegistrationNumberList() {
       return bankRegistrationNumber_;
     }
     /**
      * <code>repeated .google.protobuf.StringValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getBankRegistrationNumberOrBuilderList() {
       return bankRegistrationNumber_;
@@ -9310,18 +9795,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.StringValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public int getBankRegistrationNumberCount() {
       return bankRegistrationNumber_.size();
     }
     /**
      * <code>repeated .google.protobuf.StringValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getBankRegistrationNumber(int index) {
       return bankRegistrationNumber_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.StringValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBankRegistrationNumberOrBuilder(
         int index) {
       return bankRegistrationNumber_.get(index);
@@ -9540,59 +10028,58 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.PredictionValues other = (ssn.dataservice.v1.DataServiceProto.PredictionValues) obj;
 
-      boolean result = true;
-      result = result && getTotalInclVatList()
-          .equals(other.getTotalInclVatList());
-      result = result && getTotalVatList()
-          .equals(other.getTotalVatList());
-      result = result && getTotalExclVatList()
-          .equals(other.getTotalExclVatList());
-      result = result && getOrderDateList()
-          .equals(other.getOrderDateList());
-      result = result && getPaymentDueDateList()
-          .equals(other.getPaymentDueDateList());
-      result = result && getDocumentTypeList()
-          .equals(other.getDocumentTypeList());
-      result = result && getCurrencyList()
-          .equals(other.getCurrencyList());
-      result = result && getCreditCardLastFourList()
-          .equals(other.getCreditCardLastFourList());
-      result = result && getPaymentMethodList()
-          .equals(other.getPaymentMethodList());
-      result = result && getOcrLineDkTypeList()
-          .equals(other.getOcrLineDkTypeList());
-      result = result && getOcrLineDkPaymentIdList()
-          .equals(other.getOcrLineDkPaymentIdList());
-      result = result && getOcrLineDkCreditorIdList()
-          .equals(other.getOcrLineDkCreditorIdList());
-      result = result && getOcrLineSePaymentIdList()
-          .equals(other.getOcrLineSePaymentIdList());
-      result = result && getOcrLineSeBankgiroCreditorIdList()
-          .equals(other.getOcrLineSeBankgiroCreditorIdList());
-      result = result && getOcrLineSePlusgiroCreditorIdList()
-          .equals(other.getOcrLineSePlusgiroCreditorIdList());
-      result = result && getOcrLineNoPaymentIdList()
-          .equals(other.getOcrLineNoPaymentIdList());
-      result = result && getOcrLineFiPaymentIdList()
-          .equals(other.getOcrLineFiPaymentIdList());
-      result = result && getOcrLineNlPaymentIdList()
-          .equals(other.getOcrLineNlPaymentIdList());
-      result = result && getSupplierCorporateIdList()
-          .equals(other.getSupplierCorporateIdList());
-      result = result && getSupplierCountryCodeList()
-          .equals(other.getSupplierCountryCodeList());
-      result = result && getInvoiceNumberList()
-          .equals(other.getInvoiceNumberList());
-      result = result && getIbanList()
-          .equals(other.getIbanList());
-      result = result && getOrderReferenceList()
-          .equals(other.getOrderReferenceList());
-      result = result && getBankAccountNumberList()
-          .equals(other.getBankAccountNumberList());
-      result = result && getBankRegistrationNumberList()
-          .equals(other.getBankRegistrationNumberList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTotalInclVatList()
+          .equals(other.getTotalInclVatList())) return false;
+      if (!getTotalVatList()
+          .equals(other.getTotalVatList())) return false;
+      if (!getTotalExclVatList()
+          .equals(other.getTotalExclVatList())) return false;
+      if (!getOrderDateList()
+          .equals(other.getOrderDateList())) return false;
+      if (!getPaymentDueDateList()
+          .equals(other.getPaymentDueDateList())) return false;
+      if (!getDocumentTypeList()
+          .equals(other.getDocumentTypeList())) return false;
+      if (!getCurrencyList()
+          .equals(other.getCurrencyList())) return false;
+      if (!getCreditCardLastFourList()
+          .equals(other.getCreditCardLastFourList())) return false;
+      if (!getPaymentMethodList()
+          .equals(other.getPaymentMethodList())) return false;
+      if (!getOcrLineDkTypeList()
+          .equals(other.getOcrLineDkTypeList())) return false;
+      if (!getOcrLineDkPaymentIdList()
+          .equals(other.getOcrLineDkPaymentIdList())) return false;
+      if (!getOcrLineDkCreditorIdList()
+          .equals(other.getOcrLineDkCreditorIdList())) return false;
+      if (!getOcrLineSePaymentIdList()
+          .equals(other.getOcrLineSePaymentIdList())) return false;
+      if (!getOcrLineSeBankgiroCreditorIdList()
+          .equals(other.getOcrLineSeBankgiroCreditorIdList())) return false;
+      if (!getOcrLineSePlusgiroCreditorIdList()
+          .equals(other.getOcrLineSePlusgiroCreditorIdList())) return false;
+      if (!getOcrLineNoPaymentIdList()
+          .equals(other.getOcrLineNoPaymentIdList())) return false;
+      if (!getOcrLineFiPaymentIdList()
+          .equals(other.getOcrLineFiPaymentIdList())) return false;
+      if (!getOcrLineNlPaymentIdList()
+          .equals(other.getOcrLineNlPaymentIdList())) return false;
+      if (!getSupplierCorporateIdList()
+          .equals(other.getSupplierCorporateIdList())) return false;
+      if (!getSupplierCountryCodeList()
+          .equals(other.getSupplierCountryCodeList())) return false;
+      if (!getInvoiceNumberList()
+          .equals(other.getInvoiceNumberList())) return false;
+      if (!getIbanList()
+          .equals(other.getIbanList())) return false;
+      if (!getOrderReferenceList()
+          .equals(other.getOrderReferenceList())) return false;
+      if (!getBankAccountNumberList()
+          .equals(other.getBankAccountNumberList())) return false;
+      if (!getBankRegistrationNumberList()
+          .equals(other.getBankRegistrationNumberList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10038,7 +10525,7 @@ public final class DataServiceProto {
         ssn.dataservice.v1.DataServiceProto.PredictionValues result = new ssn.dataservice.v1.DataServiceProto.PredictionValues(this);
         int from_bitField0_ = bitField0_;
         if (totalInclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -10047,7 +10534,7 @@ public final class DataServiceProto {
           result.totalInclVat_ = totalInclVatBuilder_.build();
         }
         if (totalVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -10056,7 +10543,7 @@ public final class DataServiceProto {
           result.totalVat_ = totalVatBuilder_.build();
         }
         if (totalExclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -10065,7 +10552,7 @@ public final class DataServiceProto {
           result.totalExclVat_ = totalExclVatBuilder_.build();
         }
         if (orderDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -10074,7 +10561,7 @@ public final class DataServiceProto {
           result.orderDate_ = orderDateBuilder_.build();
         }
         if (paymentDueDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -10083,7 +10570,7 @@ public final class DataServiceProto {
           result.paymentDueDate_ = paymentDueDateBuilder_.build();
         }
         if (documentTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             documentType_ = java.util.Collections.unmodifiableList(documentType_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -10092,7 +10579,7 @@ public final class DataServiceProto {
           result.documentType_ = documentTypeBuilder_.build();
         }
         if (currencyBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             currency_ = java.util.Collections.unmodifiableList(currency_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -10101,7 +10588,7 @@ public final class DataServiceProto {
           result.currency_ = currencyBuilder_.build();
         }
         if (creditCardLastFourBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -10110,7 +10597,7 @@ public final class DataServiceProto {
           result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
         }
         if (paymentMethodBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -10119,7 +10606,7 @@ public final class DataServiceProto {
           result.paymentMethod_ = paymentMethodBuilder_.build();
         }
         if (ocrLineDkTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
             bitField0_ = (bitField0_ & ~0x00000200);
           }
@@ -10128,7 +10615,7 @@ public final class DataServiceProto {
           result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
         }
         if (ocrLineDkPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
             bitField0_ = (bitField0_ & ~0x00000400);
           }
@@ -10137,7 +10624,7 @@ public final class DataServiceProto {
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
         }
         if (ocrLineDkCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00000800) != 0)) {
             ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
             bitField0_ = (bitField0_ & ~0x00000800);
           }
@@ -10146,7 +10633,7 @@ public final class DataServiceProto {
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
         }
         if (ocrLineSePaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          if (((bitField0_ & 0x00001000) != 0)) {
             ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
             bitField0_ = (bitField0_ & ~0x00001000);
           }
@@ -10155,7 +10642,7 @@ public final class DataServiceProto {
           result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
         }
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00002000);
           }
@@ -10164,7 +10651,7 @@ public final class DataServiceProto {
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
         }
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          if (((bitField0_ & 0x00004000) != 0)) {
             ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00004000);
           }
@@ -10173,7 +10660,7 @@ public final class DataServiceProto {
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
         }
         if (ocrLineNoPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
             bitField0_ = (bitField0_ & ~0x00008000);
           }
@@ -10182,7 +10669,7 @@ public final class DataServiceProto {
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
         }
         if (ocrLineFiPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          if (((bitField0_ & 0x00010000) != 0)) {
             ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
             bitField0_ = (bitField0_ & ~0x00010000);
           }
@@ -10191,7 +10678,7 @@ public final class DataServiceProto {
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
         }
         if (ocrLineNlPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
             bitField0_ = (bitField0_ & ~0x00020000);
           }
@@ -10200,7 +10687,7 @@ public final class DataServiceProto {
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
         }
         if (supplierCorporateIdBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
             bitField0_ = (bitField0_ & ~0x00040000);
           }
@@ -10209,7 +10696,7 @@ public final class DataServiceProto {
           result.supplierCorporateId_ = supplierCorporateIdBuilder_.build();
         }
         if (supplierCountryCodeBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+          if (((bitField0_ & 0x00080000) != 0)) {
             supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
             bitField0_ = (bitField0_ & ~0x00080000);
           }
@@ -10218,7 +10705,7 @@ public final class DataServiceProto {
           result.supplierCountryCode_ = supplierCountryCodeBuilder_.build();
         }
         if (invoiceNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          if (((bitField0_ & 0x00100000) != 0)) {
             invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
             bitField0_ = (bitField0_ & ~0x00100000);
           }
@@ -10227,7 +10714,7 @@ public final class DataServiceProto {
           result.invoiceNumber_ = invoiceNumberBuilder_.build();
         }
         if (ibanBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          if (((bitField0_ & 0x00200000) != 0)) {
             iban_ = java.util.Collections.unmodifiableList(iban_);
             bitField0_ = (bitField0_ & ~0x00200000);
           }
@@ -10236,7 +10723,7 @@ public final class DataServiceProto {
           result.iban_ = ibanBuilder_.build();
         }
         if (orderReferenceBuilder_ == null) {
-          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+          if (((bitField0_ & 0x00400000) != 0)) {
             orderReference_ = java.util.Collections.unmodifiableList(orderReference_);
             bitField0_ = (bitField0_ & ~0x00400000);
           }
@@ -10245,7 +10732,7 @@ public final class DataServiceProto {
           result.orderReference_ = orderReferenceBuilder_.build();
         }
         if (bankAccountNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00800000) == 0x00800000)) {
+          if (((bitField0_ & 0x00800000) != 0)) {
             bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
             bitField0_ = (bitField0_ & ~0x00800000);
           }
@@ -10254,7 +10741,7 @@ public final class DataServiceProto {
           result.bankAccountNumber_ = bankAccountNumberBuilder_.build();
         }
         if (bankRegistrationNumberBuilder_ == null) {
-          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+          if (((bitField0_ & 0x01000000) != 0)) {
             bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
             bitField0_ = (bitField0_ & ~0x01000000);
           }
@@ -10268,35 +10755,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10993,7 +11480,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalInclVatIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           totalInclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalInclVat_);
           bitField0_ |= 0x00000001;
          }
@@ -11222,7 +11709,7 @@ public final class DataServiceProto {
           totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
                   totalInclVat_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           totalInclVat_ = null;
@@ -11233,7 +11720,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.DoubleValue> totalVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalVatIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           totalVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalVat_);
           bitField0_ |= 0x00000002;
          }
@@ -11462,7 +11949,7 @@ public final class DataServiceProto {
           totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
                   totalVat_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           totalVat_ = null;
@@ -11473,7 +11960,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.DoubleValue> totalExclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalExclVatIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           totalExclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalExclVat_);
           bitField0_ |= 0x00000004;
          }
@@ -11702,7 +12189,7 @@ public final class DataServiceProto {
           totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
                   totalExclVat_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           totalExclVat_ = null;
@@ -11713,7 +12200,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.type.Date> orderDate_ =
         java.util.Collections.emptyList();
       private void ensureOrderDateIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           orderDate_ = new java.util.ArrayList<com.google.type.Date>(orderDate_);
           bitField0_ |= 0x00000008;
          }
@@ -11942,7 +12429,7 @@ public final class DataServiceProto {
           orderDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
                   orderDate_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           orderDate_ = null;
@@ -11953,7 +12440,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.type.Date> paymentDueDate_ =
         java.util.Collections.emptyList();
       private void ensurePaymentDueDateIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           paymentDueDate_ = new java.util.ArrayList<com.google.type.Date>(paymentDueDate_);
           bitField0_ |= 0x00000010;
          }
@@ -12182,7 +12669,7 @@ public final class DataServiceProto {
           paymentDueDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
                   paymentDueDate_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           paymentDueDate_ = null;
@@ -12193,7 +12680,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> documentType_ =
         java.util.Collections.emptyList();
       private void ensureDocumentTypeIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           documentType_ = new java.util.ArrayList<com.google.protobuf.StringValue>(documentType_);
           bitField0_ |= 0x00000020;
          }
@@ -12422,7 +12909,7 @@ public final class DataServiceProto {
           documentTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   documentType_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           documentType_ = null;
@@ -12433,7 +12920,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> currency_ =
         java.util.Collections.emptyList();
       private void ensureCurrencyIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           currency_ = new java.util.ArrayList<com.google.protobuf.StringValue>(currency_);
           bitField0_ |= 0x00000040;
          }
@@ -12662,7 +13149,7 @@ public final class DataServiceProto {
           currencyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   currency_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           currency_ = null;
@@ -12673,7 +13160,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> creditCardLastFour_ =
         java.util.Collections.emptyList();
       private void ensureCreditCardLastFourIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.StringValue>(creditCardLastFour_);
           bitField0_ |= 0x00000080;
          }
@@ -12902,7 +13389,7 @@ public final class DataServiceProto {
           creditCardLastFourBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   creditCardLastFour_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           creditCardLastFour_ = null;
@@ -12913,7 +13400,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> paymentMethod_ =
         java.util.Collections.emptyList();
       private void ensurePaymentMethodIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           paymentMethod_ = new java.util.ArrayList<com.google.protobuf.StringValue>(paymentMethod_);
           bitField0_ |= 0x00000100;
          }
@@ -13142,7 +13629,7 @@ public final class DataServiceProto {
           paymentMethodBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   paymentMethod_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           paymentMethod_ = null;
@@ -13153,7 +13640,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineDkType_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkTypeIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineDkType_);
           bitField0_ |= 0x00000200;
          }
@@ -13382,7 +13869,7 @@ public final class DataServiceProto {
           ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineDkType_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkType_ = null;
@@ -13393,7 +13880,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineDkPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineDkPaymentId_);
           bitField0_ |= 0x00000400;
          }
@@ -13622,7 +14109,7 @@ public final class DataServiceProto {
           ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineDkPaymentId_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkPaymentId_ = null;
@@ -13633,7 +14120,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineDkCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000800) != 0)) {
           ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineDkCreditorId_);
           bitField0_ |= 0x00000800;
          }
@@ -13862,7 +14349,7 @@ public final class DataServiceProto {
           ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineDkCreditorId_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00000800) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkCreditorId_ = null;
@@ -13873,7 +14360,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineSePaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineSePaymentId_);
           bitField0_ |= 0x00001000;
          }
@@ -14102,7 +14589,7 @@ public final class DataServiceProto {
           ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineSePaymentId_,
-                  ((bitField0_ & 0x00001000) == 0x00001000),
+                  ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePaymentId_ = null;
@@ -14113,7 +14600,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineSeBankgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineSeBankgiroCreditorId_);
           bitField0_ |= 0x00002000;
          }
@@ -14342,7 +14829,7 @@ public final class DataServiceProto {
           ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineSeBankgiroCreditorId_,
-                  ((bitField0_ & 0x00002000) == 0x00002000),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSeBankgiroCreditorId_ = null;
@@ -14353,7 +14840,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineSePlusgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00004000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineSePlusgiroCreditorId_);
           bitField0_ |= 0x00004000;
          }
@@ -14582,7 +15069,7 @@ public final class DataServiceProto {
           ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineSePlusgiroCreditorId_,
-                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  ((bitField0_ & 0x00004000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePlusgiroCreditorId_ = null;
@@ -14593,7 +15080,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineNoPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNoPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineNoPaymentId_);
           bitField0_ |= 0x00008000;
          }
@@ -14822,7 +15309,7 @@ public final class DataServiceProto {
           ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineNoPaymentId_,
-                  ((bitField0_ & 0x00008000) == 0x00008000),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNoPaymentId_ = null;
@@ -14833,7 +15320,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineFiPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineFiPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineFiPaymentId_);
           bitField0_ |= 0x00010000;
          }
@@ -15062,7 +15549,7 @@ public final class DataServiceProto {
           ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineFiPaymentId_,
-                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineFiPaymentId_ = null;
@@ -15073,7 +15560,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> ocrLineNlPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNlPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineNlPaymentId_);
           bitField0_ |= 0x00020000;
          }
@@ -15302,7 +15789,7 @@ public final class DataServiceProto {
           ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   ocrLineNlPaymentId_,
-                  ((bitField0_ & 0x00020000) == 0x00020000),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNlPaymentId_ = null;
@@ -15313,7 +15800,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> supplierCorporateId_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCorporateIdIsMutable() {
-        if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierCorporateId_);
           bitField0_ |= 0x00040000;
          }
@@ -15542,7 +16029,7 @@ public final class DataServiceProto {
           supplierCorporateIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   supplierCorporateId_,
-                  ((bitField0_ & 0x00040000) == 0x00040000),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCorporateId_ = null;
@@ -15553,7 +16040,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> supplierCountryCode_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCountryCodeIsMutable() {
-        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (!((bitField0_ & 0x00080000) != 0)) {
           supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierCountryCode_);
           bitField0_ |= 0x00080000;
          }
@@ -15782,7 +16269,7 @@ public final class DataServiceProto {
           supplierCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   supplierCountryCode_,
-                  ((bitField0_ & 0x00080000) == 0x00080000),
+                  ((bitField0_ & 0x00080000) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCountryCode_ = null;
@@ -15793,7 +16280,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> invoiceNumber_ =
         java.util.Collections.emptyList();
       private void ensureInvoiceNumberIsMutable() {
-        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (!((bitField0_ & 0x00100000) != 0)) {
           invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(invoiceNumber_);
           bitField0_ |= 0x00100000;
          }
@@ -16022,7 +16509,7 @@ public final class DataServiceProto {
           invoiceNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   invoiceNumber_,
-                  ((bitField0_ & 0x00100000) == 0x00100000),
+                  ((bitField0_ & 0x00100000) != 0),
                   getParentForChildren(),
                   isClean());
           invoiceNumber_ = null;
@@ -16033,7 +16520,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> iban_ =
         java.util.Collections.emptyList();
       private void ensureIbanIsMutable() {
-        if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (!((bitField0_ & 0x00200000) != 0)) {
           iban_ = new java.util.ArrayList<com.google.protobuf.StringValue>(iban_);
           bitField0_ |= 0x00200000;
          }
@@ -16262,7 +16749,7 @@ public final class DataServiceProto {
           ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   iban_,
-                  ((bitField0_ & 0x00200000) == 0x00200000),
+                  ((bitField0_ & 0x00200000) != 0),
                   getParentForChildren(),
                   isClean());
           iban_ = null;
@@ -16273,7 +16760,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> orderReference_ =
         java.util.Collections.emptyList();
       private void ensureOrderReferenceIsMutable() {
-        if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+        if (!((bitField0_ & 0x00400000) != 0)) {
           orderReference_ = new java.util.ArrayList<com.google.protobuf.StringValue>(orderReference_);
           bitField0_ |= 0x00400000;
          }
@@ -16502,7 +16989,7 @@ public final class DataServiceProto {
           orderReferenceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   orderReference_,
-                  ((bitField0_ & 0x00400000) == 0x00400000),
+                  ((bitField0_ & 0x00400000) != 0),
                   getParentForChildren(),
                   isClean());
           orderReference_ = null;
@@ -16513,7 +17000,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> bankAccountNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankAccountNumberIsMutable() {
-        if (!((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (!((bitField0_ & 0x00800000) != 0)) {
           bankAccountNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(bankAccountNumber_);
           bitField0_ |= 0x00800000;
          }
@@ -16742,7 +17229,7 @@ public final class DataServiceProto {
           bankAccountNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   bankAccountNumber_,
-                  ((bitField0_ & 0x00800000) == 0x00800000),
+                  ((bitField0_ & 0x00800000) != 0),
                   getParentForChildren(),
                   isClean());
           bankAccountNumber_ = null;
@@ -16753,7 +17240,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.StringValue> bankRegistrationNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankRegistrationNumberIsMutable() {
-        if (!((bitField0_ & 0x01000000) == 0x01000000)) {
+        if (!((bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(bankRegistrationNumber_);
           bitField0_ |= 0x01000000;
          }
@@ -16982,7 +17469,7 @@ public final class DataServiceProto {
           bankRegistrationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   bankRegistrationNumber_,
-                  ((bitField0_ & 0x01000000) == 0x01000000),
+                  ((bitField0_ & 0x01000000) != 0),
                   getParentForChildren(),
                   isClean());
           bankRegistrationNumber_ = null;
@@ -16992,7 +17479,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17649,7 +18136,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionConfidences}
    */
-  public  static final class PredictionConfidences extends
+  public static final class PredictionConfidences extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.PredictionConfidences)
       PredictionConfidencesOrBuilder {
@@ -17687,6 +18174,13 @@ public final class DataServiceProto {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PredictionConfidences();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -17711,7 +18205,7 @@ public final class DataServiceProto {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 totalInclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -17720,7 +18214,7 @@ public final class DataServiceProto {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 totalVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -17729,7 +18223,7 @@ public final class DataServiceProto {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 totalExclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -17738,7 +18232,7 @@ public final class DataServiceProto {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 orderDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -17747,7 +18241,7 @@ public final class DataServiceProto {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 paymentDueDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -17756,7 +18250,7 @@ public final class DataServiceProto {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 documentType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -17765,7 +18259,7 @@ public final class DataServiceProto {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 currency_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -17774,7 +18268,7 @@ public final class DataServiceProto {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -17783,7 +18277,7 @@ public final class DataServiceProto {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 paymentMethod_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -17792,7 +18286,7 @@ public final class DataServiceProto {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000200;
               }
@@ -17801,7 +18295,7 @@ public final class DataServiceProto {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000400;
               }
@@ -17810,7 +18304,7 @@ public final class DataServiceProto {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
                 ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000800;
               }
@@ -17819,7 +18313,7 @@ public final class DataServiceProto {
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
                 ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00001000;
               }
@@ -17828,7 +18322,7 @@ public final class DataServiceProto {
               break;
             }
             case 114: {
-              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
                 ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00002000;
               }
@@ -17837,7 +18331,7 @@ public final class DataServiceProto {
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00004000;
               }
@@ -17846,7 +18340,7 @@ public final class DataServiceProto {
               break;
             }
             case 130: {
-              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+              if (!((mutable_bitField0_ & 0x00008000) != 0)) {
                 ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00008000;
               }
@@ -17855,7 +18349,7 @@ public final class DataServiceProto {
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              if (!((mutable_bitField0_ & 0x00010000) != 0)) {
                 ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00010000;
               }
@@ -17864,7 +18358,7 @@ public final class DataServiceProto {
               break;
             }
             case 146: {
-              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+              if (!((mutable_bitField0_ & 0x00020000) != 0)) {
                 ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00020000;
               }
@@ -17873,7 +18367,7 @@ public final class DataServiceProto {
               break;
             }
             case 154: {
-              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              if (!((mutable_bitField0_ & 0x00040000) != 0)) {
                 supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00040000;
               }
@@ -17882,7 +18376,7 @@ public final class DataServiceProto {
               break;
             }
             case 162: {
-              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+              if (!((mutable_bitField0_ & 0x00080000) != 0)) {
                 supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00080000;
               }
@@ -17891,7 +18385,7 @@ public final class DataServiceProto {
               break;
             }
             case 170: {
-              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+              if (!((mutable_bitField0_ & 0x00100000) != 0)) {
                 invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00100000;
               }
@@ -17900,7 +18394,7 @@ public final class DataServiceProto {
               break;
             }
             case 178: {
-              if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              if (!((mutable_bitField0_ & 0x00200000) != 0)) {
                 iban_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00200000;
               }
@@ -17909,7 +18403,7 @@ public final class DataServiceProto {
               break;
             }
             case 186: {
-              if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+              if (!((mutable_bitField0_ & 0x00400000) != 0)) {
                 orderReference_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00400000;
               }
@@ -17918,7 +18412,7 @@ public final class DataServiceProto {
               break;
             }
             case 194: {
-              if (!((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+              if (!((mutable_bitField0_ & 0x00800000) != 0)) {
                 bankAccountNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00800000;
               }
@@ -17927,7 +18421,7 @@ public final class DataServiceProto {
               break;
             }
             case 202: {
-              if (!((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+              if (!((mutable_bitField0_ & 0x01000000) != 0)) {
                 bankRegistrationNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x01000000;
               }
@@ -17936,7 +18430,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17950,79 +18444,79 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           documentType_ = java.util.Collections.unmodifiableList(documentType_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           currency_ = java.util.Collections.unmodifiableList(currency_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
           ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000800) != 0)) {
           ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
           ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((mutable_bitField0_ & 0x00002000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((mutable_bitField0_ & 0x00008000) != 0)) {
           ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((mutable_bitField0_ & 0x00010000) != 0)) {
           ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((mutable_bitField0_ & 0x00020000) != 0)) {
           ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((mutable_bitField0_ & 0x00040000) != 0)) {
           supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
         }
-        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((mutable_bitField0_ & 0x00080000) != 0)) {
           supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
         }
-        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((mutable_bitField0_ & 0x00100000) != 0)) {
           invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
         }
-        if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((mutable_bitField0_ & 0x00200000) != 0)) {
           iban_ = java.util.Collections.unmodifiableList(iban_);
         }
-        if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+        if (((mutable_bitField0_ & 0x00400000) != 0)) {
           orderReference_ = java.util.Collections.unmodifiableList(orderReference_);
         }
-        if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((mutable_bitField0_ & 0x00800000) != 0)) {
           bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
         }
-        if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+        if (((mutable_bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
         }
         this.unknownFields = unknownFields.build();
@@ -18047,12 +18541,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getTotalInclVatList() {
       return totalInclVat_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalInclVatOrBuilderList() {
       return totalInclVat_;
@@ -18060,18 +18556,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public int getTotalInclVatCount() {
       return totalInclVat_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getTotalInclVat(int index) {
       return totalInclVat_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getTotalInclVatOrBuilder(
         int index) {
       return totalInclVat_.get(index);
@@ -18082,12 +18581,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getTotalVatList() {
       return totalVat_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalVatOrBuilderList() {
       return totalVat_;
@@ -18095,18 +18596,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public int getTotalVatCount() {
       return totalVat_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getTotalVat(int index) {
       return totalVat_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getTotalVatOrBuilder(
         int index) {
       return totalVat_.get(index);
@@ -18117,12 +18621,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getTotalExclVatList() {
       return totalExclVat_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalExclVatOrBuilderList() {
       return totalExclVat_;
@@ -18130,18 +18636,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public int getTotalExclVatCount() {
       return totalExclVat_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getTotalExclVat(int index) {
       return totalExclVat_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getTotalExclVatOrBuilder(
         int index) {
       return totalExclVat_.get(index);
@@ -18152,12 +18661,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOrderDateList() {
       return orderDate_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOrderDateOrBuilderList() {
       return orderDate_;
@@ -18165,18 +18676,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
+    @java.lang.Override
     public int getOrderDateCount() {
       return orderDate_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOrderDate(int index) {
       return orderDate_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOrderDateOrBuilder(
         int index) {
       return orderDate_.get(index);
@@ -18187,12 +18701,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getPaymentDueDateList() {
       return paymentDueDate_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getPaymentDueDateOrBuilderList() {
       return paymentDueDate_;
@@ -18200,18 +18716,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public int getPaymentDueDateCount() {
       return paymentDueDate_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getPaymentDueDate(int index) {
       return paymentDueDate_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getPaymentDueDateOrBuilder(
         int index) {
       return paymentDueDate_.get(index);
@@ -18222,12 +18741,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getDocumentTypeList() {
       return documentType_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getDocumentTypeOrBuilderList() {
       return documentType_;
@@ -18235,18 +18756,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
+    @java.lang.Override
     public int getDocumentTypeCount() {
       return documentType_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getDocumentType(int index) {
       return documentType_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getDocumentTypeOrBuilder(
         int index) {
       return documentType_.get(index);
@@ -18257,12 +18781,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getCurrencyList() {
       return currency_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getCurrencyOrBuilderList() {
       return currency_;
@@ -18270,18 +18796,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
+    @java.lang.Override
     public int getCurrencyCount() {
       return currency_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getCurrency(int index) {
       return currency_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getCurrencyOrBuilder(
         int index) {
       return currency_.get(index);
@@ -18292,12 +18821,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getCreditCardLastFourList() {
       return creditCardLastFour_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getCreditCardLastFourOrBuilderList() {
       return creditCardLastFour_;
@@ -18305,18 +18836,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public int getCreditCardLastFourCount() {
       return creditCardLastFour_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getCreditCardLastFour(int index) {
       return creditCardLastFour_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getCreditCardLastFourOrBuilder(
         int index) {
       return creditCardLastFour_.get(index);
@@ -18327,12 +18861,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getPaymentMethodList() {
       return paymentMethod_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getPaymentMethodOrBuilderList() {
       return paymentMethod_;
@@ -18340,18 +18876,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public int getPaymentMethodCount() {
       return paymentMethod_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getPaymentMethod(int index) {
       return paymentMethod_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getPaymentMethodOrBuilder(
         int index) {
       return paymentMethod_.get(index);
@@ -18362,12 +18901,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkTypeList() {
       return ocrLineDkType_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkTypeOrBuilderList() {
       return ocrLineDkType_;
@@ -18375,18 +18916,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkTypeCount() {
       return ocrLineDkType_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineDkType(int index) {
       return ocrLineDkType_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineDkTypeOrBuilder(
         int index) {
       return ocrLineDkType_.get(index);
@@ -18397,12 +18941,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkPaymentIdList() {
       return ocrLineDkPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList() {
       return ocrLineDkPaymentId_;
@@ -18410,18 +18956,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkPaymentIdCount() {
       return ocrLineDkPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineDkPaymentId(int index) {
       return ocrLineDkPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index) {
       return ocrLineDkPaymentId_.get(index);
@@ -18432,12 +18981,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkCreditorIdList() {
       return ocrLineDkCreditorId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList() {
       return ocrLineDkCreditorId_;
@@ -18445,18 +18996,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkCreditorIdCount() {
       return ocrLineDkCreditorId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineDkCreditorId(int index) {
       return ocrLineDkCreditorId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index) {
       return ocrLineDkCreditorId_.get(index);
@@ -18467,12 +19021,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineSePaymentIdList() {
       return ocrLineSePaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList() {
       return ocrLineSePaymentId_;
@@ -18480,18 +19036,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePaymentIdCount() {
       return ocrLineSePaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineSePaymentId(int index) {
       return ocrLineSePaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index) {
       return ocrLineSePaymentId_.get(index);
@@ -18502,12 +19061,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineSeBankgiroCreditorIdList() {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList() {
       return ocrLineSeBankgiroCreditorId_;
@@ -18515,18 +19076,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public int getOcrLineSeBankgiroCreditorIdCount() {
       return ocrLineSeBankgiroCreditorId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineSeBankgiroCreditorId(int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
@@ -18537,12 +19101,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineSePlusgiroCreditorIdList() {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList() {
       return ocrLineSePlusgiroCreditorId_;
@@ -18550,18 +19116,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePlusgiroCreditorIdCount() {
       return ocrLineSePlusgiroCreditorId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineSePlusgiroCreditorId(int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
@@ -18572,12 +19141,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineNoPaymentIdList() {
       return ocrLineNoPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList() {
       return ocrLineNoPaymentId_;
@@ -18585,18 +19156,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public int getOcrLineNoPaymentIdCount() {
       return ocrLineNoPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineNoPaymentId(int index) {
       return ocrLineNoPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index) {
       return ocrLineNoPaymentId_.get(index);
@@ -18607,12 +19181,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineFiPaymentIdList() {
       return ocrLineFiPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList() {
       return ocrLineFiPaymentId_;
@@ -18620,18 +19196,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public int getOcrLineFiPaymentIdCount() {
       return ocrLineFiPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineFiPaymentId(int index) {
       return ocrLineFiPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index) {
       return ocrLineFiPaymentId_.get(index);
@@ -18642,12 +19221,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOcrLineNlPaymentIdList() {
       return ocrLineNlPaymentId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList() {
       return ocrLineNlPaymentId_;
@@ -18655,18 +19236,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public int getOcrLineNlPaymentIdCount() {
       return ocrLineNlPaymentId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOcrLineNlPaymentId(int index) {
       return ocrLineNlPaymentId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index) {
       return ocrLineNlPaymentId_.get(index);
@@ -18677,12 +19261,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getSupplierCorporateIdList() {
       return supplierCorporateId_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getSupplierCorporateIdOrBuilderList() {
       return supplierCorporateId_;
@@ -18690,18 +19276,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public int getSupplierCorporateIdCount() {
       return supplierCorporateId_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getSupplierCorporateId(int index) {
       return supplierCorporateId_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getSupplierCorporateIdOrBuilder(
         int index) {
       return supplierCorporateId_.get(index);
@@ -18712,12 +19301,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getSupplierCountryCodeList() {
       return supplierCountryCode_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getSupplierCountryCodeOrBuilderList() {
       return supplierCountryCode_;
@@ -18725,18 +19316,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public int getSupplierCountryCodeCount() {
       return supplierCountryCode_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getSupplierCountryCode(int index) {
       return supplierCountryCode_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getSupplierCountryCodeOrBuilder(
         int index) {
       return supplierCountryCode_.get(index);
@@ -18747,12 +19341,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getInvoiceNumberList() {
       return invoiceNumber_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getInvoiceNumberOrBuilderList() {
       return invoiceNumber_;
@@ -18760,18 +19356,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public int getInvoiceNumberCount() {
       return invoiceNumber_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getInvoiceNumber(int index) {
       return invoiceNumber_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getInvoiceNumberOrBuilder(
         int index) {
       return invoiceNumber_.get(index);
@@ -18782,12 +19381,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getIbanList() {
       return iban_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getIbanOrBuilderList() {
       return iban_;
@@ -18795,18 +19396,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
+    @java.lang.Override
     public int getIbanCount() {
       return iban_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getIban(int index) {
       return iban_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getIbanOrBuilder(
         int index) {
       return iban_.get(index);
@@ -18817,12 +19421,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getOrderReferenceList() {
       return orderReference_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOrderReferenceOrBuilderList() {
       return orderReference_;
@@ -18830,18 +19436,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public int getOrderReferenceCount() {
       return orderReference_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getOrderReference(int index) {
       return orderReference_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue order_reference = 23;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getOrderReferenceOrBuilder(
         int index) {
       return orderReference_.get(index);
@@ -18852,12 +19461,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getBankAccountNumberList() {
       return bankAccountNumber_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getBankAccountNumberOrBuilderList() {
       return bankAccountNumber_;
@@ -18865,18 +19476,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public int getBankAccountNumberCount() {
       return bankAccountNumber_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getBankAccountNumber(int index) {
       return bankAccountNumber_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getBankAccountNumberOrBuilder(
         int index) {
       return bankAccountNumber_.get(index);
@@ -18887,12 +19501,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.FloatValue> getBankRegistrationNumberList() {
       return bankRegistrationNumber_;
     }
     /**
      * <code>repeated .google.protobuf.FloatValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getBankRegistrationNumberOrBuilderList() {
       return bankRegistrationNumber_;
@@ -18900,18 +19516,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .google.protobuf.FloatValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public int getBankRegistrationNumberCount() {
       return bankRegistrationNumber_.size();
     }
     /**
      * <code>repeated .google.protobuf.FloatValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getBankRegistrationNumber(int index) {
       return bankRegistrationNumber_.get(index);
     }
     /**
      * <code>repeated .google.protobuf.FloatValue bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getBankRegistrationNumberOrBuilder(
         int index) {
       return bankRegistrationNumber_.get(index);
@@ -19130,59 +19749,58 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.PredictionConfidences other = (ssn.dataservice.v1.DataServiceProto.PredictionConfidences) obj;
 
-      boolean result = true;
-      result = result && getTotalInclVatList()
-          .equals(other.getTotalInclVatList());
-      result = result && getTotalVatList()
-          .equals(other.getTotalVatList());
-      result = result && getTotalExclVatList()
-          .equals(other.getTotalExclVatList());
-      result = result && getOrderDateList()
-          .equals(other.getOrderDateList());
-      result = result && getPaymentDueDateList()
-          .equals(other.getPaymentDueDateList());
-      result = result && getDocumentTypeList()
-          .equals(other.getDocumentTypeList());
-      result = result && getCurrencyList()
-          .equals(other.getCurrencyList());
-      result = result && getCreditCardLastFourList()
-          .equals(other.getCreditCardLastFourList());
-      result = result && getPaymentMethodList()
-          .equals(other.getPaymentMethodList());
-      result = result && getOcrLineDkTypeList()
-          .equals(other.getOcrLineDkTypeList());
-      result = result && getOcrLineDkPaymentIdList()
-          .equals(other.getOcrLineDkPaymentIdList());
-      result = result && getOcrLineDkCreditorIdList()
-          .equals(other.getOcrLineDkCreditorIdList());
-      result = result && getOcrLineSePaymentIdList()
-          .equals(other.getOcrLineSePaymentIdList());
-      result = result && getOcrLineSeBankgiroCreditorIdList()
-          .equals(other.getOcrLineSeBankgiroCreditorIdList());
-      result = result && getOcrLineSePlusgiroCreditorIdList()
-          .equals(other.getOcrLineSePlusgiroCreditorIdList());
-      result = result && getOcrLineNoPaymentIdList()
-          .equals(other.getOcrLineNoPaymentIdList());
-      result = result && getOcrLineFiPaymentIdList()
-          .equals(other.getOcrLineFiPaymentIdList());
-      result = result && getOcrLineNlPaymentIdList()
-          .equals(other.getOcrLineNlPaymentIdList());
-      result = result && getSupplierCorporateIdList()
-          .equals(other.getSupplierCorporateIdList());
-      result = result && getSupplierCountryCodeList()
-          .equals(other.getSupplierCountryCodeList());
-      result = result && getInvoiceNumberList()
-          .equals(other.getInvoiceNumberList());
-      result = result && getIbanList()
-          .equals(other.getIbanList());
-      result = result && getOrderReferenceList()
-          .equals(other.getOrderReferenceList());
-      result = result && getBankAccountNumberList()
-          .equals(other.getBankAccountNumberList());
-      result = result && getBankRegistrationNumberList()
-          .equals(other.getBankRegistrationNumberList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTotalInclVatList()
+          .equals(other.getTotalInclVatList())) return false;
+      if (!getTotalVatList()
+          .equals(other.getTotalVatList())) return false;
+      if (!getTotalExclVatList()
+          .equals(other.getTotalExclVatList())) return false;
+      if (!getOrderDateList()
+          .equals(other.getOrderDateList())) return false;
+      if (!getPaymentDueDateList()
+          .equals(other.getPaymentDueDateList())) return false;
+      if (!getDocumentTypeList()
+          .equals(other.getDocumentTypeList())) return false;
+      if (!getCurrencyList()
+          .equals(other.getCurrencyList())) return false;
+      if (!getCreditCardLastFourList()
+          .equals(other.getCreditCardLastFourList())) return false;
+      if (!getPaymentMethodList()
+          .equals(other.getPaymentMethodList())) return false;
+      if (!getOcrLineDkTypeList()
+          .equals(other.getOcrLineDkTypeList())) return false;
+      if (!getOcrLineDkPaymentIdList()
+          .equals(other.getOcrLineDkPaymentIdList())) return false;
+      if (!getOcrLineDkCreditorIdList()
+          .equals(other.getOcrLineDkCreditorIdList())) return false;
+      if (!getOcrLineSePaymentIdList()
+          .equals(other.getOcrLineSePaymentIdList())) return false;
+      if (!getOcrLineSeBankgiroCreditorIdList()
+          .equals(other.getOcrLineSeBankgiroCreditorIdList())) return false;
+      if (!getOcrLineSePlusgiroCreditorIdList()
+          .equals(other.getOcrLineSePlusgiroCreditorIdList())) return false;
+      if (!getOcrLineNoPaymentIdList()
+          .equals(other.getOcrLineNoPaymentIdList())) return false;
+      if (!getOcrLineFiPaymentIdList()
+          .equals(other.getOcrLineFiPaymentIdList())) return false;
+      if (!getOcrLineNlPaymentIdList()
+          .equals(other.getOcrLineNlPaymentIdList())) return false;
+      if (!getSupplierCorporateIdList()
+          .equals(other.getSupplierCorporateIdList())) return false;
+      if (!getSupplierCountryCodeList()
+          .equals(other.getSupplierCountryCodeList())) return false;
+      if (!getInvoiceNumberList()
+          .equals(other.getInvoiceNumberList())) return false;
+      if (!getIbanList()
+          .equals(other.getIbanList())) return false;
+      if (!getOrderReferenceList()
+          .equals(other.getOrderReferenceList())) return false;
+      if (!getBankAccountNumberList()
+          .equals(other.getBankAccountNumberList())) return false;
+      if (!getBankRegistrationNumberList()
+          .equals(other.getBankRegistrationNumberList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19628,7 +20246,7 @@ public final class DataServiceProto {
         ssn.dataservice.v1.DataServiceProto.PredictionConfidences result = new ssn.dataservice.v1.DataServiceProto.PredictionConfidences(this);
         int from_bitField0_ = bitField0_;
         if (totalInclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -19637,7 +20255,7 @@ public final class DataServiceProto {
           result.totalInclVat_ = totalInclVatBuilder_.build();
         }
         if (totalVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -19646,7 +20264,7 @@ public final class DataServiceProto {
           result.totalVat_ = totalVatBuilder_.build();
         }
         if (totalExclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -19655,7 +20273,7 @@ public final class DataServiceProto {
           result.totalExclVat_ = totalExclVatBuilder_.build();
         }
         if (orderDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -19664,7 +20282,7 @@ public final class DataServiceProto {
           result.orderDate_ = orderDateBuilder_.build();
         }
         if (paymentDueDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -19673,7 +20291,7 @@ public final class DataServiceProto {
           result.paymentDueDate_ = paymentDueDateBuilder_.build();
         }
         if (documentTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             documentType_ = java.util.Collections.unmodifiableList(documentType_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -19682,7 +20300,7 @@ public final class DataServiceProto {
           result.documentType_ = documentTypeBuilder_.build();
         }
         if (currencyBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             currency_ = java.util.Collections.unmodifiableList(currency_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -19691,7 +20309,7 @@ public final class DataServiceProto {
           result.currency_ = currencyBuilder_.build();
         }
         if (creditCardLastFourBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -19700,7 +20318,7 @@ public final class DataServiceProto {
           result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
         }
         if (paymentMethodBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -19709,7 +20327,7 @@ public final class DataServiceProto {
           result.paymentMethod_ = paymentMethodBuilder_.build();
         }
         if (ocrLineDkTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
             bitField0_ = (bitField0_ & ~0x00000200);
           }
@@ -19718,7 +20336,7 @@ public final class DataServiceProto {
           result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
         }
         if (ocrLineDkPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
             bitField0_ = (bitField0_ & ~0x00000400);
           }
@@ -19727,7 +20345,7 @@ public final class DataServiceProto {
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
         }
         if (ocrLineDkCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00000800) != 0)) {
             ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
             bitField0_ = (bitField0_ & ~0x00000800);
           }
@@ -19736,7 +20354,7 @@ public final class DataServiceProto {
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
         }
         if (ocrLineSePaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          if (((bitField0_ & 0x00001000) != 0)) {
             ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
             bitField0_ = (bitField0_ & ~0x00001000);
           }
@@ -19745,7 +20363,7 @@ public final class DataServiceProto {
           result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
         }
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00002000);
           }
@@ -19754,7 +20372,7 @@ public final class DataServiceProto {
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
         }
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          if (((bitField0_ & 0x00004000) != 0)) {
             ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00004000);
           }
@@ -19763,7 +20381,7 @@ public final class DataServiceProto {
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
         }
         if (ocrLineNoPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
             bitField0_ = (bitField0_ & ~0x00008000);
           }
@@ -19772,7 +20390,7 @@ public final class DataServiceProto {
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
         }
         if (ocrLineFiPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          if (((bitField0_ & 0x00010000) != 0)) {
             ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
             bitField0_ = (bitField0_ & ~0x00010000);
           }
@@ -19781,7 +20399,7 @@ public final class DataServiceProto {
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
         }
         if (ocrLineNlPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
             bitField0_ = (bitField0_ & ~0x00020000);
           }
@@ -19790,7 +20408,7 @@ public final class DataServiceProto {
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
         }
         if (supplierCorporateIdBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
             bitField0_ = (bitField0_ & ~0x00040000);
           }
@@ -19799,7 +20417,7 @@ public final class DataServiceProto {
           result.supplierCorporateId_ = supplierCorporateIdBuilder_.build();
         }
         if (supplierCountryCodeBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+          if (((bitField0_ & 0x00080000) != 0)) {
             supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
             bitField0_ = (bitField0_ & ~0x00080000);
           }
@@ -19808,7 +20426,7 @@ public final class DataServiceProto {
           result.supplierCountryCode_ = supplierCountryCodeBuilder_.build();
         }
         if (invoiceNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          if (((bitField0_ & 0x00100000) != 0)) {
             invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
             bitField0_ = (bitField0_ & ~0x00100000);
           }
@@ -19817,7 +20435,7 @@ public final class DataServiceProto {
           result.invoiceNumber_ = invoiceNumberBuilder_.build();
         }
         if (ibanBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          if (((bitField0_ & 0x00200000) != 0)) {
             iban_ = java.util.Collections.unmodifiableList(iban_);
             bitField0_ = (bitField0_ & ~0x00200000);
           }
@@ -19826,7 +20444,7 @@ public final class DataServiceProto {
           result.iban_ = ibanBuilder_.build();
         }
         if (orderReferenceBuilder_ == null) {
-          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+          if (((bitField0_ & 0x00400000) != 0)) {
             orderReference_ = java.util.Collections.unmodifiableList(orderReference_);
             bitField0_ = (bitField0_ & ~0x00400000);
           }
@@ -19835,7 +20453,7 @@ public final class DataServiceProto {
           result.orderReference_ = orderReferenceBuilder_.build();
         }
         if (bankAccountNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00800000) == 0x00800000)) {
+          if (((bitField0_ & 0x00800000) != 0)) {
             bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
             bitField0_ = (bitField0_ & ~0x00800000);
           }
@@ -19844,7 +20462,7 @@ public final class DataServiceProto {
           result.bankAccountNumber_ = bankAccountNumberBuilder_.build();
         }
         if (bankRegistrationNumberBuilder_ == null) {
-          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+          if (((bitField0_ & 0x01000000) != 0)) {
             bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
             bitField0_ = (bitField0_ & ~0x01000000);
           }
@@ -19858,35 +20476,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20583,7 +21201,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> totalInclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalInclVatIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           totalInclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(totalInclVat_);
           bitField0_ |= 0x00000001;
          }
@@ -20812,7 +21430,7 @@ public final class DataServiceProto {
           totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   totalInclVat_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           totalInclVat_ = null;
@@ -20823,7 +21441,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> totalVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalVatIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           totalVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(totalVat_);
           bitField0_ |= 0x00000002;
          }
@@ -21052,7 +21670,7 @@ public final class DataServiceProto {
           totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   totalVat_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           totalVat_ = null;
@@ -21063,7 +21681,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> totalExclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalExclVatIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           totalExclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(totalExclVat_);
           bitField0_ |= 0x00000004;
          }
@@ -21292,7 +21910,7 @@ public final class DataServiceProto {
           totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   totalExclVat_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           totalExclVat_ = null;
@@ -21303,7 +21921,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> orderDate_ =
         java.util.Collections.emptyList();
       private void ensureOrderDateIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           orderDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(orderDate_);
           bitField0_ |= 0x00000008;
          }
@@ -21532,7 +22150,7 @@ public final class DataServiceProto {
           orderDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   orderDate_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           orderDate_ = null;
@@ -21543,7 +22161,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> paymentDueDate_ =
         java.util.Collections.emptyList();
       private void ensurePaymentDueDateIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           paymentDueDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(paymentDueDate_);
           bitField0_ |= 0x00000010;
          }
@@ -21772,7 +22390,7 @@ public final class DataServiceProto {
           paymentDueDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   paymentDueDate_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           paymentDueDate_ = null;
@@ -21783,7 +22401,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> documentType_ =
         java.util.Collections.emptyList();
       private void ensureDocumentTypeIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           documentType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(documentType_);
           bitField0_ |= 0x00000020;
          }
@@ -22012,7 +22630,7 @@ public final class DataServiceProto {
           documentTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   documentType_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           documentType_ = null;
@@ -22023,7 +22641,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> currency_ =
         java.util.Collections.emptyList();
       private void ensureCurrencyIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           currency_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(currency_);
           bitField0_ |= 0x00000040;
          }
@@ -22252,7 +22870,7 @@ public final class DataServiceProto {
           currencyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   currency_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           currency_ = null;
@@ -22263,7 +22881,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> creditCardLastFour_ =
         java.util.Collections.emptyList();
       private void ensureCreditCardLastFourIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(creditCardLastFour_);
           bitField0_ |= 0x00000080;
          }
@@ -22492,7 +23110,7 @@ public final class DataServiceProto {
           creditCardLastFourBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   creditCardLastFour_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           creditCardLastFour_ = null;
@@ -22503,7 +23121,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> paymentMethod_ =
         java.util.Collections.emptyList();
       private void ensurePaymentMethodIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           paymentMethod_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(paymentMethod_);
           bitField0_ |= 0x00000100;
          }
@@ -22732,7 +23350,7 @@ public final class DataServiceProto {
           paymentMethodBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   paymentMethod_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           paymentMethod_ = null;
@@ -22743,7 +23361,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineDkType_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkTypeIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineDkType_);
           bitField0_ |= 0x00000200;
          }
@@ -22972,7 +23590,7 @@ public final class DataServiceProto {
           ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineDkType_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkType_ = null;
@@ -22983,7 +23601,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineDkPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineDkPaymentId_);
           bitField0_ |= 0x00000400;
          }
@@ -23212,7 +23830,7 @@ public final class DataServiceProto {
           ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineDkPaymentId_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkPaymentId_ = null;
@@ -23223,7 +23841,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineDkCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000800) != 0)) {
           ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineDkCreditorId_);
           bitField0_ |= 0x00000800;
          }
@@ -23452,7 +24070,7 @@ public final class DataServiceProto {
           ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineDkCreditorId_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00000800) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkCreditorId_ = null;
@@ -23463,7 +24081,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineSePaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineSePaymentId_);
           bitField0_ |= 0x00001000;
          }
@@ -23692,7 +24310,7 @@ public final class DataServiceProto {
           ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineSePaymentId_,
-                  ((bitField0_ & 0x00001000) == 0x00001000),
+                  ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePaymentId_ = null;
@@ -23703,7 +24321,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineSeBankgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineSeBankgiroCreditorId_);
           bitField0_ |= 0x00002000;
          }
@@ -23932,7 +24550,7 @@ public final class DataServiceProto {
           ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineSeBankgiroCreditorId_,
-                  ((bitField0_ & 0x00002000) == 0x00002000),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSeBankgiroCreditorId_ = null;
@@ -23943,7 +24561,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineSePlusgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00004000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineSePlusgiroCreditorId_);
           bitField0_ |= 0x00004000;
          }
@@ -24172,7 +24790,7 @@ public final class DataServiceProto {
           ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineSePlusgiroCreditorId_,
-                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  ((bitField0_ & 0x00004000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePlusgiroCreditorId_ = null;
@@ -24183,7 +24801,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineNoPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNoPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineNoPaymentId_);
           bitField0_ |= 0x00008000;
          }
@@ -24412,7 +25030,7 @@ public final class DataServiceProto {
           ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineNoPaymentId_,
-                  ((bitField0_ & 0x00008000) == 0x00008000),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNoPaymentId_ = null;
@@ -24423,7 +25041,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineFiPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineFiPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineFiPaymentId_);
           bitField0_ |= 0x00010000;
          }
@@ -24652,7 +25270,7 @@ public final class DataServiceProto {
           ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineFiPaymentId_,
-                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineFiPaymentId_ = null;
@@ -24663,7 +25281,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> ocrLineNlPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNlPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineNlPaymentId_);
           bitField0_ |= 0x00020000;
          }
@@ -24892,7 +25510,7 @@ public final class DataServiceProto {
           ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineNlPaymentId_,
-                  ((bitField0_ & 0x00020000) == 0x00020000),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNlPaymentId_ = null;
@@ -24903,7 +25521,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> supplierCorporateId_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCorporateIdIsMutable() {
-        if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierCorporateId_);
           bitField0_ |= 0x00040000;
          }
@@ -25132,7 +25750,7 @@ public final class DataServiceProto {
           supplierCorporateIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   supplierCorporateId_,
-                  ((bitField0_ & 0x00040000) == 0x00040000),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCorporateId_ = null;
@@ -25143,7 +25761,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> supplierCountryCode_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCountryCodeIsMutable() {
-        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (!((bitField0_ & 0x00080000) != 0)) {
           supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierCountryCode_);
           bitField0_ |= 0x00080000;
          }
@@ -25372,7 +25990,7 @@ public final class DataServiceProto {
           supplierCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   supplierCountryCode_,
-                  ((bitField0_ & 0x00080000) == 0x00080000),
+                  ((bitField0_ & 0x00080000) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCountryCode_ = null;
@@ -25383,7 +26001,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> invoiceNumber_ =
         java.util.Collections.emptyList();
       private void ensureInvoiceNumberIsMutable() {
-        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (!((bitField0_ & 0x00100000) != 0)) {
           invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(invoiceNumber_);
           bitField0_ |= 0x00100000;
          }
@@ -25612,7 +26230,7 @@ public final class DataServiceProto {
           invoiceNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   invoiceNumber_,
-                  ((bitField0_ & 0x00100000) == 0x00100000),
+                  ((bitField0_ & 0x00100000) != 0),
                   getParentForChildren(),
                   isClean());
           invoiceNumber_ = null;
@@ -25623,7 +26241,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> iban_ =
         java.util.Collections.emptyList();
       private void ensureIbanIsMutable() {
-        if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (!((bitField0_ & 0x00200000) != 0)) {
           iban_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(iban_);
           bitField0_ |= 0x00200000;
          }
@@ -25852,7 +26470,7 @@ public final class DataServiceProto {
           ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   iban_,
-                  ((bitField0_ & 0x00200000) == 0x00200000),
+                  ((bitField0_ & 0x00200000) != 0),
                   getParentForChildren(),
                   isClean());
           iban_ = null;
@@ -25863,7 +26481,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> orderReference_ =
         java.util.Collections.emptyList();
       private void ensureOrderReferenceIsMutable() {
-        if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+        if (!((bitField0_ & 0x00400000) != 0)) {
           orderReference_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(orderReference_);
           bitField0_ |= 0x00400000;
          }
@@ -26092,7 +26710,7 @@ public final class DataServiceProto {
           orderReferenceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   orderReference_,
-                  ((bitField0_ & 0x00400000) == 0x00400000),
+                  ((bitField0_ & 0x00400000) != 0),
                   getParentForChildren(),
                   isClean());
           orderReference_ = null;
@@ -26103,7 +26721,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> bankAccountNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankAccountNumberIsMutable() {
-        if (!((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (!((bitField0_ & 0x00800000) != 0)) {
           bankAccountNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(bankAccountNumber_);
           bitField0_ |= 0x00800000;
          }
@@ -26332,7 +26950,7 @@ public final class DataServiceProto {
           bankAccountNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   bankAccountNumber_,
-                  ((bitField0_ & 0x00800000) == 0x00800000),
+                  ((bitField0_ & 0x00800000) != 0),
                   getParentForChildren(),
                   isClean());
           bankAccountNumber_ = null;
@@ -26343,7 +26961,7 @@ public final class DataServiceProto {
       private java.util.List<com.google.protobuf.FloatValue> bankRegistrationNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankRegistrationNumberIsMutable() {
-        if (!((bitField0_ & 0x01000000) == 0x01000000)) {
+        if (!((bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(bankRegistrationNumber_);
           bitField0_ |= 0x01000000;
          }
@@ -26572,7 +27190,7 @@ public final class DataServiceProto {
           bankRegistrationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   bankRegistrationNumber_,
-                  ((bitField0_ & 0x01000000) == 0x01000000),
+                  ((bitField0_ & 0x01000000) != 0),
                   getParentForChildren(),
                   isClean());
           bankRegistrationNumber_ = null;
@@ -26582,7 +27200,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -27239,7 +27857,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionMetadata}
    */
-  public  static final class PredictionMetadata extends
+  public static final class PredictionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.PredictionMetadata)
       PredictionMetadataOrBuilder {
@@ -27277,6 +27895,13 @@ public final class DataServiceProto {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PredictionMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -27301,7 +27926,7 @@ public final class DataServiceProto {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 totalInclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -27310,7 +27935,7 @@ public final class DataServiceProto {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 totalVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -27319,7 +27944,7 @@ public final class DataServiceProto {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 totalExclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -27328,7 +27953,7 @@ public final class DataServiceProto {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 orderDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -27337,7 +27962,7 @@ public final class DataServiceProto {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 paymentDueDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -27346,7 +27971,7 @@ public final class DataServiceProto {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 documentType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -27355,7 +27980,7 @@ public final class DataServiceProto {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 currency_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -27364,7 +27989,7 @@ public final class DataServiceProto {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 creditCardLastFour_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -27373,7 +27998,7 @@ public final class DataServiceProto {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 paymentMethod_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -27382,7 +28007,7 @@ public final class DataServiceProto {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000200;
               }
@@ -27391,7 +28016,7 @@ public final class DataServiceProto {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000400;
               }
@@ -27400,7 +28025,7 @@ public final class DataServiceProto {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
                 ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00000800;
               }
@@ -27409,7 +28034,7 @@ public final class DataServiceProto {
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
                 ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00001000;
               }
@@ -27418,7 +28043,7 @@ public final class DataServiceProto {
               break;
             }
             case 114: {
-              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
                 ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00002000;
               }
@@ -27427,7 +28052,7 @@ public final class DataServiceProto {
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00004000;
               }
@@ -27436,7 +28061,7 @@ public final class DataServiceProto {
               break;
             }
             case 130: {
-              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+              if (!((mutable_bitField0_ & 0x00008000) != 0)) {
                 ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00008000;
               }
@@ -27445,7 +28070,7 @@ public final class DataServiceProto {
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              if (!((mutable_bitField0_ & 0x00010000) != 0)) {
                 ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00010000;
               }
@@ -27454,7 +28079,7 @@ public final class DataServiceProto {
               break;
             }
             case 146: {
-              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+              if (!((mutable_bitField0_ & 0x00020000) != 0)) {
                 ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00020000;
               }
@@ -27463,7 +28088,7 @@ public final class DataServiceProto {
               break;
             }
             case 154: {
-              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              if (!((mutable_bitField0_ & 0x00040000) != 0)) {
                 supplierCorporateId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00040000;
               }
@@ -27472,7 +28097,7 @@ public final class DataServiceProto {
               break;
             }
             case 162: {
-              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+              if (!((mutable_bitField0_ & 0x00080000) != 0)) {
                 supplierCountryCode_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00080000;
               }
@@ -27481,7 +28106,7 @@ public final class DataServiceProto {
               break;
             }
             case 170: {
-              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+              if (!((mutable_bitField0_ & 0x00100000) != 0)) {
                 invoiceNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00100000;
               }
@@ -27490,7 +28115,7 @@ public final class DataServiceProto {
               break;
             }
             case 178: {
-              if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              if (!((mutable_bitField0_ & 0x00200000) != 0)) {
                 iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00200000;
               }
@@ -27499,7 +28124,7 @@ public final class DataServiceProto {
               break;
             }
             case 186: {
-              if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+              if (!((mutable_bitField0_ & 0x00400000) != 0)) {
                 orderReference_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00400000;
               }
@@ -27508,7 +28133,7 @@ public final class DataServiceProto {
               break;
             }
             case 194: {
-              if (!((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+              if (!((mutable_bitField0_ & 0x00800000) != 0)) {
                 bankAccountNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x00800000;
               }
@@ -27517,7 +28142,7 @@ public final class DataServiceProto {
               break;
             }
             case 202: {
-              if (!((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+              if (!((mutable_bitField0_ & 0x01000000) != 0)) {
                 bankRegistrationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
                 mutable_bitField0_ |= 0x01000000;
               }
@@ -27526,7 +28151,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -27540,79 +28165,79 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           documentType_ = java.util.Collections.unmodifiableList(documentType_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           currency_ = java.util.Collections.unmodifiableList(currency_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
           ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000800) != 0)) {
           ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
           ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((mutable_bitField0_ & 0x00002000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((mutable_bitField0_ & 0x00008000) != 0)) {
           ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((mutable_bitField0_ & 0x00010000) != 0)) {
           ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((mutable_bitField0_ & 0x00020000) != 0)) {
           ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((mutable_bitField0_ & 0x00040000) != 0)) {
           supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
         }
-        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((mutable_bitField0_ & 0x00080000) != 0)) {
           supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
         }
-        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((mutable_bitField0_ & 0x00100000) != 0)) {
           invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
         }
-        if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((mutable_bitField0_ & 0x00200000) != 0)) {
           iban_ = java.util.Collections.unmodifiableList(iban_);
         }
-        if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+        if (((mutable_bitField0_ & 0x00400000) != 0)) {
           orderReference_ = java.util.Collections.unmodifiableList(orderReference_);
         }
-        if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((mutable_bitField0_ & 0x00800000) != 0)) {
           bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
         }
-        if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+        if (((mutable_bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
         }
         this.unknownFields = unknownFields.build();
@@ -27637,12 +28262,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getTotalInclVatList() {
       return totalInclVat_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getTotalInclVatOrBuilderList() {
       return totalInclVat_;
@@ -27650,18 +28277,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public int getTotalInclVatCount() {
       return totalInclVat_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getTotalInclVat(int index) {
       return totalInclVat_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_incl_vat = 1;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getTotalInclVatOrBuilder(
         int index) {
       return totalInclVat_.get(index);
@@ -27672,12 +28302,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec total_vat = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getTotalVatList() {
       return totalVat_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_vat = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getTotalVatOrBuilderList() {
       return totalVat_;
@@ -27685,18 +28317,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec total_vat = 2;</code>
      */
+    @java.lang.Override
     public int getTotalVatCount() {
       return totalVat_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_vat = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getTotalVat(int index) {
       return totalVat_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_vat = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getTotalVatOrBuilder(
         int index) {
       return totalVat_.get(index);
@@ -27707,12 +28342,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getTotalExclVatList() {
       return totalExclVat_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getTotalExclVatOrBuilderList() {
       return totalExclVat_;
@@ -27720,18 +28357,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public int getTotalExclVatCount() {
       return totalExclVat_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getTotalExclVat(int index) {
       return totalExclVat_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec total_excl_vat = 3;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getTotalExclVatOrBuilder(
         int index) {
       return totalExclVat_.get(index);
@@ -27742,12 +28382,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec order_date = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOrderDateList() {
       return orderDate_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec order_date = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOrderDateOrBuilderList() {
       return orderDate_;
@@ -27755,18 +28397,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec order_date = 4;</code>
      */
+    @java.lang.Override
     public int getOrderDateCount() {
       return orderDate_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec order_date = 4;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOrderDate(int index) {
       return orderDate_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec order_date = 4;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOrderDateOrBuilder(
         int index) {
       return orderDate_.get(index);
@@ -27777,12 +28422,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getPaymentDueDateList() {
       return paymentDueDate_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getPaymentDueDateOrBuilderList() {
       return paymentDueDate_;
@@ -27790,18 +28437,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public int getPaymentDueDateCount() {
       return paymentDueDate_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getPaymentDueDate(int index) {
       return paymentDueDate_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec payment_due_date = 5;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getPaymentDueDateOrBuilder(
         int index) {
       return paymentDueDate_.get(index);
@@ -27812,12 +28462,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec document_type = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getDocumentTypeList() {
       return documentType_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec document_type = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getDocumentTypeOrBuilderList() {
       return documentType_;
@@ -27825,18 +28477,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec document_type = 6;</code>
      */
+    @java.lang.Override
     public int getDocumentTypeCount() {
       return documentType_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec document_type = 6;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getDocumentType(int index) {
       return documentType_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec document_type = 6;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getDocumentTypeOrBuilder(
         int index) {
       return documentType_.get(index);
@@ -27847,12 +28502,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec currency = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getCurrencyList() {
       return currency_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec currency = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getCurrencyOrBuilderList() {
       return currency_;
@@ -27860,18 +28517,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec currency = 7;</code>
      */
+    @java.lang.Override
     public int getCurrencyCount() {
       return currency_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec currency = 7;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getCurrency(int index) {
       return currency_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec currency = 7;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getCurrencyOrBuilder(
         int index) {
       return currency_.get(index);
@@ -27882,12 +28542,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getCreditCardLastFourList() {
       return creditCardLastFour_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getCreditCardLastFourOrBuilderList() {
       return creditCardLastFour_;
@@ -27895,18 +28557,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public int getCreditCardLastFourCount() {
       return creditCardLastFour_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getCreditCardLastFour(int index) {
       return creditCardLastFour_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec credit_card_last_four = 8;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getCreditCardLastFourOrBuilder(
         int index) {
       return creditCardLastFour_.get(index);
@@ -27917,12 +28582,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec payment_method = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getPaymentMethodList() {
       return paymentMethod_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec payment_method = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getPaymentMethodOrBuilderList() {
       return paymentMethod_;
@@ -27930,18 +28597,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec payment_method = 9;</code>
      */
+    @java.lang.Override
     public int getPaymentMethodCount() {
       return paymentMethod_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec payment_method = 9;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getPaymentMethod(int index) {
       return paymentMethod_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec payment_method = 9;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getPaymentMethodOrBuilder(
         int index) {
       return paymentMethod_.get(index);
@@ -27952,12 +28622,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineDkTypeList() {
       return ocrLineDkType_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineDkTypeOrBuilderList() {
       return ocrLineDkType_;
@@ -27965,18 +28637,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkTypeCount() {
       return ocrLineDkType_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineDkType(int index) {
       return ocrLineDkType_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_type = 10;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineDkTypeOrBuilder(
         int index) {
       return ocrLineDkType_.get(index);
@@ -27987,12 +28662,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineDkPaymentIdList() {
       return ocrLineDkPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList() {
       return ocrLineDkPaymentId_;
@@ -28000,18 +28677,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkPaymentIdCount() {
       return ocrLineDkPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineDkPaymentId(int index) {
       return ocrLineDkPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_payment_id = 11;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index) {
       return ocrLineDkPaymentId_.get(index);
@@ -28022,12 +28702,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineDkCreditorIdList() {
       return ocrLineDkCreditorId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList() {
       return ocrLineDkCreditorId_;
@@ -28035,18 +28717,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkCreditorIdCount() {
       return ocrLineDkCreditorId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineDkCreditorId(int index) {
       return ocrLineDkCreditorId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_creditor_id = 12;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index) {
       return ocrLineDkCreditorId_.get(index);
@@ -28057,12 +28742,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineSePaymentIdList() {
       return ocrLineSePaymentId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList() {
       return ocrLineSePaymentId_;
@@ -28070,18 +28757,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePaymentIdCount() {
       return ocrLineSePaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineSePaymentId(int index) {
       return ocrLineSePaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_payment_id = 13;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index) {
       return ocrLineSePaymentId_.get(index);
@@ -28092,12 +28782,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineSeBankgiroCreditorIdList() {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList() {
       return ocrLineSeBankgiroCreditorId_;
@@ -28105,18 +28797,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public int getOcrLineSeBankgiroCreditorIdCount() {
       return ocrLineSeBankgiroCreditorId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineSeBankgiroCreditorId(int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
@@ -28127,12 +28822,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineSePlusgiroCreditorIdList() {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList() {
       return ocrLineSePlusgiroCreditorId_;
@@ -28140,18 +28837,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePlusgiroCreditorIdCount() {
       return ocrLineSePlusgiroCreditorId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineSePlusgiroCreditorId(int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
@@ -28162,12 +28862,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineNoPaymentIdList() {
       return ocrLineNoPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList() {
       return ocrLineNoPaymentId_;
@@ -28175,18 +28877,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public int getOcrLineNoPaymentIdCount() {
       return ocrLineNoPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineNoPaymentId(int index) {
       return ocrLineNoPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_no_payment_id = 16;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index) {
       return ocrLineNoPaymentId_.get(index);
@@ -28197,12 +28902,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineFiPaymentIdList() {
       return ocrLineFiPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList() {
       return ocrLineFiPaymentId_;
@@ -28210,18 +28917,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public int getOcrLineFiPaymentIdCount() {
       return ocrLineFiPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineFiPaymentId(int index) {
       return ocrLineFiPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_fi_payment_id = 17;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index) {
       return ocrLineFiPaymentId_.get(index);
@@ -28232,12 +28942,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOcrLineNlPaymentIdList() {
       return ocrLineNlPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList() {
       return ocrLineNlPaymentId_;
@@ -28245,18 +28957,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public int getOcrLineNlPaymentIdCount() {
       return ocrLineNlPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOcrLineNlPaymentId(int index) {
       return ocrLineNlPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_nl_payment_id = 18;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index) {
       return ocrLineNlPaymentId_.get(index);
@@ -28267,12 +28982,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierCorporateIdList() {
       return supplierCorporateId_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getSupplierCorporateIdOrBuilderList() {
       return supplierCorporateId_;
@@ -28280,18 +28997,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public int getSupplierCorporateIdCount() {
       return supplierCorporateId_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getSupplierCorporateId(int index) {
       return supplierCorporateId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_corporate_id = 19;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierCorporateIdOrBuilder(
         int index) {
       return supplierCorporateId_.get(index);
@@ -28302,12 +29022,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierCountryCodeList() {
       return supplierCountryCode_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getSupplierCountryCodeOrBuilderList() {
       return supplierCountryCode_;
@@ -28315,18 +29037,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public int getSupplierCountryCodeCount() {
       return supplierCountryCode_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getSupplierCountryCode(int index) {
       return supplierCountryCode_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_country_code = 20;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierCountryCodeOrBuilder(
         int index) {
       return supplierCountryCode_.get(index);
@@ -28337,12 +29062,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec invoice_number = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getInvoiceNumberList() {
       return invoiceNumber_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec invoice_number = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getInvoiceNumberOrBuilderList() {
       return invoiceNumber_;
@@ -28350,18 +29077,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec invoice_number = 21;</code>
      */
+    @java.lang.Override
     public int getInvoiceNumberCount() {
       return invoiceNumber_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec invoice_number = 21;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getInvoiceNumber(int index) {
       return invoiceNumber_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec invoice_number = 21;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getInvoiceNumberOrBuilder(
         int index) {
       return invoiceNumber_.get(index);
@@ -28372,12 +29102,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getIbanList() {
       return iban_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getIbanOrBuilderList() {
       return iban_;
@@ -28385,18 +29117,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec iban = 22;</code>
      */
+    @java.lang.Override
     public int getIbanCount() {
       return iban_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec iban = 22;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getIban(int index) {
       return iban_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec iban = 22;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getIbanOrBuilder(
         int index) {
       return iban_.get(index);
@@ -28407,12 +29142,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec order_reference = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOrderReferenceList() {
       return orderReference_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec order_reference = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getOrderReferenceOrBuilderList() {
       return orderReference_;
@@ -28420,18 +29157,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec order_reference = 23;</code>
      */
+    @java.lang.Override
     public int getOrderReferenceCount() {
       return orderReference_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec order_reference = 23;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getOrderReference(int index) {
       return orderReference_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec order_reference = 23;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOrderReferenceOrBuilder(
         int index) {
       return orderReference_.get(index);
@@ -28442,12 +29182,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getBankAccountNumberList() {
       return bankAccountNumber_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getBankAccountNumberOrBuilderList() {
       return bankAccountNumber_;
@@ -28455,18 +29197,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public int getBankAccountNumberCount() {
       return bankAccountNumber_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getBankAccountNumber(int index) {
       return bankAccountNumber_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec bank_account_number = 24;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getBankAccountNumberOrBuilder(
         int index) {
       return bankAccountNumber_.get(index);
@@ -28477,12 +29222,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getBankRegistrationNumberList() {
       return bankRegistrationNumber_;
     }
     /**
      * <code>repeated .ssn.type.ModelSpec bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
         getBankRegistrationNumberOrBuilderList() {
       return bankRegistrationNumber_;
@@ -28490,18 +29237,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.type.ModelSpec bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public int getBankRegistrationNumberCount() {
       return bankRegistrationNumber_.size();
     }
     /**
      * <code>repeated .ssn.type.ModelSpec bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getBankRegistrationNumber(int index) {
       return bankRegistrationNumber_.get(index);
     }
     /**
      * <code>repeated .ssn.type.ModelSpec bank_registration_number = 25;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getBankRegistrationNumberOrBuilder(
         int index) {
       return bankRegistrationNumber_.get(index);
@@ -28720,59 +29470,58 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.PredictionMetadata other = (ssn.dataservice.v1.DataServiceProto.PredictionMetadata) obj;
 
-      boolean result = true;
-      result = result && getTotalInclVatList()
-          .equals(other.getTotalInclVatList());
-      result = result && getTotalVatList()
-          .equals(other.getTotalVatList());
-      result = result && getTotalExclVatList()
-          .equals(other.getTotalExclVatList());
-      result = result && getOrderDateList()
-          .equals(other.getOrderDateList());
-      result = result && getPaymentDueDateList()
-          .equals(other.getPaymentDueDateList());
-      result = result && getDocumentTypeList()
-          .equals(other.getDocumentTypeList());
-      result = result && getCurrencyList()
-          .equals(other.getCurrencyList());
-      result = result && getCreditCardLastFourList()
-          .equals(other.getCreditCardLastFourList());
-      result = result && getPaymentMethodList()
-          .equals(other.getPaymentMethodList());
-      result = result && getOcrLineDkTypeList()
-          .equals(other.getOcrLineDkTypeList());
-      result = result && getOcrLineDkPaymentIdList()
-          .equals(other.getOcrLineDkPaymentIdList());
-      result = result && getOcrLineDkCreditorIdList()
-          .equals(other.getOcrLineDkCreditorIdList());
-      result = result && getOcrLineSePaymentIdList()
-          .equals(other.getOcrLineSePaymentIdList());
-      result = result && getOcrLineSeBankgiroCreditorIdList()
-          .equals(other.getOcrLineSeBankgiroCreditorIdList());
-      result = result && getOcrLineSePlusgiroCreditorIdList()
-          .equals(other.getOcrLineSePlusgiroCreditorIdList());
-      result = result && getOcrLineNoPaymentIdList()
-          .equals(other.getOcrLineNoPaymentIdList());
-      result = result && getOcrLineFiPaymentIdList()
-          .equals(other.getOcrLineFiPaymentIdList());
-      result = result && getOcrLineNlPaymentIdList()
-          .equals(other.getOcrLineNlPaymentIdList());
-      result = result && getSupplierCorporateIdList()
-          .equals(other.getSupplierCorporateIdList());
-      result = result && getSupplierCountryCodeList()
-          .equals(other.getSupplierCountryCodeList());
-      result = result && getInvoiceNumberList()
-          .equals(other.getInvoiceNumberList());
-      result = result && getIbanList()
-          .equals(other.getIbanList());
-      result = result && getOrderReferenceList()
-          .equals(other.getOrderReferenceList());
-      result = result && getBankAccountNumberList()
-          .equals(other.getBankAccountNumberList());
-      result = result && getBankRegistrationNumberList()
-          .equals(other.getBankRegistrationNumberList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTotalInclVatList()
+          .equals(other.getTotalInclVatList())) return false;
+      if (!getTotalVatList()
+          .equals(other.getTotalVatList())) return false;
+      if (!getTotalExclVatList()
+          .equals(other.getTotalExclVatList())) return false;
+      if (!getOrderDateList()
+          .equals(other.getOrderDateList())) return false;
+      if (!getPaymentDueDateList()
+          .equals(other.getPaymentDueDateList())) return false;
+      if (!getDocumentTypeList()
+          .equals(other.getDocumentTypeList())) return false;
+      if (!getCurrencyList()
+          .equals(other.getCurrencyList())) return false;
+      if (!getCreditCardLastFourList()
+          .equals(other.getCreditCardLastFourList())) return false;
+      if (!getPaymentMethodList()
+          .equals(other.getPaymentMethodList())) return false;
+      if (!getOcrLineDkTypeList()
+          .equals(other.getOcrLineDkTypeList())) return false;
+      if (!getOcrLineDkPaymentIdList()
+          .equals(other.getOcrLineDkPaymentIdList())) return false;
+      if (!getOcrLineDkCreditorIdList()
+          .equals(other.getOcrLineDkCreditorIdList())) return false;
+      if (!getOcrLineSePaymentIdList()
+          .equals(other.getOcrLineSePaymentIdList())) return false;
+      if (!getOcrLineSeBankgiroCreditorIdList()
+          .equals(other.getOcrLineSeBankgiroCreditorIdList())) return false;
+      if (!getOcrLineSePlusgiroCreditorIdList()
+          .equals(other.getOcrLineSePlusgiroCreditorIdList())) return false;
+      if (!getOcrLineNoPaymentIdList()
+          .equals(other.getOcrLineNoPaymentIdList())) return false;
+      if (!getOcrLineFiPaymentIdList()
+          .equals(other.getOcrLineFiPaymentIdList())) return false;
+      if (!getOcrLineNlPaymentIdList()
+          .equals(other.getOcrLineNlPaymentIdList())) return false;
+      if (!getSupplierCorporateIdList()
+          .equals(other.getSupplierCorporateIdList())) return false;
+      if (!getSupplierCountryCodeList()
+          .equals(other.getSupplierCountryCodeList())) return false;
+      if (!getInvoiceNumberList()
+          .equals(other.getInvoiceNumberList())) return false;
+      if (!getIbanList()
+          .equals(other.getIbanList())) return false;
+      if (!getOrderReferenceList()
+          .equals(other.getOrderReferenceList())) return false;
+      if (!getBankAccountNumberList()
+          .equals(other.getBankAccountNumberList())) return false;
+      if (!getBankRegistrationNumberList()
+          .equals(other.getBankRegistrationNumberList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -29218,7 +29967,7 @@ public final class DataServiceProto {
         ssn.dataservice.v1.DataServiceProto.PredictionMetadata result = new ssn.dataservice.v1.DataServiceProto.PredictionMetadata(this);
         int from_bitField0_ = bitField0_;
         if (totalInclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -29227,7 +29976,7 @@ public final class DataServiceProto {
           result.totalInclVat_ = totalInclVatBuilder_.build();
         }
         if (totalVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -29236,7 +29985,7 @@ public final class DataServiceProto {
           result.totalVat_ = totalVatBuilder_.build();
         }
         if (totalExclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -29245,7 +29994,7 @@ public final class DataServiceProto {
           result.totalExclVat_ = totalExclVatBuilder_.build();
         }
         if (orderDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -29254,7 +30003,7 @@ public final class DataServiceProto {
           result.orderDate_ = orderDateBuilder_.build();
         }
         if (paymentDueDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -29263,7 +30012,7 @@ public final class DataServiceProto {
           result.paymentDueDate_ = paymentDueDateBuilder_.build();
         }
         if (documentTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             documentType_ = java.util.Collections.unmodifiableList(documentType_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -29272,7 +30021,7 @@ public final class DataServiceProto {
           result.documentType_ = documentTypeBuilder_.build();
         }
         if (currencyBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             currency_ = java.util.Collections.unmodifiableList(currency_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -29281,7 +30030,7 @@ public final class DataServiceProto {
           result.currency_ = currencyBuilder_.build();
         }
         if (creditCardLastFourBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -29290,7 +30039,7 @@ public final class DataServiceProto {
           result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
         }
         if (paymentMethodBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -29299,7 +30048,7 @@ public final class DataServiceProto {
           result.paymentMethod_ = paymentMethodBuilder_.build();
         }
         if (ocrLineDkTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
             bitField0_ = (bitField0_ & ~0x00000200);
           }
@@ -29308,7 +30057,7 @@ public final class DataServiceProto {
           result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
         }
         if (ocrLineDkPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
             bitField0_ = (bitField0_ & ~0x00000400);
           }
@@ -29317,7 +30066,7 @@ public final class DataServiceProto {
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
         }
         if (ocrLineDkCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00000800) != 0)) {
             ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
             bitField0_ = (bitField0_ & ~0x00000800);
           }
@@ -29326,7 +30075,7 @@ public final class DataServiceProto {
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
         }
         if (ocrLineSePaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          if (((bitField0_ & 0x00001000) != 0)) {
             ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
             bitField0_ = (bitField0_ & ~0x00001000);
           }
@@ -29335,7 +30084,7 @@ public final class DataServiceProto {
           result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
         }
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00002000);
           }
@@ -29344,7 +30093,7 @@ public final class DataServiceProto {
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
         }
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          if (((bitField0_ & 0x00004000) != 0)) {
             ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00004000);
           }
@@ -29353,7 +30102,7 @@ public final class DataServiceProto {
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
         }
         if (ocrLineNoPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
             bitField0_ = (bitField0_ & ~0x00008000);
           }
@@ -29362,7 +30111,7 @@ public final class DataServiceProto {
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
         }
         if (ocrLineFiPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          if (((bitField0_ & 0x00010000) != 0)) {
             ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
             bitField0_ = (bitField0_ & ~0x00010000);
           }
@@ -29371,7 +30120,7 @@ public final class DataServiceProto {
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
         }
         if (ocrLineNlPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
             bitField0_ = (bitField0_ & ~0x00020000);
           }
@@ -29380,7 +30129,7 @@ public final class DataServiceProto {
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
         }
         if (supplierCorporateIdBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
             bitField0_ = (bitField0_ & ~0x00040000);
           }
@@ -29389,7 +30138,7 @@ public final class DataServiceProto {
           result.supplierCorporateId_ = supplierCorporateIdBuilder_.build();
         }
         if (supplierCountryCodeBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+          if (((bitField0_ & 0x00080000) != 0)) {
             supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
             bitField0_ = (bitField0_ & ~0x00080000);
           }
@@ -29398,7 +30147,7 @@ public final class DataServiceProto {
           result.supplierCountryCode_ = supplierCountryCodeBuilder_.build();
         }
         if (invoiceNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          if (((bitField0_ & 0x00100000) != 0)) {
             invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
             bitField0_ = (bitField0_ & ~0x00100000);
           }
@@ -29407,7 +30156,7 @@ public final class DataServiceProto {
           result.invoiceNumber_ = invoiceNumberBuilder_.build();
         }
         if (ibanBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          if (((bitField0_ & 0x00200000) != 0)) {
             iban_ = java.util.Collections.unmodifiableList(iban_);
             bitField0_ = (bitField0_ & ~0x00200000);
           }
@@ -29416,7 +30165,7 @@ public final class DataServiceProto {
           result.iban_ = ibanBuilder_.build();
         }
         if (orderReferenceBuilder_ == null) {
-          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+          if (((bitField0_ & 0x00400000) != 0)) {
             orderReference_ = java.util.Collections.unmodifiableList(orderReference_);
             bitField0_ = (bitField0_ & ~0x00400000);
           }
@@ -29425,7 +30174,7 @@ public final class DataServiceProto {
           result.orderReference_ = orderReferenceBuilder_.build();
         }
         if (bankAccountNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00800000) == 0x00800000)) {
+          if (((bitField0_ & 0x00800000) != 0)) {
             bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
             bitField0_ = (bitField0_ & ~0x00800000);
           }
@@ -29434,7 +30183,7 @@ public final class DataServiceProto {
           result.bankAccountNumber_ = bankAccountNumberBuilder_.build();
         }
         if (bankRegistrationNumberBuilder_ == null) {
-          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+          if (((bitField0_ & 0x01000000) != 0)) {
             bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
             bitField0_ = (bitField0_ & ~0x01000000);
           }
@@ -29448,35 +30197,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -30173,7 +30922,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalInclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalInclVatIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           totalInclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(totalInclVat_);
           bitField0_ |= 0x00000001;
          }
@@ -30402,7 +31151,7 @@ public final class DataServiceProto {
           totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   totalInclVat_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           totalInclVat_ = null;
@@ -30413,7 +31162,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalVatIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           totalVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(totalVat_);
           bitField0_ |= 0x00000002;
          }
@@ -30642,7 +31391,7 @@ public final class DataServiceProto {
           totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   totalVat_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           totalVat_ = null;
@@ -30653,7 +31402,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalExclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalExclVatIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           totalExclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(totalExclVat_);
           bitField0_ |= 0x00000004;
          }
@@ -30882,7 +31631,7 @@ public final class DataServiceProto {
           totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   totalExclVat_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           totalExclVat_ = null;
@@ -30893,7 +31642,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> orderDate_ =
         java.util.Collections.emptyList();
       private void ensureOrderDateIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           orderDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(orderDate_);
           bitField0_ |= 0x00000008;
          }
@@ -31122,7 +31871,7 @@ public final class DataServiceProto {
           orderDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   orderDate_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           orderDate_ = null;
@@ -31133,7 +31882,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> paymentDueDate_ =
         java.util.Collections.emptyList();
       private void ensurePaymentDueDateIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           paymentDueDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(paymentDueDate_);
           bitField0_ |= 0x00000010;
          }
@@ -31362,7 +32111,7 @@ public final class DataServiceProto {
           paymentDueDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   paymentDueDate_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           paymentDueDate_ = null;
@@ -31373,7 +32122,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentType_ =
         java.util.Collections.emptyList();
       private void ensureDocumentTypeIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           documentType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(documentType_);
           bitField0_ |= 0x00000020;
          }
@@ -31602,7 +32351,7 @@ public final class DataServiceProto {
           documentTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   documentType_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           documentType_ = null;
@@ -31613,7 +32362,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> currency_ =
         java.util.Collections.emptyList();
       private void ensureCurrencyIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           currency_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(currency_);
           bitField0_ |= 0x00000040;
          }
@@ -31842,7 +32591,7 @@ public final class DataServiceProto {
           currencyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   currency_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           currency_ = null;
@@ -31853,7 +32602,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> creditCardLastFour_ =
         java.util.Collections.emptyList();
       private void ensureCreditCardLastFourIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           creditCardLastFour_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(creditCardLastFour_);
           bitField0_ |= 0x00000080;
          }
@@ -32082,7 +32831,7 @@ public final class DataServiceProto {
           creditCardLastFourBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   creditCardLastFour_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           creditCardLastFour_ = null;
@@ -32093,7 +32842,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> paymentMethod_ =
         java.util.Collections.emptyList();
       private void ensurePaymentMethodIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           paymentMethod_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(paymentMethod_);
           bitField0_ |= 0x00000100;
          }
@@ -32322,7 +33071,7 @@ public final class DataServiceProto {
           paymentMethodBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   paymentMethod_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           paymentMethod_ = null;
@@ -32333,7 +33082,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineDkType_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkTypeIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineDkType_);
           bitField0_ |= 0x00000200;
          }
@@ -32562,7 +33311,7 @@ public final class DataServiceProto {
           ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineDkType_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkType_ = null;
@@ -32573,7 +33322,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineDkPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineDkPaymentId_);
           bitField0_ |= 0x00000400;
          }
@@ -32802,7 +33551,7 @@ public final class DataServiceProto {
           ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineDkPaymentId_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkPaymentId_ = null;
@@ -32813,7 +33562,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineDkCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000800) != 0)) {
           ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineDkCreditorId_);
           bitField0_ |= 0x00000800;
          }
@@ -33042,7 +33791,7 @@ public final class DataServiceProto {
           ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineDkCreditorId_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00000800) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkCreditorId_ = null;
@@ -33053,7 +33802,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineSePaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineSePaymentId_);
           bitField0_ |= 0x00001000;
          }
@@ -33282,7 +34031,7 @@ public final class DataServiceProto {
           ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineSePaymentId_,
-                  ((bitField0_ & 0x00001000) == 0x00001000),
+                  ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePaymentId_ = null;
@@ -33293,7 +34042,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineSeBankgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineSeBankgiroCreditorId_);
           bitField0_ |= 0x00002000;
          }
@@ -33522,7 +34271,7 @@ public final class DataServiceProto {
           ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineSeBankgiroCreditorId_,
-                  ((bitField0_ & 0x00002000) == 0x00002000),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSeBankgiroCreditorId_ = null;
@@ -33533,7 +34282,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineSePlusgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00004000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineSePlusgiroCreditorId_);
           bitField0_ |= 0x00004000;
          }
@@ -33762,7 +34511,7 @@ public final class DataServiceProto {
           ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineSePlusgiroCreditorId_,
-                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  ((bitField0_ & 0x00004000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePlusgiroCreditorId_ = null;
@@ -33773,7 +34522,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineNoPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNoPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineNoPaymentId_);
           bitField0_ |= 0x00008000;
          }
@@ -34002,7 +34751,7 @@ public final class DataServiceProto {
           ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineNoPaymentId_,
-                  ((bitField0_ & 0x00008000) == 0x00008000),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNoPaymentId_ = null;
@@ -34013,7 +34762,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineFiPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineFiPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineFiPaymentId_);
           bitField0_ |= 0x00010000;
          }
@@ -34242,7 +34991,7 @@ public final class DataServiceProto {
           ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineFiPaymentId_,
-                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineFiPaymentId_ = null;
@@ -34253,7 +35002,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineNlPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNlPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(ocrLineNlPaymentId_);
           bitField0_ |= 0x00020000;
          }
@@ -34482,7 +35231,7 @@ public final class DataServiceProto {
           ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   ocrLineNlPaymentId_,
-                  ((bitField0_ & 0x00020000) == 0x00020000),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNlPaymentId_ = null;
@@ -34493,7 +35242,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierCorporateId_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCorporateIdIsMutable() {
-        if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           supplierCorporateId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(supplierCorporateId_);
           bitField0_ |= 0x00040000;
          }
@@ -34722,7 +35471,7 @@ public final class DataServiceProto {
           supplierCorporateIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   supplierCorporateId_,
-                  ((bitField0_ & 0x00040000) == 0x00040000),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCorporateId_ = null;
@@ -34733,7 +35482,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierCountryCode_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCountryCodeIsMutable() {
-        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (!((bitField0_ & 0x00080000) != 0)) {
           supplierCountryCode_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(supplierCountryCode_);
           bitField0_ |= 0x00080000;
          }
@@ -34962,7 +35711,7 @@ public final class DataServiceProto {
           supplierCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   supplierCountryCode_,
-                  ((bitField0_ & 0x00080000) == 0x00080000),
+                  ((bitField0_ & 0x00080000) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCountryCode_ = null;
@@ -34973,7 +35722,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> invoiceNumber_ =
         java.util.Collections.emptyList();
       private void ensureInvoiceNumberIsMutable() {
-        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (!((bitField0_ & 0x00100000) != 0)) {
           invoiceNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(invoiceNumber_);
           bitField0_ |= 0x00100000;
          }
@@ -35202,7 +35951,7 @@ public final class DataServiceProto {
           invoiceNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   invoiceNumber_,
-                  ((bitField0_ & 0x00100000) == 0x00100000),
+                  ((bitField0_ & 0x00100000) != 0),
                   getParentForChildren(),
                   isClean());
           invoiceNumber_ = null;
@@ -35213,7 +35962,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> iban_ =
         java.util.Collections.emptyList();
       private void ensureIbanIsMutable() {
-        if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (!((bitField0_ & 0x00200000) != 0)) {
           iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(iban_);
           bitField0_ |= 0x00200000;
          }
@@ -35442,7 +36191,7 @@ public final class DataServiceProto {
           ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   iban_,
-                  ((bitField0_ & 0x00200000) == 0x00200000),
+                  ((bitField0_ & 0x00200000) != 0),
                   getParentForChildren(),
                   isClean());
           iban_ = null;
@@ -35453,7 +36202,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> orderReference_ =
         java.util.Collections.emptyList();
       private void ensureOrderReferenceIsMutable() {
-        if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+        if (!((bitField0_ & 0x00400000) != 0)) {
           orderReference_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(orderReference_);
           bitField0_ |= 0x00400000;
          }
@@ -35682,7 +36431,7 @@ public final class DataServiceProto {
           orderReferenceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   orderReference_,
-                  ((bitField0_ & 0x00400000) == 0x00400000),
+                  ((bitField0_ & 0x00400000) != 0),
                   getParentForChildren(),
                   isClean());
           orderReference_ = null;
@@ -35693,7 +36442,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> bankAccountNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankAccountNumberIsMutable() {
-        if (!((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (!((bitField0_ & 0x00800000) != 0)) {
           bankAccountNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(bankAccountNumber_);
           bitField0_ |= 0x00800000;
          }
@@ -35922,7 +36671,7 @@ public final class DataServiceProto {
           bankAccountNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   bankAccountNumber_,
-                  ((bitField0_ & 0x00800000) == 0x00800000),
+                  ((bitField0_ & 0x00800000) != 0),
                   getParentForChildren(),
                   isClean());
           bankAccountNumber_ = null;
@@ -35933,7 +36682,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> bankRegistrationNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankRegistrationNumberIsMutable() {
-        if (!((bitField0_ & 0x01000000) == 0x01000000)) {
+        if (!((bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(bankRegistrationNumber_);
           bitField0_ |= 0x01000000;
          }
@@ -36162,7 +36911,7 @@ public final class DataServiceProto {
           bankRegistrationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
                   bankRegistrationNumber_,
-                  ((bitField0_ & 0x01000000) == 0x01000000),
+                  ((bitField0_ & 0x01000000) != 0),
                   getParentForChildren(),
                   isClean());
           bankRegistrationNumber_ = null;
@@ -36172,7 +36921,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -36228,10 +36977,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return The document.
      */
     ssn.dataservice.v1.DataServiceProto.Document getDocument();
     /**
@@ -36242,7 +36993,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.CreateDocumentRequest}
    */
-  public  static final class CreateDocumentRequest extends
+  public static final class CreateDocumentRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.CreateDocumentRequest)
       CreateDocumentRequestOrBuilder {
@@ -36252,6 +37003,13 @@ public final class DataServiceProto {
       super(builder);
     }
     private CreateDocumentRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDocumentRequest();
     }
 
     @java.lang.Override
@@ -36267,7 +37025,6 @@ public final class DataServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -36292,7 +37049,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -36327,19 +37084,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.Document document_;
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return Whether the document field is set.
      */
+    @java.lang.Override
     public boolean hasDocument() {
       return document_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return The document.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.Document getDocument() {
       return document_ == null ? ssn.dataservice.v1.DataServiceProto.Document.getDefaultInstance() : document_;
     }
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.DocumentOrBuilder getDocumentOrBuilder() {
       return getDocument();
     }
@@ -36389,14 +37151,13 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.CreateDocumentRequest other = (ssn.dataservice.v1.DataServiceProto.CreateDocumentRequest) obj;
 
-      boolean result = true;
-      result = result && (hasDocument() == other.hasDocument());
+      if (hasDocument() != other.hasDocument()) return false;
       if (hasDocument()) {
-        result = result && getDocument()
-            .equals(other.getDocument());
+        if (!getDocument()
+            .equals(other.getDocument())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -36586,35 +37347,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -36660,17 +37421,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.Document document_ = null;
+      private ssn.dataservice.v1.DataServiceProto.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.Document, ssn.dataservice.v1.DataServiceProto.Document.Builder, ssn.dataservice.v1.DataServiceProto.DocumentOrBuilder> documentBuilder_;
       /**
        * <code>.ssn.dataservice.v1.Document document = 1;</code>
+       * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1;</code>
+       * @return The document.
        */
       public ssn.dataservice.v1.DataServiceProto.Document getDocument() {
         if (documentBuilder_ == null) {
@@ -36779,7 +37542,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -36835,10 +37598,12 @@ public final class DataServiceProto {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -36846,7 +37611,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.CreateDocumentResponse}
    */
-  public  static final class CreateDocumentResponse extends
+  public static final class CreateDocumentResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.CreateDocumentResponse)
       CreateDocumentResponseOrBuilder {
@@ -36857,6 +37622,13 @@ public final class DataServiceProto {
     }
     private CreateDocumentResponse() {
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDocumentResponse();
     }
 
     @java.lang.Override
@@ -36872,7 +37644,6 @@ public final class DataServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -36890,7 +37661,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -36925,7 +37696,9 @@ public final class DataServiceProto {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -36940,7 +37713,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -36999,11 +37774,10 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.CreateDocumentResponse other = (ssn.dataservice.v1.DataServiceProto.CreateDocumentResponse) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -37183,35 +37957,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -37261,6 +38035,7 @@ public final class DataServiceProto {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -37276,6 +38051,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -37292,6 +38068,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -37305,6 +38083,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -37314,6 +38093,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -37329,7 +38110,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -37385,10 +38166,12 @@ public final class DataServiceProto {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -37396,7 +38179,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.ReadDocumentRequest}
    */
-  public  static final class ReadDocumentRequest extends
+  public static final class ReadDocumentRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.ReadDocumentRequest)
       ReadDocumentRequestOrBuilder {
@@ -37407,6 +38190,13 @@ public final class DataServiceProto {
     }
     private ReadDocumentRequest() {
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReadDocumentRequest();
     }
 
     @java.lang.Override
@@ -37422,7 +38212,6 @@ public final class DataServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -37440,7 +38229,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -37475,7 +38264,9 @@ public final class DataServiceProto {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -37490,7 +38281,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -37549,11 +38342,10 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.ReadDocumentRequest other = (ssn.dataservice.v1.DataServiceProto.ReadDocumentRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -37733,35 +38525,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -37811,6 +38603,7 @@ public final class DataServiceProto {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -37826,6 +38619,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -37842,6 +38636,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -37855,6 +38651,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -37864,6 +38661,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -37879,7 +38678,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -37935,10 +38734,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return The document.
      */
     ssn.dataservice.v1.DataServiceProto.Document getDocument();
     /**
@@ -37949,7 +38750,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.ReadDocumentResponse}
    */
-  public  static final class ReadDocumentResponse extends
+  public static final class ReadDocumentResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.ReadDocumentResponse)
       ReadDocumentResponseOrBuilder {
@@ -37959,6 +38760,13 @@ public final class DataServiceProto {
       super(builder);
     }
     private ReadDocumentResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReadDocumentResponse();
     }
 
     @java.lang.Override
@@ -37974,7 +38782,6 @@ public final class DataServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -37999,7 +38806,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -38034,19 +38841,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.Document document_;
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return Whether the document field is set.
      */
+    @java.lang.Override
     public boolean hasDocument() {
       return document_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
+     * @return The document.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.Document getDocument() {
       return document_ == null ? ssn.dataservice.v1.DataServiceProto.Document.getDefaultInstance() : document_;
     }
     /**
      * <code>.ssn.dataservice.v1.Document document = 1;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.DocumentOrBuilder getDocumentOrBuilder() {
       return getDocument();
     }
@@ -38096,14 +38908,13 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.ReadDocumentResponse other = (ssn.dataservice.v1.DataServiceProto.ReadDocumentResponse) obj;
 
-      boolean result = true;
-      result = result && (hasDocument() == other.hasDocument());
+      if (hasDocument() != other.hasDocument()) return false;
       if (hasDocument()) {
-        result = result && getDocument()
-            .equals(other.getDocument());
+        if (!getDocument()
+            .equals(other.getDocument())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -38293,35 +39104,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -38367,17 +39178,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.Document document_ = null;
+      private ssn.dataservice.v1.DataServiceProto.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.Document, ssn.dataservice.v1.DataServiceProto.Document.Builder, ssn.dataservice.v1.DataServiceProto.DocumentOrBuilder> documentBuilder_;
       /**
        * <code>.ssn.dataservice.v1.Document document = 1;</code>
+       * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1;</code>
+       * @return The document.
        */
       public ssn.dataservice.v1.DataServiceProto.Document getDocument() {
         if (documentBuilder_ == null) {
@@ -38486,7 +39299,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -38542,20 +39355,24 @@ public final class DataServiceProto {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>.ssn.type.TextAnnotation ta = 2;</code>
+     * @return Whether the ta field is set.
      */
     boolean hasTa();
     /**
      * <code>.ssn.type.TextAnnotation ta = 2;</code>
+     * @return The ta.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTa();
     /**
@@ -38565,15 +39382,18 @@ public final class DataServiceProto {
 
     /**
      * <code>bytes document_bytes = 3;</code>
+     * @return The documentBytes.
      */
     com.google.protobuf.ByteString getDocumentBytes();
 
     /**
      * <code>.ssn.dataservice.v1.PredictionValues predictions = 4;</code>
+     * @return Whether the predictions field is set.
      */
     boolean hasPredictions();
     /**
      * <code>.ssn.dataservice.v1.PredictionValues predictions = 4;</code>
+     * @return The predictions.
      */
     ssn.dataservice.v1.DataServiceProto.PredictionValues getPredictions();
     /**
@@ -38583,29 +39403,37 @@ public final class DataServiceProto {
 
     /**
      * <code>repeated string tags = 5;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 5;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     * @return Whether the confidences field is set.
      */
     boolean hasConfidences();
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     * @return The confidences.
      */
     ssn.dataservice.v1.DataServiceProto.PredictionConfidences getConfidences();
     /**
@@ -38615,10 +39443,12 @@ public final class DataServiceProto {
 
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     * @return Whether the predictionMetadata field is set.
      */
     boolean hasPredictionMetadata();
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     * @return The predictionMetadata.
      */
     ssn.dataservice.v1.DataServiceProto.PredictionMetadata getPredictionMetadata();
     /**
@@ -38628,28 +39458,36 @@ public final class DataServiceProto {
 
     /**
      * <code>.ssn.type.Tier tier = 8;</code>
+     * @return The enum numeric value on the wire for tier.
      */
     int getTierValue();
     /**
      * <code>.ssn.type.Tier tier = 8;</code>
+     * @return The tier.
      */
     ssn.type.TierOuterClass.Tier getTier();
 
     /**
      * <code>repeated string segments = 9;</code>
+     * @return A list containing the segments.
      */
     java.util.List<java.lang.String>
         getSegmentsList();
     /**
      * <code>repeated string segments = 9;</code>
+     * @return The count of segments.
      */
     int getSegmentsCount();
     /**
      * <code>repeated string segments = 9;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
      */
     java.lang.String getSegments(int index);
     /**
      * <code>repeated string segments = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
      */
     com.google.protobuf.ByteString
         getSegmentsBytes(int index);
@@ -38657,7 +39495,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.PrepareFeedbackRequest}
    */
-  public  static final class PrepareFeedbackRequest extends
+  public static final class PrepareFeedbackRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.PrepareFeedbackRequest)
       PrepareFeedbackRequestOrBuilder {
@@ -38672,6 +39510,13 @@ public final class DataServiceProto {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       tier_ = 0;
       segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrepareFeedbackRequest();
     }
 
     @java.lang.Override
@@ -38737,9 +39582,9 @@ public final class DataServiceProto {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
               break;
@@ -38778,15 +39623,15 @@ public final class DataServiceProto {
             }
             case 74: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 segments_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000002;
               }
               segments_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -38800,10 +39645,10 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           segments_ = segments_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -38823,12 +39668,13 @@ public final class DataServiceProto {
               ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest.class, ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -38843,7 +39689,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -38862,19 +39710,24 @@ public final class DataServiceProto {
     private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_;
     /**
      * <code>.ssn.type.TextAnnotation ta = 2;</code>
+     * @return Whether the ta field is set.
      */
+    @java.lang.Override
     public boolean hasTa() {
       return ta_ != null;
     }
     /**
      * <code>.ssn.type.TextAnnotation ta = 2;</code>
+     * @return The ta.
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
       return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
     }
     /**
      * <code>.ssn.type.TextAnnotation ta = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
       return getTa();
     }
@@ -38883,7 +39736,9 @@ public final class DataServiceProto {
     private com.google.protobuf.ByteString documentBytes_;
     /**
      * <code>bytes document_bytes = 3;</code>
+     * @return The documentBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDocumentBytes() {
       return documentBytes_;
     }
@@ -38892,19 +39747,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.PredictionValues predictions_;
     /**
      * <code>.ssn.dataservice.v1.PredictionValues predictions = 4;</code>
+     * @return Whether the predictions field is set.
      */
+    @java.lang.Override
     public boolean hasPredictions() {
       return predictions_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionValues predictions = 4;</code>
+     * @return The predictions.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionValues getPredictions() {
       return predictions_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionValues.getDefaultInstance() : predictions_;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionValues predictions = 4;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionValuesOrBuilder getPredictionsOrBuilder() {
       return getPredictions();
     }
@@ -38913,6 +39773,7 @@ public final class DataServiceProto {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -38920,18 +39781,23 @@ public final class DataServiceProto {
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -38942,19 +39808,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.PredictionConfidences confidences_;
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     * @return Whether the confidences field is set.
      */
+    @java.lang.Override
     public boolean hasConfidences() {
       return confidences_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     * @return The confidences.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionConfidences getConfidences() {
       return confidences_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionConfidences.getDefaultInstance() : confidences_;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionConfidencesOrBuilder getConfidencesOrBuilder() {
       return getConfidences();
     }
@@ -38963,19 +39834,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.PredictionMetadata predictionMetadata_;
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     * @return Whether the predictionMetadata field is set.
      */
+    @java.lang.Override
     public boolean hasPredictionMetadata() {
       return predictionMetadata_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     * @return The predictionMetadata.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionMetadata getPredictionMetadata() {
       return predictionMetadata_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionMetadata.getDefaultInstance() : predictionMetadata_;
     }
     /**
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder() {
       return getPredictionMetadata();
     }
@@ -38984,14 +39860,16 @@ public final class DataServiceProto {
     private int tier_;
     /**
      * <code>.ssn.type.Tier tier = 8;</code>
+     * @return The enum numeric value on the wire for tier.
      */
-    public int getTierValue() {
+    @java.lang.Override public int getTierValue() {
       return tier_;
     }
     /**
      * <code>.ssn.type.Tier tier = 8;</code>
+     * @return The tier.
      */
-    public ssn.type.TierOuterClass.Tier getTier() {
+    @java.lang.Override public ssn.type.TierOuterClass.Tier getTier() {
       @SuppressWarnings("deprecation")
       ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
       return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
@@ -39001,6 +39879,7 @@ public final class DataServiceProto {
     private com.google.protobuf.LazyStringList segments_;
     /**
      * <code>repeated string segments = 9;</code>
+     * @return A list containing the segments.
      */
     public com.google.protobuf.ProtocolStringList
         getSegmentsList() {
@@ -39008,18 +39887,23 @@ public final class DataServiceProto {
     }
     /**
      * <code>repeated string segments = 9;</code>
+     * @return The count of segments.
      */
     public int getSegmentsCount() {
       return segments_.size();
     }
     /**
      * <code>repeated string segments = 9;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
      */
     public java.lang.String getSegments(int index) {
       return segments_.get(index);
     }
     /**
      * <code>repeated string segments = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
      */
     public com.google.protobuf.ByteString
         getSegmentsBytes(int index) {
@@ -39134,38 +40018,37 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest other = (ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasTa() == other.hasTa());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasTa() != other.hasTa()) return false;
       if (hasTa()) {
-        result = result && getTa()
-            .equals(other.getTa());
+        if (!getTa()
+            .equals(other.getTa())) return false;
       }
-      result = result && getDocumentBytes()
-          .equals(other.getDocumentBytes());
-      result = result && (hasPredictions() == other.hasPredictions());
+      if (!getDocumentBytes()
+          .equals(other.getDocumentBytes())) return false;
+      if (hasPredictions() != other.hasPredictions()) return false;
       if (hasPredictions()) {
-        result = result && getPredictions()
-            .equals(other.getPredictions());
+        if (!getPredictions()
+            .equals(other.getPredictions())) return false;
       }
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && (hasConfidences() == other.hasConfidences());
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (hasConfidences() != other.hasConfidences()) return false;
       if (hasConfidences()) {
-        result = result && getConfidences()
-            .equals(other.getConfidences());
+        if (!getConfidences()
+            .equals(other.getConfidences())) return false;
       }
-      result = result && (hasPredictionMetadata() == other.hasPredictionMetadata());
+      if (hasPredictionMetadata() != other.hasPredictionMetadata()) return false;
       if (hasPredictionMetadata()) {
-        result = result && getPredictionMetadata()
-            .equals(other.getPredictionMetadata());
+        if (!getPredictionMetadata()
+            .equals(other.getPredictionMetadata())) return false;
       }
-      result = result && tier_ == other.tier_;
-      result = result && getSegmentsList()
-          .equals(other.getSegmentsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (tier_ != other.tier_) return false;
+      if (!getSegmentsList()
+          .equals(other.getSegmentsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -39355,7 +40238,7 @@ public final class DataServiceProto {
           predictionsBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (confidencesBuilder_ == null) {
           confidences_ = null;
         } else {
@@ -39371,7 +40254,7 @@ public final class DataServiceProto {
         tier_ = 0;
 
         segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -39399,7 +40282,6 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest result = new ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         if (taBuilder_ == null) {
           result.ta_ = ta_;
@@ -39412,9 +40294,9 @@ public final class DataServiceProto {
         } else {
           result.predictions_ = predictionsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
         if (confidencesBuilder_ == null) {
@@ -39428,47 +40310,46 @@ public final class DataServiceProto {
           result.predictionMetadata_ = predictionMetadataBuilder_.build();
         }
         result.tier_ = tier_;
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           segments_ = segments_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.segments_ = segments_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -39498,7 +40379,7 @@ public final class DataServiceProto {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -39517,7 +40398,7 @@ public final class DataServiceProto {
         if (!other.segments_.isEmpty()) {
           if (segments_.isEmpty()) {
             segments_ = other.segments_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureSegmentsIsMutable();
             segments_.addAll(other.segments_);
@@ -39557,6 +40438,7 @@ public final class DataServiceProto {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -39572,6 +40454,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -39588,6 +40471,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -39601,6 +40486,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -39610,6 +40496,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -39623,17 +40511,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_ = null;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> taBuilder_;
       /**
        * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       * @return Whether the ta field is set.
        */
       public boolean hasTa() {
         return taBuilder_ != null || ta_ != null;
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       * @return The ta.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
         if (taBuilder_ == null) {
@@ -39743,12 +40633,16 @@ public final class DataServiceProto {
       private com.google.protobuf.ByteString documentBytes_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes document_bytes = 3;</code>
+       * @return The documentBytes.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getDocumentBytes() {
         return documentBytes_;
       }
       /**
        * <code>bytes document_bytes = 3;</code>
+       * @param value The documentBytes to set.
+       * @return This builder for chaining.
        */
       public Builder setDocumentBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -39761,6 +40655,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>bytes document_bytes = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDocumentBytes() {
         
@@ -39769,17 +40664,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.PredictionValues predictions_ = null;
+      private ssn.dataservice.v1.DataServiceProto.PredictionValues predictions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.PredictionValues, ssn.dataservice.v1.DataServiceProto.PredictionValues.Builder, ssn.dataservice.v1.DataServiceProto.PredictionValuesOrBuilder> predictionsBuilder_;
       /**
        * <code>.ssn.dataservice.v1.PredictionValues predictions = 4;</code>
+       * @return Whether the predictions field is set.
        */
       public boolean hasPredictions() {
         return predictionsBuilder_ != null || predictions_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues predictions = 4;</code>
+       * @return The predictions.
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionValues getPredictions() {
         if (predictionsBuilder_ == null) {
@@ -39888,13 +40785,14 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -39902,18 +40800,23 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -39921,6 +40824,9 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -39934,6 +40840,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -39947,6 +40855,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -39958,15 +40868,18 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -39980,17 +40893,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.PredictionConfidences confidences_ = null;
+      private ssn.dataservice.v1.DataServiceProto.PredictionConfidences confidences_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.PredictionConfidences, ssn.dataservice.v1.DataServiceProto.PredictionConfidences.Builder, ssn.dataservice.v1.DataServiceProto.PredictionConfidencesOrBuilder> confidencesBuilder_;
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       * @return Whether the confidences field is set.
        */
       public boolean hasConfidences() {
         return confidencesBuilder_ != null || confidences_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       * @return The confidences.
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionConfidences getConfidences() {
         if (confidencesBuilder_ == null) {
@@ -40097,17 +41012,19 @@ public final class DataServiceProto {
         return confidencesBuilder_;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.PredictionMetadata predictionMetadata_ = null;
+      private ssn.dataservice.v1.DataServiceProto.PredictionMetadata predictionMetadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.PredictionMetadata, ssn.dataservice.v1.DataServiceProto.PredictionMetadata.Builder, ssn.dataservice.v1.DataServiceProto.PredictionMetadataOrBuilder> predictionMetadataBuilder_;
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       * @return Whether the predictionMetadata field is set.
        */
       public boolean hasPredictionMetadata() {
         return predictionMetadataBuilder_ != null || predictionMetadata_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       * @return The predictionMetadata.
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionMetadata getPredictionMetadata() {
         if (predictionMetadataBuilder_ == null) {
@@ -40217,21 +41134,27 @@ public final class DataServiceProto {
       private int tier_ = 0;
       /**
        * <code>.ssn.type.Tier tier = 8;</code>
+       * @return The enum numeric value on the wire for tier.
        */
-      public int getTierValue() {
+      @java.lang.Override public int getTierValue() {
         return tier_;
       }
       /**
        * <code>.ssn.type.Tier tier = 8;</code>
+       * @param value The enum numeric value on the wire for tier to set.
+       * @return This builder for chaining.
        */
       public Builder setTierValue(int value) {
+        
         tier_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.Tier tier = 8;</code>
+       * @return The tier.
        */
+      @java.lang.Override
       public ssn.type.TierOuterClass.Tier getTier() {
         @SuppressWarnings("deprecation")
         ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
@@ -40239,6 +41162,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>.ssn.type.Tier tier = 8;</code>
+       * @param value The tier to set.
+       * @return This builder for chaining.
        */
       public Builder setTier(ssn.type.TierOuterClass.Tier value) {
         if (value == null) {
@@ -40251,6 +41176,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>.ssn.type.Tier tier = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTier() {
         
@@ -40261,13 +41187,14 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSegmentsIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @return A list containing the segments.
        */
       public com.google.protobuf.ProtocolStringList
           getSegmentsList() {
@@ -40275,18 +41202,23 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @return The count of segments.
        */
       public int getSegmentsCount() {
         return segments_.size();
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @param index The index of the element to return.
+       * @return The segments at the given index.
        */
       public java.lang.String getSegments(int index) {
         return segments_.get(index);
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the segments at the given index.
        */
       public com.google.protobuf.ByteString
           getSegmentsBytes(int index) {
@@ -40294,6 +41226,9 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The segments to set.
+       * @return This builder for chaining.
        */
       public Builder setSegments(
           int index, java.lang.String value) {
@@ -40307,6 +41242,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @param value The segments to add.
+       * @return This builder for chaining.
        */
       public Builder addSegments(
           java.lang.String value) {
@@ -40320,6 +41257,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @param values The segments to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSegments(
           java.lang.Iterable<java.lang.String> values) {
@@ -40331,15 +41270,18 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSegments() {
         segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string segments = 9;</code>
+       * @param value The bytes of the segments to add.
+       * @return This builder for chaining.
        */
       public Builder addSegmentsBytes(
           com.google.protobuf.ByteString value) {
@@ -40355,7 +41297,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -40411,20 +41353,24 @@ public final class DataServiceProto {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 2;</code>
+     * @return Whether the trueValues field is set.
      */
     boolean hasTrueValues();
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 2;</code>
+     * @return The trueValues.
      */
     ssn.dataservice.v1.DataServiceProto.TrueValues getTrueValues();
     /**
@@ -40434,19 +41380,25 @@ public final class DataServiceProto {
 
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -40454,7 +41406,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.FeedbackRequest}
    */
-  public  static final class FeedbackRequest extends
+  public static final class FeedbackRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.FeedbackRequest)
       FeedbackRequestOrBuilder {
@@ -40466,6 +41418,13 @@ public final class DataServiceProto {
     private FeedbackRequest() {
       id_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeedbackRequest();
     }
 
     @java.lang.Override
@@ -40513,15 +41472,15 @@ public final class DataServiceProto {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -40535,7 +41494,7 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -40555,12 +41514,13 @@ public final class DataServiceProto {
               ssn.dataservice.v1.DataServiceProto.FeedbackRequest.class, ssn.dataservice.v1.DataServiceProto.FeedbackRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -40575,7 +41535,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -40594,19 +41556,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.TrueValues trueValues_;
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 2;</code>
+     * @return Whether the trueValues field is set.
      */
+    @java.lang.Override
     public boolean hasTrueValues() {
       return trueValues_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 2;</code>
+     * @return The trueValues.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.TrueValues getTrueValues() {
       return trueValues_ == null ? ssn.dataservice.v1.DataServiceProto.TrueValues.getDefaultInstance() : trueValues_;
     }
     /**
      * <code>.ssn.dataservice.v1.TrueValues true_values = 2;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.TrueValuesOrBuilder getTrueValuesOrBuilder() {
       return getTrueValues();
     }
@@ -40615,6 +41582,7 @@ public final class DataServiceProto {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -40622,18 +41590,23 @@ public final class DataServiceProto {
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -40702,18 +41675,17 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.FeedbackRequest other = (ssn.dataservice.v1.DataServiceProto.FeedbackRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasTrueValues() == other.hasTrueValues());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasTrueValues() != other.hasTrueValues()) return false;
       if (hasTrueValues()) {
-        result = result && getTrueValues()
-            .equals(other.getTrueValues());
+        if (!getTrueValues()
+            .equals(other.getTrueValues())) return false;
       }
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -40875,7 +41847,7 @@ public final class DataServiceProto {
           trueValuesBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -40903,54 +41875,52 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.FeedbackRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.FeedbackRequest result = new ssn.dataservice.v1.DataServiceProto.FeedbackRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         if (trueValuesBuilder_ == null) {
           result.trueValues_ = trueValues_;
         } else {
           result.trueValues_ = trueValuesBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -40974,7 +41944,7 @@ public final class DataServiceProto {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -41014,6 +41984,7 @@ public final class DataServiceProto {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -41029,6 +42000,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -41045,6 +42017,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -41058,6 +42032,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -41067,6 +42042,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -41080,17 +42057,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.TrueValues trueValues_ = null;
+      private ssn.dataservice.v1.DataServiceProto.TrueValues trueValues_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.TrueValues, ssn.dataservice.v1.DataServiceProto.TrueValues.Builder, ssn.dataservice.v1.DataServiceProto.TrueValuesOrBuilder> trueValuesBuilder_;
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 2;</code>
+       * @return Whether the trueValues field is set.
        */
       public boolean hasTrueValues() {
         return trueValuesBuilder_ != null || trueValues_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 2;</code>
+       * @return The trueValues.
        */
       public ssn.dataservice.v1.DataServiceProto.TrueValues getTrueValues() {
         if (trueValuesBuilder_ == null) {
@@ -41199,13 +42178,14 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -41213,18 +42193,23 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -41232,6 +42217,9 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -41245,6 +42233,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -41258,6 +42248,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -41269,15 +42261,18 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -41293,7 +42288,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -41349,48 +42344,62 @@ public final class DataServiceProto {
 
     /**
      * <code>int64 start_time = 2;</code>
+     * @return The startTime.
      */
     long getStartTime();
 
     /**
      * <code>int64 end_time = 3;</code>
+     * @return The endTime.
      */
     long getEndTime();
 
     /**
      * <code>repeated string fields = 4;</code>
+     * @return A list containing the fields.
      */
     java.util.List<java.lang.String>
         getFieldsList();
     /**
      * <code>repeated string fields = 4;</code>
+     * @return The count of fields.
      */
     int getFieldsCount();
     /**
      * <code>repeated string fields = 4;</code>
+     * @param index The index of the element to return.
+     * @return The fields at the given index.
      */
     java.lang.String getFields(int index);
     /**
      * <code>repeated string fields = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fields at the given index.
      */
     com.google.protobuf.ByteString
         getFieldsBytes(int index);
 
     /**
      * <code>repeated string tags = 5;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 5;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -41398,7 +42407,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.MetricsRequest}
    */
-  public  static final class MetricsRequest extends
+  public static final class MetricsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.MetricsRequest)
       MetricsRequestOrBuilder {
@@ -41408,10 +42417,15 @@ public final class DataServiceProto {
       super(builder);
     }
     private MetricsRequest() {
-      startTime_ = 0L;
-      endTime_ = 0L;
       fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MetricsRequest();
     }
 
     @java.lang.Override
@@ -41450,24 +42464,24 @@ public final class DataServiceProto {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 fields_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               fields_.add(s);
               break;
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000002;
               }
               tags_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -41481,10 +42495,10 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           fields_ = fields_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -41504,12 +42518,13 @@ public final class DataServiceProto {
               ssn.dataservice.v1.DataServiceProto.MetricsRequest.class, ssn.dataservice.v1.DataServiceProto.MetricsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 2;
     private long startTime_;
     /**
      * <code>int64 start_time = 2;</code>
+     * @return The startTime.
      */
+    @java.lang.Override
     public long getStartTime() {
       return startTime_;
     }
@@ -41518,7 +42533,9 @@ public final class DataServiceProto {
     private long endTime_;
     /**
      * <code>int64 end_time = 3;</code>
+     * @return The endTime.
      */
+    @java.lang.Override
     public long getEndTime() {
       return endTime_;
     }
@@ -41527,6 +42544,7 @@ public final class DataServiceProto {
     private com.google.protobuf.LazyStringList fields_;
     /**
      * <code>repeated string fields = 4;</code>
+     * @return A list containing the fields.
      */
     public com.google.protobuf.ProtocolStringList
         getFieldsList() {
@@ -41534,18 +42552,23 @@ public final class DataServiceProto {
     }
     /**
      * <code>repeated string fields = 4;</code>
+     * @return The count of fields.
      */
     public int getFieldsCount() {
       return fields_.size();
     }
     /**
      * <code>repeated string fields = 4;</code>
+     * @param index The index of the element to return.
+     * @return The fields at the given index.
      */
     public java.lang.String getFields(int index) {
       return fields_.get(index);
     }
     /**
      * <code>repeated string fields = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fields at the given index.
      */
     public com.google.protobuf.ByteString
         getFieldsBytes(int index) {
@@ -41556,6 +42579,7 @@ public final class DataServiceProto {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -41563,18 +42587,23 @@ public final class DataServiceProto {
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -41655,17 +42684,16 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.MetricsRequest other = (ssn.dataservice.v1.DataServiceProto.MetricsRequest) obj;
 
-      boolean result = true;
-      result = result && (getStartTime()
-          == other.getStartTime());
-      result = result && (getEndTime()
-          == other.getEndTime());
-      result = result && getFieldsList()
-          .equals(other.getFieldsList());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getStartTime()
+          != other.getStartTime()) return false;
+      if (getEndTime()
+          != other.getEndTime()) return false;
+      if (!getFieldsList()
+          .equals(other.getFieldsList())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -41827,9 +42855,9 @@ public final class DataServiceProto {
         endTime_ = 0L;
 
         fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -41857,55 +42885,53 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.MetricsRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.MetricsRequest result = new ssn.dataservice.v1.DataServiceProto.MetricsRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.startTime_ = startTime_;
         result.endTime_ = endTime_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           fields_ = fields_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.fields_ = fields_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -41928,7 +42954,7 @@ public final class DataServiceProto {
         if (!other.fields_.isEmpty()) {
           if (fields_.isEmpty()) {
             fields_ = other.fields_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFieldsIsMutable();
             fields_.addAll(other.fields_);
@@ -41938,7 +42964,7 @@ public final class DataServiceProto {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -41978,12 +43004,16 @@ public final class DataServiceProto {
       private long startTime_ ;
       /**
        * <code>int64 start_time = 2;</code>
+       * @return The startTime.
        */
+      @java.lang.Override
       public long getStartTime() {
         return startTime_;
       }
       /**
        * <code>int64 start_time = 2;</code>
+       * @param value The startTime to set.
+       * @return This builder for chaining.
        */
       public Builder setStartTime(long value) {
         
@@ -41993,6 +43023,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>int64 start_time = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStartTime() {
         
@@ -42004,12 +43035,16 @@ public final class DataServiceProto {
       private long endTime_ ;
       /**
        * <code>int64 end_time = 3;</code>
+       * @return The endTime.
        */
+      @java.lang.Override
       public long getEndTime() {
         return endTime_;
       }
       /**
        * <code>int64 end_time = 3;</code>
+       * @param value The endTime to set.
+       * @return This builder for chaining.
        */
       public Builder setEndTime(long value) {
         
@@ -42019,6 +43054,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>int64 end_time = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndTime() {
         
@@ -42029,13 +43065,14 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @return A list containing the fields.
        */
       public com.google.protobuf.ProtocolStringList
           getFieldsList() {
@@ -42043,18 +43080,23 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @return The count of fields.
        */
       public int getFieldsCount() {
         return fields_.size();
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @param index The index of the element to return.
+       * @return The fields at the given index.
        */
       public java.lang.String getFields(int index) {
         return fields_.get(index);
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fields at the given index.
        */
       public com.google.protobuf.ByteString
           getFieldsBytes(int index) {
@@ -42062,6 +43104,9 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The fields to set.
+       * @return This builder for chaining.
        */
       public Builder setFields(
           int index, java.lang.String value) {
@@ -42075,6 +43120,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @param value The fields to add.
+       * @return This builder for chaining.
        */
       public Builder addFields(
           java.lang.String value) {
@@ -42088,6 +43135,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @param values The fields to add.
+       * @return This builder for chaining.
        */
       public Builder addAllFields(
           java.lang.Iterable<java.lang.String> values) {
@@ -42099,15 +43148,18 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFields() {
         fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string fields = 4;</code>
+       * @param value The bytes of the fields to add.
+       * @return This builder for chaining.
        */
       public Builder addFieldsBytes(
           com.google.protobuf.ByteString value) {
@@ -42123,13 +43175,14 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -42137,18 +43190,23 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -42156,6 +43214,9 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -42169,6 +43230,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -42182,6 +43245,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -42193,15 +43258,18 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -42217,7 +43285,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -42273,20 +43341,24 @@ public final class DataServiceProto {
 
     /**
      * <code>int32 document_count = 1;</code>
+     * @return The documentCount.
      */
     int getDocumentCount();
 
     /**
      * <code>int32 feedback_count = 2;</code>
+     * @return The feedbackCount.
      */
     int getFeedbackCount();
 
     /**
      * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3;</code>
+     * @return Whether the overallCorrectness field is set.
      */
     boolean hasOverallCorrectness();
     /**
      * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3;</code>
+     * @return The overallCorrectness.
      */
     ssn.dataservice.v1.DataServiceProto.Correctness getOverallCorrectness();
     /**
@@ -42321,7 +43393,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.FeedbackMetrics}
    */
-  public  static final class FeedbackMetrics extends
+  public static final class FeedbackMetrics extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.FeedbackMetrics)
       FeedbackMetricsOrBuilder {
@@ -42331,9 +43403,14 @@ public final class DataServiceProto {
       super(builder);
     }
     private FeedbackMetrics() {
-      documentCount_ = 0;
-      feedbackCount_ = 0;
       fieldCorrectness_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeedbackMetrics();
     }
 
     @java.lang.Override
@@ -42384,16 +43461,16 @@ public final class DataServiceProto {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 fieldCorrectness_ = new java.util.ArrayList<ssn.dataservice.v1.DataServiceProto.Correctness>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               fieldCorrectness_.add(
                   input.readMessage(ssn.dataservice.v1.DataServiceProto.Correctness.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -42407,7 +43484,7 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           fieldCorrectness_ = java.util.Collections.unmodifiableList(fieldCorrectness_);
         }
         this.unknownFields = unknownFields.build();
@@ -42427,12 +43504,13 @@ public final class DataServiceProto {
               ssn.dataservice.v1.DataServiceProto.FeedbackMetrics.class, ssn.dataservice.v1.DataServiceProto.FeedbackMetrics.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DOCUMENT_COUNT_FIELD_NUMBER = 1;
     private int documentCount_;
     /**
      * <code>int32 document_count = 1;</code>
+     * @return The documentCount.
      */
+    @java.lang.Override
     public int getDocumentCount() {
       return documentCount_;
     }
@@ -42441,7 +43519,9 @@ public final class DataServiceProto {
     private int feedbackCount_;
     /**
      * <code>int32 feedback_count = 2;</code>
+     * @return The feedbackCount.
      */
+    @java.lang.Override
     public int getFeedbackCount() {
       return feedbackCount_;
     }
@@ -42450,19 +43530,24 @@ public final class DataServiceProto {
     private ssn.dataservice.v1.DataServiceProto.Correctness overallCorrectness_;
     /**
      * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3;</code>
+     * @return Whether the overallCorrectness field is set.
      */
+    @java.lang.Override
     public boolean hasOverallCorrectness() {
       return overallCorrectness_ != null;
     }
     /**
      * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3;</code>
+     * @return The overallCorrectness.
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.Correctness getOverallCorrectness() {
       return overallCorrectness_ == null ? ssn.dataservice.v1.DataServiceProto.Correctness.getDefaultInstance() : overallCorrectness_;
     }
     /**
      * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.CorrectnessOrBuilder getOverallCorrectnessOrBuilder() {
       return getOverallCorrectness();
     }
@@ -42472,12 +43557,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.dataservice.v1.Correctness field_correctness = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.dataservice.v1.DataServiceProto.Correctness> getFieldCorrectnessList() {
       return fieldCorrectness_;
     }
     /**
      * <code>repeated .ssn.dataservice.v1.Correctness field_correctness = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.dataservice.v1.DataServiceProto.CorrectnessOrBuilder> 
         getFieldCorrectnessOrBuilderList() {
       return fieldCorrectness_;
@@ -42485,18 +43572,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.dataservice.v1.Correctness field_correctness = 4;</code>
      */
+    @java.lang.Override
     public int getFieldCorrectnessCount() {
       return fieldCorrectness_.size();
     }
     /**
      * <code>repeated .ssn.dataservice.v1.Correctness field_correctness = 4;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.Correctness getFieldCorrectness(int index) {
       return fieldCorrectness_.get(index);
     }
     /**
      * <code>repeated .ssn.dataservice.v1.Correctness field_correctness = 4;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.CorrectnessOrBuilder getFieldCorrectnessOrBuilder(
         int index) {
       return fieldCorrectness_.get(index);
@@ -42568,20 +43658,19 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.FeedbackMetrics other = (ssn.dataservice.v1.DataServiceProto.FeedbackMetrics) obj;
 
-      boolean result = true;
-      result = result && (getDocumentCount()
-          == other.getDocumentCount());
-      result = result && (getFeedbackCount()
-          == other.getFeedbackCount());
-      result = result && (hasOverallCorrectness() == other.hasOverallCorrectness());
+      if (getDocumentCount()
+          != other.getDocumentCount()) return false;
+      if (getFeedbackCount()
+          != other.getFeedbackCount()) return false;
+      if (hasOverallCorrectness() != other.hasOverallCorrectness()) return false;
       if (hasOverallCorrectness()) {
-        result = result && getOverallCorrectness()
-            .equals(other.getOverallCorrectness());
+        if (!getOverallCorrectness()
+            .equals(other.getOverallCorrectness())) return false;
       }
-      result = result && getFieldCorrectnessList()
-          .equals(other.getFieldCorrectnessList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFieldCorrectnessList()
+          .equals(other.getFieldCorrectnessList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -42749,7 +43838,7 @@ public final class DataServiceProto {
         }
         if (fieldCorrectnessBuilder_ == null) {
           fieldCorrectness_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           fieldCorrectnessBuilder_.clear();
         }
@@ -42780,7 +43869,6 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.FeedbackMetrics buildPartial() {
         ssn.dataservice.v1.DataServiceProto.FeedbackMetrics result = new ssn.dataservice.v1.DataServiceProto.FeedbackMetrics(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.documentCount_ = documentCount_;
         result.feedbackCount_ = feedbackCount_;
         if (overallCorrectnessBuilder_ == null) {
@@ -42789,50 +43877,49 @@ public final class DataServiceProto {
           result.overallCorrectness_ = overallCorrectnessBuilder_.build();
         }
         if (fieldCorrectnessBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             fieldCorrectness_ = java.util.Collections.unmodifiableList(fieldCorrectness_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.fieldCorrectness_ = fieldCorrectness_;
         } else {
           result.fieldCorrectness_ = fieldCorrectnessBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -42859,7 +43946,7 @@ public final class DataServiceProto {
           if (!other.fieldCorrectness_.isEmpty()) {
             if (fieldCorrectness_.isEmpty()) {
               fieldCorrectness_ = other.fieldCorrectness_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureFieldCorrectnessIsMutable();
               fieldCorrectness_.addAll(other.fieldCorrectness_);
@@ -42872,7 +43959,7 @@ public final class DataServiceProto {
               fieldCorrectnessBuilder_.dispose();
               fieldCorrectnessBuilder_ = null;
               fieldCorrectness_ = other.fieldCorrectness_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
               fieldCorrectnessBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFieldCorrectnessFieldBuilder() : null;
@@ -42914,12 +44001,16 @@ public final class DataServiceProto {
       private int documentCount_ ;
       /**
        * <code>int32 document_count = 1;</code>
+       * @return The documentCount.
        */
+      @java.lang.Override
       public int getDocumentCount() {
         return documentCount_;
       }
       /**
        * <code>int32 document_count = 1;</code>
+       * @param value The documentCount to set.
+       * @return This builder for chaining.
        */
       public Builder setDocumentCount(int value) {
         
@@ -42929,6 +44020,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>int32 document_count = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDocumentCount() {
         
@@ -42940,12 +44032,16 @@ public final class DataServiceProto {
       private int feedbackCount_ ;
       /**
        * <code>int32 feedback_count = 2;</code>
+       * @return The feedbackCount.
        */
+      @java.lang.Override
       public int getFeedbackCount() {
         return feedbackCount_;
       }
       /**
        * <code>int32 feedback_count = 2;</code>
+       * @param value The feedbackCount to set.
+       * @return This builder for chaining.
        */
       public Builder setFeedbackCount(int value) {
         
@@ -42955,6 +44051,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>int32 feedback_count = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFeedbackCount() {
         
@@ -42963,17 +44060,19 @@ public final class DataServiceProto {
         return this;
       }
 
-      private ssn.dataservice.v1.DataServiceProto.Correctness overallCorrectness_ = null;
+      private ssn.dataservice.v1.DataServiceProto.Correctness overallCorrectness_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.dataservice.v1.DataServiceProto.Correctness, ssn.dataservice.v1.DataServiceProto.Correctness.Builder, ssn.dataservice.v1.DataServiceProto.CorrectnessOrBuilder> overallCorrectnessBuilder_;
       /**
        * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3;</code>
+       * @return Whether the overallCorrectness field is set.
        */
       public boolean hasOverallCorrectness() {
         return overallCorrectnessBuilder_ != null || overallCorrectness_ != null;
       }
       /**
        * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3;</code>
+       * @return The overallCorrectness.
        */
       public ssn.dataservice.v1.DataServiceProto.Correctness getOverallCorrectness() {
         if (overallCorrectnessBuilder_ == null) {
@@ -43083,9 +44182,9 @@ public final class DataServiceProto {
       private java.util.List<ssn.dataservice.v1.DataServiceProto.Correctness> fieldCorrectness_ =
         java.util.Collections.emptyList();
       private void ensureFieldCorrectnessIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           fieldCorrectness_ = new java.util.ArrayList<ssn.dataservice.v1.DataServiceProto.Correctness>(fieldCorrectness_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -43235,7 +44334,7 @@ public final class DataServiceProto {
       public Builder clearFieldCorrectness() {
         if (fieldCorrectnessBuilder_ == null) {
           fieldCorrectness_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           fieldCorrectnessBuilder_.clear();
@@ -43312,7 +44411,7 @@ public final class DataServiceProto {
           fieldCorrectnessBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.dataservice.v1.DataServiceProto.Correctness, ssn.dataservice.v1.DataServiceProto.Correctness.Builder, ssn.dataservice.v1.DataServiceProto.CorrectnessOrBuilder>(
                   fieldCorrectness_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           fieldCorrectness_ = null;
@@ -43322,7 +44421,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -43378,38 +44477,44 @@ public final class DataServiceProto {
 
     /**
      * <code>string field = 1;</code>
+     * @return The field.
      */
     java.lang.String getField();
     /**
      * <code>string field = 1;</code>
+     * @return The bytes for field.
      */
     com.google.protobuf.ByteString
         getFieldBytes();
 
     /**
      * <code>float correct_percentage = 2;</code>
+     * @return The correctPercentage.
      */
     float getCorrectPercentage();
 
     /**
      * <code>float incomplete_percentage = 3;</code>
+     * @return The incompletePercentage.
      */
     float getIncompletePercentage();
 
     /**
      * <code>float error_percentage = 4;</code>
+     * @return The errorPercentage.
      */
     float getErrorPercentage();
 
     /**
      * <code>int32 support = 5;</code>
+     * @return The support.
      */
     int getSupport();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.Correctness}
    */
-  public  static final class Correctness extends
+  public static final class Correctness extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.Correctness)
       CorrectnessOrBuilder {
@@ -43420,10 +44525,13 @@ public final class DataServiceProto {
     }
     private Correctness() {
       field_ = "";
-      correctPercentage_ = 0F;
-      incompletePercentage_ = 0F;
-      errorPercentage_ = 0F;
-      support_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Correctness();
     }
 
     @java.lang.Override
@@ -43439,7 +44547,6 @@ public final class DataServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -43477,7 +44584,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -43512,7 +44619,9 @@ public final class DataServiceProto {
     private volatile java.lang.Object field_;
     /**
      * <code>string field = 1;</code>
+     * @return The field.
      */
+    @java.lang.Override
     public java.lang.String getField() {
       java.lang.Object ref = field_;
       if (ref instanceof java.lang.String) {
@@ -43527,7 +44636,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string field = 1;</code>
+     * @return The bytes for field.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFieldBytes() {
       java.lang.Object ref = field_;
@@ -43546,7 +44657,9 @@ public final class DataServiceProto {
     private float correctPercentage_;
     /**
      * <code>float correct_percentage = 2;</code>
+     * @return The correctPercentage.
      */
+    @java.lang.Override
     public float getCorrectPercentage() {
       return correctPercentage_;
     }
@@ -43555,7 +44668,9 @@ public final class DataServiceProto {
     private float incompletePercentage_;
     /**
      * <code>float incomplete_percentage = 3;</code>
+     * @return The incompletePercentage.
      */
+    @java.lang.Override
     public float getIncompletePercentage() {
       return incompletePercentage_;
     }
@@ -43564,7 +44679,9 @@ public final class DataServiceProto {
     private float errorPercentage_;
     /**
      * <code>float error_percentage = 4;</code>
+     * @return The errorPercentage.
      */
+    @java.lang.Override
     public float getErrorPercentage() {
       return errorPercentage_;
     }
@@ -43573,7 +44690,9 @@ public final class DataServiceProto {
     private int support_;
     /**
      * <code>int32 support = 5;</code>
+     * @return The support.
      */
+    @java.lang.Override
     public int getSupport() {
       return support_;
     }
@@ -43650,25 +44769,21 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.Correctness other = (ssn.dataservice.v1.DataServiceProto.Correctness) obj;
 
-      boolean result = true;
-      result = result && getField()
-          .equals(other.getField());
-      result = result && (
-          java.lang.Float.floatToIntBits(getCorrectPercentage())
-          == java.lang.Float.floatToIntBits(
-              other.getCorrectPercentage()));
-      result = result && (
-          java.lang.Float.floatToIntBits(getIncompletePercentage())
-          == java.lang.Float.floatToIntBits(
-              other.getIncompletePercentage()));
-      result = result && (
-          java.lang.Float.floatToIntBits(getErrorPercentage())
-          == java.lang.Float.floatToIntBits(
-              other.getErrorPercentage()));
-      result = result && (getSupport()
-          == other.getSupport());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getField()
+          .equals(other.getField())) return false;
+      if (java.lang.Float.floatToIntBits(getCorrectPercentage())
+          != java.lang.Float.floatToIntBits(
+              other.getCorrectPercentage())) return false;
+      if (java.lang.Float.floatToIntBits(getIncompletePercentage())
+          != java.lang.Float.floatToIntBits(
+              other.getIncompletePercentage())) return false;
+      if (java.lang.Float.floatToIntBits(getErrorPercentage())
+          != java.lang.Float.floatToIntBits(
+              other.getErrorPercentage())) return false;
+      if (getSupport()
+          != other.getSupport()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -43871,35 +44986,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -43961,6 +45076,7 @@ public final class DataServiceProto {
       private java.lang.Object field_ = "";
       /**
        * <code>string field = 1;</code>
+       * @return The field.
        */
       public java.lang.String getField() {
         java.lang.Object ref = field_;
@@ -43976,6 +45092,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string field = 1;</code>
+       * @return The bytes for field.
        */
       public com.google.protobuf.ByteString
           getFieldBytes() {
@@ -43992,6 +45109,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string field = 1;</code>
+       * @param value The field to set.
+       * @return This builder for chaining.
        */
       public Builder setField(
           java.lang.String value) {
@@ -44005,6 +45124,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string field = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearField() {
         
@@ -44014,6 +45134,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string field = 1;</code>
+       * @param value The bytes for field to set.
+       * @return This builder for chaining.
        */
       public Builder setFieldBytes(
           com.google.protobuf.ByteString value) {
@@ -44030,12 +45152,16 @@ public final class DataServiceProto {
       private float correctPercentage_ ;
       /**
        * <code>float correct_percentage = 2;</code>
+       * @return The correctPercentage.
        */
+      @java.lang.Override
       public float getCorrectPercentage() {
         return correctPercentage_;
       }
       /**
        * <code>float correct_percentage = 2;</code>
+       * @param value The correctPercentage to set.
+       * @return This builder for chaining.
        */
       public Builder setCorrectPercentage(float value) {
         
@@ -44045,6 +45171,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>float correct_percentage = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCorrectPercentage() {
         
@@ -44056,12 +45183,16 @@ public final class DataServiceProto {
       private float incompletePercentage_ ;
       /**
        * <code>float incomplete_percentage = 3;</code>
+       * @return The incompletePercentage.
        */
+      @java.lang.Override
       public float getIncompletePercentage() {
         return incompletePercentage_;
       }
       /**
        * <code>float incomplete_percentage = 3;</code>
+       * @param value The incompletePercentage to set.
+       * @return This builder for chaining.
        */
       public Builder setIncompletePercentage(float value) {
         
@@ -44071,6 +45202,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>float incomplete_percentage = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIncompletePercentage() {
         
@@ -44082,12 +45214,16 @@ public final class DataServiceProto {
       private float errorPercentage_ ;
       /**
        * <code>float error_percentage = 4;</code>
+       * @return The errorPercentage.
        */
+      @java.lang.Override
       public float getErrorPercentage() {
         return errorPercentage_;
       }
       /**
        * <code>float error_percentage = 4;</code>
+       * @param value The errorPercentage to set.
+       * @return This builder for chaining.
        */
       public Builder setErrorPercentage(float value) {
         
@@ -44097,6 +45233,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>float error_percentage = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearErrorPercentage() {
         
@@ -44108,12 +45245,16 @@ public final class DataServiceProto {
       private int support_ ;
       /**
        * <code>int32 support = 5;</code>
+       * @return The support.
        */
+      @java.lang.Override
       public int getSupport() {
         return support_;
       }
       /**
        * <code>int32 support = 5;</code>
+       * @param value The support to set.
+       * @return This builder for chaining.
        */
       public Builder setSupport(int value) {
         
@@ -44123,6 +45264,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>int32 support = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSupport() {
         
@@ -44133,7 +45275,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -44189,19 +45331,25 @@ public final class DataServiceProto {
 
     /**
      * <code>repeated string tags = 1;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 1;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 1;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -44209,7 +45357,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.DeleteRequest}
    */
-  public  static final class DeleteRequest extends
+  public static final class DeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.DeleteRequest)
       DeleteRequestOrBuilder {
@@ -44220,6 +45368,13 @@ public final class DataServiceProto {
     }
     private DeleteRequest() {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRequest();
     }
 
     @java.lang.Override
@@ -44248,7 +45403,7 @@ public final class DataServiceProto {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -44256,7 +45411,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -44270,7 +45425,7 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -44294,6 +45449,7 @@ public final class DataServiceProto {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 1;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -44301,18 +45457,23 @@ public final class DataServiceProto {
     }
     /**
      * <code>repeated string tags = 1;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 1;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -44368,11 +45529,10 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.DeleteRequest other = (ssn.dataservice.v1.DataServiceProto.DeleteRequest) obj;
 
-      boolean result = true;
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -44548,7 +45708,7 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.DeleteRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.DeleteRequest result = new ssn.dataservice.v1.DataServiceProto.DeleteRequest(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -44559,35 +45719,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -44643,13 +45803,14 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -44657,18 +45818,23 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -44676,6 +45842,9 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -44689,6 +45858,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -44702,6 +45873,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -44713,6 +45886,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -44722,6 +45896,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>repeated string tags = 1;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -44737,7 +45913,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -44793,15 +45969,18 @@ public final class DataServiceProto {
 
     /**
      * <code>int64 calls = 1;</code>
+     * @return The calls.
      */
     long getCalls();
 
     /**
      * <code>string month_name = 2;</code>
+     * @return The monthName.
      */
     java.lang.String getMonthName();
     /**
      * <code>string month_name = 2;</code>
+     * @return The bytes for monthName.
      */
     com.google.protobuf.ByteString
         getMonthNameBytes();
@@ -44809,7 +45988,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.CallsPerMonth}
    */
-  public  static final class CallsPerMonth extends
+  public static final class CallsPerMonth extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.CallsPerMonth)
       CallsPerMonthOrBuilder {
@@ -44819,8 +45998,14 @@ public final class DataServiceProto {
       super(builder);
     }
     private CallsPerMonth() {
-      calls_ = 0L;
       monthName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CallsPerMonth();
     }
 
     @java.lang.Override
@@ -44836,7 +46021,6 @@ public final class DataServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -44859,7 +46043,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -44894,7 +46078,9 @@ public final class DataServiceProto {
     private long calls_;
     /**
      * <code>int64 calls = 1;</code>
+     * @return The calls.
      */
+    @java.lang.Override
     public long getCalls() {
       return calls_;
     }
@@ -44903,7 +46089,9 @@ public final class DataServiceProto {
     private volatile java.lang.Object monthName_;
     /**
      * <code>string month_name = 2;</code>
+     * @return The monthName.
      */
+    @java.lang.Override
     public java.lang.String getMonthName() {
       java.lang.Object ref = monthName_;
       if (ref instanceof java.lang.String) {
@@ -44918,7 +46106,9 @@ public final class DataServiceProto {
     }
     /**
      * <code>string month_name = 2;</code>
+     * @return The bytes for monthName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMonthNameBytes() {
       java.lang.Object ref = monthName_;
@@ -44984,13 +46174,12 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.CallsPerMonth other = (ssn.dataservice.v1.DataServiceProto.CallsPerMonth) obj;
 
-      boolean result = true;
-      result = result && (getCalls()
-          == other.getCalls());
-      result = result && getMonthName()
-          .equals(other.getMonthName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getCalls()
+          != other.getCalls()) return false;
+      if (!getMonthName()
+          .equals(other.getMonthName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -45176,35 +46365,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -45257,12 +46446,16 @@ public final class DataServiceProto {
       private long calls_ ;
       /**
        * <code>int64 calls = 1;</code>
+       * @return The calls.
        */
+      @java.lang.Override
       public long getCalls() {
         return calls_;
       }
       /**
        * <code>int64 calls = 1;</code>
+       * @param value The calls to set.
+       * @return This builder for chaining.
        */
       public Builder setCalls(long value) {
         
@@ -45272,6 +46465,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>int64 calls = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCalls() {
         
@@ -45283,6 +46477,7 @@ public final class DataServiceProto {
       private java.lang.Object monthName_ = "";
       /**
        * <code>string month_name = 2;</code>
+       * @return The monthName.
        */
       public java.lang.String getMonthName() {
         java.lang.Object ref = monthName_;
@@ -45298,6 +46493,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string month_name = 2;</code>
+       * @return The bytes for monthName.
        */
       public com.google.protobuf.ByteString
           getMonthNameBytes() {
@@ -45314,6 +46510,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string month_name = 2;</code>
+       * @param value The monthName to set.
+       * @return This builder for chaining.
        */
       public Builder setMonthName(
           java.lang.String value) {
@@ -45327,6 +46525,7 @@ public final class DataServiceProto {
       }
       /**
        * <code>string month_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMonthName() {
         
@@ -45336,6 +46535,8 @@ public final class DataServiceProto {
       }
       /**
        * <code>string month_name = 2;</code>
+       * @param value The bytes for monthName to set.
+       * @return This builder for chaining.
        */
       public Builder setMonthNameBytes(
           com.google.protobuf.ByteString value) {
@@ -45351,7 +46552,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -45432,7 +46633,7 @@ public final class DataServiceProto {
   /**
    * Protobuf type {@code ssn.dataservice.v1.CallsPerMonthResponse}
    */
-  public  static final class CallsPerMonthResponse extends
+  public static final class CallsPerMonthResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.CallsPerMonthResponse)
       CallsPerMonthResponseOrBuilder {
@@ -45443,6 +46644,13 @@ public final class DataServiceProto {
     }
     private CallsPerMonthResponse() {
       callsPerMonth_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CallsPerMonthResponse();
     }
 
     @java.lang.Override
@@ -45470,7 +46678,7 @@ public final class DataServiceProto {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 callsPerMonth_ = new java.util.ArrayList<ssn.dataservice.v1.DataServiceProto.CallsPerMonth>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -45479,7 +46687,7 @@ public final class DataServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -45493,7 +46701,7 @@ public final class DataServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           callsPerMonth_ = java.util.Collections.unmodifiableList(callsPerMonth_);
         }
         this.unknownFields = unknownFields.build();
@@ -45518,12 +46726,14 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.dataservice.v1.CallsPerMonth calls_per_month = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.dataservice.v1.DataServiceProto.CallsPerMonth> getCallsPerMonthList() {
       return callsPerMonth_;
     }
     /**
      * <code>repeated .ssn.dataservice.v1.CallsPerMonth calls_per_month = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.dataservice.v1.DataServiceProto.CallsPerMonthOrBuilder> 
         getCallsPerMonthOrBuilderList() {
       return callsPerMonth_;
@@ -45531,18 +46741,21 @@ public final class DataServiceProto {
     /**
      * <code>repeated .ssn.dataservice.v1.CallsPerMonth calls_per_month = 1;</code>
      */
+    @java.lang.Override
     public int getCallsPerMonthCount() {
       return callsPerMonth_.size();
     }
     /**
      * <code>repeated .ssn.dataservice.v1.CallsPerMonth calls_per_month = 1;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.CallsPerMonth getCallsPerMonth(int index) {
       return callsPerMonth_.get(index);
     }
     /**
      * <code>repeated .ssn.dataservice.v1.CallsPerMonth calls_per_month = 1;</code>
      */
+    @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.CallsPerMonthOrBuilder getCallsPerMonthOrBuilder(
         int index) {
       return callsPerMonth_.get(index);
@@ -45593,11 +46806,10 @@ public final class DataServiceProto {
       }
       ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse other = (ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse) obj;
 
-      boolean result = true;
-      result = result && getCallsPerMonthList()
-          .equals(other.getCallsPerMonthList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCallsPerMonthList()
+          .equals(other.getCallsPerMonthList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -45779,7 +46991,7 @@ public final class DataServiceProto {
         ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse result = new ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse(this);
         int from_bitField0_ = bitField0_;
         if (callsPerMonthBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             callsPerMonth_ = java.util.Collections.unmodifiableList(callsPerMonth_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -45793,35 +47005,35 @@ public final class DataServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -45894,7 +47106,7 @@ public final class DataServiceProto {
       private java.util.List<ssn.dataservice.v1.DataServiceProto.CallsPerMonth> callsPerMonth_ =
         java.util.Collections.emptyList();
       private void ensureCallsPerMonthIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           callsPerMonth_ = new java.util.ArrayList<ssn.dataservice.v1.DataServiceProto.CallsPerMonth>(callsPerMonth_);
           bitField0_ |= 0x00000001;
          }
@@ -46123,7 +47335,7 @@ public final class DataServiceProto {
           callsPerMonthBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.dataservice.v1.DataServiceProto.CallsPerMonth, ssn.dataservice.v1.DataServiceProto.CallsPerMonth.Builder, ssn.dataservice.v1.DataServiceProto.CallsPerMonthOrBuilder>(
                   callsPerMonth_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           callsPerMonth_ = null;
@@ -46133,7 +47345,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -46494,15 +47706,7 @@ public final class DataServiceProto {
       "c/vmlapis/gen/go/ssn/dataservice/v1;data" +
       "serviceb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
@@ -46514,7 +47718,7 @@ public final class DataServiceProto {
           ssn.type.CandidateOuterClass.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
           ssn.type.TierOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_ssn_dataservice_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_dataservice_v1_Document_fieldAccessorTable = new

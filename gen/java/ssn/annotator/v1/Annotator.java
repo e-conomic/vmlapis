@@ -24,6 +24,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -32,6 +33,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * @return The type.
      */
     ssn.annotator.v1.Annotator.Feature.Type getType();
 
@@ -42,6 +44,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>int32 max_results = 2;</code>
+     * @return The maxResults.
      */
     int getMaxResults();
 
@@ -51,6 +54,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
     /**
@@ -59,13 +63,14 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * @return The minConfidence.
      */
     ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence();
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.Feature}
    */
-  public  static final class Feature extends
+  public static final class Feature extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.annotator.v1.Feature)
       FeatureOrBuilder {
@@ -76,8 +81,14 @@ public final class Annotator {
     }
     private Feature() {
       type_ = 0;
-      maxResults_ = 0;
       minConfidence_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Feature();
     }
 
     @java.lang.Override
@@ -93,7 +104,6 @@ public final class Annotator {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -122,7 +132,7 @@ public final class Annotator {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -604,6 +614,8 @@ public final class Annotator {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -611,6 +623,10 @@ public final class Annotator {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return DEFAULT;
@@ -658,6 +674,10 @@ public final class Annotator {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -700,8 +720,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -710,8 +731,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * @return The type.
      */
-    public ssn.annotator.v1.Annotator.Feature.Type getType() {
+    @java.lang.Override public ssn.annotator.v1.Annotator.Feature.Type getType() {
       @SuppressWarnings("deprecation")
       ssn.annotator.v1.Annotator.Feature.Type result = ssn.annotator.v1.Annotator.Feature.Type.valueOf(type_);
       return result == null ? ssn.annotator.v1.Annotator.Feature.Type.UNRECOGNIZED : result;
@@ -726,7 +748,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>int32 max_results = 2;</code>
+     * @return The maxResults.
      */
+    @java.lang.Override
     public int getMaxResults() {
       return maxResults_;
     }
@@ -739,8 +763,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * @return The enum numeric value on the wire for minConfidence.
      */
-    public int getMinConfidenceValue() {
+    @java.lang.Override public int getMinConfidenceValue() {
       return minConfidence_;
     }
     /**
@@ -749,8 +774,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * @return The minConfidence.
      */
-    public ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence() {
+    @java.lang.Override public ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence() {
       @SuppressWarnings("deprecation")
       ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(minConfidence_);
       return result == null ? ssn.type.CandidateOuterClass.Confidence.Level.UNRECOGNIZED : result;
@@ -815,13 +841,12 @@ public final class Annotator {
       }
       ssn.annotator.v1.Annotator.Feature other = (ssn.annotator.v1.Annotator.Feature) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (getMaxResults()
-          == other.getMaxResults());
-      result = result && minConfidence_ == other.minConfidence_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (getMaxResults()
+          != other.getMaxResults()) return false;
+      if (minConfidence_ != other.minConfidence_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1011,35 +1036,35 @@ public final class Annotator {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1098,8 +1123,9 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -1108,8 +1134,11 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -1120,7 +1149,9 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public ssn.annotator.v1.Annotator.Feature.Type getType() {
         @SuppressWarnings("deprecation")
         ssn.annotator.v1.Annotator.Feature.Type result = ssn.annotator.v1.Annotator.Feature.Type.valueOf(type_);
@@ -1132,6 +1163,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(ssn.annotator.v1.Annotator.Feature.Type value) {
         if (value == null) {
@@ -1148,6 +1181,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1164,7 +1198,9 @@ public final class Annotator {
        * </pre>
        *
        * <code>int32 max_results = 2;</code>
+       * @return The maxResults.
        */
+      @java.lang.Override
       public int getMaxResults() {
         return maxResults_;
       }
@@ -1175,6 +1211,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>int32 max_results = 2;</code>
+       * @param value The maxResults to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxResults(int value) {
         
@@ -1189,6 +1227,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>int32 max_results = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxResults() {
         
@@ -1204,8 +1243,9 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * @return The enum numeric value on the wire for minConfidence.
        */
-      public int getMinConfidenceValue() {
+      @java.lang.Override public int getMinConfidenceValue() {
         return minConfidence_;
       }
       /**
@@ -1214,8 +1254,11 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * @param value The enum numeric value on the wire for minConfidence to set.
+       * @return This builder for chaining.
        */
       public Builder setMinConfidenceValue(int value) {
+        
         minConfidence_ = value;
         onChanged();
         return this;
@@ -1226,7 +1269,9 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * @return The minConfidence.
        */
+      @java.lang.Override
       public ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence() {
         @SuppressWarnings("deprecation")
         ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(minConfidence_);
@@ -1238,6 +1283,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * @param value The minConfidence to set.
+       * @return This builder for chaining.
        */
       public Builder setMinConfidence(ssn.type.CandidateOuterClass.Confidence.Level value) {
         if (value == null) {
@@ -1254,6 +1301,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
         
@@ -1264,7 +1312,7 @@ public final class Annotator {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1320,10 +1368,12 @@ public final class Annotator {
 
     /**
      * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
      * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * @return The document.
      */
     ssn.annotator.v1.Annotator.Document getDocument();
     /**
@@ -1357,47 +1407,61 @@ public final class Annotator {
 
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
      * <code>.ssn.type.Tier tier = 4;</code>
+     * @return The enum numeric value on the wire for tier.
      */
     int getTierValue();
     /**
      * <code>.ssn.type.Tier tier = 4;</code>
+     * @return The tier.
      */
     ssn.type.TierOuterClass.Tier getTier();
 
     /**
      * <code>repeated string segments = 5;</code>
+     * @return A list containing the segments.
      */
     java.util.List<java.lang.String>
         getSegmentsList();
     /**
      * <code>repeated string segments = 5;</code>
+     * @return The count of segments.
      */
     int getSegmentsCount();
     /**
      * <code>repeated string segments = 5;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
      */
     java.lang.String getSegments(int index);
     /**
      * <code>repeated string segments = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
      */
     com.google.protobuf.ByteString
         getSegmentsBytes(int index);
@@ -1405,7 +1469,7 @@ public final class Annotator {
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorRequest}
    */
-  public  static final class DocumentAnnotatorRequest extends
+  public static final class DocumentAnnotatorRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.annotator.v1.DocumentAnnotatorRequest)
       DocumentAnnotatorRequestOrBuilder {
@@ -1419,6 +1483,13 @@ public final class Annotator {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       tier_ = 0;
       segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DocumentAnnotatorRequest();
     }
 
     @java.lang.Override
@@ -1459,9 +1530,9 @@ public final class Annotator {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 features_ = new java.util.ArrayList<ssn.annotator.v1.Annotator.Feature>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               features_.add(
                   input.readMessage(ssn.annotator.v1.Annotator.Feature.parser(), extensionRegistry));
@@ -1469,9 +1540,9 @@ public final class Annotator {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               tags_.add(s);
               break;
@@ -1484,15 +1555,15 @@ public final class Annotator {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 segments_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000004;
               }
               segments_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1506,13 +1577,13 @@ public final class Annotator {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           features_ = java.util.Collections.unmodifiableList(features_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           segments_ = segments_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -1532,24 +1603,28 @@ public final class Annotator {
               ssn.annotator.v1.Annotator.DocumentAnnotatorRequest.class, ssn.annotator.v1.Annotator.DocumentAnnotatorRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DOCUMENT_FIELD_NUMBER = 1;
     private ssn.annotator.v1.Annotator.Document document_;
     /**
      * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * @return Whether the document field is set.
      */
+    @java.lang.Override
     public boolean hasDocument() {
       return document_ != null;
     }
     /**
      * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * @return The document.
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.Document getDocument() {
       return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
     /**
      * <code>.ssn.annotator.v1.Document document = 1;</code>
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
       return getDocument();
     }
@@ -1559,12 +1634,14 @@ public final class Annotator {
     /**
      * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.annotator.v1.Annotator.Feature> getFeaturesList() {
       return features_;
     }
     /**
      * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.annotator.v1.Annotator.FeatureOrBuilder> 
         getFeaturesOrBuilderList() {
       return features_;
@@ -1572,18 +1649,21 @@ public final class Annotator {
     /**
      * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
      */
+    @java.lang.Override
     public int getFeaturesCount() {
       return features_.size();
     }
     /**
      * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.Feature getFeatures(int index) {
       return features_.get(index);
     }
     /**
      * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.FeatureOrBuilder getFeaturesOrBuilder(
         int index) {
       return features_.get(index);
@@ -1593,6 +1673,7 @@ public final class Annotator {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -1600,18 +1681,23 @@ public final class Annotator {
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -1622,14 +1708,16 @@ public final class Annotator {
     private int tier_;
     /**
      * <code>.ssn.type.Tier tier = 4;</code>
+     * @return The enum numeric value on the wire for tier.
      */
-    public int getTierValue() {
+    @java.lang.Override public int getTierValue() {
       return tier_;
     }
     /**
      * <code>.ssn.type.Tier tier = 4;</code>
+     * @return The tier.
      */
-    public ssn.type.TierOuterClass.Tier getTier() {
+    @java.lang.Override public ssn.type.TierOuterClass.Tier getTier() {
       @SuppressWarnings("deprecation")
       ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
       return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
@@ -1639,6 +1727,7 @@ public final class Annotator {
     private com.google.protobuf.LazyStringList segments_;
     /**
      * <code>repeated string segments = 5;</code>
+     * @return A list containing the segments.
      */
     public com.google.protobuf.ProtocolStringList
         getSegmentsList() {
@@ -1646,18 +1735,23 @@ public final class Annotator {
     }
     /**
      * <code>repeated string segments = 5;</code>
+     * @return The count of segments.
      */
     public int getSegmentsCount() {
       return segments_.size();
     }
     /**
      * <code>repeated string segments = 5;</code>
+     * @param index The index of the element to return.
+     * @return The segments at the given index.
      */
     public java.lang.String getSegments(int index) {
       return segments_.get(index);
     }
     /**
      * <code>repeated string segments = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segments at the given index.
      */
     public com.google.protobuf.ByteString
         getSegmentsBytes(int index) {
@@ -1745,21 +1839,20 @@ public final class Annotator {
       }
       ssn.annotator.v1.Annotator.DocumentAnnotatorRequest other = (ssn.annotator.v1.Annotator.DocumentAnnotatorRequest) obj;
 
-      boolean result = true;
-      result = result && (hasDocument() == other.hasDocument());
+      if (hasDocument() != other.hasDocument()) return false;
       if (hasDocument()) {
-        result = result && getDocument()
-            .equals(other.getDocument());
+        if (!getDocument()
+            .equals(other.getDocument())) return false;
       }
-      result = result && getFeaturesList()
-          .equals(other.getFeaturesList());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && tier_ == other.tier_;
-      result = result && getSegmentsList()
-          .equals(other.getSegmentsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFeaturesList()
+          .equals(other.getFeaturesList())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (tier_ != other.tier_) return false;
+      if (!getSegmentsList()
+          .equals(other.getSegmentsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1929,16 +2022,16 @@ public final class Annotator {
         }
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           featuresBuilder_.clear();
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         tier_ = 0;
 
         segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -1966,68 +2059,66 @@ public final class Annotator {
       public ssn.annotator.v1.Annotator.DocumentAnnotatorRequest buildPartial() {
         ssn.annotator.v1.Annotator.DocumentAnnotatorRequest result = new ssn.annotator.v1.Annotator.DocumentAnnotatorRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (documentBuilder_ == null) {
           result.document_ = document_;
         } else {
           result.document_ = documentBuilder_.build();
         }
         if (featuresBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             features_ = java.util.Collections.unmodifiableList(features_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.features_ = features_;
         } else {
           result.features_ = featuresBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
         result.tier_ = tier_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           segments_ = segments_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.segments_ = segments_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2048,7 +2139,7 @@ public final class Annotator {
           if (!other.features_.isEmpty()) {
             if (features_.isEmpty()) {
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureFeaturesIsMutable();
               features_.addAll(other.features_);
@@ -2061,7 +2152,7 @@ public final class Annotator {
               featuresBuilder_.dispose();
               featuresBuilder_ = null;
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               featuresBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFeaturesFieldBuilder() : null;
@@ -2073,7 +2164,7 @@ public final class Annotator {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -2086,7 +2177,7 @@ public final class Annotator {
         if (!other.segments_.isEmpty()) {
           if (segments_.isEmpty()) {
             segments_ = other.segments_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSegmentsIsMutable();
             segments_.addAll(other.segments_);
@@ -2123,17 +2214,19 @@ public final class Annotator {
       }
       private int bitField0_;
 
-      private ssn.annotator.v1.Annotator.Document document_ = null;
+      private ssn.annotator.v1.Annotator.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> documentBuilder_;
       /**
        * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * @return The document.
        */
       public ssn.annotator.v1.Annotator.Document getDocument() {
         if (documentBuilder_ == null) {
@@ -2243,9 +2336,9 @@ public final class Annotator {
       private java.util.List<ssn.annotator.v1.Annotator.Feature> features_ =
         java.util.Collections.emptyList();
       private void ensureFeaturesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           features_ = new java.util.ArrayList<ssn.annotator.v1.Annotator.Feature>(features_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -2395,7 +2488,7 @@ public final class Annotator {
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           featuresBuilder_.clear();
@@ -2472,7 +2565,7 @@ public final class Annotator {
           featuresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.annotator.v1.Annotator.Feature, ssn.annotator.v1.Annotator.Feature.Builder, ssn.annotator.v1.Annotator.FeatureOrBuilder>(
                   features_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           features_ = null;
@@ -2482,13 +2575,14 @@ public final class Annotator {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -2496,18 +2590,23 @@ public final class Annotator {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -2515,6 +2614,9 @@ public final class Annotator {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -2528,6 +2630,8 @@ public final class Annotator {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -2541,6 +2645,8 @@ public final class Annotator {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -2552,15 +2658,18 @@ public final class Annotator {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -2577,21 +2686,27 @@ public final class Annotator {
       private int tier_ = 0;
       /**
        * <code>.ssn.type.Tier tier = 4;</code>
+       * @return The enum numeric value on the wire for tier.
        */
-      public int getTierValue() {
+      @java.lang.Override public int getTierValue() {
         return tier_;
       }
       /**
        * <code>.ssn.type.Tier tier = 4;</code>
+       * @param value The enum numeric value on the wire for tier to set.
+       * @return This builder for chaining.
        */
       public Builder setTierValue(int value) {
+        
         tier_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.Tier tier = 4;</code>
+       * @return The tier.
        */
+      @java.lang.Override
       public ssn.type.TierOuterClass.Tier getTier() {
         @SuppressWarnings("deprecation")
         ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
@@ -2599,6 +2714,8 @@ public final class Annotator {
       }
       /**
        * <code>.ssn.type.Tier tier = 4;</code>
+       * @param value The tier to set.
+       * @return This builder for chaining.
        */
       public Builder setTier(ssn.type.TierOuterClass.Tier value) {
         if (value == null) {
@@ -2611,6 +2728,7 @@ public final class Annotator {
       }
       /**
        * <code>.ssn.type.Tier tier = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTier() {
         
@@ -2621,13 +2739,14 @@ public final class Annotator {
 
       private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSegmentsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @return A list containing the segments.
        */
       public com.google.protobuf.ProtocolStringList
           getSegmentsList() {
@@ -2635,18 +2754,23 @@ public final class Annotator {
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @return The count of segments.
        */
       public int getSegmentsCount() {
         return segments_.size();
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @param index The index of the element to return.
+       * @return The segments at the given index.
        */
       public java.lang.String getSegments(int index) {
         return segments_.get(index);
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the segments at the given index.
        */
       public com.google.protobuf.ByteString
           getSegmentsBytes(int index) {
@@ -2654,6 +2778,9 @@ public final class Annotator {
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The segments to set.
+       * @return This builder for chaining.
        */
       public Builder setSegments(
           int index, java.lang.String value) {
@@ -2667,6 +2794,8 @@ public final class Annotator {
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @param value The segments to add.
+       * @return This builder for chaining.
        */
       public Builder addSegments(
           java.lang.String value) {
@@ -2680,6 +2809,8 @@ public final class Annotator {
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @param values The segments to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSegments(
           java.lang.Iterable<java.lang.String> values) {
@@ -2691,15 +2822,18 @@ public final class Annotator {
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSegments() {
         segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string segments = 5;</code>
+       * @param value The bytes of the segments to add.
+       * @return This builder for chaining.
        */
       public Builder addSegmentsBytes(
           com.google.protobuf.ByteString value) {
@@ -2715,7 +2849,7 @@ public final class Annotator {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3433,6 +3567,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * @return Whether the textAnnotation field is set.
      */
     boolean hasTextAnnotation();
     /**
@@ -3441,6 +3576,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * @return The textAnnotation.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
     /**
@@ -3854,6 +3990,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>string text = 23;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -3862,16 +3999,19 @@ public final class Annotator {
      * </pre>
      *
      * <code>string text = 23;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
 
     /**
      * <code>string feedback_id = 24;</code>
+     * @return The feedbackId.
      */
     java.lang.String getFeedbackId();
     /**
      * <code>string feedback_id = 24;</code>
+     * @return The bytes for feedbackId.
      */
     com.google.protobuf.ByteString
         getFeedbackIdBytes();
@@ -3985,6 +4125,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>string preview = 27;</code>
+     * @return The preview.
      */
     java.lang.String getPreview();
     /**
@@ -3993,6 +4134,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>string preview = 27;</code>
+     * @return The bytes for preview.
      */
     com.google.protobuf.ByteString
         getPreviewBytes();
@@ -4000,7 +4142,7 @@ public final class Annotator {
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
    */
-  public  static final class DocumentAnnotatorResponse extends
+  public static final class DocumentAnnotatorResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.annotator.v1.DocumentAnnotatorResponse)
       DocumentAnnotatorResponseOrBuilder {
@@ -4039,6 +4181,13 @@ public final class Annotator {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DocumentAnnotatorResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4063,7 +4212,7 @@ public final class Annotator {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 orderDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4072,7 +4221,7 @@ public final class Annotator {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 paymentDueDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -4081,7 +4230,7 @@ public final class Annotator {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 currency_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -4090,7 +4239,7 @@ public final class Annotator {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 totalVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -4099,7 +4248,7 @@ public final class Annotator {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 totalInclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -4108,7 +4257,7 @@ public final class Annotator {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 totalExclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -4117,7 +4266,7 @@ public final class Annotator {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 supplierCorporateId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -4126,7 +4275,7 @@ public final class Annotator {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 supplierCountryCode_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -4135,7 +4284,7 @@ public final class Annotator {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 documentType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -4144,7 +4293,7 @@ public final class Annotator {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 paymentMethod_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000200;
               }
@@ -4153,7 +4302,7 @@ public final class Annotator {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 creditCardLastFour_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000400;
               }
@@ -4162,7 +4311,7 @@ public final class Annotator {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
                 invoiceNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000800;
               }
@@ -4184,81 +4333,81 @@ public final class Annotator {
               break;
             }
             case 114: {
-              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
                 ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00002000;
+                mutable_bitField0_ |= 0x00001000;
               }
               ocrLineDkType_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
                 ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00004000;
+                mutable_bitField0_ |= 0x00002000;
               }
               ocrLineDkPaymentId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 130: {
-              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00008000;
+                mutable_bitField0_ |= 0x00004000;
               }
               ocrLineDkCreditorId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              if (!((mutable_bitField0_ & 0x00008000) != 0)) {
                 ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00010000;
+                mutable_bitField0_ |= 0x00008000;
               }
               ocrLineSePaymentId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 146: {
-              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+              if (!((mutable_bitField0_ & 0x00010000) != 0)) {
                 ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00020000;
+                mutable_bitField0_ |= 0x00010000;
               }
               ocrLineSeBankgiroCreditorId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 154: {
-              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              if (!((mutable_bitField0_ & 0x00020000) != 0)) {
                 ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00040000;
+                mutable_bitField0_ |= 0x00020000;
               }
               ocrLineSePlusgiroCreditorId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 162: {
-              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+              if (!((mutable_bitField0_ & 0x00040000) != 0)) {
                 ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00080000;
+                mutable_bitField0_ |= 0x00040000;
               }
               ocrLineNoPaymentId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 170: {
-              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+              if (!((mutable_bitField0_ & 0x00080000) != 0)) {
                 ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00100000;
+                mutable_bitField0_ |= 0x00080000;
               }
               ocrLineFiPaymentId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 178: {
-              if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              if (!((mutable_bitField0_ & 0x00100000) != 0)) {
                 ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00200000;
+                mutable_bitField0_ |= 0x00100000;
               }
               ocrLineNlPaymentId_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
@@ -4277,18 +4426,18 @@ public final class Annotator {
               break;
             }
             case 202: {
-              if (!((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+              if (!((mutable_bitField0_ & 0x00200000) != 0)) {
                 iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x01000000;
+                mutable_bitField0_ |= 0x00200000;
               }
               iban_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
             case 210: {
-              if (!((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+              if (!((mutable_bitField0_ & 0x00400000) != 0)) {
                 lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>();
-                mutable_bitField0_ |= 0x02000000;
+                mutable_bitField0_ |= 0x00400000;
               }
               lines_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.LineCandidate.parser(), extensionRegistry));
@@ -4301,7 +4450,7 @@ public final class Annotator {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4315,73 +4464,73 @@ public final class Annotator {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           currency_ = java.util.Collections.unmodifiableList(currency_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           documentType_ = java.util.Collections.unmodifiableList(documentType_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
           creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000800) != 0)) {
           invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
         }
-        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
           ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00002000) != 0)) {
           ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
           ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((mutable_bitField0_ & 0x00008000) != 0)) {
           ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((mutable_bitField0_ & 0x00010000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((mutable_bitField0_ & 0x00020000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((mutable_bitField0_ & 0x00040000) != 0)) {
           ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((mutable_bitField0_ & 0x00080000) != 0)) {
           ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((mutable_bitField0_ & 0x00100000) != 0)) {
           ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+        if (((mutable_bitField0_ & 0x00200000) != 0)) {
           iban_ = java.util.Collections.unmodifiableList(iban_);
         }
-        if (((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+        if (((mutable_bitField0_ & 0x00400000) != 0)) {
           lines_ = java.util.Collections.unmodifiableList(lines_);
         }
         this.unknownFields = unknownFields.build();
@@ -4401,7 +4550,6 @@ public final class Annotator {
               ssn.annotator.v1.Annotator.DocumentAnnotatorResponse.class, ssn.annotator.v1.Annotator.DocumentAnnotatorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORDER_DATE_FIELD_NUMBER = 1;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderDate_;
     /**
@@ -4413,6 +4561,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderDateList() {
       return orderDate_;
     }
@@ -4425,6 +4574,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOrderDateOrBuilderList() {
       return orderDate_;
@@ -4438,6 +4588,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public int getOrderDateCount() {
       return orderDate_.size();
     }
@@ -4450,6 +4601,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOrderDate(int index) {
       return orderDate_.get(index);
     }
@@ -4462,6 +4614,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
         int index) {
       return orderDate_.get(index);
@@ -4478,6 +4631,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentDueDateList() {
       return paymentDueDate_;
     }
@@ -4490,6 +4644,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentDueDateOrBuilderList() {
       return paymentDueDate_;
@@ -4503,6 +4658,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public int getPaymentDueDateCount() {
       return paymentDueDate_.size();
     }
@@ -4515,6 +4671,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index) {
       return paymentDueDate_.get(index);
     }
@@ -4527,6 +4684,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
         int index) {
       return paymentDueDate_.get(index);
@@ -4543,6 +4701,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCurrencyList() {
       return currency_;
     }
@@ -4555,6 +4714,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCurrencyOrBuilderList() {
       return currency_;
@@ -4568,6 +4728,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public int getCurrencyCount() {
       return currency_.size();
     }
@@ -4580,6 +4741,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCurrency(int index) {
       return currency_.get(index);
     }
@@ -4592,6 +4754,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
         int index) {
       return currency_.get(index);
@@ -4608,6 +4771,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalVatList() {
       return totalVat_;
     }
@@ -4620,6 +4784,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalVatOrBuilderList() {
       return totalVat_;
@@ -4633,6 +4798,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public int getTotalVatCount() {
       return totalVat_.size();
     }
@@ -4645,6 +4811,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalVat(int index) {
       return totalVat_.get(index);
     }
@@ -4657,6 +4824,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
         int index) {
       return totalVat_.get(index);
@@ -4673,6 +4841,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalInclVatList() {
       return totalInclVat_;
     }
@@ -4685,6 +4854,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalInclVatOrBuilderList() {
       return totalInclVat_;
@@ -4698,6 +4868,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public int getTotalInclVatCount() {
       return totalInclVat_.size();
     }
@@ -4710,6 +4881,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index) {
       return totalInclVat_.get(index);
     }
@@ -4722,6 +4894,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
         int index) {
       return totalInclVat_.get(index);
@@ -4738,6 +4911,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalExclVatList() {
       return totalExclVat_;
     }
@@ -4750,6 +4924,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalExclVatOrBuilderList() {
       return totalExclVat_;
@@ -4763,6 +4938,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public int getTotalExclVatCount() {
       return totalExclVat_.size();
     }
@@ -4775,6 +4951,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index) {
       return totalExclVat_.get(index);
     }
@@ -4787,6 +4964,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
         int index) {
       return totalExclVat_.get(index);
@@ -4807,6 +4985,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCorporateIdList() {
       return supplierCorporateId_;
     }
@@ -4823,6 +5002,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCorporateIdOrBuilderList() {
       return supplierCorporateId_;
@@ -4840,6 +5020,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public int getSupplierCorporateIdCount() {
       return supplierCorporateId_.size();
     }
@@ -4856,6 +5037,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index) {
       return supplierCorporateId_.get(index);
     }
@@ -4872,6 +5054,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
         int index) {
       return supplierCorporateId_.get(index);
@@ -4888,6 +5071,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCountryCodeList() {
       return supplierCountryCode_;
     }
@@ -4900,6 +5084,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCountryCodeOrBuilderList() {
       return supplierCountryCode_;
@@ -4913,6 +5098,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public int getSupplierCountryCodeCount() {
       return supplierCountryCode_.size();
     }
@@ -4925,6 +5111,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index) {
       return supplierCountryCode_.get(index);
     }
@@ -4937,6 +5124,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
         int index) {
       return supplierCountryCode_.get(index);
@@ -4952,6 +5140,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentTypeList() {
       return documentType_;
     }
@@ -4963,6 +5152,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentTypeOrBuilderList() {
       return documentType_;
@@ -4975,6 +5165,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public int getDocumentTypeCount() {
       return documentType_.size();
     }
@@ -4986,6 +5177,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentType(int index) {
       return documentType_.get(index);
     }
@@ -4997,6 +5189,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
         int index) {
       return documentType_.get(index);
@@ -5012,6 +5205,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentMethodList() {
       return paymentMethod_;
     }
@@ -5023,6 +5217,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentMethodOrBuilderList() {
       return paymentMethod_;
@@ -5035,6 +5230,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public int getPaymentMethodCount() {
       return paymentMethod_.size();
     }
@@ -5046,6 +5242,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index) {
       return paymentMethod_.get(index);
     }
@@ -5057,6 +5254,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
         int index) {
       return paymentMethod_.get(index);
@@ -5073,6 +5271,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardLastFourList() {
       return creditCardLastFour_;
     }
@@ -5085,6 +5284,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCreditCardLastFourOrBuilderList() {
       return creditCardLastFour_;
@@ -5098,6 +5298,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
      */
+    @java.lang.Override
     public int getCreditCardLastFourCount() {
       return creditCardLastFour_.size();
     }
@@ -5110,6 +5311,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index) {
       return creditCardLastFour_.get(index);
     }
@@ -5122,6 +5324,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
         int index) {
       return creditCardLastFour_.get(index);
@@ -5138,6 +5341,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInvoiceNumberList() {
       return invoiceNumber_;
     }
@@ -5150,6 +5354,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getInvoiceNumberOrBuilderList() {
       return invoiceNumber_;
@@ -5163,6 +5368,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public int getInvoiceNumberCount() {
       return invoiceNumber_.size();
     }
@@ -5175,6 +5381,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index) {
       return invoiceNumber_.get(index);
     }
@@ -5187,6 +5394,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
         int index) {
       return invoiceNumber_.get(index);
@@ -5200,7 +5408,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * @return Whether the textAnnotation field is set.
      */
+    @java.lang.Override
     public boolean hasTextAnnotation() {
       return textAnnotation_ != null;
     }
@@ -5210,7 +5420,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * @return The textAnnotation.
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
       return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
@@ -5221,6 +5433,7 @@ public final class Annotator {
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
       return getTextAnnotation();
     }
@@ -5234,6 +5447,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkTypeList() {
       return ocrLineDkType_;
     }
@@ -5244,6 +5458,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkTypeOrBuilderList() {
       return ocrLineDkType_;
@@ -5255,6 +5470,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkTypeCount() {
       return ocrLineDkType_.size();
     }
@@ -5265,6 +5481,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index) {
       return ocrLineDkType_.get(index);
     }
@@ -5275,6 +5492,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
         int index) {
       return ocrLineDkType_.get(index);
@@ -5289,6 +5507,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkPaymentIdList() {
       return ocrLineDkPaymentId_;
     }
@@ -5299,6 +5518,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList() {
       return ocrLineDkPaymentId_;
@@ -5310,6 +5530,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkPaymentIdCount() {
       return ocrLineDkPaymentId_.size();
     }
@@ -5320,6 +5541,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index) {
       return ocrLineDkPaymentId_.get(index);
     }
@@ -5330,6 +5552,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index) {
       return ocrLineDkPaymentId_.get(index);
@@ -5344,6 +5567,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkCreditorIdList() {
       return ocrLineDkCreditorId_;
     }
@@ -5354,6 +5578,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList() {
       return ocrLineDkCreditorId_;
@@ -5365,6 +5590,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkCreditorIdCount() {
       return ocrLineDkCreditorId_.size();
     }
@@ -5375,6 +5601,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index) {
       return ocrLineDkCreditorId_.get(index);
     }
@@ -5385,6 +5612,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index) {
       return ocrLineDkCreditorId_.get(index);
@@ -5399,6 +5627,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePaymentIdList() {
       return ocrLineSePaymentId_;
     }
@@ -5409,6 +5638,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList() {
       return ocrLineSePaymentId_;
@@ -5420,6 +5650,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePaymentIdCount() {
       return ocrLineSePaymentId_.size();
     }
@@ -5430,6 +5661,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index) {
       return ocrLineSePaymentId_.get(index);
     }
@@ -5440,6 +5672,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index) {
       return ocrLineSePaymentId_.get(index);
@@ -5454,6 +5687,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSeBankgiroCreditorIdList() {
       return ocrLineSeBankgiroCreditorId_;
     }
@@ -5464,6 +5698,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList() {
       return ocrLineSeBankgiroCreditorId_;
@@ -5475,6 +5710,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public int getOcrLineSeBankgiroCreditorIdCount() {
       return ocrLineSeBankgiroCreditorId_.size();
     }
@@ -5485,6 +5721,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
@@ -5495,6 +5732,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
@@ -5509,6 +5747,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePlusgiroCreditorIdList() {
       return ocrLineSePlusgiroCreditorId_;
     }
@@ -5519,6 +5758,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList() {
       return ocrLineSePlusgiroCreditorId_;
@@ -5530,6 +5770,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePlusgiroCreditorIdCount() {
       return ocrLineSePlusgiroCreditorId_.size();
     }
@@ -5540,6 +5781,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
@@ -5550,6 +5792,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
@@ -5564,6 +5807,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNoPaymentIdList() {
       return ocrLineNoPaymentId_;
     }
@@ -5574,6 +5818,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList() {
       return ocrLineNoPaymentId_;
@@ -5585,6 +5830,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
      */
+    @java.lang.Override
     public int getOcrLineNoPaymentIdCount() {
       return ocrLineNoPaymentId_.size();
     }
@@ -5595,6 +5841,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index) {
       return ocrLineNoPaymentId_.get(index);
     }
@@ -5605,6 +5852,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index) {
       return ocrLineNoPaymentId_.get(index);
@@ -5619,6 +5867,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineFiPaymentIdList() {
       return ocrLineFiPaymentId_;
     }
@@ -5629,6 +5878,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList() {
       return ocrLineFiPaymentId_;
@@ -5640,6 +5890,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
      */
+    @java.lang.Override
     public int getOcrLineFiPaymentIdCount() {
       return ocrLineFiPaymentId_.size();
     }
@@ -5650,6 +5901,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index) {
       return ocrLineFiPaymentId_.get(index);
     }
@@ -5660,6 +5912,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index) {
       return ocrLineFiPaymentId_.get(index);
@@ -5674,6 +5927,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNlPaymentIdList() {
       return ocrLineNlPaymentId_;
     }
@@ -5684,6 +5938,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList() {
       return ocrLineNlPaymentId_;
@@ -5695,6 +5950,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
      */
+    @java.lang.Override
     public int getOcrLineNlPaymentIdCount() {
       return ocrLineNlPaymentId_.size();
     }
@@ -5705,6 +5961,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index) {
       return ocrLineNlPaymentId_.get(index);
     }
@@ -5715,6 +5972,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index) {
       return ocrLineNlPaymentId_.get(index);
@@ -5728,7 +5986,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>string text = 23;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -5747,7 +6007,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>string text = 23;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -5766,7 +6028,9 @@ public final class Annotator {
     private volatile java.lang.Object feedbackId_;
     /**
      * <code>string feedback_id = 24;</code>
+     * @return The feedbackId.
      */
+    @java.lang.Override
     public java.lang.String getFeedbackId() {
       java.lang.Object ref = feedbackId_;
       if (ref instanceof java.lang.String) {
@@ -5781,7 +6045,9 @@ public final class Annotator {
     }
     /**
      * <code>string feedback_id = 24;</code>
+     * @return The bytes for feedbackId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFeedbackIdBytes() {
       java.lang.Object ref = feedbackId_;
@@ -5807,6 +6073,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate iban = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
       return iban_;
     }
@@ -5819,6 +6086,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate iban = 25;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getIbanOrBuilderList() {
       return iban_;
@@ -5832,6 +6100,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate iban = 25;</code>
      */
+    @java.lang.Override
     public int getIbanCount() {
       return iban_.size();
     }
@@ -5844,6 +6113,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate iban = 25;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
       return iban_.get(index);
     }
@@ -5856,6 +6126,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.Candidate iban = 25;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
         int index) {
       return iban_.get(index);
@@ -5871,6 +6142,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
       return lines_;
     }
@@ -5882,6 +6154,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
         getLinesOrBuilderList() {
       return lines_;
@@ -5894,6 +6167,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
      */
+    @java.lang.Override
     public int getLinesCount() {
       return lines_.size();
     }
@@ -5905,6 +6179,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
       return lines_.get(index);
     }
@@ -5916,6 +6191,7 @@ public final class Annotator {
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
         int index) {
       return lines_.get(index);
@@ -5929,7 +6205,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>string preview = 27;</code>
+     * @return The preview.
      */
+    @java.lang.Override
     public java.lang.String getPreview() {
       java.lang.Object ref = preview_;
       if (ref instanceof java.lang.String) {
@@ -5948,7 +6226,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>string preview = 27;</code>
+     * @return The bytes for preview.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPreviewBytes() {
       java.lang.Object ref = preview_;
@@ -6187,66 +6467,65 @@ public final class Annotator {
       }
       ssn.annotator.v1.Annotator.DocumentAnnotatorResponse other = (ssn.annotator.v1.Annotator.DocumentAnnotatorResponse) obj;
 
-      boolean result = true;
-      result = result && getOrderDateList()
-          .equals(other.getOrderDateList());
-      result = result && getPaymentDueDateList()
-          .equals(other.getPaymentDueDateList());
-      result = result && getCurrencyList()
-          .equals(other.getCurrencyList());
-      result = result && getTotalVatList()
-          .equals(other.getTotalVatList());
-      result = result && getTotalInclVatList()
-          .equals(other.getTotalInclVatList());
-      result = result && getTotalExclVatList()
-          .equals(other.getTotalExclVatList());
-      result = result && getSupplierCorporateIdList()
-          .equals(other.getSupplierCorporateIdList());
-      result = result && getSupplierCountryCodeList()
-          .equals(other.getSupplierCountryCodeList());
-      result = result && getDocumentTypeList()
-          .equals(other.getDocumentTypeList());
-      result = result && getPaymentMethodList()
-          .equals(other.getPaymentMethodList());
-      result = result && getCreditCardLastFourList()
-          .equals(other.getCreditCardLastFourList());
-      result = result && getInvoiceNumberList()
-          .equals(other.getInvoiceNumberList());
-      result = result && (hasTextAnnotation() == other.hasTextAnnotation());
+      if (!getOrderDateList()
+          .equals(other.getOrderDateList())) return false;
+      if (!getPaymentDueDateList()
+          .equals(other.getPaymentDueDateList())) return false;
+      if (!getCurrencyList()
+          .equals(other.getCurrencyList())) return false;
+      if (!getTotalVatList()
+          .equals(other.getTotalVatList())) return false;
+      if (!getTotalInclVatList()
+          .equals(other.getTotalInclVatList())) return false;
+      if (!getTotalExclVatList()
+          .equals(other.getTotalExclVatList())) return false;
+      if (!getSupplierCorporateIdList()
+          .equals(other.getSupplierCorporateIdList())) return false;
+      if (!getSupplierCountryCodeList()
+          .equals(other.getSupplierCountryCodeList())) return false;
+      if (!getDocumentTypeList()
+          .equals(other.getDocumentTypeList())) return false;
+      if (!getPaymentMethodList()
+          .equals(other.getPaymentMethodList())) return false;
+      if (!getCreditCardLastFourList()
+          .equals(other.getCreditCardLastFourList())) return false;
+      if (!getInvoiceNumberList()
+          .equals(other.getInvoiceNumberList())) return false;
+      if (hasTextAnnotation() != other.hasTextAnnotation()) return false;
       if (hasTextAnnotation()) {
-        result = result && getTextAnnotation()
-            .equals(other.getTextAnnotation());
+        if (!getTextAnnotation()
+            .equals(other.getTextAnnotation())) return false;
       }
-      result = result && getOcrLineDkTypeList()
-          .equals(other.getOcrLineDkTypeList());
-      result = result && getOcrLineDkPaymentIdList()
-          .equals(other.getOcrLineDkPaymentIdList());
-      result = result && getOcrLineDkCreditorIdList()
-          .equals(other.getOcrLineDkCreditorIdList());
-      result = result && getOcrLineSePaymentIdList()
-          .equals(other.getOcrLineSePaymentIdList());
-      result = result && getOcrLineSeBankgiroCreditorIdList()
-          .equals(other.getOcrLineSeBankgiroCreditorIdList());
-      result = result && getOcrLineSePlusgiroCreditorIdList()
-          .equals(other.getOcrLineSePlusgiroCreditorIdList());
-      result = result && getOcrLineNoPaymentIdList()
-          .equals(other.getOcrLineNoPaymentIdList());
-      result = result && getOcrLineFiPaymentIdList()
-          .equals(other.getOcrLineFiPaymentIdList());
-      result = result && getOcrLineNlPaymentIdList()
-          .equals(other.getOcrLineNlPaymentIdList());
-      result = result && getText()
-          .equals(other.getText());
-      result = result && getFeedbackId()
-          .equals(other.getFeedbackId());
-      result = result && getIbanList()
-          .equals(other.getIbanList());
-      result = result && getLinesList()
-          .equals(other.getLinesList());
-      result = result && getPreview()
-          .equals(other.getPreview());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOcrLineDkTypeList()
+          .equals(other.getOcrLineDkTypeList())) return false;
+      if (!getOcrLineDkPaymentIdList()
+          .equals(other.getOcrLineDkPaymentIdList())) return false;
+      if (!getOcrLineDkCreditorIdList()
+          .equals(other.getOcrLineDkCreditorIdList())) return false;
+      if (!getOcrLineSePaymentIdList()
+          .equals(other.getOcrLineSePaymentIdList())) return false;
+      if (!getOcrLineSeBankgiroCreditorIdList()
+          .equals(other.getOcrLineSeBankgiroCreditorIdList())) return false;
+      if (!getOcrLineSePlusgiroCreditorIdList()
+          .equals(other.getOcrLineSePlusgiroCreditorIdList())) return false;
+      if (!getOcrLineNoPaymentIdList()
+          .equals(other.getOcrLineNoPaymentIdList())) return false;
+      if (!getOcrLineFiPaymentIdList()
+          .equals(other.getOcrLineFiPaymentIdList())) return false;
+      if (!getOcrLineNlPaymentIdList()
+          .equals(other.getOcrLineNlPaymentIdList())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getFeedbackId()
+          .equals(other.getFeedbackId())) return false;
+      if (!getIbanList()
+          .equals(other.getIbanList())) return false;
+      if (!getLinesList()
+          .equals(other.getLinesList())) return false;
+      if (!getPreview()
+          .equals(other.getPreview())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6594,55 +6873,55 @@ public final class Annotator {
         }
         if (ocrLineDkTypeBuilder_ == null) {
           ocrLineDkType_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00001000);
         } else {
           ocrLineDkTypeBuilder_.clear();
         }
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ocrLineDkPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00002000);
         } else {
           ocrLineDkPaymentIdBuilder_.clear();
         }
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ocrLineDkCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00004000);
         } else {
           ocrLineDkCreditorIdBuilder_.clear();
         }
         if (ocrLineSePaymentIdBuilder_ == null) {
           ocrLineSePaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00008000);
         } else {
           ocrLineSePaymentIdBuilder_.clear();
         }
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00010000);
         } else {
           ocrLineSeBankgiroCreditorIdBuilder_.clear();
         }
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00020000);
         } else {
           ocrLineSePlusgiroCreditorIdBuilder_.clear();
         }
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ocrLineNoPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00040000);
         } else {
           ocrLineNoPaymentIdBuilder_.clear();
         }
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ocrLineFiPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x00080000);
         } else {
           ocrLineFiPaymentIdBuilder_.clear();
         }
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ocrLineNlPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00200000);
+          bitField0_ = (bitField0_ & ~0x00100000);
         } else {
           ocrLineNlPaymentIdBuilder_.clear();
         }
@@ -6652,13 +6931,13 @@ public final class Annotator {
 
         if (ibanBuilder_ == null) {
           iban_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x00200000);
         } else {
           ibanBuilder_.clear();
         }
         if (linesBuilder_ == null) {
           lines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ = (bitField0_ & ~0x00400000);
         } else {
           linesBuilder_.clear();
         }
@@ -6691,9 +6970,8 @@ public final class Annotator {
       public ssn.annotator.v1.Annotator.DocumentAnnotatorResponse buildPartial() {
         ssn.annotator.v1.Annotator.DocumentAnnotatorResponse result = new ssn.annotator.v1.Annotator.DocumentAnnotatorResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (orderDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -6702,7 +6980,7 @@ public final class Annotator {
           result.orderDate_ = orderDateBuilder_.build();
         }
         if (paymentDueDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -6711,7 +6989,7 @@ public final class Annotator {
           result.paymentDueDate_ = paymentDueDateBuilder_.build();
         }
         if (currencyBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             currency_ = java.util.Collections.unmodifiableList(currency_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -6720,7 +6998,7 @@ public final class Annotator {
           result.currency_ = currencyBuilder_.build();
         }
         if (totalVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -6729,7 +7007,7 @@ public final class Annotator {
           result.totalVat_ = totalVatBuilder_.build();
         }
         if (totalInclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -6738,7 +7016,7 @@ public final class Annotator {
           result.totalInclVat_ = totalInclVatBuilder_.build();
         }
         if (totalExclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -6747,7 +7025,7 @@ public final class Annotator {
           result.totalExclVat_ = totalExclVatBuilder_.build();
         }
         if (supplierCorporateIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -6756,7 +7034,7 @@ public final class Annotator {
           result.supplierCorporateId_ = supplierCorporateIdBuilder_.build();
         }
         if (supplierCountryCodeBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -6765,7 +7043,7 @@ public final class Annotator {
           result.supplierCountryCode_ = supplierCountryCodeBuilder_.build();
         }
         if (documentTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             documentType_ = java.util.Collections.unmodifiableList(documentType_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -6774,7 +7052,7 @@ public final class Annotator {
           result.documentType_ = documentTypeBuilder_.build();
         }
         if (paymentMethodBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
             bitField0_ = (bitField0_ & ~0x00000200);
           }
@@ -6783,7 +7061,7 @@ public final class Annotator {
           result.paymentMethod_ = paymentMethodBuilder_.build();
         }
         if (creditCardLastFourBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
             bitField0_ = (bitField0_ & ~0x00000400);
           }
@@ -6792,7 +7070,7 @@ public final class Annotator {
           result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
         }
         if (invoiceNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00000800) != 0)) {
             invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
             bitField0_ = (bitField0_ & ~0x00000800);
           }
@@ -6806,81 +7084,81 @@ public final class Annotator {
           result.textAnnotation_ = textAnnotationBuilder_.build();
         }
         if (ocrLineDkTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          if (((bitField0_ & 0x00001000) != 0)) {
             ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00001000);
           }
           result.ocrLineDkType_ = ocrLineDkType_;
         } else {
           result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
         }
         if (ocrLineDkPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00002000);
           }
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentId_;
         } else {
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
         }
         if (ocrLineDkCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          if (((bitField0_ & 0x00004000) != 0)) {
             ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00004000);
           }
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorId_;
         } else {
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
         }
         if (ocrLineSePaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00008000);
           }
           result.ocrLineSePaymentId_ = ocrLineSePaymentId_;
         } else {
           result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
         }
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          if (((bitField0_ & 0x00010000) != 0)) {
             ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00010000);
           }
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorId_;
         } else {
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
         }
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x00020000);
           }
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorId_;
         } else {
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
         }
         if (ocrLineNoPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00040000);
           }
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentId_;
         } else {
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
         }
         if (ocrLineFiPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          if (((bitField0_ & 0x00080000) != 0)) {
             ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00100000);
+            bitField0_ = (bitField0_ & ~0x00080000);
           }
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentId_;
         } else {
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
         }
         if (ocrLineNlPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          if (((bitField0_ & 0x00100000) != 0)) {
             ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00200000);
+            bitField0_ = (bitField0_ & ~0x00100000);
           }
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentId_;
         } else {
@@ -6889,60 +7167,59 @@ public final class Annotator {
         result.text_ = text_;
         result.feedbackId_ = feedbackId_;
         if (ibanBuilder_ == null) {
-          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+          if (((bitField0_ & 0x00200000) != 0)) {
             iban_ = java.util.Collections.unmodifiableList(iban_);
-            bitField0_ = (bitField0_ & ~0x01000000);
+            bitField0_ = (bitField0_ & ~0x00200000);
           }
           result.iban_ = iban_;
         } else {
           result.iban_ = ibanBuilder_.build();
         }
         if (linesBuilder_ == null) {
-          if (((bitField0_ & 0x02000000) == 0x02000000)) {
+          if (((bitField0_ & 0x00400000) != 0)) {
             lines_ = java.util.Collections.unmodifiableList(lines_);
-            bitField0_ = (bitField0_ & ~0x02000000);
+            bitField0_ = (bitField0_ & ~0x00400000);
           }
           result.lines_ = lines_;
         } else {
           result.lines_ = linesBuilder_.build();
         }
         result.preview_ = preview_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7275,7 +7552,7 @@ public final class Annotator {
           if (!other.ocrLineDkType_.isEmpty()) {
             if (ocrLineDkType_.isEmpty()) {
               ocrLineDkType_ = other.ocrLineDkType_;
-              bitField0_ = (bitField0_ & ~0x00002000);
+              bitField0_ = (bitField0_ & ~0x00001000);
             } else {
               ensureOcrLineDkTypeIsMutable();
               ocrLineDkType_.addAll(other.ocrLineDkType_);
@@ -7288,7 +7565,7 @@ public final class Annotator {
               ocrLineDkTypeBuilder_.dispose();
               ocrLineDkTypeBuilder_ = null;
               ocrLineDkType_ = other.ocrLineDkType_;
-              bitField0_ = (bitField0_ & ~0x00002000);
+              bitField0_ = (bitField0_ & ~0x00001000);
               ocrLineDkTypeBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineDkTypeFieldBuilder() : null;
@@ -7301,7 +7578,7 @@ public final class Annotator {
           if (!other.ocrLineDkPaymentId_.isEmpty()) {
             if (ocrLineDkPaymentId_.isEmpty()) {
               ocrLineDkPaymentId_ = other.ocrLineDkPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00002000);
             } else {
               ensureOcrLineDkPaymentIdIsMutable();
               ocrLineDkPaymentId_.addAll(other.ocrLineDkPaymentId_);
@@ -7314,7 +7591,7 @@ public final class Annotator {
               ocrLineDkPaymentIdBuilder_.dispose();
               ocrLineDkPaymentIdBuilder_ = null;
               ocrLineDkPaymentId_ = other.ocrLineDkPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00002000);
               ocrLineDkPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineDkPaymentIdFieldBuilder() : null;
@@ -7327,7 +7604,7 @@ public final class Annotator {
           if (!other.ocrLineDkCreditorId_.isEmpty()) {
             if (ocrLineDkCreditorId_.isEmpty()) {
               ocrLineDkCreditorId_ = other.ocrLineDkCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00004000);
             } else {
               ensureOcrLineDkCreditorIdIsMutable();
               ocrLineDkCreditorId_.addAll(other.ocrLineDkCreditorId_);
@@ -7340,7 +7617,7 @@ public final class Annotator {
               ocrLineDkCreditorIdBuilder_.dispose();
               ocrLineDkCreditorIdBuilder_ = null;
               ocrLineDkCreditorId_ = other.ocrLineDkCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00004000);
               ocrLineDkCreditorIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineDkCreditorIdFieldBuilder() : null;
@@ -7353,7 +7630,7 @@ public final class Annotator {
           if (!other.ocrLineSePaymentId_.isEmpty()) {
             if (ocrLineSePaymentId_.isEmpty()) {
               ocrLineSePaymentId_ = other.ocrLineSePaymentId_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00008000);
             } else {
               ensureOcrLineSePaymentIdIsMutable();
               ocrLineSePaymentId_.addAll(other.ocrLineSePaymentId_);
@@ -7366,7 +7643,7 @@ public final class Annotator {
               ocrLineSePaymentIdBuilder_.dispose();
               ocrLineSePaymentIdBuilder_ = null;
               ocrLineSePaymentId_ = other.ocrLineSePaymentId_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00008000);
               ocrLineSePaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineSePaymentIdFieldBuilder() : null;
@@ -7379,7 +7656,7 @@ public final class Annotator {
           if (!other.ocrLineSeBankgiroCreditorId_.isEmpty()) {
             if (ocrLineSeBankgiroCreditorId_.isEmpty()) {
               ocrLineSeBankgiroCreditorId_ = other.ocrLineSeBankgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00020000);
+              bitField0_ = (bitField0_ & ~0x00010000);
             } else {
               ensureOcrLineSeBankgiroCreditorIdIsMutable();
               ocrLineSeBankgiroCreditorId_.addAll(other.ocrLineSeBankgiroCreditorId_);
@@ -7392,7 +7669,7 @@ public final class Annotator {
               ocrLineSeBankgiroCreditorIdBuilder_.dispose();
               ocrLineSeBankgiroCreditorIdBuilder_ = null;
               ocrLineSeBankgiroCreditorId_ = other.ocrLineSeBankgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00020000);
+              bitField0_ = (bitField0_ & ~0x00010000);
               ocrLineSeBankgiroCreditorIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineSeBankgiroCreditorIdFieldBuilder() : null;
@@ -7405,7 +7682,7 @@ public final class Annotator {
           if (!other.ocrLineSePlusgiroCreditorId_.isEmpty()) {
             if (ocrLineSePlusgiroCreditorId_.isEmpty()) {
               ocrLineSePlusgiroCreditorId_ = other.ocrLineSePlusgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00020000);
             } else {
               ensureOcrLineSePlusgiroCreditorIdIsMutable();
               ocrLineSePlusgiroCreditorId_.addAll(other.ocrLineSePlusgiroCreditorId_);
@@ -7418,7 +7695,7 @@ public final class Annotator {
               ocrLineSePlusgiroCreditorIdBuilder_.dispose();
               ocrLineSePlusgiroCreditorIdBuilder_ = null;
               ocrLineSePlusgiroCreditorId_ = other.ocrLineSePlusgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00020000);
               ocrLineSePlusgiroCreditorIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineSePlusgiroCreditorIdFieldBuilder() : null;
@@ -7431,7 +7708,7 @@ public final class Annotator {
           if (!other.ocrLineNoPaymentId_.isEmpty()) {
             if (ocrLineNoPaymentId_.isEmpty()) {
               ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00080000);
+              bitField0_ = (bitField0_ & ~0x00040000);
             } else {
               ensureOcrLineNoPaymentIdIsMutable();
               ocrLineNoPaymentId_.addAll(other.ocrLineNoPaymentId_);
@@ -7444,7 +7721,7 @@ public final class Annotator {
               ocrLineNoPaymentIdBuilder_.dispose();
               ocrLineNoPaymentIdBuilder_ = null;
               ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00080000);
+              bitField0_ = (bitField0_ & ~0x00040000);
               ocrLineNoPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineNoPaymentIdFieldBuilder() : null;
@@ -7457,7 +7734,7 @@ public final class Annotator {
           if (!other.ocrLineFiPaymentId_.isEmpty()) {
             if (ocrLineFiPaymentId_.isEmpty()) {
               ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00100000);
+              bitField0_ = (bitField0_ & ~0x00080000);
             } else {
               ensureOcrLineFiPaymentIdIsMutable();
               ocrLineFiPaymentId_.addAll(other.ocrLineFiPaymentId_);
@@ -7470,7 +7747,7 @@ public final class Annotator {
               ocrLineFiPaymentIdBuilder_.dispose();
               ocrLineFiPaymentIdBuilder_ = null;
               ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00100000);
+              bitField0_ = (bitField0_ & ~0x00080000);
               ocrLineFiPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineFiPaymentIdFieldBuilder() : null;
@@ -7483,7 +7760,7 @@ public final class Annotator {
           if (!other.ocrLineNlPaymentId_.isEmpty()) {
             if (ocrLineNlPaymentId_.isEmpty()) {
               ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00200000);
+              bitField0_ = (bitField0_ & ~0x00100000);
             } else {
               ensureOcrLineNlPaymentIdIsMutable();
               ocrLineNlPaymentId_.addAll(other.ocrLineNlPaymentId_);
@@ -7496,7 +7773,7 @@ public final class Annotator {
               ocrLineNlPaymentIdBuilder_.dispose();
               ocrLineNlPaymentIdBuilder_ = null;
               ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00200000);
+              bitField0_ = (bitField0_ & ~0x00100000);
               ocrLineNlPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineNlPaymentIdFieldBuilder() : null;
@@ -7517,7 +7794,7 @@ public final class Annotator {
           if (!other.iban_.isEmpty()) {
             if (iban_.isEmpty()) {
               iban_ = other.iban_;
-              bitField0_ = (bitField0_ & ~0x01000000);
+              bitField0_ = (bitField0_ & ~0x00200000);
             } else {
               ensureIbanIsMutable();
               iban_.addAll(other.iban_);
@@ -7530,7 +7807,7 @@ public final class Annotator {
               ibanBuilder_.dispose();
               ibanBuilder_ = null;
               iban_ = other.iban_;
-              bitField0_ = (bitField0_ & ~0x01000000);
+              bitField0_ = (bitField0_ & ~0x00200000);
               ibanBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getIbanFieldBuilder() : null;
@@ -7543,7 +7820,7 @@ public final class Annotator {
           if (!other.lines_.isEmpty()) {
             if (lines_.isEmpty()) {
               lines_ = other.lines_;
-              bitField0_ = (bitField0_ & ~0x02000000);
+              bitField0_ = (bitField0_ & ~0x00400000);
             } else {
               ensureLinesIsMutable();
               lines_.addAll(other.lines_);
@@ -7556,7 +7833,7 @@ public final class Annotator {
               linesBuilder_.dispose();
               linesBuilder_ = null;
               lines_ = other.lines_;
-              bitField0_ = (bitField0_ & ~0x02000000);
+              bitField0_ = (bitField0_ & ~0x00400000);
               linesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLinesFieldBuilder() : null;
@@ -7602,7 +7879,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderDate_ =
         java.util.Collections.emptyList();
       private void ensureOrderDateIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           orderDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(orderDate_);
           bitField0_ |= 0x00000001;
          }
@@ -7939,7 +8216,7 @@ public final class Annotator {
           orderDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   orderDate_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           orderDate_ = null;
@@ -7950,7 +8227,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentDueDate_ =
         java.util.Collections.emptyList();
       private void ensurePaymentDueDateIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           paymentDueDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(paymentDueDate_);
           bitField0_ |= 0x00000002;
          }
@@ -8287,7 +8564,7 @@ public final class Annotator {
           paymentDueDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   paymentDueDate_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           paymentDueDate_ = null;
@@ -8298,7 +8575,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> currency_ =
         java.util.Collections.emptyList();
       private void ensureCurrencyIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           currency_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(currency_);
           bitField0_ |= 0x00000004;
          }
@@ -8635,7 +8912,7 @@ public final class Annotator {
           currencyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   currency_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           currency_ = null;
@@ -8646,7 +8923,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalVatIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           totalVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(totalVat_);
           bitField0_ |= 0x00000008;
          }
@@ -8983,7 +9260,7 @@ public final class Annotator {
           totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   totalVat_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           totalVat_ = null;
@@ -8994,7 +9271,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalInclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalInclVatIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           totalInclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(totalInclVat_);
           bitField0_ |= 0x00000010;
          }
@@ -9331,7 +9608,7 @@ public final class Annotator {
           totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   totalInclVat_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           totalInclVat_ = null;
@@ -9342,7 +9619,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalExclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalExclVatIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           totalExclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(totalExclVat_);
           bitField0_ |= 0x00000020;
          }
@@ -9679,7 +9956,7 @@ public final class Annotator {
           totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   totalExclVat_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           totalExclVat_ = null;
@@ -9690,7 +9967,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCorporateId_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCorporateIdIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           supplierCorporateId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierCorporateId_);
           bitField0_ |= 0x00000040;
          }
@@ -10099,7 +10376,7 @@ public final class Annotator {
           supplierCorporateIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierCorporateId_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCorporateId_ = null;
@@ -10110,7 +10387,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCountryCode_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCountryCodeIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           supplierCountryCode_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierCountryCode_);
           bitField0_ |= 0x00000080;
          }
@@ -10447,7 +10724,7 @@ public final class Annotator {
           supplierCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierCountryCode_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCountryCode_ = null;
@@ -10458,7 +10735,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentType_ =
         java.util.Collections.emptyList();
       private void ensureDocumentTypeIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           documentType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(documentType_);
           bitField0_ |= 0x00000100;
          }
@@ -10777,7 +11054,7 @@ public final class Annotator {
           documentTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   documentType_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           documentType_ = null;
@@ -10788,7 +11065,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentMethod_ =
         java.util.Collections.emptyList();
       private void ensurePaymentMethodIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           paymentMethod_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(paymentMethod_);
           bitField0_ |= 0x00000200;
          }
@@ -11107,7 +11384,7 @@ public final class Annotator {
           paymentMethodBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   paymentMethod_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           paymentMethod_ = null;
@@ -11118,7 +11395,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardLastFour_ =
         java.util.Collections.emptyList();
       private void ensureCreditCardLastFourIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           creditCardLastFour_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(creditCardLastFour_);
           bitField0_ |= 0x00000400;
          }
@@ -11455,7 +11732,7 @@ public final class Annotator {
           creditCardLastFourBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   creditCardLastFour_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           creditCardLastFour_ = null;
@@ -11466,7 +11743,7 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> invoiceNumber_ =
         java.util.Collections.emptyList();
       private void ensureInvoiceNumberIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000800) != 0)) {
           invoiceNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(invoiceNumber_);
           bitField0_ |= 0x00000800;
          }
@@ -11803,7 +12080,7 @@ public final class Annotator {
           invoiceNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   invoiceNumber_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00000800) != 0),
                   getParentForChildren(),
                   isClean());
           invoiceNumber_ = null;
@@ -11811,7 +12088,7 @@ public final class Annotator {
         return invoiceNumberBuilder_;
       }
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_ = null;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
@@ -11820,6 +12097,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
         return textAnnotationBuilder_ != null || textAnnotation_ != null;
@@ -11830,6 +12108,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * @return The textAnnotation.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -11967,9 +12246,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkType_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkTypeIsMutable() {
-        if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkType_);
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00001000;
          }
       }
 
@@ -12163,7 +12442,7 @@ public final class Annotator {
       public Builder clearOcrLineDkType() {
         if (ocrLineDkTypeBuilder_ == null) {
           ocrLineDkType_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00001000);
           onChanged();
         } else {
           ocrLineDkTypeBuilder_.clear();
@@ -12268,7 +12547,7 @@ public final class Annotator {
           ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkType_,
-                  ((bitField0_ & 0x00002000) == 0x00002000),
+                  ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkType_ = null;
@@ -12279,9 +12558,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkPaymentId_);
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00002000;
          }
       }
 
@@ -12475,7 +12754,7 @@ public final class Annotator {
       public Builder clearOcrLineDkPaymentId() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ocrLineDkPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00002000);
           onChanged();
         } else {
           ocrLineDkPaymentIdBuilder_.clear();
@@ -12580,7 +12859,7 @@ public final class Annotator {
           ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkPaymentId_,
-                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkPaymentId_ = null;
@@ -12591,9 +12870,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (!((bitField0_ & 0x00004000) != 0)) {
           ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkCreditorId_);
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00004000;
          }
       }
 
@@ -12787,7 +13066,7 @@ public final class Annotator {
       public Builder clearOcrLineDkCreditorId() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ocrLineDkCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00004000);
           onChanged();
         } else {
           ocrLineDkCreditorIdBuilder_.clear();
@@ -12892,7 +13171,7 @@ public final class Annotator {
           ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkCreditorId_,
-                  ((bitField0_ & 0x00008000) == 0x00008000),
+                  ((bitField0_ & 0x00004000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkCreditorId_ = null;
@@ -12903,9 +13182,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSePaymentId_);
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00008000;
          }
       }
 
@@ -13099,7 +13378,7 @@ public final class Annotator {
       public Builder clearOcrLineSePaymentId() {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ocrLineSePaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00008000);
           onChanged();
         } else {
           ocrLineSePaymentIdBuilder_.clear();
@@ -13204,7 +13483,7 @@ public final class Annotator {
           ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSePaymentId_,
-                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePaymentId_ = null;
@@ -13215,9 +13494,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSeBankgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSeBankgiroCreditorId_);
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00010000;
          }
       }
 
@@ -13411,7 +13690,7 @@ public final class Annotator {
       public Builder clearOcrLineSeBankgiroCreditorId() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00010000);
           onChanged();
         } else {
           ocrLineSeBankgiroCreditorIdBuilder_.clear();
@@ -13516,7 +13795,7 @@ public final class Annotator {
           ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSeBankgiroCreditorId_,
-                  ((bitField0_ & 0x00020000) == 0x00020000),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSeBankgiroCreditorId_ = null;
@@ -13527,9 +13806,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePlusgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSePlusgiroCreditorId_);
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00020000;
          }
       }
 
@@ -13723,7 +14002,7 @@ public final class Annotator {
       public Builder clearOcrLineSePlusgiroCreditorId() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00020000);
           onChanged();
         } else {
           ocrLineSePlusgiroCreditorIdBuilder_.clear();
@@ -13828,7 +14107,7 @@ public final class Annotator {
           ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSePlusgiroCreditorId_,
-                  ((bitField0_ & 0x00040000) == 0x00040000),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePlusgiroCreditorId_ = null;
@@ -13839,9 +14118,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNoPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNoPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineNoPaymentId_);
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00040000;
          }
       }
 
@@ -14035,7 +14314,7 @@ public final class Annotator {
       public Builder clearOcrLineNoPaymentId() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ocrLineNoPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00040000);
           onChanged();
         } else {
           ocrLineNoPaymentIdBuilder_.clear();
@@ -14140,7 +14419,7 @@ public final class Annotator {
           ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineNoPaymentId_,
-                  ((bitField0_ & 0x00080000) == 0x00080000),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNoPaymentId_ = null;
@@ -14151,9 +14430,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineFiPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineFiPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (!((bitField0_ & 0x00080000) != 0)) {
           ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineFiPaymentId_);
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00080000;
          }
       }
 
@@ -14347,7 +14626,7 @@ public final class Annotator {
       public Builder clearOcrLineFiPaymentId() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ocrLineFiPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x00080000);
           onChanged();
         } else {
           ocrLineFiPaymentIdBuilder_.clear();
@@ -14452,7 +14731,7 @@ public final class Annotator {
           ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineFiPaymentId_,
-                  ((bitField0_ & 0x00100000) == 0x00100000),
+                  ((bitField0_ & 0x00080000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineFiPaymentId_ = null;
@@ -14463,9 +14742,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNlPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNlPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (!((bitField0_ & 0x00100000) != 0)) {
           ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineNlPaymentId_);
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00100000;
          }
       }
 
@@ -14659,7 +14938,7 @@ public final class Annotator {
       public Builder clearOcrLineNlPaymentId() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ocrLineNlPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00200000);
+          bitField0_ = (bitField0_ & ~0x00100000);
           onChanged();
         } else {
           ocrLineNlPaymentIdBuilder_.clear();
@@ -14764,7 +15043,7 @@ public final class Annotator {
           ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineNlPaymentId_,
-                  ((bitField0_ & 0x00200000) == 0x00200000),
+                  ((bitField0_ & 0x00100000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNlPaymentId_ = null;
@@ -14779,6 +15058,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string text = 23;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -14798,6 +15078,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string text = 23;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -14818,6 +15099,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>string text = 23;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -14835,6 +15118,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string text = 23;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -14848,6 +15132,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>string text = 23;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -14864,6 +15150,7 @@ public final class Annotator {
       private java.lang.Object feedbackId_ = "";
       /**
        * <code>string feedback_id = 24;</code>
+       * @return The feedbackId.
        */
       public java.lang.String getFeedbackId() {
         java.lang.Object ref = feedbackId_;
@@ -14879,6 +15166,7 @@ public final class Annotator {
       }
       /**
        * <code>string feedback_id = 24;</code>
+       * @return The bytes for feedbackId.
        */
       public com.google.protobuf.ByteString
           getFeedbackIdBytes() {
@@ -14895,6 +15183,8 @@ public final class Annotator {
       }
       /**
        * <code>string feedback_id = 24;</code>
+       * @param value The feedbackId to set.
+       * @return This builder for chaining.
        */
       public Builder setFeedbackId(
           java.lang.String value) {
@@ -14908,6 +15198,7 @@ public final class Annotator {
       }
       /**
        * <code>string feedback_id = 24;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFeedbackId() {
         
@@ -14917,6 +15208,8 @@ public final class Annotator {
       }
       /**
        * <code>string feedback_id = 24;</code>
+       * @param value The bytes for feedbackId to set.
+       * @return This builder for chaining.
        */
       public Builder setFeedbackIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14933,9 +15226,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_ =
         java.util.Collections.emptyList();
       private void ensureIbanIsMutable() {
-        if (!((bitField0_ & 0x01000000) == 0x01000000)) {
+        if (!((bitField0_ & 0x00200000) != 0)) {
           iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(iban_);
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x00200000;
          }
       }
 
@@ -15151,7 +15444,7 @@ public final class Annotator {
       public Builder clearIban() {
         if (ibanBuilder_ == null) {
           iban_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x00200000);
           onChanged();
         } else {
           ibanBuilder_.clear();
@@ -15270,7 +15563,7 @@ public final class Annotator {
           ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   iban_,
-                  ((bitField0_ & 0x01000000) == 0x01000000),
+                  ((bitField0_ & 0x00200000) != 0),
                   getParentForChildren(),
                   isClean());
           iban_ = null;
@@ -15281,9 +15574,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_ =
         java.util.Collections.emptyList();
       private void ensureLinesIsMutable() {
-        if (!((bitField0_ & 0x02000000) == 0x02000000)) {
+        if (!((bitField0_ & 0x00400000) != 0)) {
           lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>(lines_);
-          bitField0_ |= 0x02000000;
+          bitField0_ |= 0x00400000;
          }
       }
 
@@ -15488,7 +15781,7 @@ public final class Annotator {
       public Builder clearLines() {
         if (linesBuilder_ == null) {
           lines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ = (bitField0_ & ~0x00400000);
           onChanged();
         } else {
           linesBuilder_.clear();
@@ -15600,7 +15893,7 @@ public final class Annotator {
           linesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder>(
                   lines_,
-                  ((bitField0_ & 0x02000000) == 0x02000000),
+                  ((bitField0_ & 0x00400000) != 0),
                   getParentForChildren(),
                   isClean());
           lines_ = null;
@@ -15615,6 +15908,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string preview = 27;</code>
+       * @return The preview.
        */
       public java.lang.String getPreview() {
         java.lang.Object ref = preview_;
@@ -15634,6 +15928,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string preview = 27;</code>
+       * @return The bytes for preview.
        */
       public com.google.protobuf.ByteString
           getPreviewBytes() {
@@ -15654,6 +15949,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>string preview = 27;</code>
+       * @param value The preview to set.
+       * @return This builder for chaining.
        */
       public Builder setPreview(
           java.lang.String value) {
@@ -15671,6 +15968,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string preview = 27;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPreview() {
         
@@ -15684,6 +15982,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>string preview = 27;</code>
+       * @param value The bytes for preview to set.
+       * @return This builder for chaining.
        */
       public Builder setPreviewBytes(
           com.google.protobuf.ByteString value) {
@@ -15699,7 +15999,7 @@ public final class Annotator {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15761,6 +16061,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>bytes content = 1;</code>
+     * @return The content.
      */
     com.google.protobuf.ByteString getContent();
 
@@ -15772,6 +16073,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * @return Whether the source field is set.
      */
     boolean hasSource();
     /**
@@ -15782,6 +16084,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * @return The source.
      */
     ssn.annotator.v1.Annotator.DocumentSource getSource();
     /**
@@ -15798,7 +16101,7 @@ public final class Annotator {
   /**
    * Protobuf type {@code ssn.annotator.v1.Document}
    */
-  public  static final class Document extends
+  public static final class Document extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.annotator.v1.Document)
       DocumentOrBuilder {
@@ -15809,6 +16112,13 @@ public final class Annotator {
     }
     private Document() {
       content_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Document();
     }
 
     @java.lang.Override
@@ -15824,7 +16134,6 @@ public final class Annotator {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15854,7 +16163,7 @@ public final class Annotator {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15895,7 +16204,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>bytes content = 1;</code>
+     * @return The content.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       return content_;
     }
@@ -15910,7 +16221,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * @return Whether the source field is set.
      */
+    @java.lang.Override
     public boolean hasSource() {
       return source_ != null;
     }
@@ -15922,7 +16235,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * @return The source.
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentSource getSource() {
       return source_ == null ? ssn.annotator.v1.Annotator.DocumentSource.getDefaultInstance() : source_;
     }
@@ -15935,6 +16250,7 @@ public final class Annotator {
      *
      * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentSourceOrBuilder getSourceOrBuilder() {
       return getSource();
     }
@@ -15991,16 +16307,15 @@ public final class Annotator {
       }
       ssn.annotator.v1.Annotator.Document other = (ssn.annotator.v1.Annotator.Document) obj;
 
-      boolean result = true;
-      result = result && getContent()
-          .equals(other.getContent());
-      result = result && (hasSource() == other.hasSource());
+      if (!getContent()
+          .equals(other.getContent())) return false;
+      if (hasSource() != other.hasSource()) return false;
       if (hasSource()) {
-        result = result && getSource()
-            .equals(other.getSource());
+        if (!getSource()
+            .equals(other.getSource())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16195,35 +16510,35 @@ public final class Annotator {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16281,7 +16596,9 @@ public final class Annotator {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @return The content.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getContent() {
         return content_;
       }
@@ -16293,6 +16610,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -16311,6 +16630,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContent() {
         
@@ -16319,7 +16639,7 @@ public final class Annotator {
         return this;
       }
 
-      private ssn.annotator.v1.Annotator.DocumentSource source_ = null;
+      private ssn.annotator.v1.Annotator.DocumentSource source_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.DocumentSource, ssn.annotator.v1.Annotator.DocumentSource.Builder, ssn.annotator.v1.Annotator.DocumentSourceOrBuilder> sourceBuilder_;
       /**
@@ -16330,6 +16650,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * @return Whether the source field is set.
        */
       public boolean hasSource() {
         return sourceBuilder_ != null || source_ != null;
@@ -16342,6 +16663,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * @return The source.
        */
       public ssn.annotator.v1.Annotator.DocumentSource getSource() {
         if (sourceBuilder_ == null) {
@@ -16492,7 +16814,7 @@ public final class Annotator {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16556,6 +16878,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>string http_uri = 1;</code>
+     * @return The httpUri.
      */
     java.lang.String getHttpUri();
     /**
@@ -16568,6 +16891,7 @@ public final class Annotator {
      * </pre>
      *
      * <code>string http_uri = 1;</code>
+     * @return The bytes for httpUri.
      */
     com.google.protobuf.ByteString
         getHttpUriBytes();
@@ -16575,7 +16899,7 @@ public final class Annotator {
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentSource}
    */
-  public  static final class DocumentSource extends
+  public static final class DocumentSource extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.annotator.v1.DocumentSource)
       DocumentSourceOrBuilder {
@@ -16586,6 +16910,13 @@ public final class Annotator {
     }
     private DocumentSource() {
       httpUri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DocumentSource();
     }
 
     @java.lang.Override
@@ -16601,7 +16932,6 @@ public final class Annotator {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16619,7 +16949,7 @@ public final class Annotator {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16662,7 +16992,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>string http_uri = 1;</code>
+     * @return The httpUri.
      */
+    @java.lang.Override
     public java.lang.String getHttpUri() {
       java.lang.Object ref = httpUri_;
       if (ref instanceof java.lang.String) {
@@ -16685,7 +17017,9 @@ public final class Annotator {
      * </pre>
      *
      * <code>string http_uri = 1;</code>
+     * @return The bytes for httpUri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpUriBytes() {
       java.lang.Object ref = httpUri_;
@@ -16744,11 +17078,10 @@ public final class Annotator {
       }
       ssn.annotator.v1.Annotator.DocumentSource other = (ssn.annotator.v1.Annotator.DocumentSource) obj;
 
-      boolean result = true;
-      result = result && getHttpUri()
-          .equals(other.getHttpUri());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpUri()
+          .equals(other.getHttpUri())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16928,35 +17261,35 @@ public final class Annotator {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17014,6 +17347,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string http_uri = 1;</code>
+       * @return The httpUri.
        */
       public java.lang.String getHttpUri() {
         java.lang.Object ref = httpUri_;
@@ -17037,6 +17371,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string http_uri = 1;</code>
+       * @return The bytes for httpUri.
        */
       public com.google.protobuf.ByteString
           getHttpUriBytes() {
@@ -17061,6 +17396,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>string http_uri = 1;</code>
+       * @param value The httpUri to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpUri(
           java.lang.String value) {
@@ -17082,6 +17419,7 @@ public final class Annotator {
        * </pre>
        *
        * <code>string http_uri = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpUri() {
         
@@ -17099,6 +17437,8 @@ public final class Annotator {
        * </pre>
        *
        * <code>string http_uri = 1;</code>
+       * @param value The bytes for httpUri to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpUriBytes(
           com.google.protobuf.ByteString value) {
@@ -17114,7 +17454,7 @@ public final class Annotator {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17269,15 +17609,7 @@ public final class Annotator {
       "\020application/json:\020application/jsonb\006pro" +
       "to3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -17285,7 +17617,7 @@ public final class Annotator {
           ssn.type.CandidateOuterClass.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
           ssn.type.TierOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_ssn_annotator_v1_Feature_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_annotator_v1_Feature_fieldAccessorTable = new

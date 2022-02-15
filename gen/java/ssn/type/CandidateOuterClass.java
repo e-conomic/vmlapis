@@ -25,6 +25,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
@@ -34,6 +35,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * @return The level.
      */
     ssn.type.CandidateOuterClass.Confidence.Level getLevel();
 
@@ -43,6 +45,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return Whether the value field is set.
      */
     boolean hasValue();
     /**
@@ -51,6 +54,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return The value.
      */
     com.google.protobuf.FloatValue getValue();
     /**
@@ -65,7 +69,7 @@ public final class CandidateOuterClass {
   /**
    * Protobuf type {@code ssn.type.Confidence}
    */
-  public  static final class Confidence extends
+  public static final class Confidence extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Confidence)
       ConfidenceOrBuilder {
@@ -76,6 +80,13 @@ public final class CandidateOuterClass {
     }
     private Confidence() {
       level_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Confidence();
     }
 
     @java.lang.Override
@@ -91,7 +102,6 @@ public final class CandidateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -122,7 +132,7 @@ public final class CandidateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -220,6 +230,8 @@ public final class CandidateOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -227,6 +239,10 @@ public final class CandidateOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Level forNumber(int value) {
         switch (value) {
           case 0: return UNKNOWN;
@@ -253,6 +269,10 @@ public final class CandidateOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -296,8 +316,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -307,8 +328,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * @return The level.
      */
-    public ssn.type.CandidateOuterClass.Confidence.Level getLevel() {
+    @java.lang.Override public ssn.type.CandidateOuterClass.Confidence.Level getLevel() {
       @SuppressWarnings("deprecation")
       ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(level_);
       return result == null ? ssn.type.CandidateOuterClass.Confidence.Level.UNRECOGNIZED : result;
@@ -322,7 +344,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return Whether the value field is set.
      */
+    @java.lang.Override
     public boolean hasValue() {
       return value_ != null;
     }
@@ -332,7 +356,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getValue() {
       return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
     }
@@ -343,6 +369,7 @@ public final class CandidateOuterClass {
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
       return getValue();
     }
@@ -399,15 +426,14 @@ public final class CandidateOuterClass {
       }
       ssn.type.CandidateOuterClass.Confidence other = (ssn.type.CandidateOuterClass.Confidence) obj;
 
-      boolean result = true;
-      result = result && level_ == other.level_;
-      result = result && (hasValue() == other.hasValue());
+      if (level_ != other.level_) return false;
+      if (hasValue() != other.hasValue()) return false;
       if (hasValue()) {
-        result = result && getValue()
-            .equals(other.getValue());
+        if (!getValue()
+            .equals(other.getValue())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -602,35 +628,35 @@ public final class CandidateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -687,8 +713,9 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getLevelValue() {
+      @java.lang.Override public int getLevelValue() {
         return level_;
       }
       /**
@@ -698,8 +725,11 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * @param value The enum numeric value on the wire for level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
+        
         level_ = value;
         onChanged();
         return this;
@@ -711,7 +741,9 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * @return The level.
        */
+      @java.lang.Override
       public ssn.type.CandidateOuterClass.Confidence.Level getLevel() {
         @SuppressWarnings("deprecation")
         ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(level_);
@@ -724,6 +756,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevel(ssn.type.CandidateOuterClass.Confidence.Level value) {
         if (value == null) {
@@ -741,6 +775,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLevel() {
         
@@ -749,7 +784,7 @@ public final class CandidateOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FloatValue value_ = null;
+      private com.google.protobuf.FloatValue value_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> valueBuilder_;
       /**
@@ -758,6 +793,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FloatValue value = 2;</code>
+       * @return Whether the value field is set.
        */
       public boolean hasValue() {
         return valueBuilder_ != null || value_ != null;
@@ -768,6 +804,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FloatValue value = 2;</code>
+       * @return The value.
        */
       public com.google.protobuf.FloatValue getValue() {
         if (valueBuilder_ == null) {
@@ -904,7 +941,7 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -964,6 +1001,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string value = 1;</code>
+     * @return The value.
      */
     java.lang.String getValue();
     /**
@@ -972,6 +1010,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string value = 1;</code>
+     * @return The bytes for value.
      */
     com.google.protobuf.ByteString
         getValueBytes();
@@ -983,6 +1022,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -992,6 +1032,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -1002,6 +1043,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3;</code>
+     * @return Whether the confidence field is set.
      */
     boolean hasConfidence();
     /**
@@ -1010,6 +1052,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3;</code>
+     * @return The confidence.
      */
     ssn.type.CandidateOuterClass.Confidence getConfidence();
     /**
@@ -1041,6 +1084,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -1063,6 +1107,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
     /**
@@ -1094,6 +1139,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -1102,6 +1148,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * @return The type.
      */
     ssn.type.CandidateOuterClass.Candidate.Type getType();
 
@@ -1112,6 +1159,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>uint32 page_ref = 6;</code>
+     * @return The pageRef.
      */
     int getPageRef();
 
@@ -1121,6 +1169,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * @return Whether the modelMetadata field is set.
      */
     boolean hasModelMetadata();
     /**
@@ -1129,6 +1178,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * @return The modelMetadata.
      */
     ssn.type.CandidateOuterClass.ModelSpec getModelMetadata();
     /**
@@ -1143,7 +1193,7 @@ public final class CandidateOuterClass {
   /**
    * Protobuf type {@code ssn.type.Candidate}
    */
-  public  static final class Candidate extends
+  public static final class Candidate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.Candidate)
       CandidateOrBuilder {
@@ -1156,7 +1206,13 @@ public final class CandidateOuterClass {
       value_ = "";
       text_ = "";
       type_ = 0;
-      pageRef_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Candidate();
     }
 
     @java.lang.Override
@@ -1172,7 +1228,6 @@ public final class CandidateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1246,7 +1301,7 @@ public final class CandidateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1320,6 +1375,8 @@ public final class CandidateOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1327,6 +1384,10 @@ public final class CandidateOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return UNKNOWN;
@@ -1350,6 +1411,10 @@ public final class CandidateOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1392,7 +1457,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string value = 1;</code>
+     * @return The value.
      */
+    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -1411,7 +1478,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string value = 1;</code>
+     * @return The bytes for value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -1435,7 +1504,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -1455,7 +1526,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -1478,7 +1551,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3;</code>
+     * @return Whether the confidence field is set.
      */
+    @java.lang.Override
     public boolean hasConfidence() {
       return confidence_ != null;
     }
@@ -1488,7 +1563,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3;</code>
+     * @return The confidence.
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Confidence getConfidence() {
       return confidence_ == null ? ssn.type.CandidateOuterClass.Confidence.getDefaultInstance() : confidence_;
     }
@@ -1499,6 +1576,7 @@ public final class CandidateOuterClass {
      *
      * <code>.ssn.type.Confidence confidence = 3;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
       return getConfidence();
     }
@@ -1525,7 +1603,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * @return Whether the boundingBox field is set.
      */
+    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -1549,7 +1629,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * @return The boundingBox.
      */
+    @java.lang.Override
     public ssn.type.Geometry.BoundingPoly getBoundingBox() {
       return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
     }
@@ -1574,6 +1656,7 @@ public final class CandidateOuterClass {
      *
      * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
      */
+    @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -1586,8 +1669,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1596,8 +1680,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * @return The type.
      */
-    public ssn.type.CandidateOuterClass.Candidate.Type getType() {
+    @java.lang.Override public ssn.type.CandidateOuterClass.Candidate.Type getType() {
       @SuppressWarnings("deprecation")
       ssn.type.CandidateOuterClass.Candidate.Type result = ssn.type.CandidateOuterClass.Candidate.Type.valueOf(type_);
       return result == null ? ssn.type.CandidateOuterClass.Candidate.Type.UNRECOGNIZED : result;
@@ -1612,7 +1697,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>uint32 page_ref = 6;</code>
+     * @return The pageRef.
      */
+    @java.lang.Override
     public int getPageRef() {
       return pageRef_;
     }
@@ -1625,7 +1712,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * @return Whether the modelMetadata field is set.
      */
+    @java.lang.Override
     public boolean hasModelMetadata() {
       return modelMetadata_ != null;
     }
@@ -1635,7 +1724,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * @return The modelMetadata.
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpec getModelMetadata() {
       return modelMetadata_ == null ? ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance() : modelMetadata_;
     }
@@ -1646,6 +1737,7 @@ public final class CandidateOuterClass {
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
       return getModelMetadata();
     }
@@ -1735,31 +1827,30 @@ public final class CandidateOuterClass {
       }
       ssn.type.CandidateOuterClass.Candidate other = (ssn.type.CandidateOuterClass.Candidate) obj;
 
-      boolean result = true;
-      result = result && getValue()
-          .equals(other.getValue());
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (hasConfidence() == other.hasConfidence());
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (hasConfidence() != other.hasConfidence()) return false;
       if (hasConfidence()) {
-        result = result && getConfidence()
-            .equals(other.getConfidence());
+        if (!getConfidence()
+            .equals(other.getConfidence())) return false;
       }
-      result = result && (hasBoundingBox() == other.hasBoundingBox());
+      if (hasBoundingBox() != other.hasBoundingBox()) return false;
       if (hasBoundingBox()) {
-        result = result && getBoundingBox()
-            .equals(other.getBoundingBox());
+        if (!getBoundingBox()
+            .equals(other.getBoundingBox())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && (getPageRef()
-          == other.getPageRef());
-      result = result && (hasModelMetadata() == other.hasModelMetadata());
+      if (type_ != other.type_) return false;
+      if (getPageRef()
+          != other.getPageRef()) return false;
+      if (hasModelMetadata() != other.hasModelMetadata()) return false;
       if (hasModelMetadata()) {
-        result = result && getModelMetadata()
-            .equals(other.getModelMetadata());
+        if (!getModelMetadata()
+            .equals(other.getModelMetadata())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1999,35 +2090,35 @@ public final class CandidateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2100,6 +2191,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string value = 1;</code>
+       * @return The value.
        */
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
@@ -2119,6 +2211,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string value = 1;</code>
+       * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
@@ -2139,6 +2232,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string value = 1;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
        */
       public Builder setValue(
           java.lang.String value) {
@@ -2156,6 +2251,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string value = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearValue() {
         
@@ -2169,6 +2265,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string value = 1;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
@@ -2190,6 +2288,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -2210,6 +2309,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -2231,6 +2331,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -2249,6 +2351,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -2263,6 +2366,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -2276,7 +2381,7 @@ public final class CandidateOuterClass {
         return this;
       }
 
-      private ssn.type.CandidateOuterClass.Confidence confidence_ = null;
+      private ssn.type.CandidateOuterClass.Confidence confidence_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.CandidateOuterClass.Confidence, ssn.type.CandidateOuterClass.Confidence.Builder, ssn.type.CandidateOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
       /**
@@ -2285,6 +2390,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Confidence confidence = 3;</code>
+       * @return Whether the confidence field is set.
        */
       public boolean hasConfidence() {
         return confidenceBuilder_ != null || confidence_ != null;
@@ -2295,6 +2401,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Confidence confidence = 3;</code>
+       * @return The confidence.
        */
       public ssn.type.CandidateOuterClass.Confidence getConfidence() {
         if (confidenceBuilder_ == null) {
@@ -2429,7 +2536,7 @@ public final class CandidateOuterClass {
         return confidenceBuilder_;
       }
 
-      private ssn.type.Geometry.BoundingPoly boundingBox_ = null;
+      private ssn.type.Geometry.BoundingPoly boundingBox_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> boundingBoxBuilder_;
       /**
@@ -2452,6 +2559,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -2476,6 +2584,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -2715,8 +2824,9 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -2725,8 +2835,11 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -2737,7 +2850,9 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public ssn.type.CandidateOuterClass.Candidate.Type getType() {
         @SuppressWarnings("deprecation")
         ssn.type.CandidateOuterClass.Candidate.Type result = ssn.type.CandidateOuterClass.Candidate.Type.valueOf(type_);
@@ -2749,6 +2864,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(ssn.type.CandidateOuterClass.Candidate.Type value) {
         if (value == null) {
@@ -2765,6 +2882,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -2781,7 +2899,9 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>uint32 page_ref = 6;</code>
+       * @return The pageRef.
        */
+      @java.lang.Override
       public int getPageRef() {
         return pageRef_;
       }
@@ -2792,6 +2912,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>uint32 page_ref = 6;</code>
+       * @param value The pageRef to set.
+       * @return This builder for chaining.
        */
       public Builder setPageRef(int value) {
         
@@ -2806,6 +2928,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>uint32 page_ref = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageRef() {
         
@@ -2814,7 +2937,7 @@ public final class CandidateOuterClass {
         return this;
       }
 
-      private ssn.type.CandidateOuterClass.ModelSpec modelMetadata_ = null;
+      private ssn.type.CandidateOuterClass.ModelSpec modelMetadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> modelMetadataBuilder_;
       /**
@@ -2823,6 +2946,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * @return Whether the modelMetadata field is set.
        */
       public boolean hasModelMetadata() {
         return modelMetadataBuilder_ != null || modelMetadata_ != null;
@@ -2833,6 +2957,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * @return The modelMetadata.
        */
       public ssn.type.CandidateOuterClass.ModelSpec getModelMetadata() {
         if (modelMetadataBuilder_ == null) {
@@ -2969,7 +3094,7 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3029,6 +3154,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string model_name = 1;</code>
+     * @return The modelName.
      */
     java.lang.String getModelName();
     /**
@@ -3037,6 +3163,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string model_name = 1;</code>
+     * @return The bytes for modelName.
      */
     com.google.protobuf.ByteString
         getModelNameBytes();
@@ -3047,6 +3174,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * @return Whether the modelVer field is set.
      */
     boolean hasModelVer();
     /**
@@ -3055,6 +3183,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * @return The modelVer.
      */
     com.google.protobuf.Int64Value getModelVer();
     /**
@@ -3069,7 +3198,7 @@ public final class CandidateOuterClass {
   /**
    * Protobuf type {@code ssn.type.ModelSpec}
    */
-  public  static final class ModelSpec extends
+  public static final class ModelSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.ModelSpec)
       ModelSpecOrBuilder {
@@ -3080,6 +3209,13 @@ public final class CandidateOuterClass {
     }
     private ModelSpec() {
       modelName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ModelSpec();
     }
 
     @java.lang.Override
@@ -3095,7 +3231,6 @@ public final class CandidateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3126,7 +3261,7 @@ public final class CandidateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3165,7 +3300,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string model_name = 1;</code>
+     * @return The modelName.
      */
+    @java.lang.Override
     public java.lang.String getModelName() {
       java.lang.Object ref = modelName_;
       if (ref instanceof java.lang.String) {
@@ -3184,7 +3321,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string model_name = 1;</code>
+     * @return The bytes for modelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelNameBytes() {
       java.lang.Object ref = modelName_;
@@ -3207,7 +3346,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * @return Whether the modelVer field is set.
      */
+    @java.lang.Override
     public boolean hasModelVer() {
       return modelVer_ != null;
     }
@@ -3217,7 +3358,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * @return The modelVer.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getModelVer() {
       return modelVer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
     }
@@ -3228,6 +3371,7 @@ public final class CandidateOuterClass {
      *
      * <code>.google.protobuf.Int64Value model_ver = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
       return getModelVer();
     }
@@ -3283,16 +3427,15 @@ public final class CandidateOuterClass {
       }
       ssn.type.CandidateOuterClass.ModelSpec other = (ssn.type.CandidateOuterClass.ModelSpec) obj;
 
-      boolean result = true;
-      result = result && getModelName()
-          .equals(other.getModelName());
-      result = result && (hasModelVer() == other.hasModelVer());
+      if (!getModelName()
+          .equals(other.getModelName())) return false;
+      if (hasModelVer() != other.hasModelVer()) return false;
       if (hasModelVer()) {
-        result = result && getModelVer()
-            .equals(other.getModelVer());
+        if (!getModelVer()
+            .equals(other.getModelVer())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3487,35 +3630,35 @@ public final class CandidateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3572,6 +3715,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string model_name = 1;</code>
+       * @return The modelName.
        */
       public java.lang.String getModelName() {
         java.lang.Object ref = modelName_;
@@ -3591,6 +3735,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string model_name = 1;</code>
+       * @return The bytes for modelName.
        */
       public com.google.protobuf.ByteString
           getModelNameBytes() {
@@ -3611,6 +3756,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string model_name = 1;</code>
+       * @param value The modelName to set.
+       * @return This builder for chaining.
        */
       public Builder setModelName(
           java.lang.String value) {
@@ -3628,6 +3775,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string model_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearModelName() {
         
@@ -3641,6 +3789,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string model_name = 1;</code>
+       * @param value The bytes for modelName to set.
+       * @return This builder for chaining.
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3654,7 +3804,7 @@ public final class CandidateOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value modelVer_ = null;
+      private com.google.protobuf.Int64Value modelVer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> modelVerBuilder_;
       /**
@@ -3663,6 +3813,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * @return Whether the modelVer field is set.
        */
       public boolean hasModelVer() {
         return modelVerBuilder_ != null || modelVer_ != null;
@@ -3673,6 +3824,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * @return The modelVer.
        */
       public com.google.protobuf.Int64Value getModelVer() {
         if (modelVerBuilder_ == null) {
@@ -3809,7 +3961,7 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3870,6 +4022,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -3879,6 +4032,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -3890,6 +4044,7 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>double amount = 2;</code>
+     * @return The amount.
      */
     double getAmount();
 
@@ -3900,13 +4055,14 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>uint32 page_ref = 6;</code>
+     * @return The pageRef.
      */
     int getPageRef();
   }
   /**
    * Protobuf type {@code ssn.type.LineCandidate}
    */
-  public  static final class LineCandidate extends
+  public static final class LineCandidate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.type.LineCandidate)
       LineCandidateOrBuilder {
@@ -3917,8 +4073,13 @@ public final class CandidateOuterClass {
     }
     private LineCandidate() {
       text_ = "";
-      amount_ = 0D;
-      pageRef_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LineCandidate();
     }
 
     @java.lang.Override
@@ -3934,7 +4095,6 @@ public final class CandidateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3962,7 +4122,7 @@ public final class CandidateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4002,7 +4162,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -4022,7 +4184,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -4046,7 +4210,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>double amount = 2;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public double getAmount() {
       return amount_;
     }
@@ -4060,7 +4226,9 @@ public final class CandidateOuterClass {
      * </pre>
      *
      * <code>uint32 page_ref = 6;</code>
+     * @return The pageRef.
      */
+    @java.lang.Override
     public int getPageRef() {
       return pageRef_;
     }
@@ -4123,17 +4291,15 @@ public final class CandidateOuterClass {
       }
       ssn.type.CandidateOuterClass.LineCandidate other = (ssn.type.CandidateOuterClass.LineCandidate) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getAmount())
-          == java.lang.Double.doubleToLongBits(
-              other.getAmount()));
-      result = result && (getPageRef()
-          == other.getPageRef());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (java.lang.Double.doubleToLongBits(getAmount())
+          != java.lang.Double.doubleToLongBits(
+              other.getAmount())) return false;
+      if (getPageRef()
+          != other.getPageRef()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4324,35 +4490,35 @@ public final class CandidateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4413,6 +4579,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -4433,6 +4600,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -4454,6 +4622,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -4472,6 +4642,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -4486,6 +4657,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -4507,7 +4680,9 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>double amount = 2;</code>
+       * @return The amount.
        */
+      @java.lang.Override
       public double getAmount() {
         return amount_;
       }
@@ -4518,6 +4693,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>double amount = 2;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(double value) {
         
@@ -4532,6 +4709,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>double amount = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -4548,7 +4726,9 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>uint32 page_ref = 6;</code>
+       * @return The pageRef.
        */
+      @java.lang.Override
       public int getPageRef() {
         return pageRef_;
       }
@@ -4559,6 +4739,8 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>uint32 page_ref = 6;</code>
+       * @param value The pageRef to set.
+       * @return This builder for chaining.
        */
       public Builder setPageRef(int value) {
         
@@ -4573,6 +4755,7 @@ public final class CandidateOuterClass {
        * </pre>
        *
        * <code>uint32 page_ref = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageRef() {
         
@@ -4583,7 +4766,7 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4683,20 +4866,12 @@ public final class CandidateOuterClass {
       "omic/vmlapis/gen/go/ssn/type;ssntypeb\006pr" +
       "oto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.type.Geometry.getDescriptor(),
-        }, assigner);
+        });
     internal_static_ssn_type_Confidence_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_type_Confidence_fieldAccessorTable = new

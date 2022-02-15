@@ -25,6 +25,7 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
@@ -34,6 +35,7 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * @return The level.
      */
     asgt.type.PredictionOuterClass.Confidence.Level getLevel();
 
@@ -43,6 +45,7 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return Whether the value field is set.
      */
     boolean hasValue();
     /**
@@ -51,6 +54,7 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return The value.
      */
     com.google.protobuf.FloatValue getValue();
     /**
@@ -69,7 +73,7 @@ public final class PredictionOuterClass {
    *
    * Protobuf type {@code asgt.type.Confidence}
    */
-  public  static final class Confidence extends
+  public static final class Confidence extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.type.Confidence)
       ConfidenceOrBuilder {
@@ -80,6 +84,13 @@ public final class PredictionOuterClass {
     }
     private Confidence() {
       level_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Confidence();
     }
 
     @java.lang.Override
@@ -95,7 +106,6 @@ public final class PredictionOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -126,7 +136,7 @@ public final class PredictionOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -224,6 +234,8 @@ public final class PredictionOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -231,6 +243,10 @@ public final class PredictionOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Level forNumber(int value) {
         switch (value) {
           case 0: return UNKNOWN;
@@ -257,6 +273,10 @@ public final class PredictionOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -300,8 +320,9 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -311,8 +332,9 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * @return The level.
      */
-    public asgt.type.PredictionOuterClass.Confidence.Level getLevel() {
+    @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getLevel() {
       @SuppressWarnings("deprecation")
       asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(level_);
       return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
@@ -326,7 +348,9 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return Whether the value field is set.
      */
+    @java.lang.Override
     public boolean hasValue() {
       return value_ != null;
     }
@@ -336,7 +360,9 @@ public final class PredictionOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
+     * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValue getValue() {
       return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
     }
@@ -347,6 +373,7 @@ public final class PredictionOuterClass {
      *
      * <code>.google.protobuf.FloatValue value = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
       return getValue();
     }
@@ -403,15 +430,14 @@ public final class PredictionOuterClass {
       }
       asgt.type.PredictionOuterClass.Confidence other = (asgt.type.PredictionOuterClass.Confidence) obj;
 
-      boolean result = true;
-      result = result && level_ == other.level_;
-      result = result && (hasValue() == other.hasValue());
+      if (level_ != other.level_) return false;
+      if (hasValue() != other.hasValue()) return false;
       if (hasValue()) {
-        result = result && getValue()
-            .equals(other.getValue());
+        if (!getValue()
+            .equals(other.getValue())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -610,35 +636,35 @@ public final class PredictionOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -695,8 +721,9 @@ public final class PredictionOuterClass {
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getLevelValue() {
+      @java.lang.Override public int getLevelValue() {
         return level_;
       }
       /**
@@ -706,8 +733,11 @@ public final class PredictionOuterClass {
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * @param value The enum numeric value on the wire for level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
+        
         level_ = value;
         onChanged();
         return this;
@@ -719,7 +749,9 @@ public final class PredictionOuterClass {
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * @return The level.
        */
+      @java.lang.Override
       public asgt.type.PredictionOuterClass.Confidence.Level getLevel() {
         @SuppressWarnings("deprecation")
         asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(level_);
@@ -732,6 +764,8 @@ public final class PredictionOuterClass {
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevel(asgt.type.PredictionOuterClass.Confidence.Level value) {
         if (value == null) {
@@ -749,6 +783,7 @@ public final class PredictionOuterClass {
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLevel() {
         
@@ -757,7 +792,7 @@ public final class PredictionOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FloatValue value_ = null;
+      private com.google.protobuf.FloatValue value_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> valueBuilder_;
       /**
@@ -766,6 +801,7 @@ public final class PredictionOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FloatValue value = 2;</code>
+       * @return Whether the value field is set.
        */
       public boolean hasValue() {
         return valueBuilder_ != null || value_ != null;
@@ -776,6 +812,7 @@ public final class PredictionOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FloatValue value = 2;</code>
+       * @return The value.
        */
       public com.google.protobuf.FloatValue getValue() {
         if (valueBuilder_ == null) {
@@ -912,7 +949,7 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -993,7 +1030,7 @@ public final class PredictionOuterClass {
   /**
    * Protobuf type {@code asgt.type.Prediction}
    */
-  public  static final class Prediction extends
+  public static final class Prediction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.type.Prediction)
       PredictionOrBuilder {
@@ -1004,6 +1041,13 @@ public final class PredictionOuterClass {
     }
     private Prediction() {
       targets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Prediction();
     }
 
     @java.lang.Override
@@ -1031,7 +1075,7 @@ public final class PredictionOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 targets_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1040,7 +1084,7 @@ public final class PredictionOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1054,7 +1098,7 @@ public final class PredictionOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           targets_ = java.util.Collections.unmodifiableList(targets_);
         }
         this.unknownFields = unknownFields.build();
@@ -1080,10 +1124,12 @@ public final class PredictionOuterClass {
 
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       java.lang.String getName();
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
@@ -1115,7 +1161,7 @@ public final class PredictionOuterClass {
     /**
      * Protobuf type {@code asgt.type.Prediction.Target}
      */
-    public  static final class Target extends
+    public static final class Target extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:asgt.type.Prediction.Target)
         TargetOrBuilder {
@@ -1127,6 +1173,13 @@ public final class PredictionOuterClass {
       private Target() {
         name_ = "";
         candidates_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Target();
       }
 
       @java.lang.Override
@@ -1160,16 +1213,16 @@ public final class PredictionOuterClass {
                 break;
               }
               case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target.Candidate>();
-                  mutable_bitField0_ |= 0x00000002;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 candidates_.add(
                     input.readMessage(asgt.type.PredictionOuterClass.Prediction.Target.Candidate.parser(), extensionRegistry));
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1183,7 +1236,7 @@ public final class PredictionOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             candidates_ = java.util.Collections.unmodifiableList(candidates_);
           }
           this.unknownFields = unknownFields.build();
@@ -1209,20 +1262,24 @@ public final class PredictionOuterClass {
 
         /**
          * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * @return The value.
          */
         java.lang.String getValue();
         /**
          * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * @return The bytes for value.
          */
         com.google.protobuf.ByteString
             getValueBytes();
 
         /**
          * <code>.asgt.type.Confidence confidence = 2;</code>
+         * @return Whether the confidence field is set.
          */
         boolean hasConfidence();
         /**
          * <code>.asgt.type.Confidence confidence = 2;</code>
+         * @return The confidence.
          */
         asgt.type.PredictionOuterClass.Confidence getConfidence();
         /**
@@ -1233,7 +1290,7 @@ public final class PredictionOuterClass {
       /**
        * Protobuf type {@code asgt.type.Prediction.Target.Candidate}
        */
-      public  static final class Candidate extends
+      public static final class Candidate extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:asgt.type.Prediction.Target.Candidate)
           CandidateOrBuilder {
@@ -1244,6 +1301,13 @@ public final class PredictionOuterClass {
         }
         private Candidate() {
           value_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Candidate();
         }
 
         @java.lang.Override
@@ -1259,7 +1323,6 @@ public final class PredictionOuterClass {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -1290,7 +1353,7 @@ public final class PredictionOuterClass {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -1325,7 +1388,9 @@ public final class PredictionOuterClass {
         private volatile java.lang.Object value_;
         /**
          * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
           if (ref instanceof java.lang.String) {
@@ -1340,7 +1405,9 @@ public final class PredictionOuterClass {
         }
         /**
          * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getValueBytes() {
           java.lang.Object ref = value_;
@@ -1359,19 +1426,24 @@ public final class PredictionOuterClass {
         private asgt.type.PredictionOuterClass.Confidence confidence_;
         /**
          * <code>.asgt.type.Confidence confidence = 2;</code>
+         * @return Whether the confidence field is set.
          */
+        @java.lang.Override
         public boolean hasConfidence() {
           return confidence_ != null;
         }
         /**
          * <code>.asgt.type.Confidence confidence = 2;</code>
+         * @return The confidence.
          */
+        @java.lang.Override
         public asgt.type.PredictionOuterClass.Confidence getConfidence() {
           return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
         }
         /**
          * <code>.asgt.type.Confidence confidence = 2;</code>
          */
+        @java.lang.Override
         public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
           return getConfidence();
         }
@@ -1427,16 +1499,15 @@ public final class PredictionOuterClass {
           }
           asgt.type.PredictionOuterClass.Prediction.Target.Candidate other = (asgt.type.PredictionOuterClass.Prediction.Target.Candidate) obj;
 
-          boolean result = true;
-          result = result && getValue()
-              .equals(other.getValue());
-          result = result && (hasConfidence() == other.hasConfidence());
+          if (!getValue()
+              .equals(other.getValue())) return false;
+          if (hasConfidence() != other.hasConfidence()) return false;
           if (hasConfidence()) {
-            result = result && getConfidence()
-                .equals(other.getConfidence());
+            if (!getConfidence()
+                .equals(other.getConfidence())) return false;
           }
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -1631,35 +1702,35 @@ public final class PredictionOuterClass {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1712,6 +1783,7 @@ public final class PredictionOuterClass {
           private java.lang.Object value_ = "";
           /**
            * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * @return The value.
            */
           public java.lang.String getValue() {
             java.lang.Object ref = value_;
@@ -1727,6 +1799,7 @@ public final class PredictionOuterClass {
           }
           /**
            * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * @return The bytes for value.
            */
           public com.google.protobuf.ByteString
               getValueBytes() {
@@ -1743,6 +1816,8 @@ public final class PredictionOuterClass {
           }
           /**
            * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * @param value The value to set.
+           * @return This builder for chaining.
            */
           public Builder setValue(
               java.lang.String value) {
@@ -1756,6 +1831,7 @@ public final class PredictionOuterClass {
           }
           /**
            * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * @return This builder for chaining.
            */
           public Builder clearValue() {
             
@@ -1765,6 +1841,8 @@ public final class PredictionOuterClass {
           }
           /**
            * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * @param value The bytes for value to set.
+           * @return This builder for chaining.
            */
           public Builder setValueBytes(
               com.google.protobuf.ByteString value) {
@@ -1778,17 +1856,19 @@ public final class PredictionOuterClass {
             return this;
           }
 
-          private asgt.type.PredictionOuterClass.Confidence confidence_ = null;
+          private asgt.type.PredictionOuterClass.Confidence confidence_;
           private com.google.protobuf.SingleFieldBuilderV3<
               asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
           /**
            * <code>.asgt.type.Confidence confidence = 2;</code>
+           * @return Whether the confidence field is set.
            */
           public boolean hasConfidence() {
             return confidenceBuilder_ != null || confidence_ != null;
           }
           /**
            * <code>.asgt.type.Confidence confidence = 2;</code>
+           * @return The confidence.
            */
           public asgt.type.PredictionOuterClass.Confidence getConfidence() {
             if (confidenceBuilder_ == null) {
@@ -1897,7 +1977,7 @@ public final class PredictionOuterClass {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -1947,12 +2027,13 @@ public final class PredictionOuterClass {
 
       }
 
-      private int bitField0_;
       public static final int NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object name_;
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
@@ -1967,7 +2048,9 @@ public final class PredictionOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
@@ -1987,12 +2070,14 @@ public final class PredictionOuterClass {
       /**
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
+      @java.lang.Override
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> getCandidatesList() {
         return candidates_;
       }
       /**
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
+      @java.lang.Override
       public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
           getCandidatesOrBuilderList() {
         return candidates_;
@@ -2000,18 +2085,21 @@ public final class PredictionOuterClass {
       /**
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
+      @java.lang.Override
       public int getCandidatesCount() {
         return candidates_.size();
       }
       /**
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
+      @java.lang.Override
       public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index) {
         return candidates_.get(index);
       }
       /**
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
+      @java.lang.Override
       public asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
           int index) {
         return candidates_.get(index);
@@ -2068,13 +2156,12 @@ public final class PredictionOuterClass {
         }
         asgt.type.PredictionOuterClass.Prediction.Target other = (asgt.type.PredictionOuterClass.Prediction.Target) obj;
 
-        boolean result = true;
-        result = result && getName()
-            .equals(other.getName());
-        result = result && getCandidatesList()
-            .equals(other.getCandidatesList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getCandidatesList()
+            .equals(other.getCandidatesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -2228,7 +2315,7 @@ public final class PredictionOuterClass {
 
           if (candidatesBuilder_ == null) {
             candidates_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             candidatesBuilder_.clear();
           }
@@ -2259,53 +2346,51 @@ public final class PredictionOuterClass {
         public asgt.type.PredictionOuterClass.Prediction.Target buildPartial() {
           asgt.type.PredictionOuterClass.Prediction.Target result = new asgt.type.PredictionOuterClass.Prediction.Target(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           result.name_ = name_;
           if (candidatesBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            if (((bitField0_ & 0x00000001) != 0)) {
               candidates_ = java.util.Collections.unmodifiableList(candidates_);
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             }
             result.candidates_ = candidates_;
           } else {
             result.candidates_ = candidatesBuilder_.build();
           }
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2327,7 +2412,7 @@ public final class PredictionOuterClass {
             if (!other.candidates_.isEmpty()) {
               if (candidates_.isEmpty()) {
                 candidates_ = other.candidates_;
-                bitField0_ = (bitField0_ & ~0x00000002);
+                bitField0_ = (bitField0_ & ~0x00000001);
               } else {
                 ensureCandidatesIsMutable();
                 candidates_.addAll(other.candidates_);
@@ -2340,7 +2425,7 @@ public final class PredictionOuterClass {
                 candidatesBuilder_.dispose();
                 candidatesBuilder_ = null;
                 candidates_ = other.candidates_;
-                bitField0_ = (bitField0_ & ~0x00000002);
+                bitField0_ = (bitField0_ & ~0x00000001);
                 candidatesBuilder_ = 
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                      getCandidatesFieldBuilder() : null;
@@ -2382,6 +2467,7 @@ public final class PredictionOuterClass {
         private java.lang.Object name_ = "";
         /**
          * <code>string name = 1;</code>
+         * @return The name.
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -2397,6 +2483,7 @@ public final class PredictionOuterClass {
         }
         /**
          * <code>string name = 1;</code>
+         * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -2413,6 +2500,8 @@ public final class PredictionOuterClass {
         }
         /**
          * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
          */
         public Builder setName(
             java.lang.String value) {
@@ -2426,6 +2515,7 @@ public final class PredictionOuterClass {
         }
         /**
          * <code>string name = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearName() {
           
@@ -2435,6 +2525,8 @@ public final class PredictionOuterClass {
         }
         /**
          * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
@@ -2451,9 +2543,9 @@ public final class PredictionOuterClass {
         private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> candidates_ =
           java.util.Collections.emptyList();
         private void ensureCandidatesIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target.Candidate>(candidates_);
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
            }
         }
 
@@ -2603,7 +2695,7 @@ public final class PredictionOuterClass {
         public Builder clearCandidates() {
           if (candidatesBuilder_ == null) {
             candidates_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             onChanged();
           } else {
             candidatesBuilder_.clear();
@@ -2680,7 +2772,7 @@ public final class PredictionOuterClass {
             candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 asgt.type.PredictionOuterClass.Prediction.Target.Candidate, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder>(
                     candidates_,
-                    ((bitField0_ & 0x00000002) == 0x00000002),
+                    ((bitField0_ & 0x00000001) != 0),
                     getParentForChildren(),
                     isClean());
             candidates_ = null;
@@ -2690,7 +2782,7 @@ public final class PredictionOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -2745,12 +2837,14 @@ public final class PredictionOuterClass {
     /**
      * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getTargetsList() {
       return targets_;
     }
     /**
      * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
         getTargetsOrBuilderList() {
       return targets_;
@@ -2758,18 +2852,21 @@ public final class PredictionOuterClass {
     /**
      * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
+    @java.lang.Override
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
      * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
+    @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
+    @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
         int index) {
       return targets_.get(index);
@@ -2820,11 +2917,10 @@ public final class PredictionOuterClass {
       }
       asgt.type.PredictionOuterClass.Prediction other = (asgt.type.PredictionOuterClass.Prediction) obj;
 
-      boolean result = true;
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3006,7 +3102,7 @@ public final class PredictionOuterClass {
         asgt.type.PredictionOuterClass.Prediction result = new asgt.type.PredictionOuterClass.Prediction(this);
         int from_bitField0_ = bitField0_;
         if (targetsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             targets_ = java.util.Collections.unmodifiableList(targets_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3020,35 +3116,35 @@ public final class PredictionOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3121,7 +3217,7 @@ public final class PredictionOuterClass {
       private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> targets_ =
         java.util.Collections.emptyList();
       private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           targets_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>(targets_);
           bitField0_ |= 0x00000001;
          }
@@ -3350,7 +3446,7 @@ public final class PredictionOuterClass {
           targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder>(
                   targets_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           targets_ = null;
@@ -3360,7 +3456,7 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3455,20 +3551,12 @@ public final class PredictionOuterClass {
       "om/e-conomic/vmlapis/gen/go/asgt/type;as" +
       "gttypeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_asgt_type_Confidence_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_type_Confidence_fieldAccessorTable = new

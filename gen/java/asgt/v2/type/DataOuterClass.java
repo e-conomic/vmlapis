@@ -24,6 +24,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -32,6 +33,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -43,7 +45,7 @@ public final class DataOuterClass {
    *
    * Protobuf type {@code asgt.v2.type.Invoice}
    */
-  public  static final class Invoice extends
+  public static final class Invoice extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.Invoice)
       InvoiceOrBuilder {
@@ -54,6 +56,13 @@ public final class DataOuterClass {
     }
     private Invoice() {
       text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Invoice();
     }
 
     @java.lang.Override
@@ -69,7 +78,6 @@ public final class DataOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -87,7 +95,7 @@ public final class DataOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -126,7 +134,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -204,11 +216,10 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.Invoice other = (asgt.v2.type.DataOuterClass.Invoice) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -392,35 +403,35 @@ public final class DataOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -474,6 +485,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -493,6 +505,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -513,6 +526,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -543,6 +559,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -558,7 +576,7 @@ public final class DataOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -618,6 +636,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -626,6 +645,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -636,6 +656,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>float amount = 2;</code>
+     * @return The amount.
      */
     float getAmount();
   }
@@ -646,7 +667,7 @@ public final class DataOuterClass {
    *
    * Protobuf type {@code asgt.v2.type.Transaction}
    */
-  public  static final class Transaction extends
+  public static final class Transaction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.Transaction)
       TransactionOrBuilder {
@@ -657,7 +678,13 @@ public final class DataOuterClass {
     }
     private Transaction() {
       text_ = "";
-      amount_ = 0F;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Transaction();
     }
 
     @java.lang.Override
@@ -673,7 +700,6 @@ public final class DataOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -696,7 +722,7 @@ public final class DataOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -735,7 +761,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -754,7 +782,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -777,7 +807,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>float amount = 2;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public float getAmount() {
       return amount_;
     }
@@ -833,15 +865,13 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.Transaction other = (asgt.v2.type.DataOuterClass.Transaction) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (
-          java.lang.Float.floatToIntBits(getAmount())
-          == java.lang.Float.floatToIntBits(
-              other.getAmount()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (java.lang.Float.floatToIntBits(getAmount())
+          != java.lang.Float.floatToIntBits(
+              other.getAmount())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1031,35 +1061,35 @@ public final class DataOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1116,6 +1146,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -1135,6 +1166,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -1155,6 +1187,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -1172,6 +1206,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -1185,6 +1220,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -1205,7 +1242,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>float amount = 2;</code>
+       * @return The amount.
        */
+      @java.lang.Override
       public float getAmount() {
         return amount_;
       }
@@ -1215,6 +1254,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>float amount = 2;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(float value) {
         
@@ -1228,6 +1269,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>float amount = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -1238,7 +1280,7 @@ public final class DataOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1298,6 +1340,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string item_id = 1;</code>
+     * @return The itemId.
      */
     java.lang.String getItemId();
     /**
@@ -1306,6 +1349,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string item_id = 1;</code>
+     * @return The bytes for itemId.
      */
     com.google.protobuf.ByteString
         getItemIdBytes();
@@ -1316,6 +1360,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -1324,16 +1369,19 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
 
     /**
      * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return Whether the issueDate field is set.
      */
     boolean hasIssueDate();
     /**
      * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return The issueDate.
      */
     com.google.protobuf.Timestamp getIssueDate();
     /**
@@ -1347,6 +1395,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return Whether the supplier field is set.
      */
     boolean hasSupplier();
     /**
@@ -1355,6 +1404,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return The supplier.
      */
     asgt.v2.type.DataOuterClass.Supplier getSupplier();
     /**
@@ -1372,6 +1422,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string customer_ref = 5;</code>
+     * @return The customerRef.
      */
     java.lang.String getCustomerRef();
     /**
@@ -1380,6 +1431,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string customer_ref = 5;</code>
+     * @return The bytes for customerRef.
      */
     com.google.protobuf.ByteString
         getCustomerRefBytes();
@@ -1390,6 +1442,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>float amount = 7;</code>
+     * @return The amount.
      */
     float getAmount();
   }
@@ -1400,7 +1453,7 @@ public final class DataOuterClass {
    *
    * Protobuf type {@code asgt.v2.type.InvoiceLine}
    */
-  public  static final class InvoiceLine extends
+  public static final class InvoiceLine extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.InvoiceLine)
       InvoiceLineOrBuilder {
@@ -1413,7 +1466,13 @@ public final class DataOuterClass {
       itemId_ = "";
       text_ = "";
       customerRef_ = "";
-      amount_ = 0F;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InvoiceLine();
     }
 
     @java.lang.Override
@@ -1429,7 +1488,6 @@ public final class DataOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1490,7 +1548,7 @@ public final class DataOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1529,7 +1587,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string item_id = 1;</code>
+     * @return The itemId.
      */
+    @java.lang.Override
     public java.lang.String getItemId() {
       java.lang.Object ref = itemId_;
       if (ref instanceof java.lang.String) {
@@ -1548,7 +1608,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string item_id = 1;</code>
+     * @return The bytes for itemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getItemIdBytes() {
       java.lang.Object ref = itemId_;
@@ -1571,7 +1633,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -1590,7 +1654,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -1609,19 +1675,24 @@ public final class DataOuterClass {
     private com.google.protobuf.Timestamp issueDate_;
     /**
      * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return Whether the issueDate field is set.
      */
+    @java.lang.Override
     public boolean hasIssueDate() {
       return issueDate_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * @return The issueDate.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getIssueDate() {
       return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
     }
     /**
      * <code>.google.protobuf.Timestamp issue_date = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
       return getIssueDate();
     }
@@ -1634,7 +1705,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return Whether the supplier field is set.
      */
+    @java.lang.Override
     public boolean hasSupplier() {
       return supplier_ != null;
     }
@@ -1644,7 +1717,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * @return The supplier.
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.Supplier getSupplier() {
       return supplier_ == null ? asgt.v2.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
     }
@@ -1655,6 +1730,7 @@ public final class DataOuterClass {
      *
      * <code>.asgt.v2.type.Supplier supplier = 4;</code>
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
       return getSupplier();
     }
@@ -1667,7 +1743,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string customer_ref = 5;</code>
+     * @return The customerRef.
      */
+    @java.lang.Override
     public java.lang.String getCustomerRef() {
       java.lang.Object ref = customerRef_;
       if (ref instanceof java.lang.String) {
@@ -1686,7 +1764,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string customer_ref = 5;</code>
+     * @return The bytes for customerRef.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCustomerRefBytes() {
       java.lang.Object ref = customerRef_;
@@ -1709,7 +1789,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>float amount = 7;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public float getAmount() {
       return amount_;
     }
@@ -1791,29 +1873,27 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.InvoiceLine other = (asgt.v2.type.DataOuterClass.InvoiceLine) obj;
 
-      boolean result = true;
-      result = result && getItemId()
-          .equals(other.getItemId());
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (hasIssueDate() == other.hasIssueDate());
+      if (!getItemId()
+          .equals(other.getItemId())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (hasIssueDate() != other.hasIssueDate()) return false;
       if (hasIssueDate()) {
-        result = result && getIssueDate()
-            .equals(other.getIssueDate());
+        if (!getIssueDate()
+            .equals(other.getIssueDate())) return false;
       }
-      result = result && (hasSupplier() == other.hasSupplier());
+      if (hasSupplier() != other.hasSupplier()) return false;
       if (hasSupplier()) {
-        result = result && getSupplier()
-            .equals(other.getSupplier());
+        if (!getSupplier()
+            .equals(other.getSupplier())) return false;
       }
-      result = result && getCustomerRef()
-          .equals(other.getCustomerRef());
-      result = result && (
-          java.lang.Float.floatToIntBits(getAmount())
-          == java.lang.Float.floatToIntBits(
-              other.getAmount()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCustomerRef()
+          .equals(other.getCustomerRef())) return false;
+      if (java.lang.Float.floatToIntBits(getAmount())
+          != java.lang.Float.floatToIntBits(
+              other.getAmount())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2043,35 +2123,35 @@ public final class DataOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2142,6 +2222,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string item_id = 1;</code>
+       * @return The itemId.
        */
       public java.lang.String getItemId() {
         java.lang.Object ref = itemId_;
@@ -2161,6 +2242,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string item_id = 1;</code>
+       * @return The bytes for itemId.
        */
       public com.google.protobuf.ByteString
           getItemIdBytes() {
@@ -2181,6 +2263,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string item_id = 1;</code>
+       * @param value The itemId to set.
+       * @return This builder for chaining.
        */
       public Builder setItemId(
           java.lang.String value) {
@@ -2198,6 +2282,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string item_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearItemId() {
         
@@ -2211,6 +2296,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string item_id = 1;</code>
+       * @param value The bytes for itemId to set.
+       * @return This builder for chaining.
        */
       public Builder setItemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2231,6 +2318,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -2250,6 +2338,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -2270,6 +2359,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -2287,6 +2378,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -2300,6 +2392,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -2313,17 +2407,19 @@ public final class DataOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp issueDate_ = null;
+      private com.google.protobuf.Timestamp issueDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * @return Whether the issueDate field is set.
        */
       public boolean hasIssueDate() {
         return issueDateBuilder_ != null || issueDate_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * @return The issueDate.
        */
       public com.google.protobuf.Timestamp getIssueDate() {
         if (issueDateBuilder_ == null) {
@@ -2430,7 +2526,7 @@ public final class DataOuterClass {
         return issueDateBuilder_;
       }
 
-      private asgt.v2.type.DataOuterClass.Supplier supplier_ = null;
+      private asgt.v2.type.DataOuterClass.Supplier supplier_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder> supplierBuilder_;
       /**
@@ -2439,6 +2535,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * @return Whether the supplier field is set.
        */
       public boolean hasSupplier() {
         return supplierBuilder_ != null || supplier_ != null;
@@ -2449,6 +2546,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * @return The supplier.
        */
       public asgt.v2.type.DataOuterClass.Supplier getSupplier() {
         if (supplierBuilder_ == null) {
@@ -2590,6 +2688,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string customer_ref = 5;</code>
+       * @return The customerRef.
        */
       public java.lang.String getCustomerRef() {
         java.lang.Object ref = customerRef_;
@@ -2609,6 +2708,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string customer_ref = 5;</code>
+       * @return The bytes for customerRef.
        */
       public com.google.protobuf.ByteString
           getCustomerRefBytes() {
@@ -2629,6 +2729,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string customer_ref = 5;</code>
+       * @param value The customerRef to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerRef(
           java.lang.String value) {
@@ -2646,6 +2748,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string customer_ref = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCustomerRef() {
         
@@ -2659,6 +2762,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string customer_ref = 5;</code>
+       * @param value The bytes for customerRef to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerRefBytes(
           com.google.protobuf.ByteString value) {
@@ -2679,7 +2784,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>float amount = 7;</code>
+       * @return The amount.
        */
+      @java.lang.Override
       public float getAmount() {
         return amount_;
       }
@@ -2689,6 +2796,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>float amount = 7;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(float value) {
         
@@ -2702,6 +2811,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>float amount = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -2712,7 +2822,7 @@ public final class DataOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2772,6 +2882,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -2780,6 +2891,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -2790,6 +2902,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2798,6 +2911,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2808,6 +2922,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string global_id = 3;</code>
+     * @return The globalId.
      */
     java.lang.String getGlobalId();
     /**
@@ -2816,6 +2931,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string global_id = 3;</code>
+     * @return The bytes for globalId.
      */
     com.google.protobuf.ByteString
         getGlobalIdBytes();
@@ -2823,7 +2939,7 @@ public final class DataOuterClass {
   /**
    * Protobuf type {@code asgt.v2.type.Supplier}
    */
-  public  static final class Supplier extends
+  public static final class Supplier extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.Supplier)
       SupplierOrBuilder {
@@ -2839,6 +2955,13 @@ public final class DataOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Supplier();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2851,7 +2974,6 @@ public final class DataOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2881,7 +3003,7 @@ public final class DataOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2920,7 +3042,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -2939,7 +3063,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -2962,7 +3088,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2981,7 +3109,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3004,7 +3134,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string global_id = 3;</code>
+     * @return The globalId.
      */
+    @java.lang.Override
     public java.lang.String getGlobalId() {
       java.lang.Object ref = globalId_;
       if (ref instanceof java.lang.String) {
@@ -3023,7 +3155,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>string global_id = 3;</code>
+     * @return The bytes for globalId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getGlobalIdBytes() {
       java.lang.Object ref = globalId_;
@@ -3094,15 +3228,14 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.Supplier other = (asgt.v2.type.DataOuterClass.Supplier) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getGlobalId()
-          .equals(other.getGlobalId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getGlobalId()
+          .equals(other.getGlobalId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3292,35 +3425,35 @@ public final class DataOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3382,6 +3515,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -3401,6 +3535,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -3421,6 +3556,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -3438,6 +3575,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -3451,6 +3589,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3471,6 +3611,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3490,6 +3631,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3510,6 +3652,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3527,6 +3671,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3540,6 +3685,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3560,6 +3707,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string global_id = 3;</code>
+       * @return The globalId.
        */
       public java.lang.String getGlobalId() {
         java.lang.Object ref = globalId_;
@@ -3579,6 +3727,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string global_id = 3;</code>
+       * @return The bytes for globalId.
        */
       public com.google.protobuf.ByteString
           getGlobalIdBytes() {
@@ -3599,6 +3748,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string global_id = 3;</code>
+       * @param value The globalId to set.
+       * @return This builder for chaining.
        */
       public Builder setGlobalId(
           java.lang.String value) {
@@ -3616,6 +3767,7 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string global_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearGlobalId() {
         
@@ -3629,6 +3781,8 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>string global_id = 3;</code>
+       * @param value The bytes for globalId to set.
+       * @return This builder for chaining.
        */
       public Builder setGlobalIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3644,7 +3798,7 @@ public final class DataOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3704,6 +3858,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * @return Whether the transaction field is set.
      */
     boolean hasTransaction();
     /**
@@ -3712,6 +3867,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * @return The transaction.
      */
     asgt.v2.type.DataOuterClass.Transaction getTransaction();
     /**
@@ -3729,6 +3885,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * @return Whether the invoice field is set.
      */
     boolean hasInvoice();
     /**
@@ -3737,6 +3894,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * @return The invoice.
      */
     asgt.v2.type.DataOuterClass.Invoice getInvoice();
     /**
@@ -3754,6 +3912,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * @return Whether the invoiceLine field is set.
      */
     boolean hasInvoiceLine();
     /**
@@ -3762,6 +3921,7 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * @return The invoiceLine.
      */
     asgt.v2.type.DataOuterClass.InvoiceLine getInvoiceLine();
     /**
@@ -3778,7 +3938,7 @@ public final class DataOuterClass {
   /**
    * Protobuf type {@code asgt.v2.type.Data}
    */
-  public  static final class Data extends
+  public static final class Data extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.Data)
       DataOrBuilder {
@@ -3788,6 +3948,13 @@ public final class DataOuterClass {
       super(builder);
     }
     private Data() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Data();
     }
 
     @java.lang.Override
@@ -3803,7 +3970,6 @@ public final class DataOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3857,7 +4023,7 @@ public final class DataOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3891,7 +4057,8 @@ public final class DataOuterClass {
     private int dataStructureCase_ = 0;
     private java.lang.Object dataStructure_;
     public enum DataStructureCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TRANSACTION(1),
       INVOICE(2),
       INVOICE_LINE(3),
@@ -3901,6 +4068,8 @@ public final class DataOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3935,7 +4104,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * @return Whether the transaction field is set.
      */
+    @java.lang.Override
     public boolean hasTransaction() {
       return dataStructureCase_ == 1;
     }
@@ -3945,7 +4116,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * @return The transaction.
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.Transaction getTransaction() {
       if (dataStructureCase_ == 1) {
          return (asgt.v2.type.DataOuterClass.Transaction) dataStructure_;
@@ -3959,6 +4132,7 @@ public final class DataOuterClass {
      *
      * <code>.asgt.v2.type.Transaction transaction = 1;</code>
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
       if (dataStructureCase_ == 1) {
          return (asgt.v2.type.DataOuterClass.Transaction) dataStructure_;
@@ -3973,7 +4147,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * @return Whether the invoice field is set.
      */
+    @java.lang.Override
     public boolean hasInvoice() {
       return dataStructureCase_ == 2;
     }
@@ -3983,7 +4159,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * @return The invoice.
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.Invoice getInvoice() {
       if (dataStructureCase_ == 2) {
          return (asgt.v2.type.DataOuterClass.Invoice) dataStructure_;
@@ -3997,6 +4175,7 @@ public final class DataOuterClass {
      *
      * <code>.asgt.v2.type.Invoice invoice = 2;</code>
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
       if (dataStructureCase_ == 2) {
          return (asgt.v2.type.DataOuterClass.Invoice) dataStructure_;
@@ -4011,7 +4190,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * @return Whether the invoiceLine field is set.
      */
+    @java.lang.Override
     public boolean hasInvoiceLine() {
       return dataStructureCase_ == 3;
     }
@@ -4021,7 +4202,9 @@ public final class DataOuterClass {
      * </pre>
      *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * @return The invoiceLine.
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceLine getInvoiceLine() {
       if (dataStructureCase_ == 3) {
          return (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_;
@@ -4035,6 +4218,7 @@ public final class DataOuterClass {
      *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
       if (dataStructureCase_ == 3) {
          return (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_;
@@ -4101,28 +4285,25 @@ public final class DataOuterClass {
       }
       asgt.v2.type.DataOuterClass.Data other = (asgt.v2.type.DataOuterClass.Data) obj;
 
-      boolean result = true;
-      result = result && getDataStructureCase().equals(
-          other.getDataStructureCase());
-      if (!result) return false;
+      if (!getDataStructureCase().equals(other.getDataStructureCase())) return false;
       switch (dataStructureCase_) {
         case 1:
-          result = result && getTransaction()
-              .equals(other.getTransaction());
+          if (!getTransaction()
+              .equals(other.getTransaction())) return false;
           break;
         case 2:
-          result = result && getInvoice()
-              .equals(other.getInvoice());
+          if (!getInvoice()
+              .equals(other.getInvoice())) return false;
           break;
         case 3:
-          result = result && getInvoiceLine()
-              .equals(other.getInvoiceLine());
+          if (!getInvoiceLine()
+              .equals(other.getInvoiceLine())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4337,35 +4518,35 @@ public final class DataOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4448,7 +4629,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * @return Whether the transaction field is set.
        */
+      @java.lang.Override
       public boolean hasTransaction() {
         return dataStructureCase_ == 1;
       }
@@ -4458,7 +4641,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * @return The transaction.
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.Transaction getTransaction() {
         if (transactionBuilder_ == null) {
           if (dataStructureCase_ == 1) {
@@ -4576,6 +4761,7 @@ public final class DataOuterClass {
        *
        * <code>.asgt.v2.type.Transaction transaction = 1;</code>
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
         if ((dataStructureCase_ == 1) && (transactionBuilder_ != null)) {
           return transactionBuilder_.getMessageOrBuilder();
@@ -4620,7 +4806,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * @return Whether the invoice field is set.
        */
+      @java.lang.Override
       public boolean hasInvoice() {
         return dataStructureCase_ == 2;
       }
@@ -4630,7 +4818,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * @return The invoice.
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.Invoice getInvoice() {
         if (invoiceBuilder_ == null) {
           if (dataStructureCase_ == 2) {
@@ -4748,6 +4938,7 @@ public final class DataOuterClass {
        *
        * <code>.asgt.v2.type.Invoice invoice = 2;</code>
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
         if ((dataStructureCase_ == 2) && (invoiceBuilder_ != null)) {
           return invoiceBuilder_.getMessageOrBuilder();
@@ -4792,7 +4983,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * @return Whether the invoiceLine field is set.
        */
+      @java.lang.Override
       public boolean hasInvoiceLine() {
         return dataStructureCase_ == 3;
       }
@@ -4802,7 +4995,9 @@ public final class DataOuterClass {
        * </pre>
        *
        * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * @return The invoiceLine.
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceLine getInvoiceLine() {
         if (invoiceLineBuilder_ == null) {
           if (dataStructureCase_ == 3) {
@@ -4920,6 +5115,7 @@ public final class DataOuterClass {
        *
        * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
        */
+      @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
         if ((dataStructureCase_ == 3) && (invoiceLineBuilder_ != null)) {
           return invoiceLineBuilder_.getMessageOrBuilder();
@@ -4958,7 +5154,7 @@ public final class DataOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5060,20 +5256,12 @@ public final class DataOuterClass {
       "thub.com/e-conomic/vmlapis/gen/go/asgt/v" +
       "2/type;asgttypeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
-        }, assigner);
+        });
     internal_static_asgt_v2_type_Invoice_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_v2_type_Invoice_fieldAccessorTable = new

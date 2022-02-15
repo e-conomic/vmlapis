@@ -44,8 +44,8 @@ namespace Asgt.Dataservice.V1 {
             "c2d0L2RhdGEvdjE7ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.Entry), global::Asgt.Dataservice.V1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.Entry), global::Asgt.Dataservice.V1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null, null)
           }));
     }
     #endregion
@@ -55,7 +55,11 @@ namespace Asgt.Dataservice.V1 {
   /// <summary>
   /// BQ schema gen - could be used for adding direct developer data endpoints
   /// </summary>
-  public sealed partial class Entry : pb::IMessage<Entry> {
+  public sealed partial class Entry : pb::IMessage<Entry>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -370,14 +374,14 @@ namespace Asgt.Dataservice.V1 {
       tags_.Add(other.tags_);
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Asgt.Type.Data();
+          Data = new global::Asgt.Type.Data();
         }
         Data.MergeFrom(other.Data);
       }
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.Model();
+          Model = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -390,6 +394,9 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -414,9 +421,9 @@ namespace Asgt.Dataservice.V1 {
           }
           case 42: {
             if (data_ == null) {
-              data_ = new global::Asgt.Type.Data();
+              Data = new global::Asgt.Type.Data();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 50: {
@@ -429,9 +436,9 @@ namespace Asgt.Dataservice.V1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.Model();
+              Model = new global::Asgt.Type.Model();
             }
-            input.ReadMessage(model_);
+            input.ReadMessage(Model);
             break;
           }
           case 82: {
@@ -448,7 +455,72 @@ namespace Asgt.Dataservice.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 26: {
+            DatasetName = input.ReadString();
+            break;
+          }
+          case 34: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 42: {
+            if (data_ == null) {
+              Data = new global::Asgt.Type.Data();
+            }
+            input.ReadMessage(Data);
+            break;
+          }
+          case 50: {
+            targetValues_.AddEntriesFrom(ref input, _repeated_targetValues_codec);
+            break;
+          }
+          case 64: {
+            TimeAdded = input.ReadUInt64();
+            break;
+          }
+          case 74: {
+            if (model_ == null) {
+              Model = new global::Asgt.Type.Model();
+            }
+            input.ReadMessage(Model);
+            break;
+          }
+          case 82: {
+            prediction_.AddEntriesFrom(ref input, _repeated_prediction_codec);
+            break;
+          }
+          case 90: {
+            DatasetId = input.ReadString();
+            break;
+          }
+          case 98: {
+            DatasetType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

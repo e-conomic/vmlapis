@@ -42,8 +42,8 @@ namespace Asgt.Type {
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics), global::Asgt.Type.TrainStatistics.Parser, new[]{ "FeatureCount", "FeatureNames", "TargetNames", "TargetCount", "InformationGains", "SimilarityIndex" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics.Types.InformationGain), global::Asgt.Type.TrainStatistics.Types.InformationGain.Parser, new[]{ "FeatureGains" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics), global::Asgt.Type.TrainStatistics.Parser, new[]{ "FeatureCount", "FeatureNames", "TargetNames", "TargetCount", "InformationGains", "SimilarityIndex" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics.Types.InformationGain), global::Asgt.Type.TrainStatistics.Types.InformationGain.Parser, new[]{ "FeatureGains" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, null, })
           }));
     }
@@ -51,7 +51,11 @@ namespace Asgt.Type {
 
   }
   #region Messages
-  public sealed partial class TrainStatistics : pb::IMessage<TrainStatistics> {
+  public sealed partial class TrainStatistics : pb::IMessage<TrainStatistics>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TrainStatistics> _parser = new pb::MessageParser<TrainStatistics>(() => new TrainStatistics());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -133,7 +137,7 @@ namespace Asgt.Type {
     /// <summary>Field number for the "target_count" field.</summary>
     public const int TargetCountFieldNumber = 4;
     private static readonly pbc::MapField<string, float>.Codec _map_targetCount_codec
-        = new pbc::MapField<string, float>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForFloat(21), 34);
+        = new pbc::MapField<string, float>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForFloat(21, 0F), 34);
     private readonly pbc::MapField<string, float> targetCount_ = new pbc::MapField<string, float>();
     /// <summary>
     /// for each target count of its
@@ -146,7 +150,7 @@ namespace Asgt.Type {
     /// <summary>Field number for the "information_gains" field.</summary>
     public const int InformationGainsFieldNumber = 5;
     private static readonly pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain>.Codec _map_informationGains_codec
-        = new pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Asgt.Type.TrainStatistics.Types.InformationGain.Parser), 42);
+        = new pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.TrainStatistics.Types.InformationGain.Parser), 42);
     private readonly pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain> informationGains_ = new pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain>();
     /// <summary>
     ///feature information gains for each of the targets
@@ -270,6 +274,9 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -302,13 +309,56 @@ namespace Asgt.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            FeatureCount = input.ReadFloat();
+            break;
+          }
+          case 18: {
+            featureNames_.AddEntriesFrom(ref input, _repeated_featureNames_codec);
+            break;
+          }
+          case 26: {
+            targetNames_.AddEntriesFrom(ref input, _repeated_targetNames_codec);
+            break;
+          }
+          case 34: {
+            targetCount_.AddEntriesFrom(ref input, _map_targetCount_codec);
+            break;
+          }
+          case 42: {
+            informationGains_.AddEntriesFrom(ref input, _map_informationGains_codec);
+            break;
+          }
+          case 53: {
+            SimilarityIndex = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TrainStatistics message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class InformationGain : pb::IMessage<InformationGain> {
+      public sealed partial class InformationGain : pb::IMessage<InformationGain>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<InformationGain> _parser = new pb::MessageParser<InformationGain>(() => new InformationGain());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -345,7 +395,7 @@ namespace Asgt.Type {
         /// <summary>Field number for the "feature_gains" field.</summary>
         public const int FeatureGainsFieldNumber = 1;
         private static readonly pbc::MapField<string, float>.Codec _map_featureGains_codec
-            = new pbc::MapField<string, float>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForFloat(21), 10);
+            = new pbc::MapField<string, float>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForFloat(21, 0F), 10);
         private readonly pbc::MapField<string, float> featureGains_ = new pbc::MapField<string, float>();
         /// <summary>
         ///feature information gains for a single target
@@ -416,6 +466,9 @@ namespace Asgt.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -428,7 +481,26 @@ namespace Asgt.Type {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                featureGains_.AddEntriesFrom(ref input, _map_featureGains_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
