@@ -4,29 +4,51 @@ package asgt.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+message DatasetProportion {
+    float relative = 1;
+    // percentage of samples belonging to a single class
+    int32 absolute = 2;
+    // number of samples belonging to a single class
+}
+
+message TargetStat  {
+    DatasetProportion dataset_proportion = 1;
+    // proportions of single class in a target (classification task)
+}
+
+message TargetStats {
+    map<string, TargetStat>  proportion_by_class = 1;
+    // statistics of classes in a single target (classification task)
+}
+
+message FeatureStat {
+    enum Type {
+        STRING = 0;
+        INT = 1;
+        FLOAT = 2;
+        BYTE = 3;
+    }
+    Type feature_type = 1;
+    // type of the feature 
+
+    float information_gain = 2;
+    // information gain of a feature regarding to target (classification task)
+}
+
+message FeatureStats{
+    map<string, FeatureStat>   feature_stats_by_feature= 1;
+    // feature statistics for each feature
+}
 
 message TrainStatistics {
-    message InformationGain{
-        //feature information gains for a single target
-        map<string,float> feature_gains = 1;
-    }
 
-    float feature_count = 1;
-    //number of input features for the model
+    map<string, TargetStats> target_stats_by_target = 1;
+    // target statistics for each target (classification task)
 
-    repeated string feature_names = 2;
-    //feature names
+    map<string, FeatureStats>  feature_stats_by_target = 2;
+    // feature statistics for each target (classification task)
 
-    repeated string target_names = 3;
-    //target names
-
-    map<string,float> target_count = 4;
-    // for each target count of its 
-
-    map<string, InformationGain> information_gains = 5;
-    //feature information gains for each of the targets
-
-    float similarity_index = 6;
-    // similarity index between train and test dataset
+    float similarity_index = 3;
+    // measure of train/test similarity
 }
 
