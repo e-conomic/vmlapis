@@ -19,31 +19,71 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n asgt/type/train_statistics.proto\x12\tasgt.type\"\xb6\x04\n\x0fTrainStatistics\x12\x15\n\rfeature_count\x18\x01 \x01(\x02\x12\x15\n\rfeature_names\x18\x02 \x03(\t\x12\x14\n\x0ctarget_names\x18\x03 \x03(\t\x12\x41\n\x0ctarget_count\x18\x04 \x03(\x0b\x32+.asgt.type.TrainStatistics.TargetCountEntry\x12K\n\x11information_gains\x18\x05 \x03(\x0b\x32\x30.asgt.type.TrainStatistics.InformationGainsEntry\x12\x18\n\x10similarity_index\x18\x06 \x01(\x02\x1a\x9b\x01\n\x0fInformationGain\x12S\n\rfeature_gains\x18\x01 \x03(\x0b\x32<.asgt.type.TrainStatistics.InformationGain.FeatureGainsEntry\x1a\x33\n\x11\x46\x65\x61tureGainsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x1a\x32\n\x10TargetCountEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x1a\x63\n\x15InformationGainsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x39\n\x05value\x18\x02 \x01(\x0b\x32*.asgt.type.TrainStatistics.InformationGain:\x02\x38\x01\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3'
+  serialized_pb=b'\n asgt/type/train_statistics.proto\x12\tasgt.type\"V\n\nTargetStat\x12#\n\x1brelative_dataset_proportion\x18\x01 \x01(\x02\x12#\n\x1b\x61\x62solute_dataset_proportion\x18\x02 \x01(\x05\"\xab\x01\n\x0bTargetStats\x12K\n\x14target_stat_by_class\x18\x01 \x03(\x0b\x32-.asgt.type.TargetStats.TargetStatByClassEntry\x1aO\n\x16TargetStatByClassEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12$\n\x05value\x18\x02 \x01(\x0b\x32\x15.asgt.type.TargetStat:\x02\x38\x01\"\x99\x01\n\x0b\x46\x65\x61tureStat\x12\x31\n\x0c\x66\x65\x61ture_type\x18\x01 \x01(\x0e\x32\x1b.asgt.type.FeatureStat.Type\x12\x18\n\x10information_gain\x18\x02 \x01(\x02\"=\n\x04Type\x12\x07\n\x03INT\x10\x00\x12\t\n\x05\x46LOAT\x10\x01\x12\n\n\x06STRING\x10\x02\x12\t\n\x05\x42YTES\x10\x03\x12\n\n\x06STRUCT\x10\x04\"\xba\x01\n\x0c\x46\x65\x61tureStats\x12T\n\x18\x66\x65\x61ture_stats_by_feature\x18\x01 \x03(\x0b\x32\x32.asgt.type.FeatureStats.FeatureStatsByFeatureEntry\x1aT\n\x1a\x46\x65\x61tureStatsByFeatureEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.asgt.type.FeatureStat:\x02\x38\x01\"\x81\x03\n\x0fTrainStatistics\x12S\n\x16target_stats_by_target\x18\x01 \x03(\x0b\x32\x33.asgt.type.TrainStatistics.TargetStatsByTargetEntry\x12U\n\x17\x66\x65\x61ture_stats_by_target\x18\x02 \x03(\x0b\x32\x34.asgt.type.TrainStatistics.FeatureStatsByTargetEntry\x12\x18\n\x10similarity_index\x18\x03 \x01(\x02\x1aR\n\x18TargetStatsByTargetEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.asgt.type.TargetStats:\x02\x38\x01\x1aT\n\x19\x46\x65\x61tureStatsByTargetEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12&\n\x05value\x18\x02 \x01(\x0b\x32\x17.asgt.type.FeatureStats:\x02\x38\x01\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3'
 )
 
 
 
+_FEATURESTAT_TYPE = _descriptor.EnumDescriptor(
+  name='Type',
+  full_name='asgt.type.FeatureStat.Type',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='INT', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FLOAT', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='STRING', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BYTES', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='STRUCT', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=402,
+  serialized_end=463,
+)
+_sym_db.RegisterEnumDescriptor(_FEATURESTAT_TYPE)
 
-_TRAINSTATISTICS_INFORMATIONGAIN_FEATUREGAINSENTRY = _descriptor.Descriptor(
-  name='FeatureGainsEntry',
-  full_name='asgt.type.TrainStatistics.InformationGain.FeatureGainsEntry',
+
+_TARGETSTAT = _descriptor.Descriptor(
+  name='TargetStat',
+  full_name='asgt.type.TargetStat',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='asgt.type.TrainStatistics.InformationGain.FeatureGainsEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='relative_dataset_proportion', full_name='asgt.type.TargetStat.relative_dataset_proportion', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='value', full_name='asgt.type.TrainStatistics.InformationGain.FeatureGainsEntry.value', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
+      name='absolute_dataset_proportion', full_name='asgt.type.TargetStat.absolute_dataset_proportion', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -51,37 +91,6 @@ _TRAINSTATISTICS_INFORMATIONGAIN_FEATUREGAINSENTRY = _descriptor.Descriptor(
   extensions=[
   ],
   nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=b'8\001',
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=410,
-  serialized_end=461,
-)
-
-_TRAINSTATISTICS_INFORMATIONGAIN = _descriptor.Descriptor(
-  name='InformationGain',
-  full_name='asgt.type.TrainStatistics.InformationGain',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='feature_gains', full_name='asgt.type.TrainStatistics.InformationGain.feature_gains', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[_TRAINSTATISTICS_INFORMATIONGAIN_FEATUREGAINSENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -90,65 +99,28 @@ _TRAINSTATISTICS_INFORMATIONGAIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=306,
-  serialized_end=461,
+  serialized_start=47,
+  serialized_end=133,
 )
 
-_TRAINSTATISTICS_TARGETCOUNTENTRY = _descriptor.Descriptor(
-  name='TargetCountEntry',
-  full_name='asgt.type.TrainStatistics.TargetCountEntry',
+
+_TARGETSTATS_TARGETSTATBYCLASSENTRY = _descriptor.Descriptor(
+  name='TargetStatByClassEntry',
+  full_name='asgt.type.TargetStats.TargetStatByClassEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='asgt.type.TrainStatistics.TargetCountEntry.key', index=0,
+      name='key', full_name='asgt.type.TargetStats.TargetStatByClassEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='value', full_name='asgt.type.TrainStatistics.TargetCountEntry.value', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=b'8\001',
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=463,
-  serialized_end=513,
-)
-
-_TRAINSTATISTICS_INFORMATIONGAINSENTRY = _descriptor.Descriptor(
-  name='InformationGainsEntry',
-  full_name='asgt.type.TrainStatistics.InformationGainsEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='asgt.type.TrainStatistics.InformationGainsEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='asgt.type.TrainStatistics.InformationGainsEntry.value', index=1,
+      name='value', full_name='asgt.type.TargetStats.TargetStatByClassEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -166,8 +138,226 @@ _TRAINSTATISTICS_INFORMATIONGAINSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=515,
-  serialized_end=614,
+  serialized_start=228,
+  serialized_end=307,
+)
+
+_TARGETSTATS = _descriptor.Descriptor(
+  name='TargetStats',
+  full_name='asgt.type.TargetStats',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_stat_by_class', full_name='asgt.type.TargetStats.target_stat_by_class', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_TARGETSTATS_TARGETSTATBYCLASSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=136,
+  serialized_end=307,
+)
+
+
+_FEATURESTAT = _descriptor.Descriptor(
+  name='FeatureStat',
+  full_name='asgt.type.FeatureStat',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='feature_type', full_name='asgt.type.FeatureStat.feature_type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='information_gain', full_name='asgt.type.FeatureStat.information_gain', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _FEATURESTAT_TYPE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=310,
+  serialized_end=463,
+)
+
+
+_FEATURESTATS_FEATURESTATSBYFEATUREENTRY = _descriptor.Descriptor(
+  name='FeatureStatsByFeatureEntry',
+  full_name='asgt.type.FeatureStats.FeatureStatsByFeatureEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='asgt.type.FeatureStats.FeatureStatsByFeatureEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='asgt.type.FeatureStats.FeatureStatsByFeatureEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=568,
+  serialized_end=652,
+)
+
+_FEATURESTATS = _descriptor.Descriptor(
+  name='FeatureStats',
+  full_name='asgt.type.FeatureStats',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='feature_stats_by_feature', full_name='asgt.type.FeatureStats.feature_stats_by_feature', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_FEATURESTATS_FEATURESTATSBYFEATUREENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=466,
+  serialized_end=652,
+)
+
+
+_TRAINSTATISTICS_TARGETSTATSBYTARGETENTRY = _descriptor.Descriptor(
+  name='TargetStatsByTargetEntry',
+  full_name='asgt.type.TrainStatistics.TargetStatsByTargetEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='asgt.type.TrainStatistics.TargetStatsByTargetEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='asgt.type.TrainStatistics.TargetStatsByTargetEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=872,
+  serialized_end=954,
+)
+
+_TRAINSTATISTICS_FEATURESTATSBYTARGETENTRY = _descriptor.Descriptor(
+  name='FeatureStatsByTargetEntry',
+  full_name='asgt.type.TrainStatistics.FeatureStatsByTargetEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='asgt.type.TrainStatistics.FeatureStatsByTargetEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='asgt.type.TrainStatistics.FeatureStatsByTargetEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=956,
+  serialized_end=1040,
 )
 
 _TRAINSTATISTICS = _descriptor.Descriptor(
@@ -179,43 +369,22 @@ _TRAINSTATISTICS = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='feature_count', full_name='asgt.type.TrainStatistics.feature_count', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='feature_names', full_name='asgt.type.TrainStatistics.feature_names', index=1,
-      number=2, type=9, cpp_type=9, label=3,
+      name='target_stats_by_target', full_name='asgt.type.TrainStatistics.target_stats_by_target', index=0,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='target_names', full_name='asgt.type.TrainStatistics.target_names', index=2,
-      number=3, type=9, cpp_type=9, label=3,
+      name='feature_stats_by_target', full_name='asgt.type.TrainStatistics.feature_stats_by_target', index=1,
+      number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='target_count', full_name='asgt.type.TrainStatistics.target_count', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='information_gains', full_name='asgt.type.TrainStatistics.information_gains', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='similarity_index', full_name='asgt.type.TrainStatistics.similarity_index', index=5,
-      number=6, type=2, cpp_type=6, label=1,
+      name='similarity_index', full_name='asgt.type.TrainStatistics.similarity_index', index=2,
+      number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -223,7 +392,7 @@ _TRAINSTATISTICS = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_TRAINSTATISTICS_INFORMATIONGAIN, _TRAINSTATISTICS_TARGETCOUNTENTRY, _TRAINSTATISTICS_INFORMATIONGAINSENTRY, ],
+  nested_types=[_TRAINSTATISTICS_TARGETSTATSBYTARGETENTRY, _TRAINSTATISTICS_FEATURESTATSBYTARGETENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -232,48 +401,88 @@ _TRAINSTATISTICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48,
-  serialized_end=614,
+  serialized_start=655,
+  serialized_end=1040,
 )
 
-_TRAINSTATISTICS_INFORMATIONGAIN_FEATUREGAINSENTRY.containing_type = _TRAINSTATISTICS_INFORMATIONGAIN
-_TRAINSTATISTICS_INFORMATIONGAIN.fields_by_name['feature_gains'].message_type = _TRAINSTATISTICS_INFORMATIONGAIN_FEATUREGAINSENTRY
-_TRAINSTATISTICS_INFORMATIONGAIN.containing_type = _TRAINSTATISTICS
-_TRAINSTATISTICS_TARGETCOUNTENTRY.containing_type = _TRAINSTATISTICS
-_TRAINSTATISTICS_INFORMATIONGAINSENTRY.fields_by_name['value'].message_type = _TRAINSTATISTICS_INFORMATIONGAIN
-_TRAINSTATISTICS_INFORMATIONGAINSENTRY.containing_type = _TRAINSTATISTICS
-_TRAINSTATISTICS.fields_by_name['target_count'].message_type = _TRAINSTATISTICS_TARGETCOUNTENTRY
-_TRAINSTATISTICS.fields_by_name['information_gains'].message_type = _TRAINSTATISTICS_INFORMATIONGAINSENTRY
+_TARGETSTATS_TARGETSTATBYCLASSENTRY.fields_by_name['value'].message_type = _TARGETSTAT
+_TARGETSTATS_TARGETSTATBYCLASSENTRY.containing_type = _TARGETSTATS
+_TARGETSTATS.fields_by_name['target_stat_by_class'].message_type = _TARGETSTATS_TARGETSTATBYCLASSENTRY
+_FEATURESTAT.fields_by_name['feature_type'].enum_type = _FEATURESTAT_TYPE
+_FEATURESTAT_TYPE.containing_type = _FEATURESTAT
+_FEATURESTATS_FEATURESTATSBYFEATUREENTRY.fields_by_name['value'].message_type = _FEATURESTAT
+_FEATURESTATS_FEATURESTATSBYFEATUREENTRY.containing_type = _FEATURESTATS
+_FEATURESTATS.fields_by_name['feature_stats_by_feature'].message_type = _FEATURESTATS_FEATURESTATSBYFEATUREENTRY
+_TRAINSTATISTICS_TARGETSTATSBYTARGETENTRY.fields_by_name['value'].message_type = _TARGETSTATS
+_TRAINSTATISTICS_TARGETSTATSBYTARGETENTRY.containing_type = _TRAINSTATISTICS
+_TRAINSTATISTICS_FEATURESTATSBYTARGETENTRY.fields_by_name['value'].message_type = _FEATURESTATS
+_TRAINSTATISTICS_FEATURESTATSBYTARGETENTRY.containing_type = _TRAINSTATISTICS
+_TRAINSTATISTICS.fields_by_name['target_stats_by_target'].message_type = _TRAINSTATISTICS_TARGETSTATSBYTARGETENTRY
+_TRAINSTATISTICS.fields_by_name['feature_stats_by_target'].message_type = _TRAINSTATISTICS_FEATURESTATSBYTARGETENTRY
+DESCRIPTOR.message_types_by_name['TargetStat'] = _TARGETSTAT
+DESCRIPTOR.message_types_by_name['TargetStats'] = _TARGETSTATS
+DESCRIPTOR.message_types_by_name['FeatureStat'] = _FEATURESTAT
+DESCRIPTOR.message_types_by_name['FeatureStats'] = _FEATURESTATS
 DESCRIPTOR.message_types_by_name['TrainStatistics'] = _TRAINSTATISTICS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+TargetStat = _reflection.GeneratedProtocolMessageType('TargetStat', (_message.Message,), {
+  'DESCRIPTOR' : _TARGETSTAT,
+  '__module__' : 'asgt.type.train_statistics_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.type.TargetStat)
+  })
+_sym_db.RegisterMessage(TargetStat)
+
+TargetStats = _reflection.GeneratedProtocolMessageType('TargetStats', (_message.Message,), {
+
+  'TargetStatByClassEntry' : _reflection.GeneratedProtocolMessageType('TargetStatByClassEntry', (_message.Message,), {
+    'DESCRIPTOR' : _TARGETSTATS_TARGETSTATBYCLASSENTRY,
+    '__module__' : 'asgt.type.train_statistics_pb2'
+    # @@protoc_insertion_point(class_scope:asgt.type.TargetStats.TargetStatByClassEntry)
+    })
+  ,
+  'DESCRIPTOR' : _TARGETSTATS,
+  '__module__' : 'asgt.type.train_statistics_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.type.TargetStats)
+  })
+_sym_db.RegisterMessage(TargetStats)
+_sym_db.RegisterMessage(TargetStats.TargetStatByClassEntry)
+
+FeatureStat = _reflection.GeneratedProtocolMessageType('FeatureStat', (_message.Message,), {
+  'DESCRIPTOR' : _FEATURESTAT,
+  '__module__' : 'asgt.type.train_statistics_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.type.FeatureStat)
+  })
+_sym_db.RegisterMessage(FeatureStat)
+
+FeatureStats = _reflection.GeneratedProtocolMessageType('FeatureStats', (_message.Message,), {
+
+  'FeatureStatsByFeatureEntry' : _reflection.GeneratedProtocolMessageType('FeatureStatsByFeatureEntry', (_message.Message,), {
+    'DESCRIPTOR' : _FEATURESTATS_FEATURESTATSBYFEATUREENTRY,
+    '__module__' : 'asgt.type.train_statistics_pb2'
+    # @@protoc_insertion_point(class_scope:asgt.type.FeatureStats.FeatureStatsByFeatureEntry)
+    })
+  ,
+  'DESCRIPTOR' : _FEATURESTATS,
+  '__module__' : 'asgt.type.train_statistics_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.type.FeatureStats)
+  })
+_sym_db.RegisterMessage(FeatureStats)
+_sym_db.RegisterMessage(FeatureStats.FeatureStatsByFeatureEntry)
+
 TrainStatistics = _reflection.GeneratedProtocolMessageType('TrainStatistics', (_message.Message,), {
 
-  'InformationGain' : _reflection.GeneratedProtocolMessageType('InformationGain', (_message.Message,), {
-
-    'FeatureGainsEntry' : _reflection.GeneratedProtocolMessageType('FeatureGainsEntry', (_message.Message,), {
-      'DESCRIPTOR' : _TRAINSTATISTICS_INFORMATIONGAIN_FEATUREGAINSENTRY,
-      '__module__' : 'asgt.type.train_statistics_pb2'
-      # @@protoc_insertion_point(class_scope:asgt.type.TrainStatistics.InformationGain.FeatureGainsEntry)
-      })
-    ,
-    'DESCRIPTOR' : _TRAINSTATISTICS_INFORMATIONGAIN,
+  'TargetStatsByTargetEntry' : _reflection.GeneratedProtocolMessageType('TargetStatsByTargetEntry', (_message.Message,), {
+    'DESCRIPTOR' : _TRAINSTATISTICS_TARGETSTATSBYTARGETENTRY,
     '__module__' : 'asgt.type.train_statistics_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.type.TrainStatistics.InformationGain)
+    # @@protoc_insertion_point(class_scope:asgt.type.TrainStatistics.TargetStatsByTargetEntry)
     })
   ,
 
-  'TargetCountEntry' : _reflection.GeneratedProtocolMessageType('TargetCountEntry', (_message.Message,), {
-    'DESCRIPTOR' : _TRAINSTATISTICS_TARGETCOUNTENTRY,
+  'FeatureStatsByTargetEntry' : _reflection.GeneratedProtocolMessageType('FeatureStatsByTargetEntry', (_message.Message,), {
+    'DESCRIPTOR' : _TRAINSTATISTICS_FEATURESTATSBYTARGETENTRY,
     '__module__' : 'asgt.type.train_statistics_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.type.TrainStatistics.TargetCountEntry)
-    })
-  ,
-
-  'InformationGainsEntry' : _reflection.GeneratedProtocolMessageType('InformationGainsEntry', (_message.Message,), {
-    'DESCRIPTOR' : _TRAINSTATISTICS_INFORMATIONGAINSENTRY,
-    '__module__' : 'asgt.type.train_statistics_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.type.TrainStatistics.InformationGainsEntry)
+    # @@protoc_insertion_point(class_scope:asgt.type.TrainStatistics.FeatureStatsByTargetEntry)
     })
   ,
   'DESCRIPTOR' : _TRAINSTATISTICS,
@@ -281,14 +490,13 @@ TrainStatistics = _reflection.GeneratedProtocolMessageType('TrainStatistics', (_
   # @@protoc_insertion_point(class_scope:asgt.type.TrainStatistics)
   })
 _sym_db.RegisterMessage(TrainStatistics)
-_sym_db.RegisterMessage(TrainStatistics.InformationGain)
-_sym_db.RegisterMessage(TrainStatistics.InformationGain.FeatureGainsEntry)
-_sym_db.RegisterMessage(TrainStatistics.TargetCountEntry)
-_sym_db.RegisterMessage(TrainStatistics.InformationGainsEntry)
+_sym_db.RegisterMessage(TrainStatistics.TargetStatsByTargetEntry)
+_sym_db.RegisterMessage(TrainStatistics.FeatureStatsByTargetEntry)
 
 
 DESCRIPTOR._options = None
-_TRAINSTATISTICS_INFORMATIONGAIN_FEATUREGAINSENTRY._options = None
-_TRAINSTATISTICS_TARGETCOUNTENTRY._options = None
-_TRAINSTATISTICS_INFORMATIONGAINSENTRY._options = None
+_TARGETSTATS_TARGETSTATBYCLASSENTRY._options = None
+_FEATURESTATS_FEATURESTATSBYFEATUREENTRY._options = None
+_TRAINSTATISTICS_TARGETSTATSBYTARGETENTRY._options = None
+_TRAINSTATISTICS_FEATURESTATSBYTARGETENTRY._options = None
 # @@protoc_insertion_point(module_scope)
