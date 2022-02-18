@@ -43,18 +43,22 @@ namespace Ssn.Type {
             "b21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class Confidence : pb::IMessage<Confidence> {
+  public sealed partial class Confidence : pb::IMessage<Confidence>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Confidence> _parser = new pb::MessageParser<Confidence>(() => new Confidence());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -91,7 +95,7 @@ namespace Ssn.Type {
 
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
-    private global::Ssn.Type.Confidence.Types.Level level_ = 0;
+    private global::Ssn.Type.Confidence.Types.Level level_ = global::Ssn.Type.Confidence.Types.Level.Unknown;
     /// <summary>
     /// A bucketized representation of confidence, which is intended to give clients
     /// highly stable results across model upgrades.
@@ -119,6 +123,7 @@ namespace Ssn.Type {
       }
     }
 
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Confidence);
@@ -140,7 +145,7 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != 0) hash ^= Level.GetHashCode();
+      if (Level != global::Ssn.Type.Confidence.Types.Level.Unknown) hash ^= Level.GetHashCode();
       if (value_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Value);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -155,7 +160,7 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Level != 0) {
+      if (Level != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Level);
       }
@@ -170,7 +175,7 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Level != 0) {
+      if (Level != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
       }
       if (value_ != null) {
@@ -187,7 +192,7 @@ namespace Ssn.Type {
       if (other == null) {
         return;
       }
-      if (other.Level != 0) {
+      if (other.Level != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         Level = other.Level;
       }
       if (other.value_ != null) {
@@ -200,6 +205,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -207,7 +215,7 @@ namespace Ssn.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            level_ = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
+            Level = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
           case 18: {
@@ -219,7 +227,33 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Level = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            float? value = _single_value_codec.Read(ref input);
+            if (value_ == null || value != 0F) {
+              Value = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Confidence message type.</summary>
@@ -239,7 +273,11 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class Candidate : pb::IMessage<Candidate> {
+  public sealed partial class Candidate : pb::IMessage<Candidate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Candidate> _parser = new pb::MessageParser<Candidate>(() => new Candidate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -357,7 +395,7 @@ namespace Ssn.Type {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 5;
-    private global::Ssn.Type.Candidate.Types.Type type_ = 0;
+    private global::Ssn.Type.Candidate.Types.Type type_ = global::Ssn.Type.Candidate.Types.Type.Unknown;
     /// <summary>
     /// Indicate the type of the candidate
     /// </summary>
@@ -428,7 +466,7 @@ namespace Ssn.Type {
       if (Text.Length != 0) hash ^= Text.GetHashCode();
       if (confidence_ != null) hash ^= Confidence.GetHashCode();
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Ssn.Type.Candidate.Types.Type.Unknown) hash ^= Type.GetHashCode();
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
       if (_unknownFields != null) {
@@ -460,7 +498,7 @@ namespace Ssn.Type {
         output.WriteRawTag(34);
         output.WriteMessage(BoundingBox);
       }
-      if (Type != 0) {
+      if (Type != global::Ssn.Type.Candidate.Types.Type.Unknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
@@ -492,7 +530,7 @@ namespace Ssn.Type {
       if (boundingBox_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingBox);
       }
-      if (Type != 0) {
+      if (Type != global::Ssn.Type.Candidate.Types.Type.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (PageRef != 0) {
@@ -520,17 +558,17 @@ namespace Ssn.Type {
       }
       if (other.confidence_ != null) {
         if (confidence_ == null) {
-          confidence_ = new global::Ssn.Type.Confidence();
+          Confidence = new global::Ssn.Type.Confidence();
         }
         Confidence.MergeFrom(other.Confidence);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Ssn.Type.BoundingPoly();
+          BoundingBox = new global::Ssn.Type.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Ssn.Type.Candidate.Types.Type.Unknown) {
         Type = other.Type;
       }
       if (other.PageRef != 0) {
@@ -538,7 +576,7 @@ namespace Ssn.Type {
       }
       if (other.modelMetadata_ != null) {
         if (modelMetadata_ == null) {
-          modelMetadata_ = new global::Ssn.Type.ModelSpec();
+          ModelMetadata = new global::Ssn.Type.ModelSpec();
         }
         ModelMetadata.MergeFrom(other.ModelMetadata);
       }
@@ -547,6 +585,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -563,20 +604,20 @@ namespace Ssn.Type {
           }
           case 26: {
             if (confidence_ == null) {
-              confidence_ = new global::Ssn.Type.Confidence();
+              Confidence = new global::Ssn.Type.Confidence();
             }
-            input.ReadMessage(confidence_);
+            input.ReadMessage(Confidence);
             break;
           }
           case 34: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Ssn.Type.BoundingPoly();
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 40: {
-            type_ = (global::Ssn.Type.Candidate.Types.Type) input.ReadEnum();
+            Type = (global::Ssn.Type.Candidate.Types.Type) input.ReadEnum();
             break;
           }
           case 48: {
@@ -585,14 +626,66 @@ namespace Ssn.Type {
           }
           case 58: {
             if (modelMetadata_ == null) {
-              modelMetadata_ = new global::Ssn.Type.ModelSpec();
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
             }
-            input.ReadMessage(modelMetadata_);
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Value = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
+            break;
+          }
+          case 34: {
+            if (boundingBox_ == null) {
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
+            }
+            input.ReadMessage(BoundingBox);
+            break;
+          }
+          case 40: {
+            Type = (global::Ssn.Type.Candidate.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
             break;
           }
         }
       }
     }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Candidate message type.</summary>
@@ -609,7 +702,11 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class ModelSpec : pb::IMessage<ModelSpec> {
+  public sealed partial class ModelSpec : pb::IMessage<ModelSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ModelSpec> _parser = new pb::MessageParser<ModelSpec>(() => new ModelSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -672,6 +769,7 @@ namespace Ssn.Type {
         modelVer_ = value;
       }
     }
+
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
@@ -754,6 +852,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -773,11 +874,41 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 18: {
+            long? value = _single_modelVer_codec.Read(ref input);
+            if (modelVer_ == null || value != 0L) {
+              ModelVer = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class LineCandidate : pb::IMessage<LineCandidate> {
+  public sealed partial class LineCandidate : pb::IMessage<LineCandidate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LineCandidate> _parser = new pb::MessageParser<LineCandidate>(() => new LineCandidate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -950,6 +1081,9 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -970,7 +1104,34 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Text = input.ReadString();
+            break;
+          }
+          case 17: {
+            Amount = input.ReadDouble();
+            break;
+          }
+          case 48: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

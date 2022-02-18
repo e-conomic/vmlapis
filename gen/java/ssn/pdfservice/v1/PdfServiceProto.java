@@ -20,45 +20,53 @@ public final class PdfServiceProto {
 
     /**
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
     com.google.protobuf.ByteString getData();
 
     /**
      * <code>uint32 dpi = 2;</code>
+     * @return The dpi.
      */
     int getDpi();
 
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * @return The enum numeric value on the wire for format.
      */
     int getFormatValue();
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * @return The format.
      */
     ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat();
 
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * @return The enum numeric value on the wire for color.
      */
     int getColorValue();
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * @return The color.
      */
     ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor();
 
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * @return The enum numeric value on the wire for pages.
      */
     int getPagesValue();
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * @return The pages.
      */
     ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages();
   }
   /**
    * Protobuf type {@code ssn.pdfservice.v1.RasterizePdfRequest}
    */
-  public  static final class RasterizePdfRequest extends
+  public static final class RasterizePdfRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.pdfservice.v1.RasterizePdfRequest)
       RasterizePdfRequestOrBuilder {
@@ -69,10 +77,16 @@ public final class PdfServiceProto {
     }
     private RasterizePdfRequest() {
       data_ = com.google.protobuf.ByteString.EMPTY;
-      dpi_ = 0;
       format_ = 0;
       color_ = 0;
       pages_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RasterizePdfRequest();
     }
 
     @java.lang.Override
@@ -88,7 +102,6 @@ public final class PdfServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -128,7 +141,7 @@ public final class PdfServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -202,6 +215,8 @@ public final class PdfServiceProto {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -209,6 +224,10 @@ public final class PdfServiceProto {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Format forNumber(int value) {
         switch (value) {
           case 0: return PNG;
@@ -232,6 +251,10 @@ public final class PdfServiceProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -301,6 +324,8 @@ public final class PdfServiceProto {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -308,6 +333,10 @@ public final class PdfServiceProto {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ColorSpace forNumber(int value) {
         switch (value) {
           case 0: return GRAY;
@@ -330,6 +359,10 @@ public final class PdfServiceProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -415,6 +448,8 @@ public final class PdfServiceProto {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -422,6 +457,10 @@ public final class PdfServiceProto {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static PageOption forNumber(int value) {
         switch (value) {
           case 0: return FIRST_LAST;
@@ -446,6 +485,10 @@ public final class PdfServiceProto {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -484,7 +527,9 @@ public final class PdfServiceProto {
     private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -493,7 +538,9 @@ public final class PdfServiceProto {
     private int dpi_;
     /**
      * <code>uint32 dpi = 2;</code>
+     * @return The dpi.
      */
+    @java.lang.Override
     public int getDpi() {
       return dpi_;
     }
@@ -502,14 +549,16 @@ public final class PdfServiceProto {
     private int format_;
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * @return The enum numeric value on the wire for format.
      */
-    public int getFormatValue() {
+    @java.lang.Override public int getFormatValue() {
       return format_;
     }
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * @return The format.
      */
-    public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat() {
+    @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat() {
       @SuppressWarnings("deprecation")
       ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.valueOf(format_);
       return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.UNRECOGNIZED : result;
@@ -519,14 +568,16 @@ public final class PdfServiceProto {
     private int color_;
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * @return The enum numeric value on the wire for color.
      */
-    public int getColorValue() {
+    @java.lang.Override public int getColorValue() {
       return color_;
     }
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * @return The color.
      */
-    public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor() {
+    @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor() {
       @SuppressWarnings("deprecation")
       ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.valueOf(color_);
       return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.UNRECOGNIZED : result;
@@ -536,14 +587,16 @@ public final class PdfServiceProto {
     private int pages_;
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * @return The enum numeric value on the wire for pages.
      */
-    public int getPagesValue() {
+    @java.lang.Override public int getPagesValue() {
       return pages_;
     }
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * @return The pages.
      */
-    public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages() {
+    @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages() {
       @SuppressWarnings("deprecation")
       ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.valueOf(pages_);
       return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.UNRECOGNIZED : result;
@@ -622,16 +675,15 @@ public final class PdfServiceProto {
       }
       ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest other = (ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest) obj;
 
-      boolean result = true;
-      result = result && getData()
-          .equals(other.getData());
-      result = result && (getDpi()
-          == other.getDpi());
-      result = result && format_ == other.format_;
-      result = result && color_ == other.color_;
-      result = result && pages_ == other.pages_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (getDpi()
+          != other.getDpi()) return false;
+      if (format_ != other.format_) return false;
+      if (color_ != other.color_) return false;
+      if (pages_ != other.pages_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -831,35 +883,35 @@ public final class PdfServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -920,12 +972,16 @@ public final class PdfServiceProto {
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 1;</code>
+       * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
       /**
        * <code>bytes data = 1;</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -938,6 +994,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>bytes data = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearData() {
         
@@ -949,12 +1006,16 @@ public final class PdfServiceProto {
       private int dpi_ ;
       /**
        * <code>uint32 dpi = 2;</code>
+       * @return The dpi.
        */
+      @java.lang.Override
       public int getDpi() {
         return dpi_;
       }
       /**
        * <code>uint32 dpi = 2;</code>
+       * @param value The dpi to set.
+       * @return This builder for chaining.
        */
       public Builder setDpi(int value) {
         
@@ -964,6 +1025,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>uint32 dpi = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDpi() {
         
@@ -975,21 +1037,27 @@ public final class PdfServiceProto {
       private int format_ = 0;
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * @return The enum numeric value on the wire for format.
        */
-      public int getFormatValue() {
+      @java.lang.Override public int getFormatValue() {
         return format_;
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * @param value The enum numeric value on the wire for format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatValue(int value) {
+        
         format_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * @return The format.
        */
+      @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat() {
         @SuppressWarnings("deprecation")
         ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.valueOf(format_);
@@ -997,6 +1065,8 @@ public final class PdfServiceProto {
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * @param value The format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormat(ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format value) {
         if (value == null) {
@@ -1009,6 +1079,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormat() {
         
@@ -1020,21 +1091,27 @@ public final class PdfServiceProto {
       private int color_ = 0;
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * @return The enum numeric value on the wire for color.
        */
-      public int getColorValue() {
+      @java.lang.Override public int getColorValue() {
         return color_;
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * @param value The enum numeric value on the wire for color to set.
+       * @return This builder for chaining.
        */
       public Builder setColorValue(int value) {
+        
         color_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * @return The color.
        */
+      @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor() {
         @SuppressWarnings("deprecation")
         ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.valueOf(color_);
@@ -1042,6 +1119,8 @@ public final class PdfServiceProto {
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * @param value The color to set.
+       * @return This builder for chaining.
        */
       public Builder setColor(ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace value) {
         if (value == null) {
@@ -1054,6 +1133,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearColor() {
         
@@ -1065,21 +1145,27 @@ public final class PdfServiceProto {
       private int pages_ = 0;
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * @return The enum numeric value on the wire for pages.
        */
-      public int getPagesValue() {
+      @java.lang.Override public int getPagesValue() {
         return pages_;
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * @param value The enum numeric value on the wire for pages to set.
+       * @return This builder for chaining.
        */
       public Builder setPagesValue(int value) {
+        
         pages_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * @return The pages.
        */
+      @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages() {
         @SuppressWarnings("deprecation")
         ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.valueOf(pages_);
@@ -1087,6 +1173,8 @@ public final class PdfServiceProto {
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * @param value The pages to set.
+       * @return This builder for chaining.
        */
       public Builder setPages(ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption value) {
         if (value == null) {
@@ -1099,6 +1187,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPages() {
         
@@ -1109,7 +1198,7 @@ public final class PdfServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1165,21 +1254,25 @@ public final class PdfServiceProto {
 
     /**
      * <code>uint32 index = 1;</code>
+     * @return The index.
      */
     int getIndex();
 
     /**
      * <code>bytes data = 2;</code>
+     * @return The data.
      */
     com.google.protobuf.ByteString getData();
 
     /**
      * <code>uint32 width = 3;</code>
+     * @return The width.
      */
     int getWidth();
 
     /**
      * <code>uint32 height = 4;</code>
+     * @return The height.
      */
     int getHeight();
 
@@ -1189,13 +1282,14 @@ public final class PdfServiceProto {
      * </pre>
      *
      * <code>double scale = 5;</code>
+     * @return The scale.
      */
     double getScale();
   }
   /**
    * Protobuf type {@code ssn.pdfservice.v1.RasterizePdfResponse}
    */
-  public  static final class RasterizePdfResponse extends
+  public static final class RasterizePdfResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.pdfservice.v1.RasterizePdfResponse)
       RasterizePdfResponseOrBuilder {
@@ -1205,11 +1299,14 @@ public final class PdfServiceProto {
       super(builder);
     }
     private RasterizePdfResponse() {
-      index_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
-      width_ = 0;
-      height_ = 0;
-      scale_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RasterizePdfResponse();
     }
 
     @java.lang.Override
@@ -1225,7 +1322,6 @@ public final class PdfServiceProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1262,7 +1358,7 @@ public final class PdfServiceProto {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1297,7 +1393,9 @@ public final class PdfServiceProto {
     private int index_;
     /**
      * <code>uint32 index = 1;</code>
+     * @return The index.
      */
+    @java.lang.Override
     public int getIndex() {
       return index_;
     }
@@ -1306,7 +1404,9 @@ public final class PdfServiceProto {
     private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 2;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -1315,7 +1415,9 @@ public final class PdfServiceProto {
     private int width_;
     /**
      * <code>uint32 width = 3;</code>
+     * @return The width.
      */
+    @java.lang.Override
     public int getWidth() {
       return width_;
     }
@@ -1324,7 +1426,9 @@ public final class PdfServiceProto {
     private int height_;
     /**
      * <code>uint32 height = 4;</code>
+     * @return The height.
      */
+    @java.lang.Override
     public int getHeight() {
       return height_;
     }
@@ -1337,7 +1441,9 @@ public final class PdfServiceProto {
      * </pre>
      *
      * <code>double scale = 5;</code>
+     * @return The scale.
      */
+    @java.lang.Override
     public double getScale() {
       return scale_;
     }
@@ -1415,21 +1521,19 @@ public final class PdfServiceProto {
       }
       ssn.pdfservice.v1.PdfServiceProto.RasterizePdfResponse other = (ssn.pdfservice.v1.PdfServiceProto.RasterizePdfResponse) obj;
 
-      boolean result = true;
-      result = result && (getIndex()
-          == other.getIndex());
-      result = result && getData()
-          .equals(other.getData());
-      result = result && (getWidth()
-          == other.getWidth());
-      result = result && (getHeight()
-          == other.getHeight());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getScale())
-          == java.lang.Double.doubleToLongBits(
-              other.getScale()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (getWidth()
+          != other.getWidth()) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (java.lang.Double.doubleToLongBits(getScale())
+          != java.lang.Double.doubleToLongBits(
+              other.getScale())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1630,35 +1734,35 @@ public final class PdfServiceProto {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1719,12 +1823,16 @@ public final class PdfServiceProto {
       private int index_ ;
       /**
        * <code>uint32 index = 1;</code>
+       * @return The index.
        */
+      @java.lang.Override
       public int getIndex() {
         return index_;
       }
       /**
        * <code>uint32 index = 1;</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
        */
       public Builder setIndex(int value) {
         
@@ -1734,6 +1842,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>uint32 index = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIndex() {
         
@@ -1745,12 +1854,16 @@ public final class PdfServiceProto {
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 2;</code>
+       * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
       /**
        * <code>bytes data = 2;</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -1763,6 +1876,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>bytes data = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearData() {
         
@@ -1774,12 +1888,16 @@ public final class PdfServiceProto {
       private int width_ ;
       /**
        * <code>uint32 width = 3;</code>
+       * @return The width.
        */
+      @java.lang.Override
       public int getWidth() {
         return width_;
       }
       /**
        * <code>uint32 width = 3;</code>
+       * @param value The width to set.
+       * @return This builder for chaining.
        */
       public Builder setWidth(int value) {
         
@@ -1789,6 +1907,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>uint32 width = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearWidth() {
         
@@ -1800,12 +1919,16 @@ public final class PdfServiceProto {
       private int height_ ;
       /**
        * <code>uint32 height = 4;</code>
+       * @return The height.
        */
+      @java.lang.Override
       public int getHeight() {
         return height_;
       }
       /**
        * <code>uint32 height = 4;</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
        */
       public Builder setHeight(int value) {
         
@@ -1815,6 +1938,7 @@ public final class PdfServiceProto {
       }
       /**
        * <code>uint32 height = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHeight() {
         
@@ -1830,7 +1954,9 @@ public final class PdfServiceProto {
        * </pre>
        *
        * <code>double scale = 5;</code>
+       * @return The scale.
        */
+      @java.lang.Override
       public double getScale() {
         return scale_;
       }
@@ -1840,6 +1966,8 @@ public final class PdfServiceProto {
        * </pre>
        *
        * <code>double scale = 5;</code>
+       * @param value The scale to set.
+       * @return This builder for chaining.
        */
       public Builder setScale(double value) {
         
@@ -1853,6 +1981,7 @@ public final class PdfServiceProto {
        * </pre>
        *
        * <code>double scale = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearScale() {
         
@@ -1863,7 +1992,7 @@ public final class PdfServiceProto {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1952,18 +2081,10 @@ public final class PdfServiceProto {
       "-conomic/vmlapis/gen/go/ssn/pdfservice/v" +
       "1;pdfserviceb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_ssn_pdfservice_v1_RasterizePdfRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_pdfservice_v1_RasterizePdfRequest_fieldAccessorTable = new

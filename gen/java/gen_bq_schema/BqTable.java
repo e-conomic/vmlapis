@@ -26,6 +26,7 @@ public final class BqTable {
      * </pre>
      *
      * <code>string table_name = 1;</code>
+     * @return The tableName.
      */
     java.lang.String getTableName();
     /**
@@ -35,6 +36,7 @@ public final class BqTable {
      * </pre>
      *
      * <code>string table_name = 1;</code>
+     * @return The bytes for tableName.
      */
     com.google.protobuf.ByteString
         getTableNameBytes();
@@ -46,13 +48,14 @@ public final class BqTable {
      * </pre>
      *
      * <code>bool use_json_names = 2;</code>
+     * @return The useJsonNames.
      */
     boolean getUseJsonNames();
   }
   /**
    * Protobuf type {@code gen_bq_schema.BigQueryMessageOptions}
    */
-  public  static final class BigQueryMessageOptions extends
+  public static final class BigQueryMessageOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:gen_bq_schema.BigQueryMessageOptions)
       BigQueryMessageOptionsOrBuilder {
@@ -63,7 +66,13 @@ public final class BqTable {
     }
     private BigQueryMessageOptions() {
       tableName_ = "";
-      useJsonNames_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BigQueryMessageOptions();
     }
 
     @java.lang.Override
@@ -79,7 +88,6 @@ public final class BqTable {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -102,7 +110,7 @@ public final class BqTable {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -142,7 +150,9 @@ public final class BqTable {
      * </pre>
      *
      * <code>string table_name = 1;</code>
+     * @return The tableName.
      */
+    @java.lang.Override
     public java.lang.String getTableName() {
       java.lang.Object ref = tableName_;
       if (ref instanceof java.lang.String) {
@@ -162,7 +172,9 @@ public final class BqTable {
      * </pre>
      *
      * <code>string table_name = 1;</code>
+     * @return The bytes for tableName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTableNameBytes() {
       java.lang.Object ref = tableName_;
@@ -186,7 +198,9 @@ public final class BqTable {
      * </pre>
      *
      * <code>bool use_json_names = 2;</code>
+     * @return The useJsonNames.
      */
+    @java.lang.Override
     public boolean getUseJsonNames() {
       return useJsonNames_;
     }
@@ -242,13 +256,12 @@ public final class BqTable {
       }
       gen_bq_schema.BqTable.BigQueryMessageOptions other = (gen_bq_schema.BqTable.BigQueryMessageOptions) obj;
 
-      boolean result = true;
-      result = result && getTableName()
-          .equals(other.getTableName());
-      result = result && (getUseJsonNames()
-          == other.getUseJsonNames());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTableName()
+          .equals(other.getTableName())) return false;
+      if (getUseJsonNames()
+          != other.getUseJsonNames()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -434,35 +447,35 @@ public final class BqTable {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -520,6 +533,7 @@ public final class BqTable {
        * </pre>
        *
        * <code>string table_name = 1;</code>
+       * @return The tableName.
        */
       public java.lang.String getTableName() {
         java.lang.Object ref = tableName_;
@@ -540,6 +554,7 @@ public final class BqTable {
        * </pre>
        *
        * <code>string table_name = 1;</code>
+       * @return The bytes for tableName.
        */
       public com.google.protobuf.ByteString
           getTableNameBytes() {
@@ -561,6 +576,8 @@ public final class BqTable {
        * </pre>
        *
        * <code>string table_name = 1;</code>
+       * @param value The tableName to set.
+       * @return This builder for chaining.
        */
       public Builder setTableName(
           java.lang.String value) {
@@ -579,6 +596,7 @@ public final class BqTable {
        * </pre>
        *
        * <code>string table_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTableName() {
         
@@ -593,6 +611,8 @@ public final class BqTable {
        * </pre>
        *
        * <code>string table_name = 1;</code>
+       * @param value The bytes for tableName to set.
+       * @return This builder for chaining.
        */
       public Builder setTableNameBytes(
           com.google.protobuf.ByteString value) {
@@ -614,7 +634,9 @@ public final class BqTable {
        * </pre>
        *
        * <code>bool use_json_names = 2;</code>
+       * @return The useJsonNames.
        */
+      @java.lang.Override
       public boolean getUseJsonNames() {
         return useJsonNames_;
       }
@@ -625,6 +647,8 @@ public final class BqTable {
        * </pre>
        *
        * <code>bool use_json_names = 2;</code>
+       * @param value The useJsonNames to set.
+       * @return This builder for chaining.
        */
       public Builder setUseJsonNames(boolean value) {
         
@@ -639,6 +663,7 @@ public final class BqTable {
        * </pre>
        *
        * <code>bool use_json_names = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUseJsonNames() {
         
@@ -649,7 +674,7 @@ public final class BqTable {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -739,19 +764,11 @@ public final class BqTable {
       "tionsBAZ?github.com/e-conomic/vmlapis/ge" +
       "n/go/gen_bq_schema;gen_bq_schemab\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
-        }, assigner);
+        });
     internal_static_gen_bq_schema_BigQueryMessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_gen_bq_schema_BigQueryMessageOptions_fieldAccessorTable = new

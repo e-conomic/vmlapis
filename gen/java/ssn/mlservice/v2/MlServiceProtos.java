@@ -20,10 +20,12 @@ public final class MlServiceProtos {
 
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * @return Whether the truthLabels field is set.
      */
     boolean hasTruthLabels();
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * @return The truthLabels.
      */
     ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels getTruthLabels();
     /**
@@ -33,10 +35,12 @@ public final class MlServiceProtos {
 
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return Whether the textAnnotation field is set.
      */
     boolean hasTextAnnotation();
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return The textAnnotation.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
     /**
@@ -46,10 +50,12 @@ public final class MlServiceProtos {
 
     /**
      * <code>string id = 3;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 3;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -57,7 +63,7 @@ public final class MlServiceProtos {
   /**
    * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest}
    */
-  public  static final class FeatureGenRequest extends
+  public static final class FeatureGenRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.FeatureGenRequest)
       FeatureGenRequestOrBuilder {
@@ -68,6 +74,13 @@ public final class MlServiceProtos {
     }
     private FeatureGenRequest() {
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeatureGenRequest();
     }
 
     @java.lang.Override
@@ -83,7 +96,6 @@ public final class MlServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -127,7 +139,7 @@ public final class MlServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -164,25 +176,30 @@ public final class MlServiceProtos {
 
       /**
        * <code>double total_incl_vat = 1;</code>
+       * @return The totalInclVat.
        */
       double getTotalInclVat();
 
       /**
        * <code>double total_vat = 2;</code>
+       * @return The totalVat.
        */
       double getTotalVat();
 
       /**
        * <code>double total_excl_vat = 3;</code>
+       * @return The totalExclVat.
        */
       double getTotalExclVat();
 
       /**
        * <code>.google.type.Date order_date = 4;</code>
+       * @return Whether the orderDate field is set.
        */
       boolean hasOrderDate();
       /**
        * <code>.google.type.Date order_date = 4;</code>
+       * @return The orderDate.
        */
       com.google.type.Date getOrderDate();
       /**
@@ -192,10 +209,12 @@ public final class MlServiceProtos {
 
       /**
        * <code>.google.type.Date payment_due_date = 5;</code>
+       * @return Whether the paymentDueDate field is set.
        */
       boolean hasPaymentDueDate();
       /**
        * <code>.google.type.Date payment_due_date = 5;</code>
+       * @return The paymentDueDate.
        */
       com.google.type.Date getPaymentDueDate();
       /**
@@ -205,170 +224,204 @@ public final class MlServiceProtos {
 
       /**
        * <code>string document_type = 6;</code>
+       * @return The documentType.
        */
       java.lang.String getDocumentType();
       /**
        * <code>string document_type = 6;</code>
+       * @return The bytes for documentType.
        */
       com.google.protobuf.ByteString
           getDocumentTypeBytes();
 
       /**
        * <code>string currency = 7;</code>
+       * @return The currency.
        */
       java.lang.String getCurrency();
       /**
        * <code>string currency = 7;</code>
+       * @return The bytes for currency.
        */
       com.google.protobuf.ByteString
           getCurrencyBytes();
 
       /**
        * <code>string credit_card_number = 8;</code>
+       * @return The creditCardNumber.
        */
       java.lang.String getCreditCardNumber();
       /**
        * <code>string credit_card_number = 8;</code>
+       * @return The bytes for creditCardNumber.
        */
       com.google.protobuf.ByteString
           getCreditCardNumberBytes();
 
       /**
        * <code>string payment_method = 9;</code>
+       * @return The paymentMethod.
        */
       java.lang.String getPaymentMethod();
       /**
        * <code>string payment_method = 9;</code>
+       * @return The bytes for paymentMethod.
        */
       com.google.protobuf.ByteString
           getPaymentMethodBytes();
 
       /**
        * <code>string ocr_line_dk_type = 10;</code>
+       * @return The ocrLineDkType.
        */
       java.lang.String getOcrLineDkType();
       /**
        * <code>string ocr_line_dk_type = 10;</code>
+       * @return The bytes for ocrLineDkType.
        */
       com.google.protobuf.ByteString
           getOcrLineDkTypeBytes();
 
       /**
        * <code>string ocr_line_dk_payment_id = 11;</code>
+       * @return The ocrLineDkPaymentId.
        */
       java.lang.String getOcrLineDkPaymentId();
       /**
        * <code>string ocr_line_dk_payment_id = 11;</code>
+       * @return The bytes for ocrLineDkPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineDkPaymentIdBytes();
 
       /**
        * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * @return The ocrLineDkCreditorId.
        */
       java.lang.String getOcrLineDkCreditorId();
       /**
        * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * @return The bytes for ocrLineDkCreditorId.
        */
       com.google.protobuf.ByteString
           getOcrLineDkCreditorIdBytes();
 
       /**
        * <code>string ocr_line_se_payment_id = 13;</code>
+       * @return The ocrLineSePaymentId.
        */
       java.lang.String getOcrLineSePaymentId();
       /**
        * <code>string ocr_line_se_payment_id = 13;</code>
+       * @return The bytes for ocrLineSePaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineSePaymentIdBytes();
 
       /**
        * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * @return The ocrLineSeBankgiroCreditorId.
        */
       java.lang.String getOcrLineSeBankgiroCreditorId();
       /**
        * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * @return The bytes for ocrLineSeBankgiroCreditorId.
        */
       com.google.protobuf.ByteString
           getOcrLineSeBankgiroCreditorIdBytes();
 
       /**
        * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * @return The ocrLineSePlusgiroCreditorId.
        */
       java.lang.String getOcrLineSePlusgiroCreditorId();
       /**
        * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * @return The bytes for ocrLineSePlusgiroCreditorId.
        */
       com.google.protobuf.ByteString
           getOcrLineSePlusgiroCreditorIdBytes();
 
       /**
        * <code>string ocr_line_no_payment_id = 16;</code>
+       * @return The ocrLineNoPaymentId.
        */
       java.lang.String getOcrLineNoPaymentId();
       /**
        * <code>string ocr_line_no_payment_id = 16;</code>
+       * @return The bytes for ocrLineNoPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineNoPaymentIdBytes();
 
       /**
        * <code>string ocr_line_fi_payment_id = 17;</code>
+       * @return The ocrLineFiPaymentId.
        */
       java.lang.String getOcrLineFiPaymentId();
       /**
        * <code>string ocr_line_fi_payment_id = 17;</code>
+       * @return The bytes for ocrLineFiPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineFiPaymentIdBytes();
 
       /**
        * <code>string ocr_line_nl_payment_id = 18;</code>
+       * @return The ocrLineNlPaymentId.
        */
       java.lang.String getOcrLineNlPaymentId();
       /**
        * <code>string ocr_line_nl_payment_id = 18;</code>
+       * @return The bytes for ocrLineNlPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineNlPaymentIdBytes();
 
       /**
        * <code>string supplier_corporate_id = 19;</code>
+       * @return The supplierCorporateId.
        */
       java.lang.String getSupplierCorporateId();
       /**
        * <code>string supplier_corporate_id = 19;</code>
+       * @return The bytes for supplierCorporateId.
        */
       com.google.protobuf.ByteString
           getSupplierCorporateIdBytes();
 
       /**
        * <code>string supplier_country_code = 20;</code>
+       * @return The supplierCountryCode.
        */
       java.lang.String getSupplierCountryCode();
       /**
        * <code>string supplier_country_code = 20;</code>
+       * @return The bytes for supplierCountryCode.
        */
       com.google.protobuf.ByteString
           getSupplierCountryCodeBytes();
 
       /**
        * <code>string invoice_number = 21;</code>
+       * @return The invoiceNumber.
        */
       java.lang.String getInvoiceNumber();
       /**
        * <code>string invoice_number = 21;</code>
+       * @return The bytes for invoiceNumber.
        */
       com.google.protobuf.ByteString
           getInvoiceNumberBytes();
 
       /**
        * <code>string iban = 22;</code>
+       * @return The iban.
        */
       java.lang.String getIban();
       /**
        * <code>string iban = 22;</code>
+       * @return The bytes for iban.
        */
       com.google.protobuf.ByteString
           getIbanBytes();
@@ -376,7 +429,7 @@ public final class MlServiceProtos {
     /**
      * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
      */
-    public  static final class TruthLabels extends
+    public static final class TruthLabels extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.FeatureGenRequest.TruthLabels)
         TruthLabelsOrBuilder {
@@ -386,9 +439,6 @@ public final class MlServiceProtos {
         super(builder);
       }
       private TruthLabels() {
-        totalInclVat_ = 0D;
-        totalVat_ = 0D;
-        totalExclVat_ = 0D;
         documentType_ = "";
         currency_ = "";
         creditCardNumber_ = "";
@@ -409,6 +459,13 @@ public final class MlServiceProtos {
       }
 
       @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new TruthLabels();
+      }
+
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
@@ -421,7 +478,6 @@ public final class MlServiceProtos {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -576,7 +632,7 @@ public final class MlServiceProtos {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -611,7 +667,9 @@ public final class MlServiceProtos {
       private double totalInclVat_;
       /**
        * <code>double total_incl_vat = 1;</code>
+       * @return The totalInclVat.
        */
+      @java.lang.Override
       public double getTotalInclVat() {
         return totalInclVat_;
       }
@@ -620,7 +678,9 @@ public final class MlServiceProtos {
       private double totalVat_;
       /**
        * <code>double total_vat = 2;</code>
+       * @return The totalVat.
        */
+      @java.lang.Override
       public double getTotalVat() {
         return totalVat_;
       }
@@ -629,7 +689,9 @@ public final class MlServiceProtos {
       private double totalExclVat_;
       /**
        * <code>double total_excl_vat = 3;</code>
+       * @return The totalExclVat.
        */
+      @java.lang.Override
       public double getTotalExclVat() {
         return totalExclVat_;
       }
@@ -638,19 +700,24 @@ public final class MlServiceProtos {
       private com.google.type.Date orderDate_;
       /**
        * <code>.google.type.Date order_date = 4;</code>
+       * @return Whether the orderDate field is set.
        */
+      @java.lang.Override
       public boolean hasOrderDate() {
         return orderDate_ != null;
       }
       /**
        * <code>.google.type.Date order_date = 4;</code>
+       * @return The orderDate.
        */
+      @java.lang.Override
       public com.google.type.Date getOrderDate() {
         return orderDate_ == null ? com.google.type.Date.getDefaultInstance() : orderDate_;
       }
       /**
        * <code>.google.type.Date order_date = 4;</code>
        */
+      @java.lang.Override
       public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
         return getOrderDate();
       }
@@ -659,19 +726,24 @@ public final class MlServiceProtos {
       private com.google.type.Date paymentDueDate_;
       /**
        * <code>.google.type.Date payment_due_date = 5;</code>
+       * @return Whether the paymentDueDate field is set.
        */
+      @java.lang.Override
       public boolean hasPaymentDueDate() {
         return paymentDueDate_ != null;
       }
       /**
        * <code>.google.type.Date payment_due_date = 5;</code>
+       * @return The paymentDueDate.
        */
+      @java.lang.Override
       public com.google.type.Date getPaymentDueDate() {
         return paymentDueDate_ == null ? com.google.type.Date.getDefaultInstance() : paymentDueDate_;
       }
       /**
        * <code>.google.type.Date payment_due_date = 5;</code>
        */
+      @java.lang.Override
       public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
         return getPaymentDueDate();
       }
@@ -680,7 +752,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object documentType_;
       /**
        * <code>string document_type = 6;</code>
+       * @return The documentType.
        */
+      @java.lang.Override
       public java.lang.String getDocumentType() {
         java.lang.Object ref = documentType_;
         if (ref instanceof java.lang.String) {
@@ -695,7 +769,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string document_type = 6;</code>
+       * @return The bytes for documentType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDocumentTypeBytes() {
         java.lang.Object ref = documentType_;
@@ -714,7 +790,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object currency_;
       /**
        * <code>string currency = 7;</code>
+       * @return The currency.
        */
+      @java.lang.Override
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (ref instanceof java.lang.String) {
@@ -729,7 +807,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string currency = 7;</code>
+       * @return The bytes for currency.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCurrencyBytes() {
         java.lang.Object ref = currency_;
@@ -748,7 +828,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object creditCardNumber_;
       /**
        * <code>string credit_card_number = 8;</code>
+       * @return The creditCardNumber.
        */
+      @java.lang.Override
       public java.lang.String getCreditCardNumber() {
         java.lang.Object ref = creditCardNumber_;
         if (ref instanceof java.lang.String) {
@@ -763,7 +845,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string credit_card_number = 8;</code>
+       * @return The bytes for creditCardNumber.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCreditCardNumberBytes() {
         java.lang.Object ref = creditCardNumber_;
@@ -782,7 +866,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object paymentMethod_;
       /**
        * <code>string payment_method = 9;</code>
+       * @return The paymentMethod.
        */
+      @java.lang.Override
       public java.lang.String getPaymentMethod() {
         java.lang.Object ref = paymentMethod_;
         if (ref instanceof java.lang.String) {
@@ -797,7 +883,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string payment_method = 9;</code>
+       * @return The bytes for paymentMethod.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPaymentMethodBytes() {
         java.lang.Object ref = paymentMethod_;
@@ -816,7 +904,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineDkType_;
       /**
        * <code>string ocr_line_dk_type = 10;</code>
+       * @return The ocrLineDkType.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineDkType() {
         java.lang.Object ref = ocrLineDkType_;
         if (ref instanceof java.lang.String) {
@@ -831,7 +921,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_dk_type = 10;</code>
+       * @return The bytes for ocrLineDkType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineDkTypeBytes() {
         java.lang.Object ref = ocrLineDkType_;
@@ -850,7 +942,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineDkPaymentId_;
       /**
        * <code>string ocr_line_dk_payment_id = 11;</code>
+       * @return The ocrLineDkPaymentId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineDkPaymentId() {
         java.lang.Object ref = ocrLineDkPaymentId_;
         if (ref instanceof java.lang.String) {
@@ -865,7 +959,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_dk_payment_id = 11;</code>
+       * @return The bytes for ocrLineDkPaymentId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineDkPaymentIdBytes() {
         java.lang.Object ref = ocrLineDkPaymentId_;
@@ -884,7 +980,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineDkCreditorId_;
       /**
        * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * @return The ocrLineDkCreditorId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineDkCreditorId() {
         java.lang.Object ref = ocrLineDkCreditorId_;
         if (ref instanceof java.lang.String) {
@@ -899,7 +997,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * @return The bytes for ocrLineDkCreditorId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineDkCreditorIdBytes() {
         java.lang.Object ref = ocrLineDkCreditorId_;
@@ -918,7 +1018,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineSePaymentId_;
       /**
        * <code>string ocr_line_se_payment_id = 13;</code>
+       * @return The ocrLineSePaymentId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineSePaymentId() {
         java.lang.Object ref = ocrLineSePaymentId_;
         if (ref instanceof java.lang.String) {
@@ -933,7 +1035,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_se_payment_id = 13;</code>
+       * @return The bytes for ocrLineSePaymentId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineSePaymentIdBytes() {
         java.lang.Object ref = ocrLineSePaymentId_;
@@ -952,7 +1056,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineSeBankgiroCreditorId_;
       /**
        * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * @return The ocrLineSeBankgiroCreditorId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineSeBankgiroCreditorId() {
         java.lang.Object ref = ocrLineSeBankgiroCreditorId_;
         if (ref instanceof java.lang.String) {
@@ -967,7 +1073,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * @return The bytes for ocrLineSeBankgiroCreditorId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineSeBankgiroCreditorIdBytes() {
         java.lang.Object ref = ocrLineSeBankgiroCreditorId_;
@@ -986,7 +1094,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineSePlusgiroCreditorId_;
       /**
        * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * @return The ocrLineSePlusgiroCreditorId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineSePlusgiroCreditorId() {
         java.lang.Object ref = ocrLineSePlusgiroCreditorId_;
         if (ref instanceof java.lang.String) {
@@ -1001,7 +1111,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * @return The bytes for ocrLineSePlusgiroCreditorId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineSePlusgiroCreditorIdBytes() {
         java.lang.Object ref = ocrLineSePlusgiroCreditorId_;
@@ -1020,7 +1132,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineNoPaymentId_;
       /**
        * <code>string ocr_line_no_payment_id = 16;</code>
+       * @return The ocrLineNoPaymentId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineNoPaymentId() {
         java.lang.Object ref = ocrLineNoPaymentId_;
         if (ref instanceof java.lang.String) {
@@ -1035,7 +1149,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_no_payment_id = 16;</code>
+       * @return The bytes for ocrLineNoPaymentId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineNoPaymentIdBytes() {
         java.lang.Object ref = ocrLineNoPaymentId_;
@@ -1054,7 +1170,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineFiPaymentId_;
       /**
        * <code>string ocr_line_fi_payment_id = 17;</code>
+       * @return The ocrLineFiPaymentId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineFiPaymentId() {
         java.lang.Object ref = ocrLineFiPaymentId_;
         if (ref instanceof java.lang.String) {
@@ -1069,7 +1187,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_fi_payment_id = 17;</code>
+       * @return The bytes for ocrLineFiPaymentId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineFiPaymentIdBytes() {
         java.lang.Object ref = ocrLineFiPaymentId_;
@@ -1088,7 +1208,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object ocrLineNlPaymentId_;
       /**
        * <code>string ocr_line_nl_payment_id = 18;</code>
+       * @return The ocrLineNlPaymentId.
        */
+      @java.lang.Override
       public java.lang.String getOcrLineNlPaymentId() {
         java.lang.Object ref = ocrLineNlPaymentId_;
         if (ref instanceof java.lang.String) {
@@ -1103,7 +1225,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string ocr_line_nl_payment_id = 18;</code>
+       * @return The bytes for ocrLineNlPaymentId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOcrLineNlPaymentIdBytes() {
         java.lang.Object ref = ocrLineNlPaymentId_;
@@ -1122,7 +1246,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object supplierCorporateId_;
       /**
        * <code>string supplier_corporate_id = 19;</code>
+       * @return The supplierCorporateId.
        */
+      @java.lang.Override
       public java.lang.String getSupplierCorporateId() {
         java.lang.Object ref = supplierCorporateId_;
         if (ref instanceof java.lang.String) {
@@ -1137,7 +1263,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string supplier_corporate_id = 19;</code>
+       * @return The bytes for supplierCorporateId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSupplierCorporateIdBytes() {
         java.lang.Object ref = supplierCorporateId_;
@@ -1156,7 +1284,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object supplierCountryCode_;
       /**
        * <code>string supplier_country_code = 20;</code>
+       * @return The supplierCountryCode.
        */
+      @java.lang.Override
       public java.lang.String getSupplierCountryCode() {
         java.lang.Object ref = supplierCountryCode_;
         if (ref instanceof java.lang.String) {
@@ -1171,7 +1301,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string supplier_country_code = 20;</code>
+       * @return The bytes for supplierCountryCode.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSupplierCountryCodeBytes() {
         java.lang.Object ref = supplierCountryCode_;
@@ -1190,7 +1322,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object invoiceNumber_;
       /**
        * <code>string invoice_number = 21;</code>
+       * @return The invoiceNumber.
        */
+      @java.lang.Override
       public java.lang.String getInvoiceNumber() {
         java.lang.Object ref = invoiceNumber_;
         if (ref instanceof java.lang.String) {
@@ -1205,7 +1339,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string invoice_number = 21;</code>
+       * @return The bytes for invoiceNumber.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getInvoiceNumberBytes() {
         java.lang.Object ref = invoiceNumber_;
@@ -1224,7 +1360,9 @@ public final class MlServiceProtos {
       private volatile java.lang.Object iban_;
       /**
        * <code>string iban = 22;</code>
+       * @return The iban.
        */
+      @java.lang.Override
       public java.lang.String getIban() {
         java.lang.Object ref = iban_;
         if (ref instanceof java.lang.String) {
@@ -1239,7 +1377,9 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string iban = 22;</code>
+       * @return The bytes for iban.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIbanBytes() {
         java.lang.Object ref = iban_;
@@ -1429,65 +1569,61 @@ public final class MlServiceProtos {
         }
         ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels other = (ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels) obj;
 
-        boolean result = true;
-        result = result && (
-            java.lang.Double.doubleToLongBits(getTotalInclVat())
-            == java.lang.Double.doubleToLongBits(
-                other.getTotalInclVat()));
-        result = result && (
-            java.lang.Double.doubleToLongBits(getTotalVat())
-            == java.lang.Double.doubleToLongBits(
-                other.getTotalVat()));
-        result = result && (
-            java.lang.Double.doubleToLongBits(getTotalExclVat())
-            == java.lang.Double.doubleToLongBits(
-                other.getTotalExclVat()));
-        result = result && (hasOrderDate() == other.hasOrderDate());
+        if (java.lang.Double.doubleToLongBits(getTotalInclVat())
+            != java.lang.Double.doubleToLongBits(
+                other.getTotalInclVat())) return false;
+        if (java.lang.Double.doubleToLongBits(getTotalVat())
+            != java.lang.Double.doubleToLongBits(
+                other.getTotalVat())) return false;
+        if (java.lang.Double.doubleToLongBits(getTotalExclVat())
+            != java.lang.Double.doubleToLongBits(
+                other.getTotalExclVat())) return false;
+        if (hasOrderDate() != other.hasOrderDate()) return false;
         if (hasOrderDate()) {
-          result = result && getOrderDate()
-              .equals(other.getOrderDate());
+          if (!getOrderDate()
+              .equals(other.getOrderDate())) return false;
         }
-        result = result && (hasPaymentDueDate() == other.hasPaymentDueDate());
+        if (hasPaymentDueDate() != other.hasPaymentDueDate()) return false;
         if (hasPaymentDueDate()) {
-          result = result && getPaymentDueDate()
-              .equals(other.getPaymentDueDate());
+          if (!getPaymentDueDate()
+              .equals(other.getPaymentDueDate())) return false;
         }
-        result = result && getDocumentType()
-            .equals(other.getDocumentType());
-        result = result && getCurrency()
-            .equals(other.getCurrency());
-        result = result && getCreditCardNumber()
-            .equals(other.getCreditCardNumber());
-        result = result && getPaymentMethod()
-            .equals(other.getPaymentMethod());
-        result = result && getOcrLineDkType()
-            .equals(other.getOcrLineDkType());
-        result = result && getOcrLineDkPaymentId()
-            .equals(other.getOcrLineDkPaymentId());
-        result = result && getOcrLineDkCreditorId()
-            .equals(other.getOcrLineDkCreditorId());
-        result = result && getOcrLineSePaymentId()
-            .equals(other.getOcrLineSePaymentId());
-        result = result && getOcrLineSeBankgiroCreditorId()
-            .equals(other.getOcrLineSeBankgiroCreditorId());
-        result = result && getOcrLineSePlusgiroCreditorId()
-            .equals(other.getOcrLineSePlusgiroCreditorId());
-        result = result && getOcrLineNoPaymentId()
-            .equals(other.getOcrLineNoPaymentId());
-        result = result && getOcrLineFiPaymentId()
-            .equals(other.getOcrLineFiPaymentId());
-        result = result && getOcrLineNlPaymentId()
-            .equals(other.getOcrLineNlPaymentId());
-        result = result && getSupplierCorporateId()
-            .equals(other.getSupplierCorporateId());
-        result = result && getSupplierCountryCode()
-            .equals(other.getSupplierCountryCode());
-        result = result && getInvoiceNumber()
-            .equals(other.getInvoiceNumber());
-        result = result && getIban()
-            .equals(other.getIban());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getDocumentType()
+            .equals(other.getDocumentType())) return false;
+        if (!getCurrency()
+            .equals(other.getCurrency())) return false;
+        if (!getCreditCardNumber()
+            .equals(other.getCreditCardNumber())) return false;
+        if (!getPaymentMethod()
+            .equals(other.getPaymentMethod())) return false;
+        if (!getOcrLineDkType()
+            .equals(other.getOcrLineDkType())) return false;
+        if (!getOcrLineDkPaymentId()
+            .equals(other.getOcrLineDkPaymentId())) return false;
+        if (!getOcrLineDkCreditorId()
+            .equals(other.getOcrLineDkCreditorId())) return false;
+        if (!getOcrLineSePaymentId()
+            .equals(other.getOcrLineSePaymentId())) return false;
+        if (!getOcrLineSeBankgiroCreditorId()
+            .equals(other.getOcrLineSeBankgiroCreditorId())) return false;
+        if (!getOcrLineSePlusgiroCreditorId()
+            .equals(other.getOcrLineSePlusgiroCreditorId())) return false;
+        if (!getOcrLineNoPaymentId()
+            .equals(other.getOcrLineNoPaymentId())) return false;
+        if (!getOcrLineFiPaymentId()
+            .equals(other.getOcrLineFiPaymentId())) return false;
+        if (!getOcrLineNlPaymentId()
+            .equals(other.getOcrLineNlPaymentId())) return false;
+        if (!getSupplierCorporateId()
+            .equals(other.getSupplierCorporateId())) return false;
+        if (!getSupplierCountryCode()
+            .equals(other.getSupplierCountryCode())) return false;
+        if (!getInvoiceNumber()
+            .equals(other.getInvoiceNumber())) return false;
+        if (!getIban()
+            .equals(other.getIban())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1795,35 +1931,35 @@ public final class MlServiceProtos {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1952,12 +2088,16 @@ public final class MlServiceProtos {
         private double totalInclVat_ ;
         /**
          * <code>double total_incl_vat = 1;</code>
+         * @return The totalInclVat.
          */
+        @java.lang.Override
         public double getTotalInclVat() {
           return totalInclVat_;
         }
         /**
          * <code>double total_incl_vat = 1;</code>
+         * @param value The totalInclVat to set.
+         * @return This builder for chaining.
          */
         public Builder setTotalInclVat(double value) {
           
@@ -1967,6 +2107,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>double total_incl_vat = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearTotalInclVat() {
           
@@ -1978,12 +2119,16 @@ public final class MlServiceProtos {
         private double totalVat_ ;
         /**
          * <code>double total_vat = 2;</code>
+         * @return The totalVat.
          */
+        @java.lang.Override
         public double getTotalVat() {
           return totalVat_;
         }
         /**
          * <code>double total_vat = 2;</code>
+         * @param value The totalVat to set.
+         * @return This builder for chaining.
          */
         public Builder setTotalVat(double value) {
           
@@ -1993,6 +2138,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>double total_vat = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearTotalVat() {
           
@@ -2004,12 +2150,16 @@ public final class MlServiceProtos {
         private double totalExclVat_ ;
         /**
          * <code>double total_excl_vat = 3;</code>
+         * @return The totalExclVat.
          */
+        @java.lang.Override
         public double getTotalExclVat() {
           return totalExclVat_;
         }
         /**
          * <code>double total_excl_vat = 3;</code>
+         * @param value The totalExclVat to set.
+         * @return This builder for chaining.
          */
         public Builder setTotalExclVat(double value) {
           
@@ -2019,6 +2169,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>double total_excl_vat = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearTotalExclVat() {
           
@@ -2027,17 +2178,19 @@ public final class MlServiceProtos {
           return this;
         }
 
-        private com.google.type.Date orderDate_ = null;
+        private com.google.type.Date orderDate_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> orderDateBuilder_;
         /**
          * <code>.google.type.Date order_date = 4;</code>
+         * @return Whether the orderDate field is set.
          */
         public boolean hasOrderDate() {
           return orderDateBuilder_ != null || orderDate_ != null;
         }
         /**
          * <code>.google.type.Date order_date = 4;</code>
+         * @return The orderDate.
          */
         public com.google.type.Date getOrderDate() {
           if (orderDateBuilder_ == null) {
@@ -2144,17 +2297,19 @@ public final class MlServiceProtos {
           return orderDateBuilder_;
         }
 
-        private com.google.type.Date paymentDueDate_ = null;
+        private com.google.type.Date paymentDueDate_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> paymentDueDateBuilder_;
         /**
          * <code>.google.type.Date payment_due_date = 5;</code>
+         * @return Whether the paymentDueDate field is set.
          */
         public boolean hasPaymentDueDate() {
           return paymentDueDateBuilder_ != null || paymentDueDate_ != null;
         }
         /**
          * <code>.google.type.Date payment_due_date = 5;</code>
+         * @return The paymentDueDate.
          */
         public com.google.type.Date getPaymentDueDate() {
           if (paymentDueDateBuilder_ == null) {
@@ -2264,6 +2419,7 @@ public final class MlServiceProtos {
         private java.lang.Object documentType_ = "";
         /**
          * <code>string document_type = 6;</code>
+         * @return The documentType.
          */
         public java.lang.String getDocumentType() {
           java.lang.Object ref = documentType_;
@@ -2279,6 +2435,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string document_type = 6;</code>
+         * @return The bytes for documentType.
          */
         public com.google.protobuf.ByteString
             getDocumentTypeBytes() {
@@ -2295,6 +2452,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string document_type = 6;</code>
+         * @param value The documentType to set.
+         * @return This builder for chaining.
          */
         public Builder setDocumentType(
             java.lang.String value) {
@@ -2308,6 +2467,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string document_type = 6;</code>
+         * @return This builder for chaining.
          */
         public Builder clearDocumentType() {
           
@@ -2317,6 +2477,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string document_type = 6;</code>
+         * @param value The bytes for documentType to set.
+         * @return This builder for chaining.
          */
         public Builder setDocumentTypeBytes(
             com.google.protobuf.ByteString value) {
@@ -2333,6 +2495,7 @@ public final class MlServiceProtos {
         private java.lang.Object currency_ = "";
         /**
          * <code>string currency = 7;</code>
+         * @return The currency.
          */
         public java.lang.String getCurrency() {
           java.lang.Object ref = currency_;
@@ -2348,6 +2511,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string currency = 7;</code>
+         * @return The bytes for currency.
          */
         public com.google.protobuf.ByteString
             getCurrencyBytes() {
@@ -2364,6 +2528,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string currency = 7;</code>
+         * @param value The currency to set.
+         * @return This builder for chaining.
          */
         public Builder setCurrency(
             java.lang.String value) {
@@ -2377,6 +2543,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string currency = 7;</code>
+         * @return This builder for chaining.
          */
         public Builder clearCurrency() {
           
@@ -2386,6 +2553,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string currency = 7;</code>
+         * @param value The bytes for currency to set.
+         * @return This builder for chaining.
          */
         public Builder setCurrencyBytes(
             com.google.protobuf.ByteString value) {
@@ -2402,6 +2571,7 @@ public final class MlServiceProtos {
         private java.lang.Object creditCardNumber_ = "";
         /**
          * <code>string credit_card_number = 8;</code>
+         * @return The creditCardNumber.
          */
         public java.lang.String getCreditCardNumber() {
           java.lang.Object ref = creditCardNumber_;
@@ -2417,6 +2587,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string credit_card_number = 8;</code>
+         * @return The bytes for creditCardNumber.
          */
         public com.google.protobuf.ByteString
             getCreditCardNumberBytes() {
@@ -2433,6 +2604,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string credit_card_number = 8;</code>
+         * @param value The creditCardNumber to set.
+         * @return This builder for chaining.
          */
         public Builder setCreditCardNumber(
             java.lang.String value) {
@@ -2446,6 +2619,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string credit_card_number = 8;</code>
+         * @return This builder for chaining.
          */
         public Builder clearCreditCardNumber() {
           
@@ -2455,6 +2629,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string credit_card_number = 8;</code>
+         * @param value The bytes for creditCardNumber to set.
+         * @return This builder for chaining.
          */
         public Builder setCreditCardNumberBytes(
             com.google.protobuf.ByteString value) {
@@ -2471,6 +2647,7 @@ public final class MlServiceProtos {
         private java.lang.Object paymentMethod_ = "";
         /**
          * <code>string payment_method = 9;</code>
+         * @return The paymentMethod.
          */
         public java.lang.String getPaymentMethod() {
           java.lang.Object ref = paymentMethod_;
@@ -2486,6 +2663,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string payment_method = 9;</code>
+         * @return The bytes for paymentMethod.
          */
         public com.google.protobuf.ByteString
             getPaymentMethodBytes() {
@@ -2502,6 +2680,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string payment_method = 9;</code>
+         * @param value The paymentMethod to set.
+         * @return This builder for chaining.
          */
         public Builder setPaymentMethod(
             java.lang.String value) {
@@ -2515,6 +2695,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string payment_method = 9;</code>
+         * @return This builder for chaining.
          */
         public Builder clearPaymentMethod() {
           
@@ -2524,6 +2705,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string payment_method = 9;</code>
+         * @param value The bytes for paymentMethod to set.
+         * @return This builder for chaining.
          */
         public Builder setPaymentMethodBytes(
             com.google.protobuf.ByteString value) {
@@ -2540,6 +2723,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineDkType_ = "";
         /**
          * <code>string ocr_line_dk_type = 10;</code>
+         * @return The ocrLineDkType.
          */
         public java.lang.String getOcrLineDkType() {
           java.lang.Object ref = ocrLineDkType_;
@@ -2555,6 +2739,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_type = 10;</code>
+         * @return The bytes for ocrLineDkType.
          */
         public com.google.protobuf.ByteString
             getOcrLineDkTypeBytes() {
@@ -2571,6 +2756,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_type = 10;</code>
+         * @param value The ocrLineDkType to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineDkType(
             java.lang.String value) {
@@ -2584,6 +2771,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_type = 10;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineDkType() {
           
@@ -2593,6 +2781,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_type = 10;</code>
+         * @param value The bytes for ocrLineDkType to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineDkTypeBytes(
             com.google.protobuf.ByteString value) {
@@ -2609,6 +2799,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineDkPaymentId_ = "";
         /**
          * <code>string ocr_line_dk_payment_id = 11;</code>
+         * @return The ocrLineDkPaymentId.
          */
         public java.lang.String getOcrLineDkPaymentId() {
           java.lang.Object ref = ocrLineDkPaymentId_;
@@ -2624,6 +2815,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_payment_id = 11;</code>
+         * @return The bytes for ocrLineDkPaymentId.
          */
         public com.google.protobuf.ByteString
             getOcrLineDkPaymentIdBytes() {
@@ -2640,6 +2832,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_payment_id = 11;</code>
+         * @param value The ocrLineDkPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineDkPaymentId(
             java.lang.String value) {
@@ -2653,6 +2847,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_payment_id = 11;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineDkPaymentId() {
           
@@ -2662,6 +2857,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_payment_id = 11;</code>
+         * @param value The bytes for ocrLineDkPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineDkPaymentIdBytes(
             com.google.protobuf.ByteString value) {
@@ -2678,6 +2875,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineDkCreditorId_ = "";
         /**
          * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * @return The ocrLineDkCreditorId.
          */
         public java.lang.String getOcrLineDkCreditorId() {
           java.lang.Object ref = ocrLineDkCreditorId_;
@@ -2693,6 +2891,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * @return The bytes for ocrLineDkCreditorId.
          */
         public com.google.protobuf.ByteString
             getOcrLineDkCreditorIdBytes() {
@@ -2709,6 +2908,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * @param value The ocrLineDkCreditorId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineDkCreditorId(
             java.lang.String value) {
@@ -2722,6 +2923,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineDkCreditorId() {
           
@@ -2731,6 +2933,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * @param value The bytes for ocrLineDkCreditorId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineDkCreditorIdBytes(
             com.google.protobuf.ByteString value) {
@@ -2747,6 +2951,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineSePaymentId_ = "";
         /**
          * <code>string ocr_line_se_payment_id = 13;</code>
+         * @return The ocrLineSePaymentId.
          */
         public java.lang.String getOcrLineSePaymentId() {
           java.lang.Object ref = ocrLineSePaymentId_;
@@ -2762,6 +2967,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_payment_id = 13;</code>
+         * @return The bytes for ocrLineSePaymentId.
          */
         public com.google.protobuf.ByteString
             getOcrLineSePaymentIdBytes() {
@@ -2778,6 +2984,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_payment_id = 13;</code>
+         * @param value The ocrLineSePaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineSePaymentId(
             java.lang.String value) {
@@ -2791,6 +2999,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_payment_id = 13;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineSePaymentId() {
           
@@ -2800,6 +3009,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_payment_id = 13;</code>
+         * @param value The bytes for ocrLineSePaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineSePaymentIdBytes(
             com.google.protobuf.ByteString value) {
@@ -2816,6 +3027,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineSeBankgiroCreditorId_ = "";
         /**
          * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * @return The ocrLineSeBankgiroCreditorId.
          */
         public java.lang.String getOcrLineSeBankgiroCreditorId() {
           java.lang.Object ref = ocrLineSeBankgiroCreditorId_;
@@ -2831,6 +3043,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * @return The bytes for ocrLineSeBankgiroCreditorId.
          */
         public com.google.protobuf.ByteString
             getOcrLineSeBankgiroCreditorIdBytes() {
@@ -2847,6 +3060,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * @param value The ocrLineSeBankgiroCreditorId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineSeBankgiroCreditorId(
             java.lang.String value) {
@@ -2860,6 +3075,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineSeBankgiroCreditorId() {
           
@@ -2869,6 +3085,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * @param value The bytes for ocrLineSeBankgiroCreditorId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineSeBankgiroCreditorIdBytes(
             com.google.protobuf.ByteString value) {
@@ -2885,6 +3103,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineSePlusgiroCreditorId_ = "";
         /**
          * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * @return The ocrLineSePlusgiroCreditorId.
          */
         public java.lang.String getOcrLineSePlusgiroCreditorId() {
           java.lang.Object ref = ocrLineSePlusgiroCreditorId_;
@@ -2900,6 +3119,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * @return The bytes for ocrLineSePlusgiroCreditorId.
          */
         public com.google.protobuf.ByteString
             getOcrLineSePlusgiroCreditorIdBytes() {
@@ -2916,6 +3136,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * @param value The ocrLineSePlusgiroCreditorId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineSePlusgiroCreditorId(
             java.lang.String value) {
@@ -2929,6 +3151,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineSePlusgiroCreditorId() {
           
@@ -2938,6 +3161,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * @param value The bytes for ocrLineSePlusgiroCreditorId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineSePlusgiroCreditorIdBytes(
             com.google.protobuf.ByteString value) {
@@ -2954,6 +3179,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineNoPaymentId_ = "";
         /**
          * <code>string ocr_line_no_payment_id = 16;</code>
+         * @return The ocrLineNoPaymentId.
          */
         public java.lang.String getOcrLineNoPaymentId() {
           java.lang.Object ref = ocrLineNoPaymentId_;
@@ -2969,6 +3195,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_no_payment_id = 16;</code>
+         * @return The bytes for ocrLineNoPaymentId.
          */
         public com.google.protobuf.ByteString
             getOcrLineNoPaymentIdBytes() {
@@ -2985,6 +3212,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_no_payment_id = 16;</code>
+         * @param value The ocrLineNoPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineNoPaymentId(
             java.lang.String value) {
@@ -2998,6 +3227,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_no_payment_id = 16;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineNoPaymentId() {
           
@@ -3007,6 +3237,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_no_payment_id = 16;</code>
+         * @param value The bytes for ocrLineNoPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineNoPaymentIdBytes(
             com.google.protobuf.ByteString value) {
@@ -3023,6 +3255,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineFiPaymentId_ = "";
         /**
          * <code>string ocr_line_fi_payment_id = 17;</code>
+         * @return The ocrLineFiPaymentId.
          */
         public java.lang.String getOcrLineFiPaymentId() {
           java.lang.Object ref = ocrLineFiPaymentId_;
@@ -3038,6 +3271,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_fi_payment_id = 17;</code>
+         * @return The bytes for ocrLineFiPaymentId.
          */
         public com.google.protobuf.ByteString
             getOcrLineFiPaymentIdBytes() {
@@ -3054,6 +3288,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_fi_payment_id = 17;</code>
+         * @param value The ocrLineFiPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineFiPaymentId(
             java.lang.String value) {
@@ -3067,6 +3303,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_fi_payment_id = 17;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineFiPaymentId() {
           
@@ -3076,6 +3313,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_fi_payment_id = 17;</code>
+         * @param value The bytes for ocrLineFiPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineFiPaymentIdBytes(
             com.google.protobuf.ByteString value) {
@@ -3092,6 +3331,7 @@ public final class MlServiceProtos {
         private java.lang.Object ocrLineNlPaymentId_ = "";
         /**
          * <code>string ocr_line_nl_payment_id = 18;</code>
+         * @return The ocrLineNlPaymentId.
          */
         public java.lang.String getOcrLineNlPaymentId() {
           java.lang.Object ref = ocrLineNlPaymentId_;
@@ -3107,6 +3347,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_nl_payment_id = 18;</code>
+         * @return The bytes for ocrLineNlPaymentId.
          */
         public com.google.protobuf.ByteString
             getOcrLineNlPaymentIdBytes() {
@@ -3123,6 +3364,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_nl_payment_id = 18;</code>
+         * @param value The ocrLineNlPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineNlPaymentId(
             java.lang.String value) {
@@ -3136,6 +3379,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_nl_payment_id = 18;</code>
+         * @return This builder for chaining.
          */
         public Builder clearOcrLineNlPaymentId() {
           
@@ -3145,6 +3389,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string ocr_line_nl_payment_id = 18;</code>
+         * @param value The bytes for ocrLineNlPaymentId to set.
+         * @return This builder for chaining.
          */
         public Builder setOcrLineNlPaymentIdBytes(
             com.google.protobuf.ByteString value) {
@@ -3161,6 +3407,7 @@ public final class MlServiceProtos {
         private java.lang.Object supplierCorporateId_ = "";
         /**
          * <code>string supplier_corporate_id = 19;</code>
+         * @return The supplierCorporateId.
          */
         public java.lang.String getSupplierCorporateId() {
           java.lang.Object ref = supplierCorporateId_;
@@ -3176,6 +3423,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_corporate_id = 19;</code>
+         * @return The bytes for supplierCorporateId.
          */
         public com.google.protobuf.ByteString
             getSupplierCorporateIdBytes() {
@@ -3192,6 +3440,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_corporate_id = 19;</code>
+         * @param value The supplierCorporateId to set.
+         * @return This builder for chaining.
          */
         public Builder setSupplierCorporateId(
             java.lang.String value) {
@@ -3205,6 +3455,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_corporate_id = 19;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSupplierCorporateId() {
           
@@ -3214,6 +3465,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_corporate_id = 19;</code>
+         * @param value The bytes for supplierCorporateId to set.
+         * @return This builder for chaining.
          */
         public Builder setSupplierCorporateIdBytes(
             com.google.protobuf.ByteString value) {
@@ -3230,6 +3483,7 @@ public final class MlServiceProtos {
         private java.lang.Object supplierCountryCode_ = "";
         /**
          * <code>string supplier_country_code = 20;</code>
+         * @return The supplierCountryCode.
          */
         public java.lang.String getSupplierCountryCode() {
           java.lang.Object ref = supplierCountryCode_;
@@ -3245,6 +3499,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_country_code = 20;</code>
+         * @return The bytes for supplierCountryCode.
          */
         public com.google.protobuf.ByteString
             getSupplierCountryCodeBytes() {
@@ -3261,6 +3516,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_country_code = 20;</code>
+         * @param value The supplierCountryCode to set.
+         * @return This builder for chaining.
          */
         public Builder setSupplierCountryCode(
             java.lang.String value) {
@@ -3274,6 +3531,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_country_code = 20;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSupplierCountryCode() {
           
@@ -3283,6 +3541,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string supplier_country_code = 20;</code>
+         * @param value The bytes for supplierCountryCode to set.
+         * @return This builder for chaining.
          */
         public Builder setSupplierCountryCodeBytes(
             com.google.protobuf.ByteString value) {
@@ -3299,6 +3559,7 @@ public final class MlServiceProtos {
         private java.lang.Object invoiceNumber_ = "";
         /**
          * <code>string invoice_number = 21;</code>
+         * @return The invoiceNumber.
          */
         public java.lang.String getInvoiceNumber() {
           java.lang.Object ref = invoiceNumber_;
@@ -3314,6 +3575,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string invoice_number = 21;</code>
+         * @return The bytes for invoiceNumber.
          */
         public com.google.protobuf.ByteString
             getInvoiceNumberBytes() {
@@ -3330,6 +3592,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string invoice_number = 21;</code>
+         * @param value The invoiceNumber to set.
+         * @return This builder for chaining.
          */
         public Builder setInvoiceNumber(
             java.lang.String value) {
@@ -3343,6 +3607,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string invoice_number = 21;</code>
+         * @return This builder for chaining.
          */
         public Builder clearInvoiceNumber() {
           
@@ -3352,6 +3617,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string invoice_number = 21;</code>
+         * @param value The bytes for invoiceNumber to set.
+         * @return This builder for chaining.
          */
         public Builder setInvoiceNumberBytes(
             com.google.protobuf.ByteString value) {
@@ -3368,6 +3635,7 @@ public final class MlServiceProtos {
         private java.lang.Object iban_ = "";
         /**
          * <code>string iban = 22;</code>
+         * @return The iban.
          */
         public java.lang.String getIban() {
           java.lang.Object ref = iban_;
@@ -3383,6 +3651,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string iban = 22;</code>
+         * @return The bytes for iban.
          */
         public com.google.protobuf.ByteString
             getIbanBytes() {
@@ -3399,6 +3668,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string iban = 22;</code>
+         * @param value The iban to set.
+         * @return This builder for chaining.
          */
         public Builder setIban(
             java.lang.String value) {
@@ -3412,6 +3683,7 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string iban = 22;</code>
+         * @return This builder for chaining.
          */
         public Builder clearIban() {
           
@@ -3421,6 +3693,8 @@ public final class MlServiceProtos {
         }
         /**
          * <code>string iban = 22;</code>
+         * @param value The bytes for iban to set.
+         * @return This builder for chaining.
          */
         public Builder setIbanBytes(
             com.google.protobuf.ByteString value) {
@@ -3436,7 +3710,7 @@ public final class MlServiceProtos {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -3490,19 +3764,24 @@ public final class MlServiceProtos {
     private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels truthLabels_;
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * @return Whether the truthLabels field is set.
      */
+    @java.lang.Override
     public boolean hasTruthLabels() {
       return truthLabels_ != null;
     }
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * @return The truthLabels.
      */
+    @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels getTruthLabels() {
       return truthLabels_ == null ? ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.getDefaultInstance() : truthLabels_;
     }
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
      */
+    @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder() {
       return getTruthLabels();
     }
@@ -3511,19 +3790,24 @@ public final class MlServiceProtos {
     private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return Whether the textAnnotation field is set.
      */
+    @java.lang.Override
     public boolean hasTextAnnotation() {
       return textAnnotation_ != null;
     }
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return The textAnnotation.
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
       return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
       return getTextAnnotation();
     }
@@ -3532,7 +3816,9 @@ public final class MlServiceProtos {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 3;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -3547,7 +3833,9 @@ public final class MlServiceProtos {
     }
     /**
      * <code>string id = 3;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -3620,21 +3908,20 @@ public final class MlServiceProtos {
       }
       ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest other = (ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest) obj;
 
-      boolean result = true;
-      result = result && (hasTruthLabels() == other.hasTruthLabels());
+      if (hasTruthLabels() != other.hasTruthLabels()) return false;
       if (hasTruthLabels()) {
-        result = result && getTruthLabels()
-            .equals(other.getTruthLabels());
+        if (!getTruthLabels()
+            .equals(other.getTruthLabels())) return false;
       }
-      result = result && (hasTextAnnotation() == other.hasTextAnnotation());
+      if (hasTextAnnotation() != other.hasTextAnnotation()) return false;
       if (hasTextAnnotation()) {
-        result = result && getTextAnnotation()
-            .equals(other.getTextAnnotation());
+        if (!getTextAnnotation()
+            .equals(other.getTextAnnotation())) return false;
       }
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3844,35 +4131,35 @@ public final class MlServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3925,17 +4212,19 @@ public final class MlServiceProtos {
         return this;
       }
 
-      private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels truthLabels_ = null;
+      private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels truthLabels_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.Builder, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder> truthLabelsBuilder_;
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * @return Whether the truthLabels field is set.
        */
       public boolean hasTruthLabels() {
         return truthLabelsBuilder_ != null || truthLabels_ != null;
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * @return The truthLabels.
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels getTruthLabels() {
         if (truthLabelsBuilder_ == null) {
@@ -4042,17 +4331,19 @@ public final class MlServiceProtos {
         return truthLabelsBuilder_;
       }
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_ = null;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
         return textAnnotationBuilder_ != null || textAnnotation_ != null;
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * @return The textAnnotation.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -4162,6 +4453,7 @@ public final class MlServiceProtos {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 3;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -4177,6 +4469,7 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string id = 3;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -4193,6 +4486,8 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string id = 3;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -4206,6 +4501,7 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -4215,6 +4511,8 @@ public final class MlServiceProtos {
       }
       /**
        * <code>string id = 3;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4230,7 +4528,7 @@ public final class MlServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4286,10 +4584,12 @@ public final class MlServiceProtos {
 
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return The example.
      */
     org.tensorflow.example.Example getExample();
     /**
@@ -4300,7 +4600,7 @@ public final class MlServiceProtos {
   /**
    * Protobuf type {@code ssn.mlservice.v2.FeatureGenResponse}
    */
-  public  static final class FeatureGenResponse extends
+  public static final class FeatureGenResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.FeatureGenResponse)
       FeatureGenResponseOrBuilder {
@@ -4310,6 +4610,13 @@ public final class MlServiceProtos {
       super(builder);
     }
     private FeatureGenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeatureGenResponse();
     }
 
     @java.lang.Override
@@ -4325,7 +4632,6 @@ public final class MlServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4350,7 +4656,7 @@ public final class MlServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4385,19 +4691,24 @@ public final class MlServiceProtos {
     private org.tensorflow.example.Example example_;
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return Whether the example field is set.
      */
+    @java.lang.Override
     public boolean hasExample() {
       return example_ != null;
     }
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return The example.
      */
+    @java.lang.Override
     public org.tensorflow.example.Example getExample() {
       return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
     }
     /**
      * <code>.tensorflow.Example example = 1;</code>
      */
+    @java.lang.Override
     public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
       return getExample();
     }
@@ -4447,14 +4758,13 @@ public final class MlServiceProtos {
       }
       ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse other = (ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse) obj;
 
-      boolean result = true;
-      result = result && (hasExample() == other.hasExample());
+      if (hasExample() != other.hasExample()) return false;
       if (hasExample()) {
-        result = result && getExample()
-            .equals(other.getExample());
+        if (!getExample()
+            .equals(other.getExample())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4644,35 +4954,35 @@ public final class MlServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4718,17 +5028,19 @@ public final class MlServiceProtos {
         return this;
       }
 
-      private org.tensorflow.example.Example example_ = null;
+      private org.tensorflow.example.Example example_;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> exampleBuilder_;
       /**
        * <code>.tensorflow.Example example = 1;</code>
+       * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
        * <code>.tensorflow.Example example = 1;</code>
+       * @return The example.
        */
       public org.tensorflow.example.Example getExample() {
         if (exampleBuilder_ == null) {
@@ -4837,7 +5149,7 @@ public final class MlServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4893,10 +5205,12 @@ public final class MlServiceProtos {
 
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return The example.
      */
     org.tensorflow.example.Example getExample();
     /**
@@ -4906,13 +5220,14 @@ public final class MlServiceProtos {
 
     /**
      * <code>uint32 top_n_most_confident = 2;</code>
+     * @return The topNMostConfident.
      */
     int getTopNMostConfident();
   }
   /**
    * Protobuf type {@code ssn.mlservice.v2.PredictRequest}
    */
-  public  static final class PredictRequest extends
+  public static final class PredictRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.PredictRequest)
       PredictRequestOrBuilder {
@@ -4922,7 +5237,13 @@ public final class MlServiceProtos {
       super(builder);
     }
     private PredictRequest() {
-      topNMostConfident_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PredictRequest();
     }
 
     @java.lang.Override
@@ -4938,7 +5259,6 @@ public final class MlServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4968,7 +5288,7 @@ public final class MlServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5003,19 +5323,24 @@ public final class MlServiceProtos {
     private org.tensorflow.example.Example example_;
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return Whether the example field is set.
      */
+    @java.lang.Override
     public boolean hasExample() {
       return example_ != null;
     }
     /**
      * <code>.tensorflow.Example example = 1;</code>
+     * @return The example.
      */
+    @java.lang.Override
     public org.tensorflow.example.Example getExample() {
       return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
     }
     /**
      * <code>.tensorflow.Example example = 1;</code>
      */
+    @java.lang.Override
     public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
       return getExample();
     }
@@ -5024,7 +5349,9 @@ public final class MlServiceProtos {
     private int topNMostConfident_;
     /**
      * <code>uint32 top_n_most_confident = 2;</code>
+     * @return The topNMostConfident.
      */
+    @java.lang.Override
     public int getTopNMostConfident() {
       return topNMostConfident_;
     }
@@ -5081,16 +5408,15 @@ public final class MlServiceProtos {
       }
       ssn.mlservice.v2.MlServiceProtos.PredictRequest other = (ssn.mlservice.v2.MlServiceProtos.PredictRequest) obj;
 
-      boolean result = true;
-      result = result && (hasExample() == other.hasExample());
+      if (hasExample() != other.hasExample()) return false;
       if (hasExample()) {
-        result = result && getExample()
-            .equals(other.getExample());
+        if (!getExample()
+            .equals(other.getExample())) return false;
       }
-      result = result && (getTopNMostConfident()
-          == other.getTopNMostConfident());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getTopNMostConfident()
+          != other.getTopNMostConfident()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5285,35 +5611,35 @@ public final class MlServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5362,17 +5688,19 @@ public final class MlServiceProtos {
         return this;
       }
 
-      private org.tensorflow.example.Example example_ = null;
+      private org.tensorflow.example.Example example_;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> exampleBuilder_;
       /**
        * <code>.tensorflow.Example example = 1;</code>
+       * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
        * <code>.tensorflow.Example example = 1;</code>
+       * @return The example.
        */
       public org.tensorflow.example.Example getExample() {
         if (exampleBuilder_ == null) {
@@ -5482,12 +5810,16 @@ public final class MlServiceProtos {
       private int topNMostConfident_ ;
       /**
        * <code>uint32 top_n_most_confident = 2;</code>
+       * @return The topNMostConfident.
        */
+      @java.lang.Override
       public int getTopNMostConfident() {
         return topNMostConfident_;
       }
       /**
        * <code>uint32 top_n_most_confident = 2;</code>
+       * @param value The topNMostConfident to set.
+       * @return This builder for chaining.
        */
       public Builder setTopNMostConfident(int value) {
         
@@ -5497,6 +5829,7 @@ public final class MlServiceProtos {
       }
       /**
        * <code>uint32 top_n_most_confident = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTopNMostConfident() {
         
@@ -5507,7 +5840,7 @@ public final class MlServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6120,7 +6453,7 @@ public final class MlServiceProtos {
    *
    * Protobuf type {@code ssn.mlservice.v2.PredictResponse}
    */
-  public  static final class PredictResponse extends
+  public static final class PredictResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.PredictResponse)
       PredictResponseOrBuilder {
@@ -6156,6 +6489,13 @@ public final class MlServiceProtos {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PredictResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6180,7 +6520,7 @@ public final class MlServiceProtos {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 orderDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6189,7 +6529,7 @@ public final class MlServiceProtos {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 paymentDueDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -6198,7 +6538,7 @@ public final class MlServiceProtos {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 currency_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -6207,7 +6547,7 @@ public final class MlServiceProtos {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 totalVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -6216,7 +6556,7 @@ public final class MlServiceProtos {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 totalInclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -6225,7 +6565,7 @@ public final class MlServiceProtos {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 totalExclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -6234,7 +6574,7 @@ public final class MlServiceProtos {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 supplierCorporateId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -6243,7 +6583,7 @@ public final class MlServiceProtos {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 supplierCountryCode_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -6252,7 +6592,7 @@ public final class MlServiceProtos {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 documentType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -6261,7 +6601,7 @@ public final class MlServiceProtos {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 paymentMethod_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000200;
               }
@@ -6270,7 +6610,7 @@ public final class MlServiceProtos {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 creditCardNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000400;
               }
@@ -6279,7 +6619,7 @@ public final class MlServiceProtos {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
                 invoiceNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00000800;
               }
@@ -6288,7 +6628,7 @@ public final class MlServiceProtos {
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
                 ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00001000;
               }
@@ -6297,7 +6637,7 @@ public final class MlServiceProtos {
               break;
             }
             case 114: {
-              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
                 ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00002000;
               }
@@ -6306,7 +6646,7 @@ public final class MlServiceProtos {
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00004000;
               }
@@ -6315,7 +6655,7 @@ public final class MlServiceProtos {
               break;
             }
             case 130: {
-              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+              if (!((mutable_bitField0_ & 0x00008000) != 0)) {
                 ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00008000;
               }
@@ -6324,7 +6664,7 @@ public final class MlServiceProtos {
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              if (!((mutable_bitField0_ & 0x00010000) != 0)) {
                 ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00010000;
               }
@@ -6333,7 +6673,7 @@ public final class MlServiceProtos {
               break;
             }
             case 146: {
-              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+              if (!((mutable_bitField0_ & 0x00020000) != 0)) {
                 ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00020000;
               }
@@ -6342,7 +6682,7 @@ public final class MlServiceProtos {
               break;
             }
             case 154: {
-              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              if (!((mutable_bitField0_ & 0x00040000) != 0)) {
                 ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00040000;
               }
@@ -6351,7 +6691,7 @@ public final class MlServiceProtos {
               break;
             }
             case 162: {
-              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+              if (!((mutable_bitField0_ & 0x00080000) != 0)) {
                 ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00080000;
               }
@@ -6360,7 +6700,7 @@ public final class MlServiceProtos {
               break;
             }
             case 170: {
-              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+              if (!((mutable_bitField0_ & 0x00100000) != 0)) {
                 ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00100000;
               }
@@ -6369,7 +6709,7 @@ public final class MlServiceProtos {
               break;
             }
             case 178: {
-              if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              if (!((mutable_bitField0_ & 0x00200000) != 0)) {
                 iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
                 mutable_bitField0_ |= 0x00200000;
               }
@@ -6378,7 +6718,7 @@ public final class MlServiceProtos {
               break;
             }
             case 186: {
-              if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+              if (!((mutable_bitField0_ & 0x00400000) != 0)) {
                 lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>();
                 mutable_bitField0_ |= 0x00400000;
               }
@@ -6387,7 +6727,7 @@ public final class MlServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6401,73 +6741,73 @@ public final class MlServiceProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           currency_ = java.util.Collections.unmodifiableList(currency_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           documentType_ = java.util.Collections.unmodifiableList(documentType_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
           creditCardNumber_ = java.util.Collections.unmodifiableList(creditCardNumber_);
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000800) != 0)) {
           invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
         }
-        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
           ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
         }
-        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((mutable_bitField0_ & 0x00002000) != 0)) {
           ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
           ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((mutable_bitField0_ & 0x00008000) != 0)) {
           ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((mutable_bitField0_ & 0x00010000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((mutable_bitField0_ & 0x00020000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
         }
-        if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((mutable_bitField0_ & 0x00040000) != 0)) {
           ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((mutable_bitField0_ & 0x00080000) != 0)) {
           ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((mutable_bitField0_ & 0x00100000) != 0)) {
           ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
         }
-        if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((mutable_bitField0_ & 0x00200000) != 0)) {
           iban_ = java.util.Collections.unmodifiableList(iban_);
         }
-        if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+        if (((mutable_bitField0_ & 0x00400000) != 0)) {
           lines_ = java.util.Collections.unmodifiableList(lines_);
         }
         this.unknownFields = unknownFields.build();
@@ -6492,12 +6832,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderDateList() {
       return orderDate_;
     }
     /**
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOrderDateOrBuilderList() {
       return orderDate_;
@@ -6505,18 +6847,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public int getOrderDateCount() {
       return orderDate_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOrderDate(int index) {
       return orderDate_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate order_date = 1;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
         int index) {
       return orderDate_.get(index);
@@ -6527,12 +6872,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentDueDateList() {
       return paymentDueDate_;
     }
     /**
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentDueDateOrBuilderList() {
       return paymentDueDate_;
@@ -6540,18 +6887,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public int getPaymentDueDateCount() {
       return paymentDueDate_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index) {
       return paymentDueDate_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
         int index) {
       return paymentDueDate_.get(index);
@@ -6562,12 +6912,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCurrencyList() {
       return currency_;
     }
     /**
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCurrencyOrBuilderList() {
       return currency_;
@@ -6575,18 +6927,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public int getCurrencyCount() {
       return currency_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCurrency(int index) {
       return currency_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate currency = 3;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
         int index) {
       return currency_.get(index);
@@ -6597,12 +6952,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalVatList() {
       return totalVat_;
     }
     /**
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalVatOrBuilderList() {
       return totalVat_;
@@ -6610,18 +6967,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public int getTotalVatCount() {
       return totalVat_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalVat(int index) {
       return totalVat_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
         int index) {
       return totalVat_.get(index);
@@ -6632,12 +6992,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalInclVatList() {
       return totalInclVat_;
     }
     /**
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalInclVatOrBuilderList() {
       return totalInclVat_;
@@ -6645,18 +7007,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public int getTotalInclVatCount() {
       return totalInclVat_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index) {
       return totalInclVat_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
         int index) {
       return totalInclVat_.get(index);
@@ -6667,12 +7032,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalExclVatList() {
       return totalExclVat_;
     }
     /**
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalExclVatOrBuilderList() {
       return totalExclVat_;
@@ -6680,18 +7047,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public int getTotalExclVatCount() {
       return totalExclVat_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index) {
       return totalExclVat_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
         int index) {
       return totalExclVat_.get(index);
@@ -6702,12 +7072,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCorporateIdList() {
       return supplierCorporateId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCorporateIdOrBuilderList() {
       return supplierCorporateId_;
@@ -6715,18 +7087,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public int getSupplierCorporateIdCount() {
       return supplierCorporateId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index) {
       return supplierCorporateId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
         int index) {
       return supplierCorporateId_.get(index);
@@ -6737,12 +7112,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCountryCodeList() {
       return supplierCountryCode_;
     }
     /**
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCountryCodeOrBuilderList() {
       return supplierCountryCode_;
@@ -6750,18 +7127,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public int getSupplierCountryCodeCount() {
       return supplierCountryCode_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index) {
       return supplierCountryCode_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
         int index) {
       return supplierCountryCode_.get(index);
@@ -6772,12 +7152,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentTypeList() {
       return documentType_;
     }
     /**
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentTypeOrBuilderList() {
       return documentType_;
@@ -6785,18 +7167,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public int getDocumentTypeCount() {
       return documentType_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentType(int index) {
       return documentType_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate document_type = 9;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
         int index) {
       return documentType_.get(index);
@@ -6807,12 +7192,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentMethodList() {
       return paymentMethod_;
     }
     /**
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentMethodOrBuilderList() {
       return paymentMethod_;
@@ -6820,18 +7207,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public int getPaymentMethodCount() {
       return paymentMethod_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index) {
       return paymentMethod_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
         int index) {
       return paymentMethod_.get(index);
@@ -6842,12 +7232,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardNumberList() {
       return creditCardNumber_;
     }
     /**
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCreditCardNumberOrBuilderList() {
       return creditCardNumber_;
@@ -6855,18 +7247,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
+    @java.lang.Override
     public int getCreditCardNumberCount() {
       return creditCardNumber_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCreditCardNumber(int index) {
       return creditCardNumber_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardNumberOrBuilder(
         int index) {
       return creditCardNumber_.get(index);
@@ -6877,12 +7272,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInvoiceNumberList() {
       return invoiceNumber_;
     }
     /**
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getInvoiceNumberOrBuilderList() {
       return invoiceNumber_;
@@ -6890,18 +7287,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public int getInvoiceNumberCount() {
       return invoiceNumber_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index) {
       return invoiceNumber_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
         int index) {
       return invoiceNumber_.get(index);
@@ -6912,12 +7312,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkTypeList() {
       return ocrLineDkType_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkTypeOrBuilderList() {
       return ocrLineDkType_;
@@ -6925,18 +7327,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkTypeCount() {
       return ocrLineDkType_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index) {
       return ocrLineDkType_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
         int index) {
       return ocrLineDkType_.get(index);
@@ -6947,12 +7352,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkPaymentIdList() {
       return ocrLineDkPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList() {
       return ocrLineDkPaymentId_;
@@ -6960,18 +7367,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkPaymentIdCount() {
       return ocrLineDkPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index) {
       return ocrLineDkPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index) {
       return ocrLineDkPaymentId_.get(index);
@@ -6982,12 +7392,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkCreditorIdList() {
       return ocrLineDkCreditorId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList() {
       return ocrLineDkCreditorId_;
@@ -6995,18 +7407,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public int getOcrLineDkCreditorIdCount() {
       return ocrLineDkCreditorId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index) {
       return ocrLineDkCreditorId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index) {
       return ocrLineDkCreditorId_.get(index);
@@ -7017,12 +7432,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePaymentIdList() {
       return ocrLineSePaymentId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList() {
       return ocrLineSePaymentId_;
@@ -7030,18 +7447,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePaymentIdCount() {
       return ocrLineSePaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index) {
       return ocrLineSePaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index) {
       return ocrLineSePaymentId_.get(index);
@@ -7052,12 +7472,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSeBankgiroCreditorIdList() {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList() {
       return ocrLineSeBankgiroCreditorId_;
@@ -7065,18 +7487,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
      */
+    @java.lang.Override
     public int getOcrLineSeBankgiroCreditorIdCount() {
       return ocrLineSeBankgiroCreditorId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
@@ -7087,12 +7512,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePlusgiroCreditorIdList() {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList() {
       return ocrLineSePlusgiroCreditorId_;
@@ -7100,18 +7527,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public int getOcrLineSePlusgiroCreditorIdCount() {
       return ocrLineSePlusgiroCreditorId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
@@ -7122,12 +7552,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNoPaymentIdList() {
       return ocrLineNoPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList() {
       return ocrLineNoPaymentId_;
@@ -7135,18 +7567,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
      */
+    @java.lang.Override
     public int getOcrLineNoPaymentIdCount() {
       return ocrLineNoPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index) {
       return ocrLineNoPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index) {
       return ocrLineNoPaymentId_.get(index);
@@ -7157,12 +7592,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineFiPaymentIdList() {
       return ocrLineFiPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList() {
       return ocrLineFiPaymentId_;
@@ -7170,18 +7607,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
      */
+    @java.lang.Override
     public int getOcrLineFiPaymentIdCount() {
       return ocrLineFiPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index) {
       return ocrLineFiPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index) {
       return ocrLineFiPaymentId_.get(index);
@@ -7192,12 +7632,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNlPaymentIdList() {
       return ocrLineNlPaymentId_;
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList() {
       return ocrLineNlPaymentId_;
@@ -7205,18 +7647,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
      */
+    @java.lang.Override
     public int getOcrLineNlPaymentIdCount() {
       return ocrLineNlPaymentId_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index) {
       return ocrLineNlPaymentId_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index) {
       return ocrLineNlPaymentId_.get(index);
@@ -7227,12 +7672,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
       return iban_;
     }
     /**
      * <code>repeated .ssn.type.Candidate iban = 22;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getIbanOrBuilderList() {
       return iban_;
@@ -7240,18 +7687,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.Candidate iban = 22;</code>
      */
+    @java.lang.Override
     public int getIbanCount() {
       return iban_.size();
     }
     /**
      * <code>repeated .ssn.type.Candidate iban = 22;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
       return iban_.get(index);
     }
     /**
      * <code>repeated .ssn.type.Candidate iban = 22;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
         int index) {
       return iban_.get(index);
@@ -7262,12 +7712,14 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
       return lines_;
     }
     /**
      * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
         getLinesOrBuilderList() {
       return lines_;
@@ -7275,18 +7727,21 @@ public final class MlServiceProtos {
     /**
      * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
      */
+    @java.lang.Override
     public int getLinesCount() {
       return lines_.size();
     }
     /**
      * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
       return lines_.get(index);
     }
     /**
      * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
      */
+    @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
         int index) {
       return lines_.get(index);
@@ -7491,55 +7946,54 @@ public final class MlServiceProtos {
       }
       ssn.mlservice.v2.MlServiceProtos.PredictResponse other = (ssn.mlservice.v2.MlServiceProtos.PredictResponse) obj;
 
-      boolean result = true;
-      result = result && getOrderDateList()
-          .equals(other.getOrderDateList());
-      result = result && getPaymentDueDateList()
-          .equals(other.getPaymentDueDateList());
-      result = result && getCurrencyList()
-          .equals(other.getCurrencyList());
-      result = result && getTotalVatList()
-          .equals(other.getTotalVatList());
-      result = result && getTotalInclVatList()
-          .equals(other.getTotalInclVatList());
-      result = result && getTotalExclVatList()
-          .equals(other.getTotalExclVatList());
-      result = result && getSupplierCorporateIdList()
-          .equals(other.getSupplierCorporateIdList());
-      result = result && getSupplierCountryCodeList()
-          .equals(other.getSupplierCountryCodeList());
-      result = result && getDocumentTypeList()
-          .equals(other.getDocumentTypeList());
-      result = result && getPaymentMethodList()
-          .equals(other.getPaymentMethodList());
-      result = result && getCreditCardNumberList()
-          .equals(other.getCreditCardNumberList());
-      result = result && getInvoiceNumberList()
-          .equals(other.getInvoiceNumberList());
-      result = result && getOcrLineDkTypeList()
-          .equals(other.getOcrLineDkTypeList());
-      result = result && getOcrLineDkPaymentIdList()
-          .equals(other.getOcrLineDkPaymentIdList());
-      result = result && getOcrLineDkCreditorIdList()
-          .equals(other.getOcrLineDkCreditorIdList());
-      result = result && getOcrLineSePaymentIdList()
-          .equals(other.getOcrLineSePaymentIdList());
-      result = result && getOcrLineSeBankgiroCreditorIdList()
-          .equals(other.getOcrLineSeBankgiroCreditorIdList());
-      result = result && getOcrLineSePlusgiroCreditorIdList()
-          .equals(other.getOcrLineSePlusgiroCreditorIdList());
-      result = result && getOcrLineNoPaymentIdList()
-          .equals(other.getOcrLineNoPaymentIdList());
-      result = result && getOcrLineFiPaymentIdList()
-          .equals(other.getOcrLineFiPaymentIdList());
-      result = result && getOcrLineNlPaymentIdList()
-          .equals(other.getOcrLineNlPaymentIdList());
-      result = result && getIbanList()
-          .equals(other.getIbanList());
-      result = result && getLinesList()
-          .equals(other.getLinesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOrderDateList()
+          .equals(other.getOrderDateList())) return false;
+      if (!getPaymentDueDateList()
+          .equals(other.getPaymentDueDateList())) return false;
+      if (!getCurrencyList()
+          .equals(other.getCurrencyList())) return false;
+      if (!getTotalVatList()
+          .equals(other.getTotalVatList())) return false;
+      if (!getTotalInclVatList()
+          .equals(other.getTotalInclVatList())) return false;
+      if (!getTotalExclVatList()
+          .equals(other.getTotalExclVatList())) return false;
+      if (!getSupplierCorporateIdList()
+          .equals(other.getSupplierCorporateIdList())) return false;
+      if (!getSupplierCountryCodeList()
+          .equals(other.getSupplierCountryCodeList())) return false;
+      if (!getDocumentTypeList()
+          .equals(other.getDocumentTypeList())) return false;
+      if (!getPaymentMethodList()
+          .equals(other.getPaymentMethodList())) return false;
+      if (!getCreditCardNumberList()
+          .equals(other.getCreditCardNumberList())) return false;
+      if (!getInvoiceNumberList()
+          .equals(other.getInvoiceNumberList())) return false;
+      if (!getOcrLineDkTypeList()
+          .equals(other.getOcrLineDkTypeList())) return false;
+      if (!getOcrLineDkPaymentIdList()
+          .equals(other.getOcrLineDkPaymentIdList())) return false;
+      if (!getOcrLineDkCreditorIdList()
+          .equals(other.getOcrLineDkCreditorIdList())) return false;
+      if (!getOcrLineSePaymentIdList()
+          .equals(other.getOcrLineSePaymentIdList())) return false;
+      if (!getOcrLineSeBankgiroCreditorIdList()
+          .equals(other.getOcrLineSeBankgiroCreditorIdList())) return false;
+      if (!getOcrLineSePlusgiroCreditorIdList()
+          .equals(other.getOcrLineSePlusgiroCreditorIdList())) return false;
+      if (!getOcrLineNoPaymentIdList()
+          .equals(other.getOcrLineNoPaymentIdList())) return false;
+      if (!getOcrLineFiPaymentIdList()
+          .equals(other.getOcrLineFiPaymentIdList())) return false;
+      if (!getOcrLineNlPaymentIdList()
+          .equals(other.getOcrLineNlPaymentIdList())) return false;
+      if (!getIbanList()
+          .equals(other.getIbanList())) return false;
+      if (!getLinesList()
+          .equals(other.getLinesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7967,7 +8421,7 @@ public final class MlServiceProtos {
         ssn.mlservice.v2.MlServiceProtos.PredictResponse result = new ssn.mlservice.v2.MlServiceProtos.PredictResponse(this);
         int from_bitField0_ = bitField0_;
         if (orderDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -7976,7 +8430,7 @@ public final class MlServiceProtos {
           result.orderDate_ = orderDateBuilder_.build();
         }
         if (paymentDueDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -7985,7 +8439,7 @@ public final class MlServiceProtos {
           result.paymentDueDate_ = paymentDueDateBuilder_.build();
         }
         if (currencyBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             currency_ = java.util.Collections.unmodifiableList(currency_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -7994,7 +8448,7 @@ public final class MlServiceProtos {
           result.currency_ = currencyBuilder_.build();
         }
         if (totalVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -8003,7 +8457,7 @@ public final class MlServiceProtos {
           result.totalVat_ = totalVatBuilder_.build();
         }
         if (totalInclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -8012,7 +8466,7 @@ public final class MlServiceProtos {
           result.totalInclVat_ = totalInclVatBuilder_.build();
         }
         if (totalExclVatBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -8021,7 +8475,7 @@ public final class MlServiceProtos {
           result.totalExclVat_ = totalExclVatBuilder_.build();
         }
         if (supplierCorporateIdBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -8030,7 +8484,7 @@ public final class MlServiceProtos {
           result.supplierCorporateId_ = supplierCorporateIdBuilder_.build();
         }
         if (supplierCountryCodeBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -8039,7 +8493,7 @@ public final class MlServiceProtos {
           result.supplierCountryCode_ = supplierCountryCodeBuilder_.build();
         }
         if (documentTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             documentType_ = java.util.Collections.unmodifiableList(documentType_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -8048,7 +8502,7 @@ public final class MlServiceProtos {
           result.documentType_ = documentTypeBuilder_.build();
         }
         if (paymentMethodBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
             bitField0_ = (bitField0_ & ~0x00000200);
           }
@@ -8057,7 +8511,7 @@ public final class MlServiceProtos {
           result.paymentMethod_ = paymentMethodBuilder_.build();
         }
         if (creditCardNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             creditCardNumber_ = java.util.Collections.unmodifiableList(creditCardNumber_);
             bitField0_ = (bitField0_ & ~0x00000400);
           }
@@ -8066,7 +8520,7 @@ public final class MlServiceProtos {
           result.creditCardNumber_ = creditCardNumberBuilder_.build();
         }
         if (invoiceNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00000800) != 0)) {
             invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
             bitField0_ = (bitField0_ & ~0x00000800);
           }
@@ -8075,7 +8529,7 @@ public final class MlServiceProtos {
           result.invoiceNumber_ = invoiceNumberBuilder_.build();
         }
         if (ocrLineDkTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          if (((bitField0_ & 0x00001000) != 0)) {
             ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
             bitField0_ = (bitField0_ & ~0x00001000);
           }
@@ -8084,7 +8538,7 @@ public final class MlServiceProtos {
           result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
         }
         if (ocrLineDkPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
             bitField0_ = (bitField0_ & ~0x00002000);
           }
@@ -8093,7 +8547,7 @@ public final class MlServiceProtos {
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
         }
         if (ocrLineDkCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          if (((bitField0_ & 0x00004000) != 0)) {
             ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
             bitField0_ = (bitField0_ & ~0x00004000);
           }
@@ -8102,7 +8556,7 @@ public final class MlServiceProtos {
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
         }
         if (ocrLineSePaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
             bitField0_ = (bitField0_ & ~0x00008000);
           }
@@ -8111,7 +8565,7 @@ public final class MlServiceProtos {
           result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
         }
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          if (((bitField0_ & 0x00010000) != 0)) {
             ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00010000);
           }
@@ -8120,7 +8574,7 @@ public final class MlServiceProtos {
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
         }
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
             bitField0_ = (bitField0_ & ~0x00020000);
           }
@@ -8129,7 +8583,7 @@ public final class MlServiceProtos {
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
         }
         if (ocrLineNoPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
             bitField0_ = (bitField0_ & ~0x00040000);
           }
@@ -8138,7 +8592,7 @@ public final class MlServiceProtos {
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
         }
         if (ocrLineFiPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+          if (((bitField0_ & 0x00080000) != 0)) {
             ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
             bitField0_ = (bitField0_ & ~0x00080000);
           }
@@ -8147,7 +8601,7 @@ public final class MlServiceProtos {
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
         }
         if (ocrLineNlPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          if (((bitField0_ & 0x00100000) != 0)) {
             ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
             bitField0_ = (bitField0_ & ~0x00100000);
           }
@@ -8156,7 +8610,7 @@ public final class MlServiceProtos {
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
         }
         if (ibanBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          if (((bitField0_ & 0x00200000) != 0)) {
             iban_ = java.util.Collections.unmodifiableList(iban_);
             bitField0_ = (bitField0_ & ~0x00200000);
           }
@@ -8165,7 +8619,7 @@ public final class MlServiceProtos {
           result.iban_ = ibanBuilder_.build();
         }
         if (linesBuilder_ == null) {
-          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+          if (((bitField0_ & 0x00400000) != 0)) {
             lines_ = java.util.Collections.unmodifiableList(lines_);
             bitField0_ = (bitField0_ & ~0x00400000);
           }
@@ -8179,35 +8633,35 @@ public final class MlServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8852,7 +9306,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderDate_ =
         java.util.Collections.emptyList();
       private void ensureOrderDateIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           orderDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(orderDate_);
           bitField0_ |= 0x00000001;
          }
@@ -9081,7 +9535,7 @@ public final class MlServiceProtos {
           orderDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   orderDate_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           orderDate_ = null;
@@ -9092,7 +9546,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentDueDate_ =
         java.util.Collections.emptyList();
       private void ensurePaymentDueDateIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           paymentDueDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(paymentDueDate_);
           bitField0_ |= 0x00000002;
          }
@@ -9321,7 +9775,7 @@ public final class MlServiceProtos {
           paymentDueDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   paymentDueDate_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           paymentDueDate_ = null;
@@ -9332,7 +9786,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> currency_ =
         java.util.Collections.emptyList();
       private void ensureCurrencyIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           currency_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(currency_);
           bitField0_ |= 0x00000004;
          }
@@ -9561,7 +10015,7 @@ public final class MlServiceProtos {
           currencyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   currency_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           currency_ = null;
@@ -9572,7 +10026,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalVatIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           totalVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(totalVat_);
           bitField0_ |= 0x00000008;
          }
@@ -9801,7 +10255,7 @@ public final class MlServiceProtos {
           totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   totalVat_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           totalVat_ = null;
@@ -9812,7 +10266,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalInclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalInclVatIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           totalInclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(totalInclVat_);
           bitField0_ |= 0x00000010;
          }
@@ -10041,7 +10495,7 @@ public final class MlServiceProtos {
           totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   totalInclVat_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           totalInclVat_ = null;
@@ -10052,7 +10506,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalExclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalExclVatIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           totalExclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(totalExclVat_);
           bitField0_ |= 0x00000020;
          }
@@ -10281,7 +10735,7 @@ public final class MlServiceProtos {
           totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   totalExclVat_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           totalExclVat_ = null;
@@ -10292,7 +10746,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCorporateId_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCorporateIdIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           supplierCorporateId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierCorporateId_);
           bitField0_ |= 0x00000040;
          }
@@ -10521,7 +10975,7 @@ public final class MlServiceProtos {
           supplierCorporateIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierCorporateId_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCorporateId_ = null;
@@ -10532,7 +10986,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCountryCode_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCountryCodeIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           supplierCountryCode_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierCountryCode_);
           bitField0_ |= 0x00000080;
          }
@@ -10761,7 +11215,7 @@ public final class MlServiceProtos {
           supplierCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierCountryCode_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           supplierCountryCode_ = null;
@@ -10772,7 +11226,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentType_ =
         java.util.Collections.emptyList();
       private void ensureDocumentTypeIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           documentType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(documentType_);
           bitField0_ |= 0x00000100;
          }
@@ -11001,7 +11455,7 @@ public final class MlServiceProtos {
           documentTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   documentType_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           documentType_ = null;
@@ -11012,7 +11466,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentMethod_ =
         java.util.Collections.emptyList();
       private void ensurePaymentMethodIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           paymentMethod_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(paymentMethod_);
           bitField0_ |= 0x00000200;
          }
@@ -11241,7 +11695,7 @@ public final class MlServiceProtos {
           paymentMethodBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   paymentMethod_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           paymentMethod_ = null;
@@ -11252,7 +11706,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardNumber_ =
         java.util.Collections.emptyList();
       private void ensureCreditCardNumberIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           creditCardNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(creditCardNumber_);
           bitField0_ |= 0x00000400;
          }
@@ -11481,7 +11935,7 @@ public final class MlServiceProtos {
           creditCardNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   creditCardNumber_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           creditCardNumber_ = null;
@@ -11492,7 +11946,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> invoiceNumber_ =
         java.util.Collections.emptyList();
       private void ensureInvoiceNumberIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000800) != 0)) {
           invoiceNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(invoiceNumber_);
           bitField0_ |= 0x00000800;
          }
@@ -11721,7 +12175,7 @@ public final class MlServiceProtos {
           invoiceNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   invoiceNumber_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00000800) != 0),
                   getParentForChildren(),
                   isClean());
           invoiceNumber_ = null;
@@ -11732,7 +12186,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkType_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkTypeIsMutable() {
-        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkType_);
           bitField0_ |= 0x00001000;
          }
@@ -11961,7 +12415,7 @@ public final class MlServiceProtos {
           ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkType_,
-                  ((bitField0_ & 0x00001000) == 0x00001000),
+                  ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkType_ = null;
@@ -11972,7 +12426,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkPaymentId_);
           bitField0_ |= 0x00002000;
          }
@@ -12201,7 +12655,7 @@ public final class MlServiceProtos {
           ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkPaymentId_,
-                  ((bitField0_ & 0x00002000) == 0x00002000),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkPaymentId_ = null;
@@ -12212,7 +12666,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00004000) != 0)) {
           ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkCreditorId_);
           bitField0_ |= 0x00004000;
          }
@@ -12441,7 +12895,7 @@ public final class MlServiceProtos {
           ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkCreditorId_,
-                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  ((bitField0_ & 0x00004000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkCreditorId_ = null;
@@ -12452,7 +12906,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSePaymentId_);
           bitField0_ |= 0x00008000;
          }
@@ -12681,7 +13135,7 @@ public final class MlServiceProtos {
           ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSePaymentId_,
-                  ((bitField0_ & 0x00008000) == 0x00008000),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePaymentId_ = null;
@@ -12692,7 +13146,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSeBankgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSeBankgiroCreditorId_);
           bitField0_ |= 0x00010000;
          }
@@ -12921,7 +13375,7 @@ public final class MlServiceProtos {
           ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSeBankgiroCreditorId_,
-                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSeBankgiroCreditorId_ = null;
@@ -12932,7 +13386,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePlusgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSePlusgiroCreditorId_);
           bitField0_ |= 0x00020000;
          }
@@ -13161,7 +13615,7 @@ public final class MlServiceProtos {
           ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSePlusgiroCreditorId_,
-                  ((bitField0_ & 0x00020000) == 0x00020000),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePlusgiroCreditorId_ = null;
@@ -13172,7 +13626,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNoPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNoPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineNoPaymentId_);
           bitField0_ |= 0x00040000;
          }
@@ -13401,7 +13855,7 @@ public final class MlServiceProtos {
           ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineNoPaymentId_,
-                  ((bitField0_ & 0x00040000) == 0x00040000),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNoPaymentId_ = null;
@@ -13412,7 +13866,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineFiPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineFiPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (!((bitField0_ & 0x00080000) != 0)) {
           ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineFiPaymentId_);
           bitField0_ |= 0x00080000;
          }
@@ -13641,7 +14095,7 @@ public final class MlServiceProtos {
           ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineFiPaymentId_,
-                  ((bitField0_ & 0x00080000) == 0x00080000),
+                  ((bitField0_ & 0x00080000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineFiPaymentId_ = null;
@@ -13652,7 +14106,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNlPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNlPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (!((bitField0_ & 0x00100000) != 0)) {
           ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineNlPaymentId_);
           bitField0_ |= 0x00100000;
          }
@@ -13881,7 +14335,7 @@ public final class MlServiceProtos {
           ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineNlPaymentId_,
-                  ((bitField0_ & 0x00100000) == 0x00100000),
+                  ((bitField0_ & 0x00100000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNlPaymentId_ = null;
@@ -13892,7 +14346,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_ =
         java.util.Collections.emptyList();
       private void ensureIbanIsMutable() {
-        if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (!((bitField0_ & 0x00200000) != 0)) {
           iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(iban_);
           bitField0_ |= 0x00200000;
          }
@@ -14121,7 +14575,7 @@ public final class MlServiceProtos {
           ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   iban_,
-                  ((bitField0_ & 0x00200000) == 0x00200000),
+                  ((bitField0_ & 0x00200000) != 0),
                   getParentForChildren(),
                   isClean());
           iban_ = null;
@@ -14132,7 +14586,7 @@ public final class MlServiceProtos {
       private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_ =
         java.util.Collections.emptyList();
       private void ensureLinesIsMutable() {
-        if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+        if (!((bitField0_ & 0x00400000) != 0)) {
           lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>(lines_);
           bitField0_ |= 0x00400000;
          }
@@ -14361,7 +14815,7 @@ public final class MlServiceProtos {
           linesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder>(
                   lines_,
-                  ((bitField0_ & 0x00400000) == 0x00400000),
+                  ((bitField0_ & 0x00400000) != 0),
                   getParentForChildren(),
                   isClean());
           lines_ = null;
@@ -14371,7 +14825,7 @@ public final class MlServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14427,10 +14881,12 @@ public final class MlServiceProtos {
 
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * @return Whether the featureGenRequest field is set.
      */
     boolean hasFeatureGenRequest();
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * @return The featureGenRequest.
      */
     ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest getFeatureGenRequest();
     /**
@@ -14440,10 +14896,12 @@ public final class MlServiceProtos {
 
     /**
      * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * @return Whether the predictRequest field is set.
      */
     boolean hasPredictRequest();
     /**
      * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * @return The predictRequest.
      */
     ssn.mlservice.v2.MlServiceProtos.PredictRequest getPredictRequest();
     /**
@@ -14454,7 +14912,7 @@ public final class MlServiceProtos {
   /**
    * Protobuf type {@code ssn.mlservice.v2.FeatureGenPredictRequest}
    */
-  public  static final class FeatureGenPredictRequest extends
+  public static final class FeatureGenPredictRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.FeatureGenPredictRequest)
       FeatureGenPredictRequestOrBuilder {
@@ -14464,6 +14922,13 @@ public final class MlServiceProtos {
       super(builder);
     }
     private FeatureGenPredictRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeatureGenPredictRequest();
     }
 
     @java.lang.Override
@@ -14479,7 +14944,6 @@ public final class MlServiceProtos {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14517,7 +14981,7 @@ public final class MlServiceProtos {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14552,19 +15016,24 @@ public final class MlServiceProtos {
     private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest featureGenRequest_;
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * @return Whether the featureGenRequest field is set.
      */
+    @java.lang.Override
     public boolean hasFeatureGenRequest() {
       return featureGenRequest_ != null;
     }
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * @return The featureGenRequest.
      */
+    @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest getFeatureGenRequest() {
       return featureGenRequest_ == null ? ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.getDefaultInstance() : featureGenRequest_;
     }
     /**
      * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
      */
+    @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder getFeatureGenRequestOrBuilder() {
       return getFeatureGenRequest();
     }
@@ -14573,19 +15042,24 @@ public final class MlServiceProtos {
     private ssn.mlservice.v2.MlServiceProtos.PredictRequest predictRequest_;
     /**
      * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * @return Whether the predictRequest field is set.
      */
+    @java.lang.Override
     public boolean hasPredictRequest() {
       return predictRequest_ != null;
     }
     /**
      * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * @return The predictRequest.
      */
+    @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.PredictRequest getPredictRequest() {
       return predictRequest_ == null ? ssn.mlservice.v2.MlServiceProtos.PredictRequest.getDefaultInstance() : predictRequest_;
     }
     /**
      * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
      */
+    @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder getPredictRequestOrBuilder() {
       return getPredictRequest();
     }
@@ -14642,19 +15116,18 @@ public final class MlServiceProtos {
       }
       ssn.mlservice.v2.MlServiceProtos.FeatureGenPredictRequest other = (ssn.mlservice.v2.MlServiceProtos.FeatureGenPredictRequest) obj;
 
-      boolean result = true;
-      result = result && (hasFeatureGenRequest() == other.hasFeatureGenRequest());
+      if (hasFeatureGenRequest() != other.hasFeatureGenRequest()) return false;
       if (hasFeatureGenRequest()) {
-        result = result && getFeatureGenRequest()
-            .equals(other.getFeatureGenRequest());
+        if (!getFeatureGenRequest()
+            .equals(other.getFeatureGenRequest())) return false;
       }
-      result = result && (hasPredictRequest() == other.hasPredictRequest());
+      if (hasPredictRequest() != other.hasPredictRequest()) return false;
       if (hasPredictRequest()) {
-        result = result && getPredictRequest()
-            .equals(other.getPredictRequest());
+        if (!getPredictRequest()
+            .equals(other.getPredictRequest())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14859,35 +15332,35 @@ public final class MlServiceProtos {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14936,17 +15409,19 @@ public final class MlServiceProtos {
         return this;
       }
 
-      private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest featureGenRequest_ = null;
+      private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest featureGenRequest_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.Builder, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder> featureGenRequestBuilder_;
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * @return Whether the featureGenRequest field is set.
        */
       public boolean hasFeatureGenRequest() {
         return featureGenRequestBuilder_ != null || featureGenRequest_ != null;
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * @return The featureGenRequest.
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest getFeatureGenRequest() {
         if (featureGenRequestBuilder_ == null) {
@@ -15053,17 +15528,19 @@ public final class MlServiceProtos {
         return featureGenRequestBuilder_;
       }
 
-      private ssn.mlservice.v2.MlServiceProtos.PredictRequest predictRequest_ = null;
+      private ssn.mlservice.v2.MlServiceProtos.PredictRequest predictRequest_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.PredictRequest, ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder, ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder> predictRequestBuilder_;
       /**
        * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * @return Whether the predictRequest field is set.
        */
       public boolean hasPredictRequest() {
         return predictRequestBuilder_ != null || predictRequest_ != null;
       }
       /**
        * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * @return The predictRequest.
        */
       public ssn.mlservice.v2.MlServiceProtos.PredictRequest getPredictRequest() {
         if (predictRequestBuilder_ == null) {
@@ -15172,7 +15649,7 @@ public final class MlServiceProtos {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15332,22 +15809,14 @@ public final class MlServiceProtos {
       "rotosZ>github.com/e-conomic/vmlapis/gen/" +
       "go/ssn/mlservice/v2;mlserviceb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.type.DateProto.getDescriptor(),
           ssn.type.CandidateOuterClass.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
           org.tensorflow.example.ExampleProtos.getDescriptor(),
-        }, assigner);
+        });
     internal_static_ssn_mlservice_v2_FeatureGenRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_mlservice_v2_FeatureGenRequest_fieldAccessorTable = new

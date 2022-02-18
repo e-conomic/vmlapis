@@ -20,10 +20,12 @@ public final class ExampleOuterClass {
 
     /**
      * <code>.asgt.v2.type.Data data = 1;</code>
+     * @return Whether the data field is set.
      */
     boolean hasData();
     /**
      * <code>.asgt.v2.type.Data data = 1;</code>
+     * @return The data.
      */
     asgt.v2.type.DataOuterClass.Data getData();
     /**
@@ -61,6 +63,7 @@ public final class ExampleOuterClass {
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -69,6 +72,7 @@ public final class ExampleOuterClass {
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -80,7 +84,7 @@ public final class ExampleOuterClass {
    *
    * Protobuf type {@code asgt.v2.type.Example}
    */
-  public  static final class Example extends
+  public static final class Example extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.v2.type.Example)
       ExampleOrBuilder {
@@ -92,6 +96,13 @@ public final class ExampleOuterClass {
     private Example() {
       targetValues_ = java.util.Collections.emptyList();
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Example();
     }
 
     @java.lang.Override
@@ -132,9 +143,9 @@ public final class ExampleOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 targetValues_ = new java.util.ArrayList<asgt.v2.type.TargetValueOuterClass.TargetValue>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               targetValues_.add(
                   input.readMessage(asgt.v2.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
@@ -147,7 +158,7 @@ public final class ExampleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -161,7 +172,7 @@ public final class ExampleOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
         }
         this.unknownFields = unknownFields.build();
@@ -181,24 +192,28 @@ public final class ExampleOuterClass {
               asgt.v2.type.ExampleOuterClass.Example.class, asgt.v2.type.ExampleOuterClass.Example.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATA_FIELD_NUMBER = 1;
     private asgt.v2.type.DataOuterClass.Data data_;
     /**
      * <code>.asgt.v2.type.Data data = 1;</code>
+     * @return Whether the data field is set.
      */
+    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
     /**
      * <code>.asgt.v2.type.Data data = 1;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.Data getData() {
       return data_ == null ? asgt.v2.type.DataOuterClass.Data.getDefaultInstance() : data_;
     }
     /**
      * <code>.asgt.v2.type.Data data = 1;</code>
      */
+    @java.lang.Override
     public asgt.v2.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -208,12 +223,14 @@ public final class ExampleOuterClass {
     /**
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<asgt.v2.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
       return targetValues_;
     }
     /**
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<? extends asgt.v2.type.TargetValueOuterClass.TargetValueOrBuilder> 
         getTargetValuesOrBuilderList() {
       return targetValues_;
@@ -221,18 +238,21 @@ public final class ExampleOuterClass {
     /**
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
+    @java.lang.Override
     public int getTargetValuesCount() {
       return targetValues_.size();
     }
     /**
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
+    @java.lang.Override
     public asgt.v2.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
       return targetValues_.get(index);
     }
     /**
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
+    @java.lang.Override
     public asgt.v2.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index) {
       return targetValues_.get(index);
@@ -246,7 +266,9 @@ public final class ExampleOuterClass {
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -265,7 +287,9 @@ public final class ExampleOuterClass {
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -338,18 +362,17 @@ public final class ExampleOuterClass {
       }
       asgt.v2.type.ExampleOuterClass.Example other = (asgt.v2.type.ExampleOuterClass.Example) obj;
 
-      boolean result = true;
-      result = result && (hasData() == other.hasData());
+      if (hasData() != other.hasData()) return false;
       if (hasData()) {
-        result = result && getData()
-            .equals(other.getData());
+        if (!getData()
+            .equals(other.getData())) return false;
       }
-      result = result && getTargetValuesList()
-          .equals(other.getTargetValuesList());
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTargetValuesList()
+          .equals(other.getTargetValuesList())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -515,7 +538,7 @@ public final class ExampleOuterClass {
         }
         if (targetValuesBuilder_ == null) {
           targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           targetValuesBuilder_.clear();
         }
@@ -548,58 +571,56 @@ public final class ExampleOuterClass {
       public asgt.v2.type.ExampleOuterClass.Example buildPartial() {
         asgt.v2.type.ExampleOuterClass.Example result = new asgt.v2.type.ExampleOuterClass.Example(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (dataBuilder_ == null) {
           result.data_ = data_;
         } else {
           result.data_ = dataBuilder_.build();
         }
         if (targetValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.targetValues_ = targetValues_;
         } else {
           result.targetValues_ = targetValuesBuilder_.build();
         }
         result.id_ = id_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -620,7 +641,7 @@ public final class ExampleOuterClass {
           if (!other.targetValues_.isEmpty()) {
             if (targetValues_.isEmpty()) {
               targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureTargetValuesIsMutable();
               targetValues_.addAll(other.targetValues_);
@@ -633,7 +654,7 @@ public final class ExampleOuterClass {
               targetValuesBuilder_.dispose();
               targetValuesBuilder_ = null;
               targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               targetValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTargetValuesFieldBuilder() : null;
@@ -676,17 +697,19 @@ public final class ExampleOuterClass {
       }
       private int bitField0_;
 
-      private asgt.v2.type.DataOuterClass.Data data_ = null;
+      private asgt.v2.type.DataOuterClass.Data data_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Data, asgt.v2.type.DataOuterClass.Data.Builder, asgt.v2.type.DataOuterClass.DataOrBuilder> dataBuilder_;
       /**
        * <code>.asgt.v2.type.Data data = 1;</code>
+       * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
       }
       /**
        * <code>.asgt.v2.type.Data data = 1;</code>
+       * @return The data.
        */
       public asgt.v2.type.DataOuterClass.Data getData() {
         if (dataBuilder_ == null) {
@@ -796,9 +819,9 @@ public final class ExampleOuterClass {
       private java.util.List<asgt.v2.type.TargetValueOuterClass.TargetValue> targetValues_ =
         java.util.Collections.emptyList();
       private void ensureTargetValuesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           targetValues_ = new java.util.ArrayList<asgt.v2.type.TargetValueOuterClass.TargetValue>(targetValues_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -948,7 +971,7 @@ public final class ExampleOuterClass {
       public Builder clearTargetValues() {
         if (targetValuesBuilder_ == null) {
           targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           targetValuesBuilder_.clear();
@@ -1025,7 +1048,7 @@ public final class ExampleOuterClass {
           targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.v2.type.TargetValueOuterClass.TargetValue, asgt.v2.type.TargetValueOuterClass.TargetValue.Builder, asgt.v2.type.TargetValueOuterClass.TargetValueOrBuilder>(
                   targetValues_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           targetValues_ = null;
@@ -1040,6 +1063,7 @@ public final class ExampleOuterClass {
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1059,6 +1083,7 @@ public final class ExampleOuterClass {
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1079,6 +1104,8 @@ public final class ExampleOuterClass {
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1096,6 +1123,7 @@ public final class ExampleOuterClass {
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1109,6 +1137,8 @@ public final class ExampleOuterClass {
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1124,7 +1154,7 @@ public final class ExampleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1198,21 +1228,13 @@ public final class ExampleOuterClass {
       "ic/vmlapis/gen/go/asgt/v2/type;asgttypeb" +
       "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.v2.type.DataOuterClass.getDescriptor(),
           asgt.v2.type.TargetValueOuterClass.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
-        }, assigner);
+        });
     internal_static_asgt_v2_type_Example_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_v2_type_Example_fieldAccessorTable = new

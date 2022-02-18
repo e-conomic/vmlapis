@@ -37,15 +37,19 @@ namespace Asgt.Type {
             "by9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size", "TruncatedAt" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size", "TruncatedAt" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class Dataset : pb::IMessage<Dataset> {
+  public sealed partial class Dataset : pb::IMessage<Dataset>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Dataset> _parser = new pb::MessageParser<Dataset>(() => new Dataset());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -343,19 +347,19 @@ namespace Asgt.Type {
       targets_.Add(other.targets_);
       if (other.retentionPolicy_ != null) {
         if (retentionPolicy_ == null) {
-          retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+          RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
         }
         RetentionPolicy.MergeFrom(other.RetentionPolicy);
       }
       if (other.createdAt_ != null) {
         if (createdAt_ == null) {
-          createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreatedAt.MergeFrom(other.CreatedAt);
       }
       if (other.updatedAt_ != null) {
         if (updatedAt_ == null) {
-          updatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdatedAt.MergeFrom(other.UpdatedAt);
       }
@@ -364,7 +368,7 @@ namespace Asgt.Type {
       }
       if (other.truncatedAt_ != null) {
         if (truncatedAt_ == null) {
-          truncatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         TruncatedAt.MergeFrom(other.TruncatedAt);
       }
@@ -373,6 +377,9 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -401,23 +408,23 @@ namespace Asgt.Type {
           }
           case 74: {
             if (retentionPolicy_ == null) {
-              retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+              RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
             }
-            input.ReadMessage(retentionPolicy_);
+            input.ReadMessage(RetentionPolicy);
             break;
           }
           case 82: {
             if (createdAt_ == null) {
-              createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createdAt_);
+            input.ReadMessage(CreatedAt);
             break;
           }
           case 90: {
             if (updatedAt_ == null) {
-              updatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updatedAt_);
+            input.ReadMessage(UpdatedAt);
             break;
           }
           case 96: {
@@ -426,14 +433,81 @@ namespace Asgt.Type {
           }
           case 106: {
             if (truncatedAt_ == null) {
-              truncatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(truncatedAt_);
+            input.ReadMessage(TruncatedAt);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Type = input.ReadString();
+            break;
+          }
+          case 34: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 42: {
+            targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
+            break;
+          }
+          case 74: {
+            if (retentionPolicy_ == null) {
+              RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
+            }
+            input.ReadMessage(RetentionPolicy);
+            break;
+          }
+          case 82: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 90: {
+            if (updatedAt_ == null) {
+              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdatedAt);
+            break;
+          }
+          case 96: {
+            Size = input.ReadInt64();
+            break;
+          }
+          case 106: {
+            if (truncatedAt_ == null) {
+              TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(TruncatedAt);
             break;
           }
         }
       }
     }
+    #endif
 
   }
 
