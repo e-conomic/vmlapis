@@ -50,7 +50,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.asgt.type.TargetStats = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.type.TargetStats.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.type.TargetStats, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -92,7 +92,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.asgt.type.FeatureStats = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.type.FeatureStats.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.type.FeatureStats, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -155,8 +155,9 @@ proto.asgt.type.TargetStat.prototype.toObject = function(opt_includeInstance) {
  */
 proto.asgt.type.TargetStat.toObject = function(includeInstance, msg) {
   var f, obj = {
-    relativeDatasetProportion: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
-    absoluteDatasetProportion: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    className: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    relativeDatasetProportion: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+    absoluteDatasetProportion: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -194,10 +195,14 @@ proto.asgt.type.TargetStat.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setClassName(value);
+      break;
+    case 2:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setRelativeDatasetProportion(value);
       break;
-    case 2:
+    case 3:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setAbsoluteDatasetProportion(value);
       break;
@@ -230,17 +235,24 @@ proto.asgt.type.TargetStat.prototype.serializeBinary = function() {
  */
 proto.asgt.type.TargetStat.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getClassName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
   f = message.getRelativeDatasetProportion();
   if (f !== 0.0) {
     writer.writeFloat(
-      1,
+      2,
       f
     );
   }
   f = message.getAbsoluteDatasetProportion();
   if (f !== 0) {
     writer.writeInt32(
-      2,
+      3,
       f
     );
   }
@@ -248,11 +260,29 @@ proto.asgt.type.TargetStat.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional float relative_dataset_proportion = 1;
+ * optional string class_name = 1;
+ * @return {string}
+ */
+proto.asgt.type.TargetStat.prototype.getClassName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.asgt.type.TargetStat} returns this
+ */
+proto.asgt.type.TargetStat.prototype.setClassName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional float relative_dataset_proportion = 2;
  * @return {number}
  */
 proto.asgt.type.TargetStat.prototype.getRelativeDatasetProportion = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
 };
 
 
@@ -261,16 +291,16 @@ proto.asgt.type.TargetStat.prototype.getRelativeDatasetProportion = function() {
  * @return {!proto.asgt.type.TargetStat} returns this
  */
 proto.asgt.type.TargetStat.prototype.setRelativeDatasetProportion = function(value) {
-  return jspb.Message.setProto3FloatField(this, 1, value);
+  return jspb.Message.setProto3FloatField(this, 2, value);
 };
 
 
 /**
- * optional int32 absolute_dataset_proportion = 2;
+ * optional int32 absolute_dataset_proportion = 3;
  * @return {number}
  */
 proto.asgt.type.TargetStat.prototype.getAbsoluteDatasetProportion = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -279,10 +309,17 @@ proto.asgt.type.TargetStat.prototype.getAbsoluteDatasetProportion = function() {
  * @return {!proto.asgt.type.TargetStat} returns this
  */
 proto.asgt.type.TargetStat.prototype.setAbsoluteDatasetProportion = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.type.TargetStats.repeatedFields_ = [1];
 
 
 
@@ -315,7 +352,8 @@ proto.asgt.type.TargetStats.prototype.toObject = function(opt_includeInstance) {
  */
 proto.asgt.type.TargetStats.toObject = function(includeInstance, msg) {
   var f, obj = {
-    targetStatByClassMap: (f = msg.getTargetStatByClassMap()) ? f.toObject(includeInstance, proto.asgt.type.TargetStat.toObject) : []
+    targetStatsList: jspb.Message.toObjectList(msg.getTargetStatsList(),
+    proto.asgt.type.TargetStat.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -353,10 +391,9 @@ proto.asgt.type.TargetStats.deserializeBinaryFromReader = function(msg, reader) 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = msg.getTargetStatByClassMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.asgt.type.TargetStat.deserializeBinaryFromReader, "", new proto.asgt.type.TargetStat());
-         });
+      var value = new proto.asgt.type.TargetStat;
+      reader.readMessage(value,proto.asgt.type.TargetStat.deserializeBinaryFromReader);
+      msg.addTargetStats(value);
       break;
     default:
       reader.skipField();
@@ -387,33 +424,53 @@ proto.asgt.type.TargetStats.prototype.serializeBinary = function() {
  */
 proto.asgt.type.TargetStats.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTargetStatByClassMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.asgt.type.TargetStat.serializeBinaryToWriter);
+  f = message.getTargetStatsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.asgt.type.TargetStat.serializeBinaryToWriter
+    );
   }
 };
 
 
 /**
- * map<string, TargetStat> target_stat_by_class = 1;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.asgt.type.TargetStat>}
+ * repeated TargetStat target_stats = 1;
+ * @return {!Array<!proto.asgt.type.TargetStat>}
  */
-proto.asgt.type.TargetStats.prototype.getTargetStatByClassMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.asgt.type.TargetStat>} */ (
-      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
-      proto.asgt.type.TargetStat));
+proto.asgt.type.TargetStats.prototype.getTargetStatsList = function() {
+  return /** @type{!Array<!proto.asgt.type.TargetStat>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.type.TargetStat, 1));
 };
 
 
 /**
- * Clears values from the map. The map will be non-null.
+ * @param {!Array<!proto.asgt.type.TargetStat>} value
+ * @return {!proto.asgt.type.TargetStats} returns this
+*/
+proto.asgt.type.TargetStats.prototype.setTargetStatsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.TargetStat=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetStat}
+ */
+proto.asgt.type.TargetStats.prototype.addTargetStats = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.type.TargetStat, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.asgt.type.TargetStats} returns this
  */
-proto.asgt.type.TargetStats.prototype.clearTargetStatByClassMap = function() {
-  this.getTargetStatByClassMap().clear();
-  return this;};
+proto.asgt.type.TargetStats.prototype.clearTargetStatsList = function() {
+  return this.setTargetStatsList([]);
+};
 
 
 
@@ -448,8 +505,9 @@ proto.asgt.type.FeatureStat.prototype.toObject = function(opt_includeInstance) {
  */
 proto.asgt.type.FeatureStat.toObject = function(includeInstance, msg) {
   var f, obj = {
-    featureType: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    informationGain: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0)
+    featureName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    featureType: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    informationGain: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0)
   };
 
   if (includeInstance) {
@@ -487,10 +545,14 @@ proto.asgt.type.FeatureStat.deserializeBinaryFromReader = function(msg, reader) 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFeatureName(value);
+      break;
+    case 2:
       var value = /** @type {!proto.asgt.type.FeatureStat.Type} */ (reader.readEnum());
       msg.setFeatureType(value);
       break;
-    case 2:
+    case 3:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setInformationGain(value);
       break;
@@ -523,17 +585,24 @@ proto.asgt.type.FeatureStat.prototype.serializeBinary = function() {
  */
 proto.asgt.type.FeatureStat.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getFeatureName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
   f = message.getFeatureType();
   if (f !== 0.0) {
     writer.writeEnum(
-      1,
+      2,
       f
     );
   }
   f = message.getInformationGain();
   if (f !== 0.0) {
     writer.writeFloat(
-      2,
+      3,
       f
     );
   }
@@ -552,11 +621,29 @@ proto.asgt.type.FeatureStat.Type = {
 };
 
 /**
- * optional Type feature_type = 1;
+ * optional string feature_name = 1;
+ * @return {string}
+ */
+proto.asgt.type.FeatureStat.prototype.getFeatureName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.asgt.type.FeatureStat} returns this
+ */
+proto.asgt.type.FeatureStat.prototype.setFeatureName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional Type feature_type = 2;
  * @return {!proto.asgt.type.FeatureStat.Type}
  */
 proto.asgt.type.FeatureStat.prototype.getFeatureType = function() {
-  return /** @type {!proto.asgt.type.FeatureStat.Type} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {!proto.asgt.type.FeatureStat.Type} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -565,16 +652,16 @@ proto.asgt.type.FeatureStat.prototype.getFeatureType = function() {
  * @return {!proto.asgt.type.FeatureStat} returns this
  */
 proto.asgt.type.FeatureStat.prototype.setFeatureType = function(value) {
-  return jspb.Message.setProto3EnumField(this, 1, value);
+  return jspb.Message.setProto3EnumField(this, 2, value);
 };
 
 
 /**
- * optional float information_gain = 2;
+ * optional float information_gain = 3;
  * @return {number}
  */
 proto.asgt.type.FeatureStat.prototype.getInformationGain = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
 };
 
 
@@ -583,10 +670,17 @@ proto.asgt.type.FeatureStat.prototype.getInformationGain = function() {
  * @return {!proto.asgt.type.FeatureStat} returns this
  */
 proto.asgt.type.FeatureStat.prototype.setInformationGain = function(value) {
-  return jspb.Message.setProto3FloatField(this, 2, value);
+  return jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.type.FeatureStats.repeatedFields_ = [1];
 
 
 
@@ -619,7 +713,8 @@ proto.asgt.type.FeatureStats.prototype.toObject = function(opt_includeInstance) 
  */
 proto.asgt.type.FeatureStats.toObject = function(includeInstance, msg) {
   var f, obj = {
-    featureStatsByFeatureMap: (f = msg.getFeatureStatsByFeatureMap()) ? f.toObject(includeInstance, proto.asgt.type.FeatureStat.toObject) : []
+    featureStatsList: jspb.Message.toObjectList(msg.getFeatureStatsList(),
+    proto.asgt.type.FeatureStat.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -657,10 +752,9 @@ proto.asgt.type.FeatureStats.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = msg.getFeatureStatsByFeatureMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.asgt.type.FeatureStat.deserializeBinaryFromReader, "", new proto.asgt.type.FeatureStat());
-         });
+      var value = new proto.asgt.type.FeatureStat;
+      reader.readMessage(value,proto.asgt.type.FeatureStat.deserializeBinaryFromReader);
+      msg.addFeatureStats(value);
       break;
     default:
       reader.skipField();
@@ -691,33 +785,53 @@ proto.asgt.type.FeatureStats.prototype.serializeBinary = function() {
  */
 proto.asgt.type.FeatureStats.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFeatureStatsByFeatureMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.asgt.type.FeatureStat.serializeBinaryToWriter);
+  f = message.getFeatureStatsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.asgt.type.FeatureStat.serializeBinaryToWriter
+    );
   }
 };
 
 
 /**
- * map<string, FeatureStat> feature_stats_by_feature = 1;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.asgt.type.FeatureStat>}
+ * repeated FeatureStat feature_stats = 1;
+ * @return {!Array<!proto.asgt.type.FeatureStat>}
  */
-proto.asgt.type.FeatureStats.prototype.getFeatureStatsByFeatureMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.asgt.type.FeatureStat>} */ (
-      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
-      proto.asgt.type.FeatureStat));
+proto.asgt.type.FeatureStats.prototype.getFeatureStatsList = function() {
+  return /** @type{!Array<!proto.asgt.type.FeatureStat>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.type.FeatureStat, 1));
 };
 
 
 /**
- * Clears values from the map. The map will be non-null.
+ * @param {!Array<!proto.asgt.type.FeatureStat>} value
+ * @return {!proto.asgt.type.FeatureStats} returns this
+*/
+proto.asgt.type.FeatureStats.prototype.setFeatureStatsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.FeatureStat=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.FeatureStat}
+ */
+proto.asgt.type.FeatureStats.prototype.addFeatureStats = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.type.FeatureStat, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.asgt.type.FeatureStats} returns this
  */
-proto.asgt.type.FeatureStats.prototype.clearFeatureStatsByFeatureMap = function() {
-  this.getFeatureStatsByFeatureMap().clear();
-  return this;};
+proto.asgt.type.FeatureStats.prototype.clearFeatureStatsList = function() {
+  return this.setFeatureStatsList([]);
+};
 
 
 

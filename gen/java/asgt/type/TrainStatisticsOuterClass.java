@@ -19,7 +19,23 @@ public final class TrainStatisticsOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>float relative_dataset_proportion = 1;</code>
+     * <code>string class_name = 1;</code>
+     * @return The className.
+     */
+    java.lang.String getClassName();
+    /**
+     * <code>string class_name = 1;</code>
+     * @return The bytes for className.
+     */
+    com.google.protobuf.ByteString
+        getClassNameBytes();
+
+    /**
+     * <pre>
+     * name of the target class in a target (classification task)
+     * </pre>
+     *
+     * <code>float relative_dataset_proportion = 2;</code>
      * @return The relativeDatasetProportion.
      */
     float getRelativeDatasetProportion();
@@ -29,7 +45,7 @@ public final class TrainStatisticsOuterClass {
      * percentage of samples belonging to a single class
      * </pre>
      *
-     * <code>int32 absolute_dataset_proportion = 2;</code>
+     * <code>int32 absolute_dataset_proportion = 3;</code>
      * @return The absoluteDatasetProportion.
      */
     int getAbsoluteDatasetProportion();
@@ -47,6 +63,7 @@ public final class TrainStatisticsOuterClass {
       super(builder);
     }
     private TargetStat() {
+      className_ = "";
     }
 
     @java.lang.Override
@@ -79,12 +96,18 @@ public final class TrainStatisticsOuterClass {
             case 0:
               done = true;
               break;
-            case 13: {
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              className_ = s;
+              break;
+            }
+            case 21: {
 
               relativeDatasetProportion_ = input.readFloat();
               break;
             }
-            case 16: {
+            case 24: {
 
               absoluteDatasetProportion_ = input.readInt32();
               break;
@@ -121,10 +144,52 @@ public final class TrainStatisticsOuterClass {
               asgt.type.TrainStatisticsOuterClass.TargetStat.class, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder.class);
     }
 
-    public static final int RELATIVE_DATASET_PROPORTION_FIELD_NUMBER = 1;
+    public static final int CLASS_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object className_;
+    /**
+     * <code>string class_name = 1;</code>
+     * @return The className.
+     */
+    @java.lang.Override
+    public java.lang.String getClassName() {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        className_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_name = 1;</code>
+     * @return The bytes for className.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassNameBytes() {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        className_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RELATIVE_DATASET_PROPORTION_FIELD_NUMBER = 2;
     private float relativeDatasetProportion_;
     /**
-     * <code>float relative_dataset_proportion = 1;</code>
+     * <pre>
+     * name of the target class in a target (classification task)
+     * </pre>
+     *
+     * <code>float relative_dataset_proportion = 2;</code>
      * @return The relativeDatasetProportion.
      */
     @java.lang.Override
@@ -132,14 +197,14 @@ public final class TrainStatisticsOuterClass {
       return relativeDatasetProportion_;
     }
 
-    public static final int ABSOLUTE_DATASET_PROPORTION_FIELD_NUMBER = 2;
+    public static final int ABSOLUTE_DATASET_PROPORTION_FIELD_NUMBER = 3;
     private int absoluteDatasetProportion_;
     /**
      * <pre>
      * percentage of samples belonging to a single class
      * </pre>
      *
-     * <code>int32 absolute_dataset_proportion = 2;</code>
+     * <code>int32 absolute_dataset_proportion = 3;</code>
      * @return The absoluteDatasetProportion.
      */
     @java.lang.Override
@@ -161,11 +226,14 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getClassNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, className_);
+      }
       if (relativeDatasetProportion_ != 0F) {
-        output.writeFloat(1, relativeDatasetProportion_);
+        output.writeFloat(2, relativeDatasetProportion_);
       }
       if (absoluteDatasetProportion_ != 0) {
-        output.writeInt32(2, absoluteDatasetProportion_);
+        output.writeInt32(3, absoluteDatasetProportion_);
       }
       unknownFields.writeTo(output);
     }
@@ -176,13 +244,16 @@ public final class TrainStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!getClassNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, className_);
+      }
       if (relativeDatasetProportion_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(1, relativeDatasetProportion_);
+          .computeFloatSize(2, relativeDatasetProportion_);
       }
       if (absoluteDatasetProportion_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, absoluteDatasetProportion_);
+          .computeInt32Size(3, absoluteDatasetProportion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -199,6 +270,8 @@ public final class TrainStatisticsOuterClass {
       }
       asgt.type.TrainStatisticsOuterClass.TargetStat other = (asgt.type.TrainStatisticsOuterClass.TargetStat) obj;
 
+      if (!getClassName()
+          .equals(other.getClassName())) return false;
       if (java.lang.Float.floatToIntBits(getRelativeDatasetProportion())
           != java.lang.Float.floatToIntBits(
               other.getRelativeDatasetProportion())) return false;
@@ -215,6 +288,8 @@ public final class TrainStatisticsOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClassName().hashCode();
       hash = (37 * hash) + RELATIVE_DATASET_PROPORTION_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getRelativeDatasetProportion());
@@ -353,6 +428,8 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        className_ = "";
+
         relativeDatasetProportion_ = 0F;
 
         absoluteDatasetProportion_ = 0;
@@ -383,6 +460,7 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.TargetStat buildPartial() {
         asgt.type.TrainStatisticsOuterClass.TargetStat result = new asgt.type.TrainStatisticsOuterClass.TargetStat(this);
+        result.className_ = className_;
         result.relativeDatasetProportion_ = relativeDatasetProportion_;
         result.absoluteDatasetProportion_ = absoluteDatasetProportion_;
         onBuilt();
@@ -433,6 +511,10 @@ public final class TrainStatisticsOuterClass {
 
       public Builder mergeFrom(asgt.type.TrainStatisticsOuterClass.TargetStat other) {
         if (other == asgt.type.TrainStatisticsOuterClass.TargetStat.getDefaultInstance()) return this;
+        if (!other.getClassName().isEmpty()) {
+          className_ = other.className_;
+          onChanged();
+        }
         if (other.getRelativeDatasetProportion() != 0F) {
           setRelativeDatasetProportion(other.getRelativeDatasetProportion());
         }
@@ -468,9 +550,89 @@ public final class TrainStatisticsOuterClass {
         return this;
       }
 
+      private java.lang.Object className_ = "";
+      /**
+       * <code>string class_name = 1;</code>
+       * @return The className.
+       */
+      public java.lang.String getClassName() {
+        java.lang.Object ref = className_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          className_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_name = 1;</code>
+       * @return The bytes for className.
+       */
+      public com.google.protobuf.ByteString
+          getClassNameBytes() {
+        java.lang.Object ref = className_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          className_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_name = 1;</code>
+       * @param value The className to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        className_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassName() {
+        
+        className_ = getDefaultInstance().getClassName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_name = 1;</code>
+       * @param value The bytes for className to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        className_ = value;
+        onChanged();
+        return this;
+      }
+
       private float relativeDatasetProportion_ ;
       /**
-       * <code>float relative_dataset_proportion = 1;</code>
+       * <pre>
+       * name of the target class in a target (classification task)
+       * </pre>
+       *
+       * <code>float relative_dataset_proportion = 2;</code>
        * @return The relativeDatasetProportion.
        */
       @java.lang.Override
@@ -478,7 +640,11 @@ public final class TrainStatisticsOuterClass {
         return relativeDatasetProportion_;
       }
       /**
-       * <code>float relative_dataset_proportion = 1;</code>
+       * <pre>
+       * name of the target class in a target (classification task)
+       * </pre>
+       *
+       * <code>float relative_dataset_proportion = 2;</code>
        * @param value The relativeDatasetProportion to set.
        * @return This builder for chaining.
        */
@@ -489,7 +655,11 @@ public final class TrainStatisticsOuterClass {
         return this;
       }
       /**
-       * <code>float relative_dataset_proportion = 1;</code>
+       * <pre>
+       * name of the target class in a target (classification task)
+       * </pre>
+       *
+       * <code>float relative_dataset_proportion = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRelativeDatasetProportion() {
@@ -505,7 +675,7 @@ public final class TrainStatisticsOuterClass {
        * percentage of samples belonging to a single class
        * </pre>
        *
-       * <code>int32 absolute_dataset_proportion = 2;</code>
+       * <code>int32 absolute_dataset_proportion = 3;</code>
        * @return The absoluteDatasetProportion.
        */
       @java.lang.Override
@@ -517,7 +687,7 @@ public final class TrainStatisticsOuterClass {
        * percentage of samples belonging to a single class
        * </pre>
        *
-       * <code>int32 absolute_dataset_proportion = 2;</code>
+       * <code>int32 absolute_dataset_proportion = 3;</code>
        * @param value The absoluteDatasetProportion to set.
        * @return This builder for chaining.
        */
@@ -532,7 +702,7 @@ public final class TrainStatisticsOuterClass {
        * percentage of samples belonging to a single class
        * </pre>
        *
-       * <code>int32 absolute_dataset_proportion = 2;</code>
+       * <code>int32 absolute_dataset_proportion = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearAbsoluteDatasetProportion() {
@@ -603,54 +773,44 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
-    int getTargetStatByClassCount();
+    java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> 
+        getTargetStatsList();
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
-    boolean containsTargetStatByClass(
-        java.lang.String key);
-    /**
-     * Use {@link #getTargetStatByClassMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-    getTargetStatByClass();
+    asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStats(int index);
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
-    java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-    getTargetStatByClassMap();
+    int getTargetStatsCount();
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
-
-    asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStatByClassOrDefault(
-        java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.TargetStat defaultValue);
+    java.util.List<? extends asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> 
+        getTargetStatsOrBuilderList();
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
-
-    asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStatByClassOrThrow(
-        java.lang.String key);
+    asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder getTargetStatsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code asgt.type.TargetStats}
@@ -665,6 +825,7 @@ public final class TrainStatisticsOuterClass {
       super(builder);
     }
     private TargetStats() {
+      targetStats_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -700,15 +861,11 @@ public final class TrainStatisticsOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targetStatByClass_ = com.google.protobuf.MapField.newMapField(
-                    TargetStatByClassDefaultEntryHolder.defaultEntry);
+                targetStats_ = new java.util.ArrayList<asgt.type.TrainStatisticsOuterClass.TargetStat>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-              targetStatByClass__ = input.readMessage(
-                  TargetStatByClassDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              targetStatByClass_.getMutableMap().put(
-                  targetStatByClass__.getKey(), targetStatByClass__.getValue());
+              targetStats_.add(
+                  input.readMessage(asgt.type.TrainStatisticsOuterClass.TargetStat.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -726,6 +883,9 @@ public final class TrainStatisticsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targetStats_ = java.util.Collections.unmodifiableList(targetStats_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -735,18 +895,6 @@ public final class TrainStatisticsOuterClass {
       return asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_TargetStats_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetTargetStatByClass();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -755,101 +903,64 @@ public final class TrainStatisticsOuterClass {
               asgt.type.TrainStatisticsOuterClass.TargetStats.class, asgt.type.TrainStatisticsOuterClass.TargetStats.Builder.class);
     }
 
-    public static final int TARGET_STAT_BY_CLASS_FIELD_NUMBER = 1;
-    private static final class TargetStatByClassDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>newDefaultInstance(
-                  asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_TargetStats_TargetStatByClassEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  asgt.type.TrainStatisticsOuterClass.TargetStat.getDefaultInstance());
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> targetStatByClass_;
-    private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-    internalGetTargetStatByClass() {
-      if (targetStatByClass_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            TargetStatByClassDefaultEntryHolder.defaultEntry);
-      }
-      return targetStatByClass_;
-    }
-
-    public int getTargetStatByClassCount() {
-      return internalGetTargetStatByClass().getMap().size();
+    public static final int TARGET_STATS_FIELD_NUMBER = 1;
+    private java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> targetStats_;
+    /**
+     * <pre>
+     * statistics of classes in a single target (classification task)
+     * </pre>
+     *
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatsList() {
+      return targetStats_;
     }
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsTargetStatByClass(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetTargetStatByClass().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getTargetStatByClassMap()} instead.
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatByClass() {
-      return getTargetStatByClassMap();
+    public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> 
+        getTargetStatsOrBuilderList() {
+      return targetStats_;
     }
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
     @java.lang.Override
-
-    public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatByClassMap() {
-      return internalGetTargetStatByClass().getMap();
+    public int getTargetStatsCount() {
+      return targetStats_.size();
     }
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
     @java.lang.Override
-
-    public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStatByClassOrDefault(
-        java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.TargetStat defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> map =
-          internalGetTargetStatByClass().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
+    public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStats(int index) {
+      return targetStats_.get(index);
     }
     /**
      * <pre>
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
      */
     @java.lang.Override
-
-    public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStatByClassOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> map =
-          internalGetTargetStatByClass().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
+    public asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder getTargetStatsOrBuilder(
+        int index) {
+      return targetStats_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -866,12 +977,9 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetTargetStatByClass(),
-          TargetStatByClassDefaultEntryHolder.defaultEntry,
-          1);
+      for (int i = 0; i < targetStats_.size(); i++) {
+        output.writeMessage(1, targetStats_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -881,15 +989,9 @@ public final class TrainStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (java.util.Map.Entry<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> entry
-           : internalGetTargetStatByClass().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-        targetStatByClass__ = TargetStatByClassDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
+      for (int i = 0; i < targetStats_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, targetStatByClass__);
+          .computeMessageSize(1, targetStats_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -906,8 +1008,8 @@ public final class TrainStatisticsOuterClass {
       }
       asgt.type.TrainStatisticsOuterClass.TargetStats other = (asgt.type.TrainStatisticsOuterClass.TargetStats) obj;
 
-      if (!internalGetTargetStatByClass().equals(
-          other.internalGetTargetStatByClass())) return false;
+      if (!getTargetStatsList()
+          .equals(other.getTargetStatsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -919,9 +1021,9 @@ public final class TrainStatisticsOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetTargetStatByClass().getMap().isEmpty()) {
-        hash = (37 * hash) + TARGET_STAT_BY_CLASS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetTargetStatByClass().hashCode();
+      if (getTargetStatsCount() > 0) {
+        hash = (37 * hash) + TARGET_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetStatsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1030,28 +1132,6 @@ public final class TrainStatisticsOuterClass {
         return asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_TargetStats_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetTargetStatByClass();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableTargetStatByClass();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1073,12 +1153,18 @@ public final class TrainStatisticsOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getTargetStatsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        internalGetMutableTargetStatByClass().clear();
+        if (targetStatsBuilder_ == null) {
+          targetStats_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          targetStatsBuilder_.clear();
+        }
         return this;
       }
 
@@ -1106,8 +1192,15 @@ public final class TrainStatisticsOuterClass {
       public asgt.type.TrainStatisticsOuterClass.TargetStats buildPartial() {
         asgt.type.TrainStatisticsOuterClass.TargetStats result = new asgt.type.TrainStatisticsOuterClass.TargetStats(this);
         int from_bitField0_ = bitField0_;
-        result.targetStatByClass_ = internalGetTargetStatByClass();
-        result.targetStatByClass_.makeImmutable();
+        if (targetStatsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            targetStats_ = java.util.Collections.unmodifiableList(targetStats_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.targetStats_ = targetStats_;
+        } else {
+          result.targetStats_ = targetStatsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1156,8 +1249,32 @@ public final class TrainStatisticsOuterClass {
 
       public Builder mergeFrom(asgt.type.TrainStatisticsOuterClass.TargetStats other) {
         if (other == asgt.type.TrainStatisticsOuterClass.TargetStats.getDefaultInstance()) return this;
-        internalGetMutableTargetStatByClass().mergeFrom(
-            other.internalGetTargetStatByClass());
+        if (targetStatsBuilder_ == null) {
+          if (!other.targetStats_.isEmpty()) {
+            if (targetStats_.isEmpty()) {
+              targetStats_ = other.targetStats_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTargetStatsIsMutable();
+              targetStats_.addAll(other.targetStats_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.targetStats_.isEmpty()) {
+            if (targetStatsBuilder_.isEmpty()) {
+              targetStatsBuilder_.dispose();
+              targetStatsBuilder_ = null;
+              targetStats_ = other.targetStats_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              targetStatsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTargetStatsFieldBuilder() : null;
+            } else {
+              targetStatsBuilder_.addAllMessages(other.targetStats_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1188,106 +1305,79 @@ public final class TrainStatisticsOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.MapField<
-          java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> targetStatByClass_;
-      private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-      internalGetTargetStatByClass() {
-        if (targetStatByClass_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              TargetStatByClassDefaultEntryHolder.defaultEntry);
-        }
-        return targetStatByClass_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-      internalGetMutableTargetStatByClass() {
-        onChanged();;
-        if (targetStatByClass_ == null) {
-          targetStatByClass_ = com.google.protobuf.MapField.newMapField(
-              TargetStatByClassDefaultEntryHolder.defaultEntry);
-        }
-        if (!targetStatByClass_.isMutable()) {
-          targetStatByClass_ = targetStatByClass_.copy();
-        }
-        return targetStatByClass_;
+      private java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> targetStats_ =
+        java.util.Collections.emptyList();
+      private void ensureTargetStatsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targetStats_ = new java.util.ArrayList<asgt.type.TrainStatisticsOuterClass.TargetStat>(targetStats_);
+          bitField0_ |= 0x00000001;
+         }
       }
 
-      public int getTargetStatByClassCount() {
-        return internalGetTargetStatByClass().getMap().size();
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TrainStatisticsOuterClass.TargetStat, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder, asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> targetStatsBuilder_;
+
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatsList() {
+        if (targetStatsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targetStats_);
+        } else {
+          return targetStatsBuilder_.getMessageList();
+        }
       }
       /**
        * <pre>
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
        */
-
-      @java.lang.Override
-      public boolean containsTargetStatByClass(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetTargetStatByClass().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getTargetStatByClassMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatByClass() {
-        return getTargetStatByClassMap();
-      }
-      /**
-       * <pre>
-       * statistics of classes in a single target (classification task)
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatByClassMap() {
-        return internalGetTargetStatByClass().getMap();
-      }
-      /**
-       * <pre>
-       * statistics of classes in a single target (classification task)
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
-       */
-      @java.lang.Override
-
-      public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStatByClassOrDefault(
-          java.lang.String key,
-          asgt.type.TrainStatisticsOuterClass.TargetStat defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> map =
-            internalGetTargetStatByClass().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * statistics of classes in a single target (classification task)
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
-       */
-      @java.lang.Override
-
-      public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStatByClassOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> map =
-            internalGetTargetStatByClass().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
+      public int getTargetStatsCount() {
+        if (targetStatsBuilder_ == null) {
+          return targetStats_.size();
+        } else {
+          return targetStatsBuilder_.getCount();
         }
-        return map.get(key);
       }
-
-      public Builder clearTargetStatByClass() {
-        internalGetMutableTargetStatByClass().getMutableMap()
-            .clear();
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStats(int index) {
+        if (targetStatsBuilder_ == null) {
+          return targetStats_.get(index);
+        } else {
+          return targetStatsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public Builder setTargetStats(
+          int index, asgt.type.TrainStatisticsOuterClass.TargetStat value) {
+        if (targetStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetStatsIsMutable();
+          targetStats_.set(index, value);
+          onChanged();
+        } else {
+          targetStatsBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
@@ -1295,38 +1385,17 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
        */
-
-      public Builder removeTargetStatByClass(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableTargetStatByClass().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat>
-      getMutableTargetStatByClass() {
-        return internalGetMutableTargetStatByClass().getMutableMap();
-      }
-      /**
-       * <pre>
-       * statistics of classes in a single target (classification task)
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
-       */
-      public Builder putTargetStatByClass(
-          java.lang.String key,
-          asgt.type.TrainStatisticsOuterClass.TargetStat value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableTargetStatByClass().getMutableMap()
-            .put(key, value);
+      public Builder setTargetStats(
+          int index, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder builderForValue) {
+        if (targetStatsBuilder_ == null) {
+          ensureTargetStatsIsMutable();
+          targetStats_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetStatsBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
@@ -1334,14 +1403,218 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStat&gt; target_stat_by_class = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
        */
-
-      public Builder putAllTargetStatByClass(
-          java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStat> values) {
-        internalGetMutableTargetStatByClass().getMutableMap()
-            .putAll(values);
+      public Builder addTargetStats(asgt.type.TrainStatisticsOuterClass.TargetStat value) {
+        if (targetStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetStatsIsMutable();
+          targetStats_.add(value);
+          onChanged();
+        } else {
+          targetStatsBuilder_.addMessage(value);
+        }
         return this;
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public Builder addTargetStats(
+          int index, asgt.type.TrainStatisticsOuterClass.TargetStat value) {
+        if (targetStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetStatsIsMutable();
+          targetStats_.add(index, value);
+          onChanged();
+        } else {
+          targetStatsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public Builder addTargetStats(
+          asgt.type.TrainStatisticsOuterClass.TargetStat.Builder builderForValue) {
+        if (targetStatsBuilder_ == null) {
+          ensureTargetStatsIsMutable();
+          targetStats_.add(builderForValue.build());
+          onChanged();
+        } else {
+          targetStatsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public Builder addTargetStats(
+          int index, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder builderForValue) {
+        if (targetStatsBuilder_ == null) {
+          ensureTargetStatsIsMutable();
+          targetStats_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetStatsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public Builder addAllTargetStats(
+          java.lang.Iterable<? extends asgt.type.TrainStatisticsOuterClass.TargetStat> values) {
+        if (targetStatsBuilder_ == null) {
+          ensureTargetStatsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, targetStats_);
+          onChanged();
+        } else {
+          targetStatsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public Builder clearTargetStats() {
+        if (targetStatsBuilder_ == null) {
+          targetStats_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          targetStatsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public Builder removeTargetStats(int index) {
+        if (targetStatsBuilder_ == null) {
+          ensureTargetStatsIsMutable();
+          targetStats_.remove(index);
+          onChanged();
+        } else {
+          targetStatsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.TargetStat.Builder getTargetStatsBuilder(
+          int index) {
+        return getTargetStatsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder getTargetStatsOrBuilder(
+          int index) {
+        if (targetStatsBuilder_ == null) {
+          return targetStats_.get(index);  } else {
+          return targetStatsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> 
+           getTargetStatsOrBuilderList() {
+        if (targetStatsBuilder_ != null) {
+          return targetStatsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(targetStats_);
+        }
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.TargetStat.Builder addTargetStatsBuilder() {
+        return getTargetStatsFieldBuilder().addBuilder(
+            asgt.type.TrainStatisticsOuterClass.TargetStat.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.TargetStat.Builder addTargetStatsBuilder(
+          int index) {
+        return getTargetStatsFieldBuilder().addBuilder(
+            index, asgt.type.TrainStatisticsOuterClass.TargetStat.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * statistics of classes in a single target (classification task)
+       * </pre>
+       *
+       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       */
+      public java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat.Builder> 
+           getTargetStatsBuilderList() {
+        return getTargetStatsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TrainStatisticsOuterClass.TargetStat, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder, asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> 
+          getTargetStatsFieldBuilder() {
+        if (targetStatsBuilder_ == null) {
+          targetStatsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.type.TrainStatisticsOuterClass.TargetStat, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder, asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder>(
+                  targetStats_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          targetStats_ = null;
+        }
+        return targetStatsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1401,30 +1674,42 @@ public final class TrainStatisticsOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>string feature_name = 1;</code>
+     * @return The featureName.
+     */
+    java.lang.String getFeatureName();
+    /**
+     * <code>string feature_name = 1;</code>
+     * @return The bytes for featureName.
+     */
+    com.google.protobuf.ByteString
+        getFeatureNameBytes();
+
+    /**
      * <pre>
-     * type of the feature
+     * name of the feature
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
      * @return The enum numeric value on the wire for featureType.
      */
     int getFeatureTypeValue();
     /**
      * <pre>
-     * type of the feature
+     * name of the feature
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
      * @return The featureType.
      */
     asgt.type.TrainStatisticsOuterClass.FeatureStat.Type getFeatureType();
 
     /**
      * <pre>
-     * information gain of a feature regarding to target (classification task)
+     * type of the feature
      * </pre>
      *
-     * <code>float information_gain = 2;</code>
+     * <code>float information_gain = 3;</code>
      * @return The informationGain.
      */
     float getInformationGain();
@@ -1442,6 +1727,7 @@ public final class TrainStatisticsOuterClass {
       super(builder);
     }
     private FeatureStat() {
+      featureName_ = "";
       featureType_ = 0;
     }
 
@@ -1475,13 +1761,19 @@ public final class TrainStatisticsOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              featureName_ = s;
+              break;
+            }
+            case 16: {
               int rawValue = input.readEnum();
 
               featureType_ = rawValue;
               break;
             }
-            case 21: {
+            case 29: {
 
               informationGain_ = input.readFloat();
               break;
@@ -1653,14 +1945,52 @@ public final class TrainStatisticsOuterClass {
       // @@protoc_insertion_point(enum_scope:asgt.type.FeatureStat.Type)
     }
 
-    public static final int FEATURE_TYPE_FIELD_NUMBER = 1;
+    public static final int FEATURE_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object featureName_;
+    /**
+     * <code>string feature_name = 1;</code>
+     * @return The featureName.
+     */
+    @java.lang.Override
+    public java.lang.String getFeatureName() {
+      java.lang.Object ref = featureName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        featureName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feature_name = 1;</code>
+     * @return The bytes for featureName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeatureNameBytes() {
+      java.lang.Object ref = featureName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        featureName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEATURE_TYPE_FIELD_NUMBER = 2;
     private int featureType_;
     /**
      * <pre>
-     * type of the feature
+     * name of the feature
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
      * @return The enum numeric value on the wire for featureType.
      */
     @java.lang.Override public int getFeatureTypeValue() {
@@ -1668,10 +1998,10 @@ public final class TrainStatisticsOuterClass {
     }
     /**
      * <pre>
-     * type of the feature
+     * name of the feature
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
      * @return The featureType.
      */
     @java.lang.Override public asgt.type.TrainStatisticsOuterClass.FeatureStat.Type getFeatureType() {
@@ -1680,14 +2010,14 @@ public final class TrainStatisticsOuterClass {
       return result == null ? asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.UNRECOGNIZED : result;
     }
 
-    public static final int INFORMATION_GAIN_FIELD_NUMBER = 2;
+    public static final int INFORMATION_GAIN_FIELD_NUMBER = 3;
     private float informationGain_;
     /**
      * <pre>
-     * information gain of a feature regarding to target (classification task)
+     * type of the feature
      * </pre>
      *
-     * <code>float information_gain = 2;</code>
+     * <code>float information_gain = 3;</code>
      * @return The informationGain.
      */
     @java.lang.Override
@@ -1709,11 +2039,14 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getFeatureNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, featureName_);
+      }
       if (featureType_ != asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.INT.getNumber()) {
-        output.writeEnum(1, featureType_);
+        output.writeEnum(2, featureType_);
       }
       if (informationGain_ != 0F) {
-        output.writeFloat(2, informationGain_);
+        output.writeFloat(3, informationGain_);
       }
       unknownFields.writeTo(output);
     }
@@ -1724,13 +2057,16 @@ public final class TrainStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!getFeatureNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, featureName_);
+      }
       if (featureType_ != asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.INT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, featureType_);
+          .computeEnumSize(2, featureType_);
       }
       if (informationGain_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, informationGain_);
+          .computeFloatSize(3, informationGain_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1747,6 +2083,8 @@ public final class TrainStatisticsOuterClass {
       }
       asgt.type.TrainStatisticsOuterClass.FeatureStat other = (asgt.type.TrainStatisticsOuterClass.FeatureStat) obj;
 
+      if (!getFeatureName()
+          .equals(other.getFeatureName())) return false;
       if (featureType_ != other.featureType_) return false;
       if (java.lang.Float.floatToIntBits(getInformationGain())
           != java.lang.Float.floatToIntBits(
@@ -1762,6 +2100,8 @@ public final class TrainStatisticsOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEATURE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFeatureName().hashCode();
       hash = (37 * hash) + FEATURE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + featureType_;
       hash = (37 * hash) + INFORMATION_GAIN_FIELD_NUMBER;
@@ -1900,6 +2240,8 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        featureName_ = "";
+
         featureType_ = 0;
 
         informationGain_ = 0F;
@@ -1930,6 +2272,7 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.FeatureStat buildPartial() {
         asgt.type.TrainStatisticsOuterClass.FeatureStat result = new asgt.type.TrainStatisticsOuterClass.FeatureStat(this);
+        result.featureName_ = featureName_;
         result.featureType_ = featureType_;
         result.informationGain_ = informationGain_;
         onBuilt();
@@ -1980,6 +2323,10 @@ public final class TrainStatisticsOuterClass {
 
       public Builder mergeFrom(asgt.type.TrainStatisticsOuterClass.FeatureStat other) {
         if (other == asgt.type.TrainStatisticsOuterClass.FeatureStat.getDefaultInstance()) return this;
+        if (!other.getFeatureName().isEmpty()) {
+          featureName_ = other.featureName_;
+          onChanged();
+        }
         if (other.featureType_ != 0) {
           setFeatureTypeValue(other.getFeatureTypeValue());
         }
@@ -2015,13 +2362,89 @@ public final class TrainStatisticsOuterClass {
         return this;
       }
 
+      private java.lang.Object featureName_ = "";
+      /**
+       * <code>string feature_name = 1;</code>
+       * @return The featureName.
+       */
+      public java.lang.String getFeatureName() {
+        java.lang.Object ref = featureName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          featureName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feature_name = 1;</code>
+       * @return The bytes for featureName.
+       */
+      public com.google.protobuf.ByteString
+          getFeatureNameBytes() {
+        java.lang.Object ref = featureName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          featureName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feature_name = 1;</code>
+       * @param value The featureName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatureName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        featureName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feature_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeatureName() {
+        
+        featureName_ = getDefaultInstance().getFeatureName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feature_name = 1;</code>
+       * @param value The bytes for featureName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatureNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        featureName_ = value;
+        onChanged();
+        return this;
+      }
+
       private int featureType_ = 0;
       /**
        * <pre>
-       * type of the feature
+       * name of the feature
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
        * @return The enum numeric value on the wire for featureType.
        */
       @java.lang.Override public int getFeatureTypeValue() {
@@ -2029,10 +2452,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature
+       * name of the feature
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
        * @param value The enum numeric value on the wire for featureType to set.
        * @return This builder for chaining.
        */
@@ -2044,10 +2467,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature
+       * name of the feature
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
        * @return The featureType.
        */
       @java.lang.Override
@@ -2058,10 +2481,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature
+       * name of the feature
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
        * @param value The featureType to set.
        * @return This builder for chaining.
        */
@@ -2076,10 +2499,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature
+       * name of the feature
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 1;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearFeatureType() {
@@ -2092,10 +2515,10 @@ public final class TrainStatisticsOuterClass {
       private float informationGain_ ;
       /**
        * <pre>
-       * information gain of a feature regarding to target (classification task)
+       * type of the feature
        * </pre>
        *
-       * <code>float information_gain = 2;</code>
+       * <code>float information_gain = 3;</code>
        * @return The informationGain.
        */
       @java.lang.Override
@@ -2104,10 +2527,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * information gain of a feature regarding to target (classification task)
+       * type of the feature
        * </pre>
        *
-       * <code>float information_gain = 2;</code>
+       * <code>float information_gain = 3;</code>
        * @param value The informationGain to set.
        * @return This builder for chaining.
        */
@@ -2119,10 +2542,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * information gain of a feature regarding to target (classification task)
+       * type of the feature
        * </pre>
        *
-       * <code>float information_gain = 2;</code>
+       * <code>float information_gain = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearInformationGain() {
@@ -2193,54 +2616,44 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
-    int getFeatureStatsByFeatureCount();
+    java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> 
+        getFeatureStatsList();
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
-    boolean containsFeatureStatsByFeature(
-        java.lang.String key);
-    /**
-     * Use {@link #getFeatureStatsByFeatureMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-    getFeatureStatsByFeature();
+    asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStats(int index);
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
-    java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-    getFeatureStatsByFeatureMap();
+    int getFeatureStatsCount();
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
-
-    asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStatsByFeatureOrDefault(
-        java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.FeatureStat defaultValue);
+    java.util.List<? extends asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> 
+        getFeatureStatsOrBuilderList();
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
-
-    asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStatsByFeatureOrThrow(
-        java.lang.String key);
+    asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder getFeatureStatsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code asgt.type.FeatureStats}
@@ -2255,6 +2668,7 @@ public final class TrainStatisticsOuterClass {
       super(builder);
     }
     private FeatureStats() {
+      featureStats_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2290,15 +2704,11 @@ public final class TrainStatisticsOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                featureStatsByFeature_ = com.google.protobuf.MapField.newMapField(
-                    FeatureStatsByFeatureDefaultEntryHolder.defaultEntry);
+                featureStats_ = new java.util.ArrayList<asgt.type.TrainStatisticsOuterClass.FeatureStat>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-              featureStatsByFeature__ = input.readMessage(
-                  FeatureStatsByFeatureDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              featureStatsByFeature_.getMutableMap().put(
-                  featureStatsByFeature__.getKey(), featureStatsByFeature__.getValue());
+              featureStats_.add(
+                  input.readMessage(asgt.type.TrainStatisticsOuterClass.FeatureStat.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2316,6 +2726,9 @@ public final class TrainStatisticsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          featureStats_ = java.util.Collections.unmodifiableList(featureStats_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2325,18 +2738,6 @@ public final class TrainStatisticsOuterClass {
       return asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_FeatureStats_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetFeatureStatsByFeature();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2345,101 +2746,64 @@ public final class TrainStatisticsOuterClass {
               asgt.type.TrainStatisticsOuterClass.FeatureStats.class, asgt.type.TrainStatisticsOuterClass.FeatureStats.Builder.class);
     }
 
-    public static final int FEATURE_STATS_BY_FEATURE_FIELD_NUMBER = 1;
-    private static final class FeatureStatsByFeatureDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>newDefaultInstance(
-                  asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_FeatureStats_FeatureStatsByFeatureEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  asgt.type.TrainStatisticsOuterClass.FeatureStat.getDefaultInstance());
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> featureStatsByFeature_;
-    private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-    internalGetFeatureStatsByFeature() {
-      if (featureStatsByFeature_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            FeatureStatsByFeatureDefaultEntryHolder.defaultEntry);
-      }
-      return featureStatsByFeature_;
-    }
-
-    public int getFeatureStatsByFeatureCount() {
-      return internalGetFeatureStatsByFeature().getMap().size();
+    public static final int FEATURE_STATS_FIELD_NUMBER = 1;
+    private java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> featureStats_;
+    /**
+     * <pre>
+     * feature statistics for each feature
+     * </pre>
+     *
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsList() {
+      return featureStats_;
     }
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsFeatureStatsByFeature(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetFeatureStatsByFeature().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getFeatureStatsByFeatureMap()} instead.
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsByFeature() {
-      return getFeatureStatsByFeatureMap();
+    public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> 
+        getFeatureStatsOrBuilderList() {
+      return featureStats_;
     }
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
     @java.lang.Override
-
-    public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsByFeatureMap() {
-      return internalGetFeatureStatsByFeature().getMap();
+    public int getFeatureStatsCount() {
+      return featureStats_.size();
     }
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
     @java.lang.Override
-
-    public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStatsByFeatureOrDefault(
-        java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.FeatureStat defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> map =
-          internalGetFeatureStatsByFeature().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
+    public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStats(int index) {
+      return featureStats_.get(index);
     }
     /**
      * <pre>
      * feature statistics for each feature
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
      */
     @java.lang.Override
-
-    public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStatsByFeatureOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> map =
-          internalGetFeatureStatsByFeature().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
+    public asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder getFeatureStatsOrBuilder(
+        int index) {
+      return featureStats_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2456,12 +2820,9 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetFeatureStatsByFeature(),
-          FeatureStatsByFeatureDefaultEntryHolder.defaultEntry,
-          1);
+      for (int i = 0; i < featureStats_.size(); i++) {
+        output.writeMessage(1, featureStats_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2471,15 +2832,9 @@ public final class TrainStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (java.util.Map.Entry<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> entry
-           : internalGetFeatureStatsByFeature().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-        featureStatsByFeature__ = FeatureStatsByFeatureDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
+      for (int i = 0; i < featureStats_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, featureStatsByFeature__);
+          .computeMessageSize(1, featureStats_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2496,8 +2851,8 @@ public final class TrainStatisticsOuterClass {
       }
       asgt.type.TrainStatisticsOuterClass.FeatureStats other = (asgt.type.TrainStatisticsOuterClass.FeatureStats) obj;
 
-      if (!internalGetFeatureStatsByFeature().equals(
-          other.internalGetFeatureStatsByFeature())) return false;
+      if (!getFeatureStatsList()
+          .equals(other.getFeatureStatsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2509,9 +2864,9 @@ public final class TrainStatisticsOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetFeatureStatsByFeature().getMap().isEmpty()) {
-        hash = (37 * hash) + FEATURE_STATS_BY_FEATURE_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetFeatureStatsByFeature().hashCode();
+      if (getFeatureStatsCount() > 0) {
+        hash = (37 * hash) + FEATURE_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeatureStatsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2620,28 +2975,6 @@ public final class TrainStatisticsOuterClass {
         return asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_FeatureStats_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetFeatureStatsByFeature();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableFeatureStatsByFeature();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2663,12 +2996,18 @@ public final class TrainStatisticsOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getFeatureStatsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        internalGetMutableFeatureStatsByFeature().clear();
+        if (featureStatsBuilder_ == null) {
+          featureStats_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          featureStatsBuilder_.clear();
+        }
         return this;
       }
 
@@ -2696,8 +3035,15 @@ public final class TrainStatisticsOuterClass {
       public asgt.type.TrainStatisticsOuterClass.FeatureStats buildPartial() {
         asgt.type.TrainStatisticsOuterClass.FeatureStats result = new asgt.type.TrainStatisticsOuterClass.FeatureStats(this);
         int from_bitField0_ = bitField0_;
-        result.featureStatsByFeature_ = internalGetFeatureStatsByFeature();
-        result.featureStatsByFeature_.makeImmutable();
+        if (featureStatsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            featureStats_ = java.util.Collections.unmodifiableList(featureStats_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.featureStats_ = featureStats_;
+        } else {
+          result.featureStats_ = featureStatsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2746,8 +3092,32 @@ public final class TrainStatisticsOuterClass {
 
       public Builder mergeFrom(asgt.type.TrainStatisticsOuterClass.FeatureStats other) {
         if (other == asgt.type.TrainStatisticsOuterClass.FeatureStats.getDefaultInstance()) return this;
-        internalGetMutableFeatureStatsByFeature().mergeFrom(
-            other.internalGetFeatureStatsByFeature());
+        if (featureStatsBuilder_ == null) {
+          if (!other.featureStats_.isEmpty()) {
+            if (featureStats_.isEmpty()) {
+              featureStats_ = other.featureStats_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFeatureStatsIsMutable();
+              featureStats_.addAll(other.featureStats_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.featureStats_.isEmpty()) {
+            if (featureStatsBuilder_.isEmpty()) {
+              featureStatsBuilder_.dispose();
+              featureStatsBuilder_ = null;
+              featureStats_ = other.featureStats_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              featureStatsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeatureStatsFieldBuilder() : null;
+            } else {
+              featureStatsBuilder_.addAllMessages(other.featureStats_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2778,106 +3148,79 @@ public final class TrainStatisticsOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.MapField<
-          java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> featureStatsByFeature_;
-      private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-      internalGetFeatureStatsByFeature() {
-        if (featureStatsByFeature_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              FeatureStatsByFeatureDefaultEntryHolder.defaultEntry);
-        }
-        return featureStatsByFeature_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-      internalGetMutableFeatureStatsByFeature() {
-        onChanged();;
-        if (featureStatsByFeature_ == null) {
-          featureStatsByFeature_ = com.google.protobuf.MapField.newMapField(
-              FeatureStatsByFeatureDefaultEntryHolder.defaultEntry);
-        }
-        if (!featureStatsByFeature_.isMutable()) {
-          featureStatsByFeature_ = featureStatsByFeature_.copy();
-        }
-        return featureStatsByFeature_;
+      private java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> featureStats_ =
+        java.util.Collections.emptyList();
+      private void ensureFeatureStatsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          featureStats_ = new java.util.ArrayList<asgt.type.TrainStatisticsOuterClass.FeatureStat>(featureStats_);
+          bitField0_ |= 0x00000001;
+         }
       }
 
-      public int getFeatureStatsByFeatureCount() {
-        return internalGetFeatureStatsByFeature().getMap().size();
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TrainStatisticsOuterClass.FeatureStat, asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder, asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> featureStatsBuilder_;
+
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsList() {
+        if (featureStatsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(featureStats_);
+        } else {
+          return featureStatsBuilder_.getMessageList();
+        }
       }
       /**
        * <pre>
        * feature statistics for each feature
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
        */
-
-      @java.lang.Override
-      public boolean containsFeatureStatsByFeature(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetFeatureStatsByFeature().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getFeatureStatsByFeatureMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsByFeature() {
-        return getFeatureStatsByFeatureMap();
-      }
-      /**
-       * <pre>
-       * feature statistics for each feature
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsByFeatureMap() {
-        return internalGetFeatureStatsByFeature().getMap();
-      }
-      /**
-       * <pre>
-       * feature statistics for each feature
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
-       */
-      @java.lang.Override
-
-      public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStatsByFeatureOrDefault(
-          java.lang.String key,
-          asgt.type.TrainStatisticsOuterClass.FeatureStat defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> map =
-            internalGetFeatureStatsByFeature().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * feature statistics for each feature
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
-       */
-      @java.lang.Override
-
-      public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStatsByFeatureOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> map =
-            internalGetFeatureStatsByFeature().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
+      public int getFeatureStatsCount() {
+        if (featureStatsBuilder_ == null) {
+          return featureStats_.size();
+        } else {
+          return featureStatsBuilder_.getCount();
         }
-        return map.get(key);
       }
-
-      public Builder clearFeatureStatsByFeature() {
-        internalGetMutableFeatureStatsByFeature().getMutableMap()
-            .clear();
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStats(int index) {
+        if (featureStatsBuilder_ == null) {
+          return featureStats_.get(index);
+        } else {
+          return featureStatsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public Builder setFeatureStats(
+          int index, asgt.type.TrainStatisticsOuterClass.FeatureStat value) {
+        if (featureStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeatureStatsIsMutable();
+          featureStats_.set(index, value);
+          onChanged();
+        } else {
+          featureStatsBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
@@ -2885,38 +3228,17 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
        */
-
-      public Builder removeFeatureStatsByFeature(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableFeatureStatsByFeature().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat>
-      getMutableFeatureStatsByFeature() {
-        return internalGetMutableFeatureStatsByFeature().getMutableMap();
-      }
-      /**
-       * <pre>
-       * feature statistics for each feature
-       * </pre>
-       *
-       * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
-       */
-      public Builder putFeatureStatsByFeature(
-          java.lang.String key,
-          asgt.type.TrainStatisticsOuterClass.FeatureStat value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableFeatureStatsByFeature().getMutableMap()
-            .put(key, value);
+      public Builder setFeatureStats(
+          int index, asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder builderForValue) {
+        if (featureStatsBuilder_ == null) {
+          ensureFeatureStatsIsMutable();
+          featureStats_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          featureStatsBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
@@ -2924,14 +3246,218 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStat&gt; feature_stats_by_feature = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
        */
-
-      public Builder putAllFeatureStatsByFeature(
-          java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStat> values) {
-        internalGetMutableFeatureStatsByFeature().getMutableMap()
-            .putAll(values);
+      public Builder addFeatureStats(asgt.type.TrainStatisticsOuterClass.FeatureStat value) {
+        if (featureStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeatureStatsIsMutable();
+          featureStats_.add(value);
+          onChanged();
+        } else {
+          featureStatsBuilder_.addMessage(value);
+        }
         return this;
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public Builder addFeatureStats(
+          int index, asgt.type.TrainStatisticsOuterClass.FeatureStat value) {
+        if (featureStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeatureStatsIsMutable();
+          featureStats_.add(index, value);
+          onChanged();
+        } else {
+          featureStatsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public Builder addFeatureStats(
+          asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder builderForValue) {
+        if (featureStatsBuilder_ == null) {
+          ensureFeatureStatsIsMutable();
+          featureStats_.add(builderForValue.build());
+          onChanged();
+        } else {
+          featureStatsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public Builder addFeatureStats(
+          int index, asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder builderForValue) {
+        if (featureStatsBuilder_ == null) {
+          ensureFeatureStatsIsMutable();
+          featureStats_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          featureStatsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public Builder addAllFeatureStats(
+          java.lang.Iterable<? extends asgt.type.TrainStatisticsOuterClass.FeatureStat> values) {
+        if (featureStatsBuilder_ == null) {
+          ensureFeatureStatsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, featureStats_);
+          onChanged();
+        } else {
+          featureStatsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public Builder clearFeatureStats() {
+        if (featureStatsBuilder_ == null) {
+          featureStats_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          featureStatsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public Builder removeFeatureStats(int index) {
+        if (featureStatsBuilder_ == null) {
+          ensureFeatureStatsIsMutable();
+          featureStats_.remove(index);
+          onChanged();
+        } else {
+          featureStatsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder getFeatureStatsBuilder(
+          int index) {
+        return getFeatureStatsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder getFeatureStatsOrBuilder(
+          int index) {
+        if (featureStatsBuilder_ == null) {
+          return featureStats_.get(index);  } else {
+          return featureStatsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> 
+           getFeatureStatsOrBuilderList() {
+        if (featureStatsBuilder_ != null) {
+          return featureStatsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(featureStats_);
+        }
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder addFeatureStatsBuilder() {
+        return getFeatureStatsFieldBuilder().addBuilder(
+            asgt.type.TrainStatisticsOuterClass.FeatureStat.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder addFeatureStatsBuilder(
+          int index) {
+        return getFeatureStatsFieldBuilder().addBuilder(
+            index, asgt.type.TrainStatisticsOuterClass.FeatureStat.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * feature statistics for each feature
+       * </pre>
+       *
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       */
+      public java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder> 
+           getFeatureStatsBuilderList() {
+        return getFeatureStatsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TrainStatisticsOuterClass.FeatureStat, asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder, asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> 
+          getFeatureStatsFieldBuilder() {
+        if (featureStatsBuilder_ == null) {
+          featureStatsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.type.TrainStatisticsOuterClass.FeatureStat, asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder, asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder>(
+                  featureStats_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          featureStats_ = null;
+        }
+        return featureStatsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4244,11 +4770,6 @@ public final class TrainStatisticsOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_type_TargetStats_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_type_TargetStats_TargetStatByClassEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_type_TargetStats_TargetStatByClassEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_type_FeatureStat_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4258,11 +4779,6 @@ public final class TrainStatisticsOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_type_FeatureStats_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_type_FeatureStats_FeatureStatsByFeatureEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_type_FeatureStats_FeatureStatsByFeatureEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_type_TrainStatistics_descriptor;
   private static final 
@@ -4288,33 +4804,28 @@ public final class TrainStatisticsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n asgt/type/train_statistics.proto\022\tasgt" +
-      ".type\"V\n\nTargetStat\022#\n\033relative_dataset_" +
-      "proportion\030\001 \001(\002\022#\n\033absolute_dataset_pro" +
-      "portion\030\002 \001(\005\"\253\001\n\013TargetStats\022K\n\024target_" +
-      "stat_by_class\030\001 \003(\0132-.asgt.type.TargetSt" +
-      "ats.TargetStatByClassEntry\032O\n\026TargetStat" +
-      "ByClassEntry\022\013\n\003key\030\001 \001(\t\022$\n\005value\030\002 \001(\013" +
-      "2\025.asgt.type.TargetStat:\0028\001\"\231\001\n\013FeatureS" +
-      "tat\0221\n\014feature_type\030\001 \001(\0162\033.asgt.type.Fe" +
-      "atureStat.Type\022\030\n\020information_gain\030\002 \001(\002" +
-      "\"=\n\004Type\022\007\n\003INT\020\000\022\t\n\005FLOAT\020\001\022\n\n\006STRING\020\002" +
-      "\022\t\n\005BYTES\020\003\022\n\n\006STRUCT\020\004\"\272\001\n\014FeatureStats" +
-      "\022T\n\030feature_stats_by_feature\030\001 \003(\01322.asg" +
-      "t.type.FeatureStats.FeatureStatsByFeatur" +
-      "eEntry\032T\n\032FeatureStatsByFeatureEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022%\n\005value\030\002 \001(\0132\026.asgt.type.Fea" +
-      "tureStat:\0028\001\"\201\003\n\017TrainStatistics\022S\n\026targ" +
-      "et_stats_by_target\030\001 \003(\01323.asgt.type.Tra" +
-      "inStatistics.TargetStatsByTargetEntry\022U\n" +
-      "\027feature_stats_by_target\030\002 \003(\01324.asgt.ty" +
-      "pe.TrainStatistics.FeatureStatsByTargetE" +
-      "ntry\022\030\n\020similarity_index\030\003 \001(\002\032R\n\030Target" +
-      "StatsByTargetEntry\022\013\n\003key\030\001 \001(\t\022%\n\005value" +
-      "\030\002 \001(\0132\026.asgt.type.TargetStats:\0028\001\032T\n\031Fe" +
-      "atureStatsByTargetEntry\022\013\n\003key\030\001 \001(\t\022&\n\005" +
-      "value\030\002 \001(\0132\027.asgt.type.FeatureStats:\0028\001" +
-      "B8Z6github.com/e-conomic/vmlapis/gen/go/" +
-      "asgt/type;asgttypeb\006proto3"
+      ".type\"j\n\nTargetStat\022\022\n\nclass_name\030\001 \001(\t\022" +
+      "#\n\033relative_dataset_proportion\030\002 \001(\002\022#\n\033" +
+      "absolute_dataset_proportion\030\003 \001(\005\":\n\013Tar" +
+      "getStats\022+\n\014target_stats\030\001 \003(\0132\025.asgt.ty" +
+      "pe.TargetStat\"\257\001\n\013FeatureStat\022\024\n\014feature" +
+      "_name\030\001 \001(\t\0221\n\014feature_type\030\002 \001(\0162\033.asgt" +
+      ".type.FeatureStat.Type\022\030\n\020information_ga" +
+      "in\030\003 \001(\002\"=\n\004Type\022\007\n\003INT\020\000\022\t\n\005FLOAT\020\001\022\n\n\006" +
+      "STRING\020\002\022\t\n\005BYTES\020\003\022\n\n\006STRUCT\020\004\"=\n\014Featu" +
+      "reStats\022-\n\rfeature_stats\030\001 \003(\0132\026.asgt.ty" +
+      "pe.FeatureStat\"\201\003\n\017TrainStatistics\022S\n\026ta" +
+      "rget_stats_by_target\030\001 \003(\01323.asgt.type.T" +
+      "rainStatistics.TargetStatsByTargetEntry\022" +
+      "U\n\027feature_stats_by_target\030\002 \003(\01324.asgt." +
+      "type.TrainStatistics.FeatureStatsByTarge" +
+      "tEntry\022\030\n\020similarity_index\030\003 \001(\002\032R\n\030Targ" +
+      "etStatsByTargetEntry\022\013\n\003key\030\001 \001(\t\022%\n\005val" +
+      "ue\030\002 \001(\0132\026.asgt.type.TargetStats:\0028\001\032T\n\031" +
+      "FeatureStatsByTargetEntry\022\013\n\003key\030\001 \001(\t\022&" +
+      "\n\005value\030\002 \001(\0132\027.asgt.type.FeatureStats:\002" +
+      "8\001B8Z6github.com/e-conomic/vmlapis/gen/g" +
+      "o/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4325,37 +4836,25 @@ public final class TrainStatisticsOuterClass {
     internal_static_asgt_type_TargetStat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_TargetStat_descriptor,
-        new java.lang.String[] { "RelativeDatasetProportion", "AbsoluteDatasetProportion", });
+        new java.lang.String[] { "ClassName", "RelativeDatasetProportion", "AbsoluteDatasetProportion", });
     internal_static_asgt_type_TargetStats_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_type_TargetStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_TargetStats_descriptor,
-        new java.lang.String[] { "TargetStatByClass", });
-    internal_static_asgt_type_TargetStats_TargetStatByClassEntry_descriptor =
-      internal_static_asgt_type_TargetStats_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_type_TargetStats_TargetStatByClassEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_type_TargetStats_TargetStatByClassEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "TargetStats", });
     internal_static_asgt_type_FeatureStat_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_type_FeatureStat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_FeatureStat_descriptor,
-        new java.lang.String[] { "FeatureType", "InformationGain", });
+        new java.lang.String[] { "FeatureName", "FeatureType", "InformationGain", });
     internal_static_asgt_type_FeatureStats_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_type_FeatureStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_FeatureStats_descriptor,
-        new java.lang.String[] { "FeatureStatsByFeature", });
-    internal_static_asgt_type_FeatureStats_FeatureStatsByFeatureEntry_descriptor =
-      internal_static_asgt_type_FeatureStats_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_type_FeatureStats_FeatureStatsByFeatureEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_type_FeatureStats_FeatureStatsByFeatureEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "FeatureStats", });
     internal_static_asgt_type_TrainStatistics_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_type_TrainStatistics_fieldAccessorTable = new

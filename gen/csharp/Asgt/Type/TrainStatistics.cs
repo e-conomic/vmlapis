@@ -25,37 +25,33 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBhc2d0L3R5cGUvdHJhaW5fc3RhdGlzdGljcy5wcm90bxIJYXNndC50eXBl",
-            "IlYKClRhcmdldFN0YXQSIwobcmVsYXRpdmVfZGF0YXNldF9wcm9wb3J0aW9u",
-            "GAEgASgCEiMKG2Fic29sdXRlX2RhdGFzZXRfcHJvcG9ydGlvbhgCIAEoBSKr",
-            "AQoLVGFyZ2V0U3RhdHMSSwoUdGFyZ2V0X3N0YXRfYnlfY2xhc3MYASADKAsy",
-            "LS5hc2d0LnR5cGUuVGFyZ2V0U3RhdHMuVGFyZ2V0U3RhdEJ5Q2xhc3NFbnRy",
-            "eRpPChZUYXJnZXRTdGF0QnlDbGFzc0VudHJ5EgsKA2tleRgBIAEoCRIkCgV2",
-            "YWx1ZRgCIAEoCzIVLmFzZ3QudHlwZS5UYXJnZXRTdGF0OgI4ASKZAQoLRmVh",
-            "dHVyZVN0YXQSMQoMZmVhdHVyZV90eXBlGAEgASgOMhsuYXNndC50eXBlLkZl",
-            "YXR1cmVTdGF0LlR5cGUSGAoQaW5mb3JtYXRpb25fZ2FpbhgCIAEoAiI9CgRU",
-            "eXBlEgcKA0lOVBAAEgkKBUZMT0FUEAESCgoGU1RSSU5HEAISCQoFQllURVMQ",
-            "AxIKCgZTVFJVQ1QQBCK6AQoMRmVhdHVyZVN0YXRzElQKGGZlYXR1cmVfc3Rh",
-            "dHNfYnlfZmVhdHVyZRgBIAMoCzIyLmFzZ3QudHlwZS5GZWF0dXJlU3RhdHMu",
-            "RmVhdHVyZVN0YXRzQnlGZWF0dXJlRW50cnkaVAoaRmVhdHVyZVN0YXRzQnlG",
-            "ZWF0dXJlRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuYXNn",
-            "dC50eXBlLkZlYXR1cmVTdGF0OgI4ASKBAwoPVHJhaW5TdGF0aXN0aWNzElMK",
-            "FnRhcmdldF9zdGF0c19ieV90YXJnZXQYASADKAsyMy5hc2d0LnR5cGUuVHJh",
-            "aW5TdGF0aXN0aWNzLlRhcmdldFN0YXRzQnlUYXJnZXRFbnRyeRJVChdmZWF0",
-            "dXJlX3N0YXRzX2J5X3RhcmdldBgCIAMoCzI0LmFzZ3QudHlwZS5UcmFpblN0",
-            "YXRpc3RpY3MuRmVhdHVyZVN0YXRzQnlUYXJnZXRFbnRyeRIYChBzaW1pbGFy",
-            "aXR5X2luZGV4GAMgASgCGlIKGFRhcmdldFN0YXRzQnlUYXJnZXRFbnRyeRIL",
-            "CgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5hc2d0LnR5cGUuVGFyZ2V0",
-            "U3RhdHM6AjgBGlQKGUZlYXR1cmVTdGF0c0J5VGFyZ2V0RW50cnkSCwoDa2V5",
-            "GAEgASgJEiYKBXZhbHVlGAIgASgLMhcuYXNndC50eXBlLkZlYXR1cmVTdGF0",
-            "czoCOAFCOFo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28v",
-            "YXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
+            "ImoKClRhcmdldFN0YXQSEgoKY2xhc3NfbmFtZRgBIAEoCRIjChtyZWxhdGl2",
+            "ZV9kYXRhc2V0X3Byb3BvcnRpb24YAiABKAISIwobYWJzb2x1dGVfZGF0YXNl",
+            "dF9wcm9wb3J0aW9uGAMgASgFIjoKC1RhcmdldFN0YXRzEisKDHRhcmdldF9z",
+            "dGF0cxgBIAMoCzIVLmFzZ3QudHlwZS5UYXJnZXRTdGF0Iq8BCgtGZWF0dXJl",
+            "U3RhdBIUCgxmZWF0dXJlX25hbWUYASABKAkSMQoMZmVhdHVyZV90eXBlGAIg",
+            "ASgOMhsuYXNndC50eXBlLkZlYXR1cmVTdGF0LlR5cGUSGAoQaW5mb3JtYXRp",
+            "b25fZ2FpbhgDIAEoAiI9CgRUeXBlEgcKA0lOVBAAEgkKBUZMT0FUEAESCgoG",
+            "U1RSSU5HEAISCQoFQllURVMQAxIKCgZTVFJVQ1QQBCI9CgxGZWF0dXJlU3Rh",
+            "dHMSLQoNZmVhdHVyZV9zdGF0cxgBIAMoCzIWLmFzZ3QudHlwZS5GZWF0dXJl",
+            "U3RhdCKBAwoPVHJhaW5TdGF0aXN0aWNzElMKFnRhcmdldF9zdGF0c19ieV90",
+            "YXJnZXQYASADKAsyMy5hc2d0LnR5cGUuVHJhaW5TdGF0aXN0aWNzLlRhcmdl",
+            "dFN0YXRzQnlUYXJnZXRFbnRyeRJVChdmZWF0dXJlX3N0YXRzX2J5X3Rhcmdl",
+            "dBgCIAMoCzI0LmFzZ3QudHlwZS5UcmFpblN0YXRpc3RpY3MuRmVhdHVyZVN0",
+            "YXRzQnlUYXJnZXRFbnRyeRIYChBzaW1pbGFyaXR5X2luZGV4GAMgASgCGlIK",
+            "GFRhcmdldFN0YXRzQnlUYXJnZXRFbnRyeRILCgNrZXkYASABKAkSJQoFdmFs",
+            "dWUYAiABKAsyFi5hc2d0LnR5cGUuVGFyZ2V0U3RhdHM6AjgBGlQKGUZlYXR1",
+            "cmVTdGF0c0J5VGFyZ2V0RW50cnkSCwoDa2V5GAEgASgJEiYKBXZhbHVlGAIg",
+            "ASgLMhcuYXNndC50eXBlLkZlYXR1cmVTdGF0czoCOAFCOFo2Z2l0aHViLmNv",
+            "bS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBl",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetStat), global::Asgt.Type.TargetStat.Parser, new[]{ "RelativeDatasetProportion", "AbsoluteDatasetProportion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetStats), global::Asgt.Type.TargetStats.Parser, new[]{ "TargetStatByClass" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStat), global::Asgt.Type.FeatureStat.Parser, new[]{ "FeatureType", "InformationGain" }, null, new[]{ typeof(global::Asgt.Type.FeatureStat.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStats), global::Asgt.Type.FeatureStats.Parser, new[]{ "FeatureStatsByFeature" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetStat), global::Asgt.Type.TargetStat.Parser, new[]{ "ClassName", "RelativeDatasetProportion", "AbsoluteDatasetProportion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetStats), global::Asgt.Type.TargetStats.Parser, new[]{ "TargetStats_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStat), global::Asgt.Type.FeatureStat.Parser, new[]{ "FeatureName", "FeatureType", "InformationGain" }, null, new[]{ typeof(global::Asgt.Type.FeatureStat.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStats), global::Asgt.Type.FeatureStats.Parser, new[]{ "FeatureStats_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics), global::Asgt.Type.TrainStatistics.Parser, new[]{ "TargetStatsByTarget", "FeatureStatsByTarget", "SimilarityIndex" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
@@ -92,6 +88,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TargetStat(TargetStat other) : this() {
+      className_ = other.className_;
       relativeDatasetProportion_ = other.relativeDatasetProportion_;
       absoluteDatasetProportion_ = other.absoluteDatasetProportion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -102,9 +99,23 @@ namespace Asgt.Type {
       return new TargetStat(this);
     }
 
+    /// <summary>Field number for the "class_name" field.</summary>
+    public const int ClassNameFieldNumber = 1;
+    private string className_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClassName {
+      get { return className_; }
+      set {
+        className_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "relative_dataset_proportion" field.</summary>
-    public const int RelativeDatasetProportionFieldNumber = 1;
+    public const int RelativeDatasetProportionFieldNumber = 2;
     private float relativeDatasetProportion_;
+    /// <summary>
+    /// name of the target class in a target (classification task)
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float RelativeDatasetProportion {
       get { return relativeDatasetProportion_; }
@@ -114,7 +125,7 @@ namespace Asgt.Type {
     }
 
     /// <summary>Field number for the "absolute_dataset_proportion" field.</summary>
-    public const int AbsoluteDatasetProportionFieldNumber = 2;
+    public const int AbsoluteDatasetProportionFieldNumber = 3;
     private int absoluteDatasetProportion_;
     /// <summary>
     /// percentage of samples belonging to a single class
@@ -140,6 +151,7 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ClassName != other.ClassName) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(RelativeDatasetProportion, other.RelativeDatasetProportion)) return false;
       if (AbsoluteDatasetProportion != other.AbsoluteDatasetProportion) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -148,6 +160,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (ClassName.Length != 0) hash ^= ClassName.GetHashCode();
       if (RelativeDatasetProportion != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(RelativeDatasetProportion);
       if (AbsoluteDatasetProportion != 0) hash ^= AbsoluteDatasetProportion.GetHashCode();
       if (_unknownFields != null) {
@@ -163,12 +176,16 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (ClassName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClassName);
+      }
       if (RelativeDatasetProportion != 0F) {
-        output.WriteRawTag(13);
+        output.WriteRawTag(21);
         output.WriteFloat(RelativeDatasetProportion);
       }
       if (AbsoluteDatasetProportion != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(AbsoluteDatasetProportion);
       }
       if (_unknownFields != null) {
@@ -179,6 +196,9 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (ClassName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClassName);
+      }
       if (RelativeDatasetProportion != 0F) {
         size += 1 + 4;
       }
@@ -195,6 +215,9 @@ namespace Asgt.Type {
     public void MergeFrom(TargetStat other) {
       if (other == null) {
         return;
+      }
+      if (other.ClassName.Length != 0) {
+        ClassName = other.ClassName;
       }
       if (other.RelativeDatasetProportion != 0F) {
         RelativeDatasetProportion = other.RelativeDatasetProportion;
@@ -216,11 +239,15 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 13: {
+          case 10: {
+            ClassName = input.ReadString();
+            break;
+          }
+          case 21: {
             RelativeDatasetProportion = input.ReadFloat();
             break;
           }
-          case 16: {
+          case 24: {
             AbsoluteDatasetProportion = input.ReadInt32();
             break;
           }
@@ -238,11 +265,15 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 13: {
+          case 10: {
+            ClassName = input.ReadString();
+            break;
+          }
+          case 21: {
             RelativeDatasetProportion = input.ReadFloat();
             break;
           }
-          case 16: {
+          case 24: {
             AbsoluteDatasetProportion = input.ReadInt32();
             break;
           }
@@ -282,7 +313,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TargetStats(TargetStats other) : this() {
-      targetStatByClass_ = other.targetStatByClass_.Clone();
+      targetStats_ = other.targetStats_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -291,17 +322,17 @@ namespace Asgt.Type {
       return new TargetStats(this);
     }
 
-    /// <summary>Field number for the "target_stat_by_class" field.</summary>
-    public const int TargetStatByClassFieldNumber = 1;
-    private static readonly pbc::MapField<string, global::Asgt.Type.TargetStat>.Codec _map_targetStatByClass_codec
-        = new pbc::MapField<string, global::Asgt.Type.TargetStat>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetStat.Parser), 10);
-    private readonly pbc::MapField<string, global::Asgt.Type.TargetStat> targetStatByClass_ = new pbc::MapField<string, global::Asgt.Type.TargetStat>();
+    /// <summary>Field number for the "target_stats" field.</summary>
+    public const int TargetStats_FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetStat> _repeated_targetStats_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.TargetStat.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetStat> targetStats_ = new pbc::RepeatedField<global::Asgt.Type.TargetStat>();
     /// <summary>
     /// statistics of classes in a single target (classification task)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, global::Asgt.Type.TargetStat> TargetStatByClass {
-      get { return targetStatByClass_; }
+    public pbc::RepeatedField<global::Asgt.Type.TargetStat> TargetStats_ {
+      get { return targetStats_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -317,14 +348,14 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!TargetStatByClass.Equals(other.TargetStatByClass)) return false;
+      if(!targetStats_.Equals(other.targetStats_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= TargetStatByClass.GetHashCode();
+      hash ^= targetStats_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -338,7 +369,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      targetStatByClass_.WriteTo(output, _map_targetStatByClass_codec);
+      targetStats_.WriteTo(output, _repeated_targetStats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -347,7 +378,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += targetStatByClass_.CalculateSize(_map_targetStatByClass_codec);
+      size += targetStats_.CalculateSize(_repeated_targetStats_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -359,7 +390,7 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      targetStatByClass_.Add(other.targetStatByClass_);
+      targetStats_.Add(other.targetStats_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -375,7 +406,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            targetStatByClass_.AddEntriesFrom(input, _map_targetStatByClass_codec);
+            targetStats_.AddEntriesFrom(input, _repeated_targetStats_codec);
             break;
           }
         }
@@ -393,7 +424,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            targetStatByClass_.AddEntriesFrom(ref input, _map_targetStatByClass_codec);
+            targetStats_.AddEntriesFrom(ref input, _repeated_targetStats_codec);
             break;
           }
         }
@@ -432,6 +463,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FeatureStat(FeatureStat other) : this() {
+      featureName_ = other.featureName_;
       featureType_ = other.featureType_;
       informationGain_ = other.informationGain_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -442,11 +474,22 @@ namespace Asgt.Type {
       return new FeatureStat(this);
     }
 
+    /// <summary>Field number for the "feature_name" field.</summary>
+    public const int FeatureNameFieldNumber = 1;
+    private string featureName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FeatureName {
+      get { return featureName_; }
+      set {
+        featureName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "feature_type" field.</summary>
-    public const int FeatureTypeFieldNumber = 1;
+    public const int FeatureTypeFieldNumber = 2;
     private global::Asgt.Type.FeatureStat.Types.Type featureType_ = global::Asgt.Type.FeatureStat.Types.Type.Int;
     /// <summary>
-    /// type of the feature
+    /// name of the feature
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.FeatureStat.Types.Type FeatureType {
@@ -457,10 +500,10 @@ namespace Asgt.Type {
     }
 
     /// <summary>Field number for the "information_gain" field.</summary>
-    public const int InformationGainFieldNumber = 2;
+    public const int InformationGainFieldNumber = 3;
     private float informationGain_;
     /// <summary>
-    /// information gain of a feature regarding to target (classification task)
+    /// type of the feature
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float InformationGain {
@@ -483,6 +526,7 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (FeatureName != other.FeatureName) return false;
       if (FeatureType != other.FeatureType) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(InformationGain, other.InformationGain)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -491,6 +535,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (FeatureName.Length != 0) hash ^= FeatureName.GetHashCode();
       if (FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) hash ^= FeatureType.GetHashCode();
       if (InformationGain != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(InformationGain);
       if (_unknownFields != null) {
@@ -506,12 +551,16 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (FeatureName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeatureName);
+      }
       if (FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteEnum((int) FeatureType);
       }
       if (InformationGain != 0F) {
-        output.WriteRawTag(21);
+        output.WriteRawTag(29);
         output.WriteFloat(InformationGain);
       }
       if (_unknownFields != null) {
@@ -522,6 +571,9 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (FeatureName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeatureName);
+      }
       if (FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FeatureType);
       }
@@ -538,6 +590,9 @@ namespace Asgt.Type {
     public void MergeFrom(FeatureStat other) {
       if (other == null) {
         return;
+      }
+      if (other.FeatureName.Length != 0) {
+        FeatureName = other.FeatureName;
       }
       if (other.FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) {
         FeatureType = other.FeatureType;
@@ -559,11 +614,15 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            FeatureName = input.ReadString();
+            break;
+          }
+          case 16: {
             FeatureType = (global::Asgt.Type.FeatureStat.Types.Type) input.ReadEnum();
             break;
           }
-          case 21: {
+          case 29: {
             InformationGain = input.ReadFloat();
             break;
           }
@@ -581,11 +640,15 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            FeatureName = input.ReadString();
+            break;
+          }
+          case 16: {
             FeatureType = (global::Asgt.Type.FeatureStat.Types.Type) input.ReadEnum();
             break;
           }
-          case 21: {
+          case 29: {
             InformationGain = input.ReadFloat();
             break;
           }
@@ -640,7 +703,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FeatureStats(FeatureStats other) : this() {
-      featureStatsByFeature_ = other.featureStatsByFeature_.Clone();
+      featureStats_ = other.featureStats_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -649,17 +712,17 @@ namespace Asgt.Type {
       return new FeatureStats(this);
     }
 
-    /// <summary>Field number for the "feature_stats_by_feature" field.</summary>
-    public const int FeatureStatsByFeatureFieldNumber = 1;
-    private static readonly pbc::MapField<string, global::Asgt.Type.FeatureStat>.Codec _map_featureStatsByFeature_codec
-        = new pbc::MapField<string, global::Asgt.Type.FeatureStat>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.FeatureStat.Parser), 10);
-    private readonly pbc::MapField<string, global::Asgt.Type.FeatureStat> featureStatsByFeature_ = new pbc::MapField<string, global::Asgt.Type.FeatureStat>();
+    /// <summary>Field number for the "feature_stats" field.</summary>
+    public const int FeatureStats_FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.Type.FeatureStat> _repeated_featureStats_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.FeatureStat.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.FeatureStat> featureStats_ = new pbc::RepeatedField<global::Asgt.Type.FeatureStat>();
     /// <summary>
     /// feature statistics for each feature
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, global::Asgt.Type.FeatureStat> FeatureStatsByFeature {
-      get { return featureStatsByFeature_; }
+    public pbc::RepeatedField<global::Asgt.Type.FeatureStat> FeatureStats_ {
+      get { return featureStats_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -675,14 +738,14 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!FeatureStatsByFeature.Equals(other.FeatureStatsByFeature)) return false;
+      if(!featureStats_.Equals(other.featureStats_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= FeatureStatsByFeature.GetHashCode();
+      hash ^= featureStats_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -696,7 +759,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      featureStatsByFeature_.WriteTo(output, _map_featureStatsByFeature_codec);
+      featureStats_.WriteTo(output, _repeated_featureStats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -705,7 +768,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += featureStatsByFeature_.CalculateSize(_map_featureStatsByFeature_codec);
+      size += featureStats_.CalculateSize(_repeated_featureStats_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -717,7 +780,7 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      featureStatsByFeature_.Add(other.featureStatsByFeature_);
+      featureStats_.Add(other.featureStats_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -733,7 +796,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            featureStatsByFeature_.AddEntriesFrom(input, _map_featureStatsByFeature_codec);
+            featureStats_.AddEntriesFrom(input, _repeated_featureStats_codec);
             break;
           }
         }
@@ -751,7 +814,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            featureStatsByFeature_.AddEntriesFrom(ref input, _map_featureStatsByFeature_codec);
+            featureStats_.AddEntriesFrom(ref input, _repeated_featureStats_codec);
             break;
           }
         }

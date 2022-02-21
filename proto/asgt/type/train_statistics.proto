@@ -6,14 +6,16 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
 
 message TargetStat  {
-    float relative_dataset_proportion = 1;
+    string class_name = 1;
+    // name of the target class in a target (classification task)
+    float relative_dataset_proportion = 2;
     // percentage of samples belonging to a single class
-    int32 absolute_dataset_proportion = 2;
+    int32 absolute_dataset_proportion = 3;
     // number of samples belonging to a single class
 }
 
 message TargetStats {
-    map<string, TargetStat>  target_stat_by_class = 1;
+    repeated TargetStat  target_stats =  1;
     // statistics of classes in a single target (classification task)
 }
 
@@ -25,15 +27,16 @@ message FeatureStat {
         BYTES = 3;
         STRUCT = 4;
     }
-    Type feature_type = 1;
+    string feature_name = 1;
+    // name of the feature 
+    Type feature_type = 2;
     // type of the feature 
-
-    float information_gain = 2;
+    float information_gain = 3;
     // information gain of a feature regarding to target (classification task)
 }
 
 message FeatureStats{
-    map<string, FeatureStat>   feature_stats_by_feature= 1;
+    repeated FeatureStat feature_stats = 1;
     // feature statistics for each feature
 }
 
