@@ -25,32 +25,805 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBhc2d0L3R5cGUvdHJhaW5fc3RhdGlzdGljcy5wcm90bxIJYXNndC50eXBl",
-            "IrYECg9UcmFpblN0YXRpc3RpY3MSFQoNZmVhdHVyZV9jb3VudBgBIAEoAhIV",
-            "Cg1mZWF0dXJlX25hbWVzGAIgAygJEhQKDHRhcmdldF9uYW1lcxgDIAMoCRJB",
-            "Cgx0YXJnZXRfY291bnQYBCADKAsyKy5hc2d0LnR5cGUuVHJhaW5TdGF0aXN0",
-            "aWNzLlRhcmdldENvdW50RW50cnkSSwoRaW5mb3JtYXRpb25fZ2FpbnMYBSAD",
-            "KAsyMC5hc2d0LnR5cGUuVHJhaW5TdGF0aXN0aWNzLkluZm9ybWF0aW9uR2Fp",
-            "bnNFbnRyeRIYChBzaW1pbGFyaXR5X2luZGV4GAYgASgCGpsBCg9JbmZvcm1h",
-            "dGlvbkdhaW4SUwoNZmVhdHVyZV9nYWlucxgBIAMoCzI8LmFzZ3QudHlwZS5U",
-            "cmFpblN0YXRpc3RpY3MuSW5mb3JtYXRpb25HYWluLkZlYXR1cmVHYWluc0Vu",
-            "dHJ5GjMKEUZlYXR1cmVHYWluc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoAjoCOAEaMgoQVGFyZ2V0Q291bnRFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAI6AjgBGmMKFUluZm9ybWF0aW9uR2FpbnNFbnRyeRIL",
-            "CgNrZXkYASABKAkSOQoFdmFsdWUYAiABKAsyKi5hc2d0LnR5cGUuVHJhaW5T",
-            "dGF0aXN0aWNzLkluZm9ybWF0aW9uR2FpbjoCOAFCOFo2Z2l0aHViLmNvbS9l",
-            "LWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlYgZw",
-            "cm90bzM="));
+            "ImoKClRhcmdldFN0YXQSEgoKY2xhc3NfbmFtZRgBIAEoCRIjChtyZWxhdGl2",
+            "ZV9kYXRhc2V0X3Byb3BvcnRpb24YAiABKAISIwobYWJzb2x1dGVfZGF0YXNl",
+            "dF9wcm9wb3J0aW9uGAMgASgFIjoKC1RhcmdldFN0YXRzEisKDHRhcmdldF9z",
+            "dGF0cxgBIAMoCzIVLmFzZ3QudHlwZS5UYXJnZXRTdGF0Iq8BCgtGZWF0dXJl",
+            "U3RhdBIUCgxmZWF0dXJlX25hbWUYASABKAkSMQoMZmVhdHVyZV90eXBlGAIg",
+            "ASgOMhsuYXNndC50eXBlLkZlYXR1cmVTdGF0LlR5cGUSGAoQaW5mb3JtYXRp",
+            "b25fZ2FpbhgDIAEoAiI9CgRUeXBlEgcKA0lOVBAAEgkKBUZMT0FUEAESCgoG",
+            "U1RSSU5HEAISCQoFQllURVMQAxIKCgZTVFJVQ1QQBCI9CgxGZWF0dXJlU3Rh",
+            "dHMSLQoNZmVhdHVyZV9zdGF0cxgBIAMoCzIWLmFzZ3QudHlwZS5GZWF0dXJl",
+            "U3RhdCKBAwoPVHJhaW5TdGF0aXN0aWNzElMKFnRhcmdldF9zdGF0c19ieV90",
+            "YXJnZXQYASADKAsyMy5hc2d0LnR5cGUuVHJhaW5TdGF0aXN0aWNzLlRhcmdl",
+            "dFN0YXRzQnlUYXJnZXRFbnRyeRJVChdmZWF0dXJlX3N0YXRzX2J5X3Rhcmdl",
+            "dBgCIAMoCzI0LmFzZ3QudHlwZS5UcmFpblN0YXRpc3RpY3MuRmVhdHVyZVN0",
+            "YXRzQnlUYXJnZXRFbnRyeRIYChBzaW1pbGFyaXR5X2luZGV4GAMgASgCGlIK",
+            "GFRhcmdldFN0YXRzQnlUYXJnZXRFbnRyeRILCgNrZXkYASABKAkSJQoFdmFs",
+            "dWUYAiABKAsyFi5hc2d0LnR5cGUuVGFyZ2V0U3RhdHM6AjgBGlQKGUZlYXR1",
+            "cmVTdGF0c0J5VGFyZ2V0RW50cnkSCwoDa2V5GAEgASgJEiYKBXZhbHVlGAIg",
+            "ASgLMhcuYXNndC50eXBlLkZlYXR1cmVTdGF0czoCOAFCOFo2Z2l0aHViLmNv",
+            "bS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBl",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics), global::Asgt.Type.TrainStatistics.Parser, new[]{ "FeatureCount", "FeatureNames", "TargetNames", "TargetCount", "InformationGains", "SimilarityIndex" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics.Types.InformationGain), global::Asgt.Type.TrainStatistics.Types.InformationGain.Parser, new[]{ "FeatureGains" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetStat), global::Asgt.Type.TargetStat.Parser, new[]{ "ClassName", "RelativeDatasetProportion", "AbsoluteDatasetProportion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetStats), global::Asgt.Type.TargetStats.Parser, new[]{ "TargetStats_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStat), global::Asgt.Type.FeatureStat.Parser, new[]{ "FeatureName", "FeatureType", "InformationGain" }, null, new[]{ typeof(global::Asgt.Type.FeatureStat.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStats), global::Asgt.Type.FeatureStats.Parser, new[]{ "FeatureStats_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics), global::Asgt.Type.TrainStatistics.Parser, new[]{ "TargetStatsByTarget", "FeatureStatsByTarget", "SimilarityIndex" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
 
   }
   #region Messages
+  public sealed partial class TargetStat : pb::IMessage<TargetStat>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TargetStat> _parser = new pb::MessageParser<TargetStat>(() => new TargetStat());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TargetStat> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Type.TrainStatisticsReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TargetStat() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TargetStat(TargetStat other) : this() {
+      className_ = other.className_;
+      relativeDatasetProportion_ = other.relativeDatasetProportion_;
+      absoluteDatasetProportion_ = other.absoluteDatasetProportion_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TargetStat Clone() {
+      return new TargetStat(this);
+    }
+
+    /// <summary>Field number for the "class_name" field.</summary>
+    public const int ClassNameFieldNumber = 1;
+    private string className_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClassName {
+      get { return className_; }
+      set {
+        className_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "relative_dataset_proportion" field.</summary>
+    public const int RelativeDatasetProportionFieldNumber = 2;
+    private float relativeDatasetProportion_;
+    /// <summary>
+    /// name of the target class in a target (classification task)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float RelativeDatasetProportion {
+      get { return relativeDatasetProportion_; }
+      set {
+        relativeDatasetProportion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "absolute_dataset_proportion" field.</summary>
+    public const int AbsoluteDatasetProportionFieldNumber = 3;
+    private int absoluteDatasetProportion_;
+    /// <summary>
+    /// percentage of samples belonging to a single class
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AbsoluteDatasetProportion {
+      get { return absoluteDatasetProportion_; }
+      set {
+        absoluteDatasetProportion_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TargetStat);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TargetStat other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ClassName != other.ClassName) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(RelativeDatasetProportion, other.RelativeDatasetProportion)) return false;
+      if (AbsoluteDatasetProportion != other.AbsoluteDatasetProportion) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ClassName.Length != 0) hash ^= ClassName.GetHashCode();
+      if (RelativeDatasetProportion != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(RelativeDatasetProportion);
+      if (AbsoluteDatasetProportion != 0) hash ^= AbsoluteDatasetProportion.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ClassName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClassName);
+      }
+      if (RelativeDatasetProportion != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(RelativeDatasetProportion);
+      }
+      if (AbsoluteDatasetProportion != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(AbsoluteDatasetProportion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ClassName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClassName);
+      }
+      if (RelativeDatasetProportion != 0F) {
+        size += 1 + 4;
+      }
+      if (AbsoluteDatasetProportion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AbsoluteDatasetProportion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TargetStat other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ClassName.Length != 0) {
+        ClassName = other.ClassName;
+      }
+      if (other.RelativeDatasetProportion != 0F) {
+        RelativeDatasetProportion = other.RelativeDatasetProportion;
+      }
+      if (other.AbsoluteDatasetProportion != 0) {
+        AbsoluteDatasetProportion = other.AbsoluteDatasetProportion;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ClassName = input.ReadString();
+            break;
+          }
+          case 21: {
+            RelativeDatasetProportion = input.ReadFloat();
+            break;
+          }
+          case 24: {
+            AbsoluteDatasetProportion = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ClassName = input.ReadString();
+            break;
+          }
+          case 21: {
+            RelativeDatasetProportion = input.ReadFloat();
+            break;
+          }
+          case 24: {
+            AbsoluteDatasetProportion = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TargetStats : pb::IMessage<TargetStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TargetStats> _parser = new pb::MessageParser<TargetStats>(() => new TargetStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TargetStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Type.TrainStatisticsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TargetStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TargetStats(TargetStats other) : this() {
+      targetStats_ = other.targetStats_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TargetStats Clone() {
+      return new TargetStats(this);
+    }
+
+    /// <summary>Field number for the "target_stats" field.</summary>
+    public const int TargetStats_FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetStat> _repeated_targetStats_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.TargetStat.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetStat> targetStats_ = new pbc::RepeatedField<global::Asgt.Type.TargetStat>();
+    /// <summary>
+    /// statistics of classes in a single target (classification task)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Type.TargetStat> TargetStats_ {
+      get { return targetStats_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TargetStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TargetStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetStats_.Equals(other.targetStats_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetStats_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      targetStats_.WriteTo(output, _repeated_targetStats_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetStats_.CalculateSize(_repeated_targetStats_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TargetStats other) {
+      if (other == null) {
+        return;
+      }
+      targetStats_.Add(other.targetStats_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            targetStats_.AddEntriesFrom(input, _repeated_targetStats_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            targetStats_.AddEntriesFrom(ref input, _repeated_targetStats_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class FeatureStat : pb::IMessage<FeatureStat>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FeatureStat> _parser = new pb::MessageParser<FeatureStat>(() => new FeatureStat());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FeatureStat> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Type.TrainStatisticsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeatureStat() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeatureStat(FeatureStat other) : this() {
+      featureName_ = other.featureName_;
+      featureType_ = other.featureType_;
+      informationGain_ = other.informationGain_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeatureStat Clone() {
+      return new FeatureStat(this);
+    }
+
+    /// <summary>Field number for the "feature_name" field.</summary>
+    public const int FeatureNameFieldNumber = 1;
+    private string featureName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FeatureName {
+      get { return featureName_; }
+      set {
+        featureName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "feature_type" field.</summary>
+    public const int FeatureTypeFieldNumber = 2;
+    private global::Asgt.Type.FeatureStat.Types.Type featureType_ = global::Asgt.Type.FeatureStat.Types.Type.Int;
+    /// <summary>
+    /// name of the feature
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Type.FeatureStat.Types.Type FeatureType {
+      get { return featureType_; }
+      set {
+        featureType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "information_gain" field.</summary>
+    public const int InformationGainFieldNumber = 3;
+    private float informationGain_;
+    /// <summary>
+    /// type of the feature
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float InformationGain {
+      get { return informationGain_; }
+      set {
+        informationGain_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FeatureStat);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FeatureStat other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FeatureName != other.FeatureName) return false;
+      if (FeatureType != other.FeatureType) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(InformationGain, other.InformationGain)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FeatureName.Length != 0) hash ^= FeatureName.GetHashCode();
+      if (FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) hash ^= FeatureType.GetHashCode();
+      if (InformationGain != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(InformationGain);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (FeatureName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeatureName);
+      }
+      if (FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) FeatureType);
+      }
+      if (InformationGain != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(InformationGain);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (FeatureName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeatureName);
+      }
+      if (FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FeatureType);
+      }
+      if (InformationGain != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FeatureStat other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FeatureName.Length != 0) {
+        FeatureName = other.FeatureName;
+      }
+      if (other.FeatureType != global::Asgt.Type.FeatureStat.Types.Type.Int) {
+        FeatureType = other.FeatureType;
+      }
+      if (other.InformationGain != 0F) {
+        InformationGain = other.InformationGain;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FeatureName = input.ReadString();
+            break;
+          }
+          case 16: {
+            FeatureType = (global::Asgt.Type.FeatureStat.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 29: {
+            InformationGain = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FeatureName = input.ReadString();
+            break;
+          }
+          case 16: {
+            FeatureType = (global::Asgt.Type.FeatureStat.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 29: {
+            InformationGain = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FeatureStat message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Type {
+        [pbr::OriginalName("INT")] Int = 0,
+        [pbr::OriginalName("FLOAT")] Float = 1,
+        [pbr::OriginalName("STRING")] String = 2,
+        [pbr::OriginalName("BYTES")] Bytes = 3,
+        [pbr::OriginalName("STRUCT")] Struct = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class FeatureStats : pb::IMessage<FeatureStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FeatureStats> _parser = new pb::MessageParser<FeatureStats>(() => new FeatureStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FeatureStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Type.TrainStatisticsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeatureStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeatureStats(FeatureStats other) : this() {
+      featureStats_ = other.featureStats_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeatureStats Clone() {
+      return new FeatureStats(this);
+    }
+
+    /// <summary>Field number for the "feature_stats" field.</summary>
+    public const int FeatureStats_FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.Type.FeatureStat> _repeated_featureStats_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.FeatureStat.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.FeatureStat> featureStats_ = new pbc::RepeatedField<global::Asgt.Type.FeatureStat>();
+    /// <summary>
+    /// feature statistics for each feature
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Type.FeatureStat> FeatureStats_ {
+      get { return featureStats_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FeatureStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FeatureStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!featureStats_.Equals(other.featureStats_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= featureStats_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      featureStats_.WriteTo(output, _repeated_featureStats_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += featureStats_.CalculateSize(_repeated_featureStats_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FeatureStats other) {
+      if (other == null) {
+        return;
+      }
+      featureStats_.Add(other.featureStats_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            featureStats_.AddEntriesFrom(input, _repeated_featureStats_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            featureStats_.AddEntriesFrom(ref input, _repeated_featureStats_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class TrainStatistics : pb::IMessage<TrainStatistics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -63,7 +836,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Type.TrainStatisticsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Asgt.Type.TrainStatisticsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -80,11 +853,8 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TrainStatistics(TrainStatistics other) : this() {
-      featureCount_ = other.featureCount_;
-      featureNames_ = other.featureNames_.Clone();
-      targetNames_ = other.targetNames_.Clone();
-      targetCount_ = other.targetCount_.Clone();
-      informationGains_ = other.informationGains_.Clone();
+      targetStatsByTarget_ = other.targetStatsByTarget_.Clone();
+      featureStatsByTarget_ = other.featureStatsByTarget_.Clone();
       similarityIndex_ = other.similarityIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -94,77 +864,37 @@ namespace Asgt.Type {
       return new TrainStatistics(this);
     }
 
-    /// <summary>Field number for the "feature_count" field.</summary>
-    public const int FeatureCountFieldNumber = 1;
-    private float featureCount_;
+    /// <summary>Field number for the "target_stats_by_target" field.</summary>
+    public const int TargetStatsByTargetFieldNumber = 1;
+    private static readonly pbc::MapField<string, global::Asgt.Type.TargetStats>.Codec _map_targetStatsByTarget_codec
+        = new pbc::MapField<string, global::Asgt.Type.TargetStats>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetStats.Parser), 10);
+    private readonly pbc::MapField<string, global::Asgt.Type.TargetStats> targetStatsByTarget_ = new pbc::MapField<string, global::Asgt.Type.TargetStats>();
     /// <summary>
-    ///number of input features for the model
+    /// target statistics for each target (classification task)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float FeatureCount {
-      get { return featureCount_; }
-      set {
-        featureCount_ = value;
-      }
+    public pbc::MapField<string, global::Asgt.Type.TargetStats> TargetStatsByTarget {
+      get { return targetStatsByTarget_; }
     }
 
-    /// <summary>Field number for the "feature_names" field.</summary>
-    public const int FeatureNamesFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_featureNames_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> featureNames_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "feature_stats_by_target" field.</summary>
+    public const int FeatureStatsByTargetFieldNumber = 2;
+    private static readonly pbc::MapField<string, global::Asgt.Type.FeatureStats>.Codec _map_featureStatsByTarget_codec
+        = new pbc::MapField<string, global::Asgt.Type.FeatureStats>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.FeatureStats.Parser), 18);
+    private readonly pbc::MapField<string, global::Asgt.Type.FeatureStats> featureStatsByTarget_ = new pbc::MapField<string, global::Asgt.Type.FeatureStats>();
     /// <summary>
-    ///feature names
+    /// feature statistics for each target (classification task)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> FeatureNames {
-      get { return featureNames_; }
-    }
-
-    /// <summary>Field number for the "target_names" field.</summary>
-    public const int TargetNamesFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _repeated_targetNames_codec
-        = pb::FieldCodec.ForString(26);
-    private readonly pbc::RepeatedField<string> targetNames_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    ///target names
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> TargetNames {
-      get { return targetNames_; }
-    }
-
-    /// <summary>Field number for the "target_count" field.</summary>
-    public const int TargetCountFieldNumber = 4;
-    private static readonly pbc::MapField<string, float>.Codec _map_targetCount_codec
-        = new pbc::MapField<string, float>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForFloat(21, 0F), 34);
-    private readonly pbc::MapField<string, float> targetCount_ = new pbc::MapField<string, float>();
-    /// <summary>
-    /// for each target count of its
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, float> TargetCount {
-      get { return targetCount_; }
-    }
-
-    /// <summary>Field number for the "information_gains" field.</summary>
-    public const int InformationGainsFieldNumber = 5;
-    private static readonly pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain>.Codec _map_informationGains_codec
-        = new pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.TrainStatistics.Types.InformationGain.Parser), 42);
-    private readonly pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain> informationGains_ = new pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain>();
-    /// <summary>
-    ///feature information gains for each of the targets
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, global::Asgt.Type.TrainStatistics.Types.InformationGain> InformationGains {
-      get { return informationGains_; }
+    public pbc::MapField<string, global::Asgt.Type.FeatureStats> FeatureStatsByTarget {
+      get { return featureStatsByTarget_; }
     }
 
     /// <summary>Field number for the "similarity_index" field.</summary>
-    public const int SimilarityIndexFieldNumber = 6;
+    public const int SimilarityIndexFieldNumber = 3;
     private float similarityIndex_;
     /// <summary>
-    /// similarity index between train and test dataset
+    /// measure of train/test similarity
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float SimilarityIndex {
@@ -187,11 +917,8 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FeatureCount, other.FeatureCount)) return false;
-      if(!featureNames_.Equals(other.featureNames_)) return false;
-      if(!targetNames_.Equals(other.targetNames_)) return false;
-      if (!TargetCount.Equals(other.TargetCount)) return false;
-      if (!InformationGains.Equals(other.InformationGains)) return false;
+      if (!TargetStatsByTarget.Equals(other.TargetStatsByTarget)) return false;
+      if (!FeatureStatsByTarget.Equals(other.FeatureStatsByTarget)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SimilarityIndex, other.SimilarityIndex)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -199,11 +926,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FeatureCount != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FeatureCount);
-      hash ^= featureNames_.GetHashCode();
-      hash ^= targetNames_.GetHashCode();
-      hash ^= TargetCount.GetHashCode();
-      hash ^= InformationGains.GetHashCode();
+      hash ^= TargetStatsByTarget.GetHashCode();
+      hash ^= FeatureStatsByTarget.GetHashCode();
       if (SimilarityIndex != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SimilarityIndex);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -218,16 +942,10 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (FeatureCount != 0F) {
-        output.WriteRawTag(13);
-        output.WriteFloat(FeatureCount);
-      }
-      featureNames_.WriteTo(output, _repeated_featureNames_codec);
-      targetNames_.WriteTo(output, _repeated_targetNames_codec);
-      targetCount_.WriteTo(output, _map_targetCount_codec);
-      informationGains_.WriteTo(output, _map_informationGains_codec);
+      targetStatsByTarget_.WriteTo(output, _map_targetStatsByTarget_codec);
+      featureStatsByTarget_.WriteTo(output, _map_featureStatsByTarget_codec);
       if (SimilarityIndex != 0F) {
-        output.WriteRawTag(53);
+        output.WriteRawTag(29);
         output.WriteFloat(SimilarityIndex);
       }
       if (_unknownFields != null) {
@@ -238,13 +956,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FeatureCount != 0F) {
-        size += 1 + 4;
-      }
-      size += featureNames_.CalculateSize(_repeated_featureNames_codec);
-      size += targetNames_.CalculateSize(_repeated_targetNames_codec);
-      size += targetCount_.CalculateSize(_map_targetCount_codec);
-      size += informationGains_.CalculateSize(_map_informationGains_codec);
+      size += targetStatsByTarget_.CalculateSize(_map_targetStatsByTarget_codec);
+      size += featureStatsByTarget_.CalculateSize(_map_featureStatsByTarget_codec);
       if (SimilarityIndex != 0F) {
         size += 1 + 4;
       }
@@ -259,13 +972,8 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.FeatureCount != 0F) {
-        FeatureCount = other.FeatureCount;
-      }
-      featureNames_.Add(other.featureNames_);
-      targetNames_.Add(other.targetNames_);
-      targetCount_.Add(other.targetCount_);
-      informationGains_.Add(other.informationGains_);
+      targetStatsByTarget_.Add(other.targetStatsByTarget_);
+      featureStatsByTarget_.Add(other.featureStatsByTarget_);
       if (other.SimilarityIndex != 0F) {
         SimilarityIndex = other.SimilarityIndex;
       }
@@ -283,27 +991,15 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 13: {
-            FeatureCount = input.ReadFloat();
+          case 10: {
+            targetStatsByTarget_.AddEntriesFrom(input, _map_targetStatsByTarget_codec);
             break;
           }
           case 18: {
-            featureNames_.AddEntriesFrom(input, _repeated_featureNames_codec);
+            featureStatsByTarget_.AddEntriesFrom(input, _map_featureStatsByTarget_codec);
             break;
           }
-          case 26: {
-            targetNames_.AddEntriesFrom(input, _repeated_targetNames_codec);
-            break;
-          }
-          case 34: {
-            targetCount_.AddEntriesFrom(input, _map_targetCount_codec);
-            break;
-          }
-          case 42: {
-            informationGains_.AddEntriesFrom(input, _map_informationGains_codec);
-            break;
-          }
-          case 53: {
+          case 29: {
             SimilarityIndex = input.ReadFloat();
             break;
           }
@@ -321,27 +1017,15 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 13: {
-            FeatureCount = input.ReadFloat();
+          case 10: {
+            targetStatsByTarget_.AddEntriesFrom(ref input, _map_targetStatsByTarget_codec);
             break;
           }
           case 18: {
-            featureNames_.AddEntriesFrom(ref input, _repeated_featureNames_codec);
+            featureStatsByTarget_.AddEntriesFrom(ref input, _map_featureStatsByTarget_codec);
             break;
           }
-          case 26: {
-            targetNames_.AddEntriesFrom(ref input, _repeated_targetNames_codec);
-            break;
-          }
-          case 34: {
-            targetCount_.AddEntriesFrom(ref input, _map_targetCount_codec);
-            break;
-          }
-          case 42: {
-            informationGains_.AddEntriesFrom(ref input, _map_informationGains_codec);
-            break;
-          }
-          case 53: {
+          case 29: {
             SimilarityIndex = input.ReadFloat();
             break;
           }
@@ -349,163 +1033,6 @@ namespace Asgt.Type {
       }
     }
     #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the TrainStatistics message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public sealed partial class InformationGain : pb::IMessage<InformationGain>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<InformationGain> _parser = new pb::MessageParser<InformationGain>(() => new InformationGain());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<InformationGain> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Type.TrainStatistics.Descriptor.NestedTypes[0]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public InformationGain() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public InformationGain(InformationGain other) : this() {
-          featureGains_ = other.featureGains_.Clone();
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public InformationGain Clone() {
-          return new InformationGain(this);
-        }
-
-        /// <summary>Field number for the "feature_gains" field.</summary>
-        public const int FeatureGainsFieldNumber = 1;
-        private static readonly pbc::MapField<string, float>.Codec _map_featureGains_codec
-            = new pbc::MapField<string, float>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForFloat(21, 0F), 10);
-        private readonly pbc::MapField<string, float> featureGains_ = new pbc::MapField<string, float>();
-        /// <summary>
-        ///feature information gains for a single target
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::MapField<string, float> FeatureGains {
-          get { return featureGains_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as InformationGain);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(InformationGain other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (!FeatureGains.Equals(other.FeatureGains)) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          hash ^= FeatureGains.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          featureGains_.WriteTo(output, _map_featureGains_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          size += featureGains_.CalculateSize(_map_featureGains_codec);
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(InformationGain other) {
-          if (other == null) {
-            return;
-          }
-          featureGains_.Add(other.featureGains_);
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                featureGains_.AddEntriesFrom(input, _map_featureGains_codec);
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                featureGains_.AddEntriesFrom(ref input, _map_featureGains_codec);
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-    }
-    #endregion
 
   }
 
