@@ -59,7 +59,7 @@
     },
     "/v2/datasets/{datasetName}": {
       "get": {
-        "summary": "Get the basic information about a dataset. This matches the behavior of the v1 API's info operation.",
+        "summary": "Get the basic information about a dataset.",
         "operationId": "DatasetService_GetDataset",
         "responses": {
           "200": {
@@ -117,7 +117,7 @@
         ]
       },
       "put": {
-        "summary": "Create a new dataset. If a dataset with such name already exsits, it will be updated with the\nprovided data.",
+        "summary": "Not implemented yet.\nCreates a new dataset. If a dataset with such name already exsits, it will be updated with the\nprovided data.",
         "operationId": "DatasetService_CreateOrUpdateDataset",
         "responses": {
           "200": {
@@ -338,6 +338,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "Name of the dataset to make prediction against",
             "in": "path",
             "required": true,
             "type": "string"
@@ -353,7 +354,8 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/definitions/typeData"
-                  }
+                  },
+                  "title": "Input data to use for prediction"
                 },
                 "options": {
                   "$ref": "#/definitions/v2SuggestOptions"
@@ -394,6 +396,7 @@
           },
           {
             "name": "options.limit",
+            "description": "The number of trainings to return. Ranges from 1 to 100.",
             "in": "query",
             "required": false,
             "type": "string",
@@ -426,6 +429,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "Name of the dataset to make prediction against",
             "in": "path",
             "required": true,
             "type": "string"
@@ -441,7 +445,8 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/definitions/typeData"
-                  }
+                  },
+                  "title": "Input data to use for prediction"
                 },
                 "options": {
                   "$ref": "#/definitions/v2SuggestOptions"
@@ -476,6 +481,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "Name of the dataset to make prediction against",
             "in": "path",
             "required": true,
             "type": "string"
@@ -488,7 +494,8 @@
               "type": "object",
               "properties": {
                 "input": {
-                  "$ref": "#/definitions/typeData"
+                  "$ref": "#/definitions/typeData",
+                  "title": "Input data to use for prediction"
                 },
                 "options": {
                   "$ref": "#/definitions/v2SuggestOptions"
@@ -554,6 +561,7 @@
         "parameters": [
           {
             "name": "options.limit",
+            "description": "The number of trainings to return. Ranges from 1 to 100.",
             "in": "query",
             "required": false,
             "type": "string",
@@ -686,7 +694,8 @@
           "$ref": "#/definitions/typeInvoiceLine",
           "title": "Line-level information for e-invoices; use one sample per invoice line"
         }
-      }
+      },
+      "description": "Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine\nstructures can be used at a time."
     },
     "typeDataset": {
       "type": "object",
@@ -895,23 +904,28 @@
       "properties": {
         "createdAt": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "title": "Creation time of the training"
         },
         "status": {
           "type": "string"
         },
         "trainingStatus": {
-          "type": "string"
+          "type": "string",
+          "description": "Status of the training.\nSCHEDULED - Training is scheduled to be run in a specific time. This\ncould be in between 1 minute or 6 hours depending on how recently the dataset\nwas created\nPENDING - The training is ready to be picked up a worker.\nRUNNING - The training is currently running.\nDONE - The training has completed successfully.\nFAILED - The training failed due to an error. See training status for\nmore information."
         },
         "trainingStatusMessage": {
-          "type": "string"
+          "type": "string",
+          "description": "Additional information about the training status."
         },
         "finishTime": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Specifies when did the training finish."
         },
         "dataset": {
-          "$ref": "#/definitions/typeDataset"
+          "$ref": "#/definitions/typeDataset",
+          "description": "Specifies dataset the training ran on."
         }
       }
     },
@@ -970,7 +984,8 @@
           "title": "Maximum number of suggestions to return per target"
         },
         "minConfidence": {
-          "$ref": "#/definitions/ConfidenceLevel"
+          "$ref": "#/definitions/ConfidenceLevel",
+          "description": "Not implemented yet."
         }
       }
     },
@@ -990,7 +1005,8 @@
       "properties": {
         "limit": {
           "type": "string",
-          "format": "int64"
+          "format": "int64",
+          "description": "The number of trainings to return. Ranges from 1 to 100."
         }
       }
     },

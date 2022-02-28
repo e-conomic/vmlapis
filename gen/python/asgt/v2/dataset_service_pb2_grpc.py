@@ -77,7 +77,7 @@ class DatasetServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def GetDataset(self, request, context):
-        """Get the basic information about a dataset. This matches the behavior of the v1 API's info operation.
+        """Get the basic information about a dataset.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -92,7 +92,8 @@ class DatasetServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CreateOrUpdateDataset(self, request, context):
-        """Create a new dataset. If a dataset with such name already exsits, it will be updated with the
+        """Not implemented yet.
+        Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
         provided data.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)

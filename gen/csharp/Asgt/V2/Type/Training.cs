@@ -43,11 +43,7 @@ namespace Asgt.V2.Type {
 
   }
   #region Messages
-  public sealed partial class Training : pb::IMessage<Training>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Training : pb::IMessage<Training> {
     private static readonly pb::MessageParser<Training> _parser = new pb::MessageParser<Training>(() => new Training());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -89,6 +85,9 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "created_at" field.</summary>
     public const int CreatedAtFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
+    /// <summary>
+    /// Creation time of the training
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
       get { return createdAt_; }
@@ -111,6 +110,17 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "training_status" field.</summary>
     public const int TrainingStatusFieldNumber = 3;
     private string trainingStatus_ = "";
+    /// <summary>
+    /// Status of the training.
+    /// SCHEDULED - Training is scheduled to be run in a specific time. This
+    /// could be in between 1 minute or 6 hours depending on how recently the dataset
+    /// was created
+    /// PENDING - The training is ready to be picked up a worker.
+    /// RUNNING - The training is currently running.
+    /// DONE - The training has completed successfully.
+    /// FAILED - The training failed due to an error. See training status for
+    /// more information.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TrainingStatus {
       get { return trainingStatus_; }
@@ -122,6 +132,9 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "training_status_message" field.</summary>
     public const int TrainingStatusMessageFieldNumber = 4;
     private string trainingStatusMessage_ = "";
+    /// <summary>
+    /// Additional information about the training status.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TrainingStatusMessage {
       get { return trainingStatusMessage_; }
@@ -133,6 +146,9 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "finish_time" field.</summary>
     public const int FinishTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp finishTime_;
+    /// <summary>
+    /// Specifies when did the training finish.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp FinishTime {
       get { return finishTime_; }
@@ -144,6 +160,9 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "dataset" field.</summary>
     public const int DatasetFieldNumber = 6;
     private global::Asgt.Type.Dataset dataset_;
+    /// <summary>
+    /// Specifies dataset the training ran on.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Dataset Dataset {
       get { return dataset_; }
@@ -289,9 +308,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -333,55 +349,7 @@ namespace Asgt.V2.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreatedAt);
-            break;
-          }
-          case 18: {
-            Status = input.ReadString();
-            break;
-          }
-          case 26: {
-            TrainingStatus = input.ReadString();
-            break;
-          }
-          case 34: {
-            TrainingStatusMessage = input.ReadString();
-            break;
-          }
-          case 42: {
-            if (finishTime_ == null) {
-              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(FinishTime);
-            break;
-          }
-          case 50: {
-            if (dataset_ == null) {
-              Dataset = new global::Asgt.Type.Dataset();
-            }
-            input.ReadMessage(Dataset);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

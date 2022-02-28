@@ -54,11 +54,7 @@ namespace GenBqSchema {
   }
 
   #region Messages
-  public sealed partial class BigQueryMessageOptions : pb::IMessage<BigQueryMessageOptions>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class BigQueryMessageOptions : pb::IMessage<BigQueryMessageOptions> {
     private static readonly pb::MessageParser<BigQueryMessageOptions> _parser = new pb::MessageParser<BigQueryMessageOptions>(() => new BigQueryMessageOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -204,9 +200,6 @@ namespace GenBqSchema {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -223,30 +216,7 @@ namespace GenBqSchema {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            TableName = input.ReadString();
-            break;
-          }
-          case 16: {
-            UseJsonNames = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

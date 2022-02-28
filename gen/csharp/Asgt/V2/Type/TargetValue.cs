@@ -43,11 +43,7 @@ namespace Asgt.V2.Type {
   /// <summary>
   /// Record mapping a target name to a value
   /// </summary>
-  public sealed partial class TargetValue : pb::IMessage<TargetValue>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class TargetValue : pb::IMessage<TargetValue> {
     private static readonly pb::MessageParser<TargetValue> _parser = new pb::MessageParser<TargetValue>(() => new TargetValue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,9 +92,6 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
     private string value_ = "";
-    /// <summary>
-    /// TODO(lku) can have funky characters (/\;...) and most likely also non-english letters
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Value {
       get { return value_; }
@@ -187,9 +180,6 @@ namespace Asgt.V2.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -206,30 +196,7 @@ namespace Asgt.V2.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Value = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

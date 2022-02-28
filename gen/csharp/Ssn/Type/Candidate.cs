@@ -54,11 +54,7 @@ namespace Ssn.Type {
 
   }
   #region Messages
-  public sealed partial class Confidence : pb::IMessage<Confidence>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Confidence : pb::IMessage<Confidence> {
     private static readonly pb::MessageParser<Confidence> _parser = new pb::MessageParser<Confidence>(() => new Confidence());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -205,9 +201,6 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -227,33 +220,7 @@ namespace Ssn.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Level = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            float? value = _single_value_codec.Read(ref input);
-            if (value_ == null || value != 0F) {
-              Value = value;
-            }
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Confidence message type.</summary>
@@ -273,11 +240,7 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class Candidate : pb::IMessage<Candidate>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Candidate : pb::IMessage<Candidate> {
     private static readonly pb::MessageParser<Candidate> _parser = new pb::MessageParser<Candidate>(() => new Candidate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -585,9 +548,6 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -633,59 +593,7 @@ namespace Ssn.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Value = input.ReadString();
-            break;
-          }
-          case 18: {
-            Text = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (confidence_ == null) {
-              Confidence = new global::Ssn.Type.Confidence();
-            }
-            input.ReadMessage(Confidence);
-            break;
-          }
-          case 34: {
-            if (boundingBox_ == null) {
-              BoundingBox = new global::Ssn.Type.BoundingPoly();
-            }
-            input.ReadMessage(BoundingBox);
-            break;
-          }
-          case 40: {
-            Type = (global::Ssn.Type.Candidate.Types.Type) input.ReadEnum();
-            break;
-          }
-          case 48: {
-            PageRef = input.ReadUInt32();
-            break;
-          }
-          case 58: {
-            if (modelMetadata_ == null) {
-              ModelMetadata = new global::Ssn.Type.ModelSpec();
-            }
-            input.ReadMessage(ModelMetadata);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Candidate message type.</summary>
@@ -702,11 +610,7 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class ModelSpec : pb::IMessage<ModelSpec>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class ModelSpec : pb::IMessage<ModelSpec> {
     private static readonly pb::MessageParser<ModelSpec> _parser = new pb::MessageParser<ModelSpec>(() => new ModelSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -852,9 +756,6 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -874,41 +775,11 @@ namespace Ssn.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            ModelName = input.ReadString();
-            break;
-          }
-          case 18: {
-            long? value = _single_modelVer_codec.Read(ref input);
-            if (modelVer_ == null || value != 0L) {
-              ModelVer = value;
-            }
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
-  public sealed partial class LineCandidate : pb::IMessage<LineCandidate>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class LineCandidate : pb::IMessage<LineCandidate> {
     private static readonly pb::MessageParser<LineCandidate> _parser = new pb::MessageParser<LineCandidate>(() => new LineCandidate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1081,9 +952,6 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1104,34 +972,7 @@ namespace Ssn.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Text = input.ReadString();
-            break;
-          }
-          case 17: {
-            Amount = input.ReadDouble();
-            break;
-          }
-          case 48: {
-            PageRef = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
