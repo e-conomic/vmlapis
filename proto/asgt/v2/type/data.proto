@@ -25,7 +25,7 @@ message Transaction {
 // Used in electronic-invoice-line requests.
 message InvoiceLine {
   // Id of the product (item).
-  string item_id = 1; // NOTE(lku) Can't do much - has non-english letters and even slashes
+  string item_id = 1;
   
   // Text of the invoice line. 
   string text = 2;
@@ -36,7 +36,7 @@ message InvoiceLine {
   Supplier supplier = 4;
 
   // reference to the customer.
-  string customer_ref = 5; // NOTE(lku) Can't do much - has non-english letters and even slashes
+  string customer_ref = 5;
 
   // Amount of the invoice line. 
   float amount = 7;
@@ -47,12 +47,14 @@ message Supplier {
   string id = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9]*$", max_bytes: 64 }];
 
   // Name of the supplier.
-  string name = 2; // NOTE(lku) has non-english letters and even slashes
+  string name = 2;
 
   // Global ID of the supplier.
   string global_id = 3;
 }
 
+// Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine 
+// structures can be used at a time.
 message Data {
   oneof data_structure {
     // Transaction-level information; at this time used only with bank transactions

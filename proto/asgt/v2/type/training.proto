@@ -8,10 +8,23 @@ import "google/protobuf/timestamp.proto";
 import "asgt/type/dataset.proto";
 
 message Training {
+    // Creation time of the training
     google.protobuf.Timestamp created_at = 1;
     string status = 2;
+    // Status of the training. 
+    // SCHEDULED - Training is scheduled to be run in a specific time. This
+    // could be in between 1 minute or 6 hours depending on how recently the dataset
+    // was created
+    // PENDING - The training is ready to be picked up a worker.
+    // RUNNING - The training is currently running.
+    // DONE - The training has completed successfully.
+    // FAILED - The training failed due to an error. See training status for
+    // more information.
     string training_status = 3;
+    // Additional information about the training status.
     string training_status_message = 4;
+    // Specifies when did the training finish.
     google.protobuf.Timestamp finish_time = 5;
+    // Specifies dataset the training ran on.
     asgt.type.Dataset dataset = 6;
 }

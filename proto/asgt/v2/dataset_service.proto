@@ -19,7 +19,7 @@ service DatasetService {
       description: "Manage datasets and examples used for training AutoSuggest models."
   };
 
-  // Get the basic information about a dataset. This matches the behavior of the v1 API's info operation.
+  // Get the basic information about a dataset.
   rpc GetDataset (GetDatasetRequest) returns (asgt.type.Dataset) {
     option (google.api.http) = {
       get: "/v2/datasets/{dataset_name}"
@@ -35,7 +35,8 @@ service DatasetService {
     };
   }
 
-  // Create a new dataset. If a dataset with such name already exsits, it will be updated with the 
+  // Not implemented yet. 
+  //Creates a new dataset. If a dataset with such name already exsits, it will be updated with the 
   // provided data.
   rpc CreateOrUpdateDataset (CreateOrUpdateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
@@ -152,6 +153,7 @@ message TruncateDatasetRequest {
 }
 
 message TrainingRequestOptions {
+  // The number of trainings to return. Ranges from 1 to 100.
   int64 limit = 1 [(validate.rules).int64 = { gt:0, lte: 100 }];  // mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
 }
 

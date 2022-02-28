@@ -61,11 +61,14 @@ message SuggestOptions {
 
   // Maximum number of suggestions to return per target
   int32 suggest_limit = 1;
+  // Not implemented yet. 
   asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
 }
 
 message SuggestRequest {
+  // Name of the dataset to make prediction against
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  // Input data to use for prediction
   asgt.v2.type.Data input = 2;
   SuggestOptions options = 3;
 }
@@ -76,7 +79,9 @@ message SuggestResponse {
 }
 
 message BatchSuggestRequest {
+  // Name of the dataset to make prediction against
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  // Input data to use for prediction
   repeated asgt.v2.type.Data inputs = 2;
   SuggestOptions options = 3;
 }
