@@ -1,4 +1,4 @@
-FROM buildpack-deps:groovy-scm
+FROM buildpack-deps:bullseye-scm
 
 RUN apt-get update && \
   apt-get install -y --no-install-recommends \
