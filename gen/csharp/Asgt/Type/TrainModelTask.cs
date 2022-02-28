@@ -41,11 +41,7 @@ namespace Asgt.Type {
 
   }
   #region Messages
-  public sealed partial class TrainModelTask : pb::IMessage<TrainModelTask>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class TrainModelTask : pb::IMessage<TrainModelTask> {
     private static readonly pb::MessageParser<TrainModelTask> _parser = new pb::MessageParser<TrainModelTask>(() => new TrainModelTask());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -212,9 +208,6 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -241,40 +234,7 @@ namespace Asgt.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (dataset_ == null) {
-              Dataset = new global::Asgt.Type.Dataset();
-            }
-            input.ReadMessage(Dataset);
-            break;
-          }
-          case 18: {
-            if (revision_ == null) {
-              Revision = new global::Asgt.Type.Revision();
-            }
-            input.ReadMessage(Revision);
-            break;
-          }
-          case 32: {
-            ModelVersion = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

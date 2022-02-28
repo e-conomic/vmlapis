@@ -55,11 +55,7 @@ namespace GenBqSchema {
   /// Message containing options related to BigQuery schema generation
   /// and management via Protobuf.
   /// </summary>
-  public sealed partial class BigQueryFieldOptions : pb::IMessage<BigQueryFieldOptions>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class BigQueryFieldOptions : pb::IMessage<BigQueryFieldOptions> {
     private static readonly pb::MessageParser<BigQueryFieldOptions> _parser = new pb::MessageParser<BigQueryFieldOptions>(() => new BigQueryFieldOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -287,9 +283,6 @@ namespace GenBqSchema {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -318,42 +311,7 @@ namespace GenBqSchema {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Require = input.ReadBool();
-            break;
-          }
-          case 18: {
-            TypeOverride = input.ReadString();
-            break;
-          }
-          case 24: {
-            Ignore = input.ReadBool();
-            break;
-          }
-          case 34: {
-            Description = input.ReadString();
-            break;
-          }
-          case 42: {
-            Name = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

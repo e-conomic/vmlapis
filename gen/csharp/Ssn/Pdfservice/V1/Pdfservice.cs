@@ -52,11 +52,7 @@ namespace Ssn.Pdfservice.V1 {
 
   }
   #region Messages
-  public sealed partial class RasterizePdfRequest : pb::IMessage<RasterizePdfRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class RasterizePdfRequest : pb::IMessage<RasterizePdfRequest> {
     private static readonly pb::MessageParser<RasterizePdfRequest> _parser = new pb::MessageParser<RasterizePdfRequest>(() => new RasterizePdfRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -265,9 +261,6 @@ namespace Ssn.Pdfservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -296,42 +289,7 @@ namespace Ssn.Pdfservice.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Data = input.ReadBytes();
-            break;
-          }
-          case 16: {
-            Dpi = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            Format = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format) input.ReadEnum();
-            break;
-          }
-          case 32: {
-            Color = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            Pages = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RasterizePdfRequest message type.</summary>
@@ -360,11 +318,7 @@ namespace Ssn.Pdfservice.V1 {
 
   }
 
-  public sealed partial class RasterizePdfResponse : pb::IMessage<RasterizePdfResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class RasterizePdfResponse : pb::IMessage<RasterizePdfResponse> {
     private static readonly pb::MessageParser<RasterizePdfResponse> _parser = new pb::MessageParser<RasterizePdfResponse>(() => new RasterizePdfResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -576,9 +530,6 @@ namespace Ssn.Pdfservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -607,42 +558,7 @@ namespace Ssn.Pdfservice.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Index = input.ReadUInt32();
-            break;
-          }
-          case 18: {
-            Data = input.ReadBytes();
-            break;
-          }
-          case 24: {
-            Width = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            Height = input.ReadUInt32();
-            break;
-          }
-          case 41: {
-            Scale = input.ReadDouble();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

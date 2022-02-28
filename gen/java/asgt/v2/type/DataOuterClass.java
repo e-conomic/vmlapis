@@ -3936,6 +3936,11 @@ public final class DataOuterClass {
     public asgt.v2.type.DataOuterClass.Data.DataStructureCase getDataStructureCase();
   }
   /**
+   * <pre>
+   * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
+   * structures can be used at a time.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.type.Data}
    */
   public static final class Data extends
@@ -4425,6 +4430,11 @@ public final class DataOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
+     * structures can be used at a time.
+     * </pre>
+     *
      * Protobuf type {@code asgt.v2.type.Data}
      */
     public static final class Builder extends

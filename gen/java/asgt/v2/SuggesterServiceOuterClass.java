@@ -29,11 +29,19 @@ public final class SuggesterServiceOuterClass {
     int getSuggestLimit();
 
     /**
+     * <pre>
+     * Not implemented yet.
+     * </pre>
+     *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
     /**
+     * <pre>
+     * Not implemented yet.
+     * </pre>
+     *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
      * @return The minConfidence.
      */
@@ -146,6 +154,10 @@ public final class SuggesterServiceOuterClass {
     public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
     private int minConfidence_;
     /**
+     * <pre>
+     * Not implemented yet.
+     * </pre>
+     *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
@@ -153,6 +165,10 @@ public final class SuggesterServiceOuterClass {
       return minConfidence_;
     }
     /**
+     * <pre>
+     * Not implemented yet.
+     * </pre>
+     *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
      * @return The minConfidence.
      */
@@ -525,6 +541,10 @@ public final class SuggesterServiceOuterClass {
 
       private int minConfidence_ = 0;
       /**
+       * <pre>
+       * Not implemented yet.
+       * </pre>
+       *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
        * @return The enum numeric value on the wire for minConfidence.
        */
@@ -532,6 +552,10 @@ public final class SuggesterServiceOuterClass {
         return minConfidence_;
       }
       /**
+       * <pre>
+       * Not implemented yet.
+       * </pre>
+       *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
        * @param value The enum numeric value on the wire for minConfidence to set.
        * @return This builder for chaining.
@@ -543,6 +567,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Not implemented yet.
+       * </pre>
+       *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
        * @return The minConfidence.
        */
@@ -553,6 +581,10 @@ public final class SuggesterServiceOuterClass {
         return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Not implemented yet.
+       * </pre>
+       *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
        * @param value The minConfidence to set.
        * @return This builder for chaining.
@@ -567,6 +599,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Not implemented yet.
+       * </pre>
+       *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -635,7 +671,7 @@ public final class SuggesterServiceOuterClass {
 
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -644,7 +680,7 @@ public final class SuggesterServiceOuterClass {
     java.lang.String getDatasetName();
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -654,16 +690,28 @@ public final class SuggesterServiceOuterClass {
         getDatasetNameBytes();
 
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>.asgt.v2.type.Data input = 2;</code>
      * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>.asgt.v2.type.Data input = 2;</code>
      * @return The input.
      */
     asgt.v2.type.DataOuterClass.Data getInput();
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>.asgt.v2.type.Data input = 2;</code>
      */
     asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder();
@@ -797,7 +845,7 @@ public final class SuggesterServiceOuterClass {
     private volatile java.lang.Object datasetName_;
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -818,7 +866,7 @@ public final class SuggesterServiceOuterClass {
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -842,6 +890,10 @@ public final class SuggesterServiceOuterClass {
     public static final int INPUT_FIELD_NUMBER = 2;
     private asgt.v2.type.DataOuterClass.Data input_;
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>.asgt.v2.type.Data input = 2;</code>
      * @return Whether the input field is set.
      */
@@ -850,6 +902,10 @@ public final class SuggesterServiceOuterClass {
       return input_ != null;
     }
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>.asgt.v2.type.Data input = 2;</code>
      * @return The input.
      */
@@ -858,6 +914,10 @@ public final class SuggesterServiceOuterClass {
       return input_ == null ? asgt.v2.type.DataOuterClass.Data.getDefaultInstance() : input_;
     }
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>.asgt.v2.type.Data input = 2;</code>
      */
     @java.lang.Override
@@ -1256,7 +1316,7 @@ public final class SuggesterServiceOuterClass {
       private java.lang.Object datasetName_ = "";
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -1276,7 +1336,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -1297,7 +1357,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -1316,7 +1376,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -1330,7 +1390,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -1353,6 +1413,10 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Data, asgt.v2.type.DataOuterClass.Data.Builder, asgt.v2.type.DataOuterClass.DataOrBuilder> inputBuilder_;
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        * @return Whether the input field is set.
        */
@@ -1360,6 +1424,10 @@ public final class SuggesterServiceOuterClass {
         return inputBuilder_ != null || input_ != null;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        * @return The input.
        */
@@ -1371,6 +1439,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        */
       public Builder setInput(asgt.v2.type.DataOuterClass.Data value) {
@@ -1387,6 +1459,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        */
       public Builder setInput(
@@ -1401,6 +1477,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        */
       public Builder mergeInput(asgt.v2.type.DataOuterClass.Data value) {
@@ -1419,6 +1499,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        */
       public Builder clearInput() {
@@ -1433,6 +1517,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder getInputBuilder() {
@@ -1441,6 +1529,10 @@ public final class SuggesterServiceOuterClass {
         return getInputFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
@@ -1452,6 +1544,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>.asgt.v2.type.Data input = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2469,7 +2565,7 @@ public final class SuggesterServiceOuterClass {
 
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -2478,7 +2574,7 @@ public final class SuggesterServiceOuterClass {
     java.lang.String getDatasetName();
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -2488,24 +2584,44 @@ public final class SuggesterServiceOuterClass {
         getDatasetNameBytes();
 
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     java.util.List<asgt.v2.type.DataOuterClass.Data> 
         getInputsList();
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     asgt.v2.type.DataOuterClass.Data getInputs(int index);
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     int getInputsCount();
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList();
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
@@ -2641,7 +2757,7 @@ public final class SuggesterServiceOuterClass {
     private volatile java.lang.Object datasetName_;
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -2662,7 +2778,7 @@ public final class SuggesterServiceOuterClass {
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset to make prediction against
      * </pre>
      *
      * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -2686,6 +2802,10 @@ public final class SuggesterServiceOuterClass {
     public static final int INPUTS_FIELD_NUMBER = 2;
     private java.util.List<asgt.v2.type.DataOuterClass.Data> inputs_;
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     @java.lang.Override
@@ -2693,6 +2813,10 @@ public final class SuggesterServiceOuterClass {
       return inputs_;
     }
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     @java.lang.Override
@@ -2701,6 +2825,10 @@ public final class SuggesterServiceOuterClass {
       return inputs_;
     }
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     @java.lang.Override
@@ -2708,6 +2836,10 @@ public final class SuggesterServiceOuterClass {
       return inputs_.size();
     }
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     @java.lang.Override
@@ -2715,6 +2847,10 @@ public final class SuggesterServiceOuterClass {
       return inputs_.get(index);
     }
     /**
+     * <pre>
+     * Input data to use for prediction
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
      */
     @java.lang.Override
@@ -3141,7 +3277,7 @@ public final class SuggesterServiceOuterClass {
       private java.lang.Object datasetName_ = "";
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -3161,7 +3297,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -3182,7 +3318,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -3201,7 +3337,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -3215,7 +3351,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * text-no-spaces
+       * Name of the dataset to make prediction against
        * </pre>
        *
        * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
@@ -3247,6 +3383,10 @@ public final class SuggesterServiceOuterClass {
           asgt.v2.type.DataOuterClass.Data, asgt.v2.type.DataOuterClass.Data.Builder, asgt.v2.type.DataOuterClass.DataOrBuilder> inputsBuilder_;
 
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public java.util.List<asgt.v2.type.DataOuterClass.Data> getInputsList() {
@@ -3257,6 +3397,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public int getInputsCount() {
@@ -3267,6 +3411,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.Data getInputs(int index) {
@@ -3277,6 +3425,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder setInputs(
@@ -3294,6 +3446,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder setInputs(
@@ -3308,6 +3464,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder addInputs(asgt.v2.type.DataOuterClass.Data value) {
@@ -3324,6 +3484,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
@@ -3341,6 +3505,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
@@ -3355,6 +3523,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
@@ -3369,6 +3541,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder addAllInputs(
@@ -3384,6 +3560,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder clearInputs() {
@@ -3397,6 +3577,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public Builder removeInputs(int index) {
@@ -3410,6 +3594,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder getInputsBuilder(
@@ -3417,6 +3605,10 @@ public final class SuggesterServiceOuterClass {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
@@ -3427,6 +3619,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
@@ -3438,6 +3634,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder addInputsBuilder() {
@@ -3445,6 +3645,10 @@ public final class SuggesterServiceOuterClass {
             asgt.v2.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder addInputsBuilder(
@@ -3453,6 +3657,10 @@ public final class SuggesterServiceOuterClass {
             index, asgt.v2.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Input data to use for prediction
+       * </pre>
+       *
        * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
        */
       public java.util.List<asgt.v2.type.DataOuterClass.Data.Builder> 

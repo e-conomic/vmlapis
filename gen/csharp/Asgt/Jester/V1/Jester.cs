@@ -57,11 +57,7 @@ namespace Asgt.Jester.V1 {
   /// <summary>
   /// AutoSuggest
   /// </summary>
-  public sealed partial class SuggestionResponse : pb::IMessage<SuggestionResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestionResponse : pb::IMessage<SuggestionResponse> {
     private static readonly pb::MessageParser<SuggestionResponse> _parser = new pb::MessageParser<SuggestionResponse>(() => new SuggestionResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -193,9 +189,6 @@ namespace Asgt.Jester.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -215,41 +208,11 @@ namespace Asgt.Jester.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            predictions_.AddEntriesFrom(ref input, _repeated_predictions_codec);
-            break;
-          }
-          case 18: {
-            if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
-            }
-            input.ReadMessage(Model);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
-  public sealed partial class SuggestionOptions : pb::IMessage<SuggestionOptions>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestionOptions : pb::IMessage<SuggestionOptions> {
     private static readonly pb::MessageParser<SuggestionOptions> _parser = new pb::MessageParser<SuggestionOptions>(() => new SuggestionOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -386,9 +349,6 @@ namespace Asgt.Jester.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -405,38 +365,11 @@ namespace Asgt.Jester.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            SuggestionLimit = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 
-  public sealed partial class SuggestionRequest : pb::IMessage<SuggestionRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class SuggestionRequest : pb::IMessage<SuggestionRequest> {
     private static readonly pb::MessageParser<SuggestionRequest> _parser = new pb::MessageParser<SuggestionRequest>(() => new SuggestionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -632,9 +565,6 @@ namespace Asgt.Jester.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -666,45 +596,7 @@ namespace Asgt.Jester.V1 {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Type = input.ReadString();
-            break;
-          }
-          case 26: {
-            inputs_.AddEntriesFrom(ref input, _repeated_inputs_codec);
-            break;
-          }
-          case 34: {
-            if (options_ == null) {
-              Options = new global::Asgt.Jester.V1.SuggestionOptions();
-            }
-            input.ReadMessage(Options);
-            break;
-          }
-          case 42: {
-            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

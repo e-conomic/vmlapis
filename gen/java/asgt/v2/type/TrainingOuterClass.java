@@ -19,16 +19,28 @@ public final class TrainingOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Creation time of the training
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation time of the training
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation time of the training
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
@@ -46,11 +58,35 @@ public final class TrainingOuterClass {
         getStatusBytes();
 
     /**
+     * <pre>
+     * Status of the training.
+     * SCHEDULED - Training is scheduled to be run in a specific time. This
+     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * was created
+     * PENDING - The training is ready to be picked up a worker.
+     * RUNNING - The training is currently running.
+     * DONE - The training has completed successfully.
+     * FAILED - The training failed due to an error. See training status for
+     * more information.
+     * </pre>
+     *
      * <code>string training_status = 3;</code>
      * @return The trainingStatus.
      */
     java.lang.String getTrainingStatus();
     /**
+     * <pre>
+     * Status of the training.
+     * SCHEDULED - Training is scheduled to be run in a specific time. This
+     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * was created
+     * PENDING - The training is ready to be picked up a worker.
+     * RUNNING - The training is currently running.
+     * DONE - The training has completed successfully.
+     * FAILED - The training failed due to an error. See training status for
+     * more information.
+     * </pre>
+     *
      * <code>string training_status = 3;</code>
      * @return The bytes for trainingStatus.
      */
@@ -58,11 +94,19 @@ public final class TrainingOuterClass {
         getTrainingStatusBytes();
 
     /**
+     * <pre>
+     * Additional information about the training status.
+     * </pre>
+     *
      * <code>string training_status_message = 4;</code>
      * @return The trainingStatusMessage.
      */
     java.lang.String getTrainingStatusMessage();
     /**
+     * <pre>
+     * Additional information about the training status.
+     * </pre>
+     *
      * <code>string training_status_message = 4;</code>
      * @return The bytes for trainingStatusMessage.
      */
@@ -70,31 +114,55 @@ public final class TrainingOuterClass {
         getTrainingStatusMessageBytes();
 
     /**
+     * <pre>
+     * Specifies when did the training finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
      * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
     /**
+     * <pre>
+     * Specifies when did the training finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
      * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
     /**
+     * <pre>
+     * Specifies when did the training finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
 
     /**
+     * <pre>
+     * Specifies dataset the training ran on.
+     * </pre>
+     *
      * <code>.asgt.type.Dataset dataset = 6;</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
+     * <pre>
+     * Specifies dataset the training ran on.
+     * </pre>
+     *
      * <code>.asgt.type.Dataset dataset = 6;</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
+     * <pre>
+     * Specifies dataset the training ran on.
+     * </pre>
+     *
      * <code>.asgt.type.Dataset dataset = 6;</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
@@ -239,6 +307,10 @@ public final class TrainingOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation time of the training
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      * @return Whether the createdAt field is set.
      */
@@ -247,6 +319,10 @@ public final class TrainingOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation time of the training
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      * @return The createdAt.
      */
@@ -255,6 +331,10 @@ public final class TrainingOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation time of the training
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      */
     @java.lang.Override
@@ -303,6 +383,18 @@ public final class TrainingOuterClass {
     public static final int TRAINING_STATUS_FIELD_NUMBER = 3;
     private volatile java.lang.Object trainingStatus_;
     /**
+     * <pre>
+     * Status of the training.
+     * SCHEDULED - Training is scheduled to be run in a specific time. This
+     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * was created
+     * PENDING - The training is ready to be picked up a worker.
+     * RUNNING - The training is currently running.
+     * DONE - The training has completed successfully.
+     * FAILED - The training failed due to an error. See training status for
+     * more information.
+     * </pre>
+     *
      * <code>string training_status = 3;</code>
      * @return The trainingStatus.
      */
@@ -320,6 +412,18 @@ public final class TrainingOuterClass {
       }
     }
     /**
+     * <pre>
+     * Status of the training.
+     * SCHEDULED - Training is scheduled to be run in a specific time. This
+     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * was created
+     * PENDING - The training is ready to be picked up a worker.
+     * RUNNING - The training is currently running.
+     * DONE - The training has completed successfully.
+     * FAILED - The training failed due to an error. See training status for
+     * more information.
+     * </pre>
+     *
      * <code>string training_status = 3;</code>
      * @return The bytes for trainingStatus.
      */
@@ -341,6 +445,10 @@ public final class TrainingOuterClass {
     public static final int TRAINING_STATUS_MESSAGE_FIELD_NUMBER = 4;
     private volatile java.lang.Object trainingStatusMessage_;
     /**
+     * <pre>
+     * Additional information about the training status.
+     * </pre>
+     *
      * <code>string training_status_message = 4;</code>
      * @return The trainingStatusMessage.
      */
@@ -358,6 +466,10 @@ public final class TrainingOuterClass {
       }
     }
     /**
+     * <pre>
+     * Additional information about the training status.
+     * </pre>
+     *
      * <code>string training_status_message = 4;</code>
      * @return The bytes for trainingStatusMessage.
      */
@@ -379,6 +491,10 @@ public final class TrainingOuterClass {
     public static final int FINISH_TIME_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp finishTime_;
     /**
+     * <pre>
+     * Specifies when did the training finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
      * @return Whether the finishTime field is set.
      */
@@ -387,6 +503,10 @@ public final class TrainingOuterClass {
       return finishTime_ != null;
     }
     /**
+     * <pre>
+     * Specifies when did the training finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
      * @return The finishTime.
      */
@@ -395,6 +515,10 @@ public final class TrainingOuterClass {
       return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
     /**
+     * <pre>
+     * Specifies when did the training finish.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 5;</code>
      */
     @java.lang.Override
@@ -405,6 +529,10 @@ public final class TrainingOuterClass {
     public static final int DATASET_FIELD_NUMBER = 6;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
+     * <pre>
+     * Specifies dataset the training ran on.
+     * </pre>
+     *
      * <code>.asgt.type.Dataset dataset = 6;</code>
      * @return Whether the dataset field is set.
      */
@@ -413,6 +541,10 @@ public final class TrainingOuterClass {
       return dataset_ != null;
     }
     /**
+     * <pre>
+     * Specifies dataset the training ran on.
+     * </pre>
+     *
      * <code>.asgt.type.Dataset dataset = 6;</code>
      * @return The dataset.
      */
@@ -421,6 +553,10 @@ public final class TrainingOuterClass {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
+     * <pre>
+     * Specifies dataset the training ran on.
+     * </pre>
+     *
      * <code>.asgt.type.Dataset dataset = 6;</code>
      */
     @java.lang.Override
@@ -858,6 +994,10 @@ public final class TrainingOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        * @return Whether the createdAt field is set.
        */
@@ -865,6 +1005,10 @@ public final class TrainingOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        * @return The createdAt.
        */
@@ -876,6 +1020,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -892,6 +1040,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       public Builder setCreatedAt(
@@ -906,6 +1058,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -924,6 +1080,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       public Builder clearCreatedAt() {
@@ -938,6 +1098,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -946,6 +1110,10 @@ public final class TrainingOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -957,6 +1125,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation time of the training
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1051,6 +1223,18 @@ public final class TrainingOuterClass {
 
       private java.lang.Object trainingStatus_ = "";
       /**
+       * <pre>
+       * Status of the training.
+       * SCHEDULED - Training is scheduled to be run in a specific time. This
+       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * was created
+       * PENDING - The training is ready to be picked up a worker.
+       * RUNNING - The training is currently running.
+       * DONE - The training has completed successfully.
+       * FAILED - The training failed due to an error. See training status for
+       * more information.
+       * </pre>
+       *
        * <code>string training_status = 3;</code>
        * @return The trainingStatus.
        */
@@ -1067,6 +1251,18 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Status of the training.
+       * SCHEDULED - Training is scheduled to be run in a specific time. This
+       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * was created
+       * PENDING - The training is ready to be picked up a worker.
+       * RUNNING - The training is currently running.
+       * DONE - The training has completed successfully.
+       * FAILED - The training failed due to an error. See training status for
+       * more information.
+       * </pre>
+       *
        * <code>string training_status = 3;</code>
        * @return The bytes for trainingStatus.
        */
@@ -1084,6 +1280,18 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Status of the training.
+       * SCHEDULED - Training is scheduled to be run in a specific time. This
+       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * was created
+       * PENDING - The training is ready to be picked up a worker.
+       * RUNNING - The training is currently running.
+       * DONE - The training has completed successfully.
+       * FAILED - The training failed due to an error. See training status for
+       * more information.
+       * </pre>
+       *
        * <code>string training_status = 3;</code>
        * @param value The trainingStatus to set.
        * @return This builder for chaining.
@@ -1099,6 +1307,18 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the training.
+       * SCHEDULED - Training is scheduled to be run in a specific time. This
+       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * was created
+       * PENDING - The training is ready to be picked up a worker.
+       * RUNNING - The training is currently running.
+       * DONE - The training has completed successfully.
+       * FAILED - The training failed due to an error. See training status for
+       * more information.
+       * </pre>
+       *
        * <code>string training_status = 3;</code>
        * @return This builder for chaining.
        */
@@ -1109,6 +1329,18 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the training.
+       * SCHEDULED - Training is scheduled to be run in a specific time. This
+       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * was created
+       * PENDING - The training is ready to be picked up a worker.
+       * RUNNING - The training is currently running.
+       * DONE - The training has completed successfully.
+       * FAILED - The training failed due to an error. See training status for
+       * more information.
+       * </pre>
+       *
        * <code>string training_status = 3;</code>
        * @param value The bytes for trainingStatus to set.
        * @return This builder for chaining.
@@ -1127,6 +1359,10 @@ public final class TrainingOuterClass {
 
       private java.lang.Object trainingStatusMessage_ = "";
       /**
+       * <pre>
+       * Additional information about the training status.
+       * </pre>
+       *
        * <code>string training_status_message = 4;</code>
        * @return The trainingStatusMessage.
        */
@@ -1143,6 +1379,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional information about the training status.
+       * </pre>
+       *
        * <code>string training_status_message = 4;</code>
        * @return The bytes for trainingStatusMessage.
        */
@@ -1160,6 +1400,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional information about the training status.
+       * </pre>
+       *
        * <code>string training_status_message = 4;</code>
        * @param value The trainingStatusMessage to set.
        * @return This builder for chaining.
@@ -1175,6 +1419,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional information about the training status.
+       * </pre>
+       *
        * <code>string training_status_message = 4;</code>
        * @return This builder for chaining.
        */
@@ -1185,6 +1433,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional information about the training status.
+       * </pre>
+       *
        * <code>string training_status_message = 4;</code>
        * @param value The bytes for trainingStatusMessage to set.
        * @return This builder for chaining.
@@ -1205,6 +1457,10 @@ public final class TrainingOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        * @return Whether the finishTime field is set.
        */
@@ -1212,6 +1468,10 @@ public final class TrainingOuterClass {
         return finishTimeBuilder_ != null || finishTime_ != null;
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        * @return The finishTime.
        */
@@ -1223,6 +1483,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        */
       public Builder setFinishTime(com.google.protobuf.Timestamp value) {
@@ -1239,6 +1503,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        */
       public Builder setFinishTime(
@@ -1253,6 +1521,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
@@ -1271,6 +1543,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        */
       public Builder clearFinishTime() {
@@ -1285,6 +1561,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
@@ -1293,6 +1573,10 @@ public final class TrainingOuterClass {
         return getFinishTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
@@ -1304,6 +1588,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specifies when did the training finish.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1324,6 +1612,10 @@ public final class TrainingOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        * @return Whether the dataset field is set.
        */
@@ -1331,6 +1623,10 @@ public final class TrainingOuterClass {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        * @return The dataset.
        */
@@ -1342,6 +1638,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
@@ -1358,6 +1658,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        */
       public Builder setDataset(
@@ -1372,6 +1676,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
@@ -1390,6 +1698,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        */
       public Builder clearDataset() {
@@ -1404,6 +1716,10 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
@@ -1412,6 +1728,10 @@ public final class TrainingOuterClass {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -1423,6 +1743,10 @@ public final class TrainingOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specifies dataset the training ran on.
+       * </pre>
+       *
        * <code>.asgt.type.Dataset dataset = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

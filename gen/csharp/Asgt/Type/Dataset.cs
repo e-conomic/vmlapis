@@ -45,11 +45,7 @@ namespace Asgt.Type {
 
   }
   #region Messages
-  public sealed partial class Dataset : pb::IMessage<Dataset>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
+  public sealed partial class Dataset : pb::IMessage<Dataset> {
     private static readonly pb::MessageParser<Dataset> _parser = new pb::MessageParser<Dataset>(() => new Dataset());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -377,9 +373,6 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -440,74 +433,7 @@ namespace Asgt.Type {
           }
         }
       }
-    #endif
     }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Consumer = input.ReadString();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Type = input.ReadString();
-            break;
-          }
-          case 34: {
-            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
-            break;
-          }
-          case 42: {
-            targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
-            break;
-          }
-          case 74: {
-            if (retentionPolicy_ == null) {
-              RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
-            }
-            input.ReadMessage(RetentionPolicy);
-            break;
-          }
-          case 82: {
-            if (createdAt_ == null) {
-              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreatedAt);
-            break;
-          }
-          case 90: {
-            if (updatedAt_ == null) {
-              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdatedAt);
-            break;
-          }
-          case 96: {
-            Size = input.ReadInt64();
-            break;
-          }
-          case 106: {
-            if (truncatedAt_ == null) {
-              TruncatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(TruncatedAt);
-            break;
-          }
-        }
-      }
-    }
-    #endif
 
   }
 

@@ -6525,7 +6525,7 @@ public final class DatasetServiceOuterClass {
 
     /**
      * <pre>
-     * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+     * The number of trainings to return. Ranges from 1 to 100.
      * </pre>
      *
      * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
@@ -6619,7 +6619,7 @@ public final class DatasetServiceOuterClass {
     private long limit_;
     /**
      * <pre>
-     * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+     * The number of trainings to return. Ranges from 1 to 100.
      * </pre>
      *
      * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
@@ -6936,7 +6936,7 @@ public final class DatasetServiceOuterClass {
       private long limit_ ;
       /**
        * <pre>
-       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
        * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
@@ -6948,7 +6948,7 @@ public final class DatasetServiceOuterClass {
       }
       /**
        * <pre>
-       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
        * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
@@ -6963,7 +6963,7 @@ public final class DatasetServiceOuterClass {
       }
       /**
        * <pre>
-       * mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+       * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
        * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
