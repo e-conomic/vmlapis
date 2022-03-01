@@ -106,7 +106,8 @@ namespace Asgt.V2.Type {
     public const int IdFieldNumber = 3;
     private string id_ = "";
     /// <summary>
-    /// An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+    /// Not implemented yet.
+    /// An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {

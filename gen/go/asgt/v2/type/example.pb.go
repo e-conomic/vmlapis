@@ -29,7 +29,8 @@ type Example struct {
 
 	Data         *Data          `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
 	TargetValues []*TargetValue `protobuf:"bytes,2,rep,name=target_values,json=targetValues,proto3" json:"target_values,omitempty"`
-	// An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+	// Not implemented yet.
+	// An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
 	Id string `protobuf:"bytes,3,opt,name=id,proto3" json:"id,omitempty"`
 }
 

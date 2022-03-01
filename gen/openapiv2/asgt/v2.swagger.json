@@ -246,7 +246,7 @@
           },
           {
             "name": "example.id",
-            "description": "An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.",
+            "description": "Not implemented yet.\nAn optional id to provide individual corrections to examples, for example when a user updates their initial feedback.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -757,7 +757,7 @@
         },
         "id": {
           "type": "string",
-          "description": "An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback."
+          "description": "Not implemented yet.\nAn optional id to provide individual corrections to examples, for example when a user updates their initial feedback."
         }
       },
       "title": "A pair of example data and example target values"
