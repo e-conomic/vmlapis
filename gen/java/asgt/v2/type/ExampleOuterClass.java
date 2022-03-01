@@ -59,7 +59,8 @@ public final class ExampleOuterClass {
 
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+     * Not implemented yet.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -68,7 +69,8 @@ public final class ExampleOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+     * Not implemented yet.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -262,7 +264,8 @@ public final class ExampleOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+     * Not implemented yet.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -283,7 +286,8 @@ public final class ExampleOuterClass {
     }
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+     * Not implemented yet.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
      * </pre>
      *
      * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -1059,7 +1063,8 @@ public final class ExampleOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+       * Not implemented yet.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -1079,7 +1084,8 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+       * Not implemented yet.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -1100,7 +1106,8 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+       * Not implemented yet.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -1119,7 +1126,8 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+       * Not implemented yet.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
@@ -1133,7 +1141,8 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+       * Not implemented yet.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
        * </pre>
        *
        * <code>string id = 3 [(.validate.rules) = { ... }</code>
