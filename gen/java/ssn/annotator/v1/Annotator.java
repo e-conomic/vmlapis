@@ -384,6 +384,86 @@ public final class Annotator {
        * <code>PREVIEW = 26;</code>
        */
       PREVIEW(26),
+      /**
+       * <pre>
+       * Run bank account number detection
+       * </pre>
+       *
+       * <code>BANK_ACCOUNT_NUMBER = 27;</code>
+       */
+      BANK_ACCOUNT_NUMBER(27),
+      /**
+       * <pre>
+       * Run bank registration number detection
+       * </pre>
+       *
+       * <code>BANK_REGISTRATION_NUMBER = 28;</code>
+       */
+      BANK_REGISTRATION_NUMBER(28),
+      /**
+       * <pre>
+       * Run business identifier code detection
+       * </pre>
+       *
+       * <code>BIC = 29;</code>
+       */
+      BIC(29),
+      /**
+       * <pre>
+       * Run document number detection
+       * </pre>
+       *
+       * <code>DOCUMENT_NUMBER = 30;</code>
+       */
+      DOCUMENT_NUMBER(30),
+      /**
+       * <pre>
+       * Run document date detection
+       * </pre>
+       *
+       * <code>DOCUMENT_DATE = 31;</code>
+       */
+      DOCUMENT_DATE(31),
+      /**
+       * <pre>
+       * Run order number detection
+       * </pre>
+       *
+       * <code>ORDER_NUMBER = 32;</code>
+       */
+      ORDER_NUMBER(32),
+      /**
+       * <pre>
+       * Run spplier name detection
+       * </pre>
+       *
+       * <code>SUPPLIER_NAME = 33;</code>
+       */
+      SUPPLIER_NAME(33),
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run supplier VAT detection
+       * </pre>
+       *
+       * <code>SUPPLIER_VAT_NUMBER = 34;</code>
+       */
+      SUPPLIER_VAT_NUMBER(34),
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run supplier organisation number detection
+       * </pre>
+       *
+       * <code>SUPPLIER_ORGANISATION_NUMBER = 35;</code>
+       */
+      SUPPLIER_ORGANISATION_NUMBER(35),
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run supplier address detection
+       * </pre>
+       *
+       * <code>SUPPLIER_ADDRESS = 36;</code>
+       */
+      SUPPLIER_ADDRESS(36),
       UNRECOGNIZED(-1),
       ;
 
@@ -603,6 +683,86 @@ public final class Annotator {
        * <code>PREVIEW = 26;</code>
        */
       public static final int PREVIEW_VALUE = 26;
+      /**
+       * <pre>
+       * Run bank account number detection
+       * </pre>
+       *
+       * <code>BANK_ACCOUNT_NUMBER = 27;</code>
+       */
+      public static final int BANK_ACCOUNT_NUMBER_VALUE = 27;
+      /**
+       * <pre>
+       * Run bank registration number detection
+       * </pre>
+       *
+       * <code>BANK_REGISTRATION_NUMBER = 28;</code>
+       */
+      public static final int BANK_REGISTRATION_NUMBER_VALUE = 28;
+      /**
+       * <pre>
+       * Run business identifier code detection
+       * </pre>
+       *
+       * <code>BIC = 29;</code>
+       */
+      public static final int BIC_VALUE = 29;
+      /**
+       * <pre>
+       * Run document number detection
+       * </pre>
+       *
+       * <code>DOCUMENT_NUMBER = 30;</code>
+       */
+      public static final int DOCUMENT_NUMBER_VALUE = 30;
+      /**
+       * <pre>
+       * Run document date detection
+       * </pre>
+       *
+       * <code>DOCUMENT_DATE = 31;</code>
+       */
+      public static final int DOCUMENT_DATE_VALUE = 31;
+      /**
+       * <pre>
+       * Run order number detection
+       * </pre>
+       *
+       * <code>ORDER_NUMBER = 32;</code>
+       */
+      public static final int ORDER_NUMBER_VALUE = 32;
+      /**
+       * <pre>
+       * Run spplier name detection
+       * </pre>
+       *
+       * <code>SUPPLIER_NAME = 33;</code>
+       */
+      public static final int SUPPLIER_NAME_VALUE = 33;
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run supplier VAT detection
+       * </pre>
+       *
+       * <code>SUPPLIER_VAT_NUMBER = 34;</code>
+       */
+      public static final int SUPPLIER_VAT_NUMBER_VALUE = 34;
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run supplier organisation number detection
+       * </pre>
+       *
+       * <code>SUPPLIER_ORGANISATION_NUMBER = 35;</code>
+       */
+      public static final int SUPPLIER_ORGANISATION_NUMBER_VALUE = 35;
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run supplier address detection
+       * </pre>
+       *
+       * <code>SUPPLIER_ADDRESS = 36;</code>
+       */
+      public static final int SUPPLIER_ADDRESS_VALUE = 36;
 
 
       public final int getNumber() {
@@ -656,6 +816,16 @@ public final class Annotator {
           case 24: return IBAN;
           case 25: return LINES;
           case 26: return PREVIEW;
+          case 27: return BANK_ACCOUNT_NUMBER;
+          case 28: return BANK_REGISTRATION_NUMBER;
+          case 29: return BIC;
+          case 30: return DOCUMENT_NUMBER;
+          case 31: return DOCUMENT_DATE;
+          case 32: return ORDER_NUMBER;
+          case 33: return SUPPLIER_NAME;
+          case 34: return SUPPLIER_VAT_NUMBER;
+          case 35: return SUPPLIER_ORGANISATION_NUMBER;
+          case 36: return SUPPLIER_ADDRESS;
           default: return null;
         }
       }
@@ -3509,6 +3679,8 @@ public final class Annotator {
 
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -3520,6 +3692,8 @@ public final class Annotator {
         getInvoiceNumberList();
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -3530,6 +3704,8 @@ public final class Annotator {
     ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index);
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -3540,6 +3716,8 @@ public final class Annotator {
     int getInvoiceNumberCount();
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -3551,6 +3729,8 @@ public final class Annotator {
         getInvoiceNumberOrBuilderList();
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -4005,11 +4185,21 @@ public final class Annotator {
         getTextBytes();
 
     /**
+     * <pre>
+     * Feedback ID is used to correct made predictions through the
+     * Feedback API.
+     * </pre>
+     *
      * <code>string feedback_id = 24;</code>
      * @return The feedbackId.
      */
     java.lang.String getFeedbackId();
     /**
+     * <pre>
+     * Feedback ID is used to correct made predictions through the
+     * Feedback API.
+     * </pre>
+     *
      * <code>string feedback_id = 24;</code>
      * @return The bytes for feedbackId.
      */
@@ -4138,6 +4328,461 @@ public final class Annotator {
      */
     com.google.protobuf.ByteString
         getPreviewBytes();
+
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getBankAccountNumberList();
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index);
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    int getBankAccountNumberCount();
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getBankAccountNumberOrBuilderList();
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getBankRegistrationNumberList();
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index);
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    int getBankRegistrationNumberCount();
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getBankRegistrationNumberOrBuilderList();
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getBicList();
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getBic(int index);
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    int getBicCount();
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getBicOrBuilderList();
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getDocumentNumberList();
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index);
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    int getDocumentNumberCount();
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getDocumentNumberOrBuilderList();
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getDocumentDateList();
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index);
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    int getDocumentDateCount();
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getDocumentDateOrBuilderList();
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getOrderNumberList();
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index);
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    int getOrderNumberCount();
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getOrderNumberOrBuilderList();
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getSupplierNameList();
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getSupplierName(int index);
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    int getSupplierNameCount();
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierNameOrBuilderList();
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getSupplierVatNumberList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index);
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    int getSupplierVatNumberCount();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierVatNumberOrBuilderList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getSupplierOrganisationNumberList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index);
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    int getSupplierOrganisationNumberCount();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getSupplierAddressList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index);
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    int getSupplierAddressCount();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierAddressOrBuilderList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
@@ -4178,6 +4823,16 @@ public final class Annotator {
       iban_ = java.util.Collections.emptyList();
       lines_ = java.util.Collections.emptyList();
       preview_ = "";
+      bankAccountNumber_ = java.util.Collections.emptyList();
+      bankRegistrationNumber_ = java.util.Collections.emptyList();
+      bic_ = java.util.Collections.emptyList();
+      documentNumber_ = java.util.Collections.emptyList();
+      documentDate_ = java.util.Collections.emptyList();
+      orderNumber_ = java.util.Collections.emptyList();
+      supplierName_ = java.util.Collections.emptyList();
+      supplierVatNumber_ = java.util.Collections.emptyList();
+      supplierOrganisationNumber_ = java.util.Collections.emptyList();
+      supplierAddress_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4201,6 +4856,7 @@ public final class Annotator {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4449,6 +5105,96 @@ public final class Annotator {
               preview_ = s;
               break;
             }
+            case 226: {
+              if (!((mutable_bitField0_ & 0x00800000) != 0)) {
+                bankAccountNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x00800000;
+              }
+              bankAccountNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x01000000) != 0)) {
+                bankRegistrationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x01000000;
+              }
+              bankRegistrationNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 242: {
+              if (!((mutable_bitField0_ & 0x02000000) != 0)) {
+                bic_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x02000000;
+              }
+              bic_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 250: {
+              if (!((mutable_bitField0_ & 0x04000000) != 0)) {
+                documentNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x04000000;
+              }
+              documentNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 258: {
+              if (!((mutable_bitField0_ & 0x08000000) != 0)) {
+                documentDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x08000000;
+              }
+              documentDate_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 266: {
+              if (!((mutable_bitField0_ & 0x10000000) != 0)) {
+                orderNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x10000000;
+              }
+              orderNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 274: {
+              if (!((mutable_bitField0_ & 0x20000000) != 0)) {
+                supplierName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x20000000;
+              }
+              supplierName_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 282: {
+              if (!((mutable_bitField0_ & 0x40000000) != 0)) {
+                supplierVatNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x40000000;
+              }
+              supplierVatNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 290: {
+              if (!((mutable_bitField0_ & 0x80000000) != 0)) {
+                supplierOrganisationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x80000000;
+              }
+              supplierOrganisationNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
+            case 298: {
+              if (!((mutable_bitField1_ & 0x00000001) != 0)) {
+                supplierAddress_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField1_ |= 0x00000001;
+              }
+              supplierAddress_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4532,6 +5278,36 @@ public final class Annotator {
         }
         if (((mutable_bitField0_ & 0x00400000) != 0)) {
           lines_ = java.util.Collections.unmodifiableList(lines_);
+        }
+        if (((mutable_bitField0_ & 0x00800000) != 0)) {
+          bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
+        }
+        if (((mutable_bitField0_ & 0x01000000) != 0)) {
+          bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
+        }
+        if (((mutable_bitField0_ & 0x02000000) != 0)) {
+          bic_ = java.util.Collections.unmodifiableList(bic_);
+        }
+        if (((mutable_bitField0_ & 0x04000000) != 0)) {
+          documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+        }
+        if (((mutable_bitField0_ & 0x08000000) != 0)) {
+          documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+        }
+        if (((mutable_bitField0_ & 0x10000000) != 0)) {
+          orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+        }
+        if (((mutable_bitField0_ & 0x20000000) != 0)) {
+          supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+        }
+        if (((mutable_bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+        if (((mutable_bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+        if (((mutable_bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -5334,6 +6110,8 @@ public final class Annotator {
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> invoiceNumber_;
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -5347,6 +6125,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -5361,6 +6141,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -5374,6 +6156,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -5387,6 +6171,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * use document number instead
      * invoiceNumber
      * The supplier defined identifier af the invoice
      * Example: "12345-A99"
@@ -6027,6 +6813,11 @@ public final class Annotator {
     public static final int FEEDBACK_ID_FIELD_NUMBER = 24;
     private volatile java.lang.Object feedbackId_;
     /**
+     * <pre>
+     * Feedback ID is used to correct made predictions through the
+     * Feedback API.
+     * </pre>
+     *
      * <code>string feedback_id = 24;</code>
      * @return The feedbackId.
      */
@@ -6044,6 +6835,11 @@ public final class Annotator {
       }
     }
     /**
+     * <pre>
+     * Feedback ID is used to correct made predictions through the
+     * Feedback API.
+     * </pre>
+     *
      * <code>string feedback_id = 24;</code>
      * @return The bytes for feedbackId.
      */
@@ -6243,6 +7039,621 @@ public final class Annotator {
       }
     }
 
+    public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 28;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankAccountNumber_;
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankAccountNumberList() {
+      return bankAccountNumber_;
+    }
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getBankAccountNumberOrBuilderList() {
+      return bankAccountNumber_;
+    }
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    @java.lang.Override
+    public int getBankAccountNumberCount() {
+      return bankAccountNumber_.size();
+    }
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index) {
+      return bankAccountNumber_.get(index);
+    }
+    /**
+     * <pre>
+     * Country specific bank account number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
+        int index) {
+      return bankAccountNumber_.get(index);
+    }
+
+    public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 29;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankRegistrationNumber_;
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankRegistrationNumberList() {
+      return bankRegistrationNumber_;
+    }
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getBankRegistrationNumberOrBuilderList() {
+      return bankRegistrationNumber_;
+    }
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    @java.lang.Override
+    public int getBankRegistrationNumberCount() {
+      return bankRegistrationNumber_.size();
+    }
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index) {
+      return bankRegistrationNumber_.get(index);
+    }
+    /**
+     * <pre>
+     * Country specific bank registration number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
+        int index) {
+      return bankRegistrationNumber_.get(index);
+    }
+
+    public static final int BIC_FIELD_NUMBER = 30;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> bic_;
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBicList() {
+      return bic_;
+    }
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getBicOrBuilderList() {
+      return bic_;
+    }
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    @java.lang.Override
+    public int getBicCount() {
+      return bic_.size();
+    }
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getBic(int index) {
+      return bic_.get(index);
+    }
+    /**
+     * <pre>
+     * Returns business identifier code
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
+        int index) {
+      return bic_.get(index);
+    }
+
+    public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 31;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentNumber_;
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentNumberList() {
+      return documentNumber_;
+    }
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getDocumentNumberOrBuilderList() {
+      return documentNumber_;
+    }
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    @java.lang.Override
+    public int getDocumentNumberCount() {
+      return documentNumber_.size();
+    }
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index) {
+      return documentNumber_.get(index);
+    }
+    /**
+     * <pre>
+     * Represents identifier of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
+        int index) {
+      return documentNumber_.get(index);
+    }
+
+    public static final int DOCUMENT_DATE_FIELD_NUMBER = 32;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentDate_;
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentDateList() {
+      return documentDate_;
+    }
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getDocumentDateOrBuilderList() {
+      return documentDate_;
+    }
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    @java.lang.Override
+    public int getDocumentDateCount() {
+      return documentDate_.size();
+    }
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index) {
+      return documentDate_.get(index);
+    }
+    /**
+     * <pre>
+     * Returns document date
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
+        int index) {
+      return documentDate_.get(index);
+    }
+
+    public static final int ORDER_NUMBER_FIELD_NUMBER = 33;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderNumber_;
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderNumberList() {
+      return orderNumber_;
+    }
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getOrderNumberOrBuilderList() {
+      return orderNumber_;
+    }
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    @java.lang.Override
+    public int getOrderNumberCount() {
+      return orderNumber_.size();
+    }
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index) {
+      return orderNumber_.get(index);
+    }
+    /**
+     * <pre>
+     * Represents the identifier that supplier assigned to the order
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
+        int index) {
+      return orderNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_NAME_FIELD_NUMBER = 34;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierName_;
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierNameList() {
+      return supplierName_;
+    }
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierNameOrBuilderList() {
+      return supplierName_;
+    }
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    @java.lang.Override
+    public int getSupplierNameCount() {
+      return supplierName_.size();
+    }
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getSupplierName(int index) {
+      return supplierName_.get(index);
+    }
+    /**
+     * <pre>
+     * Returns supplier name
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
+        int index) {
+      return supplierName_.get(index);
+    }
+
+    public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 35;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierVatNumber_;
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierVatNumberList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierVatNumberOrBuilderList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    @java.lang.Override
+    public int getSupplierVatNumberCount() {
+      return supplierVatNumber_.size();
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index) {
+      return supplierVatNumber_.get(index);
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier VAT number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
+        int index) {
+      return supplierVatNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 36;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierOrganisationNumber_;
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierOrganisationNumberList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    @java.lang.Override
+    public int getSupplierOrganisationNumberCount() {
+      return supplierOrganisationNumber_.size();
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns the business ID or organisation number of the supplier
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 37;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierAddress_;
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierAddressList() {
+      return supplierAddress_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getSupplierAddressOrBuilderList() {
+      return supplierAddress_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    @java.lang.Override
+    public int getSupplierAddressCount() {
+      return supplierAddress_.size();
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index) {
+      return supplierAddress_.get(index);
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns supplier address
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
+        int index) {
+      return supplierAddress_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6337,6 +7748,36 @@ public final class Annotator {
       }
       if (!getPreviewBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, preview_);
+      }
+      for (int i = 0; i < bankAccountNumber_.size(); i++) {
+        output.writeMessage(28, bankAccountNumber_.get(i));
+      }
+      for (int i = 0; i < bankRegistrationNumber_.size(); i++) {
+        output.writeMessage(29, bankRegistrationNumber_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        output.writeMessage(30, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        output.writeMessage(31, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        output.writeMessage(32, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        output.writeMessage(33, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        output.writeMessage(34, supplierName_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        output.writeMessage(35, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        output.writeMessage(36, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        output.writeMessage(37, supplierAddress_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -6452,6 +7893,46 @@ public final class Annotator {
       if (!getPreviewBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, preview_);
       }
+      for (int i = 0; i < bankAccountNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, bankAccountNumber_.get(i));
+      }
+      for (int i = 0; i < bankRegistrationNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, bankRegistrationNumber_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, supplierName_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(35, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(36, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(37, supplierAddress_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6524,6 +8005,26 @@ public final class Annotator {
           .equals(other.getLinesList())) return false;
       if (!getPreview()
           .equals(other.getPreview())) return false;
+      if (!getBankAccountNumberList()
+          .equals(other.getBankAccountNumberList())) return false;
+      if (!getBankRegistrationNumberList()
+          .equals(other.getBankRegistrationNumberList())) return false;
+      if (!getBicList()
+          .equals(other.getBicList())) return false;
+      if (!getDocumentNumberList()
+          .equals(other.getDocumentNumberList())) return false;
+      if (!getDocumentDateList()
+          .equals(other.getDocumentDateList())) return false;
+      if (!getOrderNumberList()
+          .equals(other.getOrderNumberList())) return false;
+      if (!getSupplierNameList()
+          .equals(other.getSupplierNameList())) return false;
+      if (!getSupplierVatNumberList()
+          .equals(other.getSupplierVatNumberList())) return false;
+      if (!getSupplierOrganisationNumberList()
+          .equals(other.getSupplierOrganisationNumberList())) return false;
+      if (!getSupplierAddressList()
+          .equals(other.getSupplierAddressList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6637,6 +8138,46 @@ public final class Annotator {
       }
       hash = (37 * hash) + PREVIEW_FIELD_NUMBER;
       hash = (53 * hash) + getPreview().hashCode();
+      if (getBankAccountNumberCount() > 0) {
+        hash = (37 * hash) + BANK_ACCOUNT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getBankAccountNumberList().hashCode();
+      }
+      if (getBankRegistrationNumberCount() > 0) {
+        hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getBankRegistrationNumberList().hashCode();
+      }
+      if (getBicCount() > 0) {
+        hash = (37 * hash) + BIC_FIELD_NUMBER;
+        hash = (53 * hash) + getBicList().hashCode();
+      }
+      if (getDocumentNumberCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentNumberList().hashCode();
+      }
+      if (getDocumentDateCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentDateList().hashCode();
+      }
+      if (getOrderNumberCount() > 0) {
+        hash = (37 * hash) + ORDER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderNumberList().hashCode();
+      }
+      if (getSupplierNameCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierNameList().hashCode();
+      }
+      if (getSupplierVatNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_VAT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierVatNumberList().hashCode();
+      }
+      if (getSupplierOrganisationNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierOrganisationNumberList().hashCode();
+      }
+      if (getSupplierAddressCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierAddressList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6788,6 +8329,16 @@ public final class Annotator {
           getOcrLineNlPaymentIdFieldBuilder();
           getIbanFieldBuilder();
           getLinesFieldBuilder();
+          getBankAccountNumberFieldBuilder();
+          getBankRegistrationNumberFieldBuilder();
+          getBicFieldBuilder();
+          getDocumentNumberFieldBuilder();
+          getDocumentDateFieldBuilder();
+          getOrderNumberFieldBuilder();
+          getSupplierNameFieldBuilder();
+          getSupplierVatNumberFieldBuilder();
+          getSupplierOrganisationNumberFieldBuilder();
+          getSupplierAddressFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6943,6 +8494,66 @@ public final class Annotator {
         }
         preview_ = "";
 
+        if (bankAccountNumberBuilder_ == null) {
+          bankAccountNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00800000);
+        } else {
+          bankAccountNumberBuilder_.clear();
+        }
+        if (bankRegistrationNumberBuilder_ == null) {
+          bankRegistrationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x01000000);
+        } else {
+          bankRegistrationNumberBuilder_.clear();
+        }
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+        } else {
+          bicBuilder_.clear();
+        }
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+        } else {
+          documentDateBuilder_.clear();
+        }
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+        } else {
+          supplierAddressBuilder_.clear();
+        }
         return this;
       }
 
@@ -6970,6 +8581,7 @@ public final class Annotator {
       public ssn.annotator.v1.Annotator.DocumentAnnotatorResponse buildPartial() {
         ssn.annotator.v1.Annotator.DocumentAnnotatorResponse result = new ssn.annotator.v1.Annotator.DocumentAnnotatorResponse(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         if (orderDateBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
@@ -7185,6 +8797,96 @@ public final class Annotator {
           result.lines_ = linesBuilder_.build();
         }
         result.preview_ = preview_;
+        if (bankAccountNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00800000) != 0)) {
+            bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
+            bitField0_ = (bitField0_ & ~0x00800000);
+          }
+          result.bankAccountNumber_ = bankAccountNumber_;
+        } else {
+          result.bankAccountNumber_ = bankAccountNumberBuilder_.build();
+        }
+        if (bankRegistrationNumberBuilder_ == null) {
+          if (((bitField0_ & 0x01000000) != 0)) {
+            bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
+            bitField0_ = (bitField0_ & ~0x01000000);
+          }
+          result.bankRegistrationNumber_ = bankRegistrationNumber_;
+        } else {
+          result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_.build();
+        }
+        if (bicBuilder_ == null) {
+          if (((bitField0_ & 0x02000000) != 0)) {
+            bic_ = java.util.Collections.unmodifiableList(bic_);
+            bitField0_ = (bitField0_ & ~0x02000000);
+          }
+          result.bic_ = bic_;
+        } else {
+          result.bic_ = bicBuilder_.build();
+        }
+        if (documentNumberBuilder_ == null) {
+          if (((bitField0_ & 0x04000000) != 0)) {
+            documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+            bitField0_ = (bitField0_ & ~0x04000000);
+          }
+          result.documentNumber_ = documentNumber_;
+        } else {
+          result.documentNumber_ = documentNumberBuilder_.build();
+        }
+        if (documentDateBuilder_ == null) {
+          if (((bitField0_ & 0x08000000) != 0)) {
+            documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+            bitField0_ = (bitField0_ & ~0x08000000);
+          }
+          result.documentDate_ = documentDate_;
+        } else {
+          result.documentDate_ = documentDateBuilder_.build();
+        }
+        if (orderNumberBuilder_ == null) {
+          if (((bitField0_ & 0x10000000) != 0)) {
+            orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+            bitField0_ = (bitField0_ & ~0x10000000);
+          }
+          result.orderNumber_ = orderNumber_;
+        } else {
+          result.orderNumber_ = orderNumberBuilder_.build();
+        }
+        if (supplierNameBuilder_ == null) {
+          if (((bitField0_ & 0x20000000) != 0)) {
+            supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+            bitField0_ = (bitField0_ & ~0x20000000);
+          }
+          result.supplierName_ = supplierName_;
+        } else {
+          result.supplierName_ = supplierNameBuilder_.build();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (((bitField0_ & 0x40000000) != 0)) {
+            supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+            bitField0_ = (bitField0_ & ~0x40000000);
+          }
+          result.supplierVatNumber_ = supplierVatNumber_;
+        } else {
+          result.supplierVatNumber_ = supplierVatNumberBuilder_.build();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (((bitField0_ & 0x80000000) != 0)) {
+            supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+            bitField0_ = (bitField0_ & ~0x80000000);
+          }
+          result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
+        } else {
+          result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_.build();
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (((bitField1_ & 0x00000001) != 0)) {
+            supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
+            bitField1_ = (bitField1_ & ~0x00000001);
+          }
+          result.supplierAddress_ = supplierAddress_;
+        } else {
+          result.supplierAddress_ = supplierAddressBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7846,6 +9548,266 @@ public final class Annotator {
           preview_ = other.preview_;
           onChanged();
         }
+        if (bankAccountNumberBuilder_ == null) {
+          if (!other.bankAccountNumber_.isEmpty()) {
+            if (bankAccountNumber_.isEmpty()) {
+              bankAccountNumber_ = other.bankAccountNumber_;
+              bitField0_ = (bitField0_ & ~0x00800000);
+            } else {
+              ensureBankAccountNumberIsMutable();
+              bankAccountNumber_.addAll(other.bankAccountNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bankAccountNumber_.isEmpty()) {
+            if (bankAccountNumberBuilder_.isEmpty()) {
+              bankAccountNumberBuilder_.dispose();
+              bankAccountNumberBuilder_ = null;
+              bankAccountNumber_ = other.bankAccountNumber_;
+              bitField0_ = (bitField0_ & ~0x00800000);
+              bankAccountNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBankAccountNumberFieldBuilder() : null;
+            } else {
+              bankAccountNumberBuilder_.addAllMessages(other.bankAccountNumber_);
+            }
+          }
+        }
+        if (bankRegistrationNumberBuilder_ == null) {
+          if (!other.bankRegistrationNumber_.isEmpty()) {
+            if (bankRegistrationNumber_.isEmpty()) {
+              bankRegistrationNumber_ = other.bankRegistrationNumber_;
+              bitField0_ = (bitField0_ & ~0x01000000);
+            } else {
+              ensureBankRegistrationNumberIsMutable();
+              bankRegistrationNumber_.addAll(other.bankRegistrationNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bankRegistrationNumber_.isEmpty()) {
+            if (bankRegistrationNumberBuilder_.isEmpty()) {
+              bankRegistrationNumberBuilder_.dispose();
+              bankRegistrationNumberBuilder_ = null;
+              bankRegistrationNumber_ = other.bankRegistrationNumber_;
+              bitField0_ = (bitField0_ & ~0x01000000);
+              bankRegistrationNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBankRegistrationNumberFieldBuilder() : null;
+            } else {
+              bankRegistrationNumberBuilder_.addAllMessages(other.bankRegistrationNumber_);
+            }
+          }
+        }
+        if (bicBuilder_ == null) {
+          if (!other.bic_.isEmpty()) {
+            if (bic_.isEmpty()) {
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+            } else {
+              ensureBicIsMutable();
+              bic_.addAll(other.bic_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bic_.isEmpty()) {
+            if (bicBuilder_.isEmpty()) {
+              bicBuilder_.dispose();
+              bicBuilder_ = null;
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+              bicBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBicFieldBuilder() : null;
+            } else {
+              bicBuilder_.addAllMessages(other.bic_);
+            }
+          }
+        }
+        if (documentNumberBuilder_ == null) {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumber_.isEmpty()) {
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+            } else {
+              ensureDocumentNumberIsMutable();
+              documentNumber_.addAll(other.documentNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumberBuilder_.isEmpty()) {
+              documentNumberBuilder_.dispose();
+              documentNumberBuilder_ = null;
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+              documentNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentNumberFieldBuilder() : null;
+            } else {
+              documentNumberBuilder_.addAllMessages(other.documentNumber_);
+            }
+          }
+        }
+        if (documentDateBuilder_ == null) {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDate_.isEmpty()) {
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+            } else {
+              ensureDocumentDateIsMutable();
+              documentDate_.addAll(other.documentDate_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDateBuilder_.isEmpty()) {
+              documentDateBuilder_.dispose();
+              documentDateBuilder_ = null;
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+              documentDateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentDateFieldBuilder() : null;
+            } else {
+              documentDateBuilder_.addAllMessages(other.documentDate_);
+            }
+          }
+        }
+        if (orderNumberBuilder_ == null) {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumber_.isEmpty()) {
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+            } else {
+              ensureOrderNumberIsMutable();
+              orderNumber_.addAll(other.orderNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumberBuilder_.isEmpty()) {
+              orderNumberBuilder_.dispose();
+              orderNumberBuilder_ = null;
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+              orderNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrderNumberFieldBuilder() : null;
+            } else {
+              orderNumberBuilder_.addAllMessages(other.orderNumber_);
+            }
+          }
+        }
+        if (supplierNameBuilder_ == null) {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierName_.isEmpty()) {
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+            } else {
+              ensureSupplierNameIsMutable();
+              supplierName_.addAll(other.supplierName_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierNameBuilder_.isEmpty()) {
+              supplierNameBuilder_.dispose();
+              supplierNameBuilder_ = null;
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+              supplierNameBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierNameFieldBuilder() : null;
+            } else {
+              supplierNameBuilder_.addAllMessages(other.supplierName_);
+            }
+          }
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumber_.isEmpty()) {
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+            } else {
+              ensureSupplierVatNumberIsMutable();
+              supplierVatNumber_.addAll(other.supplierVatNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumberBuilder_.isEmpty()) {
+              supplierVatNumberBuilder_.dispose();
+              supplierVatNumberBuilder_ = null;
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+              supplierVatNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierVatNumberFieldBuilder() : null;
+            } else {
+              supplierVatNumberBuilder_.addAllMessages(other.supplierVatNumber_);
+            }
+          }
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumber_.isEmpty()) {
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+            } else {
+              ensureSupplierOrganisationNumberIsMutable();
+              supplierOrganisationNumber_.addAll(other.supplierOrganisationNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumberBuilder_.isEmpty()) {
+              supplierOrganisationNumberBuilder_.dispose();
+              supplierOrganisationNumberBuilder_ = null;
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+              supplierOrganisationNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierOrganisationNumberFieldBuilder() : null;
+            } else {
+              supplierOrganisationNumberBuilder_.addAllMessages(other.supplierOrganisationNumber_);
+            }
+          }
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddress_.isEmpty()) {
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+            } else {
+              ensureSupplierAddressIsMutable();
+              supplierAddress_.addAll(other.supplierAddress_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddressBuilder_.isEmpty()) {
+              supplierAddressBuilder_.dispose();
+              supplierAddressBuilder_ = null;
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+              supplierAddressBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierAddressFieldBuilder() : null;
+            } else {
+              supplierAddressBuilder_.addAllMessages(other.supplierAddress_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -7875,6 +9837,7 @@ public final class Annotator {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderDate_ =
         java.util.Collections.emptyList();
@@ -11754,6 +13717,8 @@ public final class Annotator {
 
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11770,6 +13735,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11786,6 +13753,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11802,6 +13771,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11825,6 +13796,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11845,6 +13818,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11867,6 +13842,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11890,6 +13867,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11910,6 +13889,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11930,6 +13911,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11951,6 +13934,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11970,6 +13955,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -11989,6 +13976,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -12002,6 +13991,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -12018,6 +14009,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -12035,6 +14028,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -12048,6 +14043,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -12062,6 +14059,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * use document number instead
        * invoiceNumber
        * The supplier defined identifier af the invoice
        * Example: "12345-A99"
@@ -15149,6 +17148,11 @@ public final class Annotator {
 
       private java.lang.Object feedbackId_ = "";
       /**
+       * <pre>
+       * Feedback ID is used to correct made predictions through the
+       * Feedback API.
+       * </pre>
+       *
        * <code>string feedback_id = 24;</code>
        * @return The feedbackId.
        */
@@ -15165,6 +17169,11 @@ public final class Annotator {
         }
       }
       /**
+       * <pre>
+       * Feedback ID is used to correct made predictions through the
+       * Feedback API.
+       * </pre>
+       *
        * <code>string feedback_id = 24;</code>
        * @return The bytes for feedbackId.
        */
@@ -15182,6 +17191,11 @@ public final class Annotator {
         }
       }
       /**
+       * <pre>
+       * Feedback ID is used to correct made predictions through the
+       * Feedback API.
+       * </pre>
+       *
        * <code>string feedback_id = 24;</code>
        * @param value The feedbackId to set.
        * @return This builder for chaining.
@@ -15197,6 +17211,11 @@ public final class Annotator {
         return this;
       }
       /**
+       * <pre>
+       * Feedback ID is used to correct made predictions through the
+       * Feedback API.
+       * </pre>
+       *
        * <code>string feedback_id = 24;</code>
        * @return This builder for chaining.
        */
@@ -15207,6 +17226,11 @@ public final class Annotator {
         return this;
       }
       /**
+       * <pre>
+       * Feedback ID is used to correct made predictions through the
+       * Feedback API.
+       * </pre>
+       *
        * <code>string feedback_id = 24;</code>
        * @param value The bytes for feedbackId to set.
        * @return This builder for chaining.
@@ -15995,6 +18019,3180 @@ public final class Annotator {
         preview_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankAccountNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureBankAccountNumberIsMutable() {
+        if (!((bitField0_ & 0x00800000) != 0)) {
+          bankAccountNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(bankAccountNumber_);
+          bitField0_ |= 0x00800000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> bankAccountNumberBuilder_;
+
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankAccountNumberList() {
+        if (bankAccountNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bankAccountNumber_);
+        } else {
+          return bankAccountNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public int getBankAccountNumberCount() {
+        if (bankAccountNumberBuilder_ == null) {
+          return bankAccountNumber_.size();
+        } else {
+          return bankAccountNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index) {
+        if (bankAccountNumberBuilder_ == null) {
+          return bankAccountNumber_.get(index);
+        } else {
+          return bankAccountNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder setBankAccountNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (bankAccountNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBankAccountNumberIsMutable();
+          bankAccountNumber_.set(index, value);
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder setBankAccountNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bankAccountNumberBuilder_ == null) {
+          ensureBankAccountNumberIsMutable();
+          bankAccountNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder addBankAccountNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (bankAccountNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBankAccountNumberIsMutable();
+          bankAccountNumber_.add(value);
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder addBankAccountNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (bankAccountNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBankAccountNumberIsMutable();
+          bankAccountNumber_.add(index, value);
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder addBankAccountNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bankAccountNumberBuilder_ == null) {
+          ensureBankAccountNumberIsMutable();
+          bankAccountNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder addBankAccountNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bankAccountNumberBuilder_ == null) {
+          ensureBankAccountNumberIsMutable();
+          bankAccountNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder addAllBankAccountNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (bankAccountNumberBuilder_ == null) {
+          ensureBankAccountNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bankAccountNumber_);
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder clearBankAccountNumber() {
+        if (bankAccountNumberBuilder_ == null) {
+          bankAccountNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00800000);
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public Builder removeBankAccountNumber(int index) {
+        if (bankAccountNumberBuilder_ == null) {
+          ensureBankAccountNumberIsMutable();
+          bankAccountNumber_.remove(index);
+          onChanged();
+        } else {
+          bankAccountNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getBankAccountNumberBuilder(
+          int index) {
+        return getBankAccountNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
+          int index) {
+        if (bankAccountNumberBuilder_ == null) {
+          return bankAccountNumber_.get(index);  } else {
+          return bankAccountNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getBankAccountNumberOrBuilderList() {
+        if (bankAccountNumberBuilder_ != null) {
+          return bankAccountNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bankAccountNumber_);
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addBankAccountNumberBuilder() {
+        return getBankAccountNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addBankAccountNumberBuilder(
+          int index) {
+        return getBankAccountNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Country specific bank account number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getBankAccountNumberBuilderList() {
+        return getBankAccountNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getBankAccountNumberFieldBuilder() {
+        if (bankAccountNumberBuilder_ == null) {
+          bankAccountNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  bankAccountNumber_,
+                  ((bitField0_ & 0x00800000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bankAccountNumber_ = null;
+        }
+        return bankAccountNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankRegistrationNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureBankRegistrationNumberIsMutable() {
+        if (!((bitField0_ & 0x01000000) != 0)) {
+          bankRegistrationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(bankRegistrationNumber_);
+          bitField0_ |= 0x01000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> bankRegistrationNumberBuilder_;
+
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankRegistrationNumberList() {
+        if (bankRegistrationNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bankRegistrationNumber_);
+        } else {
+          return bankRegistrationNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public int getBankRegistrationNumberCount() {
+        if (bankRegistrationNumberBuilder_ == null) {
+          return bankRegistrationNumber_.size();
+        } else {
+          return bankRegistrationNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          return bankRegistrationNumber_.get(index);
+        } else {
+          return bankRegistrationNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder setBankRegistrationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBankRegistrationNumberIsMutable();
+          bankRegistrationNumber_.set(index, value);
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder setBankRegistrationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          ensureBankRegistrationNumberIsMutable();
+          bankRegistrationNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder addBankRegistrationNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBankRegistrationNumberIsMutable();
+          bankRegistrationNumber_.add(value);
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder addBankRegistrationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBankRegistrationNumberIsMutable();
+          bankRegistrationNumber_.add(index, value);
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder addBankRegistrationNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          ensureBankRegistrationNumberIsMutable();
+          bankRegistrationNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder addBankRegistrationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          ensureBankRegistrationNumberIsMutable();
+          bankRegistrationNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder addAllBankRegistrationNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          ensureBankRegistrationNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bankRegistrationNumber_);
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder clearBankRegistrationNumber() {
+        if (bankRegistrationNumberBuilder_ == null) {
+          bankRegistrationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x01000000);
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public Builder removeBankRegistrationNumber(int index) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          ensureBankRegistrationNumberIsMutable();
+          bankRegistrationNumber_.remove(index);
+          onChanged();
+        } else {
+          bankRegistrationNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getBankRegistrationNumberBuilder(
+          int index) {
+        return getBankRegistrationNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
+          int index) {
+        if (bankRegistrationNumberBuilder_ == null) {
+          return bankRegistrationNumber_.get(index);  } else {
+          return bankRegistrationNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getBankRegistrationNumberOrBuilderList() {
+        if (bankRegistrationNumberBuilder_ != null) {
+          return bankRegistrationNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bankRegistrationNumber_);
+        }
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addBankRegistrationNumberBuilder() {
+        return getBankRegistrationNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addBankRegistrationNumberBuilder(
+          int index) {
+        return getBankRegistrationNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Country specific bank registration number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getBankRegistrationNumberBuilderList() {
+        return getBankRegistrationNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getBankRegistrationNumberFieldBuilder() {
+        if (bankRegistrationNumberBuilder_ == null) {
+          bankRegistrationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  bankRegistrationNumber_,
+                  ((bitField0_ & 0x01000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bankRegistrationNumber_ = null;
+        }
+        return bankRegistrationNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> bic_ =
+        java.util.Collections.emptyList();
+      private void ensureBicIsMutable() {
+        if (!((bitField0_ & 0x02000000) != 0)) {
+          bic_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(bic_);
+          bitField0_ |= 0x02000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> bicBuilder_;
+
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBicList() {
+        if (bicBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bic_);
+        } else {
+          return bicBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public int getBicCount() {
+        if (bicBuilder_ == null) {
+          return bic_.size();
+        } else {
+          return bicBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getBic(int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);
+        } else {
+          return bicBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder setBic(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.set(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder setBic(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder addBic(ssn.type.CandidateOuterClass.Candidate value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder addBic(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder addBic(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder addBic(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder addAllBic(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bic_);
+          onChanged();
+        } else {
+          bicBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder clearBic() {
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+          onChanged();
+        } else {
+          bicBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public Builder removeBic(int index) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.remove(index);
+          onChanged();
+        } else {
+          bicBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getBicBuilder(
+          int index) {
+        return getBicFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
+          int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);  } else {
+          return bicBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getBicOrBuilderList() {
+        if (bicBuilder_ != null) {
+          return bicBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bic_);
+        }
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addBicBuilder() {
+        return getBicFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addBicBuilder(
+          int index) {
+        return getBicFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Returns business identifier code
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getBicBuilderList() {
+        return getBicFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getBicFieldBuilder() {
+        if (bicBuilder_ == null) {
+          bicBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  bic_,
+                  ((bitField0_ & 0x02000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bic_ = null;
+        }
+        return bicBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentNumberIsMutable() {
+        if (!((bitField0_ & 0x04000000) != 0)) {
+          documentNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(documentNumber_);
+          bitField0_ |= 0x04000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> documentNumberBuilder_;
+
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentNumberList() {
+        if (documentNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        } else {
+          return documentNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public int getDocumentNumberCount() {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.size();
+        } else {
+          return documentNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);
+        } else {
+          return documentNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder addDocumentNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder addDocumentNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder addAllDocumentNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentNumber_);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder clearDocumentNumber() {
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+          onChanged();
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public Builder removeDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.remove(index);
+          onChanged();
+        } else {
+          documentNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
+          int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);  } else {
+          return documentNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getDocumentNumberOrBuilderList() {
+        if (documentNumberBuilder_ != null) {
+          return documentNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        }
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentNumberBuilder() {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Represents identifier of the document
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getDocumentNumberBuilderList() {
+        return getDocumentNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getDocumentNumberFieldBuilder() {
+        if (documentNumberBuilder_ == null) {
+          documentNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  documentNumber_,
+                  ((bitField0_ & 0x04000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentNumber_ = null;
+        }
+        return documentNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentDate_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentDateIsMutable() {
+        if (!((bitField0_ & 0x08000000) != 0)) {
+          documentDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(documentDate_);
+          bitField0_ |= 0x08000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> documentDateBuilder_;
+
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentDateList() {
+        if (documentDateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        } else {
+          return documentDateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public int getDocumentDateCount() {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.size();
+        } else {
+          return documentDateBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);
+        } else {
+          return documentDateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder setDocumentDate(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder setDocumentDate(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder addDocumentDate(ssn.type.CandidateOuterClass.Candidate value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder addDocumentDate(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder addDocumentDate(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder addDocumentDate(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder addAllDocumentDate(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentDate_);
+          onChanged();
+        } else {
+          documentDateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder clearDocumentDate() {
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+          onChanged();
+        } else {
+          documentDateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public Builder removeDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.remove(index);
+          onChanged();
+        } else {
+          documentDateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
+          int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);  } else {
+          return documentDateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getDocumentDateOrBuilderList() {
+        if (documentDateBuilder_ != null) {
+          return documentDateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        }
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentDateBuilder() {
+        return getDocumentDateFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Returns document date
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getDocumentDateBuilderList() {
+        return getDocumentDateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getDocumentDateFieldBuilder() {
+        if (documentDateBuilder_ == null) {
+          documentDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  documentDate_,
+                  ((bitField0_ & 0x08000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentDate_ = null;
+        }
+        return documentDateBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureOrderNumberIsMutable() {
+        if (!((bitField0_ & 0x10000000) != 0)) {
+          orderNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(orderNumber_);
+          bitField0_ |= 0x10000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> orderNumberBuilder_;
+
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderNumberList() {
+        if (orderNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        } else {
+          return orderNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public int getOrderNumberCount() {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.size();
+        } else {
+          return orderNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);
+        } else {
+          return orderNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder setOrderNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder setOrderNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder addOrderNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder addOrderNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder addOrderNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder addOrderNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder addAllOrderNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orderNumber_);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder clearOrderNumber() {
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+          onChanged();
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public Builder removeOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.remove(index);
+          onChanged();
+        } else {
+          orderNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
+          int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);  } else {
+          return orderNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getOrderNumberOrBuilderList() {
+        if (orderNumberBuilder_ != null) {
+          return orderNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        }
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addOrderNumberBuilder() {
+        return getOrderNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Represents the identifier that supplier assigned to the order
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getOrderNumberBuilderList() {
+        return getOrderNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getOrderNumberFieldBuilder() {
+        if (orderNumberBuilder_ == null) {
+          orderNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  orderNumber_,
+                  ((bitField0_ & 0x10000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orderNumber_ = null;
+        }
+        return orderNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierName_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierNameIsMutable() {
+        if (!((bitField0_ & 0x20000000) != 0)) {
+          supplierName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierName_);
+          bitField0_ |= 0x20000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierNameBuilder_;
+
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierNameList() {
+        if (supplierNameBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        } else {
+          return supplierNameBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public int getSupplierNameCount() {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.size();
+        } else {
+          return supplierNameBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);
+        } else {
+          return supplierNameBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder setSupplierName(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder setSupplierName(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder addSupplierName(ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder addSupplierName(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder addSupplierName(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder addSupplierName(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder addAllSupplierName(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierName_);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder clearSupplierName() {
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+          onChanged();
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public Builder removeSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.remove(index);
+          onChanged();
+        } else {
+          supplierNameBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
+          int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);  } else {
+          return supplierNameBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getSupplierNameOrBuilderList() {
+        if (supplierNameBuilder_ != null) {
+          return supplierNameBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        }
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierNameBuilder() {
+        return getSupplierNameFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Returns supplier name
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getSupplierNameBuilderList() {
+        return getSupplierNameFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getSupplierNameFieldBuilder() {
+        if (supplierNameBuilder_ == null) {
+          supplierNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  supplierName_,
+                  ((bitField0_ & 0x20000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierName_ = null;
+        }
+        return supplierNameBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierVatNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierVatNumberIsMutable() {
+        if (!((bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierVatNumber_);
+          bitField0_ |= 0x40000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierVatNumberBuilder_;
+
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierVatNumberList() {
+        if (supplierVatNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        } else {
+          return supplierVatNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public int getSupplierVatNumberCount() {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.size();
+        } else {
+          return supplierVatNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);
+        } else {
+          return supplierVatNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder addSupplierVatNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder addSupplierVatNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder addAllSupplierVatNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierVatNumber_);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder clearSupplierVatNumber() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public Builder removeSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
+          int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);  } else {
+          return supplierVatNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getSupplierVatNumberOrBuilderList() {
+        if (supplierVatNumberBuilder_ != null) {
+          return supplierVatNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierVatNumberBuilder() {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier VAT number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getSupplierVatNumberBuilderList() {
+        return getSupplierVatNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getSupplierVatNumberFieldBuilder() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  supplierVatNumber_,
+                  ((bitField0_ & 0x40000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierVatNumber_ = null;
+        }
+        return supplierVatNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierOrganisationNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierOrganisationNumberIsMutable() {
+        if (!((bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierOrganisationNumber_);
+          bitField0_ |= 0x80000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierOrganisationNumberBuilder_;
+
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierOrganisationNumberList() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public int getSupplierOrganisationNumberCount() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.size();
+        } else {
+          return supplierOrganisationNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder addSupplierOrganisationNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder addAllSupplierOrganisationNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierOrganisationNumber_);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder clearSupplierOrganisationNumber() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public Builder removeSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
+          int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);  } else {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getSupplierOrganisationNumberOrBuilderList() {
+        if (supplierOrganisationNumberBuilder_ != null) {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierOrganisationNumberBuilder() {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns the business ID or organisation number of the supplier
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getSupplierOrganisationNumberBuilderList() {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getSupplierOrganisationNumberFieldBuilder() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  supplierOrganisationNumber_,
+                  ((bitField0_ & 0x80000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierOrganisationNumber_ = null;
+        }
+        return supplierOrganisationNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierAddress_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierAddressIsMutable() {
+        if (!((bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierAddress_);
+          bitField1_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierAddressBuilder_;
+
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierAddressList() {
+        if (supplierAddressBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        } else {
+          return supplierAddressBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public int getSupplierAddressCount() {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.size();
+        } else {
+          return supplierAddressBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);
+        } else {
+          return supplierAddressBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder addSupplierAddress(ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder addSupplierAddress(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder addAllSupplierAddress(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierAddress_);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder clearSupplierAddress() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public Builder removeSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.remove(index);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
+          int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);  } else {
+          return supplierAddressBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getSupplierAddressOrBuilderList() {
+        if (supplierAddressBuilder_ != null) {
+          return supplierAddressBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierAddressBuilder() {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns supplier address
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getSupplierAddressBuilderList() {
+        return getSupplierAddressFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getSupplierAddressFieldBuilder() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  supplierAddress_,
+                  ((bitField1_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierAddress_ = null;
+        }
+        return supplierAddressBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17542,11 +22740,11 @@ public final class Annotator {
       "annotator.v1\032\034google/api/annotations.pro" +
       "to\032\031options/annotations.proto\032\030ssn/type/" +
       "candidate.proto\032\036ssn/type/text_annotatio" +
-      "n.proto\032\023ssn/type/tier.proto\"\331\005\n\007Feature" +
+      "n.proto\032\023ssn/type/tier.proto\"\267\007\n\007Feature" +
       "\022,\n\004type\030\001 \001(\0162\036.ssn.annotator.v1.Featur" +
       "e.Type\022\023\n\013max_results\030\002 \001(\005\0222\n\016min_confi" +
       "dence\030\003 \001(\0162\032.ssn.type.Confidence.Level\"" +
-      "\326\004\n\004Type\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION" +
+      "\264\006\n\004Type\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION" +
       "\020\001\022\016\n\nORDER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003" +
       "\022\014\n\010CURRENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_I" +
       "NCL_VAT\020\006\022\022\n\016TOTAL_EXCL_VAT\020\007\022\031\n\025SUPPLIE" +
@@ -17561,53 +22759,70 @@ public final class Annotator {
       "LINE_NO_PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYM" +
       "ENT_ID\020\025\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004" +
       "TEXT\020\027\022\010\n\004IBAN\020\030\022\t\n\005LINES\020\031\022\013\n\007PREVIEW\020\032" +
-      "\"\263\001\n\030DocumentAnnotatorRequest\022,\n\010documen" +
-      "t\030\001 \001(\0132\032.ssn.annotator.v1.Document\022+\n\010f" +
-      "eatures\030\002 \003(\0132\031.ssn.annotator.v1.Feature" +
-      "\022\014\n\004tags\030\003 \003(\t\022\034\n\004tier\030\004 \001(\0162\016.ssn.type." +
-      "Tier\022\020\n\010segments\030\005 \003(\t\"\334\t\n\031DocumentAnnot" +
-      "atorResponse\022\'\n\norder_date\030\001 \003(\0132\023.ssn.t" +
-      "ype.Candidate\022-\n\020payment_due_date\030\002 \003(\0132" +
-      "\023.ssn.type.Candidate\022%\n\010currency\030\003 \003(\0132\023" +
-      ".ssn.type.Candidate\022&\n\ttotal_vat\030\004 \003(\0132\023" +
-      ".ssn.type.Candidate\022+\n\016total_incl_vat\030\005 " +
-      "\003(\0132\023.ssn.type.Candidate\022+\n\016total_excl_v" +
-      "at\030\006 \003(\0132\023.ssn.type.Candidate\0222\n\025supplie" +
-      "r_corporate_id\030\007 \003(\0132\023.ssn.type.Candidat" +
-      "e\0222\n\025supplier_country_code\030\010 \003(\0132\023.ssn.t" +
-      "ype.Candidate\022*\n\rdocument_type\030\t \003(\0132\023.s" +
-      "sn.type.Candidate\022+\n\016payment_method\030\n \003(" +
-      "\0132\023.ssn.type.Candidate\0222\n\025credit_card_la" +
-      "st_four\030\013 \003(\0132\023.ssn.type.Candidate\022+\n\016in" +
-      "voice_number\030\014 \003(\0132\023.ssn.type.Candidate\022" +
-      "1\n\017text_annotation\030\r \001(\0132\030.ssn.type.Text" +
-      "Annotation\022-\n\020ocr_line_dk_type\030\016 \003(\0132\023.s" +
-      "sn.type.Candidate\0223\n\026ocr_line_dk_payment" +
-      "_id\030\017 \003(\0132\023.ssn.type.Candidate\0224\n\027ocr_li" +
-      "ne_dk_creditor_id\030\020 \003(\0132\023.ssn.type.Candi" +
-      "date\0223\n\026ocr_line_se_payment_id\030\021 \003(\0132\023.s" +
-      "sn.type.Candidate\022=\n ocr_line_se_bankgir" +
-      "o_creditor_id\030\022 \003(\0132\023.ssn.type.Candidate" +
-      "\022=\n ocr_line_se_plusgiro_creditor_id\030\023 \003" +
-      "(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_no_p" +
-      "ayment_id\030\024 \003(\0132\023.ssn.type.Candidate\0223\n\026" +
-      "ocr_line_fi_payment_id\030\025 \003(\0132\023.ssn.type." +
-      "Candidate\0223\n\026ocr_line_nl_payment_id\030\026 \003(" +
-      "\0132\023.ssn.type.Candidate\022\014\n\004text\030\027 \001(\t\022\023\n\013" +
-      "feedback_id\030\030 \001(\t\022!\n\004iban\030\031 \003(\0132\023.ssn.ty" +
-      "pe.Candidate\022&\n\005lines\030\032 \003(\0132\027.ssn.type.L" +
-      "ineCandidate\022\017\n\007preview\030\033 \001(\t\"M\n\010Documen" +
-      "t\022\017\n\007content\030\001 \001(\014\0220\n\006source\030\002 \001(\0132 .ssn" +
-      ".annotator.v1.DocumentSource\"\"\n\016Document" +
-      "Source\022\020\n\010http_uri\030\001 \001(\t2\243\001\n\021DocumentAnn" +
-      "otator\022\215\001\n\020AnnotateDocument\022*.ssn.annota" +
-      "tor.v1.DocumentAnnotatorRequest\032+.ssn.an" +
-      "notator.v1.DocumentAnnotatorResponse\" \202\323" +
-      "\344\223\002\032\"\025/v1/document:annotate:\001*B{Z>github" +
-      ".com/e-conomic/vmlapis/gen/go/ssn/annota" +
-      "tor/v1;annotator\222A8\022\017\n\tSmartScan2\002v1*\001\0022" +
-      "\020application/json:\020application/jsonb\006pro" +
-      "to3"
+      "\022\027\n\023BANK_ACCOUNT_NUMBER\020\033\022\034\n\030BANK_REGIST" +
+      "RATION_NUMBER\020\034\022\007\n\003BIC\020\035\022\023\n\017DOCUMENT_NUM" +
+      "BER\020\036\022\021\n\rDOCUMENT_DATE\020\037\022\020\n\014ORDER_NUMBER" +
+      "\020 \022\021\n\rSUPPLIER_NAME\020!\022\027\n\023SUPPLIER_VAT_NU" +
+      "MBER\020\"\022 \n\034SUPPLIER_ORGANISATION_NUMBER\020#" +
+      "\022\024\n\020SUPPLIER_ADDRESS\020$\"\263\001\n\030DocumentAnnot" +
+      "atorRequest\022,\n\010document\030\001 \001(\0132\032.ssn.anno" +
+      "tator.v1.Document\022+\n\010features\030\002 \003(\0132\031.ss" +
+      "n.annotator.v1.Feature\022\014\n\004tags\030\003 \003(\t\022\034\n\004" +
+      "tier\030\004 \001(\0162\016.ssn.type.Tier\022\020\n\010segments\030\005" +
+      " \003(\t\"\264\r\n\031DocumentAnnotatorResponse\022\'\n\nor" +
+      "der_date\030\001 \003(\0132\023.ssn.type.Candidate\022-\n\020p" +
+      "ayment_due_date\030\002 \003(\0132\023.ssn.type.Candida" +
+      "te\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Candidat" +
+      "e\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Candidat" +
+      "e\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Can" +
+      "didate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.typ" +
+      "e.Candidate\0222\n\025supplier_corporate_id\030\007 \003" +
+      "(\0132\023.ssn.type.Candidate\0222\n\025supplier_coun" +
+      "try_code\030\010 \003(\0132\023.ssn.type.Candidate\022*\n\rd" +
+      "ocument_type\030\t \003(\0132\023.ssn.type.Candidate\022" +
+      "+\n\016payment_method\030\n \003(\0132\023.ssn.type.Candi" +
+      "date\0222\n\025credit_card_last_four\030\013 \003(\0132\023.ss" +
+      "n.type.Candidate\022+\n\016invoice_number\030\014 \003(\013" +
+      "2\023.ssn.type.Candidate\0221\n\017text_annotation" +
+      "\030\r \001(\0132\030.ssn.type.TextAnnotation\022-\n\020ocr_" +
+      "line_dk_type\030\016 \003(\0132\023.ssn.type.Candidate\022" +
+      "3\n\026ocr_line_dk_payment_id\030\017 \003(\0132\023.ssn.ty" +
+      "pe.Candidate\0224\n\027ocr_line_dk_creditor_id\030" +
+      "\020 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_s" +
+      "e_payment_id\030\021 \003(\0132\023.ssn.type.Candidate\022" +
+      "=\n ocr_line_se_bankgiro_creditor_id\030\022 \003(" +
+      "\0132\023.ssn.type.Candidate\022=\n ocr_line_se_pl" +
+      "usgiro_creditor_id\030\023 \003(\0132\023.ssn.type.Cand" +
+      "idate\0223\n\026ocr_line_no_payment_id\030\024 \003(\0132\023." +
+      "ssn.type.Candidate\0223\n\026ocr_line_fi_paymen" +
+      "t_id\030\025 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_l" +
+      "ine_nl_payment_id\030\026 \003(\0132\023.ssn.type.Candi" +
+      "date\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(\t\022" +
+      "!\n\004iban\030\031 \003(\0132\023.ssn.type.Candidate\022&\n\005li" +
+      "nes\030\032 \003(\0132\027.ssn.type.LineCandidate\022\017\n\007pr" +
+      "eview\030\033 \001(\t\0220\n\023bank_account_number\030\034 \003(\013" +
+      "2\023.ssn.type.Candidate\0225\n\030bank_registrati" +
+      "on_number\030\035 \003(\0132\023.ssn.type.Candidate\022 \n\003" +
+      "bic\030\036 \003(\0132\023.ssn.type.Candidate\022,\n\017docume" +
+      "nt_number\030\037 \003(\0132\023.ssn.type.Candidate\022*\n\r" +
+      "document_date\030  \003(\0132\023.ssn.type.Candidate" +
+      "\022)\n\014order_number\030! \003(\0132\023.ssn.type.Candid" +
+      "ate\022*\n\rsupplier_name\030\" \003(\0132\023.ssn.type.Ca" +
+      "ndidate\0220\n\023supplier_vat_number\030# \003(\0132\023.s" +
+      "sn.type.Candidate\0229\n\034supplier_organisati" +
+      "on_number\030$ \003(\0132\023.ssn.type.Candidate\022-\n\020" +
+      "supplier_address\030% \003(\0132\023.ssn.type.Candid" +
+      "ate\"M\n\010Document\022\017\n\007content\030\001 \001(\014\0220\n\006sour" +
+      "ce\030\002 \001(\0132 .ssn.annotator.v1.DocumentSour" +
+      "ce\"\"\n\016DocumentSource\022\020\n\010http_uri\030\001 \001(\t2\243" +
+      "\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDocumen" +
+      "t\022*.ssn.annotator.v1.DocumentAnnotatorRe" +
+      "quest\032+.ssn.annotator.v1.DocumentAnnotat" +
+      "orResponse\" \202\323\344\223\002\032\"\025/v1/document:annotat" +
+      "e:\001*B{Z>github.com/e-conomic/vmlapis/gen" +
+      "/go/ssn/annotator/v1;annotator\222A8\022\017\n\tSma" +
+      "rtScan2\002v1*\001\0022\020application/json:\020applica" +
+      "tion/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17635,7 +22850,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new

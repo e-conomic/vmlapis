@@ -214,28 +214,28 @@ message DocumentAnnotatorResponse {
   // Base64 encoded PNG image  of the first page of PDF document sent in request
   string preview = 27;
   // Country specific bank account number
-  repeated ssn.type.Candidate BANK_ACCOUNT_NUMBER = 28;
+  repeated ssn.type.Candidate bank_account_number = 28;
   // Country specific bank registration number
-  repeated ssn.type.Candidate BANK_REGISTRATION_NUMBER = 29;
+  repeated ssn.type.Candidate bank_registration_number = 29;
   // Returns business identifier code
-  repeated ssn.type.Candidate BIC = 30;
+  repeated ssn.type.Candidate bic = 30;
   // Represents identifier of the document
-  repeated ssn.type.Candidate DOCUMENT_NUMBER = 31;
+  repeated ssn.type.Candidate document_number = 31;
   // Returns document date
-  repeated ssn.type.Candidate DOCUMENT_DATE = 32;
+  repeated ssn.type.Candidate document_date = 32;
   // Represents the identifier that supplier assigned to the order
-  repeated ssn.type.Candidate ORDER_NUMBER = 33;
+  repeated ssn.type.Candidate order_number = 33;
   // Returns supplier name
-  repeated ssn.type.Candidate SUPPLIER_NAME = 34;
+  repeated ssn.type.Candidate supplier_name = 34;
   // [EXPERIMENTAL]
   // Returns supplier VAT number
-  repeated ssn.type.Candidate SUPPLIER_VAT_NUMBER = 35;
+  repeated ssn.type.Candidate supplier_vat_number = 35;
   // [EXPERIMENTAL]
   // Returns the business ID or organisation number of the supplier
-  repeated ssn.type.Candidate SUPPLIER_ORGANISATION_NUMBER = 36;
+  repeated ssn.type.Candidate supplier_organisation_number = 36;
   // [EXPERIMENTAL]
   // Returns supplier address
-  repeated ssn.type.Candidate SUPPLIER_ADDRESS = 37;
+  repeated ssn.type.Candidate supplier_address = 37;
 }
 
 message Document {

@@ -150,6 +150,41 @@
     "name": "supplier_name",
     "type": "STRING",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "bic",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "document_number",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "document_date",
+    "type": "DATE",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "order_number",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_vat_number",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_organisation_number",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_address",
+    "type": "STRING",
+    "mode": "NULLABLE"
    }
   ]
  },
@@ -280,6 +315,46 @@
    },
    {
     "name": "bank_registration_number",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_name",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "bic",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "document_number",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "document_date",
+    "type": "DATE",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "order_number",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_vat_number",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_organisation_number",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_address",
     "type": "STRING",
     "mode": "REPEATED"
    }
@@ -417,6 +492,46 @@
    },
    {
     "name": "bank_registration_number",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_name",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "bic",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "document_number",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "document_date",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "order_number",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_vat_number",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_organisation_number",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_address",
     "type": "FLOAT",
     "mode": "REPEATED"
    }
@@ -885,6 +1000,158 @@
    },
    {
     "name": "bank_registration_number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "supplier_name",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "bic",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "document_number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "document_date",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "order_number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "supplier_vat_number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "supplier_organisation_number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The name of the TensorFlow Serving model"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "The version number of the TensorFlow Serving model"
+     }
+    ]
+   },
+   {
+    "name": "supplier_address",
     "type": "RECORD",
     "mode": "REPEATED",
     "fields": [

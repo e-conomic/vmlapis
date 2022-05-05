@@ -795,7 +795,7 @@
           "items": {
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "invoiceNumber\nThe supplier defined identifier af the invoice\nExample: \"12345-A99\""
+          "title": "[DEPRECATED]\nuse document number instead\ninvoiceNumber\nThe supplier defined identifier af the invoice\nExample: \"12345-A99\""
         },
         "textAnnotation": {
           "$ref": "#/definitions/typeTextAnnotation",
@@ -869,7 +869,8 @@
           "title": "Return a string containing the text from the document"
         },
         "feedbackId": {
-          "type": "string"
+          "type": "string",
+          "description": "Feedback ID is used to correct made predictions through the\nFeedback API."
         },
         "iban": {
           "type": "array",
@@ -888,6 +889,76 @@
         "preview": {
           "type": "string",
           "title": "Base64 encoded PNG image  of the first page of PDF document sent in request"
+        },
+        "bankAccountNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Country specific bank account number"
+        },
+        "bankRegistrationNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Country specific bank registration number"
+        },
+        "bic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Returns business identifier code"
+        },
+        "documentNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Represents identifier of the document"
+        },
+        "documentDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Returns document date"
+        },
+        "orderNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Represents the identifier that supplier assigned to the order"
+        },
+        "supplierName": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Returns supplier name"
+        },
+        "supplierVatNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "[EXPERIMENTAL]\nReturns supplier VAT number"
+        },
+        "supplierOrganisationNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "[EXPERIMENTAL]\nReturns the business ID or organisation number of the supplier"
+        },
+        "supplierAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "[EXPERIMENTAL]\nReturns supplier address"
         }
       }
     },
@@ -948,10 +1019,20 @@
         "TEXT",
         "IBAN",
         "LINES",
-        "PREVIEW"
+        "PREVIEW",
+        "BANK_ACCOUNT_NUMBER",
+        "BANK_REGISTRATION_NUMBER",
+        "BIC",
+        "DOCUMENT_NUMBER",
+        "DOCUMENT_DATE",
+        "ORDER_NUMBER",
+        "SUPPLIER_NAME",
+        "SUPPLIER_VAT_NUMBER",
+        "SUPPLIER_ORGANISATION_NUMBER",
+        "SUPPLIER_ADDRESS"
       ],
       "default": "DEFAULT",
-      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: Run supplier corporate id detection\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion"
+      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: Run supplier corporate id detection\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run spplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection"
     },
     "v1FeedbackMetrics": {
       "type": "object",
@@ -1169,6 +1250,62 @@
             "type": "number",
             "format": "float"
           }
+        },
+        "supplierName": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "bic": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "documentNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "documentDate": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "orderNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "supplierVatNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "supplierOrganisationNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "supplierAddress": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
         }
       }
     },
@@ -1320,6 +1457,54 @@
           }
         },
         "bankRegistrationNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "supplierName": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "bic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "documentNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "documentDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "orderNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "supplierVatNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "supplierOrganisationNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "supplierAddress": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/typeModelSpec"
@@ -1482,6 +1667,54 @@
           "items": {
             "type": "string"
           }
+        },
+        "supplierName": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bic": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "documentNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "documentDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeDate"
+          }
+        },
+        "orderNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supplierVatNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supplierOrganisationNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supplierAddress": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -1575,6 +1808,27 @@
           "type": "string"
         },
         "supplierName": {
+          "type": "string"
+        },
+        "bic": {
+          "type": "string"
+        },
+        "documentNumber": {
+          "type": "string"
+        },
+        "documentDate": {
+          "$ref": "#/definitions/typeDate"
+        },
+        "orderNumber": {
+          "type": "string"
+        },
+        "supplierVatNumber": {
+          "type": "string"
+        },
+        "supplierOrganisationNumber": {
+          "type": "string"
+        },
+        "supplierAddress": {
           "type": "string"
         }
       }
