@@ -42,6 +42,16 @@ message FeatureGenRequest {
     string supplier_country_code = 20;
     string invoice_number = 21;
     string iban = 22;
+    string bank_account_number = 23;
+    string bank_registration_number = 24;
+    string supplier_name = 25;
+    string bic = 26;
+    string document_number = 27;
+    google.type.Date document_date = 28;
+    string order_number = 29;
+    string supplier_vat_number = 30;
+    string supplier_organisation_number = 31;
+    string supplier_address = 32;
   }
   TruthLabels truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
@@ -82,6 +92,16 @@ message PredictResponse {
   repeated ssn.type.Candidate ocr_line_nl_payment_id = 21;
   repeated ssn.type.Candidate iban = 22;
   repeated ssn.type.LineCandidate lines = 23;
+  repeated ssn.type.Candidate bank_account_number = 24;
+  repeated ssn.type.Candidate bank_registration_number = 25;
+  repeated ssn.type.Candidate bic = 26;
+  repeated ssn.type.Candidate document_number = 27;
+  repeated ssn.type.Candidate document_date = 28;
+  repeated ssn.type.Candidate order_number = 29;
+  repeated ssn.type.Candidate supplier_name = 30;
+  repeated ssn.type.Candidate supplier_vat_number = 31;
+  repeated ssn.type.Candidate supplier_organisation_number = 32;
+  repeated ssn.type.Candidate supplier_address = 33;
 }
 
 message FeatureGenPredictRequest {
