@@ -85,6 +85,13 @@ message TrueValues {
   google.protobuf.StringValue bank_account_number = 24;
   google.protobuf.StringValue bank_registration_number = 25;
   google.protobuf.StringValue supplier_name = 26;
+  google.protobuf.StringValue bic = 27;
+  google.protobuf.StringValue document_number = 28;
+  google.type.Date document_date = 29 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  google.protobuf.StringValue order_number = 30;
+  google.protobuf.StringValue supplier_vat_number = 31;
+  google.protobuf.StringValue supplier_organisation_number = 32;
+  google.protobuf.StringValue supplier_address = 33;
 }
 
 message PredictionValues {
@@ -113,6 +120,14 @@ message PredictionValues {
   repeated google.protobuf.StringValue order_reference = 23;
   repeated google.protobuf.StringValue bank_account_number = 24;
   repeated google.protobuf.StringValue bank_registration_number = 25;
+  repeated google.protobuf.StringValue supplier_name = 26;
+  repeated google.protobuf.StringValue bic = 27;
+  repeated google.protobuf.StringValue document_number = 28;
+  repeated google.type.Date document_date = 29 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  repeated google.protobuf.StringValue order_number = 30;
+  repeated google.protobuf.StringValue supplier_vat_number = 31;
+  repeated google.protobuf.StringValue supplier_organisation_number = 32;
+  repeated google.protobuf.StringValue supplier_address = 33;
 }
 
 message PredictionConfidences {
@@ -141,6 +156,14 @@ message PredictionConfidences {
   repeated google.protobuf.FloatValue order_reference = 23;
   repeated google.protobuf.FloatValue bank_account_number = 24;
   repeated google.protobuf.FloatValue bank_registration_number = 25;
+  repeated google.protobuf.FloatValue supplier_name = 26;
+  repeated google.protobuf.FloatValue bic = 27;
+  repeated google.protobuf.FloatValue document_number = 28;
+  repeated google.protobuf.FloatValue document_date = 29;
+  repeated google.protobuf.FloatValue order_number = 30;
+  repeated google.protobuf.FloatValue supplier_vat_number = 31;
+  repeated google.protobuf.FloatValue supplier_organisation_number = 32;
+  repeated google.protobuf.FloatValue supplier_address = 33;
 
 
 }
@@ -171,6 +194,14 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec order_reference = 23;
   repeated ssn.type.ModelSpec bank_account_number = 24;
   repeated ssn.type.ModelSpec bank_registration_number = 25;
+  repeated ssn.type.ModelSpec supplier_name = 26;
+  repeated ssn.type.ModelSpec bic = 27;
+  repeated ssn.type.ModelSpec document_number = 28;
+  repeated ssn.type.ModelSpec document_date = 29;
+  repeated ssn.type.ModelSpec order_number = 30;
+  repeated ssn.type.ModelSpec supplier_vat_number = 31;
+  repeated ssn.type.ModelSpec supplier_organisation_number = 32;
+  repeated ssn.type.ModelSpec supplier_address = 33;
 }
 
 message CreateDocumentRequest {
