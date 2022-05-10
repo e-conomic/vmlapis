@@ -345,7 +345,18 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.toObject = function(include
     supplierCorporateId: jspb.Message.getFieldWithDefault(msg, 19, ""),
     supplierCountryCode: jspb.Message.getFieldWithDefault(msg, 20, ""),
     invoiceNumber: jspb.Message.getFieldWithDefault(msg, 21, ""),
-    iban: jspb.Message.getFieldWithDefault(msg, 22, "")
+    iban: jspb.Message.getFieldWithDefault(msg, 22, ""),
+    bankAccountNumber: jspb.Message.getFieldWithDefault(msg, 23, ""),
+    bankRegistrationNumber: jspb.Message.getFieldWithDefault(msg, 24, ""),
+    supplierName: jspb.Message.getFieldWithDefault(msg, 25, ""),
+    bic: jspb.Message.getFieldWithDefault(msg, 26, ""),
+    documentNumber: jspb.Message.getFieldWithDefault(msg, 27, ""),
+    documentDate: (f = msg.getDocumentDate()) && google_type_date_pb.Date.toObject(includeInstance, f),
+    orderNumber: jspb.Message.getFieldWithDefault(msg, 29, ""),
+    supplierVatNumber: jspb.Message.getFieldWithDefault(msg, 30, ""),
+    supplierOrganisationNumber: jspb.Message.getFieldWithDefault(msg, 31, ""),
+    supplierAddress: jspb.Message.getFieldWithDefault(msg, 32, ""),
+    creditCardLastFour: jspb.Message.getFieldWithDefault(msg, 33, "")
   };
 
   if (includeInstance) {
@@ -471,6 +482,51 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.deserializeBinaryFromReader
     case 22:
       var value = /** @type {string} */ (reader.readString());
       msg.setIban(value);
+      break;
+    case 23:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBankAccountNumber(value);
+      break;
+    case 24:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBankRegistrationNumber(value);
+      break;
+    case 25:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSupplierName(value);
+      break;
+    case 26:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBic(value);
+      break;
+    case 27:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDocumentNumber(value);
+      break;
+    case 28:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setDocumentDate(value);
+      break;
+    case 29:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setOrderNumber(value);
+      break;
+    case 30:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSupplierVatNumber(value);
+      break;
+    case 31:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSupplierOrganisationNumber(value);
+      break;
+    case 32:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSupplierAddress(value);
+      break;
+    case 33:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCreditCardLastFour(value);
       break;
     default:
       reader.skipField();
@@ -654,6 +710,84 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.serializeBinaryToWriter = f
   if (f.length > 0) {
     writer.writeString(
       22,
+      f
+    );
+  }
+  f = message.getBankAccountNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      23,
+      f
+    );
+  }
+  f = message.getBankRegistrationNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      24,
+      f
+    );
+  }
+  f = message.getSupplierName();
+  if (f.length > 0) {
+    writer.writeString(
+      25,
+      f
+    );
+  }
+  f = message.getBic();
+  if (f.length > 0) {
+    writer.writeString(
+      26,
+      f
+    );
+  }
+  f = message.getDocumentNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      27,
+      f
+    );
+  }
+  f = message.getDocumentDate();
+  if (f != null) {
+    writer.writeMessage(
+      28,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getOrderNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      29,
+      f
+    );
+  }
+  f = message.getSupplierVatNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      30,
+      f
+    );
+  }
+  f = message.getSupplierOrganisationNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      31,
+      f
+    );
+  }
+  f = message.getSupplierAddress();
+  if (f.length > 0) {
+    writer.writeString(
+      32,
+      f
+    );
+  }
+  f = message.getCreditCardLastFour();
+  if (f.length > 0) {
+    writer.writeString(
+      33,
       f
     );
   }
@@ -1095,6 +1229,223 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setIban = functio
 
 
 /**
+ * optional string bank_account_number = 23;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getBankAccountNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 23, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setBankAccountNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 23, value);
+};
+
+
+/**
+ * optional string bank_registration_number = 24;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getBankRegistrationNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 24, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setBankRegistrationNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 24, value);
+};
+
+
+/**
+ * optional string supplier_name = 25;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getSupplierName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setSupplierName = function(value) {
+  return jspb.Message.setProto3StringField(this, 25, value);
+};
+
+
+/**
+ * optional string bic = 26;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getBic = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 26, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setBic = function(value) {
+  return jspb.Message.setProto3StringField(this, 26, value);
+};
+
+
+/**
+ * optional string document_number = 27;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getDocumentNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 27, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setDocumentNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 27, value);
+};
+
+
+/**
+ * optional google.type.Date document_date = 28;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getDocumentDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 28));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+*/
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setDocumentDate = function(value) {
+  return jspb.Message.setWrapperField(this, 28, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.clearDocumentDate = function() {
+  return this.setDocumentDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.hasDocumentDate = function() {
+  return jspb.Message.getField(this, 28) != null;
+};
+
+
+/**
+ * optional string order_number = 29;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getOrderNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 29, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setOrderNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 29, value);
+};
+
+
+/**
+ * optional string supplier_vat_number = 30;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getSupplierVatNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 30, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setSupplierVatNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 30, value);
+};
+
+
+/**
+ * optional string supplier_organisation_number = 31;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getSupplierOrganisationNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 31, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setSupplierOrganisationNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 31, value);
+};
+
+
+/**
+ * optional string supplier_address = 32;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getSupplierAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 32, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setSupplierAddress = function(value) {
+  return jspb.Message.setProto3StringField(this, 32, value);
+};
+
+
+/**
+ * optional string credit_card_last_four = 33;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getCreditCardLastFour = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 33, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setCreditCardLastFour = function(value) {
+  return jspb.Message.setProto3StringField(this, 33, value);
+};
+
+
+/**
  * optional TruthLabels truth_labels = 1;
  * @return {?proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
  */
@@ -1524,7 +1875,7 @@ proto.ssn.mlservice.v2.PredictRequest.prototype.setTopNMostConfident = function(
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
 
 
 
@@ -1602,7 +1953,29 @@ proto.ssn.mlservice.v2.PredictResponse.toObject = function(includeInstance, msg)
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     linesList: jspb.Message.toObjectList(msg.getLinesList(),
-    ssn_type_candidate_pb.LineCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.LineCandidate.toObject, includeInstance),
+    bankAccountNumberList: jspb.Message.toObjectList(msg.getBankAccountNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    bankRegistrationNumberList: jspb.Message.toObjectList(msg.getBankRegistrationNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    bicList: jspb.Message.toObjectList(msg.getBicList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    documentNumberList: jspb.Message.toObjectList(msg.getDocumentNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    documentDateList: jspb.Message.toObjectList(msg.getDocumentDateList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    orderNumberList: jspb.Message.toObjectList(msg.getOrderNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    supplierNameList: jspb.Message.toObjectList(msg.getSupplierNameList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    supplierVatNumberList: jspb.Message.toObjectList(msg.getSupplierVatNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    supplierOrganisationNumberList: jspb.Message.toObjectList(msg.getSupplierOrganisationNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    creditCardLastFourList: jspb.Message.toObjectList(msg.getCreditCardLastFourList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1753,6 +2126,61 @@ proto.ssn.mlservice.v2.PredictResponse.deserializeBinaryFromReader = function(ms
       var value = new ssn_type_candidate_pb.LineCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.LineCandidate.deserializeBinaryFromReader);
       msg.addLines(value);
+      break;
+    case 24:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addBankAccountNumber(value);
+      break;
+    case 25:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addBankRegistrationNumber(value);
+      break;
+    case 26:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addBic(value);
+      break;
+    case 27:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addDocumentNumber(value);
+      break;
+    case 28:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addDocumentDate(value);
+      break;
+    case 29:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addOrderNumber(value);
+      break;
+    case 30:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addSupplierName(value);
+      break;
+    case 31:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addSupplierVatNumber(value);
+      break;
+    case 32:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addSupplierOrganisationNumber(value);
+      break;
+    case 33:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addSupplierAddress(value);
+      break;
+    case 34:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addCreditCardLastFour(value);
       break;
     default:
       reader.skipField();
@@ -1965,6 +2393,94 @@ proto.ssn.mlservice.v2.PredictResponse.serializeBinaryToWriter = function(messag
       23,
       f,
       ssn_type_candidate_pb.LineCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankAccountNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      24,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankRegistrationNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      25,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getBicList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      26,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getDocumentNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      27,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getDocumentDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      28,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getOrderNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      29,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getSupplierNameList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      30,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getSupplierVatNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      31,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getSupplierOrganisationNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      32,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getSupplierAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      33,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCreditCardLastFourList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      34,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
 };
@@ -2841,6 +3357,424 @@ proto.ssn.mlservice.v2.PredictResponse.prototype.addLines = function(opt_value, 
  */
 proto.ssn.mlservice.v2.PredictResponse.prototype.clearLinesList = function() {
   return this.setLinesList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate bank_account_number = 24;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getBankAccountNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 24));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setBankAccountNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 24, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addBankAccountNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 24, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearBankAccountNumberList = function() {
+  return this.setBankAccountNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate bank_registration_number = 25;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getBankRegistrationNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 25));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setBankRegistrationNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 25, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addBankRegistrationNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 25, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearBankRegistrationNumberList = function() {
+  return this.setBankRegistrationNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate bic = 26;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getBicList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 26));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setBicList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 26, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addBic = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 26, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearBicList = function() {
+  return this.setBicList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate document_number = 27;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getDocumentNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 27));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setDocumentNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 27, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addDocumentNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 27, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearDocumentNumberList = function() {
+  return this.setDocumentNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate document_date = 28;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getDocumentDateList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 28));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setDocumentDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 28, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addDocumentDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 28, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearDocumentDateList = function() {
+  return this.setDocumentDateList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate order_number = 29;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getOrderNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 29));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setOrderNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 29, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addOrderNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 29, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearOrderNumberList = function() {
+  return this.setOrderNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate supplier_name = 30;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getSupplierNameList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 30));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setSupplierNameList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 30, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addSupplierName = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 30, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearSupplierNameList = function() {
+  return this.setSupplierNameList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate supplier_vat_number = 31;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getSupplierVatNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 31));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setSupplierVatNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 31, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addSupplierVatNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 31, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearSupplierVatNumberList = function() {
+  return this.setSupplierVatNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate supplier_organisation_number = 32;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getSupplierOrganisationNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 32));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setSupplierOrganisationNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 32, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addSupplierOrganisationNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 32, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearSupplierOrganisationNumberList = function() {
+  return this.setSupplierOrganisationNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate supplier_address = 33;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getSupplierAddressList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 33));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setSupplierAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 33, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addSupplierAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 33, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearSupplierAddressList = function() {
+  return this.setSupplierAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate credit_card_last_four = 34;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getCreditCardLastFourList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 34));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setCreditCardLastFourList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 34, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addCreditCardLastFour = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 34, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearCreditCardLastFourList = function() {
+  return this.setCreditCardLastFourList([]);
 };
 
 

@@ -2505,6 +2505,111 @@ public final class DataServiceProto {
      * <code>.google.protobuf.StringValue supplier_name = 26;</code>
      */
     com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue bic = 27;</code>
+     * @return Whether the bic field is set.
+     */
+    boolean hasBic();
+    /**
+     * <code>.google.protobuf.StringValue bic = 27;</code>
+     * @return The bic.
+     */
+    com.google.protobuf.StringValue getBic();
+    /**
+     * <code>.google.protobuf.StringValue bic = 27;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getBicOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue document_number = 28;</code>
+     * @return Whether the documentNumber field is set.
+     */
+    boolean hasDocumentNumber();
+    /**
+     * <code>.google.protobuf.StringValue document_number = 28;</code>
+     * @return The documentNumber.
+     */
+    com.google.protobuf.StringValue getDocumentNumber();
+    /**
+     * <code>.google.protobuf.StringValue document_number = 28;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder();
+
+    /**
+     * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the documentDate field is set.
+     */
+    boolean hasDocumentDate();
+    /**
+     * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The documentDate.
+     */
+    com.google.type.Date getDocumentDate();
+    /**
+     * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.type.DateOrBuilder getDocumentDateOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue order_number = 30;</code>
+     * @return Whether the orderNumber field is set.
+     */
+    boolean hasOrderNumber();
+    /**
+     * <code>.google.protobuf.StringValue order_number = 30;</code>
+     * @return The orderNumber.
+     */
+    com.google.protobuf.StringValue getOrderNumber();
+    /**
+     * <code>.google.protobuf.StringValue order_number = 30;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+     * @return Whether the supplierVatNumber field is set.
+     */
+    boolean hasSupplierVatNumber();
+    /**
+     * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+     * @return The supplierVatNumber.
+     */
+    com.google.protobuf.StringValue getSupplierVatNumber();
+    /**
+     * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     * @return Whether the supplierOrganisationNumber field is set.
+     */
+    boolean hasSupplierOrganisationNumber();
+    /**
+     * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     * @return The supplierOrganisationNumber.
+     */
+    com.google.protobuf.StringValue getSupplierOrganisationNumber();
+    /**
+     * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+     * @return Whether the supplierAddress field is set.
+     */
+    boolean hasSupplierAddress();
+    /**
+     * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+     * @return The supplierAddress.
+     */
+    com.google.protobuf.StringValue getSupplierAddress();
+    /**
+     * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.TrueValues}
@@ -2885,6 +2990,97 @@ public final class DataServiceProto {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(supplierName_);
                 supplierName_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 218: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (bic_ != null) {
+                subBuilder = bic_.toBuilder();
+              }
+              bic_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bic_);
+                bic_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 226: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (documentNumber_ != null) {
+                subBuilder = documentNumber_.toBuilder();
+              }
+              documentNumber_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(documentNumber_);
+                documentNumber_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 234: {
+              com.google.type.Date.Builder subBuilder = null;
+              if (documentDate_ != null) {
+                subBuilder = documentDate_.toBuilder();
+              }
+              documentDate_ = input.readMessage(com.google.type.Date.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(documentDate_);
+                documentDate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 242: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (orderNumber_ != null) {
+                subBuilder = orderNumber_.toBuilder();
+              }
+              orderNumber_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(orderNumber_);
+                orderNumber_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 250: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (supplierVatNumber_ != null) {
+                subBuilder = supplierVatNumber_.toBuilder();
+              }
+              supplierVatNumber_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(supplierVatNumber_);
+                supplierVatNumber_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 258: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (supplierOrganisationNumber_ != null) {
+                subBuilder = supplierOrganisationNumber_.toBuilder();
+              }
+              supplierOrganisationNumber_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(supplierOrganisationNumber_);
+                supplierOrganisationNumber_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 266: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (supplierAddress_ != null) {
+                subBuilder = supplierAddress_.toBuilder();
+              }
+              supplierAddress_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(supplierAddress_);
+                supplierAddress_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3597,6 +3793,188 @@ public final class DataServiceProto {
       return getSupplierName();
     }
 
+    public static final int BIC_FIELD_NUMBER = 27;
+    private com.google.protobuf.StringValue bic_;
+    /**
+     * <code>.google.protobuf.StringValue bic = 27;</code>
+     * @return Whether the bic field is set.
+     */
+    @java.lang.Override
+    public boolean hasBic() {
+      return bic_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue bic = 27;</code>
+     * @return The bic.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getBic() {
+      return bic_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bic_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getBicOrBuilder() {
+      return getBic();
+    }
+
+    public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
+    private com.google.protobuf.StringValue documentNumber_;
+    /**
+     * <code>.google.protobuf.StringValue document_number = 28;</code>
+     * @return Whether the documentNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasDocumentNumber() {
+      return documentNumber_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue document_number = 28;</code>
+     * @return The documentNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDocumentNumber() {
+      return documentNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : documentNumber_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder() {
+      return getDocumentNumber();
+    }
+
+    public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
+    private com.google.type.Date documentDate_;
+    /**
+     * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the documentDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasDocumentDate() {
+      return documentDate_ != null;
+    }
+    /**
+     * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The documentDate.
+     */
+    @java.lang.Override
+    public com.google.type.Date getDocumentDate() {
+      return documentDate_ == null ? com.google.type.Date.getDefaultInstance() : documentDate_;
+    }
+    /**
+     * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.type.DateOrBuilder getDocumentDateOrBuilder() {
+      return getDocumentDate();
+    }
+
+    public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
+    private com.google.protobuf.StringValue orderNumber_;
+    /**
+     * <code>.google.protobuf.StringValue order_number = 30;</code>
+     * @return Whether the orderNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasOrderNumber() {
+      return orderNumber_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue order_number = 30;</code>
+     * @return The orderNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getOrderNumber() {
+      return orderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderNumber_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder() {
+      return getOrderNumber();
+    }
+
+    public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    private com.google.protobuf.StringValue supplierVatNumber_;
+    /**
+     * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+     * @return Whether the supplierVatNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupplierVatNumber() {
+      return supplierVatNumber_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+     * @return The supplierVatNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierVatNumber() {
+      return supplierVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierVatNumber_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder() {
+      return getSupplierVatNumber();
+    }
+
+    public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    private com.google.protobuf.StringValue supplierOrganisationNumber_;
+    /**
+     * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     * @return Whether the supplierOrganisationNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupplierOrganisationNumber() {
+      return supplierOrganisationNumber_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     * @return The supplierOrganisationNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierOrganisationNumber() {
+      return supplierOrganisationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierOrganisationNumber_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder() {
+      return getSupplierOrganisationNumber();
+    }
+
+    public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    private com.google.protobuf.StringValue supplierAddress_;
+    /**
+     * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+     * @return Whether the supplierAddress field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupplierAddress() {
+      return supplierAddress_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+     * @return The supplierAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierAddress() {
+      return supplierAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierAddress_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder() {
+      return getSupplierAddress();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3688,6 +4066,27 @@ public final class DataServiceProto {
       }
       if (supplierName_ != null) {
         output.writeMessage(26, getSupplierName());
+      }
+      if (bic_ != null) {
+        output.writeMessage(27, getBic());
+      }
+      if (documentNumber_ != null) {
+        output.writeMessage(28, getDocumentNumber());
+      }
+      if (documentDate_ != null) {
+        output.writeMessage(29, getDocumentDate());
+      }
+      if (orderNumber_ != null) {
+        output.writeMessage(30, getOrderNumber());
+      }
+      if (supplierVatNumber_ != null) {
+        output.writeMessage(31, getSupplierVatNumber());
+      }
+      if (supplierOrganisationNumber_ != null) {
+        output.writeMessage(32, getSupplierOrganisationNumber());
+      }
+      if (supplierAddress_ != null) {
+        output.writeMessage(33, getSupplierAddress());
       }
       unknownFields.writeTo(output);
     }
@@ -3801,6 +4200,34 @@ public final class DataServiceProto {
       if (supplierName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, getSupplierName());
+      }
+      if (bic_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, getBic());
+      }
+      if (documentNumber_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, getDocumentNumber());
+      }
+      if (documentDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, getDocumentDate());
+      }
+      if (orderNumber_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, getOrderNumber());
+      }
+      if (supplierVatNumber_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, getSupplierVatNumber());
+      }
+      if (supplierOrganisationNumber_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, getSupplierOrganisationNumber());
+      }
+      if (supplierAddress_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, getSupplierAddress());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3947,6 +4374,41 @@ public final class DataServiceProto {
         if (!getSupplierName()
             .equals(other.getSupplierName())) return false;
       }
+      if (hasBic() != other.hasBic()) return false;
+      if (hasBic()) {
+        if (!getBic()
+            .equals(other.getBic())) return false;
+      }
+      if (hasDocumentNumber() != other.hasDocumentNumber()) return false;
+      if (hasDocumentNumber()) {
+        if (!getDocumentNumber()
+            .equals(other.getDocumentNumber())) return false;
+      }
+      if (hasDocumentDate() != other.hasDocumentDate()) return false;
+      if (hasDocumentDate()) {
+        if (!getDocumentDate()
+            .equals(other.getDocumentDate())) return false;
+      }
+      if (hasOrderNumber() != other.hasOrderNumber()) return false;
+      if (hasOrderNumber()) {
+        if (!getOrderNumber()
+            .equals(other.getOrderNumber())) return false;
+      }
+      if (hasSupplierVatNumber() != other.hasSupplierVatNumber()) return false;
+      if (hasSupplierVatNumber()) {
+        if (!getSupplierVatNumber()
+            .equals(other.getSupplierVatNumber())) return false;
+      }
+      if (hasSupplierOrganisationNumber() != other.hasSupplierOrganisationNumber()) return false;
+      if (hasSupplierOrganisationNumber()) {
+        if (!getSupplierOrganisationNumber()
+            .equals(other.getSupplierOrganisationNumber())) return false;
+      }
+      if (hasSupplierAddress() != other.hasSupplierAddress()) return false;
+      if (hasSupplierAddress()) {
+        if (!getSupplierAddress()
+            .equals(other.getSupplierAddress())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4061,6 +4523,34 @@ public final class DataServiceProto {
       if (hasSupplierName()) {
         hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierName().hashCode();
+      }
+      if (hasBic()) {
+        hash = (37 * hash) + BIC_FIELD_NUMBER;
+        hash = (53 * hash) + getBic().hashCode();
+      }
+      if (hasDocumentNumber()) {
+        hash = (37 * hash) + DOCUMENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentNumber().hashCode();
+      }
+      if (hasDocumentDate()) {
+        hash = (37 * hash) + DOCUMENT_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentDate().hashCode();
+      }
+      if (hasOrderNumber()) {
+        hash = (37 * hash) + ORDER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderNumber().hashCode();
+      }
+      if (hasSupplierVatNumber()) {
+        hash = (37 * hash) + SUPPLIER_VAT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierVatNumber().hashCode();
+      }
+      if (hasSupplierOrganisationNumber()) {
+        hash = (37 * hash) + SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierOrganisationNumber().hashCode();
+      }
+      if (hasSupplierAddress()) {
+        hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierAddress().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4351,6 +4841,48 @@ public final class DataServiceProto {
           supplierName_ = null;
           supplierNameBuilder_ = null;
         }
+        if (bicBuilder_ == null) {
+          bic_ = null;
+        } else {
+          bic_ = null;
+          bicBuilder_ = null;
+        }
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = null;
+        } else {
+          documentNumber_ = null;
+          documentNumberBuilder_ = null;
+        }
+        if (documentDateBuilder_ == null) {
+          documentDate_ = null;
+        } else {
+          documentDate_ = null;
+          documentDateBuilder_ = null;
+        }
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = null;
+        } else {
+          orderNumber_ = null;
+          orderNumberBuilder_ = null;
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = null;
+        } else {
+          supplierVatNumber_ = null;
+          supplierVatNumberBuilder_ = null;
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = null;
+        } else {
+          supplierOrganisationNumber_ = null;
+          supplierOrganisationNumberBuilder_ = null;
+        }
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = null;
+        } else {
+          supplierAddress_ = null;
+          supplierAddressBuilder_ = null;
+        }
         return this;
       }
 
@@ -4507,6 +5039,41 @@ public final class DataServiceProto {
         } else {
           result.supplierName_ = supplierNameBuilder_.build();
         }
+        if (bicBuilder_ == null) {
+          result.bic_ = bic_;
+        } else {
+          result.bic_ = bicBuilder_.build();
+        }
+        if (documentNumberBuilder_ == null) {
+          result.documentNumber_ = documentNumber_;
+        } else {
+          result.documentNumber_ = documentNumberBuilder_.build();
+        }
+        if (documentDateBuilder_ == null) {
+          result.documentDate_ = documentDate_;
+        } else {
+          result.documentDate_ = documentDateBuilder_.build();
+        }
+        if (orderNumberBuilder_ == null) {
+          result.orderNumber_ = orderNumber_;
+        } else {
+          result.orderNumber_ = orderNumberBuilder_.build();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          result.supplierVatNumber_ = supplierVatNumber_;
+        } else {
+          result.supplierVatNumber_ = supplierVatNumberBuilder_.build();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
+        } else {
+          result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_.build();
+        }
+        if (supplierAddressBuilder_ == null) {
+          result.supplierAddress_ = supplierAddress_;
+        } else {
+          result.supplierAddress_ = supplierAddressBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4632,6 +5199,27 @@ public final class DataServiceProto {
         }
         if (other.hasSupplierName()) {
           mergeSupplierName(other.getSupplierName());
+        }
+        if (other.hasBic()) {
+          mergeBic(other.getBic());
+        }
+        if (other.hasDocumentNumber()) {
+          mergeDocumentNumber(other.getDocumentNumber());
+        }
+        if (other.hasDocumentDate()) {
+          mergeDocumentDate(other.getDocumentDate());
+        }
+        if (other.hasOrderNumber()) {
+          mergeOrderNumber(other.getOrderNumber());
+        }
+        if (other.hasSupplierVatNumber()) {
+          mergeSupplierVatNumber(other.getSupplierVatNumber());
+        }
+        if (other.hasSupplierOrganisationNumber()) {
+          mergeSupplierOrganisationNumber(other.getSupplierOrganisationNumber());
+        }
+        if (other.hasSupplierAddress()) {
+          mergeSupplierAddress(other.getSupplierAddress());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7755,6 +8343,839 @@ public final class DataServiceProto {
         }
         return supplierNameBuilder_;
       }
+
+      private com.google.protobuf.StringValue bic_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> bicBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       * @return Whether the bic field is set.
+       */
+      public boolean hasBic() {
+        return bicBuilder_ != null || bic_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       * @return The bic.
+       */
+      public com.google.protobuf.StringValue getBic() {
+        if (bicBuilder_ == null) {
+          return bic_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bic_;
+        } else {
+          return bicBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder setBic(com.google.protobuf.StringValue value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bic_ = value;
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder setBic(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          bic_ = builderForValue.build();
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder mergeBic(com.google.protobuf.StringValue value) {
+        if (bicBuilder_ == null) {
+          if (bic_ != null) {
+            bic_ =
+              com.google.protobuf.StringValue.newBuilder(bic_).mergeFrom(value).buildPartial();
+          } else {
+            bic_ = value;
+          }
+          onChanged();
+        } else {
+          bicBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder clearBic() {
+        if (bicBuilder_ == null) {
+          bic_ = null;
+          onChanged();
+        } else {
+          bic_ = null;
+          bicBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getBicBuilder() {
+        
+        onChanged();
+        return getBicFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getBicOrBuilder() {
+        if (bicBuilder_ != null) {
+          return bicBuilder_.getMessageOrBuilder();
+        } else {
+          return bic_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : bic_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue bic = 27;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getBicFieldBuilder() {
+        if (bicBuilder_ == null) {
+          bicBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getBic(),
+                  getParentForChildren(),
+                  isClean());
+          bic_ = null;
+        }
+        return bicBuilder_;
+      }
+
+      private com.google.protobuf.StringValue documentNumber_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> documentNumberBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       * @return Whether the documentNumber field is set.
+       */
+      public boolean hasDocumentNumber() {
+        return documentNumberBuilder_ != null || documentNumber_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       * @return The documentNumber.
+       */
+      public com.google.protobuf.StringValue getDocumentNumber() {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : documentNumber_;
+        } else {
+          return documentNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(com.google.protobuf.StringValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          documentNumber_ = value;
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder mergeDocumentNumber(com.google.protobuf.StringValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (documentNumber_ != null) {
+            documentNumber_ =
+              com.google.protobuf.StringValue.newBuilder(documentNumber_).mergeFrom(value).buildPartial();
+          } else {
+            documentNumber_ = value;
+          }
+          onChanged();
+        } else {
+          documentNumberBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder clearDocumentNumber() {
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = null;
+          onChanged();
+        } else {
+          documentNumber_ = null;
+          documentNumberBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDocumentNumberBuilder() {
+        
+        onChanged();
+        return getDocumentNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder() {
+        if (documentNumberBuilder_ != null) {
+          return documentNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return documentNumber_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : documentNumber_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue document_number = 28;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDocumentNumberFieldBuilder() {
+        if (documentNumberBuilder_ == null) {
+          documentNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDocumentNumber(),
+                  getParentForChildren(),
+                  isClean());
+          documentNumber_ = null;
+        }
+        return documentNumberBuilder_;
+      }
+
+      private com.google.type.Date documentDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> documentDateBuilder_;
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return Whether the documentDate field is set.
+       */
+      public boolean hasDocumentDate() {
+        return documentDateBuilder_ != null || documentDate_ != null;
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * @return The documentDate.
+       */
+      public com.google.type.Date getDocumentDate() {
+        if (documentDateBuilder_ == null) {
+          return documentDate_ == null ? com.google.type.Date.getDefaultInstance() : documentDate_;
+        } else {
+          return documentDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setDocumentDate(com.google.type.Date value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          documentDate_ = value;
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setDocumentDate(
+          com.google.type.Date.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          documentDate_ = builderForValue.build();
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder mergeDocumentDate(com.google.type.Date value) {
+        if (documentDateBuilder_ == null) {
+          if (documentDate_ != null) {
+            documentDate_ =
+              com.google.type.Date.newBuilder(documentDate_).mergeFrom(value).buildPartial();
+          } else {
+            documentDate_ = value;
+          }
+          onChanged();
+        } else {
+          documentDateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearDocumentDate() {
+        if (documentDateBuilder_ == null) {
+          documentDate_ = null;
+          onChanged();
+        } else {
+          documentDate_ = null;
+          documentDateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder getDocumentDateBuilder() {
+        
+        onChanged();
+        return getDocumentDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.DateOrBuilder getDocumentDateOrBuilder() {
+        if (documentDateBuilder_ != null) {
+          return documentDateBuilder_.getMessageOrBuilder();
+        } else {
+          return documentDate_ == null ?
+              com.google.type.Date.getDefaultInstance() : documentDate_;
+        }
+      }
+      /**
+       * <code>.google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+          getDocumentDateFieldBuilder() {
+        if (documentDateBuilder_ == null) {
+          documentDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
+                  getDocumentDate(),
+                  getParentForChildren(),
+                  isClean());
+          documentDate_ = null;
+        }
+        return documentDateBuilder_;
+      }
+
+      private com.google.protobuf.StringValue orderNumber_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> orderNumberBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       * @return Whether the orderNumber field is set.
+       */
+      public boolean hasOrderNumber() {
+        return orderNumberBuilder_ != null || orderNumber_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       * @return The orderNumber.
+       */
+      public com.google.protobuf.StringValue getOrderNumber() {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderNumber_;
+        } else {
+          return orderNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder setOrderNumber(com.google.protobuf.StringValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          orderNumber_ = value;
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder setOrderNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder mergeOrderNumber(com.google.protobuf.StringValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (orderNumber_ != null) {
+            orderNumber_ =
+              com.google.protobuf.StringValue.newBuilder(orderNumber_).mergeFrom(value).buildPartial();
+          } else {
+            orderNumber_ = value;
+          }
+          onChanged();
+        } else {
+          orderNumberBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder clearOrderNumber() {
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = null;
+          onChanged();
+        } else {
+          orderNumber_ = null;
+          orderNumberBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOrderNumberBuilder() {
+        
+        onChanged();
+        return getOrderNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder() {
+        if (orderNumberBuilder_ != null) {
+          return orderNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return orderNumber_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : orderNumber_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue order_number = 30;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOrderNumberFieldBuilder() {
+        if (orderNumberBuilder_ == null) {
+          orderNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getOrderNumber(),
+                  getParentForChildren(),
+                  isClean());
+          orderNumber_ = null;
+        }
+        return orderNumberBuilder_;
+      }
+
+      private com.google.protobuf.StringValue supplierVatNumber_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierVatNumberBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       * @return Whether the supplierVatNumber field is set.
+       */
+      public boolean hasSupplierVatNumber() {
+        return supplierVatNumberBuilder_ != null || supplierVatNumber_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       * @return The supplierVatNumber.
+       */
+      public com.google.protobuf.StringValue getSupplierVatNumber() {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierVatNumber_;
+        } else {
+          return supplierVatNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(com.google.protobuf.StringValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          supplierVatNumber_ = value;
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder mergeSupplierVatNumber(com.google.protobuf.StringValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (supplierVatNumber_ != null) {
+            supplierVatNumber_ =
+              com.google.protobuf.StringValue.newBuilder(supplierVatNumber_).mergeFrom(value).buildPartial();
+          } else {
+            supplierVatNumber_ = value;
+          }
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder clearSupplierVatNumber() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = null;
+          onChanged();
+        } else {
+          supplierVatNumber_ = null;
+          supplierVatNumberBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierVatNumberBuilder() {
+        
+        onChanged();
+        return getSupplierVatNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder() {
+        if (supplierVatNumberBuilder_ != null) {
+          return supplierVatNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return supplierVatNumber_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : supplierVatNumber_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierVatNumberFieldBuilder() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getSupplierVatNumber(),
+                  getParentForChildren(),
+                  isClean());
+          supplierVatNumber_ = null;
+        }
+        return supplierVatNumberBuilder_;
+      }
+
+      private com.google.protobuf.StringValue supplierOrganisationNumber_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierOrganisationNumberBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       * @return Whether the supplierOrganisationNumber field is set.
+       */
+      public boolean hasSupplierOrganisationNumber() {
+        return supplierOrganisationNumberBuilder_ != null || supplierOrganisationNumber_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       * @return The supplierOrganisationNumber.
+       */
+      public com.google.protobuf.StringValue getSupplierOrganisationNumber() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierOrganisationNumber_;
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(com.google.protobuf.StringValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          supplierOrganisationNumber_ = value;
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder mergeSupplierOrganisationNumber(com.google.protobuf.StringValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (supplierOrganisationNumber_ != null) {
+            supplierOrganisationNumber_ =
+              com.google.protobuf.StringValue.newBuilder(supplierOrganisationNumber_).mergeFrom(value).buildPartial();
+          } else {
+            supplierOrganisationNumber_ = value;
+          }
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder clearSupplierOrganisationNumber() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = null;
+          onChanged();
+        } else {
+          supplierOrganisationNumber_ = null;
+          supplierOrganisationNumberBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierOrganisationNumberBuilder() {
+        
+        onChanged();
+        return getSupplierOrganisationNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder() {
+        if (supplierOrganisationNumberBuilder_ != null) {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return supplierOrganisationNumber_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : supplierOrganisationNumber_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierOrganisationNumberFieldBuilder() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getSupplierOrganisationNumber(),
+                  getParentForChildren(),
+                  isClean());
+          supplierOrganisationNumber_ = null;
+        }
+        return supplierOrganisationNumberBuilder_;
+      }
+
+      private com.google.protobuf.StringValue supplierAddress_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierAddressBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       * @return Whether the supplierAddress field is set.
+       */
+      public boolean hasSupplierAddress() {
+        return supplierAddressBuilder_ != null || supplierAddress_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       * @return The supplierAddress.
+       */
+      public com.google.protobuf.StringValue getSupplierAddress() {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierAddress_;
+        } else {
+          return supplierAddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(com.google.protobuf.StringValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          supplierAddress_ = value;
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = builderForValue.build();
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder mergeSupplierAddress(com.google.protobuf.StringValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (supplierAddress_ != null) {
+            supplierAddress_ =
+              com.google.protobuf.StringValue.newBuilder(supplierAddress_).mergeFrom(value).buildPartial();
+          } else {
+            supplierAddress_ = value;
+          }
+          onChanged();
+        } else {
+          supplierAddressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder clearSupplierAddress() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = null;
+          onChanged();
+        } else {
+          supplierAddress_ = null;
+          supplierAddressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierAddressBuilder() {
+        
+        onChanged();
+        return getSupplierAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder() {
+        if (supplierAddressBuilder_ != null) {
+          return supplierAddressBuilder_.getMessageOrBuilder();
+        } else {
+          return supplierAddress_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : supplierAddress_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierAddressFieldBuilder() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getSupplierAddress(),
+                  getParentForChildren(),
+                  isClean());
+          supplierAddress_ = null;
+        }
+        return supplierAddressBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8411,6 +9832,198 @@ public final class DataServiceProto {
      */
     com.google.protobuf.StringValueOrBuilder getBankRegistrationNumberOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getSupplierNameList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    com.google.protobuf.StringValue getSupplierName(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    int getSupplierNameCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierNameOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getBicList();
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    com.google.protobuf.StringValue getBic(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    int getBicCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getBicOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getBicOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getDocumentNumberList();
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    com.google.protobuf.StringValue getDocumentNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    int getDocumentNumberCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getDocumentNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<com.google.type.Date> 
+        getDocumentDateList();
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.type.Date getDocumentDate(int index);
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    int getDocumentDateCount();
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<? extends com.google.type.DateOrBuilder> 
+        getDocumentDateOrBuilderList();
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.type.DateOrBuilder getDocumentDateOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOrderNumberList();
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    com.google.protobuf.StringValue getOrderNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    int getOrderNumberCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOrderNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getSupplierVatNumberList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    com.google.protobuf.StringValue getSupplierVatNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    int getSupplierVatNumberCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierVatNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getSupplierOrganisationNumberList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    com.google.protobuf.StringValue getSupplierOrganisationNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    int getSupplierOrganisationNumberCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getSupplierAddressList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    com.google.protobuf.StringValue getSupplierAddress(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    int getSupplierAddressCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierAddressOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionValues}
@@ -8450,6 +10063,14 @@ public final class DataServiceProto {
       orderReference_ = java.util.Collections.emptyList();
       bankAccountNumber_ = java.util.Collections.emptyList();
       bankRegistrationNumber_ = java.util.Collections.emptyList();
+      supplierName_ = java.util.Collections.emptyList();
+      bic_ = java.util.Collections.emptyList();
+      documentNumber_ = java.util.Collections.emptyList();
+      documentDate_ = java.util.Collections.emptyList();
+      orderNumber_ = java.util.Collections.emptyList();
+      supplierVatNumber_ = java.util.Collections.emptyList();
+      supplierOrganisationNumber_ = java.util.Collections.emptyList();
+      supplierAddress_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -8473,6 +10094,7 @@ public final class DataServiceProto {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8708,6 +10330,78 @@ public final class DataServiceProto {
                   input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
               break;
             }
+            case 210: {
+              if (!((mutable_bitField0_ & 0x02000000) != 0)) {
+                supplierName_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x02000000;
+              }
+              supplierName_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 218: {
+              if (!((mutable_bitField0_ & 0x04000000) != 0)) {
+                bic_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x04000000;
+              }
+              bic_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 226: {
+              if (!((mutable_bitField0_ & 0x08000000) != 0)) {
+                documentNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x08000000;
+              }
+              documentNumber_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x10000000) != 0)) {
+                documentDate_ = new java.util.ArrayList<com.google.type.Date>();
+                mutable_bitField0_ |= 0x10000000;
+              }
+              documentDate_.add(
+                  input.readMessage(com.google.type.Date.parser(), extensionRegistry));
+              break;
+            }
+            case 242: {
+              if (!((mutable_bitField0_ & 0x20000000) != 0)) {
+                orderNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x20000000;
+              }
+              orderNumber_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 250: {
+              if (!((mutable_bitField0_ & 0x40000000) != 0)) {
+                supplierVatNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x40000000;
+              }
+              supplierVatNumber_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 258: {
+              if (!((mutable_bitField0_ & 0x80000000) != 0)) {
+                supplierOrganisationNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x80000000;
+              }
+              supplierOrganisationNumber_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 266: {
+              if (!((mutable_bitField1_ & 0x00000001) != 0)) {
+                supplierAddress_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField1_ |= 0x00000001;
+              }
+              supplierAddress_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8797,6 +10491,30 @@ public final class DataServiceProto {
         }
         if (((mutable_bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
+        }
+        if (((mutable_bitField0_ & 0x02000000) != 0)) {
+          supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+        }
+        if (((mutable_bitField0_ & 0x04000000) != 0)) {
+          bic_ = java.util.Collections.unmodifiableList(bic_);
+        }
+        if (((mutable_bitField0_ & 0x08000000) != 0)) {
+          documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+        }
+        if (((mutable_bitField0_ & 0x10000000) != 0)) {
+          documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+        }
+        if (((mutable_bitField0_ & 0x20000000) != 0)) {
+          orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+        }
+        if (((mutable_bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+        if (((mutable_bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+        if (((mutable_bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9815,6 +11533,326 @@ public final class DataServiceProto {
       return bankRegistrationNumber_.get(index);
     }
 
+    public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
+    private java.util.List<com.google.protobuf.StringValue> supplierName_;
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getSupplierNameList() {
+      return supplierName_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierNameOrBuilderList() {
+      return supplierName_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public int getSupplierNameCount() {
+      return supplierName_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierName(int index) {
+      return supplierName_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder(
+        int index) {
+      return supplierName_.get(index);
+    }
+
+    public static final int BIC_FIELD_NUMBER = 27;
+    private java.util.List<com.google.protobuf.StringValue> bic_;
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getBicList() {
+      return bic_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getBicOrBuilderList() {
+      return bic_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public int getBicCount() {
+      return bic_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getBic(int index) {
+      return bic_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getBicOrBuilder(
+        int index) {
+      return bic_.get(index);
+    }
+
+    public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
+    private java.util.List<com.google.protobuf.StringValue> documentNumber_;
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getDocumentNumberList() {
+      return documentNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getDocumentNumberOrBuilderList() {
+      return documentNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public int getDocumentNumberCount() {
+      return documentNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDocumentNumber(int index) {
+      return documentNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder(
+        int index) {
+      return documentNumber_.get(index);
+    }
+
+    public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
+    private java.util.List<com.google.type.Date> documentDate_;
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.type.Date> getDocumentDateList() {
+      return documentDate_;
+    }
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.type.DateOrBuilder> 
+        getDocumentDateOrBuilderList() {
+      return documentDate_;
+    }
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getDocumentDateCount() {
+      return documentDate_.size();
+    }
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.type.Date getDocumentDate(int index) {
+      return documentDate_.get(index);
+    }
+    /**
+     * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.type.DateOrBuilder getDocumentDateOrBuilder(
+        int index) {
+      return documentDate_.get(index);
+    }
+
+    public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
+    private java.util.List<com.google.protobuf.StringValue> orderNumber_;
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getOrderNumberList() {
+      return orderNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOrderNumberOrBuilderList() {
+      return orderNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public int getOrderNumberCount() {
+      return orderNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getOrderNumber(int index) {
+      return orderNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder(
+        int index) {
+      return orderNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    private java.util.List<com.google.protobuf.StringValue> supplierVatNumber_;
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getSupplierVatNumberList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierVatNumberOrBuilderList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public int getSupplierVatNumberCount() {
+      return supplierVatNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierVatNumber(int index) {
+      return supplierVatNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder(
+        int index) {
+      return supplierVatNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    private java.util.List<com.google.protobuf.StringValue> supplierOrganisationNumber_;
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getSupplierOrganisationNumberList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public int getSupplierOrganisationNumberCount() {
+      return supplierOrganisationNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierOrganisationNumber(int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    private java.util.List<com.google.protobuf.StringValue> supplierAddress_;
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getSupplierAddressList() {
+      return supplierAddress_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierAddressOrBuilderList() {
+      return supplierAddress_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public int getSupplierAddressCount() {
+      return supplierAddress_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getSupplierAddress(int index) {
+      return supplierAddress_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder(
+        int index) {
+      return supplierAddress_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9903,6 +11941,30 @@ public final class DataServiceProto {
       }
       for (int i = 0; i < bankRegistrationNumber_.size(); i++) {
         output.writeMessage(25, bankRegistrationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        output.writeMessage(26, supplierName_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        output.writeMessage(27, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        output.writeMessage(28, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        output.writeMessage(29, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        output.writeMessage(30, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        output.writeMessage(31, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        output.writeMessage(32, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        output.writeMessage(33, supplierAddress_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -10013,6 +12075,38 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, bankRegistrationNumber_.get(i));
       }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, supplierName_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, supplierAddress_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10078,6 +12172,22 @@ public final class DataServiceProto {
           .equals(other.getBankAccountNumberList())) return false;
       if (!getBankRegistrationNumberList()
           .equals(other.getBankRegistrationNumberList())) return false;
+      if (!getSupplierNameList()
+          .equals(other.getSupplierNameList())) return false;
+      if (!getBicList()
+          .equals(other.getBicList())) return false;
+      if (!getDocumentNumberList()
+          .equals(other.getDocumentNumberList())) return false;
+      if (!getDocumentDateList()
+          .equals(other.getDocumentDateList())) return false;
+      if (!getOrderNumberList()
+          .equals(other.getOrderNumberList())) return false;
+      if (!getSupplierVatNumberList()
+          .equals(other.getSupplierVatNumberList())) return false;
+      if (!getSupplierOrganisationNumberList()
+          .equals(other.getSupplierOrganisationNumberList())) return false;
+      if (!getSupplierAddressList()
+          .equals(other.getSupplierAddressList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10188,6 +12298,38 @@ public final class DataServiceProto {
       if (getBankRegistrationNumberCount() > 0) {
         hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + getBankRegistrationNumberList().hashCode();
+      }
+      if (getSupplierNameCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierNameList().hashCode();
+      }
+      if (getBicCount() > 0) {
+        hash = (37 * hash) + BIC_FIELD_NUMBER;
+        hash = (53 * hash) + getBicList().hashCode();
+      }
+      if (getDocumentNumberCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentNumberList().hashCode();
+      }
+      if (getDocumentDateCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentDateList().hashCode();
+      }
+      if (getOrderNumberCount() > 0) {
+        hash = (37 * hash) + ORDER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderNumberList().hashCode();
+      }
+      if (getSupplierVatNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_VAT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierVatNumberList().hashCode();
+      }
+      if (getSupplierOrganisationNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierOrganisationNumberList().hashCode();
+      }
+      if (getSupplierAddressCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierAddressList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10342,6 +12484,14 @@ public final class DataServiceProto {
           getOrderReferenceFieldBuilder();
           getBankAccountNumberFieldBuilder();
           getBankRegistrationNumberFieldBuilder();
+          getSupplierNameFieldBuilder();
+          getBicFieldBuilder();
+          getDocumentNumberFieldBuilder();
+          getDocumentDateFieldBuilder();
+          getOrderNumberFieldBuilder();
+          getSupplierVatNumberFieldBuilder();
+          getSupplierOrganisationNumberFieldBuilder();
+          getSupplierAddressFieldBuilder();
         }
       }
       @java.lang.Override
@@ -10497,6 +12647,54 @@ public final class DataServiceProto {
         } else {
           bankRegistrationNumberBuilder_.clear();
         }
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+        } else {
+          bicBuilder_.clear();
+        }
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+        } else {
+          documentDateBuilder_.clear();
+        }
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+        } else {
+          supplierAddressBuilder_.clear();
+        }
         return this;
       }
 
@@ -10524,6 +12722,7 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.PredictionValues buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PredictionValues result = new ssn.dataservice.v1.DataServiceProto.PredictionValues(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -10748,6 +12947,78 @@ public final class DataServiceProto {
           result.bankRegistrationNumber_ = bankRegistrationNumber_;
         } else {
           result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_.build();
+        }
+        if (supplierNameBuilder_ == null) {
+          if (((bitField0_ & 0x02000000) != 0)) {
+            supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+            bitField0_ = (bitField0_ & ~0x02000000);
+          }
+          result.supplierName_ = supplierName_;
+        } else {
+          result.supplierName_ = supplierNameBuilder_.build();
+        }
+        if (bicBuilder_ == null) {
+          if (((bitField0_ & 0x04000000) != 0)) {
+            bic_ = java.util.Collections.unmodifiableList(bic_);
+            bitField0_ = (bitField0_ & ~0x04000000);
+          }
+          result.bic_ = bic_;
+        } else {
+          result.bic_ = bicBuilder_.build();
+        }
+        if (documentNumberBuilder_ == null) {
+          if (((bitField0_ & 0x08000000) != 0)) {
+            documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+            bitField0_ = (bitField0_ & ~0x08000000);
+          }
+          result.documentNumber_ = documentNumber_;
+        } else {
+          result.documentNumber_ = documentNumberBuilder_.build();
+        }
+        if (documentDateBuilder_ == null) {
+          if (((bitField0_ & 0x10000000) != 0)) {
+            documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+            bitField0_ = (bitField0_ & ~0x10000000);
+          }
+          result.documentDate_ = documentDate_;
+        } else {
+          result.documentDate_ = documentDateBuilder_.build();
+        }
+        if (orderNumberBuilder_ == null) {
+          if (((bitField0_ & 0x20000000) != 0)) {
+            orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+            bitField0_ = (bitField0_ & ~0x20000000);
+          }
+          result.orderNumber_ = orderNumber_;
+        } else {
+          result.orderNumber_ = orderNumberBuilder_.build();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (((bitField0_ & 0x40000000) != 0)) {
+            supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+            bitField0_ = (bitField0_ & ~0x40000000);
+          }
+          result.supplierVatNumber_ = supplierVatNumber_;
+        } else {
+          result.supplierVatNumber_ = supplierVatNumberBuilder_.build();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (((bitField0_ & 0x80000000) != 0)) {
+            supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+            bitField0_ = (bitField0_ & ~0x80000000);
+          }
+          result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
+        } else {
+          result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_.build();
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (((bitField1_ & 0x00000001) != 0)) {
+            supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
+            bitField1_ = (bitField1_ & ~0x00000001);
+          }
+          result.supplierAddress_ = supplierAddress_;
+        } else {
+          result.supplierAddress_ = supplierAddressBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11447,6 +13718,214 @@ public final class DataServiceProto {
             }
           }
         }
+        if (supplierNameBuilder_ == null) {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierName_.isEmpty()) {
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+            } else {
+              ensureSupplierNameIsMutable();
+              supplierName_.addAll(other.supplierName_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierNameBuilder_.isEmpty()) {
+              supplierNameBuilder_.dispose();
+              supplierNameBuilder_ = null;
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+              supplierNameBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierNameFieldBuilder() : null;
+            } else {
+              supplierNameBuilder_.addAllMessages(other.supplierName_);
+            }
+          }
+        }
+        if (bicBuilder_ == null) {
+          if (!other.bic_.isEmpty()) {
+            if (bic_.isEmpty()) {
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+            } else {
+              ensureBicIsMutable();
+              bic_.addAll(other.bic_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bic_.isEmpty()) {
+            if (bicBuilder_.isEmpty()) {
+              bicBuilder_.dispose();
+              bicBuilder_ = null;
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+              bicBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBicFieldBuilder() : null;
+            } else {
+              bicBuilder_.addAllMessages(other.bic_);
+            }
+          }
+        }
+        if (documentNumberBuilder_ == null) {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumber_.isEmpty()) {
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+            } else {
+              ensureDocumentNumberIsMutable();
+              documentNumber_.addAll(other.documentNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumberBuilder_.isEmpty()) {
+              documentNumberBuilder_.dispose();
+              documentNumberBuilder_ = null;
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+              documentNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentNumberFieldBuilder() : null;
+            } else {
+              documentNumberBuilder_.addAllMessages(other.documentNumber_);
+            }
+          }
+        }
+        if (documentDateBuilder_ == null) {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDate_.isEmpty()) {
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+            } else {
+              ensureDocumentDateIsMutable();
+              documentDate_.addAll(other.documentDate_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDateBuilder_.isEmpty()) {
+              documentDateBuilder_.dispose();
+              documentDateBuilder_ = null;
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+              documentDateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentDateFieldBuilder() : null;
+            } else {
+              documentDateBuilder_.addAllMessages(other.documentDate_);
+            }
+          }
+        }
+        if (orderNumberBuilder_ == null) {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumber_.isEmpty()) {
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+            } else {
+              ensureOrderNumberIsMutable();
+              orderNumber_.addAll(other.orderNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumberBuilder_.isEmpty()) {
+              orderNumberBuilder_.dispose();
+              orderNumberBuilder_ = null;
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+              orderNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrderNumberFieldBuilder() : null;
+            } else {
+              orderNumberBuilder_.addAllMessages(other.orderNumber_);
+            }
+          }
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumber_.isEmpty()) {
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+            } else {
+              ensureSupplierVatNumberIsMutable();
+              supplierVatNumber_.addAll(other.supplierVatNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumberBuilder_.isEmpty()) {
+              supplierVatNumberBuilder_.dispose();
+              supplierVatNumberBuilder_ = null;
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+              supplierVatNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierVatNumberFieldBuilder() : null;
+            } else {
+              supplierVatNumberBuilder_.addAllMessages(other.supplierVatNumber_);
+            }
+          }
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumber_.isEmpty()) {
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+            } else {
+              ensureSupplierOrganisationNumberIsMutable();
+              supplierOrganisationNumber_.addAll(other.supplierOrganisationNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumberBuilder_.isEmpty()) {
+              supplierOrganisationNumberBuilder_.dispose();
+              supplierOrganisationNumberBuilder_ = null;
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+              supplierOrganisationNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierOrganisationNumberFieldBuilder() : null;
+            } else {
+              supplierOrganisationNumberBuilder_.addAllMessages(other.supplierOrganisationNumber_);
+            }
+          }
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddress_.isEmpty()) {
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+            } else {
+              ensureSupplierAddressIsMutable();
+              supplierAddress_.addAll(other.supplierAddress_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddressBuilder_.isEmpty()) {
+              supplierAddressBuilder_.dispose();
+              supplierAddressBuilder_ = null;
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+              supplierAddressBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierAddressFieldBuilder() : null;
+            } else {
+              supplierAddressBuilder_.addAllMessages(other.supplierAddress_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -11476,6 +13955,7 @@ public final class DataServiceProto {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_ =
         java.util.Collections.emptyList();
@@ -17476,6 +19956,1926 @@ public final class DataServiceProto {
         }
         return bankRegistrationNumberBuilder_;
       }
+
+      private java.util.List<com.google.protobuf.StringValue> supplierName_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierNameIsMutable() {
+        if (!((bitField0_ & 0x02000000) != 0)) {
+          supplierName_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierName_);
+          bitField0_ |= 0x02000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierNameBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getSupplierNameList() {
+        if (supplierNameBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        } else {
+          return supplierNameBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public int getSupplierNameCount() {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.size();
+        } else {
+          return supplierNameBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.StringValue getSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);
+        } else {
+          return supplierNameBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(com.google.protobuf.StringValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder addAllSupplierName(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierName_);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder clearSupplierName() {
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+          onChanged();
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public Builder removeSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.remove(index);
+          onChanged();
+        } else {
+          supplierNameBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder(
+          int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);  } else {
+          return supplierNameBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getSupplierNameOrBuilderList() {
+        if (supplierNameBuilder_ != null) {
+          return supplierNameBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierNameBuilder() {
+        return getSupplierNameFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_name = 26;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getSupplierNameBuilderList() {
+        return getSupplierNameFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierNameFieldBuilder() {
+        if (supplierNameBuilder_ == null) {
+          supplierNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  supplierName_,
+                  ((bitField0_ & 0x02000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierName_ = null;
+        }
+        return supplierNameBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> bic_ =
+        java.util.Collections.emptyList();
+      private void ensureBicIsMutable() {
+        if (!((bitField0_ & 0x04000000) != 0)) {
+          bic_ = new java.util.ArrayList<com.google.protobuf.StringValue>(bic_);
+          bitField0_ |= 0x04000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> bicBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getBicList() {
+        if (bicBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bic_);
+        } else {
+          return bicBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public int getBicCount() {
+        if (bicBuilder_ == null) {
+          return bic_.size();
+        } else {
+          return bicBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public com.google.protobuf.StringValue getBic(int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);
+        } else {
+          return bicBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder setBic(
+          int index, com.google.protobuf.StringValue value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.set(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder setBic(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder addBic(com.google.protobuf.StringValue value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder addBic(
+          int index, com.google.protobuf.StringValue value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder addBic(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder addBic(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder addAllBic(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bic_);
+          onChanged();
+        } else {
+          bicBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder clearBic() {
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+          onChanged();
+        } else {
+          bicBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public Builder removeBic(int index) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.remove(index);
+          onChanged();
+        } else {
+          bicBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getBicBuilder(
+          int index) {
+        return getBicFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getBicOrBuilder(
+          int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);  } else {
+          return bicBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getBicOrBuilderList() {
+        if (bicBuilder_ != null) {
+          return bicBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bic_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addBicBuilder() {
+        return getBicFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addBicBuilder(
+          int index) {
+        return getBicFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue bic = 27;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getBicBuilderList() {
+        return getBicFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getBicFieldBuilder() {
+        if (bicBuilder_ == null) {
+          bicBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  bic_,
+                  ((bitField0_ & 0x04000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bic_ = null;
+        }
+        return bicBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> documentNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentNumberIsMutable() {
+        if (!((bitField0_ & 0x08000000) != 0)) {
+          documentNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(documentNumber_);
+          bitField0_ |= 0x08000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> documentNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getDocumentNumberList() {
+        if (documentNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        } else {
+          return documentNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public int getDocumentNumberCount() {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.size();
+        } else {
+          return documentNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public com.google.protobuf.StringValue getDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);
+        } else {
+          return documentNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(com.google.protobuf.StringValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder addAllDocumentNumber(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentNumber_);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder clearDocumentNumber() {
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+          onChanged();
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public Builder removeDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.remove(index);
+          onChanged();
+        } else {
+          documentNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder(
+          int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);  } else {
+          return documentNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getDocumentNumberOrBuilderList() {
+        if (documentNumberBuilder_ != null) {
+          return documentNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addDocumentNumberBuilder() {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_number = 28;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getDocumentNumberBuilderList() {
+        return getDocumentNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDocumentNumberFieldBuilder() {
+        if (documentNumberBuilder_ == null) {
+          documentNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  documentNumber_,
+                  ((bitField0_ & 0x08000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentNumber_ = null;
+        }
+        return documentNumberBuilder_;
+      }
+
+      private java.util.List<com.google.type.Date> documentDate_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentDateIsMutable() {
+        if (!((bitField0_ & 0x10000000) != 0)) {
+          documentDate_ = new java.util.ArrayList<com.google.type.Date>(documentDate_);
+          bitField0_ |= 0x10000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> documentDateBuilder_;
+
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<com.google.type.Date> getDocumentDateList() {
+        if (documentDateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        } else {
+          return documentDateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public int getDocumentDateCount() {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.size();
+        } else {
+          return documentDateBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date getDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);
+        } else {
+          return documentDateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setDocumentDate(
+          int index, com.google.type.Date value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setDocumentDate(
+          int index, com.google.type.Date.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addDocumentDate(com.google.type.Date value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addDocumentDate(
+          int index, com.google.type.Date value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addDocumentDate(
+          com.google.type.Date.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addDocumentDate(
+          int index, com.google.type.Date.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addAllDocumentDate(
+          java.lang.Iterable<? extends com.google.type.Date> values) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentDate_);
+          onChanged();
+        } else {
+          documentDateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearDocumentDate() {
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+          onChanged();
+        } else {
+          documentDateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder removeDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.remove(index);
+          onChanged();
+        } else {
+          documentDateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder getDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.DateOrBuilder getDocumentDateOrBuilder(
+          int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);  } else {
+          return documentDateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<? extends com.google.type.DateOrBuilder> 
+           getDocumentDateOrBuilderList() {
+        if (documentDateBuilder_ != null) {
+          return documentDateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder addDocumentDateBuilder() {
+        return getDocumentDateFieldBuilder().addBuilder(
+            com.google.type.Date.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder addDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().addBuilder(
+            index, com.google.type.Date.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.type.Date document_date = 29 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<com.google.type.Date.Builder> 
+           getDocumentDateBuilderList() {
+        return getDocumentDateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+          getDocumentDateFieldBuilder() {
+        if (documentDateBuilder_ == null) {
+          documentDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
+                  documentDate_,
+                  ((bitField0_ & 0x10000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentDate_ = null;
+        }
+        return documentDateBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> orderNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureOrderNumberIsMutable() {
+        if (!((bitField0_ & 0x20000000) != 0)) {
+          orderNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(orderNumber_);
+          bitField0_ |= 0x20000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> orderNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOrderNumberList() {
+        if (orderNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        } else {
+          return orderNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public int getOrderNumberCount() {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.size();
+        } else {
+          return orderNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public com.google.protobuf.StringValue getOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);
+        } else {
+          return orderNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder setOrderNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder setOrderNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(com.google.protobuf.StringValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder addAllOrderNumber(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orderNumber_);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder clearOrderNumber() {
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+          onChanged();
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public Builder removeOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.remove(index);
+          onChanged();
+        } else {
+          orderNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder(
+          int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);  } else {
+          return orderNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOrderNumberOrBuilderList() {
+        if (orderNumberBuilder_ != null) {
+          return orderNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOrderNumberBuilder() {
+        return getOrderNumberFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue order_number = 30;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOrderNumberBuilderList() {
+        return getOrderNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOrderNumberFieldBuilder() {
+        if (orderNumberBuilder_ == null) {
+          orderNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  orderNumber_,
+                  ((bitField0_ & 0x20000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orderNumber_ = null;
+        }
+        return orderNumberBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> supplierVatNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierVatNumberIsMutable() {
+        if (!((bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierVatNumber_);
+          bitField0_ |= 0x40000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierVatNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getSupplierVatNumberList() {
+        if (supplierVatNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        } else {
+          return supplierVatNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public int getSupplierVatNumberCount() {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.size();
+        } else {
+          return supplierVatNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.StringValue getSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);
+        } else {
+          return supplierVatNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(com.google.protobuf.StringValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder addAllSupplierVatNumber(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierVatNumber_);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder clearSupplierVatNumber() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public Builder removeSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder(
+          int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);  } else {
+          return supplierVatNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getSupplierVatNumberOrBuilderList() {
+        if (supplierVatNumberBuilder_ != null) {
+          return supplierVatNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierVatNumberBuilder() {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getSupplierVatNumberBuilderList() {
+        return getSupplierVatNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierVatNumberFieldBuilder() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  supplierVatNumber_,
+                  ((bitField0_ & 0x40000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierVatNumber_ = null;
+        }
+        return supplierVatNumberBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> supplierOrganisationNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierOrganisationNumberIsMutable() {
+        if (!((bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierOrganisationNumber_);
+          bitField0_ |= 0x80000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierOrganisationNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getSupplierOrganisationNumberList() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public int getSupplierOrganisationNumberCount() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.size();
+        } else {
+          return supplierOrganisationNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.StringValue getSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(com.google.protobuf.StringValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addAllSupplierOrganisationNumber(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierOrganisationNumber_);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder clearSupplierOrganisationNumber() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public Builder removeSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder(
+          int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);  } else {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getSupplierOrganisationNumberOrBuilderList() {
+        if (supplierOrganisationNumberBuilder_ != null) {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierOrganisationNumberBuilder() {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getSupplierOrganisationNumberBuilderList() {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierOrganisationNumberFieldBuilder() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  supplierOrganisationNumber_,
+                  ((bitField0_ & 0x80000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierOrganisationNumber_ = null;
+        }
+        return supplierOrganisationNumberBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> supplierAddress_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierAddressIsMutable() {
+        if (!((bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierAddress_);
+          bitField1_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierAddressBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getSupplierAddressList() {
+        if (supplierAddressBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        } else {
+          return supplierAddressBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public int getSupplierAddressCount() {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.size();
+        } else {
+          return supplierAddressBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.StringValue getSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);
+        } else {
+          return supplierAddressBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(com.google.protobuf.StringValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder addAllSupplierAddress(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierAddress_);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder clearSupplierAddress() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public Builder removeSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.remove(index);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder(
+          int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);  } else {
+          return supplierAddressBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getSupplierAddressOrBuilderList() {
+        if (supplierAddressBuilder_ != null) {
+          return supplierAddressBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierAddressBuilder() {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_address = 33;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getSupplierAddressBuilderList() {
+        return getSupplierAddressFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierAddressFieldBuilder() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  supplierAddress_,
+                  ((bitField1_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierAddress_ = null;
+        }
+        return supplierAddressBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -18132,6 +22532,198 @@ public final class DataServiceProto {
      */
     com.google.protobuf.FloatValueOrBuilder getBankRegistrationNumberOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getSupplierNameList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    com.google.protobuf.FloatValue getSupplierName(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    int getSupplierNameCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierNameOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getSupplierNameOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getBicList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    com.google.protobuf.FloatValue getBic(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    int getBicCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getBicOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getBicOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getDocumentNumberList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    com.google.protobuf.FloatValue getDocumentNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    int getDocumentNumberCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getDocumentNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getDocumentNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getDocumentDateList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    com.google.protobuf.FloatValue getDocumentDate(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    int getDocumentDateCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getDocumentDateOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getDocumentDateOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getOrderNumberList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    com.google.protobuf.FloatValue getOrderNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    int getOrderNumberCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getOrderNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getOrderNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getSupplierVatNumberList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    com.google.protobuf.FloatValue getSupplierVatNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    int getSupplierVatNumberCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierVatNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getSupplierVatNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getSupplierOrganisationNumberList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    com.google.protobuf.FloatValue getSupplierOrganisationNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    int getSupplierOrganisationNumberCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getSupplierAddressList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    com.google.protobuf.FloatValue getSupplierAddress(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    int getSupplierAddressCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierAddressOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getSupplierAddressOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionConfidences}
@@ -18171,6 +22763,14 @@ public final class DataServiceProto {
       orderReference_ = java.util.Collections.emptyList();
       bankAccountNumber_ = java.util.Collections.emptyList();
       bankRegistrationNumber_ = java.util.Collections.emptyList();
+      supplierName_ = java.util.Collections.emptyList();
+      bic_ = java.util.Collections.emptyList();
+      documentNumber_ = java.util.Collections.emptyList();
+      documentDate_ = java.util.Collections.emptyList();
+      orderNumber_ = java.util.Collections.emptyList();
+      supplierVatNumber_ = java.util.Collections.emptyList();
+      supplierOrganisationNumber_ = java.util.Collections.emptyList();
+      supplierAddress_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -18194,6 +22794,7 @@ public final class DataServiceProto {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18429,6 +23030,78 @@ public final class DataServiceProto {
                   input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
+            case 210: {
+              if (!((mutable_bitField0_ & 0x02000000) != 0)) {
+                supplierName_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField0_ |= 0x02000000;
+              }
+              supplierName_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
+            case 218: {
+              if (!((mutable_bitField0_ & 0x04000000) != 0)) {
+                bic_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField0_ |= 0x04000000;
+              }
+              bic_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
+            case 226: {
+              if (!((mutable_bitField0_ & 0x08000000) != 0)) {
+                documentNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField0_ |= 0x08000000;
+              }
+              documentNumber_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x10000000) != 0)) {
+                documentDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField0_ |= 0x10000000;
+              }
+              documentDate_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
+            case 242: {
+              if (!((mutable_bitField0_ & 0x20000000) != 0)) {
+                orderNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField0_ |= 0x20000000;
+              }
+              orderNumber_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
+            case 250: {
+              if (!((mutable_bitField0_ & 0x40000000) != 0)) {
+                supplierVatNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField0_ |= 0x40000000;
+              }
+              supplierVatNumber_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
+            case 258: {
+              if (!((mutable_bitField0_ & 0x80000000) != 0)) {
+                supplierOrganisationNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField0_ |= 0x80000000;
+              }
+              supplierOrganisationNumber_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
+            case 266: {
+              if (!((mutable_bitField1_ & 0x00000001) != 0)) {
+                supplierAddress_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
+                mutable_bitField1_ |= 0x00000001;
+              }
+              supplierAddress_.add(
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -18518,6 +23191,30 @@ public final class DataServiceProto {
         }
         if (((mutable_bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
+        }
+        if (((mutable_bitField0_ & 0x02000000) != 0)) {
+          supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+        }
+        if (((mutable_bitField0_ & 0x04000000) != 0)) {
+          bic_ = java.util.Collections.unmodifiableList(bic_);
+        }
+        if (((mutable_bitField0_ & 0x08000000) != 0)) {
+          documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+        }
+        if (((mutable_bitField0_ & 0x10000000) != 0)) {
+          documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+        }
+        if (((mutable_bitField0_ & 0x20000000) != 0)) {
+          orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+        }
+        if (((mutable_bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+        if (((mutable_bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+        if (((mutable_bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -19536,6 +24233,326 @@ public final class DataServiceProto {
       return bankRegistrationNumber_.get(index);
     }
 
+    public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
+    private java.util.List<com.google.protobuf.FloatValue> supplierName_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getSupplierNameList() {
+      return supplierName_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierNameOrBuilderList() {
+      return supplierName_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public int getSupplierNameCount() {
+      return supplierName_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getSupplierName(int index) {
+      return supplierName_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getSupplierNameOrBuilder(
+        int index) {
+      return supplierName_.get(index);
+    }
+
+    public static final int BIC_FIELD_NUMBER = 27;
+    private java.util.List<com.google.protobuf.FloatValue> bic_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getBicList() {
+      return bic_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getBicOrBuilderList() {
+      return bic_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public int getBicCount() {
+      return bic_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getBic(int index) {
+      return bic_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getBicOrBuilder(
+        int index) {
+      return bic_.get(index);
+    }
+
+    public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
+    private java.util.List<com.google.protobuf.FloatValue> documentNumber_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getDocumentNumberList() {
+      return documentNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getDocumentNumberOrBuilderList() {
+      return documentNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public int getDocumentNumberCount() {
+      return documentNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getDocumentNumber(int index) {
+      return documentNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getDocumentNumberOrBuilder(
+        int index) {
+      return documentNumber_.get(index);
+    }
+
+    public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
+    private java.util.List<com.google.protobuf.FloatValue> documentDate_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getDocumentDateList() {
+      return documentDate_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getDocumentDateOrBuilderList() {
+      return documentDate_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    @java.lang.Override
+    public int getDocumentDateCount() {
+      return documentDate_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getDocumentDate(int index) {
+      return documentDate_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getDocumentDateOrBuilder(
+        int index) {
+      return documentDate_.get(index);
+    }
+
+    public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
+    private java.util.List<com.google.protobuf.FloatValue> orderNumber_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getOrderNumberList() {
+      return orderNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getOrderNumberOrBuilderList() {
+      return orderNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public int getOrderNumberCount() {
+      return orderNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getOrderNumber(int index) {
+      return orderNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getOrderNumberOrBuilder(
+        int index) {
+      return orderNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    private java.util.List<com.google.protobuf.FloatValue> supplierVatNumber_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getSupplierVatNumberList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierVatNumberOrBuilderList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public int getSupplierVatNumberCount() {
+      return supplierVatNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getSupplierVatNumber(int index) {
+      return supplierVatNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getSupplierVatNumberOrBuilder(
+        int index) {
+      return supplierVatNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    private java.util.List<com.google.protobuf.FloatValue> supplierOrganisationNumber_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getSupplierOrganisationNumberList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public int getSupplierOrganisationNumberCount() {
+      return supplierOrganisationNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getSupplierOrganisationNumber(int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    private java.util.List<com.google.protobuf.FloatValue> supplierAddress_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getSupplierAddressList() {
+      return supplierAddress_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getSupplierAddressOrBuilderList() {
+      return supplierAddress_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public int getSupplierAddressCount() {
+      return supplierAddress_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getSupplierAddress(int index) {
+      return supplierAddress_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getSupplierAddressOrBuilder(
+        int index) {
+      return supplierAddress_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19624,6 +24641,30 @@ public final class DataServiceProto {
       }
       for (int i = 0; i < bankRegistrationNumber_.size(); i++) {
         output.writeMessage(25, bankRegistrationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        output.writeMessage(26, supplierName_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        output.writeMessage(27, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        output.writeMessage(28, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        output.writeMessage(29, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        output.writeMessage(30, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        output.writeMessage(31, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        output.writeMessage(32, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        output.writeMessage(33, supplierAddress_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -19734,6 +24775,38 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, bankRegistrationNumber_.get(i));
       }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, supplierName_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, supplierAddress_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19799,6 +24872,22 @@ public final class DataServiceProto {
           .equals(other.getBankAccountNumberList())) return false;
       if (!getBankRegistrationNumberList()
           .equals(other.getBankRegistrationNumberList())) return false;
+      if (!getSupplierNameList()
+          .equals(other.getSupplierNameList())) return false;
+      if (!getBicList()
+          .equals(other.getBicList())) return false;
+      if (!getDocumentNumberList()
+          .equals(other.getDocumentNumberList())) return false;
+      if (!getDocumentDateList()
+          .equals(other.getDocumentDateList())) return false;
+      if (!getOrderNumberList()
+          .equals(other.getOrderNumberList())) return false;
+      if (!getSupplierVatNumberList()
+          .equals(other.getSupplierVatNumberList())) return false;
+      if (!getSupplierOrganisationNumberList()
+          .equals(other.getSupplierOrganisationNumberList())) return false;
+      if (!getSupplierAddressList()
+          .equals(other.getSupplierAddressList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19909,6 +24998,38 @@ public final class DataServiceProto {
       if (getBankRegistrationNumberCount() > 0) {
         hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + getBankRegistrationNumberList().hashCode();
+      }
+      if (getSupplierNameCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierNameList().hashCode();
+      }
+      if (getBicCount() > 0) {
+        hash = (37 * hash) + BIC_FIELD_NUMBER;
+        hash = (53 * hash) + getBicList().hashCode();
+      }
+      if (getDocumentNumberCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentNumberList().hashCode();
+      }
+      if (getDocumentDateCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentDateList().hashCode();
+      }
+      if (getOrderNumberCount() > 0) {
+        hash = (37 * hash) + ORDER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderNumberList().hashCode();
+      }
+      if (getSupplierVatNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_VAT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierVatNumberList().hashCode();
+      }
+      if (getSupplierOrganisationNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierOrganisationNumberList().hashCode();
+      }
+      if (getSupplierAddressCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierAddressList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -20063,6 +25184,14 @@ public final class DataServiceProto {
           getOrderReferenceFieldBuilder();
           getBankAccountNumberFieldBuilder();
           getBankRegistrationNumberFieldBuilder();
+          getSupplierNameFieldBuilder();
+          getBicFieldBuilder();
+          getDocumentNumberFieldBuilder();
+          getDocumentDateFieldBuilder();
+          getOrderNumberFieldBuilder();
+          getSupplierVatNumberFieldBuilder();
+          getSupplierOrganisationNumberFieldBuilder();
+          getSupplierAddressFieldBuilder();
         }
       }
       @java.lang.Override
@@ -20218,6 +25347,54 @@ public final class DataServiceProto {
         } else {
           bankRegistrationNumberBuilder_.clear();
         }
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+        } else {
+          bicBuilder_.clear();
+        }
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+        } else {
+          documentDateBuilder_.clear();
+        }
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+        } else {
+          supplierAddressBuilder_.clear();
+        }
         return this;
       }
 
@@ -20245,6 +25422,7 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.PredictionConfidences buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PredictionConfidences result = new ssn.dataservice.v1.DataServiceProto.PredictionConfidences(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -20469,6 +25647,78 @@ public final class DataServiceProto {
           result.bankRegistrationNumber_ = bankRegistrationNumber_;
         } else {
           result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_.build();
+        }
+        if (supplierNameBuilder_ == null) {
+          if (((bitField0_ & 0x02000000) != 0)) {
+            supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+            bitField0_ = (bitField0_ & ~0x02000000);
+          }
+          result.supplierName_ = supplierName_;
+        } else {
+          result.supplierName_ = supplierNameBuilder_.build();
+        }
+        if (bicBuilder_ == null) {
+          if (((bitField0_ & 0x04000000) != 0)) {
+            bic_ = java.util.Collections.unmodifiableList(bic_);
+            bitField0_ = (bitField0_ & ~0x04000000);
+          }
+          result.bic_ = bic_;
+        } else {
+          result.bic_ = bicBuilder_.build();
+        }
+        if (documentNumberBuilder_ == null) {
+          if (((bitField0_ & 0x08000000) != 0)) {
+            documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+            bitField0_ = (bitField0_ & ~0x08000000);
+          }
+          result.documentNumber_ = documentNumber_;
+        } else {
+          result.documentNumber_ = documentNumberBuilder_.build();
+        }
+        if (documentDateBuilder_ == null) {
+          if (((bitField0_ & 0x10000000) != 0)) {
+            documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+            bitField0_ = (bitField0_ & ~0x10000000);
+          }
+          result.documentDate_ = documentDate_;
+        } else {
+          result.documentDate_ = documentDateBuilder_.build();
+        }
+        if (orderNumberBuilder_ == null) {
+          if (((bitField0_ & 0x20000000) != 0)) {
+            orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+            bitField0_ = (bitField0_ & ~0x20000000);
+          }
+          result.orderNumber_ = orderNumber_;
+        } else {
+          result.orderNumber_ = orderNumberBuilder_.build();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (((bitField0_ & 0x40000000) != 0)) {
+            supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+            bitField0_ = (bitField0_ & ~0x40000000);
+          }
+          result.supplierVatNumber_ = supplierVatNumber_;
+        } else {
+          result.supplierVatNumber_ = supplierVatNumberBuilder_.build();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (((bitField0_ & 0x80000000) != 0)) {
+            supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+            bitField0_ = (bitField0_ & ~0x80000000);
+          }
+          result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
+        } else {
+          result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_.build();
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (((bitField1_ & 0x00000001) != 0)) {
+            supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
+            bitField1_ = (bitField1_ & ~0x00000001);
+          }
+          result.supplierAddress_ = supplierAddress_;
+        } else {
+          result.supplierAddress_ = supplierAddressBuilder_.build();
         }
         onBuilt();
         return result;
@@ -21168,6 +26418,214 @@ public final class DataServiceProto {
             }
           }
         }
+        if (supplierNameBuilder_ == null) {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierName_.isEmpty()) {
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+            } else {
+              ensureSupplierNameIsMutable();
+              supplierName_.addAll(other.supplierName_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierNameBuilder_.isEmpty()) {
+              supplierNameBuilder_.dispose();
+              supplierNameBuilder_ = null;
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+              supplierNameBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierNameFieldBuilder() : null;
+            } else {
+              supplierNameBuilder_.addAllMessages(other.supplierName_);
+            }
+          }
+        }
+        if (bicBuilder_ == null) {
+          if (!other.bic_.isEmpty()) {
+            if (bic_.isEmpty()) {
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+            } else {
+              ensureBicIsMutable();
+              bic_.addAll(other.bic_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bic_.isEmpty()) {
+            if (bicBuilder_.isEmpty()) {
+              bicBuilder_.dispose();
+              bicBuilder_ = null;
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+              bicBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBicFieldBuilder() : null;
+            } else {
+              bicBuilder_.addAllMessages(other.bic_);
+            }
+          }
+        }
+        if (documentNumberBuilder_ == null) {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumber_.isEmpty()) {
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+            } else {
+              ensureDocumentNumberIsMutable();
+              documentNumber_.addAll(other.documentNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumberBuilder_.isEmpty()) {
+              documentNumberBuilder_.dispose();
+              documentNumberBuilder_ = null;
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+              documentNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentNumberFieldBuilder() : null;
+            } else {
+              documentNumberBuilder_.addAllMessages(other.documentNumber_);
+            }
+          }
+        }
+        if (documentDateBuilder_ == null) {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDate_.isEmpty()) {
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+            } else {
+              ensureDocumentDateIsMutable();
+              documentDate_.addAll(other.documentDate_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDateBuilder_.isEmpty()) {
+              documentDateBuilder_.dispose();
+              documentDateBuilder_ = null;
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+              documentDateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentDateFieldBuilder() : null;
+            } else {
+              documentDateBuilder_.addAllMessages(other.documentDate_);
+            }
+          }
+        }
+        if (orderNumberBuilder_ == null) {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumber_.isEmpty()) {
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+            } else {
+              ensureOrderNumberIsMutable();
+              orderNumber_.addAll(other.orderNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumberBuilder_.isEmpty()) {
+              orderNumberBuilder_.dispose();
+              orderNumberBuilder_ = null;
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+              orderNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrderNumberFieldBuilder() : null;
+            } else {
+              orderNumberBuilder_.addAllMessages(other.orderNumber_);
+            }
+          }
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumber_.isEmpty()) {
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+            } else {
+              ensureSupplierVatNumberIsMutable();
+              supplierVatNumber_.addAll(other.supplierVatNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumberBuilder_.isEmpty()) {
+              supplierVatNumberBuilder_.dispose();
+              supplierVatNumberBuilder_ = null;
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+              supplierVatNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierVatNumberFieldBuilder() : null;
+            } else {
+              supplierVatNumberBuilder_.addAllMessages(other.supplierVatNumber_);
+            }
+          }
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumber_.isEmpty()) {
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+            } else {
+              ensureSupplierOrganisationNumberIsMutable();
+              supplierOrganisationNumber_.addAll(other.supplierOrganisationNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumberBuilder_.isEmpty()) {
+              supplierOrganisationNumberBuilder_.dispose();
+              supplierOrganisationNumberBuilder_ = null;
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+              supplierOrganisationNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierOrganisationNumberFieldBuilder() : null;
+            } else {
+              supplierOrganisationNumberBuilder_.addAllMessages(other.supplierOrganisationNumber_);
+            }
+          }
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddress_.isEmpty()) {
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+            } else {
+              ensureSupplierAddressIsMutable();
+              supplierAddress_.addAll(other.supplierAddress_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddressBuilder_.isEmpty()) {
+              supplierAddressBuilder_.dispose();
+              supplierAddressBuilder_ = null;
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+              supplierAddressBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierAddressFieldBuilder() : null;
+            } else {
+              supplierAddressBuilder_.addAllMessages(other.supplierAddress_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -21197,6 +26655,7 @@ public final class DataServiceProto {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private java.util.List<com.google.protobuf.FloatValue> totalInclVat_ =
         java.util.Collections.emptyList();
@@ -27197,6 +32656,1926 @@ public final class DataServiceProto {
         }
         return bankRegistrationNumberBuilder_;
       }
+
+      private java.util.List<com.google.protobuf.FloatValue> supplierName_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierNameIsMutable() {
+        if (!((bitField0_ & 0x02000000) != 0)) {
+          supplierName_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierName_);
+          bitField0_ |= 0x02000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> supplierNameBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getSupplierNameList() {
+        if (supplierNameBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        } else {
+          return supplierNameBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public int getSupplierNameCount() {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.size();
+        } else {
+          return supplierNameBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.FloatValue getSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);
+        } else {
+          return supplierNameBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(com.google.protobuf.FloatValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder addAllSupplierName(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierName_);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder clearSupplierName() {
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+          onChanged();
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public Builder removeSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.remove(index);
+          onChanged();
+        } else {
+          supplierNameBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getSupplierNameOrBuilder(
+          int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);  } else {
+          return supplierNameBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getSupplierNameOrBuilderList() {
+        if (supplierNameBuilder_ != null) {
+          return supplierNameBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierNameBuilder() {
+        return getSupplierNameFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_name = 26;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getSupplierNameBuilderList() {
+        return getSupplierNameFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getSupplierNameFieldBuilder() {
+        if (supplierNameBuilder_ == null) {
+          supplierNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  supplierName_,
+                  ((bitField0_ & 0x02000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierName_ = null;
+        }
+        return supplierNameBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.FloatValue> bic_ =
+        java.util.Collections.emptyList();
+      private void ensureBicIsMutable() {
+        if (!((bitField0_ & 0x04000000) != 0)) {
+          bic_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(bic_);
+          bitField0_ |= 0x04000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> bicBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getBicList() {
+        if (bicBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bic_);
+        } else {
+          return bicBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public int getBicCount() {
+        if (bicBuilder_ == null) {
+          return bic_.size();
+        } else {
+          return bicBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public com.google.protobuf.FloatValue getBic(int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);
+        } else {
+          return bicBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder setBic(
+          int index, com.google.protobuf.FloatValue value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.set(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder setBic(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder addBic(com.google.protobuf.FloatValue value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder addBic(
+          int index, com.google.protobuf.FloatValue value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder addBic(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder addBic(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder addAllBic(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bic_);
+          onChanged();
+        } else {
+          bicBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder clearBic() {
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+          onChanged();
+        } else {
+          bicBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public Builder removeBic(int index) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.remove(index);
+          onChanged();
+        } else {
+          bicBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getBicBuilder(
+          int index) {
+        return getBicFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getBicOrBuilder(
+          int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);  } else {
+          return bicBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getBicOrBuilderList() {
+        if (bicBuilder_ != null) {
+          return bicBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bic_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addBicBuilder() {
+        return getBicFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addBicBuilder(
+          int index) {
+        return getBicFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue bic = 27;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getBicBuilderList() {
+        return getBicFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getBicFieldBuilder() {
+        if (bicBuilder_ == null) {
+          bicBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  bic_,
+                  ((bitField0_ & 0x04000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bic_ = null;
+        }
+        return bicBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.FloatValue> documentNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentNumberIsMutable() {
+        if (!((bitField0_ & 0x08000000) != 0)) {
+          documentNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(documentNumber_);
+          bitField0_ |= 0x08000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> documentNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getDocumentNumberList() {
+        if (documentNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        } else {
+          return documentNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public int getDocumentNumberCount() {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.size();
+        } else {
+          return documentNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public com.google.protobuf.FloatValue getDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);
+        } else {
+          return documentNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(com.google.protobuf.FloatValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder addAllDocumentNumber(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentNumber_);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder clearDocumentNumber() {
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+          onChanged();
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public Builder removeDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.remove(index);
+          onChanged();
+        } else {
+          documentNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getDocumentNumberOrBuilder(
+          int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);  } else {
+          return documentNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getDocumentNumberOrBuilderList() {
+        if (documentNumberBuilder_ != null) {
+          return documentNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addDocumentNumberBuilder() {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_number = 28;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getDocumentNumberBuilderList() {
+        return getDocumentNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getDocumentNumberFieldBuilder() {
+        if (documentNumberBuilder_ == null) {
+          documentNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  documentNumber_,
+                  ((bitField0_ & 0x08000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentNumber_ = null;
+        }
+        return documentNumberBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.FloatValue> documentDate_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentDateIsMutable() {
+        if (!((bitField0_ & 0x10000000) != 0)) {
+          documentDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(documentDate_);
+          bitField0_ |= 0x10000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> documentDateBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getDocumentDateList() {
+        if (documentDateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        } else {
+          return documentDateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public int getDocumentDateCount() {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.size();
+        } else {
+          return documentDateBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public com.google.protobuf.FloatValue getDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);
+        } else {
+          return documentDateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder setDocumentDate(
+          int index, com.google.protobuf.FloatValue value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder setDocumentDate(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder addDocumentDate(com.google.protobuf.FloatValue value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder addDocumentDate(
+          int index, com.google.protobuf.FloatValue value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder addDocumentDate(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder addDocumentDate(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder addAllDocumentDate(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentDate_);
+          onChanged();
+        } else {
+          documentDateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder clearDocumentDate() {
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+          onChanged();
+        } else {
+          documentDateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public Builder removeDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.remove(index);
+          onChanged();
+        } else {
+          documentDateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getDocumentDateOrBuilder(
+          int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);  } else {
+          return documentDateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getDocumentDateOrBuilderList() {
+        if (documentDateBuilder_ != null) {
+          return documentDateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addDocumentDateBuilder() {
+        return getDocumentDateFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue document_date = 29;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getDocumentDateBuilderList() {
+        return getDocumentDateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getDocumentDateFieldBuilder() {
+        if (documentDateBuilder_ == null) {
+          documentDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  documentDate_,
+                  ((bitField0_ & 0x10000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentDate_ = null;
+        }
+        return documentDateBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.FloatValue> orderNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureOrderNumberIsMutable() {
+        if (!((bitField0_ & 0x20000000) != 0)) {
+          orderNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(orderNumber_);
+          bitField0_ |= 0x20000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> orderNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getOrderNumberList() {
+        if (orderNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        } else {
+          return orderNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public int getOrderNumberCount() {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.size();
+        } else {
+          return orderNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public com.google.protobuf.FloatValue getOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);
+        } else {
+          return orderNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder setOrderNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder setOrderNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(com.google.protobuf.FloatValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder addAllOrderNumber(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orderNumber_);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder clearOrderNumber() {
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+          onChanged();
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public Builder removeOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.remove(index);
+          onChanged();
+        } else {
+          orderNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getOrderNumberOrBuilder(
+          int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);  } else {
+          return orderNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getOrderNumberOrBuilderList() {
+        if (orderNumberBuilder_ != null) {
+          return orderNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addOrderNumberBuilder() {
+        return getOrderNumberFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue order_number = 30;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getOrderNumberBuilderList() {
+        return getOrderNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getOrderNumberFieldBuilder() {
+        if (orderNumberBuilder_ == null) {
+          orderNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  orderNumber_,
+                  ((bitField0_ & 0x20000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orderNumber_ = null;
+        }
+        return orderNumberBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.FloatValue> supplierVatNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierVatNumberIsMutable() {
+        if (!((bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierVatNumber_);
+          bitField0_ |= 0x40000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> supplierVatNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getSupplierVatNumberList() {
+        if (supplierVatNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        } else {
+          return supplierVatNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public int getSupplierVatNumberCount() {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.size();
+        } else {
+          return supplierVatNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.FloatValue getSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);
+        } else {
+          return supplierVatNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(com.google.protobuf.FloatValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder addAllSupplierVatNumber(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierVatNumber_);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder clearSupplierVatNumber() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public Builder removeSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getSupplierVatNumberOrBuilder(
+          int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);  } else {
+          return supplierVatNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getSupplierVatNumberOrBuilderList() {
+        if (supplierVatNumberBuilder_ != null) {
+          return supplierVatNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierVatNumberBuilder() {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getSupplierVatNumberBuilderList() {
+        return getSupplierVatNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getSupplierVatNumberFieldBuilder() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  supplierVatNumber_,
+                  ((bitField0_ & 0x40000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierVatNumber_ = null;
+        }
+        return supplierVatNumberBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.FloatValue> supplierOrganisationNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierOrganisationNumberIsMutable() {
+        if (!((bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierOrganisationNumber_);
+          bitField0_ |= 0x80000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> supplierOrganisationNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getSupplierOrganisationNumberList() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public int getSupplierOrganisationNumberCount() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.size();
+        } else {
+          return supplierOrganisationNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.FloatValue getSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(com.google.protobuf.FloatValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder addAllSupplierOrganisationNumber(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierOrganisationNumber_);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder clearSupplierOrganisationNumber() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public Builder removeSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getSupplierOrganisationNumberOrBuilder(
+          int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);  } else {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getSupplierOrganisationNumberOrBuilderList() {
+        if (supplierOrganisationNumberBuilder_ != null) {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierOrganisationNumberBuilder() {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getSupplierOrganisationNumberBuilderList() {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getSupplierOrganisationNumberFieldBuilder() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  supplierOrganisationNumber_,
+                  ((bitField0_ & 0x80000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierOrganisationNumber_ = null;
+        }
+        return supplierOrganisationNumberBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.FloatValue> supplierAddress_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierAddressIsMutable() {
+        if (!((bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierAddress_);
+          bitField1_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> supplierAddressBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getSupplierAddressList() {
+        if (supplierAddressBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        } else {
+          return supplierAddressBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public int getSupplierAddressCount() {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.size();
+        } else {
+          return supplierAddressBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.FloatValue getSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);
+        } else {
+          return supplierAddressBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(com.google.protobuf.FloatValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, com.google.protobuf.FloatValue value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder addAllSupplierAddress(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierAddress_);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder clearSupplierAddress() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public Builder removeSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.remove(index);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getSupplierAddressOrBuilder(
+          int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);  } else {
+          return supplierAddressBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getSupplierAddressOrBuilderList() {
+        if (supplierAddressBuilder_ != null) {
+          return supplierAddressBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierAddressBuilder() {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue supplier_address = 33;</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getSupplierAddressBuilderList() {
+        return getSupplierAddressFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getSupplierAddressFieldBuilder() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  supplierAddress_,
+                  ((bitField1_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierAddress_ = null;
+        }
+        return supplierAddressBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -27853,6 +35232,198 @@ public final class DataServiceProto {
      */
     ssn.type.CandidateOuterClass.ModelSpecOrBuilder getBankRegistrationNumberOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getSupplierNameList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getSupplierName(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    int getSupplierNameCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierNameOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierNameOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getBicList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getBic(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    int getBicCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getBicOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getBicOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getDocumentNumberList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getDocumentNumber(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    int getDocumentNumberCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getDocumentNumberOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getDocumentNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getDocumentDateList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getDocumentDate(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    int getDocumentDateCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getDocumentDateOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getDocumentDateOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getOrderNumberList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getOrderNumber(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    int getOrderNumberCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getOrderNumberOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOrderNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getSupplierVatNumberList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getSupplierVatNumber(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    int getSupplierVatNumberCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierVatNumberOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierVatNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getSupplierOrganisationNumberList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getSupplierOrganisationNumber(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    int getSupplierOrganisationNumberCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getSupplierAddressList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getSupplierAddress(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    int getSupplierAddressCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierAddressOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierAddressOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionMetadata}
@@ -27892,6 +35463,14 @@ public final class DataServiceProto {
       orderReference_ = java.util.Collections.emptyList();
       bankAccountNumber_ = java.util.Collections.emptyList();
       bankRegistrationNumber_ = java.util.Collections.emptyList();
+      supplierName_ = java.util.Collections.emptyList();
+      bic_ = java.util.Collections.emptyList();
+      documentNumber_ = java.util.Collections.emptyList();
+      documentDate_ = java.util.Collections.emptyList();
+      orderNumber_ = java.util.Collections.emptyList();
+      supplierVatNumber_ = java.util.Collections.emptyList();
+      supplierOrganisationNumber_ = java.util.Collections.emptyList();
+      supplierAddress_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -27915,6 +35494,7 @@ public final class DataServiceProto {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -28150,6 +35730,78 @@ public final class DataServiceProto {
                   input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
               break;
             }
+            case 210: {
+              if (!((mutable_bitField0_ & 0x02000000) != 0)) {
+                supplierName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField0_ |= 0x02000000;
+              }
+              supplierName_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 218: {
+              if (!((mutable_bitField0_ & 0x04000000) != 0)) {
+                bic_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField0_ |= 0x04000000;
+              }
+              bic_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 226: {
+              if (!((mutable_bitField0_ & 0x08000000) != 0)) {
+                documentNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField0_ |= 0x08000000;
+              }
+              documentNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x10000000) != 0)) {
+                documentDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField0_ |= 0x10000000;
+              }
+              documentDate_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 242: {
+              if (!((mutable_bitField0_ & 0x20000000) != 0)) {
+                orderNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField0_ |= 0x20000000;
+              }
+              orderNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 250: {
+              if (!((mutable_bitField0_ & 0x40000000) != 0)) {
+                supplierVatNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField0_ |= 0x40000000;
+              }
+              supplierVatNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 258: {
+              if (!((mutable_bitField0_ & 0x80000000) != 0)) {
+                supplierOrganisationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField0_ |= 0x80000000;
+              }
+              supplierOrganisationNumber_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 266: {
+              if (!((mutable_bitField1_ & 0x00000001) != 0)) {
+                supplierAddress_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>();
+                mutable_bitField1_ |= 0x00000001;
+              }
+              supplierAddress_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -28239,6 +35891,30 @@ public final class DataServiceProto {
         }
         if (((mutable_bitField0_ & 0x01000000) != 0)) {
           bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
+        }
+        if (((mutable_bitField0_ & 0x02000000) != 0)) {
+          supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+        }
+        if (((mutable_bitField0_ & 0x04000000) != 0)) {
+          bic_ = java.util.Collections.unmodifiableList(bic_);
+        }
+        if (((mutable_bitField0_ & 0x08000000) != 0)) {
+          documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+        }
+        if (((mutable_bitField0_ & 0x10000000) != 0)) {
+          documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+        }
+        if (((mutable_bitField0_ & 0x20000000) != 0)) {
+          orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+        }
+        if (((mutable_bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+        if (((mutable_bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+        if (((mutable_bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -29257,6 +36933,326 @@ public final class DataServiceProto {
       return bankRegistrationNumber_.get(index);
     }
 
+    public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierName_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierNameList() {
+      return supplierName_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierNameOrBuilderList() {
+      return supplierName_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public int getSupplierNameCount() {
+      return supplierName_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getSupplierName(int index) {
+      return supplierName_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierNameOrBuilder(
+        int index) {
+      return supplierName_.get(index);
+    }
+
+    public static final int BIC_FIELD_NUMBER = 27;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> bic_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getBicList() {
+      return bic_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getBicOrBuilderList() {
+      return bic_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    @java.lang.Override
+    public int getBicCount() {
+      return bic_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getBic(int index) {
+      return bic_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getBicOrBuilder(
+        int index) {
+      return bic_.get(index);
+    }
+
+    public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentNumber_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getDocumentNumberList() {
+      return documentNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getDocumentNumberOrBuilderList() {
+      return documentNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    @java.lang.Override
+    public int getDocumentNumberCount() {
+      return documentNumber_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getDocumentNumber(int index) {
+      return documentNumber_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getDocumentNumberOrBuilder(
+        int index) {
+      return documentNumber_.get(index);
+    }
+
+    public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentDate_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getDocumentDateList() {
+      return documentDate_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getDocumentDateOrBuilderList() {
+      return documentDate_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    @java.lang.Override
+    public int getDocumentDateCount() {
+      return documentDate_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getDocumentDate(int index) {
+      return documentDate_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getDocumentDateOrBuilder(
+        int index) {
+      return documentDate_.get(index);
+    }
+
+    public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> orderNumber_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOrderNumberList() {
+      return orderNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getOrderNumberOrBuilderList() {
+      return orderNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    @java.lang.Override
+    public int getOrderNumberCount() {
+      return orderNumber_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getOrderNumber(int index) {
+      return orderNumber_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOrderNumberOrBuilder(
+        int index) {
+      return orderNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierVatNumber_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierVatNumberList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierVatNumberOrBuilderList() {
+      return supplierVatNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public int getSupplierVatNumberCount() {
+      return supplierVatNumber_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getSupplierVatNumber(int index) {
+      return supplierVatNumber_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierVatNumberOrBuilder(
+        int index) {
+      return supplierVatNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierOrganisationNumber_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierOrganisationNumberList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierOrganisationNumberOrBuilderList() {
+      return supplierOrganisationNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public int getSupplierOrganisationNumberCount() {
+      return supplierOrganisationNumber_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getSupplierOrganisationNumber(int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierOrganisationNumberOrBuilder(
+        int index) {
+      return supplierOrganisationNumber_.get(index);
+    }
+
+    public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierAddress_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierAddressList() {
+      return supplierAddress_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getSupplierAddressOrBuilderList() {
+      return supplierAddress_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public int getSupplierAddressCount() {
+      return supplierAddress_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getSupplierAddress(int index) {
+      return supplierAddress_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierAddressOrBuilder(
+        int index) {
+      return supplierAddress_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -29345,6 +37341,30 @@ public final class DataServiceProto {
       }
       for (int i = 0; i < bankRegistrationNumber_.size(); i++) {
         output.writeMessage(25, bankRegistrationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        output.writeMessage(26, supplierName_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        output.writeMessage(27, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        output.writeMessage(28, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        output.writeMessage(29, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        output.writeMessage(30, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        output.writeMessage(31, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        output.writeMessage(32, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        output.writeMessage(33, supplierAddress_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -29455,6 +37475,38 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, bankRegistrationNumber_.get(i));
       }
+      for (int i = 0; i < supplierName_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, supplierName_.get(i));
+      }
+      for (int i = 0; i < bic_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, bic_.get(i));
+      }
+      for (int i = 0; i < documentNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, documentNumber_.get(i));
+      }
+      for (int i = 0; i < documentDate_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, documentDate_.get(i));
+      }
+      for (int i = 0; i < orderNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, orderNumber_.get(i));
+      }
+      for (int i = 0; i < supplierVatNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, supplierVatNumber_.get(i));
+      }
+      for (int i = 0; i < supplierOrganisationNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, supplierOrganisationNumber_.get(i));
+      }
+      for (int i = 0; i < supplierAddress_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, supplierAddress_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -29520,6 +37572,22 @@ public final class DataServiceProto {
           .equals(other.getBankAccountNumberList())) return false;
       if (!getBankRegistrationNumberList()
           .equals(other.getBankRegistrationNumberList())) return false;
+      if (!getSupplierNameList()
+          .equals(other.getSupplierNameList())) return false;
+      if (!getBicList()
+          .equals(other.getBicList())) return false;
+      if (!getDocumentNumberList()
+          .equals(other.getDocumentNumberList())) return false;
+      if (!getDocumentDateList()
+          .equals(other.getDocumentDateList())) return false;
+      if (!getOrderNumberList()
+          .equals(other.getOrderNumberList())) return false;
+      if (!getSupplierVatNumberList()
+          .equals(other.getSupplierVatNumberList())) return false;
+      if (!getSupplierOrganisationNumberList()
+          .equals(other.getSupplierOrganisationNumberList())) return false;
+      if (!getSupplierAddressList()
+          .equals(other.getSupplierAddressList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -29630,6 +37698,38 @@ public final class DataServiceProto {
       if (getBankRegistrationNumberCount() > 0) {
         hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + getBankRegistrationNumberList().hashCode();
+      }
+      if (getSupplierNameCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierNameList().hashCode();
+      }
+      if (getBicCount() > 0) {
+        hash = (37 * hash) + BIC_FIELD_NUMBER;
+        hash = (53 * hash) + getBicList().hashCode();
+      }
+      if (getDocumentNumberCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentNumberList().hashCode();
+      }
+      if (getDocumentDateCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentDateList().hashCode();
+      }
+      if (getOrderNumberCount() > 0) {
+        hash = (37 * hash) + ORDER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderNumberList().hashCode();
+      }
+      if (getSupplierVatNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_VAT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierVatNumberList().hashCode();
+      }
+      if (getSupplierOrganisationNumberCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierOrganisationNumberList().hashCode();
+      }
+      if (getSupplierAddressCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierAddressList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -29784,6 +37884,14 @@ public final class DataServiceProto {
           getOrderReferenceFieldBuilder();
           getBankAccountNumberFieldBuilder();
           getBankRegistrationNumberFieldBuilder();
+          getSupplierNameFieldBuilder();
+          getBicFieldBuilder();
+          getDocumentNumberFieldBuilder();
+          getDocumentDateFieldBuilder();
+          getOrderNumberFieldBuilder();
+          getSupplierVatNumberFieldBuilder();
+          getSupplierOrganisationNumberFieldBuilder();
+          getSupplierAddressFieldBuilder();
         }
       }
       @java.lang.Override
@@ -29939,6 +38047,54 @@ public final class DataServiceProto {
         } else {
           bankRegistrationNumberBuilder_.clear();
         }
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+        } else {
+          bicBuilder_.clear();
+        }
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+        } else {
+          documentDateBuilder_.clear();
+        }
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+        } else {
+          supplierAddressBuilder_.clear();
+        }
         return this;
       }
 
@@ -29966,6 +38122,7 @@ public final class DataServiceProto {
       public ssn.dataservice.v1.DataServiceProto.PredictionMetadata buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PredictionMetadata result = new ssn.dataservice.v1.DataServiceProto.PredictionMetadata(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -30190,6 +38347,78 @@ public final class DataServiceProto {
           result.bankRegistrationNumber_ = bankRegistrationNumber_;
         } else {
           result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_.build();
+        }
+        if (supplierNameBuilder_ == null) {
+          if (((bitField0_ & 0x02000000) != 0)) {
+            supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
+            bitField0_ = (bitField0_ & ~0x02000000);
+          }
+          result.supplierName_ = supplierName_;
+        } else {
+          result.supplierName_ = supplierNameBuilder_.build();
+        }
+        if (bicBuilder_ == null) {
+          if (((bitField0_ & 0x04000000) != 0)) {
+            bic_ = java.util.Collections.unmodifiableList(bic_);
+            bitField0_ = (bitField0_ & ~0x04000000);
+          }
+          result.bic_ = bic_;
+        } else {
+          result.bic_ = bicBuilder_.build();
+        }
+        if (documentNumberBuilder_ == null) {
+          if (((bitField0_ & 0x08000000) != 0)) {
+            documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
+            bitField0_ = (bitField0_ & ~0x08000000);
+          }
+          result.documentNumber_ = documentNumber_;
+        } else {
+          result.documentNumber_ = documentNumberBuilder_.build();
+        }
+        if (documentDateBuilder_ == null) {
+          if (((bitField0_ & 0x10000000) != 0)) {
+            documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
+            bitField0_ = (bitField0_ & ~0x10000000);
+          }
+          result.documentDate_ = documentDate_;
+        } else {
+          result.documentDate_ = documentDateBuilder_.build();
+        }
+        if (orderNumberBuilder_ == null) {
+          if (((bitField0_ & 0x20000000) != 0)) {
+            orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
+            bitField0_ = (bitField0_ & ~0x20000000);
+          }
+          result.orderNumber_ = orderNumber_;
+        } else {
+          result.orderNumber_ = orderNumberBuilder_.build();
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (((bitField0_ & 0x40000000) != 0)) {
+            supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
+            bitField0_ = (bitField0_ & ~0x40000000);
+          }
+          result.supplierVatNumber_ = supplierVatNumber_;
+        } else {
+          result.supplierVatNumber_ = supplierVatNumberBuilder_.build();
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (((bitField0_ & 0x80000000) != 0)) {
+            supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+            bitField0_ = (bitField0_ & ~0x80000000);
+          }
+          result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
+        } else {
+          result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_.build();
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (((bitField1_ & 0x00000001) != 0)) {
+            supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
+            bitField1_ = (bitField1_ & ~0x00000001);
+          }
+          result.supplierAddress_ = supplierAddress_;
+        } else {
+          result.supplierAddress_ = supplierAddressBuilder_.build();
         }
         onBuilt();
         return result;
@@ -30889,6 +39118,214 @@ public final class DataServiceProto {
             }
           }
         }
+        if (supplierNameBuilder_ == null) {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierName_.isEmpty()) {
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+            } else {
+              ensureSupplierNameIsMutable();
+              supplierName_.addAll(other.supplierName_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierName_.isEmpty()) {
+            if (supplierNameBuilder_.isEmpty()) {
+              supplierNameBuilder_.dispose();
+              supplierNameBuilder_ = null;
+              supplierName_ = other.supplierName_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+              supplierNameBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierNameFieldBuilder() : null;
+            } else {
+              supplierNameBuilder_.addAllMessages(other.supplierName_);
+            }
+          }
+        }
+        if (bicBuilder_ == null) {
+          if (!other.bic_.isEmpty()) {
+            if (bic_.isEmpty()) {
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+            } else {
+              ensureBicIsMutable();
+              bic_.addAll(other.bic_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bic_.isEmpty()) {
+            if (bicBuilder_.isEmpty()) {
+              bicBuilder_.dispose();
+              bicBuilder_ = null;
+              bic_ = other.bic_;
+              bitField0_ = (bitField0_ & ~0x04000000);
+              bicBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBicFieldBuilder() : null;
+            } else {
+              bicBuilder_.addAllMessages(other.bic_);
+            }
+          }
+        }
+        if (documentNumberBuilder_ == null) {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumber_.isEmpty()) {
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+            } else {
+              ensureDocumentNumberIsMutable();
+              documentNumber_.addAll(other.documentNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentNumber_.isEmpty()) {
+            if (documentNumberBuilder_.isEmpty()) {
+              documentNumberBuilder_.dispose();
+              documentNumberBuilder_ = null;
+              documentNumber_ = other.documentNumber_;
+              bitField0_ = (bitField0_ & ~0x08000000);
+              documentNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentNumberFieldBuilder() : null;
+            } else {
+              documentNumberBuilder_.addAllMessages(other.documentNumber_);
+            }
+          }
+        }
+        if (documentDateBuilder_ == null) {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDate_.isEmpty()) {
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+            } else {
+              ensureDocumentDateIsMutable();
+              documentDate_.addAll(other.documentDate_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentDate_.isEmpty()) {
+            if (documentDateBuilder_.isEmpty()) {
+              documentDateBuilder_.dispose();
+              documentDateBuilder_ = null;
+              documentDate_ = other.documentDate_;
+              bitField0_ = (bitField0_ & ~0x10000000);
+              documentDateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentDateFieldBuilder() : null;
+            } else {
+              documentDateBuilder_.addAllMessages(other.documentDate_);
+            }
+          }
+        }
+        if (orderNumberBuilder_ == null) {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumber_.isEmpty()) {
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+            } else {
+              ensureOrderNumberIsMutable();
+              orderNumber_.addAll(other.orderNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orderNumber_.isEmpty()) {
+            if (orderNumberBuilder_.isEmpty()) {
+              orderNumberBuilder_.dispose();
+              orderNumberBuilder_ = null;
+              orderNumber_ = other.orderNumber_;
+              bitField0_ = (bitField0_ & ~0x20000000);
+              orderNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrderNumberFieldBuilder() : null;
+            } else {
+              orderNumberBuilder_.addAllMessages(other.orderNumber_);
+            }
+          }
+        }
+        if (supplierVatNumberBuilder_ == null) {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumber_.isEmpty()) {
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+            } else {
+              ensureSupplierVatNumberIsMutable();
+              supplierVatNumber_.addAll(other.supplierVatNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierVatNumber_.isEmpty()) {
+            if (supplierVatNumberBuilder_.isEmpty()) {
+              supplierVatNumberBuilder_.dispose();
+              supplierVatNumberBuilder_ = null;
+              supplierVatNumber_ = other.supplierVatNumber_;
+              bitField0_ = (bitField0_ & ~0x40000000);
+              supplierVatNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierVatNumberFieldBuilder() : null;
+            } else {
+              supplierVatNumberBuilder_.addAllMessages(other.supplierVatNumber_);
+            }
+          }
+        }
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumber_.isEmpty()) {
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+            } else {
+              ensureSupplierOrganisationNumberIsMutable();
+              supplierOrganisationNumber_.addAll(other.supplierOrganisationNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierOrganisationNumber_.isEmpty()) {
+            if (supplierOrganisationNumberBuilder_.isEmpty()) {
+              supplierOrganisationNumberBuilder_.dispose();
+              supplierOrganisationNumberBuilder_ = null;
+              supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+              bitField0_ = (bitField0_ & ~0x80000000);
+              supplierOrganisationNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierOrganisationNumberFieldBuilder() : null;
+            } else {
+              supplierOrganisationNumberBuilder_.addAllMessages(other.supplierOrganisationNumber_);
+            }
+          }
+        }
+        if (supplierAddressBuilder_ == null) {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddress_.isEmpty()) {
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+            } else {
+              ensureSupplierAddressIsMutable();
+              supplierAddress_.addAll(other.supplierAddress_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierAddress_.isEmpty()) {
+            if (supplierAddressBuilder_.isEmpty()) {
+              supplierAddressBuilder_.dispose();
+              supplierAddressBuilder_ = null;
+              supplierAddress_ = other.supplierAddress_;
+              bitField1_ = (bitField1_ & ~0x00000001);
+              supplierAddressBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierAddressFieldBuilder() : null;
+            } else {
+              supplierAddressBuilder_.addAllMessages(other.supplierAddress_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -30918,6 +39355,7 @@ public final class DataServiceProto {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalInclVat_ =
         java.util.Collections.emptyList();
@@ -36917,6 +45355,1926 @@ public final class DataServiceProto {
           bankRegistrationNumber_ = null;
         }
         return bankRegistrationNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierName_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierNameIsMutable() {
+        if (!((bitField0_ & 0x02000000) != 0)) {
+          supplierName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(supplierName_);
+          bitField0_ |= 0x02000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> supplierNameBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierNameList() {
+        if (supplierNameBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        } else {
+          return supplierNameBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public int getSupplierNameCount() {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.size();
+        } else {
+          return supplierNameBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);
+        } else {
+          return supplierNameBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder setSupplierName(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, value);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder addSupplierName(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierNameBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder addAllSupplierName(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierName_);
+          onChanged();
+        } else {
+          supplierNameBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder clearSupplierName() {
+        if (supplierNameBuilder_ == null) {
+          supplierName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+          onChanged();
+        } else {
+          supplierNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public Builder removeSupplierName(int index) {
+        if (supplierNameBuilder_ == null) {
+          ensureSupplierNameIsMutable();
+          supplierName_.remove(index);
+          onChanged();
+        } else {
+          supplierNameBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierNameOrBuilder(
+          int index) {
+        if (supplierNameBuilder_ == null) {
+          return supplierName_.get(index);  } else {
+          return supplierNameBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getSupplierNameOrBuilderList() {
+        if (supplierNameBuilder_ != null) {
+          return supplierNameBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierName_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierNameBuilder() {
+        return getSupplierNameFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierNameBuilder(
+          int index) {
+        return getSupplierNameFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_name = 26;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getSupplierNameBuilderList() {
+        return getSupplierNameFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getSupplierNameFieldBuilder() {
+        if (supplierNameBuilder_ == null) {
+          supplierNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  supplierName_,
+                  ((bitField0_ & 0x02000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierName_ = null;
+        }
+        return supplierNameBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> bic_ =
+        java.util.Collections.emptyList();
+      private void ensureBicIsMutable() {
+        if (!((bitField0_ & 0x04000000) != 0)) {
+          bic_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(bic_);
+          bitField0_ |= 0x04000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> bicBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getBicList() {
+        if (bicBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bic_);
+        } else {
+          return bicBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public int getBicCount() {
+        if (bicBuilder_ == null) {
+          return bic_.size();
+        } else {
+          return bicBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getBic(int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);
+        } else {
+          return bicBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder setBic(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.set(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder setBic(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder addBic(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder addBic(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (bicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBicIsMutable();
+          bic_.add(index, value);
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder addBic(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder addBic(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bicBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder addAllBic(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bic_);
+          onChanged();
+        } else {
+          bicBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder clearBic() {
+        if (bicBuilder_ == null) {
+          bic_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x04000000);
+          onChanged();
+        } else {
+          bicBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public Builder removeBic(int index) {
+        if (bicBuilder_ == null) {
+          ensureBicIsMutable();
+          bic_.remove(index);
+          onChanged();
+        } else {
+          bicBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getBicBuilder(
+          int index) {
+        return getBicFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getBicOrBuilder(
+          int index) {
+        if (bicBuilder_ == null) {
+          return bic_.get(index);  } else {
+          return bicBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getBicOrBuilderList() {
+        if (bicBuilder_ != null) {
+          return bicBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bic_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addBicBuilder() {
+        return getBicFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addBicBuilder(
+          int index) {
+        return getBicFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec bic = 27;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getBicBuilderList() {
+        return getBicFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getBicFieldBuilder() {
+        if (bicBuilder_ == null) {
+          bicBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  bic_,
+                  ((bitField0_ & 0x04000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bic_ = null;
+        }
+        return bicBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentNumberIsMutable() {
+        if (!((bitField0_ & 0x08000000) != 0)) {
+          documentNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(documentNumber_);
+          bitField0_ |= 0x08000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> documentNumberBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getDocumentNumberList() {
+        if (documentNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        } else {
+          return documentNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public int getDocumentNumberCount() {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.size();
+        } else {
+          return documentNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);
+        } else {
+          return documentNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder setDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (documentNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, value);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder addDocumentNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder addAllDocumentNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentNumber_);
+          onChanged();
+        } else {
+          documentNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder clearDocumentNumber() {
+        if (documentNumberBuilder_ == null) {
+          documentNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x08000000);
+          onChanged();
+        } else {
+          documentNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public Builder removeDocumentNumber(int index) {
+        if (documentNumberBuilder_ == null) {
+          ensureDocumentNumberIsMutable();
+          documentNumber_.remove(index);
+          onChanged();
+        } else {
+          documentNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getDocumentNumberOrBuilder(
+          int index) {
+        if (documentNumberBuilder_ == null) {
+          return documentNumber_.get(index);  } else {
+          return documentNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getDocumentNumberOrBuilderList() {
+        if (documentNumberBuilder_ != null) {
+          return documentNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentNumber_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addDocumentNumberBuilder() {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addDocumentNumberBuilder(
+          int index) {
+        return getDocumentNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_number = 28;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getDocumentNumberBuilderList() {
+        return getDocumentNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getDocumentNumberFieldBuilder() {
+        if (documentNumberBuilder_ == null) {
+          documentNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  documentNumber_,
+                  ((bitField0_ & 0x08000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentNumber_ = null;
+        }
+        return documentNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentDate_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentDateIsMutable() {
+        if (!((bitField0_ & 0x10000000) != 0)) {
+          documentDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(documentDate_);
+          bitField0_ |= 0x10000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> documentDateBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getDocumentDateList() {
+        if (documentDateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        } else {
+          return documentDateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public int getDocumentDateCount() {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.size();
+        } else {
+          return documentDateBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);
+        } else {
+          return documentDateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder setDocumentDate(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder setDocumentDate(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder addDocumentDate(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder addDocumentDate(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (documentDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, value);
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder addDocumentDate(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder addDocumentDate(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentDateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder addAllDocumentDate(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentDate_);
+          onChanged();
+        } else {
+          documentDateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder clearDocumentDate() {
+        if (documentDateBuilder_ == null) {
+          documentDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x10000000);
+          onChanged();
+        } else {
+          documentDateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public Builder removeDocumentDate(int index) {
+        if (documentDateBuilder_ == null) {
+          ensureDocumentDateIsMutable();
+          documentDate_.remove(index);
+          onChanged();
+        } else {
+          documentDateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getDocumentDateOrBuilder(
+          int index) {
+        if (documentDateBuilder_ == null) {
+          return documentDate_.get(index);  } else {
+          return documentDateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getDocumentDateOrBuilderList() {
+        if (documentDateBuilder_ != null) {
+          return documentDateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentDate_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addDocumentDateBuilder() {
+        return getDocumentDateFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addDocumentDateBuilder(
+          int index) {
+        return getDocumentDateFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec document_date = 29;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getDocumentDateBuilderList() {
+        return getDocumentDateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getDocumentDateFieldBuilder() {
+        if (documentDateBuilder_ == null) {
+          documentDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  documentDate_,
+                  ((bitField0_ & 0x10000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          documentDate_ = null;
+        }
+        return documentDateBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> orderNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureOrderNumberIsMutable() {
+        if (!((bitField0_ & 0x20000000) != 0)) {
+          orderNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(orderNumber_);
+          bitField0_ |= 0x20000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> orderNumberBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getOrderNumberList() {
+        if (orderNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        } else {
+          return orderNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public int getOrderNumberCount() {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.size();
+        } else {
+          return orderNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);
+        } else {
+          return orderNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder setOrderNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder setOrderNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder addOrderNumber(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (orderNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, value);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder addOrderNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder addAllOrderNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orderNumber_);
+          onChanged();
+        } else {
+          orderNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder clearOrderNumber() {
+        if (orderNumberBuilder_ == null) {
+          orderNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x20000000);
+          onChanged();
+        } else {
+          orderNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public Builder removeOrderNumber(int index) {
+        if (orderNumberBuilder_ == null) {
+          ensureOrderNumberIsMutable();
+          orderNumber_.remove(index);
+          onChanged();
+        } else {
+          orderNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getOrderNumberOrBuilder(
+          int index) {
+        if (orderNumberBuilder_ == null) {
+          return orderNumber_.get(index);  } else {
+          return orderNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getOrderNumberOrBuilderList() {
+        if (orderNumberBuilder_ != null) {
+          return orderNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orderNumber_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addOrderNumberBuilder() {
+        return getOrderNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addOrderNumberBuilder(
+          int index) {
+        return getOrderNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec order_number = 30;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getOrderNumberBuilderList() {
+        return getOrderNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getOrderNumberFieldBuilder() {
+        if (orderNumberBuilder_ == null) {
+          orderNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  orderNumber_,
+                  ((bitField0_ & 0x20000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orderNumber_ = null;
+        }
+        return orderNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierVatNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierVatNumberIsMutable() {
+        if (!((bitField0_ & 0x40000000) != 0)) {
+          supplierVatNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(supplierVatNumber_);
+          bitField0_ |= 0x40000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> supplierVatNumberBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierVatNumberList() {
+        if (supplierVatNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        } else {
+          return supplierVatNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public int getSupplierVatNumberCount() {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.size();
+        } else {
+          return supplierVatNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);
+        } else {
+          return supplierVatNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder setSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierVatNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder addSupplierVatNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder addAllSupplierVatNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierVatNumber_);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder clearSupplierVatNumber() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public Builder removeSupplierVatNumber(int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          ensureSupplierVatNumberIsMutable();
+          supplierVatNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierVatNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierVatNumberOrBuilder(
+          int index) {
+        if (supplierVatNumberBuilder_ == null) {
+          return supplierVatNumber_.get(index);  } else {
+          return supplierVatNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getSupplierVatNumberOrBuilderList() {
+        if (supplierVatNumberBuilder_ != null) {
+          return supplierVatNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierVatNumber_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierVatNumberBuilder() {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierVatNumberBuilder(
+          int index) {
+        return getSupplierVatNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getSupplierVatNumberBuilderList() {
+        return getSupplierVatNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getSupplierVatNumberFieldBuilder() {
+        if (supplierVatNumberBuilder_ == null) {
+          supplierVatNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  supplierVatNumber_,
+                  ((bitField0_ & 0x40000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierVatNumber_ = null;
+        }
+        return supplierVatNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierOrganisationNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierOrganisationNumberIsMutable() {
+        if (!((bitField0_ & 0x80000000) != 0)) {
+          supplierOrganisationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(supplierOrganisationNumber_);
+          bitField0_ |= 0x80000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> supplierOrganisationNumberBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierOrganisationNumberList() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public int getSupplierOrganisationNumberCount() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.size();
+        } else {
+          return supplierOrganisationNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);
+        } else {
+          return supplierOrganisationNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder setSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, value);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder addSupplierOrganisationNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder addAllSupplierOrganisationNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierOrganisationNumber_);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder clearSupplierOrganisationNumber() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public Builder removeSupplierOrganisationNumber(int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          ensureSupplierOrganisationNumberIsMutable();
+          supplierOrganisationNumber_.remove(index);
+          onChanged();
+        } else {
+          supplierOrganisationNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierOrganisationNumberOrBuilder(
+          int index) {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          return supplierOrganisationNumber_.get(index);  } else {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getSupplierOrganisationNumberOrBuilderList() {
+        if (supplierOrganisationNumberBuilder_ != null) {
+          return supplierOrganisationNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierOrganisationNumberBuilder() {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierOrganisationNumberBuilder(
+          int index) {
+        return getSupplierOrganisationNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getSupplierOrganisationNumberBuilderList() {
+        return getSupplierOrganisationNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getSupplierOrganisationNumberFieldBuilder() {
+        if (supplierOrganisationNumberBuilder_ == null) {
+          supplierOrganisationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  supplierOrganisationNumber_,
+                  ((bitField0_ & 0x80000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierOrganisationNumber_ = null;
+        }
+        return supplierOrganisationNumberBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierAddress_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierAddressIsMutable() {
+        if (!((bitField1_ & 0x00000001) != 0)) {
+          supplierAddress_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(supplierAddress_);
+          bitField1_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> supplierAddressBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getSupplierAddressList() {
+        if (supplierAddressBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        } else {
+          return supplierAddressBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public int getSupplierAddressCount() {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.size();
+        } else {
+          return supplierAddressBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);
+        } else {
+          return supplierAddressBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder setSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (supplierAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, value);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder addSupplierAddress(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder addAllSupplierAddress(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierAddress_);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder clearSupplierAddress() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddress_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public Builder removeSupplierAddress(int index) {
+        if (supplierAddressBuilder_ == null) {
+          ensureSupplierAddressIsMutable();
+          supplierAddress_.remove(index);
+          onChanged();
+        } else {
+          supplierAddressBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierAddressOrBuilder(
+          int index) {
+        if (supplierAddressBuilder_ == null) {
+          return supplierAddress_.get(index);  } else {
+          return supplierAddressBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getSupplierAddressOrBuilderList() {
+        if (supplierAddressBuilder_ != null) {
+          return supplierAddressBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierAddress_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierAddressBuilder() {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addSupplierAddressBuilder(
+          int index) {
+        return getSupplierAddressFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec supplier_address = 33;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getSupplierAddressBuilderList() {
+        return getSupplierAddressFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getSupplierAddressFieldBuilder() {
+        if (supplierAddressBuilder_ == null) {
+          supplierAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  supplierAddress_,
+                  ((bitField1_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplierAddress_ = null;
+        }
+        return supplierAddressBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -47511,7 +57869,7 @@ public final class DataServiceProto {
       "n.dataservice.v1.PredictionConfidences\022C" +
       "\n\023prediction_metadata\030\n \001(\0132&.ssn.datase" +
       "rvice.v1.PredictionMetadata:\022\352?\017\n\rtraini" +
-      "ng_data\"\353\013\n\nTrueValues\0224\n\016total_incl_vat" +
+      "ng_data\"\355\016\n\nTrueValues\0224\n\016total_incl_vat" +
       "\030\001 \001(\0132\034.google.protobuf.DoubleValue\022/\n\t" +
       "total_vat\030\002 \001(\0132\034.google.protobuf.Double" +
       "Value\0224\n\016total_excl_vat\030\003 \001(\0132\034.google.p" +
@@ -47549,162 +57907,202 @@ public final class DataServiceProto {
       "ingValue\022>\n\030bank_registration_number\030\031 \001" +
       "(\0132\034.google.protobuf.StringValue\0223\n\rsupp" +
       "lier_name\030\032 \001(\0132\034.google.protobuf.String" +
-      "Value\"\274\013\n\020PredictionValues\0224\n\016total_incl" +
-      "_vat\030\001 \003(\0132\034.google.protobuf.DoubleValue" +
-      "\022/\n\ttotal_vat\030\002 \003(\0132\034.google.protobuf.Do" +
-      "ubleValue\0224\n\016total_excl_vat\030\003 \003(\0132\034.goog" +
-      "le.protobuf.DoubleValue\0220\n\norder_date\030\004 " +
-      "\003(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0226\n\020pay" +
-      "ment_due_date\030\005 \003(\0132\021.google.type.DateB\t" +
-      "\352?\006\022\004DATE\0223\n\rdocument_type\030\006 \003(\0132\034.googl" +
-      "e.protobuf.StringValue\022.\n\010currency\030\007 \003(\013" +
-      "2\034.google.protobuf.StringValue\022;\n\025credit" +
-      "_card_last_four\030\010 \003(\0132\034.google.protobuf." +
-      "StringValue\0224\n\016payment_method\030\t \003(\0132\034.go" +
-      "ogle.protobuf.StringValue\0226\n\020ocr_line_dk" +
-      "_type\030\n \003(\0132\034.google.protobuf.StringValu" +
-      "e\022<\n\026ocr_line_dk_payment_id\030\013 \003(\0132\034.goog" +
-      "le.protobuf.StringValue\022=\n\027ocr_line_dk_c" +
-      "reditor_id\030\014 \003(\0132\034.google.protobuf.Strin" +
-      "gValue\022<\n\026ocr_line_se_payment_id\030\r \003(\0132\034" +
-      ".google.protobuf.StringValue\022F\n ocr_line" +
-      "_se_bankgiro_creditor_id\030\016 \003(\0132\034.google." +
-      "protobuf.StringValue\022F\n ocr_line_se_plus" +
-      "giro_creditor_id\030\017 \003(\0132\034.google.protobuf" +
-      ".StringValue\022<\n\026ocr_line_no_payment_id\030\020" +
-      " \003(\0132\034.google.protobuf.StringValue\022<\n\026oc" +
-      "r_line_fi_payment_id\030\021 \003(\0132\034.google.prot" +
-      "obuf.StringValue\022<\n\026ocr_line_nl_payment_" +
-      "id\030\022 \003(\0132\034.google.protobuf.StringValue\022;" +
-      "\n\025supplier_corporate_id\030\023 \003(\0132\034.google.p" +
-      "rotobuf.StringValue\022;\n\025supplier_country_" +
-      "code\030\024 \003(\0132\034.google.protobuf.StringValue" +
-      "\0224\n\016invoice_number\030\025 \003(\0132\034.google.protob" +
-      "uf.StringValue\022*\n\004iban\030\026 \003(\0132\034.google.pr" +
-      "otobuf.StringValue\0225\n\017order_reference\030\027 " +
-      "\003(\0132\034.google.protobuf.StringValue\0229\n\023ban" +
-      "k_account_number\030\030 \003(\0132\034.google.protobuf" +
-      ".StringValue\022>\n\030bank_registration_number" +
-      "\030\031 \003(\0132\034.google.protobuf.StringValue\"\250\013\n" +
-      "\025PredictionConfidences\0223\n\016total_incl_vat" +
-      "\030\001 \003(\0132\033.google.protobuf.FloatValue\022.\n\tt" +
-      "otal_vat\030\002 \003(\0132\033.google.protobuf.FloatVa" +
-      "lue\0223\n\016total_excl_vat\030\003 \003(\0132\033.google.pro" +
-      "tobuf.FloatValue\022/\n\norder_date\030\004 \003(\0132\033.g" +
-      "oogle.protobuf.FloatValue\0225\n\020payment_due" +
-      "_date\030\005 \003(\0132\033.google.protobuf.FloatValue" +
-      "\0222\n\rdocument_type\030\006 \003(\0132\033.google.protobu" +
-      "f.FloatValue\022-\n\010currency\030\007 \003(\0132\033.google." +
-      "protobuf.FloatValue\022:\n\025credit_card_last_" +
-      "four\030\010 \003(\0132\033.google.protobuf.FloatValue\022" +
-      "3\n\016payment_method\030\t \003(\0132\033.google.protobu" +
-      "f.FloatValue\0225\n\020ocr_line_dk_type\030\n \003(\0132\033" +
-      ".google.protobuf.FloatValue\022;\n\026ocr_line_" +
-      "dk_payment_id\030\013 \003(\0132\033.google.protobuf.Fl" +
-      "oatValue\022<\n\027ocr_line_dk_creditor_id\030\014 \003(" +
-      "\0132\033.google.protobuf.FloatValue\022;\n\026ocr_li" +
-      "ne_se_payment_id\030\r \003(\0132\033.google.protobuf" +
-      ".FloatValue\022E\n ocr_line_se_bankgiro_cred" +
-      "itor_id\030\016 \003(\0132\033.google.protobuf.FloatVal" +
-      "ue\022E\n ocr_line_se_plusgiro_creditor_id\030\017" +
-      " \003(\0132\033.google.protobuf.FloatValue\022;\n\026ocr" +
-      "_line_no_payment_id\030\020 \003(\0132\033.google.proto" +
-      "buf.FloatValue\022;\n\026ocr_line_fi_payment_id" +
-      "\030\021 \003(\0132\033.google.protobuf.FloatValue\022;\n\026o" +
-      "cr_line_nl_payment_id\030\022 \003(\0132\033.google.pro" +
-      "tobuf.FloatValue\022:\n\025supplier_corporate_i" +
-      "d\030\023 \003(\0132\033.google.protobuf.FloatValue\022:\n\025" +
-      "supplier_country_code\030\024 \003(\0132\033.google.pro" +
-      "tobuf.FloatValue\0223\n\016invoice_number\030\025 \003(\013" +
-      "2\033.google.protobuf.FloatValue\022)\n\004iban\030\026 " +
-      "\003(\0132\033.google.protobuf.FloatValue\0224\n\017orde" +
-      "r_reference\030\027 \003(\0132\033.google.protobuf.Floa" +
-      "tValue\0228\n\023bank_account_number\030\030 \003(\0132\033.go" +
-      "ogle.protobuf.FloatValue\022=\n\030bank_registr" +
-      "ation_number\030\031 \003(\0132\033.google.protobuf.Flo" +
-      "atValue\"\335\t\n\022PredictionMetadata\022+\n\016total_" +
-      "incl_vat\030\001 \003(\0132\023.ssn.type.ModelSpec\022&\n\tt" +
-      "otal_vat\030\002 \003(\0132\023.ssn.type.ModelSpec\022+\n\016t" +
-      "otal_excl_vat\030\003 \003(\0132\023.ssn.type.ModelSpec" +
-      "\022\'\n\norder_date\030\004 \003(\0132\023.ssn.type.ModelSpe" +
-      "c\022-\n\020payment_due_date\030\005 \003(\0132\023.ssn.type.M" +
-      "odelSpec\022*\n\rdocument_type\030\006 \003(\0132\023.ssn.ty" +
-      "pe.ModelSpec\022%\n\010currency\030\007 \003(\0132\023.ssn.typ" +
-      "e.ModelSpec\0222\n\025credit_card_last_four\030\010 \003" +
-      "(\0132\023.ssn.type.ModelSpec\022+\n\016payment_metho" +
-      "d\030\t \003(\0132\023.ssn.type.ModelSpec\022-\n\020ocr_line" +
-      "_dk_type\030\n \003(\0132\023.ssn.type.ModelSpec\0223\n\026o" +
-      "cr_line_dk_payment_id\030\013 \003(\0132\023.ssn.type.M" +
-      "odelSpec\0224\n\027ocr_line_dk_creditor_id\030\014 \003(" +
-      "\0132\023.ssn.type.ModelSpec\0223\n\026ocr_line_se_pa" +
-      "yment_id\030\r \003(\0132\023.ssn.type.ModelSpec\022=\n o" +
-      "cr_line_se_bankgiro_creditor_id\030\016 \003(\0132\023." +
-      "ssn.type.ModelSpec\022=\n ocr_line_se_plusgi" +
-      "ro_creditor_id\030\017 \003(\0132\023.ssn.type.ModelSpe" +
-      "c\0223\n\026ocr_line_no_payment_id\030\020 \003(\0132\023.ssn." +
-      "type.ModelSpec\0223\n\026ocr_line_fi_payment_id" +
-      "\030\021 \003(\0132\023.ssn.type.ModelSpec\0223\n\026ocr_line_" +
-      "nl_payment_id\030\022 \003(\0132\023.ssn.type.ModelSpec" +
-      "\0222\n\025supplier_corporate_id\030\023 \003(\0132\023.ssn.ty" +
-      "pe.ModelSpec\0222\n\025supplier_country_code\030\024 " +
-      "\003(\0132\023.ssn.type.ModelSpec\022+\n\016invoice_numb" +
-      "er\030\025 \003(\0132\023.ssn.type.ModelSpec\022!\n\004iban\030\026 " +
-      "\003(\0132\023.ssn.type.ModelSpec\022,\n\017order_refere" +
-      "nce\030\027 \003(\0132\023.ssn.type.ModelSpec\0220\n\023bank_a" +
-      "ccount_number\030\030 \003(\0132\023.ssn.type.ModelSpec" +
-      "\0225\n\030bank_registration_number\030\031 \003(\0132\023.ssn" +
-      ".type.ModelSpec\"G\n\025CreateDocumentRequest" +
-      "\022.\n\010document\030\001 \001(\0132\034.ssn.dataservice.v1." +
-      "Document\"$\n\026CreateDocumentResponse\022\n\n\002id" +
-      "\030\001 \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 \001(" +
-      "\t\"F\n\024ReadDocumentResponse\022.\n\010document\030\001 " +
-      "\001(\0132\034.ssn.dataservice.v1.Document\"\340\002\n\026Pr" +
-      "epareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002" +
-      " \001(\0132\030.ssn.type.TextAnnotation\022\026\n\016docume" +
-      "nt_bytes\030\003 \001(\014\0229\n\013predictions\030\004 \001(\0132$.ss" +
-      "n.dataservice.v1.PredictionValues\022\014\n\004tag" +
-      "s\030\005 \003(\t\022>\n\013confidences\030\006 \001(\0132).ssn.datas" +
-      "ervice.v1.PredictionConfidences\022C\n\023predi" +
-      "ction_metadata\030\007 \001(\0132&.ssn.dataservice.v" +
-      "1.PredictionMetadata\022\034\n\004tier\030\010 \001(\0162\016.ssn" +
-      ".type.Tier\022\020\n\010segments\030\t \003(\t\"`\n\017Feedback" +
-      "Request\022\n\n\002id\030\001 \001(\t\0223\n\013true_values\030\002 \001(\013" +
-      "2\036.ssn.dataservice.v1.TrueValues\022\014\n\004tags" +
-      "\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nstart_time\030\002" +
-      " \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014" +
-      "\n\004tags\030\005 \003(\t\"\273\001\n\017FeedbackMetrics\022\026\n\016docu" +
-      "ment_count\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005" +
-      "\022<\n\023overall_correctness\030\003 \001(\0132\037.ssn.data" +
-      "service.v1.Correctness\022:\n\021field_correctn" +
-      "ess\030\004 \003(\0132\037.ssn.dataservice.v1.Correctne" +
-      "ss\"\202\001\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022cor" +
-      "rect_percentage\030\002 \001(\002\022\035\n\025incomplete_perc" +
-      "entage\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(\002\022\017" +
-      "\n\007support\030\005 \001(\005\"\035\n\rDeleteRequest\022\014\n\004tags" +
-      "\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022" +
-      "\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerMonthRespo" +
-      "nse\022:\n\017calls_per_month\030\001 \003(\0132!.ssn.datas" +
-      "ervice.v1.CallsPerMonth2\265\005\n\013DataService\022" +
-      "g\n\016CreateDocument\022).ssn.dataservice.v1.C" +
-      "reateDocumentRequest\032*.ssn.dataservice.v" +
-      "1.CreateDocumentResponse\022a\n\014ReadDocument" +
-      "\022\'.ssn.dataservice.v1.ReadDocumentReques" +
-      "t\032(.ssn.dataservice.v1.ReadDocumentRespo" +
-      "nse\022U\n\017PrepareFeedback\022*.ssn.dataservice" +
-      ".v1.PrepareFeedbackRequest\032\026.google.prot" +
-      "obuf.Empty\022g\n\010Feedback\022#.ssn.dataservice" +
-      ".v1.FeedbackRequest\032\026.google.protobuf.Em" +
-      "pty\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020C" +
-      "alculateMetrics\022\".ssn.dataservice.v1.Met" +
-      "ricsRequest\032#.ssn.dataservice.v1.Feedbac" +
-      "kMetrics\022c\n\006Delete\022!.ssn.dataservice.v1." +
-      "DeleteRequest\032\026.google.protobuf.Empty\"\036\202" +
-      "\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X\n\023CallsPe" +
-      "rMonthMetric\022\026.google.protobuf.Empty\032).s" +
-      "sn.dataservice.v1.CallsPerMonthResponseB" +
-      "VB\020DataServiceProtoZBgithub.com/e-conomi" +
-      "c/vmlapis/gen/go/ssn/dataservice/v1;data" +
-      "serviceb\006proto3"
+      "Value\022)\n\003bic\030\033 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\0225\n\017document_number\030\034 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0223\n\rdocument_date" +
+      "\030\035 \001(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0222\n\014" +
+      "order_number\030\036 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\0229\n\023supplier_vat_number\030\037 \001(\0132\034." +
+      "google.protobuf.StringValue\022B\n\034supplier_" +
+      "organisation_number\030  \001(\0132\034.google.proto" +
+      "buf.StringValue\0226\n\020supplier_address\030! \001(" +
+      "\0132\034.google.protobuf.StringValue\"\363\016\n\020Pred" +
+      "ictionValues\0224\n\016total_incl_vat\030\001 \003(\0132\034.g" +
+      "oogle.protobuf.DoubleValue\022/\n\ttotal_vat\030" +
+      "\002 \003(\0132\034.google.protobuf.DoubleValue\0224\n\016t" +
+      "otal_excl_vat\030\003 \003(\0132\034.google.protobuf.Do" +
+      "ubleValue\0220\n\norder_date\030\004 \003(\0132\021.google.t" +
+      "ype.DateB\t\352?\006\022\004DATE\0226\n\020payment_due_date\030" +
+      "\005 \003(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0223\n\rd" +
+      "ocument_type\030\006 \003(\0132\034.google.protobuf.Str" +
+      "ingValue\022.\n\010currency\030\007 \003(\0132\034.google.prot" +
+      "obuf.StringValue\022;\n\025credit_card_last_fou" +
+      "r\030\010 \003(\0132\034.google.protobuf.StringValue\0224\n" +
+      "\016payment_method\030\t \003(\0132\034.google.protobuf." +
+      "StringValue\0226\n\020ocr_line_dk_type\030\n \003(\0132\034." +
+      "google.protobuf.StringValue\022<\n\026ocr_line_" +
+      "dk_payment_id\030\013 \003(\0132\034.google.protobuf.St" +
+      "ringValue\022=\n\027ocr_line_dk_creditor_id\030\014 \003" +
+      "(\0132\034.google.protobuf.StringValue\022<\n\026ocr_" +
+      "line_se_payment_id\030\r \003(\0132\034.google.protob" +
+      "uf.StringValue\022F\n ocr_line_se_bankgiro_c" +
+      "reditor_id\030\016 \003(\0132\034.google.protobuf.Strin" +
+      "gValue\022F\n ocr_line_se_plusgiro_creditor_" +
+      "id\030\017 \003(\0132\034.google.protobuf.StringValue\022<" +
+      "\n\026ocr_line_no_payment_id\030\020 \003(\0132\034.google." +
+      "protobuf.StringValue\022<\n\026ocr_line_fi_paym" +
+      "ent_id\030\021 \003(\0132\034.google.protobuf.StringVal" +
+      "ue\022<\n\026ocr_line_nl_payment_id\030\022 \003(\0132\034.goo" +
+      "gle.protobuf.StringValue\022;\n\025supplier_cor" +
+      "porate_id\030\023 \003(\0132\034.google.protobuf.String" +
+      "Value\022;\n\025supplier_country_code\030\024 \003(\0132\034.g" +
+      "oogle.protobuf.StringValue\0224\n\016invoice_nu" +
+      "mber\030\025 \003(\0132\034.google.protobuf.StringValue" +
+      "\022*\n\004iban\030\026 \003(\0132\034.google.protobuf.StringV" +
+      "alue\0225\n\017order_reference\030\027 \003(\0132\034.google.p" +
+      "rotobuf.StringValue\0229\n\023bank_account_numb" +
+      "er\030\030 \003(\0132\034.google.protobuf.StringValue\022>" +
+      "\n\030bank_registration_number\030\031 \003(\0132\034.googl" +
+      "e.protobuf.StringValue\0223\n\rsupplier_name\030" +
+      "\032 \003(\0132\034.google.protobuf.StringValue\022)\n\003b" +
+      "ic\030\033 \003(\0132\034.google.protobuf.StringValue\0225" +
+      "\n\017document_number\030\034 \003(\0132\034.google.protobu" +
+      "f.StringValue\0223\n\rdocument_date\030\035 \003(\0132\021.g" +
+      "oogle.type.DateB\t\352?\006\022\004DATE\0222\n\014order_numb" +
+      "er\030\036 \003(\0132\034.google.protobuf.StringValue\0229" +
+      "\n\023supplier_vat_number\030\037 \003(\0132\034.google.pro" +
+      "tobuf.StringValue\022B\n\034supplier_organisati" +
+      "on_number\030  \003(\0132\034.google.protobuf.String" +
+      "Value\0226\n\020supplier_address\030! \003(\0132\034.google" +
+      ".protobuf.StringValue\"\327\016\n\025PredictionConf" +
+      "idences\0223\n\016total_incl_vat\030\001 \003(\0132\033.google" +
+      ".protobuf.FloatValue\022.\n\ttotal_vat\030\002 \003(\0132" +
+      "\033.google.protobuf.FloatValue\0223\n\016total_ex" +
+      "cl_vat\030\003 \003(\0132\033.google.protobuf.FloatValu" +
+      "e\022/\n\norder_date\030\004 \003(\0132\033.google.protobuf." +
+      "FloatValue\0225\n\020payment_due_date\030\005 \003(\0132\033.g" +
+      "oogle.protobuf.FloatValue\0222\n\rdocument_ty" +
+      "pe\030\006 \003(\0132\033.google.protobuf.FloatValue\022-\n" +
+      "\010currency\030\007 \003(\0132\033.google.protobuf.FloatV" +
+      "alue\022:\n\025credit_card_last_four\030\010 \003(\0132\033.go" +
+      "ogle.protobuf.FloatValue\0223\n\016payment_meth" +
+      "od\030\t \003(\0132\033.google.protobuf.FloatValue\0225\n" +
+      "\020ocr_line_dk_type\030\n \003(\0132\033.google.protobu" +
+      "f.FloatValue\022;\n\026ocr_line_dk_payment_id\030\013" +
+      " \003(\0132\033.google.protobuf.FloatValue\022<\n\027ocr" +
+      "_line_dk_creditor_id\030\014 \003(\0132\033.google.prot" +
+      "obuf.FloatValue\022;\n\026ocr_line_se_payment_i" +
+      "d\030\r \003(\0132\033.google.protobuf.FloatValue\022E\n " +
+      "ocr_line_se_bankgiro_creditor_id\030\016 \003(\0132\033" +
+      ".google.protobuf.FloatValue\022E\n ocr_line_" +
+      "se_plusgiro_creditor_id\030\017 \003(\0132\033.google.p" +
+      "rotobuf.FloatValue\022;\n\026ocr_line_no_paymen" +
+      "t_id\030\020 \003(\0132\033.google.protobuf.FloatValue\022" +
+      ";\n\026ocr_line_fi_payment_id\030\021 \003(\0132\033.google" +
+      ".protobuf.FloatValue\022;\n\026ocr_line_nl_paym" +
+      "ent_id\030\022 \003(\0132\033.google.protobuf.FloatValu" +
+      "e\022:\n\025supplier_corporate_id\030\023 \003(\0132\033.googl" +
+      "e.protobuf.FloatValue\022:\n\025supplier_countr" +
+      "y_code\030\024 \003(\0132\033.google.protobuf.FloatValu" +
+      "e\0223\n\016invoice_number\030\025 \003(\0132\033.google.proto" +
+      "buf.FloatValue\022)\n\004iban\030\026 \003(\0132\033.google.pr" +
+      "otobuf.FloatValue\0224\n\017order_reference\030\027 \003" +
+      "(\0132\033.google.protobuf.FloatValue\0228\n\023bank_" +
+      "account_number\030\030 \003(\0132\033.google.protobuf.F" +
+      "loatValue\022=\n\030bank_registration_number\030\031 " +
+      "\003(\0132\033.google.protobuf.FloatValue\0222\n\rsupp" +
+      "lier_name\030\032 \003(\0132\033.google.protobuf.FloatV" +
+      "alue\022(\n\003bic\030\033 \003(\0132\033.google.protobuf.Floa" +
+      "tValue\0224\n\017document_number\030\034 \003(\0132\033.google" +
+      ".protobuf.FloatValue\0222\n\rdocument_date\030\035 " +
+      "\003(\0132\033.google.protobuf.FloatValue\0221\n\014orde" +
+      "r_number\030\036 \003(\0132\033.google.protobuf.FloatVa" +
+      "lue\0228\n\023supplier_vat_number\030\037 \003(\0132\033.googl" +
+      "e.protobuf.FloatValue\022A\n\034supplier_organi" +
+      "sation_number\030  \003(\0132\033.google.protobuf.Fl" +
+      "oatValue\0225\n\020supplier_address\030! \003(\0132\033.goo" +
+      "gle.protobuf.FloatValue\"\314\014\n\022PredictionMe" +
+      "tadata\022+\n\016total_incl_vat\030\001 \003(\0132\023.ssn.typ" +
+      "e.ModelSpec\022&\n\ttotal_vat\030\002 \003(\0132\023.ssn.typ" +
+      "e.ModelSpec\022+\n\016total_excl_vat\030\003 \003(\0132\023.ss" +
+      "n.type.ModelSpec\022\'\n\norder_date\030\004 \003(\0132\023.s" +
+      "sn.type.ModelSpec\022-\n\020payment_due_date\030\005 " +
+      "\003(\0132\023.ssn.type.ModelSpec\022*\n\rdocument_typ" +
+      "e\030\006 \003(\0132\023.ssn.type.ModelSpec\022%\n\010currency" +
+      "\030\007 \003(\0132\023.ssn.type.ModelSpec\0222\n\025credit_ca" +
+      "rd_last_four\030\010 \003(\0132\023.ssn.type.ModelSpec\022" +
+      "+\n\016payment_method\030\t \003(\0132\023.ssn.type.Model" +
+      "Spec\022-\n\020ocr_line_dk_type\030\n \003(\0132\023.ssn.typ" +
+      "e.ModelSpec\0223\n\026ocr_line_dk_payment_id\030\013 " +
+      "\003(\0132\023.ssn.type.ModelSpec\0224\n\027ocr_line_dk_" +
+      "creditor_id\030\014 \003(\0132\023.ssn.type.ModelSpec\0223" +
+      "\n\026ocr_line_se_payment_id\030\r \003(\0132\023.ssn.typ" +
+      "e.ModelSpec\022=\n ocr_line_se_bankgiro_cred" +
+      "itor_id\030\016 \003(\0132\023.ssn.type.ModelSpec\022=\n oc" +
+      "r_line_se_plusgiro_creditor_id\030\017 \003(\0132\023.s" +
+      "sn.type.ModelSpec\0223\n\026ocr_line_no_payment" +
+      "_id\030\020 \003(\0132\023.ssn.type.ModelSpec\0223\n\026ocr_li" +
+      "ne_fi_payment_id\030\021 \003(\0132\023.ssn.type.ModelS" +
+      "pec\0223\n\026ocr_line_nl_payment_id\030\022 \003(\0132\023.ss" +
+      "n.type.ModelSpec\0222\n\025supplier_corporate_i" +
+      "d\030\023 \003(\0132\023.ssn.type.ModelSpec\0222\n\025supplier" +
+      "_country_code\030\024 \003(\0132\023.ssn.type.ModelSpec" +
+      "\022+\n\016invoice_number\030\025 \003(\0132\023.ssn.type.Mode" +
+      "lSpec\022!\n\004iban\030\026 \003(\0132\023.ssn.type.ModelSpec" +
+      "\022,\n\017order_reference\030\027 \003(\0132\023.ssn.type.Mod" +
+      "elSpec\0220\n\023bank_account_number\030\030 \003(\0132\023.ss" +
+      "n.type.ModelSpec\0225\n\030bank_registration_nu" +
+      "mber\030\031 \003(\0132\023.ssn.type.ModelSpec\022*\n\rsuppl" +
+      "ier_name\030\032 \003(\0132\023.ssn.type.ModelSpec\022 \n\003b" +
+      "ic\030\033 \003(\0132\023.ssn.type.ModelSpec\022,\n\017documen" +
+      "t_number\030\034 \003(\0132\023.ssn.type.ModelSpec\022*\n\rd" +
+      "ocument_date\030\035 \003(\0132\023.ssn.type.ModelSpec\022" +
+      ")\n\014order_number\030\036 \003(\0132\023.ssn.type.ModelSp" +
+      "ec\0220\n\023supplier_vat_number\030\037 \003(\0132\023.ssn.ty" +
+      "pe.ModelSpec\0229\n\034supplier_organisation_nu" +
+      "mber\030  \003(\0132\023.ssn.type.ModelSpec\022-\n\020suppl" +
+      "ier_address\030! \003(\0132\023.ssn.type.ModelSpec\"G" +
+      "\n\025CreateDocumentRequest\022.\n\010document\030\001 \001(" +
+      "\0132\034.ssn.dataservice.v1.Document\"$\n\026Creat" +
+      "eDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023ReadDoc" +
+      "umentRequest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocument" +
+      "Response\022.\n\010document\030\001 \001(\0132\034.ssn.dataser" +
+      "vice.v1.Document\"\340\002\n\026PrepareFeedbackRequ" +
+      "est\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type.T" +
+      "extAnnotation\022\026\n\016document_bytes\030\003 \001(\014\0229\n" +
+      "\013predictions\030\004 \001(\0132$.ssn.dataservice.v1." +
+      "PredictionValues\022\014\n\004tags\030\005 \003(\t\022>\n\013confid" +
+      "ences\030\006 \001(\0132).ssn.dataservice.v1.Predict" +
+      "ionConfidences\022C\n\023prediction_metadata\030\007 " +
+      "\001(\0132&.ssn.dataservice.v1.PredictionMetad" +
+      "ata\022\034\n\004tier\030\010 \001(\0162\016.ssn.type.Tier\022\020\n\010seg" +
+      "ments\030\t \003(\t\"`\n\017FeedbackRequest\022\n\n\002id\030\001 \001" +
+      "(\t\0223\n\013true_values\030\002 \001(\0132\036.ssn.dataservic" +
+      "e.v1.TrueValues\022\014\n\004tags\030\003 \003(\t\"T\n\016Metrics" +
+      "Request\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_time\030" +
+      "\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017" +
+      "FeedbackMetrics\022\026\n\016document_count\030\001 \001(\005\022" +
+      "\026\n\016feedback_count\030\002 \001(\005\022<\n\023overall_corre" +
+      "ctness\030\003 \001(\0132\037.ssn.dataservice.v1.Correc" +
+      "tness\022:\n\021field_correctness\030\004 \003(\0132\037.ssn.d" +
+      "ataservice.v1.Correctness\"\202\001\n\013Correctnes" +
+      "s\022\r\n\005field\030\001 \001(\t\022\032\n\022correct_percentage\030\002" +
+      " \001(\002\022\035\n\025incomplete_percentage\030\003 \001(\002\022\030\n\020e" +
+      "rror_percentage\030\004 \001(\002\022\017\n\007support\030\005 \001(\005\"\035" +
+      "\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t\"2\n\rCallsPe" +
+      "rMonth\022\r\n\005calls\030\001 \001(\003\022\022\n\nmonth_name\030\002 \001(" +
+      "\t\"S\n\025CallsPerMonthResponse\022:\n\017calls_per_" +
+      "month\030\001 \003(\0132!.ssn.dataservice.v1.CallsPe" +
+      "rMonth2\265\005\n\013DataService\022g\n\016CreateDocument" +
+      "\022).ssn.dataservice.v1.CreateDocumentRequ" +
+      "est\032*.ssn.dataservice.v1.CreateDocumentR" +
+      "esponse\022a\n\014ReadDocument\022\'.ssn.dataservic" +
+      "e.v1.ReadDocumentRequest\032(.ssn.dataservi" +
+      "ce.v1.ReadDocumentResponse\022U\n\017PrepareFee" +
+      "dback\022*.ssn.dataservice.v1.PrepareFeedba" +
+      "ckRequest\032\026.google.protobuf.Empty\022g\n\010Fee" +
+      "dback\022#.ssn.dataservice.v1.FeedbackReque" +
+      "st\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/" +
+      "feedback:create:\001*\022[\n\020CalculateMetrics\022\"" +
+      ".ssn.dataservice.v1.MetricsRequest\032#.ssn" +
+      ".dataservice.v1.FeedbackMetrics\022c\n\006Delet" +
+      "e\022!.ssn.dataservice.v1.DeleteRequest\032\026.g" +
+      "oogle.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedba" +
+      "ck:delete:\001*\022X\n\023CallsPerMonthMetric\022\026.go" +
+      "ogle.protobuf.Empty\032).ssn.dataservice.v1" +
+      ".CallsPerMonthResponseBVB\020DataServicePro" +
+      "toZBgithub.com/e-conomic/vmlapis/gen/go/" +
+      "ssn/dataservice/v1;dataserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -47730,25 +58128,25 @@ public final class DataServiceProto {
     internal_static_ssn_dataservice_v1_TrueValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_TrueValues_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
     internal_static_ssn_dataservice_v1_PredictionValues_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_dataservice_v1_PredictionValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionValues_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
     internal_static_ssn_dataservice_v1_PredictionConfidences_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_dataservice_v1_PredictionConfidences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionConfidences_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
     internal_static_ssn_dataservice_v1_PredictionMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_dataservice_v1_PredictionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionMetadata_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_fieldAccessorTable = new

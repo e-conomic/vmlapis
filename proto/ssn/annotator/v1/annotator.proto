@@ -49,7 +49,8 @@ message Feature {
     TOTAL_INCL_VAT = 6;
     // Run total excl vat detection
     TOTAL_EXCL_VAT = 7;
-    // Run supplier corporate id detection
+    // [DEPRECATED] Run supplier corporate id detection. 
+    // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
     SUPPLIER_CORPORATE_ID = 8;
     // Run country code detection
     SUPPLIER_COUNTRY_CODE = 9;
@@ -59,7 +60,7 @@ message Feature {
     PAYMENT_METHOD = 11;
     // Run credit card number detection
     CREDIT_CARD_LAST_FOUR = 12;
-    // Run invoice number detection
+    // [DEPRECATED] Run invoice number detection
     INVOICE_NUMBER = 13;
     // Run danish ocr line detection, for the type
     OCR_LINE_DK_TYPE = 14;
@@ -87,6 +88,26 @@ message Feature {
     LINES = 25;
     // Run first page of PDF to PNG conversion
     PREVIEW = 26;
+    // Run bank account number detection
+    BANK_ACCOUNT_NUMBER = 27;
+    // Run bank registration number detection
+    BANK_REGISTRATION_NUMBER = 28;
+    // Run business identifier code detection
+    BIC = 29;
+    // Run document number detection
+    DOCUMENT_NUMBER = 30;
+    // Run document date detection
+    DOCUMENT_DATE = 31;
+    // Run order number detection
+    ORDER_NUMBER = 32;
+    // Run spplier name detection
+    SUPPLIER_NAME = 33;
+    // [EXPERIMENTAL] Run supplier VAT detection
+    SUPPLIER_VAT_NUMBER = 34;
+    // [EXPERIMENTAL] Run supplier organisation number detection
+    SUPPLIER_ORGANISATION_NUMBER = 35;
+    // [EXPERIMENTAL] Run supplier address detection
+    SUPPLIER_ADDRESS = 36;
   }
   // The feature type.
   Type type = 1;
@@ -131,6 +152,8 @@ message DocumentAnnotatorResponse {
   // A string that parses as a two-decimal number
   // Example: "10.0" or "11.11"
   repeated ssn.type.Candidate total_excl_vat = 6;
+  // [DEPRECATED]
+  // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
   // supplierCorporateId
   // The company VAT number
   // Example: "123456789B01" (for Dutch companies)
@@ -153,6 +176,8 @@ message DocumentAnnotatorResponse {
   // Four digits
   // Example: "0012"
   repeated ssn.type.Candidate credit_card_last_four = 11;
+  // [DEPRECATED]
+  // use document number instead
   // invoiceNumber
   // The supplier defined identifier af the invoice
   // Example: "12345-A99"
@@ -179,6 +204,8 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.Candidate ocr_line_nl_payment_id = 22;
   // Return a string containing the text from the document
   string text = 23;
+  // Feedback ID is used to correct made predictions through the
+  // Feedback API.
   string feedback_id = 24;
   // The first two letters are a country code. The next two digits are
   // check digits for the ISO 7064 Mod 97, 10 checksum
@@ -189,6 +216,29 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.LineCandidate lines = 26;
   // Base64 encoded PNG image  of the first page of PDF document sent in request
   string preview = 27;
+  // Country specific bank account number
+  repeated ssn.type.Candidate bank_account_number = 28;
+  // Country specific bank registration number
+  repeated ssn.type.Candidate bank_registration_number = 29;
+  // Returns business identifier code
+  repeated ssn.type.Candidate bic = 30;
+  // Represents identifier of the document
+  repeated ssn.type.Candidate document_number = 31;
+  // Returns document date
+  repeated ssn.type.Candidate document_date = 32;
+  // Represents the identifier that supplier assigned to the order
+  repeated ssn.type.Candidate order_number = 33;
+  // Returns supplier name
+  repeated ssn.type.Candidate supplier_name = 34;
+  // [EXPERIMENTAL]
+  // Returns supplier VAT number
+  repeated ssn.type.Candidate supplier_vat_number = 35;
+  // [EXPERIMENTAL]
+  // Returns the business ID or organisation number of the supplier
+  repeated ssn.type.Candidate supplier_organisation_number = 36;
+  // [EXPERIMENTAL]
+  // Returns supplier address
+  repeated ssn.type.Candidate supplier_address = 37;
 }
 
 message Document {

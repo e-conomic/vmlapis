@@ -27,11 +27,11 @@ namespace Ssn.Mlservice.V2 {
             "CiBzc24vbWxzZXJ2aWNlL3YyL21sc2VydmljZS5wcm90bxIQc3NuLm1sc2Vy",
             "dmljZS52MhoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90bxoYc3NuL3R5cGUvY2Fu",
             "ZGlkYXRlLnByb3RvGh5zc24vdHlwZS90ZXh0X2Fubm90YXRpb24ucHJvdG8a",
-            "JXRlbnNvcmZsb3cvY29yZS9leGFtcGxlL2V4YW1wbGUucHJvdG8isAYKEUZl",
+            "JXRlbnNvcmZsb3cvY29yZS9leGFtcGxlL2V4YW1wbGUucHJvdG8i6AgKEUZl",
             "YXR1cmVHZW5SZXF1ZXN0EkUKDHRydXRoX2xhYmVscxgBIAEoCzIvLnNzbi5t",
             "bHNlcnZpY2UudjIuRmVhdHVyZUdlblJlcXVlc3QuVHJ1dGhMYWJlbHMSMQoP",
             "dGV4dF9hbm5vdGF0aW9uGAIgASgLMhguc3NuLnR5cGUuVGV4dEFubm90YXRp",
-            "b24SCgoCaWQYAyABKAkalAUKC1RydXRoTGFiZWxzEhYKDnRvdGFsX2luY2xf",
+            "b24SCgoCaWQYAyABKAkazAcKC1RydXRoTGFiZWxzEhYKDnRvdGFsX2luY2xf",
             "dmF0GAEgASgBEhEKCXRvdGFsX3ZhdBgCIAEoARIWCg50b3RhbF9leGNsX3Zh",
             "dBgDIAEoARIlCgpvcmRlcl9kYXRlGAQgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
             "ZRIrChBwYXltZW50X2R1ZV9kYXRlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
@@ -46,54 +46,72 @@ namespace Ssn.Mlservice.V2 {
             "ESABKAkSHgoWb2NyX2xpbmVfbmxfcGF5bWVudF9pZBgSIAEoCRIdChVzdXBw",
             "bGllcl9jb3Jwb3JhdGVfaWQYEyABKAkSHQoVc3VwcGxpZXJfY291bnRyeV9j",
             "b2RlGBQgASgJEhYKDmludm9pY2VfbnVtYmVyGBUgASgJEgwKBGliYW4YFiAB",
-            "KAkiOgoSRmVhdHVyZUdlblJlc3BvbnNlEiQKB2V4YW1wbGUYASABKAsyEy50",
-            "ZW5zb3JmbG93LkV4YW1wbGUiVAoOUHJlZGljdFJlcXVlc3QSJAoHZXhhbXBs",
-            "ZRgBIAEoCzITLnRlbnNvcmZsb3cuRXhhbXBsZRIcChR0b3Bfbl9tb3N0X2Nv",
-            "bmZpZGVudBgCIAEoDSLoCAoPUHJlZGljdFJlc3BvbnNlEicKCm9yZGVyX2Rh",
-            "dGUYASADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSLQoQcGF5bWVudF9kdWVf",
-            "ZGF0ZRgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIlCghjdXJyZW5jeRgD",
-            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRImCgl0b3RhbF92YXQYBCADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGUSKwoOdG90YWxfaW5jbF92YXQYBSADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGUSKwoOdG90YWxfZXhjbF92YXQYBiADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGUSMgoVc3VwcGxpZXJfY29ycG9yYXRlX2lk",
-            "GAcgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjIKFXN1cHBsaWVyX2NvdW50",
-            "cnlfY29kZRgIIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIqCg1kb2N1bWVu",
-            "dF90eXBlGAkgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEisKDnBheW1lbnRf",
-            "bWV0aG9kGAogAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEi8KEmNyZWRpdF9j",
-            "YXJkX251bWJlchgLIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIrCg5pbnZv",
-            "aWNlX251bWJlchgMIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRItChBvY3Jf",
-            "bGluZV9ka190eXBlGA0gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjMKFm9j",
-            "cl9saW5lX2RrX3BheW1lbnRfaWQYDiADKAsyEy5zc24udHlwZS5DYW5kaWRh",
-            "dGUSNAoXb2NyX2xpbmVfZGtfY3JlZGl0b3JfaWQYDyADKAsyEy5zc24udHlw",
-            "ZS5DYW5kaWRhdGUSMwoWb2NyX2xpbmVfc2VfcGF5bWVudF9pZBgQIAMoCzIT",
-            "LnNzbi50eXBlLkNhbmRpZGF0ZRI9CiBvY3JfbGluZV9zZV9iYW5rZ2lyb19j",
-            "cmVkaXRvcl9pZBgRIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRI9CiBvY3Jf",
-            "bGluZV9zZV9wbHVzZ2lyb19jcmVkaXRvcl9pZBgSIAMoCzITLnNzbi50eXBl",
-            "LkNhbmRpZGF0ZRIzChZvY3JfbGluZV9ub19wYXltZW50X2lkGBMgAygLMhMu",
-            "c3NuLnR5cGUuQ2FuZGlkYXRlEjMKFm9jcl9saW5lX2ZpX3BheW1lbnRfaWQY",
-            "FCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSMwoWb2NyX2xpbmVfbmxfcGF5",
-            "bWVudF9pZBgVIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIhCgRpYmFuGBYg",
-            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEiYKBWxpbmVzGBcgAygLMhcuc3Nu",
-            "LnR5cGUuTGluZUNhbmRpZGF0ZSKXAQoYRmVhdHVyZUdlblByZWRpY3RSZXF1",
-            "ZXN0EkAKE2ZlYXR1cmVfZ2VuX3JlcXVlc3QYASABKAsyIy5zc24ubWxzZXJ2",
-            "aWNlLnYyLkZlYXR1cmVHZW5SZXF1ZXN0EjkKD3ByZWRpY3RfcmVxdWVzdBgC",
-            "IAEoCzIgLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlcXVlc3QymAIKCU1s",
-            "U2VydmljZRJXCgpGZWF0dXJlR2VuEiMuc3NuLm1sc2VydmljZS52Mi5GZWF0",
-            "dXJlR2VuUmVxdWVzdBokLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJl",
-            "c3BvbnNlEk4KB1ByZWRpY3QSIC5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RS",
-            "ZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2USYgoR",
-            "RmVhdHVyZUdlblByZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVH",
-            "ZW5QcmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJl",
-            "c3BvbnNlQlFCD01sU2VydmljZVByb3Rvc1o+Z2l0aHViLmNvbS9lLWNvbm9t",
-            "aWMvdm1sYXBpcy9nZW4vZ28vc3NuL21sc2VydmljZS92MjttbHNlcnZpY2Vi",
-            "BnByb3RvMw=="));
+            "KAkSGwoTYmFua19hY2NvdW50X251bWJlchgXIAEoCRIgChhiYW5rX3JlZ2lz",
+            "dHJhdGlvbl9udW1iZXIYGCABKAkSFQoNc3VwcGxpZXJfbmFtZRgZIAEoCRIL",
+            "CgNiaWMYGiABKAkSFwoPZG9jdW1lbnRfbnVtYmVyGBsgASgJEigKDWRvY3Vt",
+            "ZW50X2RhdGUYHCABKAsyES5nb29nbGUudHlwZS5EYXRlEhQKDG9yZGVyX251",
+            "bWJlchgdIAEoCRIbChNzdXBwbGllcl92YXRfbnVtYmVyGB4gASgJEiQKHHN1",
+            "cHBsaWVyX29yZ2FuaXNhdGlvbl9udW1iZXIYHyABKAkSGAoQc3VwcGxpZXJf",
+            "YWRkcmVzcxggIAEoCRIdChVjcmVkaXRfY2FyZF9sYXN0X2ZvdXIYISABKAki",
+            "OgoSRmVhdHVyZUdlblJlc3BvbnNlEiQKB2V4YW1wbGUYASABKAsyEy50ZW5z",
+            "b3JmbG93LkV4YW1wbGUiVAoOUHJlZGljdFJlcXVlc3QSJAoHZXhhbXBsZRgB",
+            "IAEoCzITLnRlbnNvcmZsb3cuRXhhbXBsZRIcChR0b3Bfbl9tb3N0X2NvbmZp",
+            "ZGVudBgCIAEoDSL0DAoPUHJlZGljdFJlc3BvbnNlEicKCm9yZGVyX2RhdGUY",
+            "ASADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSLQoQcGF5bWVudF9kdWVfZGF0",
+            "ZRgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIlCghjdXJyZW5jeRgDIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZRImCgl0b3RhbF92YXQYBCADKAsyEy5z",
+            "c24udHlwZS5DYW5kaWRhdGUSKwoOdG90YWxfaW5jbF92YXQYBSADKAsyEy5z",
+            "c24udHlwZS5DYW5kaWRhdGUSKwoOdG90YWxfZXhjbF92YXQYBiADKAsyEy5z",
+            "c24udHlwZS5DYW5kaWRhdGUSMgoVc3VwcGxpZXJfY29ycG9yYXRlX2lkGAcg",
+            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjIKFXN1cHBsaWVyX2NvdW50cnlf",
+            "Y29kZRgIIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIqCg1kb2N1bWVudF90",
+            "eXBlGAkgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEisKDnBheW1lbnRfbWV0",
+            "aG9kGAogAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEi8KEmNyZWRpdF9jYXJk",
+            "X251bWJlchgLIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIrCg5pbnZvaWNl",
+            "X251bWJlchgMIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRItChBvY3JfbGlu",
+            "ZV9ka190eXBlGA0gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjMKFm9jcl9s",
+            "aW5lX2RrX3BheW1lbnRfaWQYDiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUS",
+            "NAoXb2NyX2xpbmVfZGtfY3JlZGl0b3JfaWQYDyADKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGUSMwoWb2NyX2xpbmVfc2VfcGF5bWVudF9pZBgQIAMoCzITLnNz",
+            "bi50eXBlLkNhbmRpZGF0ZRI9CiBvY3JfbGluZV9zZV9iYW5rZ2lyb19jcmVk",
+            "aXRvcl9pZBgRIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRI9CiBvY3JfbGlu",
+            "ZV9zZV9wbHVzZ2lyb19jcmVkaXRvcl9pZBgSIAMoCzITLnNzbi50eXBlLkNh",
+            "bmRpZGF0ZRIzChZvY3JfbGluZV9ub19wYXltZW50X2lkGBMgAygLMhMuc3Nu",
+            "LnR5cGUuQ2FuZGlkYXRlEjMKFm9jcl9saW5lX2ZpX3BheW1lbnRfaWQYFCAD",
+            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGUSMwoWb2NyX2xpbmVfbmxfcGF5bWVu",
+            "dF9pZBgVIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIhCgRpYmFuGBYgAygL",
+            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlEiYKBWxpbmVzGBcgAygLMhcuc3NuLnR5",
+            "cGUuTGluZUNhbmRpZGF0ZRIwChNiYW5rX2FjY291bnRfbnVtYmVyGBggAygL",
+            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjUKGGJhbmtfcmVnaXN0cmF0aW9uX251",
+            "bWJlchgZIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIgCgNiaWMYGiADKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGUSLAoPZG9jdW1lbnRfbnVtYmVyGBsgAygL",
+            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlEioKDWRvY3VtZW50X2RhdGUYHCADKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGUSKQoMb3JkZXJfbnVtYmVyGB0gAygLMhMu",
+            "c3NuLnR5cGUuQ2FuZGlkYXRlEioKDXN1cHBsaWVyX25hbWUYHiADKAsyEy5z",
+            "c24udHlwZS5DYW5kaWRhdGUSMAoTc3VwcGxpZXJfdmF0X251bWJlchgfIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZRI5ChxzdXBwbGllcl9vcmdhbmlzYXRp",
+            "b25fbnVtYmVyGCAgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEi0KEHN1cHBs",
+            "aWVyX2FkZHJlc3MYISADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSMgoVY3Jl",
+            "ZGl0X2NhcmRfbGFzdF9mb3VyGCIgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
+            "IpcBChhGZWF0dXJlR2VuUHJlZGljdFJlcXVlc3QSQAoTZmVhdHVyZV9nZW5f",
+            "cmVxdWVzdBgBIAEoCzIjLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJl",
+            "cXVlc3QSOQoPcHJlZGljdF9yZXF1ZXN0GAIgASgLMiAuc3NuLm1sc2Vydmlj",
+            "ZS52Mi5QcmVkaWN0UmVxdWVzdDKYAgoJTWxTZXJ2aWNlElcKCkZlYXR1cmVH",
+            "ZW4SIy5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5SZXF1ZXN0GiQuc3Nu",
+            "Lm1sc2VydmljZS52Mi5GZWF0dXJlR2VuUmVzcG9uc2USTgoHUHJlZGljdBIg",
+            "LnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlcXVlc3QaIS5zc24ubWxzZXJ2",
+            "aWNlLnYyLlByZWRpY3RSZXNwb25zZRJiChFGZWF0dXJlR2VuUHJlZGljdBIq",
+            "LnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblByZWRpY3RSZXF1ZXN0GiEu",
+            "c3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2VCUUIPTWxTZXJ2aWNl",
+            "UHJvdG9zWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9z",
+            "c24vbWxzZXJ2aWNlL3YyO21sc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Tensorflow.ExampleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "TruthLabels", "TextAnnotation", "Id" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "TruthLabels", "TextAnnotation", "Id" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenResponse), global::Ssn.Mlservice.V2.FeatureGenResponse.Parser, new[]{ "Example" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictRequest), global::Ssn.Mlservice.V2.PredictRequest.Parser, new[]{ "Example", "TopNMostConfident" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenPredictRequest), global::Ssn.Mlservice.V2.FeatureGenPredictRequest.Parser, new[]{ "FeatureGenRequest", "PredictRequest" }, null, null, null, null)
           }));
     }
@@ -347,6 +365,17 @@ namespace Ssn.Mlservice.V2 {
           supplierCountryCode_ = other.supplierCountryCode_;
           invoiceNumber_ = other.invoiceNumber_;
           iban_ = other.iban_;
+          bankAccountNumber_ = other.bankAccountNumber_;
+          bankRegistrationNumber_ = other.bankRegistrationNumber_;
+          supplierName_ = other.supplierName_;
+          bic_ = other.bic_;
+          documentNumber_ = other.documentNumber_;
+          documentDate_ = other.documentDate_ != null ? other.documentDate_.Clone() : null;
+          orderNumber_ = other.orderNumber_;
+          supplierVatNumber_ = other.supplierVatNumber_;
+          supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+          supplierAddress_ = other.supplierAddress_;
+          creditCardLastFour_ = other.creditCardLastFour_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -435,6 +464,9 @@ namespace Ssn.Mlservice.V2 {
         /// <summary>Field number for the "credit_card_number" field.</summary>
         public const int CreditCardNumberFieldNumber = 8;
         private string creditCardNumber_ = "";
+        /// <summary>
+        /// NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string CreditCardNumber {
           get { return creditCardNumber_; }
@@ -597,6 +629,127 @@ namespace Ssn.Mlservice.V2 {
           }
         }
 
+        /// <summary>Field number for the "bank_account_number" field.</summary>
+        public const int BankAccountNumberFieldNumber = 23;
+        private string bankAccountNumber_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string BankAccountNumber {
+          get { return bankAccountNumber_; }
+          set {
+            bankAccountNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "bank_registration_number" field.</summary>
+        public const int BankRegistrationNumberFieldNumber = 24;
+        private string bankRegistrationNumber_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string BankRegistrationNumber {
+          get { return bankRegistrationNumber_; }
+          set {
+            bankRegistrationNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "supplier_name" field.</summary>
+        public const int SupplierNameFieldNumber = 25;
+        private string supplierName_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string SupplierName {
+          get { return supplierName_; }
+          set {
+            supplierName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "bic" field.</summary>
+        public const int BicFieldNumber = 26;
+        private string bic_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Bic {
+          get { return bic_; }
+          set {
+            bic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "document_number" field.</summary>
+        public const int DocumentNumberFieldNumber = 27;
+        private string documentNumber_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DocumentNumber {
+          get { return documentNumber_; }
+          set {
+            documentNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "document_date" field.</summary>
+        public const int DocumentDateFieldNumber = 28;
+        private global::Google.Type.Date documentDate_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Type.Date DocumentDate {
+          get { return documentDate_; }
+          set {
+            documentDate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "order_number" field.</summary>
+        public const int OrderNumberFieldNumber = 29;
+        private string orderNumber_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string OrderNumber {
+          get { return orderNumber_; }
+          set {
+            orderNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "supplier_vat_number" field.</summary>
+        public const int SupplierVatNumberFieldNumber = 30;
+        private string supplierVatNumber_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string SupplierVatNumber {
+          get { return supplierVatNumber_; }
+          set {
+            supplierVatNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "supplier_organisation_number" field.</summary>
+        public const int SupplierOrganisationNumberFieldNumber = 31;
+        private string supplierOrganisationNumber_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string SupplierOrganisationNumber {
+          get { return supplierOrganisationNumber_; }
+          set {
+            supplierOrganisationNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "supplier_address" field.</summary>
+        public const int SupplierAddressFieldNumber = 32;
+        private string supplierAddress_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string SupplierAddress {
+          get { return supplierAddress_; }
+          set {
+            supplierAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "credit_card_last_four" field.</summary>
+        public const int CreditCardLastFourFieldNumber = 33;
+        private string creditCardLastFour_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string CreditCardLastFour {
+          get { return creditCardLastFour_; }
+          set {
+            creditCardLastFour_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as TruthLabels);
@@ -632,6 +785,17 @@ namespace Ssn.Mlservice.V2 {
           if (SupplierCountryCode != other.SupplierCountryCode) return false;
           if (InvoiceNumber != other.InvoiceNumber) return false;
           if (Iban != other.Iban) return false;
+          if (BankAccountNumber != other.BankAccountNumber) return false;
+          if (BankRegistrationNumber != other.BankRegistrationNumber) return false;
+          if (SupplierName != other.SupplierName) return false;
+          if (Bic != other.Bic) return false;
+          if (DocumentNumber != other.DocumentNumber) return false;
+          if (!object.Equals(DocumentDate, other.DocumentDate)) return false;
+          if (OrderNumber != other.OrderNumber) return false;
+          if (SupplierVatNumber != other.SupplierVatNumber) return false;
+          if (SupplierOrganisationNumber != other.SupplierOrganisationNumber) return false;
+          if (SupplierAddress != other.SupplierAddress) return false;
+          if (CreditCardLastFour != other.CreditCardLastFour) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -660,6 +824,17 @@ namespace Ssn.Mlservice.V2 {
           if (SupplierCountryCode.Length != 0) hash ^= SupplierCountryCode.GetHashCode();
           if (InvoiceNumber.Length != 0) hash ^= InvoiceNumber.GetHashCode();
           if (Iban.Length != 0) hash ^= Iban.GetHashCode();
+          if (BankAccountNumber.Length != 0) hash ^= BankAccountNumber.GetHashCode();
+          if (BankRegistrationNumber.Length != 0) hash ^= BankRegistrationNumber.GetHashCode();
+          if (SupplierName.Length != 0) hash ^= SupplierName.GetHashCode();
+          if (Bic.Length != 0) hash ^= Bic.GetHashCode();
+          if (DocumentNumber.Length != 0) hash ^= DocumentNumber.GetHashCode();
+          if (documentDate_ != null) hash ^= DocumentDate.GetHashCode();
+          if (OrderNumber.Length != 0) hash ^= OrderNumber.GetHashCode();
+          if (SupplierVatNumber.Length != 0) hash ^= SupplierVatNumber.GetHashCode();
+          if (SupplierOrganisationNumber.Length != 0) hash ^= SupplierOrganisationNumber.GetHashCode();
+          if (SupplierAddress.Length != 0) hash ^= SupplierAddress.GetHashCode();
+          if (CreditCardLastFour.Length != 0) hash ^= CreditCardLastFour.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -761,6 +936,50 @@ namespace Ssn.Mlservice.V2 {
             output.WriteRawTag(178, 1);
             output.WriteString(Iban);
           }
+          if (BankAccountNumber.Length != 0) {
+            output.WriteRawTag(186, 1);
+            output.WriteString(BankAccountNumber);
+          }
+          if (BankRegistrationNumber.Length != 0) {
+            output.WriteRawTag(194, 1);
+            output.WriteString(BankRegistrationNumber);
+          }
+          if (SupplierName.Length != 0) {
+            output.WriteRawTag(202, 1);
+            output.WriteString(SupplierName);
+          }
+          if (Bic.Length != 0) {
+            output.WriteRawTag(210, 1);
+            output.WriteString(Bic);
+          }
+          if (DocumentNumber.Length != 0) {
+            output.WriteRawTag(218, 1);
+            output.WriteString(DocumentNumber);
+          }
+          if (documentDate_ != null) {
+            output.WriteRawTag(226, 1);
+            output.WriteMessage(DocumentDate);
+          }
+          if (OrderNumber.Length != 0) {
+            output.WriteRawTag(234, 1);
+            output.WriteString(OrderNumber);
+          }
+          if (SupplierVatNumber.Length != 0) {
+            output.WriteRawTag(242, 1);
+            output.WriteString(SupplierVatNumber);
+          }
+          if (SupplierOrganisationNumber.Length != 0) {
+            output.WriteRawTag(250, 1);
+            output.WriteString(SupplierOrganisationNumber);
+          }
+          if (SupplierAddress.Length != 0) {
+            output.WriteRawTag(130, 2);
+            output.WriteString(SupplierAddress);
+          }
+          if (CreditCardLastFour.Length != 0) {
+            output.WriteRawTag(138, 2);
+            output.WriteString(CreditCardLastFour);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -834,6 +1053,39 @@ namespace Ssn.Mlservice.V2 {
           }
           if (Iban.Length != 0) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(Iban);
+          }
+          if (BankAccountNumber.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(BankAccountNumber);
+          }
+          if (BankRegistrationNumber.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(BankRegistrationNumber);
+          }
+          if (SupplierName.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(SupplierName);
+          }
+          if (Bic.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(Bic);
+          }
+          if (DocumentNumber.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(DocumentNumber);
+          }
+          if (documentDate_ != null) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(DocumentDate);
+          }
+          if (OrderNumber.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(OrderNumber);
+          }
+          if (SupplierVatNumber.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(SupplierVatNumber);
+          }
+          if (SupplierOrganisationNumber.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(SupplierOrganisationNumber);
+          }
+          if (SupplierAddress.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(SupplierAddress);
+          }
+          if (CreditCardLastFour.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(CreditCardLastFour);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -917,6 +1169,42 @@ namespace Ssn.Mlservice.V2 {
           }
           if (other.Iban.Length != 0) {
             Iban = other.Iban;
+          }
+          if (other.BankAccountNumber.Length != 0) {
+            BankAccountNumber = other.BankAccountNumber;
+          }
+          if (other.BankRegistrationNumber.Length != 0) {
+            BankRegistrationNumber = other.BankRegistrationNumber;
+          }
+          if (other.SupplierName.Length != 0) {
+            SupplierName = other.SupplierName;
+          }
+          if (other.Bic.Length != 0) {
+            Bic = other.Bic;
+          }
+          if (other.DocumentNumber.Length != 0) {
+            DocumentNumber = other.DocumentNumber;
+          }
+          if (other.documentDate_ != null) {
+            if (documentDate_ == null) {
+              DocumentDate = new global::Google.Type.Date();
+            }
+            DocumentDate.MergeFrom(other.DocumentDate);
+          }
+          if (other.OrderNumber.Length != 0) {
+            OrderNumber = other.OrderNumber;
+          }
+          if (other.SupplierVatNumber.Length != 0) {
+            SupplierVatNumber = other.SupplierVatNumber;
+          }
+          if (other.SupplierOrganisationNumber.Length != 0) {
+            SupplierOrganisationNumber = other.SupplierOrganisationNumber;
+          }
+          if (other.SupplierAddress.Length != 0) {
+            SupplierAddress = other.SupplierAddress;
+          }
+          if (other.CreditCardLastFour.Length != 0) {
+            CreditCardLastFour = other.CreditCardLastFour;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1021,6 +1309,53 @@ namespace Ssn.Mlservice.V2 {
               }
               case 178: {
                 Iban = input.ReadString();
+                break;
+              }
+              case 186: {
+                BankAccountNumber = input.ReadString();
+                break;
+              }
+              case 194: {
+                BankRegistrationNumber = input.ReadString();
+                break;
+              }
+              case 202: {
+                SupplierName = input.ReadString();
+                break;
+              }
+              case 210: {
+                Bic = input.ReadString();
+                break;
+              }
+              case 218: {
+                DocumentNumber = input.ReadString();
+                break;
+              }
+              case 226: {
+                if (documentDate_ == null) {
+                  DocumentDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(DocumentDate);
+                break;
+              }
+              case 234: {
+                OrderNumber = input.ReadString();
+                break;
+              }
+              case 242: {
+                SupplierVatNumber = input.ReadString();
+                break;
+              }
+              case 250: {
+                SupplierOrganisationNumber = input.ReadString();
+                break;
+              }
+              case 258: {
+                SupplierAddress = input.ReadString();
+                break;
+              }
+              case 266: {
+                CreditCardLastFour = input.ReadString();
                 break;
               }
             }
@@ -1383,6 +1718,17 @@ namespace Ssn.Mlservice.V2 {
       ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_.Clone();
       iban_ = other.iban_.Clone();
       lines_ = other.lines_.Clone();
+      bankAccountNumber_ = other.bankAccountNumber_.Clone();
+      bankRegistrationNumber_ = other.bankRegistrationNumber_.Clone();
+      bic_ = other.bic_.Clone();
+      documentNumber_ = other.documentNumber_.Clone();
+      documentDate_ = other.documentDate_.Clone();
+      orderNumber_ = other.orderNumber_.Clone();
+      supplierName_ = other.supplierName_.Clone();
+      supplierVatNumber_ = other.supplierVatNumber_.Clone();
+      supplierOrganisationNumber_ = other.supplierOrganisationNumber_.Clone();
+      supplierAddress_ = other.supplierAddress_.Clone();
+      creditCardLastFour_ = other.creditCardLastFour_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1496,6 +1842,9 @@ namespace Ssn.Mlservice.V2 {
     private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_creditCardNumber_codec
         = pb::FieldCodec.ForMessage(90, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> creditCardNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Ssn.Type.Candidate> CreditCardNumber {
       get { return creditCardNumber_; }
@@ -1621,6 +1970,116 @@ namespace Ssn.Mlservice.V2 {
       get { return lines_; }
     }
 
+    /// <summary>Field number for the "bank_account_number" field.</summary>
+    public const int BankAccountNumberFieldNumber = 24;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_bankAccountNumber_codec
+        = pb::FieldCodec.ForMessage(194, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> bankAccountNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> BankAccountNumber {
+      get { return bankAccountNumber_; }
+    }
+
+    /// <summary>Field number for the "bank_registration_number" field.</summary>
+    public const int BankRegistrationNumberFieldNumber = 25;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_bankRegistrationNumber_codec
+        = pb::FieldCodec.ForMessage(202, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> bankRegistrationNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> BankRegistrationNumber {
+      get { return bankRegistrationNumber_; }
+    }
+
+    /// <summary>Field number for the "bic" field.</summary>
+    public const int BicFieldNumber = 26;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_bic_codec
+        = pb::FieldCodec.ForMessage(210, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> bic_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Bic {
+      get { return bic_; }
+    }
+
+    /// <summary>Field number for the "document_number" field.</summary>
+    public const int DocumentNumberFieldNumber = 27;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_documentNumber_codec
+        = pb::FieldCodec.ForMessage(218, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> documentNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> DocumentNumber {
+      get { return documentNumber_; }
+    }
+
+    /// <summary>Field number for the "document_date" field.</summary>
+    public const int DocumentDateFieldNumber = 28;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_documentDate_codec
+        = pb::FieldCodec.ForMessage(226, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> documentDate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> DocumentDate {
+      get { return documentDate_; }
+    }
+
+    /// <summary>Field number for the "order_number" field.</summary>
+    public const int OrderNumberFieldNumber = 29;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_orderNumber_codec
+        = pb::FieldCodec.ForMessage(234, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> orderNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> OrderNumber {
+      get { return orderNumber_; }
+    }
+
+    /// <summary>Field number for the "supplier_name" field.</summary>
+    public const int SupplierNameFieldNumber = 30;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_supplierName_codec
+        = pb::FieldCodec.ForMessage(242, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierName_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> SupplierName {
+      get { return supplierName_; }
+    }
+
+    /// <summary>Field number for the "supplier_vat_number" field.</summary>
+    public const int SupplierVatNumberFieldNumber = 31;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_supplierVatNumber_codec
+        = pb::FieldCodec.ForMessage(250, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierVatNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> SupplierVatNumber {
+      get { return supplierVatNumber_; }
+    }
+
+    /// <summary>Field number for the "supplier_organisation_number" field.</summary>
+    public const int SupplierOrganisationNumberFieldNumber = 32;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_supplierOrganisationNumber_codec
+        = pb::FieldCodec.ForMessage(258, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierOrganisationNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> SupplierOrganisationNumber {
+      get { return supplierOrganisationNumber_; }
+    }
+
+    /// <summary>Field number for the "supplier_address" field.</summary>
+    public const int SupplierAddressFieldNumber = 33;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_supplierAddress_codec
+        = pb::FieldCodec.ForMessage(266, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierAddress_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> SupplierAddress {
+      get { return supplierAddress_; }
+    }
+
+    /// <summary>Field number for the "credit_card_last_four" field.</summary>
+    public const int CreditCardLastFourFieldNumber = 34;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_creditCardLastFour_codec
+        = pb::FieldCodec.ForMessage(274, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> creditCardLastFour_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> CreditCardLastFour {
+      get { return creditCardLastFour_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PredictResponse);
@@ -1657,6 +2116,17 @@ namespace Ssn.Mlservice.V2 {
       if(!ocrLineNlPaymentId_.Equals(other.ocrLineNlPaymentId_)) return false;
       if(!iban_.Equals(other.iban_)) return false;
       if(!lines_.Equals(other.lines_)) return false;
+      if(!bankAccountNumber_.Equals(other.bankAccountNumber_)) return false;
+      if(!bankRegistrationNumber_.Equals(other.bankRegistrationNumber_)) return false;
+      if(!bic_.Equals(other.bic_)) return false;
+      if(!documentNumber_.Equals(other.documentNumber_)) return false;
+      if(!documentDate_.Equals(other.documentDate_)) return false;
+      if(!orderNumber_.Equals(other.orderNumber_)) return false;
+      if(!supplierName_.Equals(other.supplierName_)) return false;
+      if(!supplierVatNumber_.Equals(other.supplierVatNumber_)) return false;
+      if(!supplierOrganisationNumber_.Equals(other.supplierOrganisationNumber_)) return false;
+      if(!supplierAddress_.Equals(other.supplierAddress_)) return false;
+      if(!creditCardLastFour_.Equals(other.creditCardLastFour_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1686,6 +2156,17 @@ namespace Ssn.Mlservice.V2 {
       hash ^= ocrLineNlPaymentId_.GetHashCode();
       hash ^= iban_.GetHashCode();
       hash ^= lines_.GetHashCode();
+      hash ^= bankAccountNumber_.GetHashCode();
+      hash ^= bankRegistrationNumber_.GetHashCode();
+      hash ^= bic_.GetHashCode();
+      hash ^= documentNumber_.GetHashCode();
+      hash ^= documentDate_.GetHashCode();
+      hash ^= orderNumber_.GetHashCode();
+      hash ^= supplierName_.GetHashCode();
+      hash ^= supplierVatNumber_.GetHashCode();
+      hash ^= supplierOrganisationNumber_.GetHashCode();
+      hash ^= supplierAddress_.GetHashCode();
+      hash ^= creditCardLastFour_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1722,6 +2203,17 @@ namespace Ssn.Mlservice.V2 {
       ocrLineNlPaymentId_.WriteTo(output, _repeated_ocrLineNlPaymentId_codec);
       iban_.WriteTo(output, _repeated_iban_codec);
       lines_.WriteTo(output, _repeated_lines_codec);
+      bankAccountNumber_.WriteTo(output, _repeated_bankAccountNumber_codec);
+      bankRegistrationNumber_.WriteTo(output, _repeated_bankRegistrationNumber_codec);
+      bic_.WriteTo(output, _repeated_bic_codec);
+      documentNumber_.WriteTo(output, _repeated_documentNumber_codec);
+      documentDate_.WriteTo(output, _repeated_documentDate_codec);
+      orderNumber_.WriteTo(output, _repeated_orderNumber_codec);
+      supplierName_.WriteTo(output, _repeated_supplierName_codec);
+      supplierVatNumber_.WriteTo(output, _repeated_supplierVatNumber_codec);
+      supplierOrganisationNumber_.WriteTo(output, _repeated_supplierOrganisationNumber_codec);
+      supplierAddress_.WriteTo(output, _repeated_supplierAddress_codec);
+      creditCardLastFour_.WriteTo(output, _repeated_creditCardLastFour_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1753,6 +2245,17 @@ namespace Ssn.Mlservice.V2 {
       size += ocrLineNlPaymentId_.CalculateSize(_repeated_ocrLineNlPaymentId_codec);
       size += iban_.CalculateSize(_repeated_iban_codec);
       size += lines_.CalculateSize(_repeated_lines_codec);
+      size += bankAccountNumber_.CalculateSize(_repeated_bankAccountNumber_codec);
+      size += bankRegistrationNumber_.CalculateSize(_repeated_bankRegistrationNumber_codec);
+      size += bic_.CalculateSize(_repeated_bic_codec);
+      size += documentNumber_.CalculateSize(_repeated_documentNumber_codec);
+      size += documentDate_.CalculateSize(_repeated_documentDate_codec);
+      size += orderNumber_.CalculateSize(_repeated_orderNumber_codec);
+      size += supplierName_.CalculateSize(_repeated_supplierName_codec);
+      size += supplierVatNumber_.CalculateSize(_repeated_supplierVatNumber_codec);
+      size += supplierOrganisationNumber_.CalculateSize(_repeated_supplierOrganisationNumber_codec);
+      size += supplierAddress_.CalculateSize(_repeated_supplierAddress_codec);
+      size += creditCardLastFour_.CalculateSize(_repeated_creditCardLastFour_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1787,6 +2290,17 @@ namespace Ssn.Mlservice.V2 {
       ocrLineNlPaymentId_.Add(other.ocrLineNlPaymentId_);
       iban_.Add(other.iban_);
       lines_.Add(other.lines_);
+      bankAccountNumber_.Add(other.bankAccountNumber_);
+      bankRegistrationNumber_.Add(other.bankRegistrationNumber_);
+      bic_.Add(other.bic_);
+      documentNumber_.Add(other.documentNumber_);
+      documentDate_.Add(other.documentDate_);
+      orderNumber_.Add(other.orderNumber_);
+      supplierName_.Add(other.supplierName_);
+      supplierVatNumber_.Add(other.supplierVatNumber_);
+      supplierOrganisationNumber_.Add(other.supplierOrganisationNumber_);
+      supplierAddress_.Add(other.supplierAddress_);
+      creditCardLastFour_.Add(other.creditCardLastFour_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1888,6 +2402,50 @@ namespace Ssn.Mlservice.V2 {
           }
           case 186: {
             lines_.AddEntriesFrom(input, _repeated_lines_codec);
+            break;
+          }
+          case 194: {
+            bankAccountNumber_.AddEntriesFrom(input, _repeated_bankAccountNumber_codec);
+            break;
+          }
+          case 202: {
+            bankRegistrationNumber_.AddEntriesFrom(input, _repeated_bankRegistrationNumber_codec);
+            break;
+          }
+          case 210: {
+            bic_.AddEntriesFrom(input, _repeated_bic_codec);
+            break;
+          }
+          case 218: {
+            documentNumber_.AddEntriesFrom(input, _repeated_documentNumber_codec);
+            break;
+          }
+          case 226: {
+            documentDate_.AddEntriesFrom(input, _repeated_documentDate_codec);
+            break;
+          }
+          case 234: {
+            orderNumber_.AddEntriesFrom(input, _repeated_orderNumber_codec);
+            break;
+          }
+          case 242: {
+            supplierName_.AddEntriesFrom(input, _repeated_supplierName_codec);
+            break;
+          }
+          case 250: {
+            supplierVatNumber_.AddEntriesFrom(input, _repeated_supplierVatNumber_codec);
+            break;
+          }
+          case 258: {
+            supplierOrganisationNumber_.AddEntriesFrom(input, _repeated_supplierOrganisationNumber_codec);
+            break;
+          }
+          case 266: {
+            supplierAddress_.AddEntriesFrom(input, _repeated_supplierAddress_codec);
+            break;
+          }
+          case 274: {
+            creditCardLastFour_.AddEntriesFrom(input, _repeated_creditCardLastFour_codec);
             break;
           }
         }
