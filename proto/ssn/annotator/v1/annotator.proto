@@ -49,7 +49,8 @@ message Feature {
     TOTAL_INCL_VAT = 6;
     // Run total excl vat detection
     TOTAL_EXCL_VAT = 7;
-    // Run supplier corporate id detection
+    // [DEPRECATED] Run supplier corporate id detection. 
+    // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
     SUPPLIER_CORPORATE_ID = 8;
     // Run country code detection
     SUPPLIER_COUNTRY_CODE = 9;
@@ -59,7 +60,7 @@ message Feature {
     PAYMENT_METHOD = 11;
     // Run credit card number detection
     CREDIT_CARD_LAST_FOUR = 12;
-    // Run invoice number detection
+    // [DEPRECATED] Run invoice number detection
     INVOICE_NUMBER = 13;
     // Run danish ocr line detection, for the type
     OCR_LINE_DK_TYPE = 14;
@@ -151,6 +152,8 @@ message DocumentAnnotatorResponse {
   // A string that parses as a two-decimal number
   // Example: "10.0" or "11.11"
   repeated ssn.type.Candidate total_excl_vat = 6;
+  // [DEPRECATED]
+  // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
   // supplierCorporateId
   // The company VAT number
   // Example: "123456789B01" (for Dutch companies)
