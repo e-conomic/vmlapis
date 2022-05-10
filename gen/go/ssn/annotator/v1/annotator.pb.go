@@ -42,7 +42,8 @@ const (
 	Feature_TOTAL_INCL_VAT Feature_Type = 6
 	// Run total excl vat detection
 	Feature_TOTAL_EXCL_VAT Feature_Type = 7
-	// Run supplier corporate id detection
+	// [DEPRECATED] Run supplier corporate id detection.
+	// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
 	Feature_SUPPLIER_CORPORATE_ID Feature_Type = 8
 	// Run country code detection
 	Feature_SUPPLIER_COUNTRY_CODE Feature_Type = 9
@@ -52,7 +53,7 @@ const (
 	Feature_PAYMENT_METHOD Feature_Type = 11
 	// Run credit card number detection
 	Feature_CREDIT_CARD_LAST_FOUR Feature_Type = 12
-	// Run invoice number detection
+	// [DEPRECATED] Run invoice number detection
 	Feature_INVOICE_NUMBER Feature_Type = 13
 	// Run danish ocr line detection, for the type
 	Feature_OCR_LINE_DK_TYPE Feature_Type = 14
@@ -386,6 +387,8 @@ type DocumentAnnotatorResponse struct {
 	// A string that parses as a two-decimal number
 	// Example: "10.0" or "11.11"
 	TotalExclVat []*_type.Candidate `protobuf:"bytes,6,rep,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
+	// [DEPRECATED]
+	// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
 	// supplierCorporateId
 	// The company VAT number
 	// Example: "123456789B01" (for Dutch companies)

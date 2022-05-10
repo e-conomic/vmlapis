@@ -346,7 +346,8 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("TOTAL_EXCL_VAT")] TotalExclVat = 7,
         /// <summary>
-        /// Run supplier corporate id detection
+        /// [DEPRECATED] Run supplier corporate id detection.
+        /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
         /// </summary>
         [pbr::OriginalName("SUPPLIER_CORPORATE_ID")] SupplierCorporateId = 8,
         /// <summary>
@@ -366,7 +367,7 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("CREDIT_CARD_LAST_FOUR")] CreditCardLastFour = 12,
         /// <summary>
-        /// Run invoice number detection
+        /// [DEPRECATED] Run invoice number detection
         /// </summary>
         [pbr::OriginalName("INVOICE_NUMBER")] InvoiceNumber = 13,
         /// <summary>
@@ -857,6 +858,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(58, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierCorporateId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
+    /// [DEPRECATED]
+    /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
     /// supplierCorporateId
     /// The company VAT number
     /// Example: "123456789B01" (for Dutch companies)

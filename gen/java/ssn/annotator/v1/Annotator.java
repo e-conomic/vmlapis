@@ -234,7 +234,8 @@ public final class Annotator {
       TOTAL_EXCL_VAT(7),
       /**
        * <pre>
-       * Run supplier corporate id detection
+       * [DEPRECATED] Run supplier corporate id detection.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * </pre>
        *
        * <code>SUPPLIER_CORPORATE_ID = 8;</code>
@@ -274,7 +275,7 @@ public final class Annotator {
       CREDIT_CARD_LAST_FOUR(12),
       /**
        * <pre>
-       * Run invoice number detection
+       * [DEPRECATED] Run invoice number detection
        * </pre>
        *
        * <code>INVOICE_NUMBER = 13;</code>
@@ -533,7 +534,8 @@ public final class Annotator {
       public static final int TOTAL_EXCL_VAT_VALUE = 7;
       /**
        * <pre>
-       * Run supplier corporate id detection
+       * [DEPRECATED] Run supplier corporate id detection.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * </pre>
        *
        * <code>SUPPLIER_CORPORATE_ID = 8;</code>
@@ -573,7 +575,7 @@ public final class Annotator {
       public static final int CREDIT_CARD_LAST_FOUR_VALUE = 12;
       /**
        * <pre>
-       * Run invoice number detection
+       * [DEPRECATED] Run invoice number detection
        * </pre>
        *
        * <code>INVOICE_NUMBER = 13;</code>
@@ -3399,6 +3401,8 @@ public final class Annotator {
 
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3414,6 +3418,8 @@ public final class Annotator {
         getSupplierCorporateIdList();
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3428,6 +3434,8 @@ public final class Annotator {
     ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index);
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3442,6 +3450,8 @@ public final class Annotator {
     int getSupplierCorporateIdCount();
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3457,6 +3467,8 @@ public final class Annotator {
         getSupplierCorporateIdOrBuilderList();
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5750,6 +5762,8 @@ public final class Annotator {
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCorporateId_;
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5767,6 +5781,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5785,6 +5801,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5802,6 +5820,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5819,6 +5839,8 @@ public final class Annotator {
     }
     /**
      * <pre>
+     * [DEPRECATED]
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -11941,6 +11963,8 @@ public final class Annotator {
 
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -11961,6 +11985,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -11981,6 +12007,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12001,6 +12029,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12028,6 +12058,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12052,6 +12084,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12078,6 +12112,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12105,6 +12141,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12129,6 +12167,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12153,6 +12193,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12178,6 +12220,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12201,6 +12245,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12224,6 +12270,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12241,6 +12289,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12261,6 +12311,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12282,6 +12334,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12299,6 +12353,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12317,6 +12373,8 @@ public final class Annotator {
       }
       /**
        * <pre>
+       * [DEPRECATED]
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)

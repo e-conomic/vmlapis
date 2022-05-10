@@ -247,11 +247,19 @@ public final class MlServiceProtos {
           getCurrencyBytes();
 
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>string credit_card_number = 8;</code>
        * @return The creditCardNumber.
        */
       java.lang.String getCreditCardNumber();
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>string credit_card_number = 8;</code>
        * @return The bytes for creditCardNumber.
        */
@@ -548,6 +556,18 @@ public final class MlServiceProtos {
        */
       com.google.protobuf.ByteString
           getSupplierAddressBytes();
+
+      /**
+       * <code>string credit_card_last_four = 33;</code>
+       * @return The creditCardLastFour.
+       */
+      java.lang.String getCreditCardLastFour();
+      /**
+       * <code>string credit_card_last_four = 33;</code>
+       * @return The bytes for creditCardLastFour.
+       */
+      com.google.protobuf.ByteString
+          getCreditCardLastFourBytes();
     }
     /**
      * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
@@ -588,6 +608,7 @@ public final class MlServiceProtos {
         supplierVatNumber_ = "";
         supplierOrganisationNumber_ = "";
         supplierAddress_ = "";
+        creditCardLastFour_ = "";
       }
 
       @java.lang.Override
@@ -830,6 +851,12 @@ public final class MlServiceProtos {
                 supplierAddress_ = s;
                 break;
               }
+              case 266: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                creditCardLastFour_ = s;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -1026,6 +1053,10 @@ public final class MlServiceProtos {
       public static final int CREDIT_CARD_NUMBER_FIELD_NUMBER = 8;
       private volatile java.lang.Object creditCardNumber_;
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>string credit_card_number = 8;</code>
        * @return The creditCardNumber.
        */
@@ -1043,6 +1074,10 @@ public final class MlServiceProtos {
         }
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>string credit_card_number = 8;</code>
        * @return The bytes for creditCardNumber.
        */
@@ -1961,6 +1996,44 @@ public final class MlServiceProtos {
         }
       }
 
+      public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 33;
+      private volatile java.lang.Object creditCardLastFour_;
+      /**
+       * <code>string credit_card_last_four = 33;</code>
+       * @return The creditCardLastFour.
+       */
+      @java.lang.Override
+      public java.lang.String getCreditCardLastFour() {
+        java.lang.Object ref = creditCardLastFour_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creditCardLastFour_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string credit_card_last_four = 33;</code>
+       * @return The bytes for creditCardLastFour.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCreditCardLastFourBytes() {
+        java.lang.Object ref = creditCardLastFour_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creditCardLastFour_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -2070,6 +2143,9 @@ public final class MlServiceProtos {
         }
         if (!getSupplierAddressBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 32, supplierAddress_);
+        }
+        if (!getCreditCardLastFourBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 33, creditCardLastFour_);
         }
         unknownFields.writeTo(output);
       }
@@ -2182,6 +2258,9 @@ public final class MlServiceProtos {
         if (!getSupplierAddressBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, supplierAddress_);
         }
+        if (!getCreditCardLastFourBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, creditCardLastFour_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -2273,6 +2352,8 @@ public final class MlServiceProtos {
             .equals(other.getSupplierOrganisationNumber())) return false;
         if (!getSupplierAddress()
             .equals(other.getSupplierAddress())) return false;
+        if (!getCreditCardLastFour()
+            .equals(other.getCreditCardLastFour())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -2357,6 +2438,8 @@ public final class MlServiceProtos {
         hash = (53 * hash) + getSupplierOrganisationNumber().hashCode();
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddress().hashCode();
+        hash = (37 * hash) + CREDIT_CARD_LAST_FOUR_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditCardLastFour().hashCode();
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -2566,6 +2649,8 @@ public final class MlServiceProtos {
 
           supplierAddress_ = "";
 
+          creditCardLastFour_ = "";
+
           return this;
         }
 
@@ -2636,6 +2721,7 @@ public final class MlServiceProtos {
           result.supplierVatNumber_ = supplierVatNumber_;
           result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
           result.supplierAddress_ = supplierAddress_;
+          result.creditCardLastFour_ = creditCardLastFour_;
           onBuilt();
           return result;
         }
@@ -2804,6 +2890,10 @@ public final class MlServiceProtos {
           }
           if (!other.getSupplierAddress().isEmpty()) {
             supplierAddress_ = other.supplierAddress_;
+            onChanged();
+          }
+          if (!other.getCreditCardLastFour().isEmpty()) {
+            creditCardLastFour_ = other.creditCardLastFour_;
             onChanged();
           }
           this.mergeUnknownFields(other.unknownFields);
@@ -3320,6 +3410,10 @@ public final class MlServiceProtos {
 
         private java.lang.Object creditCardNumber_ = "";
         /**
+         * <pre>
+         * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+         * </pre>
+         *
          * <code>string credit_card_number = 8;</code>
          * @return The creditCardNumber.
          */
@@ -3336,6 +3430,10 @@ public final class MlServiceProtos {
           }
         }
         /**
+         * <pre>
+         * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+         * </pre>
+         *
          * <code>string credit_card_number = 8;</code>
          * @return The bytes for creditCardNumber.
          */
@@ -3353,6 +3451,10 @@ public final class MlServiceProtos {
           }
         }
         /**
+         * <pre>
+         * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+         * </pre>
+         *
          * <code>string credit_card_number = 8;</code>
          * @param value The creditCardNumber to set.
          * @return This builder for chaining.
@@ -3368,6 +3470,10 @@ public final class MlServiceProtos {
           return this;
         }
         /**
+         * <pre>
+         * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+         * </pre>
+         *
          * <code>string credit_card_number = 8;</code>
          * @return This builder for chaining.
          */
@@ -3378,6 +3484,10 @@ public final class MlServiceProtos {
           return this;
         }
         /**
+         * <pre>
+         * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+         * </pre>
+         *
          * <code>string credit_card_number = 8;</code>
          * @param value The bytes for creditCardNumber to set.
          * @return This builder for chaining.
@@ -5257,6 +5367,82 @@ public final class MlServiceProtos {
   checkByteStringIsUtf8(value);
           
           supplierAddress_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object creditCardLastFour_ = "";
+        /**
+         * <code>string credit_card_last_four = 33;</code>
+         * @return The creditCardLastFour.
+         */
+        public java.lang.String getCreditCardLastFour() {
+          java.lang.Object ref = creditCardLastFour_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            creditCardLastFour_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string credit_card_last_four = 33;</code>
+         * @return The bytes for creditCardLastFour.
+         */
+        public com.google.protobuf.ByteString
+            getCreditCardLastFourBytes() {
+          java.lang.Object ref = creditCardLastFour_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            creditCardLastFour_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string credit_card_last_four = 33;</code>
+         * @param value The creditCardLastFour to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCreditCardLastFour(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          creditCardLastFour_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string credit_card_last_four = 33;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCreditCardLastFour() {
+          
+          creditCardLastFour_ = getDefaultInstance().getCreditCardLastFour();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string credit_card_last_four = 33;</code>
+         * @param value The bytes for creditCardLastFour to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCreditCardLastFourBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          creditCardLastFour_ = value;
           onChanged();
           return this;
         }
@@ -7688,24 +7874,44 @@ public final class MlServiceProtos {
         int index);
 
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getCreditCardNumberList();
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     ssn.type.CandidateOuterClass.Candidate getCreditCardNumber(int index);
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     int getCreditCardNumberCount();
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCreditCardNumberOrBuilderList();
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardNumberOrBuilder(
@@ -8238,6 +8444,30 @@ public final class MlServiceProtos {
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getCreditCardLastFourList();
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index);
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    int getCreditCardLastFourCount();
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getCreditCardLastFourOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -8289,6 +8519,7 @@ public final class MlServiceProtos {
       supplierVatNumber_ = java.util.Collections.emptyList();
       supplierOrganisationNumber_ = java.util.Collections.emptyList();
       supplierAddress_ = java.util.Collections.emptyList();
+      creditCardLastFour_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -8620,6 +8851,15 @@ public final class MlServiceProtos {
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
+            case 274: {
+              if (!((mutable_bitField1_ & 0x00000002) != 0)) {
+                creditCardLastFour_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField1_ |= 0x00000002;
+              }
+              creditCardLastFour_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8733,6 +8973,9 @@ public final class MlServiceProtos {
         }
         if (((mutable_bitField1_ & 0x00000001) != 0)) {
           supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
+        }
+        if (((mutable_bitField1_ & 0x00000002) != 0)) {
+          creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9154,6 +9397,10 @@ public final class MlServiceProtos {
     public static final int CREDIT_CARD_NUMBER_FIELD_NUMBER = 11;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardNumber_;
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     @java.lang.Override
@@ -9161,6 +9408,10 @@ public final class MlServiceProtos {
       return creditCardNumber_;
     }
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     @java.lang.Override
@@ -9169,6 +9420,10 @@ public final class MlServiceProtos {
       return creditCardNumber_;
     }
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     @java.lang.Override
@@ -9176,6 +9431,10 @@ public final class MlServiceProtos {
       return creditCardNumber_.size();
     }
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     @java.lang.Override
@@ -9183,6 +9442,10 @@ public final class MlServiceProtos {
       return creditCardNumber_.get(index);
     }
     /**
+     * <pre>
+     * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+     * </pre>
+     *
      * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
      */
     @java.lang.Override
@@ -10071,6 +10334,46 @@ public final class MlServiceProtos {
       return supplierAddress_.get(index);
     }
 
+    public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 34;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardLastFour_;
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardLastFourList() {
+      return creditCardLastFour_;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getCreditCardLastFourOrBuilderList() {
+      return creditCardLastFour_;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    @java.lang.Override
+    public int getCreditCardLastFourCount() {
+      return creditCardLastFour_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index) {
+      return creditCardLastFour_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
+        int index) {
+      return creditCardLastFour_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10183,6 +10486,9 @@ public final class MlServiceProtos {
       }
       for (int i = 0; i < supplierAddress_.size(); i++) {
         output.writeMessage(33, supplierAddress_.get(i));
+      }
+      for (int i = 0; i < creditCardLastFour_.size(); i++) {
+        output.writeMessage(34, creditCardLastFour_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -10325,6 +10631,10 @@ public final class MlServiceProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(33, supplierAddress_.get(i));
       }
+      for (int i = 0; i < creditCardLastFour_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, creditCardLastFour_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10406,6 +10716,8 @@ public final class MlServiceProtos {
           .equals(other.getSupplierOrganisationNumberList())) return false;
       if (!getSupplierAddressList()
           .equals(other.getSupplierAddressList())) return false;
+      if (!getCreditCardLastFourList()
+          .equals(other.getCreditCardLastFourList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10548,6 +10860,10 @@ public final class MlServiceProtos {
       if (getSupplierAddressCount() > 0) {
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddressList().hashCode();
+      }
+      if (getCreditCardLastFourCount() > 0) {
+        hash = (37 * hash) + CREDIT_CARD_LAST_FOUR_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditCardLastFourList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10714,6 +11030,7 @@ public final class MlServiceProtos {
           getSupplierVatNumberFieldBuilder();
           getSupplierOrganisationNumberFieldBuilder();
           getSupplierAddressFieldBuilder();
+          getCreditCardLastFourFieldBuilder();
         }
       }
       @java.lang.Override
@@ -10916,6 +11233,12 @@ public final class MlServiceProtos {
           bitField1_ = (bitField1_ & ~0x00000001);
         } else {
           supplierAddressBuilder_.clear();
+        }
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFour_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000002);
+        } else {
+          creditCardLastFourBuilder_.clear();
         }
         return this;
       }
@@ -11241,6 +11564,15 @@ public final class MlServiceProtos {
           result.supplierAddress_ = supplierAddress_;
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
+        }
+        if (creditCardLastFourBuilder_ == null) {
+          if (((bitField1_ & 0x00000002) != 0)) {
+            creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
+            bitField1_ = (bitField1_ & ~0x00000002);
+          }
+          result.creditCardLastFour_ = creditCardLastFour_;
+        } else {
+          result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12145,6 +12477,32 @@ public final class MlServiceProtos {
                    getSupplierAddressFieldBuilder() : null;
             } else {
               supplierAddressBuilder_.addAllMessages(other.supplierAddress_);
+            }
+          }
+        }
+        if (creditCardLastFourBuilder_ == null) {
+          if (!other.creditCardLastFour_.isEmpty()) {
+            if (creditCardLastFour_.isEmpty()) {
+              creditCardLastFour_ = other.creditCardLastFour_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+            } else {
+              ensureCreditCardLastFourIsMutable();
+              creditCardLastFour_.addAll(other.creditCardLastFour_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.creditCardLastFour_.isEmpty()) {
+            if (creditCardLastFourBuilder_.isEmpty()) {
+              creditCardLastFourBuilder_.dispose();
+              creditCardLastFourBuilder_ = null;
+              creditCardLastFour_ = other.creditCardLastFour_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+              creditCardLastFourBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCreditCardLastFourFieldBuilder() : null;
+            } else {
+              creditCardLastFourBuilder_.addAllMessages(other.creditCardLastFour_);
             }
           }
         }
@@ -14592,6 +14950,10 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> creditCardNumberBuilder_;
 
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardNumberList() {
@@ -14602,6 +14964,10 @@ public final class MlServiceProtos {
         }
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public int getCreditCardNumberCount() {
@@ -14612,6 +14978,10 @@ public final class MlServiceProtos {
         }
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getCreditCardNumber(int index) {
@@ -14622,6 +14992,10 @@ public final class MlServiceProtos {
         }
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder setCreditCardNumber(
@@ -14639,6 +15013,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder setCreditCardNumber(
@@ -14653,6 +15031,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder addCreditCardNumber(ssn.type.CandidateOuterClass.Candidate value) {
@@ -14669,6 +15051,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder addCreditCardNumber(
@@ -14686,6 +15072,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder addCreditCardNumber(
@@ -14700,6 +15090,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder addCreditCardNumber(
@@ -14714,6 +15108,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder addAllCreditCardNumber(
@@ -14729,6 +15127,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder clearCreditCardNumber() {
@@ -14742,6 +15144,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public Builder removeCreditCardNumber(int index) {
@@ -14755,6 +15161,10 @@ public final class MlServiceProtos {
         return this;
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getCreditCardNumberBuilder(
@@ -14762,6 +15172,10 @@ public final class MlServiceProtos {
         return getCreditCardNumberFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardNumberOrBuilder(
@@ -14772,6 +15186,10 @@ public final class MlServiceProtos {
         }
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -14783,6 +15201,10 @@ public final class MlServiceProtos {
         }
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardNumberBuilder() {
@@ -14790,6 +15212,10 @@ public final class MlServiceProtos {
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardNumberBuilder(
@@ -14798,6 +15224,10 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+       * </pre>
+       *
        * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
@@ -20098,6 +20528,246 @@ public final class MlServiceProtos {
         }
         return supplierAddressBuilder_;
       }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardLastFour_ =
+        java.util.Collections.emptyList();
+      private void ensureCreditCardLastFourIsMutable() {
+        if (!((bitField1_ & 0x00000002) != 0)) {
+          creditCardLastFour_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(creditCardLastFour_);
+          bitField1_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> creditCardLastFourBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardLastFourList() {
+        if (creditCardLastFourBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(creditCardLastFour_);
+        } else {
+          return creditCardLastFourBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public int getCreditCardLastFourCount() {
+        if (creditCardLastFourBuilder_ == null) {
+          return creditCardLastFour_.size();
+        } else {
+          return creditCardLastFourBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index) {
+        if (creditCardLastFourBuilder_ == null) {
+          return creditCardLastFour_.get(index);
+        } else {
+          return creditCardLastFourBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder setCreditCardLastFour(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (creditCardLastFourBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.set(index, value);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder setCreditCardLastFour(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder addCreditCardLastFour(ssn.type.CandidateOuterClass.Candidate value) {
+        if (creditCardLastFourBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(value);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder addCreditCardLastFour(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (creditCardLastFourBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(index, value);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder addCreditCardLastFour(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(builderForValue.build());
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder addCreditCardLastFour(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder addAllCreditCardLastFour(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, creditCardLastFour_);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder clearCreditCardLastFour() {
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFour_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000002);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public Builder removeCreditCardLastFour(int index) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.remove(index);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getCreditCardLastFourBuilder(
+          int index) {
+        return getCreditCardLastFourFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
+          int index) {
+        if (creditCardLastFourBuilder_ == null) {
+          return creditCardLastFour_.get(index);  } else {
+          return creditCardLastFourBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getCreditCardLastFourOrBuilderList() {
+        if (creditCardLastFourBuilder_ != null) {
+          return creditCardLastFourBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(creditCardLastFour_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardLastFourBuilder() {
+        return getCreditCardLastFourFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardLastFourBuilder(
+          int index) {
+        return getCreditCardLastFourFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getCreditCardLastFourBuilderList() {
+        return getCreditCardLastFourFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getCreditCardLastFourFieldBuilder() {
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFourBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  creditCardLastFour_,
+                  ((bitField1_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          creditCardLastFour_ = null;
+        }
+        return creditCardLastFourBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21018,11 +21688,11 @@ public final class MlServiceProtos {
       "mlservice.v2\032\026google/type/date.proto\032\030ss" +
       "n/type/candidate.proto\032\036ssn/type/text_an" +
       "notation.proto\032%tensorflow/core/example/" +
-      "example.proto\"\311\010\n\021FeatureGenRequest\022E\n\014t" +
+      "example.proto\"\350\010\n\021FeatureGenRequest\022E\n\014t" +
       "ruth_labels\030\001 \001(\0132/.ssn.mlservice.v2.Fea" +
       "tureGenRequest.TruthLabels\0221\n\017text_annot" +
       "ation\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\n\n" +
-      "\002id\030\003 \001(\t\032\255\007\n\013TruthLabels\022\026\n\016total_incl_" +
+      "\002id\030\003 \001(\t\032\314\007\n\013TruthLabels\022\026\n\016total_incl_" +
       "vat\030\001 \001(\001\022\021\n\ttotal_vat\030\002 \001(\001\022\026\n\016total_ex" +
       "cl_vat\030\003 \001(\001\022%\n\norder_date\030\004 \001(\0132\021.googl" +
       "e.type.Date\022+\n\020payment_due_date\030\005 \001(\0132\021." +
@@ -21045,64 +21715,66 @@ public final class MlServiceProtos {
       "document_date\030\034 \001(\0132\021.google.type.Date\022\024" +
       "\n\014order_number\030\035 \001(\t\022\033\n\023supplier_vat_num" +
       "ber\030\036 \001(\t\022$\n\034supplier_organisation_numbe" +
-      "r\030\037 \001(\t\022\030\n\020supplier_address\030  \001(\t\":\n\022Fea" +
-      "tureGenResponse\022$\n\007example\030\001 \001(\0132\023.tenso" +
-      "rflow.Example\"T\n\016PredictRequest\022$\n\007examp" +
-      "le\030\001 \001(\0132\023.tensorflow.Example\022\034\n\024top_n_m" +
-      "ost_confident\030\002 \001(\r\"\300\014\n\017PredictResponse\022" +
-      "\'\n\norder_date\030\001 \003(\0132\023.ssn.type.Candidate" +
-      "\022-\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Can" +
-      "didate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Can" +
-      "didate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.typ" +
-      "e.Candidate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ss" +
-      "n.type.Candidate\0222\n\025supplier_corporate_i" +
-      "d\030\007 \003(\0132\023.ssn.type.Candidate\0222\n\025supplier" +
-      "_country_code\030\010 \003(\0132\023.ssn.type.Candidate" +
-      "\022*\n\rdocument_type\030\t \003(\0132\023.ssn.type.Candi" +
-      "date\022+\n\016payment_method\030\n \003(\0132\023.ssn.type." +
-      "Candidate\022/\n\022credit_card_number\030\013 \003(\0132\023." +
-      "ssn.type.Candidate\022+\n\016invoice_number\030\014 \003" +
-      "(\0132\023.ssn.type.Candidate\022-\n\020ocr_line_dk_t" +
-      "ype\030\r \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_li" +
-      "ne_dk_payment_id\030\016 \003(\0132\023.ssn.type.Candid" +
-      "ate\0224\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.s" +
-      "sn.type.Candidate\0223\n\026ocr_line_se_payment" +
-      "_id\030\020 \003(\0132\023.ssn.type.Candidate\022=\n ocr_li" +
-      "ne_se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn.t" +
-      "ype.Candidate\022=\n ocr_line_se_plusgiro_cr" +
-      "editor_id\030\022 \003(\0132\023.ssn.type.Candidate\0223\n\026" +
-      "ocr_line_no_payment_id\030\023 \003(\0132\023.ssn.type." +
-      "Candidate\0223\n\026ocr_line_fi_payment_id\030\024 \003(" +
-      "\0132\023.ssn.type.Candidate\0223\n\026ocr_line_nl_pa" +
-      "yment_id\030\025 \003(\0132\023.ssn.type.Candidate\022!\n\004i" +
-      "ban\030\026 \003(\0132\023.ssn.type.Candidate\022&\n\005lines\030" +
-      "\027 \003(\0132\027.ssn.type.LineCandidate\0220\n\023bank_a" +
-      "ccount_number\030\030 \003(\0132\023.ssn.type.Candidate" +
-      "\0225\n\030bank_registration_number\030\031 \003(\0132\023.ssn" +
-      ".type.Candidate\022 \n\003bic\030\032 \003(\0132\023.ssn.type." +
-      "Candidate\022,\n\017document_number\030\033 \003(\0132\023.ssn" +
-      ".type.Candidate\022*\n\rdocument_date\030\034 \003(\0132\023" +
-      ".ssn.type.Candidate\022)\n\014order_number\030\035 \003(" +
-      "\0132\023.ssn.type.Candidate\022*\n\rsupplier_name\030" +
-      "\036 \003(\0132\023.ssn.type.Candidate\0220\n\023supplier_v" +
-      "at_number\030\037 \003(\0132\023.ssn.type.Candidate\0229\n\034" +
-      "supplier_organisation_number\030  \003(\0132\023.ssn" +
-      ".type.Candidate\022-\n\020supplier_address\030! \003(" +
-      "\0132\023.ssn.type.Candidate\"\227\001\n\030FeatureGenPre" +
-      "dictRequest\022@\n\023feature_gen_request\030\001 \001(\013" +
-      "2#.ssn.mlservice.v2.FeatureGenRequest\0229\n" +
-      "\017predict_request\030\002 \001(\0132 .ssn.mlservice.v" +
-      "2.PredictRequest2\230\002\n\tMlService\022W\n\nFeatur" +
-      "eGen\022#.ssn.mlservice.v2.FeatureGenReques" +
-      "t\032$.ssn.mlservice.v2.FeatureGenResponse\022" +
-      "N\n\007Predict\022 .ssn.mlservice.v2.PredictReq" +
-      "uest\032!.ssn.mlservice.v2.PredictResponse\022" +
-      "b\n\021FeatureGenPredict\022*.ssn.mlservice.v2." +
-      "FeatureGenPredictRequest\032!.ssn.mlservice" +
-      ".v2.PredictResponseBQB\017MlServiceProtosZ>" +
-      "github.com/e-conomic/vmlapis/gen/go/ssn/" +
-      "mlservice/v2;mlserviceb\006proto3"
+      "r\030\037 \001(\t\022\030\n\020supplier_address\030  \001(\t\022\035\n\025cre" +
+      "dit_card_last_four\030! \001(\t\":\n\022FeatureGenRe" +
+      "sponse\022$\n\007example\030\001 \001(\0132\023.tensorflow.Exa" +
+      "mple\"T\n\016PredictRequest\022$\n\007example\030\001 \001(\0132" +
+      "\023.tensorflow.Example\022\034\n\024top_n_most_confi" +
+      "dent\030\002 \001(\r\"\364\014\n\017PredictResponse\022\'\n\norder_" +
+      "date\030\001 \003(\0132\023.ssn.type.Candidate\022-\n\020payme" +
+      "nt_due_date\030\002 \003(\0132\023.ssn.type.Candidate\022%" +
+      "\n\010currency\030\003 \003(\0132\023.ssn.type.Candidate\022&\n" +
+      "\ttotal_vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n" +
+      "\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Candida" +
+      "te\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.type.Ca" +
+      "ndidate\0222\n\025supplier_corporate_id\030\007 \003(\0132\023" +
+      ".ssn.type.Candidate\0222\n\025supplier_country_" +
+      "code\030\010 \003(\0132\023.ssn.type.Candidate\022*\n\rdocum" +
+      "ent_type\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016p" +
+      "ayment_method\030\n \003(\0132\023.ssn.type.Candidate" +
+      "\022/\n\022credit_card_number\030\013 \003(\0132\023.ssn.type." +
+      "Candidate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn." +
+      "type.Candidate\022-\n\020ocr_line_dk_type\030\r \003(\013" +
+      "2\023.ssn.type.Candidate\0223\n\026ocr_line_dk_pay" +
+      "ment_id\030\016 \003(\0132\023.ssn.type.Candidate\0224\n\027oc" +
+      "r_line_dk_creditor_id\030\017 \003(\0132\023.ssn.type.C" +
+      "andidate\0223\n\026ocr_line_se_payment_id\030\020 \003(\013" +
+      "2\023.ssn.type.Candidate\022=\n ocr_line_se_ban" +
+      "kgiro_creditor_id\030\021 \003(\0132\023.ssn.type.Candi" +
+      "date\022=\n ocr_line_se_plusgiro_creditor_id" +
+      "\030\022 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_" +
+      "no_payment_id\030\023 \003(\0132\023.ssn.type.Candidate" +
+      "\0223\n\026ocr_line_fi_payment_id\030\024 \003(\0132\023.ssn.t" +
+      "ype.Candidate\0223\n\026ocr_line_nl_payment_id\030" +
+      "\025 \003(\0132\023.ssn.type.Candidate\022!\n\004iban\030\026 \003(\013" +
+      "2\023.ssn.type.Candidate\022&\n\005lines\030\027 \003(\0132\027.s" +
+      "sn.type.LineCandidate\0220\n\023bank_account_nu" +
+      "mber\030\030 \003(\0132\023.ssn.type.Candidate\0225\n\030bank_" +
+      "registration_number\030\031 \003(\0132\023.ssn.type.Can" +
+      "didate\022 \n\003bic\030\032 \003(\0132\023.ssn.type.Candidate" +
+      "\022,\n\017document_number\030\033 \003(\0132\023.ssn.type.Can" +
+      "didate\022*\n\rdocument_date\030\034 \003(\0132\023.ssn.type" +
+      ".Candidate\022)\n\014order_number\030\035 \003(\0132\023.ssn.t" +
+      "ype.Candidate\022*\n\rsupplier_name\030\036 \003(\0132\023.s" +
+      "sn.type.Candidate\0220\n\023supplier_vat_number" +
+      "\030\037 \003(\0132\023.ssn.type.Candidate\0229\n\034supplier_" +
+      "organisation_number\030  \003(\0132\023.ssn.type.Can" +
+      "didate\022-\n\020supplier_address\030! \003(\0132\023.ssn.t" +
+      "ype.Candidate\0222\n\025credit_card_last_four\030\"" +
+      " \003(\0132\023.ssn.type.Candidate\"\227\001\n\030FeatureGen" +
+      "PredictRequest\022@\n\023feature_gen_request\030\001 " +
+      "\001(\0132#.ssn.mlservice.v2.FeatureGenRequest" +
+      "\0229\n\017predict_request\030\002 \001(\0132 .ssn.mlservic" +
+      "e.v2.PredictRequest2\230\002\n\tMlService\022W\n\nFea" +
+      "tureGen\022#.ssn.mlservice.v2.FeatureGenReq" +
+      "uest\032$.ssn.mlservice.v2.FeatureGenRespon" +
+      "se\022N\n\007Predict\022 .ssn.mlservice.v2.Predict" +
+      "Request\032!.ssn.mlservice.v2.PredictRespon" +
+      "se\022b\n\021FeatureGenPredict\022*.ssn.mlservice." +
+      "v2.FeatureGenPredictRequest\032!.ssn.mlserv" +
+      "ice.v2.PredictResponseBQB\017MlServiceProto" +
+      "sZ>github.com/e-conomic/vmlapis/gen/go/s" +
+      "sn/mlservice/v2;mlserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21123,7 +21795,7 @@ public final class MlServiceProtos {
     internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", });
     internal_static_ssn_mlservice_v2_FeatureGenResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_mlservice_v2_FeatureGenResponse_fieldAccessorTable = new
@@ -21141,7 +21813,7 @@ public final class MlServiceProtos {
     internal_static_ssn_mlservice_v2_PredictResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_PredictResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", });
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_fieldAccessorTable = new
