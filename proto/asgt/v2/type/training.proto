@@ -7,6 +7,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
 import "google/protobuf/timestamp.proto";
 import "asgt/type/dataset.proto";
 
+// TODO(Anton): add TrainingScheduled?
 message Training {
     // Creation time of the training
     google.protobuf.Timestamp created_at = 1;

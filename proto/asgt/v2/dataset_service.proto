@@ -109,6 +109,13 @@ service DatasetService {
       get: "/v2/trainings"
     };
   }
+
+  // Get the training data based on training ID.
+  rpc GetTrainingByID(GetTrainingByIDRequest) returns (asgt.v2.type.Training) {
+    option (google.api.http) = {
+      get: "/v2/trainings/{training_id}"
+    };
+  }
 }
 
 message GetDatasetRequest {
@@ -164,6 +171,10 @@ message GetDatasetTrainingsRequest {
 
 message GetTrainingsRequest {
   TrainingRequestOptions options = 1;
+}
+
+message GetTrainingByIDRequest {
+  string training_id = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
 
 message TrainingsResponse {
