@@ -961,5 +961,85 @@ proto.asgt.v2.DatasetServicePromiseClient.prototype.getTrainings =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.v2.GetTrainingByIDRequest,
+ *   !proto.asgt.v2.type.Training>}
+ */
+const methodDescriptor_DatasetService_GetTrainingByID = new grpc.web.MethodDescriptor(
+  '/asgt.v2.DatasetService/GetTrainingByID',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.v2.GetTrainingByIDRequest,
+  asgt_v2_type_training_pb.Training,
+  /**
+   * @param {!proto.asgt.v2.GetTrainingByIDRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  asgt_v2_type_training_pb.Training.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.asgt.v2.GetTrainingByIDRequest,
+ *   !proto.asgt.v2.type.Training>}
+ */
+const methodInfo_DatasetService_GetTrainingByID = new grpc.web.AbstractClientBase.MethodInfo(
+  asgt_v2_type_training_pb.Training,
+  /**
+   * @param {!proto.asgt.v2.GetTrainingByIDRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  asgt_v2_type_training_pb.Training.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.v2.GetTrainingByIDRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.asgt.v2.type.Training)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2.type.Training>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.v2.DatasetServiceClient.prototype.getTrainingByID =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetTrainingByID',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetTrainingByID,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.GetTrainingByIDRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.v2.type.Training>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.v2.DatasetServicePromiseClient.prototype.getTrainingByID =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetTrainingByID',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetTrainingByID);
+};
+
+
 module.exports = proto.asgt.v2;
 

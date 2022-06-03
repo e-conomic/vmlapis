@@ -572,6 +572,37 @@
           "DatasetService"
         ]
       }
+    },
+    "/v2/trainings/{trainingId}": {
+      "get": {
+        "summary": "Get the training data based on training ID.",
+        "operationId": "DatasetService_GetTrainingByID",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/typeTraining"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "trainingId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
     }
   },
   "definitions": {

@@ -4,6 +4,7 @@ import grpc
 
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 from vml_proto.asgt.v2 import dataset_service_pb2 as asgt_dot_v2_dot_dataset__service__pb2
+from vml_proto.asgt.v2.type import training_pb2 as asgt_dot_v2_dot_type_dot_training__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
@@ -70,6 +71,11 @@ class DatasetServiceStub(object):
                 '/asgt.v2.DatasetService/GetTrainings',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
+                )
+        self.GetTrainingByID = channel.unary_unary(
+                '/asgt.v2.DatasetService/GetTrainingByID',
+                request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingByIDRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2_dot_type_dot_training__pb2.Training.FromString,
                 )
 
 
@@ -163,6 +169,13 @@ class DatasetServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetTrainingByID(self, request, context):
+        """Get the training data based on training ID.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DatasetServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -220,6 +233,11 @@ def add_DatasetServiceServicer_to_server(servicer, server):
                     servicer.GetTrainings,
                     request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.FromString,
                     response_serializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.SerializeToString,
+            ),
+            'GetTrainingByID': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetTrainingByID,
+                    request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingByIDRequest.FromString,
+                    response_serializer=asgt_dot_v2_dot_type_dot_training__pb2.Training.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -404,5 +422,21 @@ class DatasetService(object):
         return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetTrainings',
             asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetTrainingByID(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetTrainingByID',
+            asgt_dot_v2_dot_dataset__service__pb2.GetTrainingByIDRequest.SerializeToString,
+            asgt_dot_v2_dot_type_dot_training__pb2.Training.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
