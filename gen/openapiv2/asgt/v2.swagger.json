@@ -957,6 +957,11 @@
         "dataset": {
           "$ref": "#/definitions/typeDataset",
           "description": "Specifies dataset the training ran on."
+        },
+        "scheduleTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Specifies when is the training scheduled."
         }
       }
     },

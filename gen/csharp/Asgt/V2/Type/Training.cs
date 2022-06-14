@@ -26,17 +26,18 @@ namespace Asgt.V2.Type {
           string.Concat(
             "Chthc2d0L3YyL3R5cGUvdHJhaW5pbmcucHJvdG8SDGFzZ3QudjIudHlwZRoX",
             "YXNndC90eXBlL2RhdGFzZXQucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8i2gEKCFRyYWluaW5nEi4KCmNyZWF0ZWRfYXQYASABKAsy",
+            "c3RhbXAucHJvdG8ijQIKCFRyYWluaW5nEi4KCmNyZWF0ZWRfYXQYASABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg4KBnN0YXR1cxgCIAEoCRIX",
             "Cg90cmFpbmluZ19zdGF0dXMYAyABKAkSHwoXdHJhaW5pbmdfc3RhdHVzX21l",
             "c3NhZ2UYBCABKAkSLwoLZmluaXNoX3RpbWUYBSABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuVGltZXN0YW1wEiMKB2RhdGFzZXQYBiABKAsyEi5hc2d0LnR5cGUu",
-            "RGF0YXNldEI7WjlnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
-            "by9hc2d0L3YyL3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
+            "RGF0YXNldBIxCg1zY2hlZHVsZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEI7WjlnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlz",
+            "L2dlbi9nby9hc2d0L3YyL3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Training), global::Asgt.V2.Type.Training.Parser, new[]{ "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Training), global::Asgt.V2.Type.Training.Parser, new[]{ "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset", "ScheduleTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,6 +75,7 @@ namespace Asgt.V2.Type {
       trainingStatusMessage_ = other.trainingStatusMessage_;
       finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
+      scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -171,6 +173,20 @@ namespace Asgt.V2.Type {
       }
     }
 
+    /// <summary>Field number for the "schedule_time" field.</summary>
+    public const int ScheduleTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp scheduleTime_;
+    /// <summary>
+    /// Specifies when is the training scheduled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduleTime {
+      get { return scheduleTime_; }
+      set {
+        scheduleTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Training);
@@ -190,6 +206,7 @@ namespace Asgt.V2.Type {
       if (TrainingStatusMessage != other.TrainingStatusMessage) return false;
       if (!object.Equals(FinishTime, other.FinishTime)) return false;
       if (!object.Equals(Dataset, other.Dataset)) return false;
+      if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -202,6 +219,7 @@ namespace Asgt.V2.Type {
       if (TrainingStatusMessage.Length != 0) hash ^= TrainingStatusMessage.GetHashCode();
       if (finishTime_ != null) hash ^= FinishTime.GetHashCode();
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
+      if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -239,6 +257,10 @@ namespace Asgt.V2.Type {
         output.WriteRawTag(50);
         output.WriteMessage(Dataset);
       }
+      if (scheduleTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ScheduleTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -264,6 +286,9 @@ namespace Asgt.V2.Type {
       }
       if (dataset_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Dataset);
+      }
+      if (scheduleTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -302,6 +327,12 @@ namespace Asgt.V2.Type {
           Dataset = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
+      }
+      if (other.scheduleTime_ != null) {
+        if (scheduleTime_ == null) {
+          ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ScheduleTime.MergeFrom(other.ScheduleTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -345,6 +376,13 @@ namespace Asgt.V2.Type {
               Dataset = new global::Asgt.Type.Dataset();
             }
             input.ReadMessage(Dataset);
+            break;
+          }
+          case 58: {
+            if (scheduleTime_ == null) {
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleTime);
             break;
           }
         }

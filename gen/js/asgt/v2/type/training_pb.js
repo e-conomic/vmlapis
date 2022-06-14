@@ -75,7 +75,8 @@ proto.asgt.v2.type.Training.toObject = function(includeInstance, msg) {
     trainingStatus: jspb.Message.getFieldWithDefault(msg, 3, ""),
     trainingStatusMessage: jspb.Message.getFieldWithDefault(msg, 4, ""),
     finishTime: (f = msg.getFinishTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f)
+    dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
+    scheduleTime: (f = msg.getScheduleTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -138,6 +139,11 @@ proto.asgt.v2.type.Training.deserializeBinaryFromReader = function(msg, reader) 
       var value = new asgt_type_dataset_pb.Dataset;
       reader.readMessage(value,asgt_type_dataset_pb.Dataset.deserializeBinaryFromReader);
       msg.setDataset(value);
+      break;
+    case 7:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setScheduleTime(value);
       break;
     default:
       reader.skipField();
@@ -211,6 +217,14 @@ proto.asgt.v2.type.Training.serializeBinaryToWriter = function(message, writer) 
       6,
       f,
       asgt_type_dataset_pb.Dataset.serializeBinaryToWriter
+    );
+  }
+  f = message.getScheduleTime();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
 };
@@ -378,6 +392,43 @@ proto.asgt.v2.type.Training.prototype.clearDataset = function() {
  */
 proto.asgt.v2.type.Training.prototype.hasDataset = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp schedule_time = 7;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.asgt.v2.type.Training.prototype.getScheduleTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 7));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.asgt.v2.type.Training} returns this
+*/
+proto.asgt.v2.type.Training.prototype.setScheduleTime = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.v2.type.Training} returns this
+ */
+proto.asgt.v2.type.Training.prototype.clearScheduleTime = function() {
+  return this.setScheduleTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.v2.type.Training.prototype.hasScheduleTime = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
