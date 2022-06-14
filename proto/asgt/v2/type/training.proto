@@ -27,4 +27,6 @@ message Training {
     google.protobuf.Timestamp finish_time = 5;
     // Specifies dataset the training ran on.
     asgt.type.Dataset dataset = 6;
+    // Specifies when is the training scheduled.
+    google.protobuf.Timestamp schedule_time = 7;
 }
