@@ -115,9 +115,9 @@ namespace Asgt.V2.Type {
     /// <summary>
     /// Status of the training.
     /// SCHEDULED - Training is scheduled to be run in a specific time. This
-    /// could be in between 1 minute or 6 hours depending on how recently the dataset
+    /// could be in between 1 minute or 24 hours depending on how recently the dataset
     /// was created
-    /// PENDING - The training is ready to be picked up a worker.
+    /// PENDING - The training is ready to be picked up by a worker.
     /// RUNNING - The training is currently running.
     /// DONE - The training has completed successfully.
     /// FAILED - The training failed due to an error. See training status for

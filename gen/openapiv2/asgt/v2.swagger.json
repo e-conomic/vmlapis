@@ -943,7 +943,7 @@
         },
         "trainingStatus": {
           "type": "string",
-          "description": "Status of the training.\nSCHEDULED - Training is scheduled to be run in a specific time. This\ncould be in between 1 minute or 6 hours depending on how recently the dataset\nwas created\nPENDING - The training is ready to be picked up a worker.\nRUNNING - The training is currently running.\nDONE - The training has completed successfully.\nFAILED - The training failed due to an error. See training status for\nmore information."
+          "description": "Status of the training.\nSCHEDULED - Training is scheduled to be run in a specific time. This\ncould be in between 1 minute or 24 hours depending on how recently the dataset\nwas created\nPENDING - The training is ready to be picked up by a worker.\nRUNNING - The training is currently running.\nDONE - The training has completed successfully.\nFAILED - The training failed due to an error. See training status for\nmore information."
         },
         "trainingStatusMessage": {
           "type": "string",
