@@ -9,7 +9,6 @@ package v2
 import (
 	context "context"
 	_type "github.com/e-conomic/vmlapis/gen/go/asgt/type"
-	_type1 "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type"
 	empty "github.com/golang/protobuf/ptypes/empty"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -57,8 +56,6 @@ type DatasetServiceClient interface {
 	// Get the specified number of the most recent trainings accross all consumer's datasets.
 	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
-	// Get the training data based on training ID.
-	GetTrainingByID(ctx context.Context, in *GetTrainingByIDRequest, opts ...grpc.CallOption) (*_type1.Training, error)
 }
 
 type datasetServiceClient struct {
@@ -168,15 +165,6 @@ func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *GetTraining
 	return out, nil
 }
 
-func (c *datasetServiceClient) GetTrainingByID(ctx context.Context, in *GetTrainingByIDRequest, opts ...grpc.CallOption) (*_type1.Training, error) {
-	out := new(_type1.Training)
-	err := c.cc.Invoke(ctx, "/asgt.v2.DatasetService/GetTrainingByID", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // DatasetServiceServer is the server API for DatasetService service.
 // All implementations must embed UnimplementedDatasetServiceServer
 // for forward compatibility
@@ -213,8 +201,6 @@ type DatasetServiceServer interface {
 	// Get the specified number of the most recent trainings accross all consumer's datasets.
 	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error)
-	// Get the training data based on training ID.
-	GetTrainingByID(context.Context, *GetTrainingByIDRequest) (*_type1.Training, error)
 	mustEmbedUnimplementedDatasetServiceServer()
 }
 
@@ -254,9 +240,6 @@ func (UnimplementedDatasetServiceServer) GetDatasetTrainings(context.Context, *G
 }
 func (UnimplementedDatasetServiceServer) GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTrainings not implemented")
-}
-func (UnimplementedDatasetServiceServer) GetTrainingByID(context.Context, *GetTrainingByIDRequest) (*_type1.Training, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetTrainingByID not implemented")
 }
 func (UnimplementedDatasetServiceServer) mustEmbedUnimplementedDatasetServiceServer() {}
 
@@ -469,24 +452,6 @@ func _DatasetService_GetTrainings_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DatasetService_GetTrainingByID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetTrainingByIDRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(DatasetServiceServer).GetTrainingByID(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/asgt.v2.DatasetService/GetTrainingByID",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DatasetServiceServer).GetTrainingByID(ctx, req.(*GetTrainingByIDRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // DatasetService_ServiceDesc is the grpc.ServiceDesc for DatasetService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -537,10 +502,6 @@ var DatasetService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetTrainings",
 			Handler:    _DatasetService_GetTrainings_Handler,
-		},
-		{
-			MethodName: "GetTrainingByID",
-			Handler:    _DatasetService_GetTrainingByID_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
