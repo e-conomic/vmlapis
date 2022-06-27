@@ -76,6 +76,16 @@ func (m *Training) Validate() error {
 		}
 	}
 
+	if v, ok := interface{}(m.GetScheduleTime()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return TrainingValidationError{
+				field:  "ScheduleTime",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
 	return nil
 }
 

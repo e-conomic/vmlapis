@@ -61,9 +61,9 @@ public final class TrainingOuterClass {
      * <pre>
      * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
-     * PENDING - The training is ready to be picked up a worker.
+     * PENDING - The training is ready to be picked up by a worker.
      * RUNNING - The training is currently running.
      * DONE - The training has completed successfully.
      * FAILED - The training failed due to an error. See training status for
@@ -78,9 +78,9 @@ public final class TrainingOuterClass {
      * <pre>
      * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
-     * PENDING - The training is ready to be picked up a worker.
+     * PENDING - The training is ready to be picked up by a worker.
      * RUNNING - The training is currently running.
      * DONE - The training has completed successfully.
      * FAILED - The training failed due to an error. See training status for
@@ -166,6 +166,33 @@ public final class TrainingOuterClass {
      * <code>.asgt.type.Dataset dataset = 6;</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies when the training is scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * @return Whether the scheduleTime field is set.
+     */
+    boolean hasScheduleTime();
+    /**
+     * <pre>
+     * Specifies when the training is scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * @return The scheduleTime.
+     */
+    com.google.protobuf.Timestamp getScheduleTime();
+    /**
+     * <pre>
+     * Specifies when the training is scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getScheduleTimeOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2.type.Training}
@@ -268,6 +295,19 @@ public final class TrainingOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(dataset_);
                 dataset_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (scheduleTime_ != null) {
+                subBuilder = scheduleTime_.toBuilder();
+              }
+              scheduleTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(scheduleTime_);
+                scheduleTime_ = subBuilder.buildPartial();
               }
 
               break;
@@ -386,9 +426,9 @@ public final class TrainingOuterClass {
      * <pre>
      * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
-     * PENDING - The training is ready to be picked up a worker.
+     * PENDING - The training is ready to be picked up by a worker.
      * RUNNING - The training is currently running.
      * DONE - The training has completed successfully.
      * FAILED - The training failed due to an error. See training status for
@@ -415,9 +455,9 @@ public final class TrainingOuterClass {
      * <pre>
      * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 6 hours depending on how recently the dataset
+     * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
-     * PENDING - The training is ready to be picked up a worker.
+     * PENDING - The training is ready to be picked up by a worker.
      * RUNNING - The training is currently running.
      * DONE - The training has completed successfully.
      * FAILED - The training failed due to an error. See training status for
@@ -564,6 +604,44 @@ public final class TrainingOuterClass {
       return getDataset();
     }
 
+    public static final int SCHEDULE_TIME_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp scheduleTime_;
+    /**
+     * <pre>
+     * Specifies when the training is scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * @return Whether the scheduleTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasScheduleTime() {
+      return scheduleTime_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies when the training is scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * @return The scheduleTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getScheduleTime() {
+      return scheduleTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduleTime_;
+    }
+    /**
+     * <pre>
+     * Specifies when the training is scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getScheduleTimeOrBuilder() {
+      return getScheduleTime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -596,6 +674,9 @@ public final class TrainingOuterClass {
       if (dataset_ != null) {
         output.writeMessage(6, getDataset());
       }
+      if (scheduleTime_ != null) {
+        output.writeMessage(7, getScheduleTime());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -625,6 +706,10 @@ public final class TrainingOuterClass {
       if (dataset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDataset());
+      }
+      if (scheduleTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getScheduleTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -662,6 +747,11 @@ public final class TrainingOuterClass {
         if (!getDataset()
             .equals(other.getDataset())) return false;
       }
+      if (hasScheduleTime() != other.hasScheduleTime()) return false;
+      if (hasScheduleTime()) {
+        if (!getScheduleTime()
+            .equals(other.getScheduleTime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -690,6 +780,10 @@ public final class TrainingOuterClass {
       if (hasDataset()) {
         hash = (37 * hash) + DATASET_FIELD_NUMBER;
         hash = (53 * hash) + getDataset().hashCode();
+      }
+      if (hasScheduleTime()) {
+        hash = (37 * hash) + SCHEDULE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getScheduleTime().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -848,6 +942,12 @@ public final class TrainingOuterClass {
           dataset_ = null;
           datasetBuilder_ = null;
         }
+        if (scheduleTimeBuilder_ == null) {
+          scheduleTime_ = null;
+        } else {
+          scheduleTime_ = null;
+          scheduleTimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -891,6 +991,11 @@ public final class TrainingOuterClass {
           result.dataset_ = dataset_;
         } else {
           result.dataset_ = datasetBuilder_.build();
+        }
+        if (scheduleTimeBuilder_ == null) {
+          result.scheduleTime_ = scheduleTime_;
+        } else {
+          result.scheduleTime_ = scheduleTimeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -960,6 +1065,9 @@ public final class TrainingOuterClass {
         }
         if (other.hasDataset()) {
           mergeDataset(other.getDataset());
+        }
+        if (other.hasScheduleTime()) {
+          mergeScheduleTime(other.getScheduleTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1226,9 +1334,9 @@ public final class TrainingOuterClass {
        * <pre>
        * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
-       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
-       * PENDING - The training is ready to be picked up a worker.
+       * PENDING - The training is ready to be picked up by a worker.
        * RUNNING - The training is currently running.
        * DONE - The training has completed successfully.
        * FAILED - The training failed due to an error. See training status for
@@ -1254,9 +1362,9 @@ public final class TrainingOuterClass {
        * <pre>
        * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
-       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
-       * PENDING - The training is ready to be picked up a worker.
+       * PENDING - The training is ready to be picked up by a worker.
        * RUNNING - The training is currently running.
        * DONE - The training has completed successfully.
        * FAILED - The training failed due to an error. See training status for
@@ -1283,9 +1391,9 @@ public final class TrainingOuterClass {
        * <pre>
        * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
-       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
-       * PENDING - The training is ready to be picked up a worker.
+       * PENDING - The training is ready to be picked up by a worker.
        * RUNNING - The training is currently running.
        * DONE - The training has completed successfully.
        * FAILED - The training failed due to an error. See training status for
@@ -1310,9 +1418,9 @@ public final class TrainingOuterClass {
        * <pre>
        * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
-       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
-       * PENDING - The training is ready to be picked up a worker.
+       * PENDING - The training is ready to be picked up by a worker.
        * RUNNING - The training is currently running.
        * DONE - The training has completed successfully.
        * FAILED - The training failed due to an error. See training status for
@@ -1332,9 +1440,9 @@ public final class TrainingOuterClass {
        * <pre>
        * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
-       * could be in between 1 minute or 6 hours depending on how recently the dataset
+       * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
-       * PENDING - The training is ready to be picked up a worker.
+       * PENDING - The training is ready to be picked up by a worker.
        * RUNNING - The training is currently running.
        * DONE - The training has completed successfully.
        * FAILED - The training failed due to an error. See training status for
@@ -1762,6 +1870,161 @@ public final class TrainingOuterClass {
         }
         return datasetBuilder_;
       }
+
+      private com.google.protobuf.Timestamp scheduleTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> scheduleTimeBuilder_;
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * @return Whether the scheduleTime field is set.
+       */
+      public boolean hasScheduleTime() {
+        return scheduleTimeBuilder_ != null || scheduleTime_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * @return The scheduleTime.
+       */
+      public com.google.protobuf.Timestamp getScheduleTime() {
+        if (scheduleTimeBuilder_ == null) {
+          return scheduleTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduleTime_;
+        } else {
+          return scheduleTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       */
+      public Builder setScheduleTime(com.google.protobuf.Timestamp value) {
+        if (scheduleTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scheduleTime_ = value;
+          onChanged();
+        } else {
+          scheduleTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       */
+      public Builder setScheduleTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (scheduleTimeBuilder_ == null) {
+          scheduleTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          scheduleTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       */
+      public Builder mergeScheduleTime(com.google.protobuf.Timestamp value) {
+        if (scheduleTimeBuilder_ == null) {
+          if (scheduleTime_ != null) {
+            scheduleTime_ =
+              com.google.protobuf.Timestamp.newBuilder(scheduleTime_).mergeFrom(value).buildPartial();
+          } else {
+            scheduleTime_ = value;
+          }
+          onChanged();
+        } else {
+          scheduleTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       */
+      public Builder clearScheduleTime() {
+        if (scheduleTimeBuilder_ == null) {
+          scheduleTime_ = null;
+          onChanged();
+        } else {
+          scheduleTime_ = null;
+          scheduleTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getScheduleTimeBuilder() {
+        
+        onChanged();
+        return getScheduleTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getScheduleTimeOrBuilder() {
+        if (scheduleTimeBuilder_ != null) {
+          return scheduleTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return scheduleTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : scheduleTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies when the training is scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getScheduleTimeFieldBuilder() {
+        if (scheduleTimeBuilder_ == null) {
+          scheduleTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getScheduleTime(),
+                  getParentForChildren(),
+                  isClean());
+          scheduleTime_ = null;
+        }
+        return scheduleTimeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1831,14 +2094,16 @@ public final class TrainingOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033asgt/v2/type/training.proto\022\014asgt.v2.t" +
       "ype\032\027asgt/type/dataset.proto\032\037google/pro" +
-      "tobuf/timestamp.proto\"\332\001\n\010Training\022.\n\ncr" +
+      "tobuf/timestamp.proto\"\215\002\n\010Training\022.\n\ncr" +
       "eated_at\030\001 \001(\0132\032.google.protobuf.Timesta" +
       "mp\022\016\n\006status\030\002 \001(\t\022\027\n\017training_status\030\003 " +
       "\001(\t\022\037\n\027training_status_message\030\004 \001(\t\022/\n\013" +
       "finish_time\030\005 \001(\0132\032.google.protobuf.Time" +
       "stamp\022#\n\007dataset\030\006 \001(\0132\022.asgt.type.Datas" +
-      "etB;Z9github.com/e-conomic/vmlapis/gen/g" +
-      "o/asgt/v2/type;asgttypeb\006proto3"
+      "et\0221\n\rschedule_time\030\007 \001(\0132\032.google.proto" +
+      "buf.TimestampB;Z9github.com/e-conomic/vm" +
+      "lapis/gen/go/asgt/v2/type;asgttypeb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1851,7 +2116,7 @@ public final class TrainingOuterClass {
     internal_static_asgt_v2_type_Training_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_type_Training_descriptor,
-        new java.lang.String[] { "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset", });
+        new java.lang.String[] { "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset", "ScheduleTime", });
     asgt.type.DatasetOuterClass.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

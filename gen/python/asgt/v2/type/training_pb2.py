@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1b\x61sgt/v2/type/training.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/type/dataset.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xda\x01\n\x08Training\x12.\n\ncreated_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x17\n\x0ftraining_status\x18\x03 \x01(\t\x12\x1f\n\x17training_status_message\x18\x04 \x01(\t\x12/\n\x0b\x66inish_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12#\n\x07\x64\x61taset\x18\x06 \x01(\x0b\x32\x12.asgt.type.DatasetB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3'
+  serialized_pb=b'\n\x1b\x61sgt/v2/type/training.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/type/dataset.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x8d\x02\n\x08Training\x12.\n\ncreated_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x17\n\x0ftraining_status\x18\x03 \x01(\t\x12\x1f\n\x17training_status_message\x18\x04 \x01(\t\x12/\n\x0b\x66inish_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12#\n\x07\x64\x61taset\x18\x06 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x31\n\rschedule_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3'
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -78,6 +78,13 @@ _TRAINING = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='schedule_time', full_name='asgt.v2.type.Training.schedule_time', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -91,12 +98,13 @@ _TRAINING = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=104,
-  serialized_end=322,
+  serialized_end=373,
 )
 
 _TRAINING.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _TRAINING.fields_by_name['finish_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _TRAINING.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
+_TRAINING.fields_by_name['schedule_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 DESCRIPTOR.message_types_by_name['Training'] = _TRAINING
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
