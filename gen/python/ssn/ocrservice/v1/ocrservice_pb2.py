@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'B\017OcrServiceProtoZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrservice',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"Y\n\x18GetTextAnnotationRequest\x12,\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.Document\x12\x0f\n\x07preview\x18\x03 \x01(\x08\"z\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12*\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValue\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseBSB\x0fOcrServiceProtoZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3'
+  serialized_pb=b'\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"e\n\x18GetTextAnnotationRequest\x12,\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.Document\x12\x0f\n\x07preview\x18\x03 \x01(\x08\x12\n\n\x02id\x18\x04 \x01(\t\"z\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12*\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValue\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseBSB\x0fOcrServiceProtoZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_annotator_dot_v1_dot_annotator__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -51,6 +51,13 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.id', index=2,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -64,7 +71,7 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=155,
-  serialized_end=244,
+  serialized_end=256,
 )
 
 
@@ -102,8 +109,8 @@ _GETTEXTANNOTATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=246,
-  serialized_end=368,
+  serialized_start=258,
+  serialized_end=380,
 )
 
 
@@ -134,8 +141,8 @@ _OCRSCANIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=370,
-  serialized_end=405,
+  serialized_start=382,
+  serialized_end=417,
 )
 
 
@@ -166,8 +173,8 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=407,
-  serialized_end=448,
+  serialized_start=419,
+  serialized_end=460,
 )
 
 _GETTEXTANNOTATIONREQUEST.fields_by_name['document'].message_type = ssn_dot_annotator_dot_v1_dot_annotator__pb2._DOCUMENT
@@ -217,8 +224,8 @@ _OCRSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=451,
-  serialized_end=672,
+  serialized_start=463,
+  serialized_end=684,
   methods=[
   _descriptor.MethodDescriptor(
     name='OcrScanImage',

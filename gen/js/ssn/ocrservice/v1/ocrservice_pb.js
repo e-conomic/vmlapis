@@ -139,7 +139,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.toObject = function(o
 proto.ssn.ocrservice.v1.GetTextAnnotationRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f),
-    preview: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
+    preview: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+    id: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -185,6 +186,10 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.deserializeBinaryFromReader = f
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setPreview(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -226,6 +231,13 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.serializeBinaryToWriter = funct
   if (f) {
     writer.writeBool(
       3,
+      f
+    );
+  }
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -284,6 +296,24 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.getPreview = function
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.setPreview = function(value) {
   return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional string id = 4;
+ * @return {string}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.ocrservice.v1.GetTextAnnotationRequest} returns this
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.setId = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
