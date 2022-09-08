@@ -30,6 +30,11 @@ class DataServiceStub(object):
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareFeedbackRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
+        self.PrepareRenderFeedback = channel.unary_unary(
+                '/ssn.dataservice.v1.DataService/PrepareRenderFeedback',
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareRenderFeedbackRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
         self.Feedback = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/Feedback',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackRequest.SerializeToString,
@@ -74,6 +79,12 @@ class DataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def PrepareRenderFeedback(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def Feedback(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -114,6 +125,11 @@ def add_DataServiceServicer_to_server(servicer, server):
             'PrepareFeedback': grpc.unary_unary_rpc_method_handler(
                     servicer.PrepareFeedback,
                     request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareFeedbackRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'PrepareRenderFeedback': grpc.unary_unary_rpc_method_handler(
+                    servicer.PrepareRenderFeedback,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareRenderFeedbackRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
             'Feedback': grpc.unary_unary_rpc_method_handler(
@@ -190,6 +206,22 @@ class DataService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/PrepareFeedback',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareFeedbackRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def PrepareRenderFeedback(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/PrepareRenderFeedback',
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareRenderFeedbackRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

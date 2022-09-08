@@ -27,25 +27,24 @@ namespace Ssn.Ocrservice.V1 {
             "CiJzc24vb2Nyc2VydmljZS92MS9vY3JzZXJ2aWNlLnByb3RvEhFzc24ub2Ny",
             "c2VydmljZS52MRoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGiBz",
             "c24vYW5ub3RhdG9yL3YxL2Fubm90YXRvci5wcm90bxoec3NuL3R5cGUvdGV4",
-            "dF9hbm5vdGF0aW9uLnByb3RvImUKGEdldFRleHRBbm5vdGF0aW9uUmVxdWVz",
+            "dF9hbm5vdGF0aW9uLnByb3RvIlkKGEdldFRleHRBbm5vdGF0aW9uUmVxdWVz",
             "dBIsCghkb2N1bWVudBgCIAEoCzIaLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1l",
-            "bnQSDwoHcHJldmlldxgDIAEoCBIKCgJpZBgEIAEoCSJ6ChlHZXRUZXh0QW5u",
-            "b3RhdGlvblJlc3BvbnNlEjEKD3RleHRfYW5ub3RhdGlvbhgCIAEoCzIYLnNz",
-            "bi50eXBlLlRleHRBbm5vdGF0aW9uEioKBWltYWdlGAMgASgLMhsuZ29vZ2xl",
-            "LnByb3RvYnVmLkJ5dGVzVmFsdWUiIwoTT2NyU2NhbkltYWdlUmVxdWVzdBIM",
-            "CgRkYXRhGAEgASgMIikKFE9jclNjYW5JbWFnZVJlc3BvbnNlEhEKCXRlc3Nf",
-            "aG9jchgBIAEoCTLdAQoKT2NyU2VydmljZRJfCgxPY3JTY2FuSW1hZ2USJi5z",
-            "c24ub2Nyc2VydmljZS52MS5PY3JTY2FuSW1hZ2VSZXF1ZXN0Gicuc3NuLm9j",
-            "cnNlcnZpY2UudjEuT2NyU2NhbkltYWdlUmVzcG9uc2USbgoRR2V0VGV4dEFu",
-            "bm90YXRpb24SKy5zc24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlv",
-            "blJlcXVlc3QaLC5zc24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlv",
-            "blJlc3BvbnNlQlNCD09jclNlcnZpY2VQcm90b1pAZ2l0aHViLmNvbS9lLWNv",
-            "bm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL29jcnNlcnZpY2UvdjE7b2Nyc2Vy",
-            "dmljZWIGcHJvdG8z"));
+            "bnQSDwoHcHJldmlldxgDIAEoCCJ6ChlHZXRUZXh0QW5ub3RhdGlvblJlc3Bv",
+            "bnNlEjEKD3RleHRfYW5ub3RhdGlvbhgCIAEoCzIYLnNzbi50eXBlLlRleHRB",
+            "bm5vdGF0aW9uEioKBWltYWdlGAMgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkJ5",
+            "dGVzVmFsdWUiIwoTT2NyU2NhbkltYWdlUmVxdWVzdBIMCgRkYXRhGAEgASgM",
+            "IikKFE9jclNjYW5JbWFnZVJlc3BvbnNlEhEKCXRlc3NfaG9jchgBIAEoCTLd",
+            "AQoKT2NyU2VydmljZRJfCgxPY3JTY2FuSW1hZ2USJi5zc24ub2Nyc2Vydmlj",
+            "ZS52MS5PY3JTY2FuSW1hZ2VSZXF1ZXN0Gicuc3NuLm9jcnNlcnZpY2UudjEu",
+            "T2NyU2NhbkltYWdlUmVzcG9uc2USbgoRR2V0VGV4dEFubm90YXRpb24SKy5z",
+            "c24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlcXVlc3QaLC5z",
+            "c24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlc3BvbnNlQlNC",
+            "D09jclNlcnZpY2VQcm90b1pAZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vc3NuL29jcnNlcnZpY2UvdjE7b2Nyc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview", "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageRequest), global::Ssn.Ocrservice.V1.OcrScanImageRequest.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageResponse), global::Ssn.Ocrservice.V1.OcrScanImageResponse.Parser, new[]{ "TessHocr" }, null, null, null, null)
@@ -82,7 +81,6 @@ namespace Ssn.Ocrservice.V1 {
     public GetTextAnnotationRequest(GetTextAnnotationRequest other) : this() {
       document_ = other.document_ != null ? other.document_.Clone() : null;
       preview_ = other.preview_;
-      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -113,17 +111,6 @@ namespace Ssn.Ocrservice.V1 {
       }
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 4;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetTextAnnotationRequest);
@@ -139,7 +126,6 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (!object.Equals(Document, other.Document)) return false;
       if (Preview != other.Preview) return false;
-      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +134,6 @@ namespace Ssn.Ocrservice.V1 {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
       if (Preview != false) hash ^= Preview.GetHashCode();
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,10 +155,6 @@ namespace Ssn.Ocrservice.V1 {
         output.WriteRawTag(24);
         output.WriteBool(Preview);
       }
-      if (Id.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Id);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,9 +168,6 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (Preview != false) {
         size += 1 + 1;
-      }
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -211,9 +189,6 @@ namespace Ssn.Ocrservice.V1 {
       if (other.Preview != false) {
         Preview = other.Preview;
       }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -234,10 +209,6 @@ namespace Ssn.Ocrservice.V1 {
           }
           case 24: {
             Preview = input.ReadBool();
-            break;
-          }
-          case 34: {
-            Id = input.ReadString();
             break;
           }
         }

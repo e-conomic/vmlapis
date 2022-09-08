@@ -218,40 +218,44 @@ namespace Ssn.Dataservice.V1 {
             "b25maWRlbmNlcxgGIAEoCzIpLnNzbi5kYXRhc2VydmljZS52MS5QcmVkaWN0",
             "aW9uQ29uZmlkZW5jZXMSQwoTcHJlZGljdGlvbl9tZXRhZGF0YRgHIAEoCzIm",
             "LnNzbi5kYXRhc2VydmljZS52MS5QcmVkaWN0aW9uTWV0YWRhdGESHAoEdGll",
-            "chgIIAEoDjIOLnNzbi50eXBlLlRpZXISEAoIc2VnbWVudHMYCSADKAkiYAoP",
-            "RmVlZGJhY2tSZXF1ZXN0EgoKAmlkGAEgASgJEjMKC3RydWVfdmFsdWVzGAIg",
-            "ASgLMh4uc3NuLmRhdGFzZXJ2aWNlLnYxLlRydWVWYWx1ZXMSDAoEdGFncxgD",
-            "IAMoCSJUCg5NZXRyaWNzUmVxdWVzdBISCgpzdGFydF90aW1lGAIgASgDEhAK",
-            "CGVuZF90aW1lGAMgASgDEg4KBmZpZWxkcxgEIAMoCRIMCgR0YWdzGAUgAygJ",
-            "IrsBCg9GZWVkYmFja01ldHJpY3MSFgoOZG9jdW1lbnRfY291bnQYASABKAUS",
-            "FgoOZmVlZGJhY2tfY291bnQYAiABKAUSPAoTb3ZlcmFsbF9jb3JyZWN0bmVz",
-            "cxgDIAEoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzcxI6ChFm",
-            "aWVsZF9jb3JyZWN0bmVzcxgEIAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5D",
-            "b3JyZWN0bmVzcyKCAQoLQ29ycmVjdG5lc3MSDQoFZmllbGQYASABKAkSGgoS",
-            "Y29ycmVjdF9wZXJjZW50YWdlGAIgASgCEh0KFWluY29tcGxldGVfcGVyY2Vu",
-            "dGFnZRgDIAEoAhIYChBlcnJvcl9wZXJjZW50YWdlGAQgASgCEg8KB3N1cHBv",
-            "cnQYBSABKAUiHQoNRGVsZXRlUmVxdWVzdBIMCgR0YWdzGAEgAygJIjIKDUNh",
-            "bGxzUGVyTW9udGgSDQoFY2FsbHMYASABKAMSEgoKbW9udGhfbmFtZRgCIAEo",
-            "CSJTChVDYWxsc1Blck1vbnRoUmVzcG9uc2USOgoPY2FsbHNfcGVyX21vbnRo",
-            "GAEgAygLMiEuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGgytQUK",
-            "C0RhdGFTZXJ2aWNlEmcKDkNyZWF0ZURvY3VtZW50Eikuc3NuLmRhdGFzZXJ2",
-            "aWNlLnYxLkNyZWF0ZURvY3VtZW50UmVxdWVzdBoqLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEmEKDFJlYWREb2N1bWVudBIn",
-            "LnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXF1ZXN0Giguc3Nu",
-            "LmRhdGFzZXJ2aWNlLnYxLlJlYWREb2N1bWVudFJlc3BvbnNlElUKD1ByZXBh",
-            "cmVGZWVkYmFjaxIqLnNzbi5kYXRhc2VydmljZS52MS5QcmVwYXJlRmVlZGJh",
-            "Y2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmcKCEZlZWRiYWNr",
-            "EiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6Y3JlYXRl",
-            "OgEqElsKEENhbGN1bGF0ZU1ldHJpY3MSIi5zc24uZGF0YXNlcnZpY2UudjEu",
-            "TWV0cmljc1JlcXVlc3QaIy5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tN",
-            "ZXRyaWNzEmMKBkRlbGV0ZRIhLnNzbi5kYXRhc2VydmljZS52MS5EZWxldGVS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ih6C0+STAhgiEy92MS9m",
-            "ZWVkYmFjazpkZWxldGU6ASoSWAoTQ2FsbHNQZXJNb250aE1ldHJpYxIWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eRopLnNzbi5kYXRhc2VydmljZS52MS5DYWxs",
-            "c1Blck1vbnRoUmVzcG9uc2VCVkIQRGF0YVNlcnZpY2VQcm90b1pCZ2l0aHVi",
-            "LmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2RhdGFzZXJ2aWNl",
-            "L3YxO2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "chgIIAEoDjIOLnNzbi50eXBlLlRpZXISEAoIc2VnbWVudHMYCSADKAkiOgoc",
+            "UHJlcGFyZVJlbmRlckZlZWRiYWNrUmVxdWVzdBIKCgJpZBgBIAEoCRIOCgZp",
+            "bWFnZXMYAiADKAwiYAoPRmVlZGJhY2tSZXF1ZXN0EgoKAmlkGAEgASgJEjMK",
+            "C3RydWVfdmFsdWVzGAIgASgLMh4uc3NuLmRhdGFzZXJ2aWNlLnYxLlRydWVW",
+            "YWx1ZXMSDAoEdGFncxgDIAMoCSJUCg5NZXRyaWNzUmVxdWVzdBISCgpzdGFy",
+            "dF90aW1lGAIgASgDEhAKCGVuZF90aW1lGAMgASgDEg4KBmZpZWxkcxgEIAMo",
+            "CRIMCgR0YWdzGAUgAygJIrsBCg9GZWVkYmFja01ldHJpY3MSFgoOZG9jdW1l",
+            "bnRfY291bnQYASABKAUSFgoOZmVlZGJhY2tfY291bnQYAiABKAUSPAoTb3Zl",
+            "cmFsbF9jb3JyZWN0bmVzcxgDIAEoCzIfLnNzbi5kYXRhc2VydmljZS52MS5D",
+            "b3JyZWN0bmVzcxI6ChFmaWVsZF9jb3JyZWN0bmVzcxgEIAMoCzIfLnNzbi5k",
+            "YXRhc2VydmljZS52MS5Db3JyZWN0bmVzcyKCAQoLQ29ycmVjdG5lc3MSDQoF",
+            "ZmllbGQYASABKAkSGgoSY29ycmVjdF9wZXJjZW50YWdlGAIgASgCEh0KFWlu",
+            "Y29tcGxldGVfcGVyY2VudGFnZRgDIAEoAhIYChBlcnJvcl9wZXJjZW50YWdl",
+            "GAQgASgCEg8KB3N1cHBvcnQYBSABKAUiHQoNRGVsZXRlUmVxdWVzdBIMCgR0",
+            "YWdzGAEgAygJIjIKDUNhbGxzUGVyTW9udGgSDQoFY2FsbHMYASABKAMSEgoK",
+            "bW9udGhfbmFtZRgCIAEoCSJTChVDYWxsc1Blck1vbnRoUmVzcG9uc2USOgoP",
+            "Y2FsbHNfcGVyX21vbnRoGAEgAygLMiEuc3NuLmRhdGFzZXJ2aWNlLnYxLkNh",
+            "bGxzUGVyTW9udGgymAYKC0RhdGFTZXJ2aWNlEmcKDkNyZWF0ZURvY3VtZW50",
+            "Eikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNyZWF0ZURvY3VtZW50UmVxdWVzdBoq",
+            "LnNzbi5kYXRhc2VydmljZS52MS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEmEK",
+            "DFJlYWREb2N1bWVudBInLnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1l",
+            "bnRSZXF1ZXN0Giguc3NuLmRhdGFzZXJ2aWNlLnYxLlJlYWREb2N1bWVudFJl",
+            "c3BvbnNlElUKD1ByZXBhcmVGZWVkYmFjaxIqLnNzbi5kYXRhc2VydmljZS52",
+            "MS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5EmEKFVByZXBhcmVSZW5kZXJGZWVkYmFjaxIwLnNzbi5kYXRhc2Vydmlj",
+            "ZS52MS5QcmVwYXJlUmVuZGVyRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5EmcKCEZlZWRiYWNrEiMuc3NuLmRhdGFzZXJ2aWNlLnYx",
+            "LkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIegtPk",
+            "kwIYIhMvdjEvZmVlZGJhY2s6Y3JlYXRlOgEqElsKEENhbGN1bGF0ZU1ldHJp",
+            "Y3MSIi5zc24uZGF0YXNlcnZpY2UudjEuTWV0cmljc1JlcXVlc3QaIy5zc24u",
+            "ZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tNZXRyaWNzEmMKBkRlbGV0ZRIhLnNz",
+            "bi5kYXRhc2VydmljZS52MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5Ih6C0+STAhgiEy92MS9mZWVkYmFjazpkZWxldGU6ASoSWAoT",
+            "Q2FsbHNQZXJNb250aE1ldHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRop",
+            "LnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRoUmVzcG9uc2VCVkIQ",
+            "RGF0YVNlcnZpY2VQcm90b1pCZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vc3NuL2RhdGFzZXJ2aWNlL3YxO2RhdGFzZXJ2aWNlYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -265,6 +269,7 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentRequest), global::Ssn.Dataservice.V1.ReadDocumentRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentResponse), global::Ssn.Dataservice.V1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareRenderFeedbackRequest), global::Ssn.Dataservice.V1.PrepareRenderFeedbackRequest.Parser, new[]{ "Id", "Images" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackRequest), global::Ssn.Dataservice.V1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
@@ -5076,6 +5081,155 @@ namespace Ssn.Dataservice.V1 {
 
   }
 
+  public sealed partial class PrepareRenderFeedbackRequest : pb::IMessage<PrepareRenderFeedbackRequest> {
+    private static readonly pb::MessageParser<PrepareRenderFeedbackRequest> _parser = new pb::MessageParser<PrepareRenderFeedbackRequest>(() => new PrepareRenderFeedbackRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrepareRenderFeedbackRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrepareRenderFeedbackRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrepareRenderFeedbackRequest(PrepareRenderFeedbackRequest other) : this() {
+      id_ = other.id_;
+      images_ = other.images_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrepareRenderFeedbackRequest Clone() {
+      return new PrepareRenderFeedbackRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "images" field.</summary>
+    public const int ImagesFieldNumber = 2;
+    private static readonly pb::FieldCodec<pb::ByteString> _repeated_images_codec
+        = pb::FieldCodec.ForBytes(18);
+    private readonly pbc::RepeatedField<pb::ByteString> images_ = new pbc::RepeatedField<pb::ByteString>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<pb::ByteString> Images {
+      get { return images_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrepareRenderFeedbackRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrepareRenderFeedbackRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if(!images_.Equals(other.images_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      hash ^= images_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      images_.WriteTo(output, _repeated_images_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      size += images_.CalculateSize(_repeated_images_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrepareRenderFeedbackRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      images_.Add(other.images_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            images_.AddEntriesFrom(input, _repeated_images_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class FeedbackRequest : pb::IMessage<FeedbackRequest> {
     private static readonly pb::MessageParser<FeedbackRequest> _parser = new pb::MessageParser<FeedbackRequest>(() => new FeedbackRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -5084,7 +5238,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5267,7 +5421,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5464,7 +5618,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5675,7 +5829,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5916,7 +6070,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6037,7 +6191,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6194,7 +6348,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -27,6 +27,7 @@ type DataServiceClient interface {
 	ReadDocument(ctx context.Context, in *ReadDocumentRequest, opts ...grpc.CallOption) (*ReadDocumentResponse, error)
 	// For feedback
 	PrepareFeedback(ctx context.Context, in *PrepareFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	PrepareRenderFeedback(ctx context.Context, in *PrepareRenderFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	Feedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error)
@@ -62,6 +63,15 @@ func (c *dataServiceClient) ReadDocument(ctx context.Context, in *ReadDocumentRe
 func (c *dataServiceClient) PrepareFeedback(ctx context.Context, in *PrepareFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
 	err := c.cc.Invoke(ctx, "/ssn.dataservice.v1.DataService/PrepareFeedback", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dataServiceClient) PrepareRenderFeedback(ctx context.Context, in *PrepareRenderFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/ssn.dataservice.v1.DataService/PrepareRenderFeedback", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -112,6 +122,7 @@ type DataServiceServer interface {
 	ReadDocument(context.Context, *ReadDocumentRequest) (*ReadDocumentResponse, error)
 	// For feedback
 	PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*empty.Empty, error)
+	PrepareRenderFeedback(context.Context, *PrepareRenderFeedbackRequest) (*empty.Empty, error)
 	Feedback(context.Context, *FeedbackRequest) (*empty.Empty, error)
 	CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error)
 	Delete(context.Context, *DeleteRequest) (*empty.Empty, error)
@@ -131,6 +142,9 @@ func (UnimplementedDataServiceServer) ReadDocument(context.Context, *ReadDocumen
 }
 func (UnimplementedDataServiceServer) PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PrepareFeedback not implemented")
+}
+func (UnimplementedDataServiceServer) PrepareRenderFeedback(context.Context, *PrepareRenderFeedbackRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PrepareRenderFeedback not implemented")
 }
 func (UnimplementedDataServiceServer) Feedback(context.Context, *FeedbackRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Feedback not implemented")
@@ -207,6 +221,24 @@ func _DataService_PrepareFeedback_Handler(srv interface{}, ctx context.Context, 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DataServiceServer).PrepareFeedback(ctx, req.(*PrepareFeedbackRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DataService_PrepareRenderFeedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrepareRenderFeedbackRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).PrepareRenderFeedback(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ssn.dataservice.v1.DataService/PrepareRenderFeedback",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).PrepareRenderFeedback(ctx, req.(*PrepareRenderFeedbackRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -301,6 +333,10 @@ var DataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PrepareFeedback",
 			Handler:    _DataService_PrepareFeedback_Handler,
+		},
+		{
+			MethodName: "PrepareRenderFeedback",
+			Handler:    _DataService_PrepareRenderFeedback_Handler,
 		},
 		{
 			MethodName: "Feedback",

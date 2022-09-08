@@ -51705,6 +51705,753 @@ public final class DataServiceProto {
 
   }
 
+  public interface PrepareRenderFeedbackRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.PrepareRenderFeedbackRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>repeated bytes images = 2;</code>
+     * @return A list containing the images.
+     */
+    java.util.List<com.google.protobuf.ByteString> getImagesList();
+    /**
+     * <code>repeated bytes images = 2;</code>
+     * @return The count of images.
+     */
+    int getImagesCount();
+    /**
+     * <code>repeated bytes images = 2;</code>
+     * @param index The index of the element to return.
+     * @return The images at the given index.
+     */
+    com.google.protobuf.ByteString getImages(int index);
+  }
+  /**
+   * Protobuf type {@code ssn.dataservice.v1.PrepareRenderFeedbackRequest}
+   */
+  public static final class PrepareRenderFeedbackRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.PrepareRenderFeedbackRequest)
+      PrepareRenderFeedbackRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrepareRenderFeedbackRequest.newBuilder() to construct.
+    private PrepareRenderFeedbackRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrepareRenderFeedbackRequest() {
+      id_ = "";
+      images_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrepareRenderFeedbackRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PrepareRenderFeedbackRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                images_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              images_.add(input.readBytes());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          images_ = java.util.Collections.unmodifiableList(images_); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.dataservice.v1.DataServiceProto.internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.dataservice.v1.DataServiceProto.internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest.class, ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IMAGES_FIELD_NUMBER = 2;
+    private java.util.List<com.google.protobuf.ByteString> images_;
+    /**
+     * <code>repeated bytes images = 2;</code>
+     * @return A list containing the images.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getImagesList() {
+      return images_;
+    }
+    /**
+     * <code>repeated bytes images = 2;</code>
+     * @return The count of images.
+     */
+    public int getImagesCount() {
+      return images_.size();
+    }
+    /**
+     * <code>repeated bytes images = 2;</code>
+     * @param index The index of the element to return.
+     * @return The images at the given index.
+     */
+    public com.google.protobuf.ByteString getImages(int index) {
+      return images_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      for (int i = 0; i < images_.size(); i++) {
+        output.writeBytes(2, images_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < images_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(images_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getImagesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest)) {
+        return super.equals(obj);
+      }
+      ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest other = (ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getImagesList()
+          .equals(other.getImagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (getImagesCount() > 0) {
+        hash = (37 * hash) + IMAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getImagesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.dataservice.v1.PrepareRenderFeedbackRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.PrepareRenderFeedbackRequest)
+        ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.dataservice.v1.DataServiceProto.internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.dataservice.v1.DataServiceProto.internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest.class, ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest.Builder.class);
+      }
+
+      // Construct using ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        images_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.dataservice.v1.DataServiceProto.internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest getDefaultInstanceForType() {
+        return ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest build() {
+        ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest buildPartial() {
+        ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest result = new ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.id_ = id_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          images_ = java.util.Collections.unmodifiableList(images_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.images_ = images_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest) {
+          return mergeFrom((ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest other) {
+        if (other == ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.images_.isEmpty()) {
+          if (images_.isEmpty()) {
+            images_ = other.images_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureImagesIsMutable();
+            images_.addAll(other.images_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.protobuf.ByteString> images_ = java.util.Collections.emptyList();
+      private void ensureImagesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          images_ = new java.util.ArrayList<com.google.protobuf.ByteString>(images_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated bytes images = 2;</code>
+       * @return A list containing the images.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getImagesList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(images_) : images_;
+      }
+      /**
+       * <code>repeated bytes images = 2;</code>
+       * @return The count of images.
+       */
+      public int getImagesCount() {
+        return images_.size();
+      }
+      /**
+       * <code>repeated bytes images = 2;</code>
+       * @param index The index of the element to return.
+       * @return The images at the given index.
+       */
+      public com.google.protobuf.ByteString getImages(int index) {
+        return images_.get(index);
+      }
+      /**
+       * <code>repeated bytes images = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The images to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImages(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureImagesIsMutable();
+        images_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes images = 2;</code>
+       * @param value The images to add.
+       * @return This builder for chaining.
+       */
+      public Builder addImages(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureImagesIsMutable();
+        images_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes images = 2;</code>
+       * @param values The images to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllImages(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureImagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, images_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes images = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImages() {
+        images_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PrepareRenderFeedbackRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.PrepareRenderFeedbackRequest)
+    private static final ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest();
+    }
+
+    public static ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrepareRenderFeedbackRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PrepareRenderFeedbackRequest>() {
+      @java.lang.Override
+      public PrepareRenderFeedbackRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PrepareRenderFeedbackRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrepareRenderFeedbackRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrepareRenderFeedbackRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.dataservice.v1.DataServiceProto.PrepareRenderFeedbackRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface FeedbackRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.FeedbackRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -57804,6 +58551,11 @@ public final class DataServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -58066,43 +58818,47 @@ public final class DataServiceProto {
       "ionConfidences\022C\n\023prediction_metadata\030\007 " +
       "\001(\0132&.ssn.dataservice.v1.PredictionMetad" +
       "ata\022\034\n\004tier\030\010 \001(\0162\016.ssn.type.Tier\022\020\n\010seg" +
-      "ments\030\t \003(\t\"`\n\017FeedbackRequest\022\n\n\002id\030\001 \001" +
-      "(\t\0223\n\013true_values\030\002 \001(\0132\036.ssn.dataservic" +
-      "e.v1.TrueValues\022\014\n\004tags\030\003 \003(\t\"T\n\016Metrics" +
-      "Request\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_time\030" +
-      "\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017" +
-      "FeedbackMetrics\022\026\n\016document_count\030\001 \001(\005\022" +
-      "\026\n\016feedback_count\030\002 \001(\005\022<\n\023overall_corre" +
-      "ctness\030\003 \001(\0132\037.ssn.dataservice.v1.Correc" +
-      "tness\022:\n\021field_correctness\030\004 \003(\0132\037.ssn.d" +
-      "ataservice.v1.Correctness\"\202\001\n\013Correctnes" +
-      "s\022\r\n\005field\030\001 \001(\t\022\032\n\022correct_percentage\030\002" +
-      " \001(\002\022\035\n\025incomplete_percentage\030\003 \001(\002\022\030\n\020e" +
-      "rror_percentage\030\004 \001(\002\022\017\n\007support\030\005 \001(\005\"\035" +
-      "\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t\"2\n\rCallsPe" +
-      "rMonth\022\r\n\005calls\030\001 \001(\003\022\022\n\nmonth_name\030\002 \001(" +
-      "\t\"S\n\025CallsPerMonthResponse\022:\n\017calls_per_" +
-      "month\030\001 \003(\0132!.ssn.dataservice.v1.CallsPe" +
-      "rMonth2\265\005\n\013DataService\022g\n\016CreateDocument" +
-      "\022).ssn.dataservice.v1.CreateDocumentRequ" +
-      "est\032*.ssn.dataservice.v1.CreateDocumentR" +
-      "esponse\022a\n\014ReadDocument\022\'.ssn.dataservic" +
-      "e.v1.ReadDocumentRequest\032(.ssn.dataservi" +
-      "ce.v1.ReadDocumentResponse\022U\n\017PrepareFee" +
-      "dback\022*.ssn.dataservice.v1.PrepareFeedba" +
-      "ckRequest\032\026.google.protobuf.Empty\022g\n\010Fee" +
-      "dback\022#.ssn.dataservice.v1.FeedbackReque" +
-      "st\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/" +
-      "feedback:create:\001*\022[\n\020CalculateMetrics\022\"" +
-      ".ssn.dataservice.v1.MetricsRequest\032#.ssn" +
-      ".dataservice.v1.FeedbackMetrics\022c\n\006Delet" +
-      "e\022!.ssn.dataservice.v1.DeleteRequest\032\026.g" +
-      "oogle.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedba" +
-      "ck:delete:\001*\022X\n\023CallsPerMonthMetric\022\026.go" +
-      "ogle.protobuf.Empty\032).ssn.dataservice.v1" +
-      ".CallsPerMonthResponseBVB\020DataServicePro" +
-      "toZBgithub.com/e-conomic/vmlapis/gen/go/" +
-      "ssn/dataservice/v1;dataserviceb\006proto3"
+      "ments\030\t \003(\t\":\n\034PrepareRenderFeedbackRequ" +
+      "est\022\n\n\002id\030\001 \001(\t\022\016\n\006images\030\002 \003(\014\"`\n\017Feedb" +
+      "ackRequest\022\n\n\002id\030\001 \001(\t\0223\n\013true_values\030\002 " +
+      "\001(\0132\036.ssn.dataservice.v1.TrueValues\022\014\n\004t" +
+      "ags\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nstart_tim" +
+      "e\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003(" +
+      "\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017FeedbackMetrics\022\026\n\016d" +
+      "ocument_count\030\001 \001(\005\022\026\n\016feedback_count\030\002 " +
+      "\001(\005\022<\n\023overall_correctness\030\003 \001(\0132\037.ssn.d" +
+      "ataservice.v1.Correctness\022:\n\021field_corre" +
+      "ctness\030\004 \003(\0132\037.ssn.dataservice.v1.Correc" +
+      "tness\"\202\001\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022" +
+      "correct_percentage\030\002 \001(\002\022\035\n\025incomplete_p" +
+      "ercentage\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(" +
+      "\002\022\017\n\007support\030\005 \001(\005\"\035\n\rDeleteRequest\022\014\n\004t" +
+      "ags\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(" +
+      "\003\022\022\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerMonthRe" +
+      "sponse\022:\n\017calls_per_month\030\001 \003(\0132!.ssn.da" +
+      "taservice.v1.CallsPerMonth2\230\006\n\013DataServi" +
+      "ce\022g\n\016CreateDocument\022).ssn.dataservice.v" +
+      "1.CreateDocumentRequest\032*.ssn.dataservic" +
+      "e.v1.CreateDocumentResponse\022a\n\014ReadDocum" +
+      "ent\022\'.ssn.dataservice.v1.ReadDocumentReq" +
+      "uest\032(.ssn.dataservice.v1.ReadDocumentRe" +
+      "sponse\022U\n\017PrepareFeedback\022*.ssn.dataserv" +
+      "ice.v1.PrepareFeedbackRequest\032\026.google.p" +
+      "rotobuf.Empty\022a\n\025PrepareRenderFeedback\0220" +
+      ".ssn.dataservice.v1.PrepareRenderFeedbac" +
+      "kRequest\032\026.google.protobuf.Empty\022g\n\010Feed" +
+      "back\022#.ssn.dataservice.v1.FeedbackReques" +
+      "t\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/f" +
+      "eedback:create:\001*\022[\n\020CalculateMetrics\022\"." +
+      "ssn.dataservice.v1.MetricsRequest\032#.ssn." +
+      "dataservice.v1.FeedbackMetrics\022c\n\006Delete" +
+      "\022!.ssn.dataservice.v1.DeleteRequest\032\026.go" +
+      "ogle.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedbac" +
+      "k:delete:\001*\022X\n\023CallsPerMonthMetric\022\026.goo" +
+      "gle.protobuf.Empty\032).ssn.dataservice.v1." +
+      "CallsPerMonthResponseBVB\020DataServiceProt" +
+      "oZBgithub.com/e-conomic/vmlapis/gen/go/s" +
+      "sn/dataservice/v1;dataserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -58177,44 +58933,50 @@ public final class DataServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments", });
-    internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor =
+    internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1_PrepareRenderFeedbackRequest_descriptor,
+        new java.lang.String[] { "Id", "Images", });
+    internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_ssn_dataservice_v1_FeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "TrueValues", "Tags", });
     internal_static_ssn_dataservice_v1_MetricsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_ssn_dataservice_v1_MetricsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_MetricsRequest_descriptor,
         new java.lang.String[] { "StartTime", "EndTime", "Fields", "Tags", });
     internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_ssn_dataservice_v1_FeedbackMetrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor,
         new java.lang.String[] { "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness", });
     internal_static_ssn_dataservice_v1_Correctness_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_ssn_dataservice_v1_Correctness_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_Correctness_descriptor,
         new java.lang.String[] { "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support", });
     internal_static_ssn_dataservice_v1_DeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_ssn_dataservice_v1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_DeleteRequest_descriptor,
         new java.lang.String[] { "Tags", });
     internal_static_ssn_dataservice_v1_CallsPerMonth_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_ssn_dataservice_v1_CallsPerMonth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_CallsPerMonth_descriptor,
         new java.lang.String[] { "Calls", "MonthName", });
     internal_static_ssn_dataservice_v1_CallsPerMonthResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_ssn_dataservice_v1_CallsPerMonthResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_CallsPerMonthResponse_descriptor,

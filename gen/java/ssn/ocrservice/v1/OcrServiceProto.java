@@ -38,18 +38,6 @@ public final class OcrServiceProto {
      * @return The preview.
      */
     boolean getPreview();
-
-    /**
-     * <code>string id = 4;</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 4;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
   }
   /**
    * Protobuf type {@code ssn.ocrservice.v1.GetTextAnnotationRequest}
@@ -64,7 +52,6 @@ public final class OcrServiceProto {
       super(builder);
     }
     private GetTextAnnotationRequest() {
-      id_ = "";
     }
 
     @java.lang.Override
@@ -113,12 +100,6 @@ public final class OcrServiceProto {
             case 24: {
 
               preview_ = input.readBool();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
               break;
             }
             default: {
@@ -190,44 +171,6 @@ public final class OcrServiceProto {
       return preview_;
     }
 
-    public static final int ID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 4;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 4;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -248,9 +191,6 @@ public final class OcrServiceProto {
       if (preview_ != false) {
         output.writeBool(3, preview_);
       }
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, id_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -267,9 +207,6 @@ public final class OcrServiceProto {
       if (preview_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, preview_);
-      }
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, id_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -293,8 +230,6 @@ public final class OcrServiceProto {
       }
       if (getPreview()
           != other.getPreview()) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -313,8 +248,6 @@ public final class OcrServiceProto {
       hash = (37 * hash) + PREVIEW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPreview());
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -456,8 +389,6 @@ public final class OcrServiceProto {
         }
         preview_ = false;
 
-        id_ = "";
-
         return this;
       }
 
@@ -490,7 +421,6 @@ public final class OcrServiceProto {
           result.document_ = documentBuilder_.build();
         }
         result.preview_ = preview_;
-        result.id_ = id_;
         onBuilt();
         return result;
       }
@@ -544,10 +474,6 @@ public final class OcrServiceProto {
         }
         if (other.getPreview() != false) {
           setPreview(other.getPreview());
-        }
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -724,82 +650,6 @@ public final class OcrServiceProto {
       public Builder clearPreview() {
         
         preview_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 4;</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 4;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 4;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 4;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
         onChanged();
         return this;
       }
@@ -2772,23 +2622,23 @@ public final class OcrServiceProto {
       "\n\"ssn/ocrservice/v1/ocrservice.proto\022\021ss" +
       "n.ocrservice.v1\032\036google/protobuf/wrapper" +
       "s.proto\032 ssn/annotator/v1/annotator.prot" +
-      "o\032\036ssn/type/text_annotation.proto\"e\n\030Get" +
+      "o\032\036ssn/type/text_annotation.proto\"Y\n\030Get" +
       "TextAnnotationRequest\022,\n\010document\030\002 \001(\0132" +
       "\032.ssn.annotator.v1.Document\022\017\n\007preview\030\003" +
-      " \001(\010\022\n\n\002id\030\004 \001(\t\"z\n\031GetTextAnnotationRes" +
-      "ponse\0221\n\017text_annotation\030\002 \001(\0132\030.ssn.typ" +
-      "e.TextAnnotation\022*\n\005image\030\003 \001(\0132\033.google" +
-      ".protobuf.BytesValue\"#\n\023OcrScanImageRequ" +
-      "est\022\014\n\004data\030\001 \001(\014\")\n\024OcrScanImageRespons" +
-      "e\022\021\n\ttess_hocr\030\001 \001(\t2\335\001\n\nOcrService\022_\n\014O" +
-      "crScanImage\022&.ssn.ocrservice.v1.OcrScanI" +
-      "mageRequest\032\'.ssn.ocrservice.v1.OcrScanI" +
-      "mageResponse\022n\n\021GetTextAnnotation\022+.ssn." +
-      "ocrservice.v1.GetTextAnnotationRequest\032," +
-      ".ssn.ocrservice.v1.GetTextAnnotationResp" +
-      "onseBSB\017OcrServiceProtoZ@github.com/e-co" +
-      "nomic/vmlapis/gen/go/ssn/ocrservice/v1;o" +
-      "crserviceb\006proto3"
+      " \001(\010\"z\n\031GetTextAnnotationResponse\0221\n\017tex" +
+      "t_annotation\030\002 \001(\0132\030.ssn.type.TextAnnota" +
+      "tion\022*\n\005image\030\003 \001(\0132\033.google.protobuf.By" +
+      "tesValue\"#\n\023OcrScanImageRequest\022\014\n\004data\030" +
+      "\001 \001(\014\")\n\024OcrScanImageResponse\022\021\n\ttess_ho" +
+      "cr\030\001 \001(\t2\335\001\n\nOcrService\022_\n\014OcrScanImage\022" +
+      "&.ssn.ocrservice.v1.OcrScanImageRequest\032" +
+      "\'.ssn.ocrservice.v1.OcrScanImageResponse" +
+      "\022n\n\021GetTextAnnotation\022+.ssn.ocrservice.v" +
+      "1.GetTextAnnotationRequest\032,.ssn.ocrserv" +
+      "ice.v1.GetTextAnnotationResponseBSB\017OcrS" +
+      "erviceProtoZ@github.com/e-conomic/vmlapi" +
+      "s/gen/go/ssn/ocrservice/v1;ocrserviceb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2802,7 +2652,7 @@ public final class OcrServiceProto {
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor,
-        new java.lang.String[] { "Document", "Preview", "Id", });
+        new java.lang.String[] { "Document", "Preview", });
     internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable = new

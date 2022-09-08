@@ -157,6 +157,26 @@ func (mr *MockDataServiceClientMockRecorder) PrepareFeedback(ctx, in interface{}
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PrepareFeedback", reflect.TypeOf((*MockDataServiceClient)(nil).PrepareFeedback), varargs...)
 }
 
+// PrepareRenderFeedback mocks base method.
+func (m *MockDataServiceClient) PrepareRenderFeedback(ctx context.Context, in *dataservice.PrepareRenderFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "PrepareRenderFeedback", varargs...)
+	ret0, _ := ret[0].(*empty.Empty)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PrepareRenderFeedback indicates an expected call of PrepareRenderFeedback.
+func (mr *MockDataServiceClientMockRecorder) PrepareRenderFeedback(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PrepareRenderFeedback", reflect.TypeOf((*MockDataServiceClient)(nil).PrepareRenderFeedback), varargs...)
+}
+
 // ReadDocument mocks base method.
 func (m *MockDataServiceClient) ReadDocument(ctx context.Context, in *dataservice.ReadDocumentRequest, opts ...grpc.CallOption) (*dataservice.ReadDocumentResponse, error) {
 	m.ctrl.T.Helper()
@@ -288,6 +308,21 @@ func (m *MockDataServiceServer) PrepareFeedback(arg0 context.Context, arg1 *data
 func (mr *MockDataServiceServerMockRecorder) PrepareFeedback(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PrepareFeedback", reflect.TypeOf((*MockDataServiceServer)(nil).PrepareFeedback), arg0, arg1)
+}
+
+// PrepareRenderFeedback mocks base method.
+func (m *MockDataServiceServer) PrepareRenderFeedback(arg0 context.Context, arg1 *dataservice.PrepareRenderFeedbackRequest) (*empty.Empty, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PrepareRenderFeedback", arg0, arg1)
+	ret0, _ := ret[0].(*empty.Empty)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PrepareRenderFeedback indicates an expected call of PrepareRenderFeedback.
+func (mr *MockDataServiceServerMockRecorder) PrepareRenderFeedback(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PrepareRenderFeedback", reflect.TypeOf((*MockDataServiceServer)(nil).PrepareRenderFeedback), arg0, arg1)
 }
 
 // ReadDocument mocks base method.

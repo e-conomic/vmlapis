@@ -329,6 +329,86 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.prepareFeedback =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.dataservice.v1.PrepareRenderFeedbackRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_DataService_PrepareRenderFeedback = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/PrepareRenderFeedback',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.dataservice.v1.PrepareRenderFeedbackRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.ssn.dataservice.v1.PrepareRenderFeedbackRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.ssn.dataservice.v1.PrepareRenderFeedbackRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodInfo_DataService_PrepareRenderFeedback = new grpc.web.AbstractClientBase.MethodInfo(
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.ssn.dataservice.v1.PrepareRenderFeedbackRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.PrepareRenderFeedbackRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.dataservice.v1.DataServiceClient.prototype.prepareRenderFeedback =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/PrepareRenderFeedback',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_PrepareRenderFeedback,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.PrepareRenderFeedbackRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     A native promise that resolves to the response
+ */
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.prepareRenderFeedback =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/PrepareRenderFeedback',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_PrepareRenderFeedback);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.dataservice.v1.FeedbackRequest,
  *   !proto.google.protobuf.Empty>}
  */

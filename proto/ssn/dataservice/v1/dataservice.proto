@@ -20,6 +20,7 @@ service DataService {
   rpc ReadDocument(ReadDocumentRequest) returns (ReadDocumentResponse);
   // For feedback
   rpc PrepareFeedback(PrepareFeedbackRequest) returns (google.protobuf.Empty);
+  rpc PrepareRenderFeedback(PrepareRenderFeedbackRequest) returns (google.protobuf.Empty);
   rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/feedback:create"
@@ -230,6 +231,10 @@ message PrepareFeedbackRequest {
   PredictionMetadata prediction_metadata = 7;
   ssn.type.Tier tier = 8;
   repeated string segments = 9;
+}
+message PrepareRenderFeedbackRequest {
+  string id = 1;
+  repeated bytes images = 2;
 }
 
 message FeedbackRequest {
