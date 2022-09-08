@@ -1726,6 +1726,19 @@
         }
       }
     },
+    "v1RenderedImage": {
+      "type": "object",
+      "properties": {
+        "pageNumber": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "image": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
     "v1TrueValues": {
       "type": "object",
       "properties": {

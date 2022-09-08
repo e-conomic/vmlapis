@@ -232,9 +232,14 @@ message PrepareFeedbackRequest {
   ssn.type.Tier tier = 8;
   repeated string segments = 9;
 }
+
+message RenderedImage{
+  uint32 page_number = 1;
+  bytes image = 2;
+}
 message PrepareRenderFeedbackRequest {
   string id = 1;
-  repeated bytes images = 2;
+  repeated RenderedImage rendered_images = 2;
 }
 
 message FeedbackRequest {
