@@ -1,0 +1,26 @@
+version: v1
+plugins:  
+  - name: go
+    out: gen/go
+    opt: paths=source_relative
+  - name: go-grpc
+    out: gen/go
+    opt:
+     - paths=source_relative
+     - require_unimplemented_servers=false
+  - name: python
+    out: gen/python
+  # python -m pip install grpcio
+  - name: python-grpc
+    out: gen/python
+    path: protoc-gen-python_grpc
+  - name: js
+    out: gen/js
+    opt: import_style=commonjs,binary
+  # npm install grpc-tools --global
+  - name: js-ts-grpc
+    out: gen/js
+    opt: import_style=commonjs,mode=grpcwebtext
+    path: grpc_tools_node_protoc_plugin
+  - name: ts
+    out: gen/js
