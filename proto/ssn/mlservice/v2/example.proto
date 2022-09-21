@@ -2,7 +2,7 @@
 // model training or inference.
 syntax = "proto3";
 
-import "tensorflow/core/example/feature.proto";
+import "ssn/mlservice/v2/feature.proto";
 option cc_enable_arenas = true;
 option java_outer_classname = "ExampleProtos";
 option java_multiple_files = true;

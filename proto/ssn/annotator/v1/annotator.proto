@@ -5,7 +5,7 @@ package ssn.annotator.v1;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
 
 import "google/api/annotations.proto";
-import "options/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
 
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";

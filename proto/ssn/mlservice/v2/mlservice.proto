@@ -8,7 +8,7 @@ option java_outer_classname = "MlServiceProtos";
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
-import "tensorflow/core/example/example.proto";
+import "ssn/mlservice/v2/example.proto";
 
 // Feature Generation Service
 service MlService {
