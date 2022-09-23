@@ -24,20 +24,22 @@ namespace Asgt.Type {
     static ModelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
-            "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsgCCgVN",
-            "b2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpjcmVhdGVkX2F0GAQg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIbCgxkYXRhc2V0X3Np",
-            "emUYBSABKAVCBeo/AhgBEhwKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgB",
-            "EjoKEWNvbmZpZGVuY2Vfc2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdl",
-            "dE1ldHJpY3NCBeo/AhgBEi4KCmlucHV0X3R5cGUYCCABKA4yGi5hc2d0LnR5",
-            "cGUuTW9kZWwuSW5wdXRUeXBlEhQKDGRhdGFzZXRfdHlwZRgJIAEoCSI0CglJ",
-            "bnB1dFR5cGUSEwoPRkVBVFVSRV9URU5TT1JTEAASEgoORVhBTVBMRV9URU5T",
-            "T1IQAUoECAEQA0I4WjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
-            "bi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
+            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRocZ2VuX2JxX3Nj",
+            "aGVtYS9icV9maWVsZC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
+            "cC5wcm90bxoeYXNndC90eXBlL3RhcmdldF9tZXRyaWNzLnByb3RvIqEDCgVN",
+            "b2RlbBIfCgd2ZXJzaW9uGAMgASgDQgXqPwIIAVIHdmVyc2lvbhI5CgpjcmVh",
+            "dGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJY3Jl",
+            "YXRlZEF0EigKDGRhdGFzZXRfc2l6ZRgFIAEoBUIF6j8CGAFSC2RhdGFzZXRT",
+            "aXplEioKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgBUgx0cmFpbmluZ1Np",
+            "emUSTAoRY29uZmlkZW5jZV9zY29yZXMYByADKAsyGC5hc2d0LnR5cGUuVGFy",
+            "Z2V0TWV0cmljc0IF6j8CGAFSEGNvbmZpZGVuY2VTY29yZXMSOQoKaW5wdXRf",
+            "dHlwZRgIIAEoDjIaLmFzZ3QudHlwZS5Nb2RlbC5JbnB1dFR5cGVSCWlucHV0",
+            "VHlwZRIhCgxkYXRhc2V0X3R5cGUYCSABKAlSC2RhdGFzZXRUeXBlIjQKCUlu",
+            "cHV0VHlwZRITCg9GRUFUVVJFX1RFTlNPUlMQABISCg5FWEFNUExFX1RFTlNP",
+            "UhABSgQIARADQjhaNmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
+            "L2dvL2FzZ3QvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
           }));
@@ -46,23 +48,31 @@ namespace Asgt.Type {
 
   }
   #region Messages
-  public sealed partial class Model : pb::IMessage<Model> {
+  public sealed partial class Model : pb::IMessage<Model>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Model> _parser = new pb::MessageParser<Model>(() => new Model());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Model> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Asgt.Type.ModelReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Model() {
       OnConstruction();
     }
@@ -70,6 +80,7 @@ namespace Asgt.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Model(Model other) : this() {
       version_ = other.version_;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
@@ -82,6 +93,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Model Clone() {
       return new Model(this);
     }
@@ -90,6 +102,7 @@ namespace Asgt.Type {
     public const int VersionFieldNumber = 3;
     private long version_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Version {
       get { return version_; }
       set {
@@ -101,6 +114,7 @@ namespace Asgt.Type {
     public const int CreatedAtFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
       get { return createdAt_; }
       set {
@@ -112,6 +126,7 @@ namespace Asgt.Type {
     public const int DatasetSizeFieldNumber = 5;
     private int datasetSize_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DatasetSize {
       get { return datasetSize_; }
       set {
@@ -123,6 +138,7 @@ namespace Asgt.Type {
     public const int TrainingSizeFieldNumber = 6;
     private int trainingSize_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TrainingSize {
       get { return trainingSize_; }
       set {
@@ -136,6 +152,7 @@ namespace Asgt.Type {
         = pb::FieldCodec.ForMessage(58, global::Asgt.Type.TargetMetrics.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics> confidenceScores_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.TargetMetrics> ConfidenceScores {
       get { return confidenceScores_; }
     }
@@ -144,6 +161,7 @@ namespace Asgt.Type {
     public const int InputTypeFieldNumber = 8;
     private global::Asgt.Type.Model.Types.InputType inputType_ = global::Asgt.Type.Model.Types.InputType.FeatureTensors;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Model.Types.InputType InputType {
       get { return inputType_; }
       set {
@@ -155,6 +173,7 @@ namespace Asgt.Type {
     public const int DatasetTypeFieldNumber = 9;
     private string datasetType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatasetType {
       get { return datasetType_; }
       set {
@@ -163,11 +182,13 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Model);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Model other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -186,6 +207,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Version != 0L) hash ^= Version.GetHashCode();
@@ -202,12 +224,17 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Version != 0L) {
         output.WriteRawTag(24);
         output.WriteInt64(Version);
@@ -236,9 +263,46 @@ namespace Asgt.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Version != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Version);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreatedAt);
+      }
+      if (DatasetSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(TrainingSize);
+      }
+      confidenceScores_.WriteTo(ref output, _repeated_confidenceScores_codec);
+      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) InputType);
+      }
+      if (DatasetType.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DatasetType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Version != 0L) {
@@ -267,6 +331,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Model other) {
       if (other == null) {
         return;
@@ -297,7 +362,11 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -337,11 +406,59 @@ namespace Asgt.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 24: {
+            Version = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 40: {
+            DatasetSize = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            TrainingSize = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            confidenceScores_.AddEntriesFrom(ref input, _repeated_confidenceScores_codec);
+            break;
+          }
+          case 64: {
+            InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            DatasetType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Model message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public enum InputType {
         [pbr::OriginalName("FEATURE_TENSORS")] FeatureTensors = 0,

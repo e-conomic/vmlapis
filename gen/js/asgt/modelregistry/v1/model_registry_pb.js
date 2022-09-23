@@ -2,28 +2,31 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
-goog.object.extend(proto, asgt_type_dataset_pb);
+var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
+goog.object.extend(proto, google_protobuf_empty_pb);
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 goog.object.extend(proto, asgt_type_model_pb);
+var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
+goog.object.extend(proto, asgt_type_dataset_pb);
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 goog.object.extend(proto, asgt_type_revision_pb);
 var asgt_type_target_metrics_pb = require('../../../asgt/type/target_metrics_pb.js');
 goog.object.extend(proto, asgt_type_target_metrics_pb);
 var asgt_type_train_statistics_pb = require('../../../asgt/type/train_statistics_pb.js');
 goog.object.extend(proto, asgt_type_train_statistics_pb);
-var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
-goog.object.extend(proto, google_protobuf_empty_pb);
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelRequest', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelResponse', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1.RegisterModelRequest', null, global);

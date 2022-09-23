@@ -26,11 +26,11 @@ namespace Asgt.Type {
           string.Concat(
             "CiBhc2d0L3R5cGUvdHJhaW5fbW9kZWxfdGFzay5wcm90bxIJYXNndC50eXBl",
             "Ghdhc2d0L3R5cGUvZGF0YXNldC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
-            "LnByb3RvInMKDlRyYWluTW9kZWxUYXNrEiMKB2RhdGFzZXQYASABKAsyEi5h",
-            "c2d0LnR5cGUuRGF0YXNldBIlCghyZXZpc2lvbhgCIAEoCzITLmFzZ3QudHlw",
-            "ZS5SZXZpc2lvbhIVCg1tb2RlbF92ZXJzaW9uGAQgASgDQjhaNmdpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlw",
-            "ZWIGcHJvdG8z"));
+            "LnByb3RvIpQBCg5UcmFpbk1vZGVsVGFzaxIsCgdkYXRhc2V0GAEgASgLMhIu",
+            "YXNndC50eXBlLkRhdGFzZXRSB2RhdGFzZXQSLwoIcmV2aXNpb24YAiABKAsy",
+            "Ey5hc2d0LnR5cGUuUmV2aXNpb25SCHJldmlzaW9uEiMKDW1vZGVsX3ZlcnNp",
+            "b24YBCABKANSDG1vZGVsVmVyc2lvbkI4WjZnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -41,23 +41,31 @@ namespace Asgt.Type {
 
   }
   #region Messages
-  public sealed partial class TrainModelTask : pb::IMessage<TrainModelTask> {
+  public sealed partial class TrainModelTask : pb::IMessage<TrainModelTask>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TrainModelTask> _parser = new pb::MessageParser<TrainModelTask>(() => new TrainModelTask());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TrainModelTask> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Asgt.Type.TrainModelTaskReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainModelTask() {
       OnConstruction();
     }
@@ -65,6 +73,7 @@ namespace Asgt.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainModelTask(TrainModelTask other) : this() {
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       revision_ = other.revision_ != null ? other.revision_.Clone() : null;
@@ -73,6 +82,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainModelTask Clone() {
       return new TrainModelTask(this);
     }
@@ -81,6 +91,7 @@ namespace Asgt.Type {
     public const int DatasetFieldNumber = 1;
     private global::Asgt.Type.Dataset dataset_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Dataset Dataset {
       get { return dataset_; }
       set {
@@ -92,6 +103,7 @@ namespace Asgt.Type {
     public const int RevisionFieldNumber = 2;
     private global::Asgt.Type.Revision revision_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Revision Revision {
       get { return revision_; }
       set {
@@ -103,6 +115,7 @@ namespace Asgt.Type {
     public const int ModelVersionFieldNumber = 4;
     private long modelVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ModelVersion {
       get { return modelVersion_; }
       set {
@@ -111,11 +124,13 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TrainModelTask);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TrainModelTask other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -130,6 +145,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
@@ -142,12 +158,17 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (dataset_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Dataset);
@@ -163,9 +184,33 @@ namespace Asgt.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dataset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Dataset);
+      }
+      if (revision_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Revision);
+      }
+      if (ModelVersion != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(ModelVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (dataset_ != null) {
@@ -184,6 +229,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TrainModelTask other) {
       if (other == null) {
         return;
@@ -207,7 +253,11 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -234,7 +284,41 @@ namespace Asgt.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (dataset_ == null) {
+              Dataset = new global::Asgt.Type.Dataset();
+            }
+            input.ReadMessage(Dataset);
+            break;
+          }
+          case 18: {
+            if (revision_ == null) {
+              Revision = new global::Asgt.Type.Revision();
+            }
+            input.ReadMessage(Revision);
+            break;
+          }
+          case 32: {
+            ModelVersion = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

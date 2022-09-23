@@ -25,13 +25,14 @@ namespace Ssn.Access.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chpzc24vYWNjZXNzL3YxL2FjY2Vzcy5wcm90bxINc3NuLmFjY2Vzcy52MRoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byIrCg9WYWxldEtleVJlcXVl",
-            "c3QSCwoDc3ViGAEgASgJEgsKA2V4cBgCIAEoAyItChBWYWxldEtleVJlc3Bv",
-            "bnNlEgoKAmlkGAEgASgJEg0KBXRva2VuGAIgASgJMn0KBkFjY2VzcxJzChBH",
-            "ZW5lcmF0ZVZhbGV0S2V5Eh4uc3NuLmFjY2Vzcy52MS5WYWxldEtleVJlcXVl",
-            "c3QaHy5zc24uYWNjZXNzLnYxLlZhbGV0S2V5UmVzcG9uc2UiHoLT5JMCGCIT",
-            "L3YxL2FjY2Vzcy92YWxldGtleToBKkI6WjhnaXRodWIuY29tL2UtY29ub21p",
-            "Yy92bWxhcGlzL2dlbi9nby9zc24vYWNjZXNzL3YxO2FjY2Vzc2IGcHJvdG8z"));
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byI1Cg9WYWxldEtleVJlcXVl",
+            "c3QSEAoDc3ViGAEgASgJUgNzdWISEAoDZXhwGAIgASgDUgNleHAiOAoQVmFs",
+            "ZXRLZXlSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSFAoFdG9rZW4YAiABKAlS",
+            "BXRva2VuMn0KBkFjY2VzcxJzChBHZW5lcmF0ZVZhbGV0S2V5Eh4uc3NuLmFj",
+            "Y2Vzcy52MS5WYWxldEtleVJlcXVlc3QaHy5zc24uYWNjZXNzLnYxLlZhbGV0",
+            "S2V5UmVzcG9uc2UiHoLT5JMCGCITL3YxL2FjY2Vzcy92YWxldGtleToBKkI6",
+            "WjhnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYWNj",
+            "ZXNzL3YxO2FjY2Vzc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -43,23 +44,31 @@ namespace Ssn.Access.V1 {
 
   }
   #region Messages
-  public sealed partial class ValetKeyRequest : pb::IMessage<ValetKeyRequest> {
+  public sealed partial class ValetKeyRequest : pb::IMessage<ValetKeyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ValetKeyRequest> _parser = new pb::MessageParser<ValetKeyRequest>(() => new ValetKeyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ValetKeyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Access.V1.AccessReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValetKeyRequest() {
       OnConstruction();
     }
@@ -67,6 +76,7 @@ namespace Ssn.Access.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValetKeyRequest(ValetKeyRequest other) : this() {
       sub_ = other.sub_;
       exp_ = other.exp_;
@@ -74,6 +84,7 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValetKeyRequest Clone() {
       return new ValetKeyRequest(this);
     }
@@ -86,6 +97,7 @@ namespace Ssn.Access.V1 {
     /// https://tools.ietf.org/html/rfc7519#section-4.1.2
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sub {
       get { return sub_; }
       set {
@@ -102,6 +114,7 @@ namespace Ssn.Access.V1 {
     /// https://tools.ietf.org/html/rfc7519#section-4.1.4
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Exp {
       get { return exp_; }
       set {
@@ -110,11 +123,13 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ValetKeyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ValetKeyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -128,6 +143,7 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Sub.Length != 0) hash ^= Sub.GetHashCode();
@@ -139,12 +155,17 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Sub.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Sub);
@@ -156,9 +177,29 @@ namespace Ssn.Access.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Sub.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Sub);
+      }
+      if (Exp != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Exp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Sub.Length != 0) {
@@ -174,6 +215,7 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ValetKeyRequest other) {
       if (other == null) {
         return;
@@ -188,7 +230,11 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -205,27 +251,59 @@ namespace Ssn.Access.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Sub = input.ReadString();
+            break;
+          }
+          case 16: {
+            Exp = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class ValetKeyResponse : pb::IMessage<ValetKeyResponse> {
+  public sealed partial class ValetKeyResponse : pb::IMessage<ValetKeyResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ValetKeyResponse> _parser = new pb::MessageParser<ValetKeyResponse>(() => new ValetKeyResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ValetKeyResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Access.V1.AccessReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValetKeyResponse() {
       OnConstruction();
     }
@@ -233,6 +311,7 @@ namespace Ssn.Access.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValetKeyResponse(ValetKeyResponse other) : this() {
       id_ = other.id_;
       token_ = other.token_;
@@ -240,6 +319,7 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValetKeyResponse Clone() {
       return new ValetKeyResponse(this);
     }
@@ -251,6 +331,7 @@ namespace Ssn.Access.V1 {
     /// Key for this key
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -265,6 +346,7 @@ namespace Ssn.Access.V1 {
     /// A JWT Token
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Token {
       get { return token_; }
       set {
@@ -273,11 +355,13 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ValetKeyResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ValetKeyResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -291,6 +375,7 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -302,12 +387,17 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
@@ -319,9 +409,29 @@ namespace Ssn.Access.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Token.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Token);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -337,6 +447,7 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ValetKeyResponse other) {
       if (other == null) {
         return;
@@ -351,7 +462,11 @@ namespace Ssn.Access.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -368,7 +483,31 @@ namespace Ssn.Access.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Token = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

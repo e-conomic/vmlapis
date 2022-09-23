@@ -25,22 +25,23 @@ namespace Ssn.Pdfservice.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJzc24vcGRmc2VydmljZS92MS9wZGZzZXJ2aWNlLnByb3RvEhFzc24ucGRm",
-            "c2VydmljZS52MSL5AgoTUmFzdGVyaXplUGRmUmVxdWVzdBIMCgRkYXRhGAEg",
-            "ASgMEgsKA2RwaRgCIAEoDRI9CgZmb3JtYXQYAyABKA4yLS5zc24ucGRmc2Vy",
-            "dmljZS52MS5SYXN0ZXJpemVQZGZSZXF1ZXN0LkZvcm1hdBJACgVjb2xvchgE",
-            "IAEoDjIxLnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rlcml6ZVBkZlJlcXVlc3Qu",
-            "Q29sb3JTcGFjZRJACgVwYWdlcxgFIAEoDjIxLnNzbi5wZGZzZXJ2aWNlLnYx",
-            "LlJhc3Rlcml6ZVBkZlJlcXVlc3QuUGFnZU9wdGlvbiIlCgZGb3JtYXQSBwoD",
-            "UE5HEAASCAoESlBFRxABEggKBFdFQlAQAiIhCgpDb2xvclNwYWNlEggKBEdS",
-            "QVkQABIJCgVDT0xPUhABIjoKClBhZ2VPcHRpb24SDgoKRklSU1RfTEFTVBAA",
-            "EgkKBUZJUlNUEAESCAoETEFTVBACEgcKA0FMTBADImEKFFJhc3Rlcml6ZVBk",
-            "ZlJlc3BvbnNlEg0KBWluZGV4GAEgASgNEgwKBGRhdGEYAiABKAwSDQoFd2lk",
-            "dGgYAyABKA0SDgoGaGVpZ2h0GAQgASgNEg0KBXNjYWxlGAUgASgBMm8KClBk",
-            "ZlNlcnZpY2USYQoMUmFzdGVyaXplUGRmEiYuc3NuLnBkZnNlcnZpY2UudjEu",
-            "UmFzdGVyaXplUGRmUmVxdWVzdBonLnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rl",
-            "cml6ZVBkZlJlc3BvbnNlMAFCU0IPUGRmU2VydmljZVByb3RvWkBnaXRodWIu",
-            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vcGRmc2VydmljZS92",
-            "MTtwZGZzZXJ2aWNlYgZwcm90bzM="));
+            "c2VydmljZS52MSKaAwoTUmFzdGVyaXplUGRmUmVxdWVzdBISCgRkYXRhGAEg",
+            "ASgMUgRkYXRhEhAKA2RwaRgCIAEoDVIDZHBpEkUKBmZvcm1hdBgDIAEoDjIt",
+            "LnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rlcml6ZVBkZlJlcXVlc3QuRm9ybWF0",
+            "UgZmb3JtYXQSRwoFY29sb3IYBCABKA4yMS5zc24ucGRmc2VydmljZS52MS5S",
+            "YXN0ZXJpemVQZGZSZXF1ZXN0LkNvbG9yU3BhY2VSBWNvbG9yEkcKBXBhZ2Vz",
+            "GAUgASgOMjEuc3NuLnBkZnNlcnZpY2UudjEuUmFzdGVyaXplUGRmUmVxdWVz",
+            "dC5QYWdlT3B0aW9uUgVwYWdlcyIlCgZGb3JtYXQSBwoDUE5HEAASCAoESlBF",
+            "RxABEggKBFdFQlAQAiIhCgpDb2xvclNwYWNlEggKBEdSQVkQABIJCgVDT0xP",
+            "UhABIjoKClBhZ2VPcHRpb24SDgoKRklSU1RfTEFTVBAAEgkKBUZJUlNUEAES",
+            "CAoETEFTVBACEgcKA0FMTBADIoQBChRSYXN0ZXJpemVQZGZSZXNwb25zZRIU",
+            "CgVpbmRleBgBIAEoDVIFaW5kZXgSEgoEZGF0YRgCIAEoDFIEZGF0YRIUCgV3",
+            "aWR0aBgDIAEoDVIFd2lkdGgSFgoGaGVpZ2h0GAQgASgNUgZoZWlnaHQSFAoF",
+            "c2NhbGUYBSABKAFSBXNjYWxlMm8KClBkZlNlcnZpY2USYQoMUmFzdGVyaXpl",
+            "UGRmEiYuc3NuLnBkZnNlcnZpY2UudjEuUmFzdGVyaXplUGRmUmVxdWVzdBon",
+            "LnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rlcml6ZVBkZlJlc3BvbnNlMAFCU0IP",
+            "UGRmU2VydmljZVByb3RvWkBnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlz",
+            "L2dlbi9nby9zc24vcGRmc2VydmljZS92MTtwZGZzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,23 +53,31 @@ namespace Ssn.Pdfservice.V1 {
 
   }
   #region Messages
-  public sealed partial class RasterizePdfRequest : pb::IMessage<RasterizePdfRequest> {
+  public sealed partial class RasterizePdfRequest : pb::IMessage<RasterizePdfRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RasterizePdfRequest> _parser = new pb::MessageParser<RasterizePdfRequest>(() => new RasterizePdfRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RasterizePdfRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Pdfservice.V1.PdfserviceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RasterizePdfRequest() {
       OnConstruction();
     }
@@ -76,6 +85,7 @@ namespace Ssn.Pdfservice.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RasterizePdfRequest(RasterizePdfRequest other) : this() {
       data_ = other.data_;
       dpi_ = other.dpi_;
@@ -86,6 +96,7 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RasterizePdfRequest Clone() {
       return new RasterizePdfRequest(this);
     }
@@ -94,6 +105,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -105,6 +117,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int DpiFieldNumber = 2;
     private uint dpi_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Dpi {
       get { return dpi_; }
       set {
@@ -116,6 +129,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int FormatFieldNumber = 3;
     private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format format_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format Format {
       get { return format_; }
       set {
@@ -127,6 +141,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int ColorFieldNumber = 4;
     private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace color_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace Color {
       get { return color_; }
       set {
@@ -138,6 +153,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int PagesFieldNumber = 5;
     private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption pages_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption Pages {
       get { return pages_; }
       set {
@@ -146,11 +162,13 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RasterizePdfRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RasterizePdfRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -167,6 +185,7 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
@@ -181,12 +200,17 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Data.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(Data);
@@ -210,9 +234,41 @@ namespace Ssn.Pdfservice.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Data.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Data);
+      }
+      if (Dpi != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Dpi);
+      }
+      if (Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Format);
+      }
+      if (Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Color);
+      }
+      if (Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Pages);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
@@ -237,6 +293,7 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RasterizePdfRequest other) {
       if (other == null) {
         return;
@@ -260,7 +317,11 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -289,11 +350,48 @@ namespace Ssn.Pdfservice.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Data = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Dpi = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Format = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            Color = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            Pages = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RasterizePdfRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public enum Format {
         [pbr::OriginalName("PNG")] Png = 0,
@@ -318,23 +416,31 @@ namespace Ssn.Pdfservice.V1 {
 
   }
 
-  public sealed partial class RasterizePdfResponse : pb::IMessage<RasterizePdfResponse> {
+  public sealed partial class RasterizePdfResponse : pb::IMessage<RasterizePdfResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RasterizePdfResponse> _parser = new pb::MessageParser<RasterizePdfResponse>(() => new RasterizePdfResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RasterizePdfResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Pdfservice.V1.PdfserviceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RasterizePdfResponse() {
       OnConstruction();
     }
@@ -342,6 +448,7 @@ namespace Ssn.Pdfservice.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RasterizePdfResponse(RasterizePdfResponse other) : this() {
       index_ = other.index_;
       data_ = other.data_;
@@ -352,6 +459,7 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RasterizePdfResponse Clone() {
       return new RasterizePdfResponse(this);
     }
@@ -360,6 +468,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int IndexFieldNumber = 1;
     private uint index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Index {
       get { return index_; }
       set {
@@ -371,6 +480,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int DataFieldNumber = 2;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -382,6 +492,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int WidthFieldNumber = 3;
     private uint width_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Width {
       get { return width_; }
       set {
@@ -393,6 +504,7 @@ namespace Ssn.Pdfservice.V1 {
     public const int HeightFieldNumber = 4;
     private uint height_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Height {
       get { return height_; }
       set {
@@ -407,6 +519,7 @@ namespace Ssn.Pdfservice.V1 {
     /// Compared to a 72 dpi page
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Scale {
       get { return scale_; }
       set {
@@ -415,11 +528,13 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RasterizePdfResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RasterizePdfResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -436,6 +551,7 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Index != 0) hash ^= Index.GetHashCode();
@@ -450,12 +566,17 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Index != 0) {
         output.WriteRawTag(8);
         output.WriteUInt32(Index);
@@ -479,9 +600,41 @@ namespace Ssn.Pdfservice.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Index != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Index);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Data);
+      }
+      if (Width != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Width);
+      }
+      if (Height != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Height);
+      }
+      if (Scale != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(Scale);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Index != 0) {
@@ -506,6 +659,7 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RasterizePdfResponse other) {
       if (other == null) {
         return;
@@ -529,7 +683,11 @@ namespace Ssn.Pdfservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -558,7 +716,43 @@ namespace Ssn.Pdfservice.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Index = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Data = input.ReadBytes();
+            break;
+          }
+          case 24: {
+            Width = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            Height = input.ReadUInt32();
+            break;
+          }
+          case 41: {
+            Scale = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

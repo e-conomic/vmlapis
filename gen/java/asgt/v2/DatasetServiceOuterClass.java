@@ -23,7 +23,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -32,7 +32,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -129,7 +129,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -476,7 +476,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -496,7 +496,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -517,7 +517,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -536,7 +536,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -550,7 +550,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -627,7 +627,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -636,7 +636,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -647,7 +647,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
@@ -657,7 +657,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     int getTagsCount();
@@ -666,7 +666,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -676,7 +676,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -788,7 +788,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -809,7 +809,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -834,7 +834,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -846,7 +846,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
@@ -857,7 +857,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -869,7 +869,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -1222,7 +1222,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -1242,7 +1242,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -1263,7 +1263,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -1282,7 +1282,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -1296,7 +1296,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -1324,7 +1324,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -1336,7 +1336,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
@@ -1347,7 +1347,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -1359,7 +1359,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -1372,7 +1372,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -1392,7 +1392,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -1411,7 +1411,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -1428,7 +1428,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -1442,7 +1442,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -1519,7 +1519,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -1528,7 +1528,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -1625,7 +1625,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -1646,7 +1646,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -1972,7 +1972,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -1992,7 +1992,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -2013,7 +2013,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -2032,7 +2032,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -2046,7 +2046,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -2123,7 +2123,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -2132,7 +2132,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -2229,7 +2229,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -2250,7 +2250,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -2576,7 +2576,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -2596,7 +2596,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -2617,7 +2617,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -2636,7 +2636,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -2650,7 +2650,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -2727,7 +2727,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The tagName.
      */
     java.lang.String getTagName();
@@ -2736,7 +2736,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The bytes for tagName.
      */
     com.google.protobuf.ByteString
@@ -2833,7 +2833,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The tagName.
      */
     @java.lang.Override
@@ -2854,7 +2854,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The bytes for tagName.
      */
     @java.lang.Override
@@ -3180,7 +3180,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @return The tagName.
        */
       public java.lang.String getTagName() {
@@ -3200,7 +3200,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @return The bytes for tagName.
        */
       public com.google.protobuf.ByteString
@@ -3221,7 +3221,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @param value The tagName to set.
        * @return This builder for chaining.
        */
@@ -3240,7 +3240,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTagName() {
@@ -3254,7 +3254,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @param value The bytes for tagName to set.
        * @return This builder for chaining.
        */
@@ -3331,7 +3331,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -3340,24 +3340,24 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     asgt.v2.type.ExampleOuterClass.Example getExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
   }
@@ -3465,7 +3465,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -3486,7 +3486,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -3507,7 +3507,7 @@ public final class DatasetServiceOuterClass {
     public static final int EXAMPLE_FIELD_NUMBER = 2;
     private asgt.v2.type.ExampleOuterClass.Example example_;
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -3515,7 +3515,7 @@ public final class DatasetServiceOuterClass {
       return example_ != null;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     @java.lang.Override
@@ -3523,7 +3523,7 @@ public final class DatasetServiceOuterClass {
       return example_ == null ? asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
@@ -3868,7 +3868,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -3888,7 +3888,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -3909,7 +3909,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -3928,7 +3928,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -3942,7 +3942,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -3962,14 +3962,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return The example.
        */
       public asgt.v2.type.ExampleOuterClass.Example getExample() {
@@ -3980,7 +3980,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -3996,7 +3996,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -4010,7 +4010,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder mergeExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -4028,7 +4028,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -4042,7 +4042,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
         
@@ -4050,7 +4050,7 @@ public final class DatasetServiceOuterClass {
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
@@ -4061,7 +4061,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
@@ -4138,7 +4138,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -4147,24 +4147,24 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     asgt.v2.type.ExampleOuterClass.Example getExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
   }
@@ -4272,7 +4272,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -4293,7 +4293,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -4314,7 +4314,7 @@ public final class DatasetServiceOuterClass {
     public static final int EXAMPLE_FIELD_NUMBER = 2;
     private asgt.v2.type.ExampleOuterClass.Example example_;
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -4322,7 +4322,7 @@ public final class DatasetServiceOuterClass {
       return example_ != null;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     @java.lang.Override
@@ -4330,7 +4330,7 @@ public final class DatasetServiceOuterClass {
       return example_ == null ? asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
@@ -4675,7 +4675,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -4695,7 +4695,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -4716,7 +4716,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -4735,7 +4735,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -4749,7 +4749,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -4769,14 +4769,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return The example.
        */
       public asgt.v2.type.ExampleOuterClass.Example getExample() {
@@ -4787,7 +4787,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -4803,7 +4803,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -4817,7 +4817,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder mergeExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -4835,7 +4835,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -4849,7 +4849,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
         
@@ -4857,7 +4857,7 @@ public final class DatasetServiceOuterClass {
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
@@ -4868,7 +4868,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
@@ -4945,7 +4945,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -4954,32 +4954,32 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     java.util.List<asgt.v2.type.ExampleOuterClass.Example> 
         getExamplesList();
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     asgt.v2.type.ExampleOuterClass.Example getExamples(int index);
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     int getExamplesCount();
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     java.util.List<? extends asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
         getExamplesOrBuilderList();
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
         int index);
@@ -5089,7 +5089,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -5110,7 +5110,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -5131,14 +5131,14 @@ public final class DatasetServiceOuterClass {
     public static final int EXAMPLES_FIELD_NUMBER = 2;
     private java.util.List<asgt.v2.type.ExampleOuterClass.Example> examples_;
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.v2.type.ExampleOuterClass.Example> getExamplesList() {
       return examples_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
@@ -5146,21 +5146,21 @@ public final class DatasetServiceOuterClass {
       return examples_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public int getExamplesCount() {
       return examples_.size();
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.Example getExamples(int index) {
       return examples_.get(index);
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
@@ -5533,7 +5533,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -5553,7 +5553,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -5574,7 +5574,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -5593,7 +5593,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -5607,7 +5607,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -5636,7 +5636,7 @@ public final class DatasetServiceOuterClass {
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> examplesBuilder_;
 
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public java.util.List<asgt.v2.type.ExampleOuterClass.Example> getExamplesList() {
         if (examplesBuilder_ == null) {
@@ -5646,7 +5646,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public int getExamplesCount() {
         if (examplesBuilder_ == null) {
@@ -5656,7 +5656,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example getExamples(int index) {
         if (examplesBuilder_ == null) {
@@ -5666,7 +5666,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder setExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example value) {
@@ -5683,7 +5683,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder setExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -5697,7 +5697,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(asgt.v2.type.ExampleOuterClass.Example value) {
         if (examplesBuilder_ == null) {
@@ -5713,7 +5713,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example value) {
@@ -5730,7 +5730,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -5744,7 +5744,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -5758,7 +5758,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addAllExamples(
           java.lang.Iterable<? extends asgt.v2.type.ExampleOuterClass.Example> values) {
@@ -5773,7 +5773,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder clearExamples() {
         if (examplesBuilder_ == null) {
@@ -5786,7 +5786,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder removeExamples(int index) {
         if (examplesBuilder_ == null) {
@@ -5799,14 +5799,14 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExamplesBuilder(
           int index) {
         return getExamplesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
           int index) {
@@ -5816,7 +5816,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public java.util.List<? extends asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
            getExamplesOrBuilderList() {
@@ -5827,14 +5827,14 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder addExamplesBuilder() {
         return getExamplesFieldBuilder().addBuilder(
             asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder addExamplesBuilder(
           int index) {
@@ -5842,7 +5842,7 @@ public final class DatasetServiceOuterClass {
             index, asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public java.util.List<asgt.v2.type.ExampleOuterClass.Example.Builder> 
            getExamplesBuilderList() {
@@ -5924,7 +5924,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -5933,7 +5933,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -6030,7 +6030,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -6051,7 +6051,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -6377,7 +6377,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -6397,7 +6397,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -6418,7 +6418,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -6437,7 +6437,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -6451,7 +6451,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -6528,7 +6528,7 @@ public final class DatasetServiceOuterClass {
      * The number of trainings to return. Ranges from 1 to 100.
      * </pre>
      *
-     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+     * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
      * @return The limit.
      */
     long getLimit();
@@ -6622,7 +6622,7 @@ public final class DatasetServiceOuterClass {
      * The number of trainings to return. Ranges from 1 to 100.
      * </pre>
      *
-     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+     * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
      * @return The limit.
      */
     @java.lang.Override
@@ -6939,7 +6939,7 @@ public final class DatasetServiceOuterClass {
        * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
-       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
        * @return The limit.
        */
       @java.lang.Override
@@ -6951,7 +6951,7 @@ public final class DatasetServiceOuterClass {
        * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
-       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
        * @param value The limit to set.
        * @return This builder for chaining.
        */
@@ -6966,7 +6966,7 @@ public final class DatasetServiceOuterClass {
        * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
-       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
@@ -7037,7 +7037,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -7046,24 +7046,24 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -7171,7 +7171,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -7192,7 +7192,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -7213,7 +7213,7 @@ public final class DatasetServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 2;
     private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -7221,7 +7221,7 @@ public final class DatasetServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -7229,7 +7229,7 @@ public final class DatasetServiceOuterClass {
       return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
@@ -7574,7 +7574,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -7594,7 +7594,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -7615,7 +7615,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -7634,7 +7634,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -7648,7 +7648,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -7668,14 +7668,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
@@ -7686,7 +7686,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -7702,7 +7702,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
@@ -7716,7 +7716,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -7734,7 +7734,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -7748,7 +7748,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
         
@@ -7756,7 +7756,7 @@ public final class DatasetServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -7767,7 +7767,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
@@ -7840,17 +7840,17 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -7947,7 +7947,7 @@ public final class DatasetServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 1;
     private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -7955,7 +7955,7 @@ public final class DatasetServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -7963,7 +7963,7 @@ public final class DatasetServiceOuterClass {
       return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
@@ -8289,14 +8289,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
@@ -8307,7 +8307,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -8323,7 +8323,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
@@ -8337,7 +8337,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -8355,7 +8355,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -8369,7 +8369,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
         
@@ -8377,7 +8377,7 @@ public final class DatasetServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -8388,7 +8388,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
@@ -8461,25 +8461,25 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     java.util.List<asgt.v2.type.TrainingOuterClass.Training> 
         getTrainingsList();
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     asgt.v2.type.TrainingOuterClass.Training getTrainings(int index);
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     int getTrainingsCount();
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
         getTrainingsOrBuilderList();
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
         int index);
@@ -8578,14 +8578,14 @@ public final class DatasetServiceOuterClass {
     public static final int TRAININGS_FIELD_NUMBER = 1;
     private java.util.List<asgt.v2.type.TrainingOuterClass.Training> trainings_;
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.v2.type.TrainingOuterClass.Training> getTrainingsList() {
       return trainings_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
@@ -8593,21 +8593,21 @@ public final class DatasetServiceOuterClass {
       return trainings_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public int getTrainingsCount() {
       return trainings_.size();
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.TrainingOuterClass.Training getTrainings(int index) {
       return trainings_.get(index);
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
@@ -8970,7 +8970,7 @@ public final class DatasetServiceOuterClass {
           asgt.v2.type.TrainingOuterClass.Training, asgt.v2.type.TrainingOuterClass.Training.Builder, asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> trainingsBuilder_;
 
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public java.util.List<asgt.v2.type.TrainingOuterClass.Training> getTrainingsList() {
         if (trainingsBuilder_ == null) {
@@ -8980,7 +8980,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public int getTrainingsCount() {
         if (trainingsBuilder_ == null) {
@@ -8990,7 +8990,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training getTrainings(int index) {
         if (trainingsBuilder_ == null) {
@@ -9000,7 +9000,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder setTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training value) {
@@ -9017,7 +9017,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder setTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
@@ -9031,7 +9031,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(asgt.v2.type.TrainingOuterClass.Training value) {
         if (trainingsBuilder_ == null) {
@@ -9047,7 +9047,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training value) {
@@ -9064,7 +9064,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(
           asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
@@ -9078,7 +9078,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
@@ -9092,7 +9092,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addAllTrainings(
           java.lang.Iterable<? extends asgt.v2.type.TrainingOuterClass.Training> values) {
@@ -9107,7 +9107,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder clearTrainings() {
         if (trainingsBuilder_ == null) {
@@ -9120,7 +9120,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder removeTrainings(int index) {
         if (trainingsBuilder_ == null) {
@@ -9133,14 +9133,14 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training.Builder getTrainingsBuilder(
           int index) {
         return getTrainingsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
           int index) {
@@ -9150,7 +9150,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
            getTrainingsOrBuilderList() {
@@ -9161,14 +9161,14 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training.Builder addTrainingsBuilder() {
         return getTrainingsFieldBuilder().addBuilder(
             asgt.v2.type.TrainingOuterClass.Training.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training.Builder addTrainingsBuilder(
           int index) {
@@ -9176,7 +9176,7 @@ public final class DatasetServiceOuterClass {
             index, asgt.v2.type.TrainingOuterClass.Training.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public java.util.List<asgt.v2.type.TrainingOuterClass.Training.Builder> 
            getTrainingsBuilderList() {
@@ -9324,91 +9324,97 @@ public final class DatasetServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035asgt/v2/dataset_service.proto\022\007asgt.v2" +
-      "\032\027asgt/type/dataset.proto\032\032asgt/v2/type/" +
-      "example.proto\032\033asgt/v2/type/training.pro" +
-      "to\032\034google/api/annotations.proto\032\033google" +
-      "/protobuf/empty.proto\032\031options/annotatio" +
-      "ns.proto\032\027validate/validate.proto\"S\n\021Get" +
-      "DatasetRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B" +
-      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\220" +
-      "\001\n\024CreateDatasetRequest\022>\n\014dataset_name\030" +
-      "\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9" +
-      "_.>-]*$\0228\n\004tags\030\002 \003(\tB*\372B\037\222\001\034\"\032r\030(@2\024^[A" +
-      "-Za-z0-9\\s_.>-]*$\372B\005\222\001\002\030\001\"^\n\034CreateOrUpd" +
-      "ateDatasetRequest\022>\n\014dataset_name\030\001 \001(\tB" +
-      "(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*" +
-      "$\"V\n\024DeleteDatasetRequest\022>\n\014dataset_nam" +
-      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
-      "-9_.>-]*$\"N\n\020DeleteTagRequest\022:\n\010tag_nam" +
-      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
-      "-9_.>-]*$\"~\n\024CreateExampleRequest\022>\n\014dat" +
-      "aset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.]" +
-      "[A-Za-z0-9_.>-]*$\022&\n\007example\030\002 \001(\0132\025.asg" +
-      "t.v2.type.Example\"\206\001\n\034CreateOrUpdateExam" +
-      "pleRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(" +
-      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022&\n\007ex" +
-      "ample\030\002 \001(\0132\025.asgt.v2.type.Example\"\204\001\n\031B" +
-      "atchCreateExampleRequest\022>\n\014dataset_name" +
-      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
-      "9_.>-]*$\022\'\n\010examples\030\002 \003(\0132\025.asgt.v2.typ" +
-      "e.Example\"X\n\026TruncateDatasetRequest\022>\n\014d" +
+      "\032\034google/api/annotations.proto\032\033google/p" +
+      "rotobuf/empty.proto\032.protoc-gen-openapiv" +
+      "2/options/annotations.proto\032\027validate/va" +
+      "lidate.proto\032\032asgt/v2/type/example.proto" +
+      "\032\033asgt/v2/type/training.proto\032\027asgt/type" +
+      "/dataset.proto\"`\n\021GetDatasetRequest\022K\n\014d" +
       "ataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
-      ".][A-Za-z0-9_.>-]*$\"2\n\026TrainingRequestOp" +
-      "tions\022\030\n\005limit\030\001 \001(\003B\t\372B\006\"\004\030d \000\"\216\001\n\032GetD" +
-      "atasetTrainingsRequest\022>\n\014dataset_name\030\001" +
-      " \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_" +
-      ".>-]*$\0220\n\007options\030\002 \001(\0132\037.asgt.v2.Traini" +
-      "ngRequestOptions\"G\n\023GetTrainingsRequest\022" +
-      "0\n\007options\030\001 \001(\0132\037.asgt.v2.TrainingReque" +
-      "stOptions\">\n\021TrainingsResponse\022)\n\ttraini" +
-      "ngs\030\001 \003(\0132\026.asgt.v2.type.Training2\343\n\n\016Da" +
-      "tasetService\022a\n\nGetDataset\022\032.asgt.v2.Get" +
-      "DatasetRequest\032\022.asgt.type.Dataset\"#\202\323\344\223" +
-      "\002\035\022\033/v2/datasets/{dataset_name}\022_\n\rCreat" +
-      "eDataset\022\035.asgt.v2.CreateDatasetRequest\032" +
-      "\026.google.protobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/dat" +
-      "asets:\001*\022{\n\025CreateOrUpdateDataset\022%.asgt" +
-      ".v2.CreateOrUpdateDatasetRequest\032\026.googl" +
-      "e.protobuf.Empty\"#\202\323\344\223\002\035\032\033/v2/datasets/{" +
-      "dataset_name}\022g\n\rDeleteDataset\022\035.asgt.v2" +
-      ".DeleteDatasetRequest\032\022.asgt.type.Datase" +
-      "t\"#\202\323\344\223\002\035*\033/v2/datasets/{dataset_name}\022[" +
-      "\n\tDeleteTag\022\031.asgt.v2.DeleteTagRequest\032\026" +
-      ".google.protobuf.Empty\"\033\202\323\344\223\002\025*\023/v2/tags" +
-      "/{tag_name}\022w\n\rCreateExample\022\035.asgt.v2.C" +
-      "reateExampleRequest\032\026.google.protobuf.Em" +
-      "pty\"/\202\323\344\223\002)\"$/v2/datasets/{dataset_name}" +
-      "/examples:\001*\022\224\001\n\025CreateOrUpdateExample\022%" +
-      ".asgt.v2.CreateOrUpdateExampleRequest\032\026." +
-      "google.protobuf.Empty\"<\202\323\344\223\0026\0321/v2/datas" +
-      "ets/{dataset_name}/examples/{example.id}" +
-      ":\001*\022\215\001\n\022BatchCreateExample\022\".asgt.v2.Bat" +
-      "chCreateExampleRequest\032\026.google.protobuf" +
-      ".Empty\";\202\323\344\223\0025\"0/v2/datasets/{dataset_na" +
-      "me}/examples:batchCreate:\001*\022x\n\017TruncateD" +
-      "ataset\022\037.asgt.v2.TruncateDatasetRequest\032" +
-      "\026.google.protobuf.Empty\",\202\323\344\223\002&*$/v2/dat" +
-      "asets/{dataset_name}/examples\022\205\001\n\023GetDat" +
-      "asetTrainings\022#.asgt.v2.GetDatasetTraini" +
-      "ngsRequest\032\032.asgt.v2.TrainingsResponse\"-" +
-      "\202\323\344\223\002\'\022%/v2/datasets/{dataset_name}/trai" +
-      "nings\022_\n\014GetTrainings\022\034.asgt.v2.GetTrain" +
-      "ingsRequest\032\032.asgt.v2.TrainingsResponse\"" +
-      "\025\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022BManage data" +
-      "sets and examples used for training Auto" +
-      "Suggest models.B-Z+github.com/e-conomic/" +
-      "vmlapis/gen/go/asgt/v2b\006proto3"
+      ".][A-Za-z0-9_.>-]*$R\013datasetName\"\235\001\n\024Cre" +
+      "ateDatasetRequest\022K\n\014dataset_name\030\001 \001(\tB" +
+      "(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*" +
+      "$R\013datasetName\0228\n\004tags\030\002 \003(\tB$\372B!\222\001\036\030\001\"\032" +
+      "r\030(@2\024^[A-Za-z0-9\\s_.>-]*$R\004tags\"k\n\034Crea" +
+      "teOrUpdateDatasetRequest\022K\n\014dataset_name" +
+      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
+      "9_.>-]*$R\013datasetName\"c\n\024DeleteDatasetRe" +
+      "quest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^" +
+      "[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNa" +
+      "me\"W\n\020DeleteTagRequest\022C\n\010tag_name\030\001 \001(\t" +
+      "B(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]" +
+      "*$R\007tagName\"\224\001\n\024CreateExampleRequest\022K\n\014" +
+      "dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-" +
+      "9.][A-Za-z0-9_.>-]*$R\013datasetName\022/\n\007exa" +
+      "mple\030\002 \001(\0132\025.asgt.v2.type.ExampleR\007examp" +
+      "le\"\234\001\n\034CreateOrUpdateExampleRequest\022K\n\014d" +
+      "ataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
+      ".][A-Za-z0-9_.>-]*$R\013datasetName\022/\n\007exam" +
+      "ple\030\002 \001(\0132\025.asgt.v2.type.ExampleR\007exampl" +
+      "e\"\233\001\n\031BatchCreateExampleRequest\022K\n\014datas" +
+      "et_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
+      "-Za-z0-9_.>-]*$R\013datasetName\0221\n\010examples" +
+      "\030\002 \003(\0132\025.asgt.v2.type.ExampleR\010examples\"" +
+      "e\n\026TruncateDatasetRequest\022K\n\014dataset_nam" +
+      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
+      "-9_.>-]*$R\013datasetName\"9\n\026TrainingReques" +
+      "tOptions\022\037\n\005limit\030\001 \001(\003B\t\372B\006\"\004\030d \000R\005limi" +
+      "t\"\244\001\n\032GetDatasetTrainingsRequest\022K\n\014data" +
+      "set_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
+      "A-Za-z0-9_.>-]*$R\013datasetName\0229\n\007options" +
+      "\030\002 \001(\0132\037.asgt.v2.TrainingRequestOptionsR" +
+      "\007options\"P\n\023GetTrainingsRequest\0229\n\007optio" +
+      "ns\030\001 \001(\0132\037.asgt.v2.TrainingRequestOption" +
+      "sR\007options\"I\n\021TrainingsResponse\0224\n\ttrain" +
+      "ings\030\001 \003(\0132\026.asgt.v2.type.TrainingR\ttrai" +
+      "nings2\343\n\n\016DatasetService\022a\n\nGetDataset\022\032" +
+      ".asgt.v2.GetDatasetRequest\032\022.asgt.type.D" +
+      "ataset\"#\202\323\344\223\002\035\022\033/v2/datasets/{dataset_na" +
+      "me}\022_\n\rCreateDataset\022\035.asgt.v2.CreateDat" +
+      "asetRequest\032\026.google.protobuf.Empty\"\027\202\323\344" +
+      "\223\002\021\"\014/v2/datasets:\001*\022{\n\025CreateOrUpdateDa" +
+      "taset\022%.asgt.v2.CreateOrUpdateDatasetReq" +
+      "uest\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\033/v" +
+      "2/datasets/{dataset_name}\022g\n\rDeleteDatas" +
+      "et\022\035.asgt.v2.DeleteDatasetRequest\032\022.asgt" +
+      ".type.Dataset\"#\202\323\344\223\002\035*\033/v2/datasets/{dat" +
+      "aset_name}\022[\n\tDeleteTag\022\031.asgt.v2.Delete" +
+      "TagRequest\032\026.google.protobuf.Empty\"\033\202\323\344\223" +
+      "\002\025*\023/v2/tags/{tag_name}\022w\n\rCreateExample" +
+      "\022\035.asgt.v2.CreateExampleRequest\032\026.google" +
+      ".protobuf.Empty\"/\202\323\344\223\002)\"$/v2/datasets/{d" +
+      "ataset_name}/examples:\001*\022\224\001\n\025CreateOrUpd" +
+      "ateExample\022%.asgt.v2.CreateOrUpdateExamp" +
+      "leRequest\032\026.google.protobuf.Empty\"<\202\323\344\223\002" +
+      "6\0321/v2/datasets/{dataset_name}/examples/" +
+      "{example.id}:\001*\022\215\001\n\022BatchCreateExample\022\"" +
+      ".asgt.v2.BatchCreateExampleRequest\032\026.goo" +
+      "gle.protobuf.Empty\";\202\323\344\223\0025\"0/v2/datasets" +
+      "/{dataset_name}/examples:batchCreate:\001*\022" +
+      "x\n\017TruncateDataset\022\037.asgt.v2.TruncateDat" +
+      "asetRequest\032\026.google.protobuf.Empty\",\202\323\344" +
+      "\223\002&*$/v2/datasets/{dataset_name}/example" +
+      "s\022\205\001\n\023GetDatasetTrainings\022#.asgt.v2.GetD" +
+      "atasetTrainingsRequest\032\032.asgt.v2.Trainin" +
+      "gsResponse\"-\202\323\344\223\002\'\022%/v2/datasets/{datase" +
+      "t_name}/trainings\022_\n\014GetTrainings\022\034.asgt" +
+      ".v2.GetTrainingsRequest\032\032.asgt.v2.Traini" +
+      "ngsResponse\"\025\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022" +
+      "BManage datasets and examples used for t" +
+      "raining AutoSuggest models.B-Z+github.co" +
+      "m/e-conomic/vmlapis/gen/go/asgt/v2b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.type.DatasetOuterClass.getDescriptor(),
-          asgt.v2.type.ExampleOuterClass.getDescriptor(),
-          asgt.v2.type.TrainingOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
+          asgt.v2.type.ExampleOuterClass.getDescriptor(),
+          asgt.v2.type.TrainingOuterClass.getDescriptor(),
+          asgt.type.DatasetOuterClass.getDescriptor(),
         });
     internal_static_asgt_v2_GetDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9495,13 +9501,13 @@ public final class DatasetServiceOuterClass {
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    asgt.type.DatasetOuterClass.getDescriptor();
-    asgt.v2.type.ExampleOuterClass.getDescriptor();
-    asgt.v2.type.TrainingOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     io.envoyproxy.pgv.validate.Validate.getDescriptor();
+    asgt.v2.type.ExampleOuterClass.getDescriptor();
+    asgt.v2.type.TrainingOuterClass.getDescriptor();
+    asgt.type.DatasetOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,7 +19,7 @@ public final class RetentionPolicyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 max_days = 1;</code>
+     * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
      * @return The maxDays.
      */
     long getMaxDays();
@@ -109,7 +109,7 @@ public final class RetentionPolicyOuterClass {
     public static final int MAX_DAYS_FIELD_NUMBER = 1;
     private long maxDays_;
     /**
-     * <code>int64 max_days = 1;</code>
+     * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
      * @return The maxDays.
      */
     @java.lang.Override
@@ -422,7 +422,7 @@ public final class RetentionPolicyOuterClass {
 
       private long maxDays_ ;
       /**
-       * <code>int64 max_days = 1;</code>
+       * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
        * @return The maxDays.
        */
       @java.lang.Override
@@ -430,7 +430,7 @@ public final class RetentionPolicyOuterClass {
         return maxDays_;
       }
       /**
-       * <code>int64 max_days = 1;</code>
+       * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
        * @param value The maxDays to set.
        * @return This builder for chaining.
        */
@@ -441,7 +441,7 @@ public final class RetentionPolicyOuterClass {
         return this;
       }
       /**
-       * <code>int64 max_days = 1;</code>
+       * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxDays() {
@@ -518,9 +518,9 @@ public final class RetentionPolicyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n asgt/type/retention_policy.proto\022\tasgt" +
-      ".type\"#\n\017RetentionPolicy\022\020\n\010max_days\030\001 \001" +
-      "(\003B8Z6github.com/e-conomic/vmlapis/gen/g" +
-      "o/asgt/type;asgttypeb\006proto3"
+      ".type\",\n\017RetentionPolicy\022\031\n\010max_days\030\001 \001" +
+      "(\003R\007maxDaysB8Z6github.com/e-conomic/vmla" +
+      "pis/gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

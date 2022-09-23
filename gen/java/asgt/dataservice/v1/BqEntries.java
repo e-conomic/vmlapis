@@ -19,84 +19,84 @@ public final class BqEntries {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
-     * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The consumer.
      */
     java.lang.String getConsumer();
     /**
-     * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for consumer.
      */
     com.google.protobuf.ByteString
         getConsumerBytes();
 
     /**
-     * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
     /**
-     * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetType.
      */
     java.lang.String getDatasetType();
     /**
-     * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for datasetType.
      */
     com.google.protobuf.ByteString
         getDatasetTypeBytes();
 
     /**
-     * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetId.
      */
     java.lang.String getDatasetId();
     /**
-     * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for datasetId.
      */
     com.google.protobuf.ByteString
         getDatasetIdBytes();
 
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -104,85 +104,85 @@ public final class BqEntries {
         getTagsBytes(int index);
 
     /**
-     * <code>.asgt.type.Data data = 5;</code>
+     * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     boolean hasData();
     /**
-     * <code>.asgt.type.Data data = 5;</code>
+     * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
      * @return The data.
      */
     asgt.type.DataOuterClass.Data getData();
     /**
-     * <code>.asgt.type.Data data = 5;</code>
+     * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
      */
     asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
         getTargetValuesList();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
         getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.type.Model model = 9;</code>
+     * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 9;</code>
+     * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 9;</code>
+     * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> 
         getPredictionList();
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction.Target getPrediction(int index);
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     int getPredictionCount();
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
         getPredictionOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getPredictionOrBuilder(
         int index);
 
     /**
-     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [json_name = "timeAdded", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The timeAdded.
      */
     long getTimeAdded();
@@ -377,7 +377,7 @@ public final class BqEntries {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -394,7 +394,7 @@ public final class BqEntries {
       }
     }
     /**
-     * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -415,7 +415,7 @@ public final class BqEntries {
     public static final int CONSUMER_FIELD_NUMBER = 2;
     private volatile java.lang.Object consumer_;
     /**
-     * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The consumer.
      */
     @java.lang.Override
@@ -432,7 +432,7 @@ public final class BqEntries {
       }
     }
     /**
-     * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for consumer.
      */
     @java.lang.Override
@@ -453,7 +453,7 @@ public final class BqEntries {
     public static final int DATASET_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object datasetName_;
     /**
-     * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -470,7 +470,7 @@ public final class BqEntries {
       }
     }
     /**
-     * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -491,7 +491,7 @@ public final class BqEntries {
     public static final int DATASET_TYPE_FIELD_NUMBER = 12;
     private volatile java.lang.Object datasetType_;
     /**
-     * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetType.
      */
     @java.lang.Override
@@ -508,7 +508,7 @@ public final class BqEntries {
       }
     }
     /**
-     * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for datasetType.
      */
     @java.lang.Override
@@ -529,7 +529,7 @@ public final class BqEntries {
     public static final int DATASET_ID_FIELD_NUMBER = 11;
     private volatile java.lang.Object datasetId_;
     /**
-     * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetId.
      */
     @java.lang.Override
@@ -546,7 +546,7 @@ public final class BqEntries {
       }
     }
     /**
-     * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes for datasetId.
      */
     @java.lang.Override
@@ -567,7 +567,7 @@ public final class BqEntries {
     public static final int TAGS_FIELD_NUMBER = 4;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -575,14 +575,14 @@ public final class BqEntries {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -590,7 +590,7 @@ public final class BqEntries {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -602,7 +602,7 @@ public final class BqEntries {
     public static final int DATA_FIELD_NUMBER = 5;
     private asgt.type.DataOuterClass.Data data_;
     /**
-     * <code>.asgt.type.Data data = 5;</code>
+     * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -610,7 +610,7 @@ public final class BqEntries {
       return data_ != null;
     }
     /**
-     * <code>.asgt.type.Data data = 5;</code>
+     * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -618,7 +618,7 @@ public final class BqEntries {
       return data_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
     }
     /**
-     * <code>.asgt.type.Data data = 5;</code>
+     * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
@@ -628,14 +628,14 @@ public final class BqEntries {
     public static final int TARGET_VALUES_FIELD_NUMBER = 6;
     private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
@@ -643,21 +643,21 @@ public final class BqEntries {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public int getTargetValuesCount() {
       return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
       return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
@@ -668,7 +668,7 @@ public final class BqEntries {
     public static final int MODEL_FIELD_NUMBER = 9;
     private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 9;</code>
+     * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -676,7 +676,7 @@ public final class BqEntries {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 9;</code>
+     * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -684,7 +684,7 @@ public final class BqEntries {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 9;</code>
+     * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -694,14 +694,14 @@ public final class BqEntries {
     public static final int PREDICTION_FIELD_NUMBER = 10;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> prediction_;
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getPredictionList() {
       return prediction_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
@@ -709,21 +709,21 @@ public final class BqEntries {
       return prediction_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     @java.lang.Override
     public int getPredictionCount() {
       return prediction_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.Target getPrediction(int index) {
       return prediction_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+     * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getPredictionOrBuilder(
@@ -734,7 +734,7 @@ public final class BqEntries {
     public static final int TIME_ADDED_FIELD_NUMBER = 8;
     private long timeAdded_;
     /**
-     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [json_name = "timeAdded", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The timeAdded.
      */
     @java.lang.Override
@@ -1342,7 +1342,7 @@ public final class BqEntries {
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1358,7 +1358,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1375,7 +1375,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1390,7 +1390,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1400,7 +1400,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string id = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1418,7 +1418,7 @@ public final class BqEntries {
 
       private java.lang.Object consumer_ = "";
       /**
-       * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The consumer.
        */
       public java.lang.String getConsumer() {
@@ -1434,7 +1434,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The bytes for consumer.
        */
       public com.google.protobuf.ByteString
@@ -1451,7 +1451,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The consumer to set.
        * @return This builder for chaining.
        */
@@ -1466,7 +1466,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearConsumer() {
@@ -1476,7 +1476,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string consumer = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string consumer = 2 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The bytes for consumer to set.
        * @return This builder for chaining.
        */
@@ -1494,7 +1494,7 @@ public final class BqEntries {
 
       private java.lang.Object datasetName_ = "";
       /**
-       * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -1510,7 +1510,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -1527,7 +1527,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -1542,7 +1542,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -1552,7 +1552,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string dataset_name = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_name = 3 [json_name = "datasetName", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -1570,7 +1570,7 @@ public final class BqEntries {
 
       private java.lang.Object datasetType_ = "";
       /**
-       * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The datasetType.
        */
       public java.lang.String getDatasetType() {
@@ -1586,7 +1586,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The bytes for datasetType.
        */
       public com.google.protobuf.ByteString
@@ -1603,7 +1603,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The datasetType to set.
        * @return This builder for chaining.
        */
@@ -1618,7 +1618,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetType() {
@@ -1628,7 +1628,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string dataset_type = 12 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_type = 12 [json_name = "datasetType", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The bytes for datasetType to set.
        * @return This builder for chaining.
        */
@@ -1646,7 +1646,7 @@ public final class BqEntries {
 
       private java.lang.Object datasetId_ = "";
       /**
-       * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The datasetId.
        */
       public java.lang.String getDatasetId() {
@@ -1662,7 +1662,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The bytes for datasetId.
        */
       public com.google.protobuf.ByteString
@@ -1679,7 +1679,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The datasetId to set.
        * @return This builder for chaining.
        */
@@ -1694,7 +1694,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetId() {
@@ -1704,7 +1704,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>string dataset_id = 11 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The bytes for datasetId to set.
        * @return This builder for chaining.
        */
@@ -1728,7 +1728,7 @@ public final class BqEntries {
          }
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -1736,14 +1736,14 @@ public final class BqEntries {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -1751,7 +1751,7 @@ public final class BqEntries {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -1760,7 +1760,7 @@ public final class BqEntries {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -1776,7 +1776,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -1791,7 +1791,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -1804,7 +1804,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -1814,7 +1814,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated string tags = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>repeated string tags = 4 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -1834,14 +1834,14 @@ public final class BqEntries {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> dataBuilder_;
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        * @return The data.
        */
       public asgt.type.DataOuterClass.Data getData() {
@@ -1852,7 +1852,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        */
       public Builder setData(asgt.type.DataOuterClass.Data value) {
         if (dataBuilder_ == null) {
@@ -1868,7 +1868,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        */
       public Builder setData(
           asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -1882,7 +1882,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        */
       public Builder mergeData(asgt.type.DataOuterClass.Data value) {
         if (dataBuilder_ == null) {
@@ -1900,7 +1900,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        */
       public Builder clearData() {
         if (dataBuilder_ == null) {
@@ -1914,7 +1914,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        */
       public asgt.type.DataOuterClass.Data.Builder getDataBuilder() {
         
@@ -1922,7 +1922,7 @@ public final class BqEntries {
         return getDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        */
       public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
         if (dataBuilder_ != null) {
@@ -1933,7 +1933,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>.asgt.type.Data data = 5;</code>
+       * <code>.asgt.type.Data data = 5 [json_name = "data"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> 
@@ -1962,7 +1962,7 @@ public final class BqEntries {
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
         if (targetValuesBuilder_ == null) {
@@ -1972,7 +1972,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public int getTargetValuesCount() {
         if (targetValuesBuilder_ == null) {
@@ -1982,7 +1982,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -1992,7 +1992,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
@@ -2009,7 +2009,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -2023,7 +2023,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
         if (targetValuesBuilder_ == null) {
@@ -2039,7 +2039,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
@@ -2056,7 +2056,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -2070,7 +2070,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -2084,7 +2084,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
@@ -2099,7 +2099,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder clearTargetValues() {
         if (targetValuesBuilder_ == null) {
@@ -2112,7 +2112,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public Builder removeTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -2125,14 +2125,14 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
         return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
@@ -2142,7 +2142,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
            getTargetValuesOrBuilderList() {
@@ -2153,14 +2153,14 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
         return getTargetValuesFieldBuilder().addBuilder(
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
@@ -2168,7 +2168,7 @@ public final class BqEntries {
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
            getTargetValuesBuilderList() {
@@ -2193,14 +2193,14 @@ public final class BqEntries {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -2211,7 +2211,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -2227,7 +2227,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -2241,7 +2241,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -2259,7 +2259,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -2273,7 +2273,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -2281,7 +2281,7 @@ public final class BqEntries {
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -2292,7 +2292,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 9;</code>
+       * <code>.asgt.type.Model model = 9 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -2321,7 +2321,7 @@ public final class BqEntries {
           asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> predictionBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getPredictionList() {
         if (predictionBuilder_ == null) {
@@ -2331,7 +2331,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public int getPredictionCount() {
         if (predictionBuilder_ == null) {
@@ -2341,7 +2341,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target getPrediction(int index) {
         if (predictionBuilder_ == null) {
@@ -2351,7 +2351,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder setPrediction(
           int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
@@ -2368,7 +2368,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder setPrediction(
           int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -2382,7 +2382,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder addPrediction(asgt.type.PredictionOuterClass.Prediction.Target value) {
         if (predictionBuilder_ == null) {
@@ -2398,7 +2398,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder addPrediction(
           int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
@@ -2415,7 +2415,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder addPrediction(
           asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -2429,7 +2429,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder addPrediction(
           int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -2443,7 +2443,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder addAllPrediction(
           java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Target> values) {
@@ -2458,7 +2458,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder clearPrediction() {
         if (predictionBuilder_ == null) {
@@ -2471,7 +2471,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public Builder removePrediction(int index) {
         if (predictionBuilder_ == null) {
@@ -2484,14 +2484,14 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder getPredictionBuilder(
           int index) {
         return getPredictionFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getPredictionOrBuilder(
           int index) {
@@ -2501,7 +2501,7 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
            getPredictionOrBuilderList() {
@@ -2512,14 +2512,14 @@ public final class BqEntries {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder addPredictionBuilder() {
         return getPredictionFieldBuilder().addBuilder(
             asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder addPredictionBuilder(
           int index) {
@@ -2527,7 +2527,7 @@ public final class BqEntries {
             index, asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
+       * <code>repeated .asgt.type.Prediction.Target prediction = 10 [json_name = "prediction"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Builder> 
            getPredictionBuilderList() {
@@ -2550,7 +2550,7 @@ public final class BqEntries {
 
       private long timeAdded_ ;
       /**
-       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [json_name = "timeAdded", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The timeAdded.
        */
       @java.lang.Override
@@ -2558,7 +2558,7 @@ public final class BqEntries {
         return timeAdded_;
       }
       /**
-       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [json_name = "timeAdded", (.gen_bq_schema.bigquery) = { ... }</code>
        * @param value The timeAdded to set.
        * @return This builder for chaining.
        */
@@ -2569,7 +2569,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [json_name = "timeAdded", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTimeAdded() {
@@ -2646,35 +2646,38 @@ public final class BqEntries {
   static {
     java.lang.String[] descriptorData = {
       "\n\035asgt/data/v1/bq_entries.proto\022\023asgt.da" +
-      "taservice.v1\032\024asgt/type/data.proto\032\025asgt" +
-      "/type/model.proto\032\032asgt/type/prediction." +
-      "proto\032\034asgt/type/target_value.proto\032\034gen" +
-      "_bq_schema/bq_field.proto\032\034gen_bq_schema" +
-      "/bq_table.proto\"\372\003\n\005Entry\022>\n\002id\030\001 \001(\tB2\352" +
+      "taservice.v1\032\034gen_bq_schema/bq_field.pro" +
+      "to\032\034gen_bq_schema/bq_table.proto\032\024asgt/t" +
+      "ype/data.proto\032\025asgt/type/model.proto\032\032a" +
+      "sgt/type/prediction.proto\032\034asgt/type/tar" +
+      "get_value.proto\"\345\004\n\005Entry\022B\n\002id\030\001 \001(\tB2\352" +
       "?/\"-ID, matches Envoy request id if feed" +
-      "back data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014da" +
-      "taset_name\030\003 \001(\tB\005\352?\002\010\001\022\033\n\014dataset_type\030" +
-      "\014 \001(\tB\005\352?\002\010\001\022/\n\ndataset_id\030\013 \001(\tB\033\352?\030\010\001\"" +
-      "\024unique ID of dataset\022T\n\004tags\030\004 \003(\tBF\352?C" +
-      "\"ATags defined by consumer, enriched by " +
-      "service if valetkey is used\022\035\n\004data\030\005 \001(" +
-      "\0132\017.asgt.type.Data\022-\n\rtarget_values\030\006 \003(" +
-      "\0132\026.asgt.type.TargetValue\022\037\n\005model\030\t \001(\013" +
-      "2\020.asgt.type.Model\0220\n\nprediction\030\n \003(\0132\034" +
-      ".asgt.type.Prediction.Target\022$\n\ntime_add" +
-      "ed\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\020\352?\r\n\013sample_" +
-      "dataB7Z5github.com/e-conomic/vmlapis/gen" +
-      "/go/asgt/data/v1;datab\006proto3"
+      "back dataR\002id\022!\n\010consumer\030\002 \001(\tB\005\352?\002\010\001R\010" +
+      "consumer\022(\n\014dataset_name\030\003 \001(\tB\005\352?\002\010\001R\013d" +
+      "atasetName\022(\n\014dataset_type\030\014 \001(\tB\005\352?\002\010\001R" +
+      "\013datasetType\022:\n\ndataset_id\030\013 \001(\tB\033\352?\030\010\001\"" +
+      "\024unique ID of datasetR\tdatasetId\022Z\n\004tags" +
+      "\030\004 \003(\tBF\352?C\"ATags defined by consumer, e" +
+      "nriched by service if valetkey is usedR\004" +
+      "tags\022#\n\004data\030\005 \001(\0132\017.asgt.type.DataR\004dat" +
+      "a\022;\n\rtarget_values\030\006 \003(\0132\026.asgt.type.Tar" +
+      "getValueR\014targetValues\022&\n\005model\030\t \001(\0132\020." +
+      "asgt.type.ModelR\005model\022<\n\nprediction\030\n \003" +
+      "(\0132\034.asgt.type.Prediction.TargetR\npredic" +
+      "tion\022/\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTA" +
+      "MPR\ttimeAdded:\020\352?\r\n\013sample_dataB7Z5githu" +
+      "b.com/e-conomic/vmlapis/gen/go/asgt/data" +
+      "/v1;datab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
+          gen_bq_schema.BqTable.getDescriptor(),
           asgt.type.DataOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
           asgt.type.TargetValueOuterClass.getDescriptor(),
-          gen_bq_schema.BqField.getDescriptor(),
-          gen_bq_schema.BqTable.getDescriptor(),
         });
     internal_static_asgt_dataservice_v1_Entry_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2688,12 +2691,12 @@ public final class BqEntries {
     registry.add(gen_bq_schema.BqTable.bigqueryOpts);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
+    gen_bq_schema.BqTable.getDescriptor();
     asgt.type.DataOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.PredictionOuterClass.getDescriptor();
     asgt.type.TargetValueOuterClass.getDescriptor();
-    gen_bq_schema.BqField.getDescriptor();
-    gen_bq_schema.BqTable.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

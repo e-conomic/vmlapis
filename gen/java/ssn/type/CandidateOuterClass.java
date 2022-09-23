@@ -24,7 +24,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
@@ -34,7 +34,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     ssn.type.CandidateOuterClass.Confidence.Level getLevel();
@@ -44,7 +44,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     boolean hasValue();
@@ -53,7 +53,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     com.google.protobuf.FloatValue getValue();
@@ -62,7 +62,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     com.google.protobuf.FloatValueOrBuilder getValueOrBuilder();
   }
@@ -315,7 +315,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     @java.lang.Override public int getLevelValue() {
@@ -327,7 +327,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Confidence.Level getLevel() {
@@ -343,7 +343,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     @java.lang.Override
@@ -355,7 +355,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -367,7 +367,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
@@ -712,7 +712,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The enum numeric value on the wire for level.
        */
       @java.lang.Override public int getLevelValue() {
@@ -724,7 +724,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
        */
@@ -740,7 +740,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The level.
        */
       @java.lang.Override
@@ -755,7 +755,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The level to set.
        * @return This builder for chaining.
        */
@@ -774,7 +774,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
@@ -792,7 +792,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return Whether the value field is set.
        */
       public boolean hasValue() {
@@ -803,7 +803,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return The value.
        */
       public com.google.protobuf.FloatValue getValue() {
@@ -818,7 +818,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -838,7 +838,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(
           com.google.protobuf.FloatValue.Builder builderForValue) {
@@ -856,7 +856,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder mergeValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -878,7 +878,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder clearValue() {
         if (valueBuilder_ == null) {
@@ -896,7 +896,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValue.Builder getValueBuilder() {
         
@@ -908,7 +908,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
         if (valueBuilder_ != null) {
@@ -923,7 +923,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
@@ -1000,7 +1000,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The value.
      */
     java.lang.String getValue();
@@ -1009,7 +1009,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
@@ -1021,7 +1021,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -1031,7 +1031,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -1042,7 +1042,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return Whether the confidence field is set.
      */
     boolean hasConfidence();
@@ -1051,7 +1051,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     ssn.type.CandidateOuterClass.Confidence getConfidence();
@@ -1060,7 +1060,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
 
@@ -1083,7 +1083,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
@@ -1106,7 +1106,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
@@ -1129,7 +1129,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
@@ -1138,7 +1138,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
@@ -1147,7 +1147,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The type.
      */
     ssn.type.CandidateOuterClass.Candidate.Type getType();
@@ -1158,7 +1158,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     int getPageRef();
@@ -1168,7 +1168,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
     boolean hasModelMetadata();
@@ -1177,7 +1177,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
     ssn.type.CandidateOuterClass.ModelSpec getModelMetadata();
@@ -1186,7 +1186,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder();
   }
@@ -1456,7 +1456,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -1477,7 +1477,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -1503,7 +1503,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -1525,7 +1525,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -1550,7 +1550,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return Whether the confidence field is set.
      */
     @java.lang.Override
@@ -1562,7 +1562,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -1574,7 +1574,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
@@ -1602,7 +1602,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     @java.lang.Override
@@ -1628,7 +1628,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     @java.lang.Override
@@ -1654,7 +1654,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -1668,7 +1668,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
@@ -1679,7 +1679,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Candidate.Type getType() {
@@ -1696,7 +1696,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     @java.lang.Override
@@ -1711,7 +1711,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
     @java.lang.Override
@@ -1723,7 +1723,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
     @java.lang.Override
@@ -1735,7 +1735,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
@@ -2190,7 +2190,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @return The value.
        */
       public java.lang.String getValue() {
@@ -2210,7 +2210,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
@@ -2231,7 +2231,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -2250,7 +2250,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -2264,7 +2264,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
@@ -2287,7 +2287,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -2308,7 +2308,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -2330,7 +2330,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -2350,7 +2350,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -2365,7 +2365,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -2389,7 +2389,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        * @return Whether the confidence field is set.
        */
       public boolean hasConfidence() {
@@ -2400,7 +2400,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       public ssn.type.CandidateOuterClass.Confidence getConfidence() {
@@ -2415,7 +2415,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder setConfidence(ssn.type.CandidateOuterClass.Confidence value) {
         if (confidenceBuilder_ == null) {
@@ -2435,7 +2435,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder setConfidence(
           ssn.type.CandidateOuterClass.Confidence.Builder builderForValue) {
@@ -2453,7 +2453,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder mergeConfidence(ssn.type.CandidateOuterClass.Confidence value) {
         if (confidenceBuilder_ == null) {
@@ -2475,7 +2475,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder clearConfidence() {
         if (confidenceBuilder_ == null) {
@@ -2493,7 +2493,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public ssn.type.CandidateOuterClass.Confidence.Builder getConfidenceBuilder() {
         
@@ -2505,7 +2505,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
         if (confidenceBuilder_ != null) {
@@ -2520,7 +2520,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.CandidateOuterClass.Confidence, ssn.type.CandidateOuterClass.Confidence.Builder, ssn.type.CandidateOuterClass.ConfidenceOrBuilder> 
@@ -2558,7 +2558,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
@@ -2583,7 +2583,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
@@ -2612,7 +2612,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -2646,7 +2646,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(
           ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
@@ -2678,7 +2678,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -2714,7 +2714,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder clearBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -2746,7 +2746,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
         
@@ -2772,7 +2772,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
         if (boundingBoxBuilder_ != null) {
@@ -2801,7 +2801,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> 
@@ -2823,7 +2823,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -2834,7 +2834,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -2849,7 +2849,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @return The type.
        */
       @java.lang.Override
@@ -2863,7 +2863,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -2881,7 +2881,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -2898,7 +2898,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return The pageRef.
        */
       @java.lang.Override
@@ -2911,7 +2911,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @param value The pageRef to set.
        * @return This builder for chaining.
        */
@@ -2927,7 +2927,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageRef() {
@@ -2945,7 +2945,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        * @return Whether the modelMetadata field is set.
        */
       public boolean hasModelMetadata() {
@@ -2956,7 +2956,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        * @return The modelMetadata.
        */
       public ssn.type.CandidateOuterClass.ModelSpec getModelMetadata() {
@@ -2971,7 +2971,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder setModelMetadata(ssn.type.CandidateOuterClass.ModelSpec value) {
         if (modelMetadataBuilder_ == null) {
@@ -2991,7 +2991,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder setModelMetadata(
           ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
@@ -3009,7 +3009,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder mergeModelMetadata(ssn.type.CandidateOuterClass.ModelSpec value) {
         if (modelMetadataBuilder_ == null) {
@@ -3031,7 +3031,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder clearModelMetadata() {
         if (modelMetadataBuilder_ == null) {
@@ -3049,7 +3049,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public ssn.type.CandidateOuterClass.ModelSpec.Builder getModelMetadataBuilder() {
         
@@ -3061,7 +3061,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
         if (modelMetadataBuilder_ != null) {
@@ -3076,7 +3076,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
@@ -3153,7 +3153,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The modelName.
      */
     java.lang.String getModelName();
@@ -3162,7 +3162,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The bytes for modelName.
      */
     com.google.protobuf.ByteString
@@ -3173,7 +3173,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return Whether the modelVer field is set.
      */
     boolean hasModelVer();
@@ -3182,7 +3182,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return The modelVer.
      */
     com.google.protobuf.Int64Value getModelVer();
@@ -3191,7 +3191,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder();
   }
@@ -3299,7 +3299,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The modelName.
      */
     @java.lang.Override
@@ -3320,7 +3320,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The bytes for modelName.
      */
     @java.lang.Override
@@ -3345,7 +3345,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return Whether the modelVer field is set.
      */
     @java.lang.Override
@@ -3357,7 +3357,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return The modelVer.
      */
     @java.lang.Override
@@ -3369,7 +3369,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
@@ -3714,7 +3714,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @return The modelName.
        */
       public java.lang.String getModelName() {
@@ -3734,7 +3734,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @return The bytes for modelName.
        */
       public com.google.protobuf.ByteString
@@ -3755,7 +3755,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @param value The modelName to set.
        * @return This builder for chaining.
        */
@@ -3774,7 +3774,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
@@ -3788,7 +3788,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @param value The bytes for modelName to set.
        * @return This builder for chaining.
        */
@@ -3812,7 +3812,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        * @return Whether the modelVer field is set.
        */
       public boolean hasModelVer() {
@@ -3823,7 +3823,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        * @return The modelVer.
        */
       public com.google.protobuf.Int64Value getModelVer() {
@@ -3838,7 +3838,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder setModelVer(com.google.protobuf.Int64Value value) {
         if (modelVerBuilder_ == null) {
@@ -3858,7 +3858,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder setModelVer(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3876,7 +3876,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder mergeModelVer(com.google.protobuf.Int64Value value) {
         if (modelVerBuilder_ == null) {
@@ -3898,7 +3898,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder clearModelVer() {
         if (modelVerBuilder_ == null) {
@@ -3916,7 +3916,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getModelVerBuilder() {
         
@@ -3928,7 +3928,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
         if (modelVerBuilder_ != null) {
@@ -3943,7 +3943,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -4021,7 +4021,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -4031,7 +4031,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -4043,7 +4043,7 @@ public final class CandidateOuterClass {
      * Example: 300.0
      * </pre>
      *
-     * <code>double amount = 2;</code>
+     * <code>double amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     double getAmount();
@@ -4054,7 +4054,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     int getPageRef();
@@ -4161,7 +4161,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -4183,7 +4183,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -4209,7 +4209,7 @@ public final class CandidateOuterClass {
      * Example: 300.0
      * </pre>
      *
-     * <code>double amount = 2;</code>
+     * <code>double amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -4225,7 +4225,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     @java.lang.Override
@@ -4578,7 +4578,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -4599,7 +4599,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -4621,7 +4621,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -4641,7 +4641,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -4656,7 +4656,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -4679,7 +4679,7 @@ public final class CandidateOuterClass {
        * Example: 300.0
        * </pre>
        *
-       * <code>double amount = 2;</code>
+       * <code>double amount = 2 [json_name = "amount"];</code>
        * @return The amount.
        */
       @java.lang.Override
@@ -4692,7 +4692,7 @@ public final class CandidateOuterClass {
        * Example: 300.0
        * </pre>
        *
-       * <code>double amount = 2;</code>
+       * <code>double amount = 2 [json_name = "amount"];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -4708,7 +4708,7 @@ public final class CandidateOuterClass {
        * Example: 300.0
        * </pre>
        *
-       * <code>double amount = 2;</code>
+       * <code>double amount = 2 [json_name = "amount"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -4725,7 +4725,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return The pageRef.
        */
       @java.lang.Override
@@ -4738,7 +4738,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @param value The pageRef to set.
        * @return This builder for chaining.
        */
@@ -4754,7 +4754,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageRef() {
@@ -4847,24 +4847,27 @@ public final class CandidateOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030ssn/type/candidate.proto\022\010ssn.type\032\036go" +
       "ogle/protobuf/wrappers.proto\032\027ssn/type/g" +
-      "eometry.proto\"\262\001\n\nConfidence\022)\n\005level\030\001 " +
-      "\001(\0162\032.ssn.type.Confidence.Level\022*\n\005value" +
-      "\030\002 \001(\0132\033.google.protobuf.FloatValue\"M\n\005L" +
-      "evel\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002" +
-      "\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\225\002\n\tC" +
-      "andidate\022\r\n\005value\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022(\n" +
-      "\nconfidence\030\003 \001(\0132\024.ssn.type.Confidence\022" +
-      ",\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Boundin" +
-      "gPoly\022&\n\004type\030\005 \001(\0162\030.ssn.type.Candidate" +
-      ".Type\022\020\n\010page_ref\030\006 \001(\r\022+\n\016model_metadat" +
-      "a\030\007 \001(\0132\023.ssn.type.ModelSpec\",\n\004Type\022\013\n\007" +
-      "UNKNOWN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"O\n\tMo" +
-      "delSpec\022\022\n\nmodel_name\030\001 \001(\t\022.\n\tmodel_ver" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\"?\n\rL" +
-      "ineCandidate\022\014\n\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
-      "(\001\022\020\n\010page_ref\030\006 \001(\rB6Z4github.com/e-con" +
-      "omic/vmlapis/gen/go/ssn/type;ssntypeb\006pr" +
-      "oto3"
+      "eometry.proto\"\300\001\n\nConfidence\0220\n\005level\030\001 " +
+      "\001(\0162\032.ssn.type.Confidence.LevelR\005level\0221" +
+      "\n\005value\030\002 \001(\0132\033.google.protobuf.FloatVal" +
+      "ueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_" +
+      "LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVER" +
+      "Y_HIGH\020\005\"\331\002\n\tCandidate\022\024\n\005value\030\001 \001(\tR\005v" +
+      "alue\022\022\n\004text\030\002 \001(\tR\004text\0224\n\nconfidence\030\003" +
+      " \001(\0132\024.ssn.type.ConfidenceR\nconfidence\0229" +
+      "\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Bounding" +
+      "PolyR\013boundingBox\022,\n\004type\030\005 \001(\0162\030.ssn.ty" +
+      "pe.Candidate.TypeR\004type\022\031\n\010page_ref\030\006 \001(" +
+      "\rR\007pageRef\022:\n\016model_metadata\030\007 \001(\0132\023.ssn" +
+      ".type.ModelSpecR\rmodelMetadata\",\n\004Type\022\013" +
+      "\n\007UNKNOWN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"d\n\t" +
+      "ModelSpec\022\035\n\nmodel_name\030\001 \001(\tR\tmodelName" +
+      "\0228\n\tmodel_ver\030\002 \001(\0132\033.google.protobuf.In" +
+      "t64ValueR\010modelVer\"V\n\rLineCandidate\022\022\n\004t" +
+      "ext\030\001 \001(\tR\004text\022\026\n\006amount\030\002 \001(\001R\006amount\022" +
+      "\031\n\010page_ref\030\006 \001(\rR\007pageRefB6Z4github.com" +
+      "/e-conomic/vmlapis/gen/go/ssn/type;ssnty" +
+      "peb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

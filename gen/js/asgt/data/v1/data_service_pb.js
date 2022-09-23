@@ -2,34 +2,37 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
-goog.object.extend(proto, asgt_type_dataset_pb);
-var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
-goog.object.extend(proto, asgt_type_model_pb);
-var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js');
-goog.object.extend(proto, asgt_type_retention_policy_pb);
-var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
-goog.object.extend(proto, asgt_type_sample_pb);
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.object.extend(proto, google_protobuf_empty_pb);
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-goog.object.extend(proto, google_protobuf_timestamp_pb);
-var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
-goog.object.extend(proto, google_protobuf_wrappers_pb);
+var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js');
+goog.object.extend(proto, asgt_type_retention_policy_pb);
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
+goog.object.extend(proto, asgt_type_model_pb);
+var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
+goog.object.extend(proto, asgt_type_dataset_pb);
+var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
+goog.object.extend(proto, asgt_type_sample_pb);
 var ssn_dataservice_v1_dataservice_pb = require('../../../ssn/dataservice/v1/dataservice_pb.js');
 goog.object.extend(proto, ssn_dataservice_v1_dataservice_pb);
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
+goog.object.extend(proto, google_protobuf_wrappers_pb);
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+goog.object.extend(proto, google_protobuf_timestamp_pb);
 goog.exportSymbol('proto.asgt.dataservice.v1.AppendDataRequest', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1.CalculateMetricsRequest', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1.CalculateMetricsResponse', null, global);

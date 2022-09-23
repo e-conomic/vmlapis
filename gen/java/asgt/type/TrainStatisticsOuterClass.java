@@ -19,12 +19,12 @@ public final class TrainStatisticsOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string class_name = 1;</code>
+     * <code>string class_name = 1 [json_name = "className"];</code>
      * @return The className.
      */
     java.lang.String getClassName();
     /**
-     * <code>string class_name = 1;</code>
+     * <code>string class_name = 1 [json_name = "className"];</code>
      * @return The bytes for className.
      */
     com.google.protobuf.ByteString
@@ -35,7 +35,7 @@ public final class TrainStatisticsOuterClass {
      * name of the target class in a target (classification task)
      * </pre>
      *
-     * <code>float relative_dataset_proportion = 2;</code>
+     * <code>float relative_dataset_proportion = 2 [json_name = "relativeDatasetProportion"];</code>
      * @return The relativeDatasetProportion.
      */
     float getRelativeDatasetProportion();
@@ -45,7 +45,7 @@ public final class TrainStatisticsOuterClass {
      * percentage of samples belonging to a single class
      * </pre>
      *
-     * <code>int32 absolute_dataset_proportion = 3;</code>
+     * <code>int32 absolute_dataset_proportion = 3 [json_name = "absoluteDatasetProportion"];</code>
      * @return The absoluteDatasetProportion.
      */
     int getAbsoluteDatasetProportion();
@@ -147,7 +147,7 @@ public final class TrainStatisticsOuterClass {
     public static final int CLASS_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object className_;
     /**
-     * <code>string class_name = 1;</code>
+     * <code>string class_name = 1 [json_name = "className"];</code>
      * @return The className.
      */
     @java.lang.Override
@@ -164,7 +164,7 @@ public final class TrainStatisticsOuterClass {
       }
     }
     /**
-     * <code>string class_name = 1;</code>
+     * <code>string class_name = 1 [json_name = "className"];</code>
      * @return The bytes for className.
      */
     @java.lang.Override
@@ -189,7 +189,7 @@ public final class TrainStatisticsOuterClass {
      * name of the target class in a target (classification task)
      * </pre>
      *
-     * <code>float relative_dataset_proportion = 2;</code>
+     * <code>float relative_dataset_proportion = 2 [json_name = "relativeDatasetProportion"];</code>
      * @return The relativeDatasetProportion.
      */
     @java.lang.Override
@@ -204,7 +204,7 @@ public final class TrainStatisticsOuterClass {
      * percentage of samples belonging to a single class
      * </pre>
      *
-     * <code>int32 absolute_dataset_proportion = 3;</code>
+     * <code>int32 absolute_dataset_proportion = 3 [json_name = "absoluteDatasetProportion"];</code>
      * @return The absoluteDatasetProportion.
      */
     @java.lang.Override
@@ -552,7 +552,7 @@ public final class TrainStatisticsOuterClass {
 
       private java.lang.Object className_ = "";
       /**
-       * <code>string class_name = 1;</code>
+       * <code>string class_name = 1 [json_name = "className"];</code>
        * @return The className.
        */
       public java.lang.String getClassName() {
@@ -568,7 +568,7 @@ public final class TrainStatisticsOuterClass {
         }
       }
       /**
-       * <code>string class_name = 1;</code>
+       * <code>string class_name = 1 [json_name = "className"];</code>
        * @return The bytes for className.
        */
       public com.google.protobuf.ByteString
@@ -585,7 +585,7 @@ public final class TrainStatisticsOuterClass {
         }
       }
       /**
-       * <code>string class_name = 1;</code>
+       * <code>string class_name = 1 [json_name = "className"];</code>
        * @param value The className to set.
        * @return This builder for chaining.
        */
@@ -600,7 +600,7 @@ public final class TrainStatisticsOuterClass {
         return this;
       }
       /**
-       * <code>string class_name = 1;</code>
+       * <code>string class_name = 1 [json_name = "className"];</code>
        * @return This builder for chaining.
        */
       public Builder clearClassName() {
@@ -610,7 +610,7 @@ public final class TrainStatisticsOuterClass {
         return this;
       }
       /**
-       * <code>string class_name = 1;</code>
+       * <code>string class_name = 1 [json_name = "className"];</code>
        * @param value The bytes for className to set.
        * @return This builder for chaining.
        */
@@ -632,7 +632,7 @@ public final class TrainStatisticsOuterClass {
        * name of the target class in a target (classification task)
        * </pre>
        *
-       * <code>float relative_dataset_proportion = 2;</code>
+       * <code>float relative_dataset_proportion = 2 [json_name = "relativeDatasetProportion"];</code>
        * @return The relativeDatasetProportion.
        */
       @java.lang.Override
@@ -644,7 +644,7 @@ public final class TrainStatisticsOuterClass {
        * name of the target class in a target (classification task)
        * </pre>
        *
-       * <code>float relative_dataset_proportion = 2;</code>
+       * <code>float relative_dataset_proportion = 2 [json_name = "relativeDatasetProportion"];</code>
        * @param value The relativeDatasetProportion to set.
        * @return This builder for chaining.
        */
@@ -659,7 +659,7 @@ public final class TrainStatisticsOuterClass {
        * name of the target class in a target (classification task)
        * </pre>
        *
-       * <code>float relative_dataset_proportion = 2;</code>
+       * <code>float relative_dataset_proportion = 2 [json_name = "relativeDatasetProportion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearRelativeDatasetProportion() {
@@ -675,7 +675,7 @@ public final class TrainStatisticsOuterClass {
        * percentage of samples belonging to a single class
        * </pre>
        *
-       * <code>int32 absolute_dataset_proportion = 3;</code>
+       * <code>int32 absolute_dataset_proportion = 3 [json_name = "absoluteDatasetProportion"];</code>
        * @return The absoluteDatasetProportion.
        */
       @java.lang.Override
@@ -687,7 +687,7 @@ public final class TrainStatisticsOuterClass {
        * percentage of samples belonging to a single class
        * </pre>
        *
-       * <code>int32 absolute_dataset_proportion = 3;</code>
+       * <code>int32 absolute_dataset_proportion = 3 [json_name = "absoluteDatasetProportion"];</code>
        * @param value The absoluteDatasetProportion to set.
        * @return This builder for chaining.
        */
@@ -702,7 +702,7 @@ public final class TrainStatisticsOuterClass {
        * percentage of samples belonging to a single class
        * </pre>
        *
-       * <code>int32 absolute_dataset_proportion = 3;</code>
+       * <code>int32 absolute_dataset_proportion = 3 [json_name = "absoluteDatasetProportion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAbsoluteDatasetProportion() {
@@ -773,7 +773,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> 
         getTargetStatsList();
@@ -782,7 +782,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStats(int index);
     /**
@@ -790,7 +790,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     int getTargetStatsCount();
     /**
@@ -798,7 +798,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     java.util.List<? extends asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> 
         getTargetStatsOrBuilderList();
@@ -807,7 +807,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder getTargetStatsOrBuilder(
         int index);
@@ -910,7 +910,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatsList() {
@@ -921,7 +921,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> 
@@ -933,7 +933,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     @java.lang.Override
     public int getTargetStatsCount() {
@@ -944,7 +944,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStats(int index) {
@@ -955,7 +955,7 @@ public final class TrainStatisticsOuterClass {
      * statistics of classes in a single target (classification task)
      * </pre>
      *
-     * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+     * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder getTargetStatsOrBuilder(
@@ -1322,7 +1322,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> getTargetStatsList() {
         if (targetStatsBuilder_ == null) {
@@ -1336,7 +1336,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public int getTargetStatsCount() {
         if (targetStatsBuilder_ == null) {
@@ -1350,7 +1350,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TargetStat getTargetStats(int index) {
         if (targetStatsBuilder_ == null) {
@@ -1364,7 +1364,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder setTargetStats(
           int index, asgt.type.TrainStatisticsOuterClass.TargetStat value) {
@@ -1385,7 +1385,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder setTargetStats(
           int index, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder builderForValue) {
@@ -1403,7 +1403,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder addTargetStats(asgt.type.TrainStatisticsOuterClass.TargetStat value) {
         if (targetStatsBuilder_ == null) {
@@ -1423,7 +1423,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder addTargetStats(
           int index, asgt.type.TrainStatisticsOuterClass.TargetStat value) {
@@ -1444,7 +1444,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder addTargetStats(
           asgt.type.TrainStatisticsOuterClass.TargetStat.Builder builderForValue) {
@@ -1462,7 +1462,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder addTargetStats(
           int index, asgt.type.TrainStatisticsOuterClass.TargetStat.Builder builderForValue) {
@@ -1480,7 +1480,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder addAllTargetStats(
           java.lang.Iterable<? extends asgt.type.TrainStatisticsOuterClass.TargetStat> values) {
@@ -1499,7 +1499,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder clearTargetStats() {
         if (targetStatsBuilder_ == null) {
@@ -1516,7 +1516,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public Builder removeTargetStats(int index) {
         if (targetStatsBuilder_ == null) {
@@ -1533,7 +1533,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TargetStat.Builder getTargetStatsBuilder(
           int index) {
@@ -1544,7 +1544,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder getTargetStatsOrBuilder(
           int index) {
@@ -1558,7 +1558,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.TargetStatOrBuilder> 
            getTargetStatsOrBuilderList() {
@@ -1573,7 +1573,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TargetStat.Builder addTargetStatsBuilder() {
         return getTargetStatsFieldBuilder().addBuilder(
@@ -1584,7 +1584,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TargetStat.Builder addTargetStatsBuilder(
           int index) {
@@ -1596,7 +1596,7 @@ public final class TrainStatisticsOuterClass {
        * statistics of classes in a single target (classification task)
        * </pre>
        *
-       * <code>repeated .asgt.type.TargetStat target_stats = 1;</code>
+       * <code>repeated .asgt.type.TargetStat target_stats = 1 [json_name = "targetStats"];</code>
        */
       public java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat.Builder> 
            getTargetStatsBuilderList() {
@@ -1674,12 +1674,12 @@ public final class TrainStatisticsOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string feature_name = 1;</code>
+     * <code>string feature_name = 1 [json_name = "featureName"];</code>
      * @return The featureName.
      */
     java.lang.String getFeatureName();
     /**
-     * <code>string feature_name = 1;</code>
+     * <code>string feature_name = 1 [json_name = "featureName"];</code>
      * @return The bytes for featureName.
      */
     com.google.protobuf.ByteString
@@ -1687,29 +1687,29 @@ public final class TrainStatisticsOuterClass {
 
     /**
      * <pre>
-     * name of the feature
+     * name of the feature 
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
      * @return The enum numeric value on the wire for featureType.
      */
     int getFeatureTypeValue();
     /**
      * <pre>
-     * name of the feature
+     * name of the feature 
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
      * @return The featureType.
      */
     asgt.type.TrainStatisticsOuterClass.FeatureStat.Type getFeatureType();
 
     /**
      * <pre>
-     * type of the feature
+     * type of the feature 
      * </pre>
      *
-     * <code>float information_gain = 3;</code>
+     * <code>float information_gain = 3 [json_name = "informationGain"];</code>
      * @return The informationGain.
      */
     float getInformationGain();
@@ -1948,7 +1948,7 @@ public final class TrainStatisticsOuterClass {
     public static final int FEATURE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object featureName_;
     /**
-     * <code>string feature_name = 1;</code>
+     * <code>string feature_name = 1 [json_name = "featureName"];</code>
      * @return The featureName.
      */
     @java.lang.Override
@@ -1965,7 +1965,7 @@ public final class TrainStatisticsOuterClass {
       }
     }
     /**
-     * <code>string feature_name = 1;</code>
+     * <code>string feature_name = 1 [json_name = "featureName"];</code>
      * @return The bytes for featureName.
      */
     @java.lang.Override
@@ -1987,10 +1987,10 @@ public final class TrainStatisticsOuterClass {
     private int featureType_;
     /**
      * <pre>
-     * name of the feature
+     * name of the feature 
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
      * @return The enum numeric value on the wire for featureType.
      */
     @java.lang.Override public int getFeatureTypeValue() {
@@ -1998,10 +1998,10 @@ public final class TrainStatisticsOuterClass {
     }
     /**
      * <pre>
-     * name of the feature
+     * name of the feature 
      * </pre>
      *
-     * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+     * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
      * @return The featureType.
      */
     @java.lang.Override public asgt.type.TrainStatisticsOuterClass.FeatureStat.Type getFeatureType() {
@@ -2014,10 +2014,10 @@ public final class TrainStatisticsOuterClass {
     private float informationGain_;
     /**
      * <pre>
-     * type of the feature
+     * type of the feature 
      * </pre>
      *
-     * <code>float information_gain = 3;</code>
+     * <code>float information_gain = 3 [json_name = "informationGain"];</code>
      * @return The informationGain.
      */
     @java.lang.Override
@@ -2364,7 +2364,7 @@ public final class TrainStatisticsOuterClass {
 
       private java.lang.Object featureName_ = "";
       /**
-       * <code>string feature_name = 1;</code>
+       * <code>string feature_name = 1 [json_name = "featureName"];</code>
        * @return The featureName.
        */
       public java.lang.String getFeatureName() {
@@ -2380,7 +2380,7 @@ public final class TrainStatisticsOuterClass {
         }
       }
       /**
-       * <code>string feature_name = 1;</code>
+       * <code>string feature_name = 1 [json_name = "featureName"];</code>
        * @return The bytes for featureName.
        */
       public com.google.protobuf.ByteString
@@ -2397,7 +2397,7 @@ public final class TrainStatisticsOuterClass {
         }
       }
       /**
-       * <code>string feature_name = 1;</code>
+       * <code>string feature_name = 1 [json_name = "featureName"];</code>
        * @param value The featureName to set.
        * @return This builder for chaining.
        */
@@ -2412,7 +2412,7 @@ public final class TrainStatisticsOuterClass {
         return this;
       }
       /**
-       * <code>string feature_name = 1;</code>
+       * <code>string feature_name = 1 [json_name = "featureName"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFeatureName() {
@@ -2422,7 +2422,7 @@ public final class TrainStatisticsOuterClass {
         return this;
       }
       /**
-       * <code>string feature_name = 1;</code>
+       * <code>string feature_name = 1 [json_name = "featureName"];</code>
        * @param value The bytes for featureName to set.
        * @return This builder for chaining.
        */
@@ -2441,10 +2441,10 @@ public final class TrainStatisticsOuterClass {
       private int featureType_ = 0;
       /**
        * <pre>
-       * name of the feature
+       * name of the feature 
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
        * @return The enum numeric value on the wire for featureType.
        */
       @java.lang.Override public int getFeatureTypeValue() {
@@ -2452,10 +2452,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature
+       * name of the feature 
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
        * @param value The enum numeric value on the wire for featureType to set.
        * @return This builder for chaining.
        */
@@ -2467,10 +2467,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature
+       * name of the feature 
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
        * @return The featureType.
        */
       @java.lang.Override
@@ -2481,10 +2481,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature
+       * name of the feature 
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
        * @param value The featureType to set.
        * @return This builder for chaining.
        */
@@ -2499,10 +2499,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature
+       * name of the feature 
        * </pre>
        *
-       * <code>.asgt.type.FeatureStat.Type feature_type = 2;</code>
+       * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFeatureType() {
@@ -2515,10 +2515,10 @@ public final class TrainStatisticsOuterClass {
       private float informationGain_ ;
       /**
        * <pre>
-       * type of the feature
+       * type of the feature 
        * </pre>
        *
-       * <code>float information_gain = 3;</code>
+       * <code>float information_gain = 3 [json_name = "informationGain"];</code>
        * @return The informationGain.
        */
       @java.lang.Override
@@ -2527,10 +2527,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature
+       * type of the feature 
        * </pre>
        *
-       * <code>float information_gain = 3;</code>
+       * <code>float information_gain = 3 [json_name = "informationGain"];</code>
        * @param value The informationGain to set.
        * @return This builder for chaining.
        */
@@ -2542,10 +2542,10 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature
+       * type of the feature 
        * </pre>
        *
-       * <code>float information_gain = 3;</code>
+       * <code>float information_gain = 3 [json_name = "informationGain"];</code>
        * @return This builder for chaining.
        */
       public Builder clearInformationGain() {
@@ -2616,7 +2616,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> 
         getFeatureStatsList();
@@ -2625,7 +2625,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStats(int index);
     /**
@@ -2633,7 +2633,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     int getFeatureStatsCount();
     /**
@@ -2641,7 +2641,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     java.util.List<? extends asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> 
         getFeatureStatsOrBuilderList();
@@ -2650,7 +2650,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder getFeatureStatsOrBuilder(
         int index);
@@ -2753,7 +2753,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsList() {
@@ -2764,7 +2764,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> 
@@ -2776,7 +2776,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     @java.lang.Override
     public int getFeatureStatsCount() {
@@ -2787,7 +2787,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStats(int index) {
@@ -2798,7 +2798,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each feature
      * </pre>
      *
-     * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+     * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder getFeatureStatsOrBuilder(
@@ -3165,7 +3165,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> getFeatureStatsList() {
         if (featureStatsBuilder_ == null) {
@@ -3179,7 +3179,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public int getFeatureStatsCount() {
         if (featureStatsBuilder_ == null) {
@@ -3193,7 +3193,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.FeatureStat getFeatureStats(int index) {
         if (featureStatsBuilder_ == null) {
@@ -3207,7 +3207,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder setFeatureStats(
           int index, asgt.type.TrainStatisticsOuterClass.FeatureStat value) {
@@ -3228,7 +3228,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder setFeatureStats(
           int index, asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder builderForValue) {
@@ -3246,7 +3246,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder addFeatureStats(asgt.type.TrainStatisticsOuterClass.FeatureStat value) {
         if (featureStatsBuilder_ == null) {
@@ -3266,7 +3266,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder addFeatureStats(
           int index, asgt.type.TrainStatisticsOuterClass.FeatureStat value) {
@@ -3287,7 +3287,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder addFeatureStats(
           asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder builderForValue) {
@@ -3305,7 +3305,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder addFeatureStats(
           int index, asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder builderForValue) {
@@ -3323,7 +3323,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder addAllFeatureStats(
           java.lang.Iterable<? extends asgt.type.TrainStatisticsOuterClass.FeatureStat> values) {
@@ -3342,7 +3342,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder clearFeatureStats() {
         if (featureStatsBuilder_ == null) {
@@ -3359,7 +3359,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public Builder removeFeatureStats(int index) {
         if (featureStatsBuilder_ == null) {
@@ -3376,7 +3376,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder getFeatureStatsBuilder(
           int index) {
@@ -3387,7 +3387,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder getFeatureStatsOrBuilder(
           int index) {
@@ -3401,7 +3401,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public java.util.List<? extends asgt.type.TrainStatisticsOuterClass.FeatureStatOrBuilder> 
            getFeatureStatsOrBuilderList() {
@@ -3416,7 +3416,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder addFeatureStatsBuilder() {
         return getFeatureStatsFieldBuilder().addBuilder(
@@ -3427,7 +3427,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder addFeatureStatsBuilder(
           int index) {
@@ -3439,7 +3439,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each feature
        * </pre>
        *
-       * <code>repeated .asgt.type.FeatureStat feature_stats = 1;</code>
+       * <code>repeated .asgt.type.FeatureStat feature_stats = 1 [json_name = "featureStats"];</code>
        */
       public java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat.Builder> 
            getFeatureStatsBuilderList() {
@@ -3521,7 +3521,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     int getTargetStatsByTargetCount();
     /**
@@ -3529,7 +3529,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     boolean containsTargetStatsByTarget(
         java.lang.String key);
@@ -3544,7 +3544,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats>
     getTargetStatsByTargetMap();
@@ -3553,7 +3553,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
 
     asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
@@ -3564,7 +3564,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
 
     asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrThrow(
@@ -3575,7 +3575,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     int getFeatureStatsByTargetCount();
     /**
@@ -3583,7 +3583,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     boolean containsFeatureStatsByTarget(
         java.lang.String key);
@@ -3598,7 +3598,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats>
     getFeatureStatsByTargetMap();
@@ -3607,7 +3607,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
 
     asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
@@ -3618,7 +3618,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
 
     asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrThrow(
@@ -3629,7 +3629,7 @@ public final class TrainStatisticsOuterClass {
      * measure of train/test similarity
      * </pre>
      *
-     * <code>float similarity_index = 3;</code>
+     * <code>float similarity_index = 3 [json_name = "similarityIndex"];</code>
      * @return The similarityIndex.
      */
     float getSimilarityIndex();
@@ -3788,7 +3788,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
 
     @java.lang.Override
@@ -3810,7 +3810,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     @java.lang.Override
 
@@ -3822,7 +3822,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     @java.lang.Override
 
@@ -3839,7 +3839,7 @@ public final class TrainStatisticsOuterClass {
      * target statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+     * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     @java.lang.Override
 
@@ -3885,7 +3885,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
 
     @java.lang.Override
@@ -3907,7 +3907,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     @java.lang.Override
 
@@ -3919,7 +3919,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     @java.lang.Override
 
@@ -3936,7 +3936,7 @@ public final class TrainStatisticsOuterClass {
      * feature statistics for each target (classification task)
      * </pre>
      *
-     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+     * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     @java.lang.Override
 
@@ -3958,7 +3958,7 @@ public final class TrainStatisticsOuterClass {
      * measure of train/test similarity
      * </pre>
      *
-     * <code>float similarity_index = 3;</code>
+     * <code>float similarity_index = 3 [json_name = "similarityIndex"];</code>
      * @return The similarityIndex.
      */
     @java.lang.Override
@@ -4383,7 +4383,7 @@ public final class TrainStatisticsOuterClass {
        * target statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
 
       @java.lang.Override
@@ -4405,7 +4405,7 @@ public final class TrainStatisticsOuterClass {
        * target statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
       @java.lang.Override
 
@@ -4417,7 +4417,7 @@ public final class TrainStatisticsOuterClass {
        * target statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
       @java.lang.Override
 
@@ -4434,7 +4434,7 @@ public final class TrainStatisticsOuterClass {
        * target statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
       @java.lang.Override
 
@@ -4459,7 +4459,7 @@ public final class TrainStatisticsOuterClass {
        * target statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
 
       public Builder removeTargetStatsByTarget(
@@ -4482,7 +4482,7 @@ public final class TrainStatisticsOuterClass {
        * target statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
       public Builder putTargetStatsByTarget(
           java.lang.String key,
@@ -4498,7 +4498,7 @@ public final class TrainStatisticsOuterClass {
        * target statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1;</code>
+       * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
 
       public Builder putAllTargetStatsByTarget(
@@ -4539,7 +4539,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
 
       @java.lang.Override
@@ -4561,7 +4561,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
       @java.lang.Override
 
@@ -4573,7 +4573,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
       @java.lang.Override
 
@@ -4590,7 +4590,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
       @java.lang.Override
 
@@ -4615,7 +4615,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
 
       public Builder removeFeatureStatsByTarget(
@@ -4638,7 +4638,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
       public Builder putFeatureStatsByTarget(
           java.lang.String key,
@@ -4654,7 +4654,7 @@ public final class TrainStatisticsOuterClass {
        * feature statistics for each target (classification task)
        * </pre>
        *
-       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2;</code>
+       * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
 
       public Builder putAllFeatureStatsByTarget(
@@ -4670,7 +4670,7 @@ public final class TrainStatisticsOuterClass {
        * measure of train/test similarity
        * </pre>
        *
-       * <code>float similarity_index = 3;</code>
+       * <code>float similarity_index = 3 [json_name = "similarityIndex"];</code>
        * @return The similarityIndex.
        */
       @java.lang.Override
@@ -4682,7 +4682,7 @@ public final class TrainStatisticsOuterClass {
        * measure of train/test similarity
        * </pre>
        *
-       * <code>float similarity_index = 3;</code>
+       * <code>float similarity_index = 3 [json_name = "similarityIndex"];</code>
        * @param value The similarityIndex to set.
        * @return This builder for chaining.
        */
@@ -4697,7 +4697,7 @@ public final class TrainStatisticsOuterClass {
        * measure of train/test similarity
        * </pre>
        *
-       * <code>float similarity_index = 3;</code>
+       * <code>float similarity_index = 3 [json_name = "similarityIndex"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSimilarityIndex() {
@@ -4804,28 +4804,34 @@ public final class TrainStatisticsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n asgt/type/train_statistics.proto\022\tasgt" +
-      ".type\"j\n\nTargetStat\022\022\n\nclass_name\030\001 \001(\t\022" +
-      "#\n\033relative_dataset_proportion\030\002 \001(\002\022#\n\033" +
-      "absolute_dataset_proportion\030\003 \001(\005\":\n\013Tar" +
-      "getStats\022+\n\014target_stats\030\001 \003(\0132\025.asgt.ty" +
-      "pe.TargetStat\"\257\001\n\013FeatureStat\022\024\n\014feature" +
-      "_name\030\001 \001(\t\0221\n\014feature_type\030\002 \001(\0162\033.asgt" +
-      ".type.FeatureStat.Type\022\030\n\020information_ga" +
-      "in\030\003 \001(\002\"=\n\004Type\022\007\n\003INT\020\000\022\t\n\005FLOAT\020\001\022\n\n\006" +
-      "STRING\020\002\022\t\n\005BYTES\020\003\022\n\n\006STRUCT\020\004\"=\n\014Featu" +
-      "reStats\022-\n\rfeature_stats\030\001 \003(\0132\026.asgt.ty" +
-      "pe.FeatureStat\"\201\003\n\017TrainStatistics\022S\n\026ta" +
-      "rget_stats_by_target\030\001 \003(\01323.asgt.type.T" +
-      "rainStatistics.TargetStatsByTargetEntry\022" +
-      "U\n\027feature_stats_by_target\030\002 \003(\01324.asgt." +
-      "type.TrainStatistics.FeatureStatsByTarge" +
-      "tEntry\022\030\n\020similarity_index\030\003 \001(\002\032R\n\030Targ" +
-      "etStatsByTargetEntry\022\013\n\003key\030\001 \001(\t\022%\n\005val" +
-      "ue\030\002 \001(\0132\026.asgt.type.TargetStats:\0028\001\032T\n\031" +
-      "FeatureStatsByTargetEntry\022\013\n\003key\030\001 \001(\t\022&" +
-      "\n\005value\030\002 \001(\0132\027.asgt.type.FeatureStats:\002" +
-      "8\001B8Z6github.com/e-conomic/vmlapis/gen/g" +
-      "o/asgt/type;asgttypeb\006proto3"
+      ".type\"\253\001\n\nTargetStat\022\035\n\nclass_name\030\001 \001(\t" +
+      "R\tclassName\022>\n\033relative_dataset_proporti" +
+      "on\030\002 \001(\002R\031relativeDatasetProportion\022>\n\033a" +
+      "bsolute_dataset_proportion\030\003 \001(\005R\031absolu" +
+      "teDatasetProportion\"G\n\013TargetStats\0228\n\014ta" +
+      "rget_stats\030\001 \003(\0132\025.asgt.type.TargetStatR" +
+      "\013targetStats\"\332\001\n\013FeatureStat\022!\n\014feature_" +
+      "name\030\001 \001(\tR\013featureName\022>\n\014feature_type\030" +
+      "\002 \001(\0162\033.asgt.type.FeatureStat.TypeR\013feat" +
+      "ureType\022)\n\020information_gain\030\003 \001(\002R\017infor" +
+      "mationGain\"=\n\004Type\022\007\n\003INT\020\000\022\t\n\005FLOAT\020\001\022\n" +
+      "\n\006STRING\020\002\022\t\n\005BYTES\020\003\022\n\n\006STRUCT\020\004\"K\n\014Fea" +
+      "tureStats\022;\n\rfeature_stats\030\001 \003(\0132\026.asgt." +
+      "type.FeatureStatR\014featureStats\"\325\003\n\017Train" +
+      "Statistics\022h\n\026target_stats_by_target\030\001 \003" +
+      "(\01323.asgt.type.TrainStatistics.TargetSta" +
+      "tsByTargetEntryR\023targetStatsByTarget\022k\n\027" +
+      "feature_stats_by_target\030\002 \003(\01324.asgt.typ" +
+      "e.TrainStatistics.FeatureStatsByTargetEn" +
+      "tryR\024featureStatsByTarget\022)\n\020similarity_" +
+      "index\030\003 \001(\002R\017similarityIndex\032^\n\030TargetSt" +
+      "atsByTargetEntry\022\020\n\003key\030\001 \001(\tR\003key\022,\n\005va" +
+      "lue\030\002 \001(\0132\026.asgt.type.TargetStatsR\005value" +
+      ":\0028\001\032`\n\031FeatureStatsByTargetEntry\022\020\n\003key" +
+      "\030\001 \001(\tR\003key\022-\n\005value\030\002 \001(\0132\027.asgt.type.F" +
+      "eatureStatsR\005value:\0028\001B8Z6github.com/e-c" +
+      "onomic/vmlapis/gen/go/asgt/type;asgttype" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

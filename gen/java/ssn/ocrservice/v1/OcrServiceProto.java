@@ -19,22 +19,22 @@ public final class OcrServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
      * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
-     * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
      * @return The document.
      */
     ssn.annotator.v1.Annotator.Document getDocument();
     /**
-     * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
      */
     ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder();
 
     /**
-     * <code>bool preview = 3;</code>
+     * <code>bool preview = 3 [json_name = "preview"];</code>
      * @return The preview.
      */
     boolean getPreview();
@@ -137,7 +137,7 @@ public final class OcrServiceProto {
     public static final int DOCUMENT_FIELD_NUMBER = 2;
     private ssn.annotator.v1.Annotator.Document document_;
     /**
-     * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
      * @return Whether the document field is set.
      */
     @java.lang.Override
@@ -145,7 +145,7 @@ public final class OcrServiceProto {
       return document_ != null;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
      * @return The document.
      */
     @java.lang.Override
@@ -153,7 +153,7 @@ public final class OcrServiceProto {
       return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
@@ -163,7 +163,7 @@ public final class OcrServiceProto {
     public static final int PREVIEW_FIELD_NUMBER = 3;
     private boolean preview_;
     /**
-     * <code>bool preview = 3;</code>
+     * <code>bool preview = 3 [json_name = "preview"];</code>
      * @return The preview.
      */
     @java.lang.Override
@@ -508,14 +508,14 @@ public final class OcrServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> documentBuilder_;
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        * @return The document.
        */
       public ssn.annotator.v1.Annotator.Document getDocument() {
@@ -526,7 +526,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public Builder setDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
@@ -542,7 +542,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public Builder setDocument(
           ssn.annotator.v1.Annotator.Document.Builder builderForValue) {
@@ -556,7 +556,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public Builder mergeDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
@@ -574,7 +574,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
         if (documentBuilder_ == null) {
@@ -588,7 +588,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public ssn.annotator.v1.Annotator.Document.Builder getDocumentBuilder() {
         
@@ -596,7 +596,7 @@ public final class OcrServiceProto {
         return getDocumentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
         if (documentBuilder_ != null) {
@@ -607,7 +607,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> 
@@ -625,7 +625,7 @@ public final class OcrServiceProto {
 
       private boolean preview_ ;
       /**
-       * <code>bool preview = 3;</code>
+       * <code>bool preview = 3 [json_name = "preview"];</code>
        * @return The preview.
        */
       @java.lang.Override
@@ -633,7 +633,7 @@ public final class OcrServiceProto {
         return preview_;
       }
       /**
-       * <code>bool preview = 3;</code>
+       * <code>bool preview = 3 [json_name = "preview"];</code>
        * @param value The preview to set.
        * @return This builder for chaining.
        */
@@ -644,7 +644,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>bool preview = 3;</code>
+       * <code>bool preview = 3 [json_name = "preview"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPreview() {
@@ -711,32 +711,32 @@ public final class OcrServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return Whether the textAnnotation field is set.
      */
     boolean hasTextAnnotation();
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return The textAnnotation.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
 
     /**
-     * <code>.google.protobuf.BytesValue image = 3;</code>
+     * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
      * @return Whether the image field is set.
      */
     boolean hasImage();
     /**
-     * <code>.google.protobuf.BytesValue image = 3;</code>
+     * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
      * @return The image.
      */
     com.google.protobuf.BytesValue getImage();
     /**
-     * <code>.google.protobuf.BytesValue image = 3;</code>
+     * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
      */
     com.google.protobuf.BytesValueOrBuilder getImageOrBuilder();
   }
@@ -846,7 +846,7 @@ public final class OcrServiceProto {
     public static final int TEXT_ANNOTATION_FIELD_NUMBER = 2;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return Whether the textAnnotation field is set.
      */
     @java.lang.Override
@@ -854,7 +854,7 @@ public final class OcrServiceProto {
       return textAnnotation_ != null;
     }
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return The textAnnotation.
      */
     @java.lang.Override
@@ -862,7 +862,7 @@ public final class OcrServiceProto {
       return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
@@ -872,7 +872,7 @@ public final class OcrServiceProto {
     public static final int IMAGE_FIELD_NUMBER = 3;
     private com.google.protobuf.BytesValue image_;
     /**
-     * <code>.google.protobuf.BytesValue image = 3;</code>
+     * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
      * @return Whether the image field is set.
      */
     @java.lang.Override
@@ -880,7 +880,7 @@ public final class OcrServiceProto {
       return image_ != null;
     }
     /**
-     * <code>.google.protobuf.BytesValue image = 3;</code>
+     * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
      * @return The image.
      */
     @java.lang.Override
@@ -888,7 +888,7 @@ public final class OcrServiceProto {
       return image_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : image_;
     }
     /**
-     * <code>.google.protobuf.BytesValue image = 3;</code>
+     * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.BytesValueOrBuilder getImageOrBuilder() {
@@ -1244,14 +1244,14 @@ public final class OcrServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
         return textAnnotationBuilder_ != null || textAnnotation_ != null;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        * @return The textAnnotation.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
@@ -1262,7 +1262,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder setTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -1278,7 +1278,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder setTextAnnotation(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
@@ -1292,7 +1292,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder mergeTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -1310,7 +1310,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder clearTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -1324,7 +1324,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTextAnnotationBuilder() {
         
@@ -1332,7 +1332,7 @@ public final class OcrServiceProto {
         return getTextAnnotationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
         if (textAnnotationBuilder_ != null) {
@@ -1343,7 +1343,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> 
@@ -1363,14 +1363,14 @@ public final class OcrServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> imageBuilder_;
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        * @return Whether the image field is set.
        */
       public boolean hasImage() {
         return imageBuilder_ != null || image_ != null;
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        * @return The image.
        */
       public com.google.protobuf.BytesValue getImage() {
@@ -1381,7 +1381,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public Builder setImage(com.google.protobuf.BytesValue value) {
         if (imageBuilder_ == null) {
@@ -1397,7 +1397,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public Builder setImage(
           com.google.protobuf.BytesValue.Builder builderForValue) {
@@ -1411,7 +1411,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public Builder mergeImage(com.google.protobuf.BytesValue value) {
         if (imageBuilder_ == null) {
@@ -1429,7 +1429,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public Builder clearImage() {
         if (imageBuilder_ == null) {
@@ -1443,7 +1443,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public com.google.protobuf.BytesValue.Builder getImageBuilder() {
         
@@ -1451,7 +1451,7 @@ public final class OcrServiceProto {
         return getImageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public com.google.protobuf.BytesValueOrBuilder getImageOrBuilder() {
         if (imageBuilder_ != null) {
@@ -1462,7 +1462,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>.google.protobuf.BytesValue image = 3;</code>
+       * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> 
@@ -1535,7 +1535,7 @@ public final class OcrServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bytes data = 1;</code>
+     * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     com.google.protobuf.ByteString getData();
@@ -1626,7 +1626,7 @@ public final class OcrServiceProto {
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString data_;
     /**
-     * <code>bytes data = 1;</code>
+     * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -1938,7 +1938,7 @@ public final class OcrServiceProto {
 
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes data = 1;</code>
+       * <code>bytes data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       @java.lang.Override
@@ -1946,7 +1946,7 @@ public final class OcrServiceProto {
         return data_;
       }
       /**
-       * <code>bytes data = 1;</code>
+       * <code>bytes data = 1 [json_name = "data"];</code>
        * @param value The data to set.
        * @return This builder for chaining.
        */
@@ -1960,7 +1960,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>bytes data = 1;</code>
+       * <code>bytes data = 1 [json_name = "data"];</code>
        * @return This builder for chaining.
        */
       public Builder clearData() {
@@ -2027,12 +2027,12 @@ public final class OcrServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string tess_hocr = 1;</code>
+     * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
      * @return The tessHocr.
      */
     java.lang.String getTessHocr();
     /**
-     * <code>string tess_hocr = 1;</code>
+     * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
      * @return The bytes for tessHocr.
      */
     com.google.protobuf.ByteString
@@ -2125,7 +2125,7 @@ public final class OcrServiceProto {
     public static final int TESS_HOCR_FIELD_NUMBER = 1;
     private volatile java.lang.Object tessHocr_;
     /**
-     * <code>string tess_hocr = 1;</code>
+     * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
      * @return The tessHocr.
      */
     @java.lang.Override
@@ -2142,7 +2142,7 @@ public final class OcrServiceProto {
       }
     }
     /**
-     * <code>string tess_hocr = 1;</code>
+     * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
      * @return The bytes for tessHocr.
      */
     @java.lang.Override
@@ -2464,7 +2464,7 @@ public final class OcrServiceProto {
 
       private java.lang.Object tessHocr_ = "";
       /**
-       * <code>string tess_hocr = 1;</code>
+       * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
        * @return The tessHocr.
        */
       public java.lang.String getTessHocr() {
@@ -2480,7 +2480,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>string tess_hocr = 1;</code>
+       * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
        * @return The bytes for tessHocr.
        */
       public com.google.protobuf.ByteString
@@ -2497,7 +2497,7 @@ public final class OcrServiceProto {
         }
       }
       /**
-       * <code>string tess_hocr = 1;</code>
+       * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
        * @param value The tessHocr to set.
        * @return This builder for chaining.
        */
@@ -2512,7 +2512,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>string tess_hocr = 1;</code>
+       * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTessHocr() {
@@ -2522,7 +2522,7 @@ public final class OcrServiceProto {
         return this;
       }
       /**
-       * <code>string tess_hocr = 1;</code>
+       * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
        * @param value The bytes for tessHocr to set.
        * @return This builder for chaining.
        */
@@ -2620,32 +2620,33 @@ public final class OcrServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"ssn/ocrservice/v1/ocrservice.proto\022\021ss" +
-      "n.ocrservice.v1\032\036google/protobuf/wrapper" +
-      "s.proto\032 ssn/annotator/v1/annotator.prot" +
-      "o\032\036ssn/type/text_annotation.proto\"Y\n\030Get" +
-      "TextAnnotationRequest\022,\n\010document\030\002 \001(\0132" +
-      "\032.ssn.annotator.v1.Document\022\017\n\007preview\030\003" +
-      " \001(\010\"z\n\031GetTextAnnotationResponse\0221\n\017tex" +
-      "t_annotation\030\002 \001(\0132\030.ssn.type.TextAnnota" +
-      "tion\022*\n\005image\030\003 \001(\0132\033.google.protobuf.By" +
-      "tesValue\"#\n\023OcrScanImageRequest\022\014\n\004data\030" +
-      "\001 \001(\014\")\n\024OcrScanImageResponse\022\021\n\ttess_ho" +
-      "cr\030\001 \001(\t2\335\001\n\nOcrService\022_\n\014OcrScanImage\022" +
-      "&.ssn.ocrservice.v1.OcrScanImageRequest\032" +
-      "\'.ssn.ocrservice.v1.OcrScanImageResponse" +
-      "\022n\n\021GetTextAnnotation\022+.ssn.ocrservice.v" +
-      "1.GetTextAnnotationRequest\032,.ssn.ocrserv" +
-      "ice.v1.GetTextAnnotationResponseBSB\017OcrS" +
-      "erviceProtoZ@github.com/e-conomic/vmlapi" +
-      "s/gen/go/ssn/ocrservice/v1;ocrserviceb\006p" +
-      "roto3"
+      "n.ocrservice.v1\032 ssn/annotator/v1/annota" +
+      "tor.proto\032\036ssn/type/text_annotation.prot" +
+      "o\032\036google/protobuf/wrappers.proto\"l\n\030Get" +
+      "TextAnnotationRequest\0226\n\010document\030\002 \001(\0132" +
+      "\032.ssn.annotator.v1.DocumentR\010document\022\030\n" +
+      "\007preview\030\003 \001(\010R\007preview\"\221\001\n\031GetTextAnnot" +
+      "ationResponse\022A\n\017text_annotation\030\002 \001(\0132\030" +
+      ".ssn.type.TextAnnotationR\016textAnnotation" +
+      "\0221\n\005image\030\003 \001(\0132\033.google.protobuf.BytesV" +
+      "alueR\005image\")\n\023OcrScanImageRequest\022\022\n\004da" +
+      "ta\030\001 \001(\014R\004data\"3\n\024OcrScanImageResponse\022\033" +
+      "\n\ttess_hocr\030\001 \001(\tR\010tessHocr2\335\001\n\nOcrServi" +
+      "ce\022_\n\014OcrScanImage\022&.ssn.ocrservice.v1.O" +
+      "crScanImageRequest\032\'.ssn.ocrservice.v1.O" +
+      "crScanImageResponse\022n\n\021GetTextAnnotation" +
+      "\022+.ssn.ocrservice.v1.GetTextAnnotationRe" +
+      "quest\032,.ssn.ocrservice.v1.GetTextAnnotat" +
+      "ionResponseBSB\017OcrServiceProtoZ@github.c" +
+      "om/e-conomic/vmlapis/gen/go/ssn/ocrservi" +
+      "ce/v1;ocrserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.annotator.v1.Annotator.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2671,9 +2672,9 @@ public final class OcrServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor,
         new java.lang.String[] { "TessHocr", });
-    com.google.protobuf.WrappersProto.getDescriptor();
     ssn.annotator.v1.Annotator.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

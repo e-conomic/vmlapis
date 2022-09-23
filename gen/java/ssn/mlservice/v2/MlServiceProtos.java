@@ -19,42 +19,42 @@ public final class MlServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
      * @return Whether the truthLabels field is set.
      */
     boolean hasTruthLabels();
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
      * @return The truthLabels.
      */
     ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels getTruthLabels();
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
      */
     ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder();
 
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return Whether the textAnnotation field is set.
      */
     boolean hasTextAnnotation();
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return The textAnnotation.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
 
     /**
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -175,72 +175,72 @@ public final class MlServiceProtos {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>double total_incl_vat = 1;</code>
+       * <code>double total_incl_vat = 1 [json_name = "totalInclVat"];</code>
        * @return The totalInclVat.
        */
       double getTotalInclVat();
 
       /**
-       * <code>double total_vat = 2;</code>
+       * <code>double total_vat = 2 [json_name = "totalVat"];</code>
        * @return The totalVat.
        */
       double getTotalVat();
 
       /**
-       * <code>double total_excl_vat = 3;</code>
+       * <code>double total_excl_vat = 3 [json_name = "totalExclVat"];</code>
        * @return The totalExclVat.
        */
       double getTotalExclVat();
 
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
        * @return Whether the orderDate field is set.
        */
       boolean hasOrderDate();
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
        * @return The orderDate.
        */
       com.google.type.Date getOrderDate();
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
        */
       com.google.type.DateOrBuilder getOrderDateOrBuilder();
 
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
        * @return Whether the paymentDueDate field is set.
        */
       boolean hasPaymentDueDate();
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
        * @return The paymentDueDate.
        */
       com.google.type.Date getPaymentDueDate();
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
        */
       com.google.type.DateOrBuilder getPaymentDueDateOrBuilder();
 
       /**
-       * <code>string document_type = 6;</code>
+       * <code>string document_type = 6 [json_name = "documentType"];</code>
        * @return The documentType.
        */
       java.lang.String getDocumentType();
       /**
-       * <code>string document_type = 6;</code>
+       * <code>string document_type = 6 [json_name = "documentType"];</code>
        * @return The bytes for documentType.
        */
       com.google.protobuf.ByteString
           getDocumentTypeBytes();
 
       /**
-       * <code>string currency = 7;</code>
+       * <code>string currency = 7 [json_name = "currency"];</code>
        * @return The currency.
        */
       java.lang.String getCurrency();
       /**
-       * <code>string currency = 7;</code>
+       * <code>string currency = 7 [json_name = "currency"];</code>
        * @return The bytes for currency.
        */
       com.google.protobuf.ByteString
@@ -251,7 +251,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>string credit_card_number = 8;</code>
+       * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
        * @return The creditCardNumber.
        */
       java.lang.String getCreditCardNumber();
@@ -260,310 +260,310 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>string credit_card_number = 8;</code>
+       * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
        * @return The bytes for creditCardNumber.
        */
       com.google.protobuf.ByteString
           getCreditCardNumberBytes();
 
       /**
-       * <code>string payment_method = 9;</code>
+       * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
        * @return The paymentMethod.
        */
       java.lang.String getPaymentMethod();
       /**
-       * <code>string payment_method = 9;</code>
+       * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
        * @return The bytes for paymentMethod.
        */
       com.google.protobuf.ByteString
           getPaymentMethodBytes();
 
       /**
-       * <code>string ocr_line_dk_type = 10;</code>
+       * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
        * @return The ocrLineDkType.
        */
       java.lang.String getOcrLineDkType();
       /**
-       * <code>string ocr_line_dk_type = 10;</code>
+       * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
        * @return The bytes for ocrLineDkType.
        */
       com.google.protobuf.ByteString
           getOcrLineDkTypeBytes();
 
       /**
-       * <code>string ocr_line_dk_payment_id = 11;</code>
+       * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
        * @return The ocrLineDkPaymentId.
        */
       java.lang.String getOcrLineDkPaymentId();
       /**
-       * <code>string ocr_line_dk_payment_id = 11;</code>
+       * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
        * @return The bytes for ocrLineDkPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineDkPaymentIdBytes();
 
       /**
-       * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
        * @return The ocrLineDkCreditorId.
        */
       java.lang.String getOcrLineDkCreditorId();
       /**
-       * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
        * @return The bytes for ocrLineDkCreditorId.
        */
       com.google.protobuf.ByteString
           getOcrLineDkCreditorIdBytes();
 
       /**
-       * <code>string ocr_line_se_payment_id = 13;</code>
+       * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
        * @return The ocrLineSePaymentId.
        */
       java.lang.String getOcrLineSePaymentId();
       /**
-       * <code>string ocr_line_se_payment_id = 13;</code>
+       * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
        * @return The bytes for ocrLineSePaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineSePaymentIdBytes();
 
       /**
-       * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        * @return The ocrLineSeBankgiroCreditorId.
        */
       java.lang.String getOcrLineSeBankgiroCreditorId();
       /**
-       * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        * @return The bytes for ocrLineSeBankgiroCreditorId.
        */
       com.google.protobuf.ByteString
           getOcrLineSeBankgiroCreditorIdBytes();
 
       /**
-       * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        * @return The ocrLineSePlusgiroCreditorId.
        */
       java.lang.String getOcrLineSePlusgiroCreditorId();
       /**
-       * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        * @return The bytes for ocrLineSePlusgiroCreditorId.
        */
       com.google.protobuf.ByteString
           getOcrLineSePlusgiroCreditorIdBytes();
 
       /**
-       * <code>string ocr_line_no_payment_id = 16;</code>
+       * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
        * @return The ocrLineNoPaymentId.
        */
       java.lang.String getOcrLineNoPaymentId();
       /**
-       * <code>string ocr_line_no_payment_id = 16;</code>
+       * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
        * @return The bytes for ocrLineNoPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineNoPaymentIdBytes();
 
       /**
-       * <code>string ocr_line_fi_payment_id = 17;</code>
+       * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
        * @return The ocrLineFiPaymentId.
        */
       java.lang.String getOcrLineFiPaymentId();
       /**
-       * <code>string ocr_line_fi_payment_id = 17;</code>
+       * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
        * @return The bytes for ocrLineFiPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineFiPaymentIdBytes();
 
       /**
-       * <code>string ocr_line_nl_payment_id = 18;</code>
+       * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
        * @return The ocrLineNlPaymentId.
        */
       java.lang.String getOcrLineNlPaymentId();
       /**
-       * <code>string ocr_line_nl_payment_id = 18;</code>
+       * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
        * @return The bytes for ocrLineNlPaymentId.
        */
       com.google.protobuf.ByteString
           getOcrLineNlPaymentIdBytes();
 
       /**
-       * <code>string supplier_corporate_id = 19;</code>
+       * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
        * @return The supplierCorporateId.
        */
       java.lang.String getSupplierCorporateId();
       /**
-       * <code>string supplier_corporate_id = 19;</code>
+       * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
        * @return The bytes for supplierCorporateId.
        */
       com.google.protobuf.ByteString
           getSupplierCorporateIdBytes();
 
       /**
-       * <code>string supplier_country_code = 20;</code>
+       * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
        * @return The supplierCountryCode.
        */
       java.lang.String getSupplierCountryCode();
       /**
-       * <code>string supplier_country_code = 20;</code>
+       * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
        * @return The bytes for supplierCountryCode.
        */
       com.google.protobuf.ByteString
           getSupplierCountryCodeBytes();
 
       /**
-       * <code>string invoice_number = 21;</code>
+       * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
        * @return The invoiceNumber.
        */
       java.lang.String getInvoiceNumber();
       /**
-       * <code>string invoice_number = 21;</code>
+       * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
        * @return The bytes for invoiceNumber.
        */
       com.google.protobuf.ByteString
           getInvoiceNumberBytes();
 
       /**
-       * <code>string iban = 22;</code>
+       * <code>string iban = 22 [json_name = "iban"];</code>
        * @return The iban.
        */
       java.lang.String getIban();
       /**
-       * <code>string iban = 22;</code>
+       * <code>string iban = 22 [json_name = "iban"];</code>
        * @return The bytes for iban.
        */
       com.google.protobuf.ByteString
           getIbanBytes();
 
       /**
-       * <code>string bank_account_number = 23;</code>
+       * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
        * @return The bankAccountNumber.
        */
       java.lang.String getBankAccountNumber();
       /**
-       * <code>string bank_account_number = 23;</code>
+       * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
        * @return The bytes for bankAccountNumber.
        */
       com.google.protobuf.ByteString
           getBankAccountNumberBytes();
 
       /**
-       * <code>string bank_registration_number = 24;</code>
+       * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
        * @return The bankRegistrationNumber.
        */
       java.lang.String getBankRegistrationNumber();
       /**
-       * <code>string bank_registration_number = 24;</code>
+       * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
        * @return The bytes for bankRegistrationNumber.
        */
       com.google.protobuf.ByteString
           getBankRegistrationNumberBytes();
 
       /**
-       * <code>string supplier_name = 25;</code>
+       * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
        * @return The supplierName.
        */
       java.lang.String getSupplierName();
       /**
-       * <code>string supplier_name = 25;</code>
+       * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
        * @return The bytes for supplierName.
        */
       com.google.protobuf.ByteString
           getSupplierNameBytes();
 
       /**
-       * <code>string bic = 26;</code>
+       * <code>string bic = 26 [json_name = "bic"];</code>
        * @return The bic.
        */
       java.lang.String getBic();
       /**
-       * <code>string bic = 26;</code>
+       * <code>string bic = 26 [json_name = "bic"];</code>
        * @return The bytes for bic.
        */
       com.google.protobuf.ByteString
           getBicBytes();
 
       /**
-       * <code>string document_number = 27;</code>
+       * <code>string document_number = 27 [json_name = "documentNumber"];</code>
        * @return The documentNumber.
        */
       java.lang.String getDocumentNumber();
       /**
-       * <code>string document_number = 27;</code>
+       * <code>string document_number = 27 [json_name = "documentNumber"];</code>
        * @return The bytes for documentNumber.
        */
       com.google.protobuf.ByteString
           getDocumentNumberBytes();
 
       /**
-       * <code>.google.type.Date document_date = 28;</code>
+       * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
        * @return Whether the documentDate field is set.
        */
       boolean hasDocumentDate();
       /**
-       * <code>.google.type.Date document_date = 28;</code>
+       * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
        * @return The documentDate.
        */
       com.google.type.Date getDocumentDate();
       /**
-       * <code>.google.type.Date document_date = 28;</code>
+       * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
        */
       com.google.type.DateOrBuilder getDocumentDateOrBuilder();
 
       /**
-       * <code>string order_number = 29;</code>
+       * <code>string order_number = 29 [json_name = "orderNumber"];</code>
        * @return The orderNumber.
        */
       java.lang.String getOrderNumber();
       /**
-       * <code>string order_number = 29;</code>
+       * <code>string order_number = 29 [json_name = "orderNumber"];</code>
        * @return The bytes for orderNumber.
        */
       com.google.protobuf.ByteString
           getOrderNumberBytes();
 
       /**
-       * <code>string supplier_vat_number = 30;</code>
+       * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
        * @return The supplierVatNumber.
        */
       java.lang.String getSupplierVatNumber();
       /**
-       * <code>string supplier_vat_number = 30;</code>
+       * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
        * @return The bytes for supplierVatNumber.
        */
       com.google.protobuf.ByteString
           getSupplierVatNumberBytes();
 
       /**
-       * <code>string supplier_organisation_number = 31;</code>
+       * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
        * @return The supplierOrganisationNumber.
        */
       java.lang.String getSupplierOrganisationNumber();
       /**
-       * <code>string supplier_organisation_number = 31;</code>
+       * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
        * @return The bytes for supplierOrganisationNumber.
        */
       com.google.protobuf.ByteString
           getSupplierOrganisationNumberBytes();
 
       /**
-       * <code>string supplier_address = 32;</code>
+       * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
        * @return The supplierAddress.
        */
       java.lang.String getSupplierAddress();
       /**
-       * <code>string supplier_address = 32;</code>
+       * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
        * @return The bytes for supplierAddress.
        */
       com.google.protobuf.ByteString
           getSupplierAddressBytes();
 
       /**
-       * <code>string credit_card_last_four = 33;</code>
+       * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
        * @return The creditCardLastFour.
        */
       java.lang.String getCreditCardLastFour();
       /**
-       * <code>string credit_card_last_four = 33;</code>
+       * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
        * @return The bytes for creditCardLastFour.
        */
       com.google.protobuf.ByteString
@@ -892,7 +892,7 @@ public final class MlServiceProtos {
       public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
       private double totalInclVat_;
       /**
-       * <code>double total_incl_vat = 1;</code>
+       * <code>double total_incl_vat = 1 [json_name = "totalInclVat"];</code>
        * @return The totalInclVat.
        */
       @java.lang.Override
@@ -903,7 +903,7 @@ public final class MlServiceProtos {
       public static final int TOTAL_VAT_FIELD_NUMBER = 2;
       private double totalVat_;
       /**
-       * <code>double total_vat = 2;</code>
+       * <code>double total_vat = 2 [json_name = "totalVat"];</code>
        * @return The totalVat.
        */
       @java.lang.Override
@@ -914,7 +914,7 @@ public final class MlServiceProtos {
       public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
       private double totalExclVat_;
       /**
-       * <code>double total_excl_vat = 3;</code>
+       * <code>double total_excl_vat = 3 [json_name = "totalExclVat"];</code>
        * @return The totalExclVat.
        */
       @java.lang.Override
@@ -925,7 +925,7 @@ public final class MlServiceProtos {
       public static final int ORDER_DATE_FIELD_NUMBER = 4;
       private com.google.type.Date orderDate_;
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
        * @return Whether the orderDate field is set.
        */
       @java.lang.Override
@@ -933,7 +933,7 @@ public final class MlServiceProtos {
         return orderDate_ != null;
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
        * @return The orderDate.
        */
       @java.lang.Override
@@ -941,7 +941,7 @@ public final class MlServiceProtos {
         return orderDate_ == null ? com.google.type.Date.getDefaultInstance() : orderDate_;
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
        */
       @java.lang.Override
       public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
@@ -951,7 +951,7 @@ public final class MlServiceProtos {
       public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
       private com.google.type.Date paymentDueDate_;
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
        * @return Whether the paymentDueDate field is set.
        */
       @java.lang.Override
@@ -959,7 +959,7 @@ public final class MlServiceProtos {
         return paymentDueDate_ != null;
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
        * @return The paymentDueDate.
        */
       @java.lang.Override
@@ -967,7 +967,7 @@ public final class MlServiceProtos {
         return paymentDueDate_ == null ? com.google.type.Date.getDefaultInstance() : paymentDueDate_;
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
        */
       @java.lang.Override
       public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
@@ -977,7 +977,7 @@ public final class MlServiceProtos {
       public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
       private volatile java.lang.Object documentType_;
       /**
-       * <code>string document_type = 6;</code>
+       * <code>string document_type = 6 [json_name = "documentType"];</code>
        * @return The documentType.
        */
       @java.lang.Override
@@ -994,7 +994,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string document_type = 6;</code>
+       * <code>string document_type = 6 [json_name = "documentType"];</code>
        * @return The bytes for documentType.
        */
       @java.lang.Override
@@ -1015,7 +1015,7 @@ public final class MlServiceProtos {
       public static final int CURRENCY_FIELD_NUMBER = 7;
       private volatile java.lang.Object currency_;
       /**
-       * <code>string currency = 7;</code>
+       * <code>string currency = 7 [json_name = "currency"];</code>
        * @return The currency.
        */
       @java.lang.Override
@@ -1032,7 +1032,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string currency = 7;</code>
+       * <code>string currency = 7 [json_name = "currency"];</code>
        * @return The bytes for currency.
        */
       @java.lang.Override
@@ -1057,7 +1057,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>string credit_card_number = 8;</code>
+       * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
        * @return The creditCardNumber.
        */
       @java.lang.Override
@@ -1078,7 +1078,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>string credit_card_number = 8;</code>
+       * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
        * @return The bytes for creditCardNumber.
        */
       @java.lang.Override
@@ -1099,7 +1099,7 @@ public final class MlServiceProtos {
       public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
       private volatile java.lang.Object paymentMethod_;
       /**
-       * <code>string payment_method = 9;</code>
+       * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
        * @return The paymentMethod.
        */
       @java.lang.Override
@@ -1116,7 +1116,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string payment_method = 9;</code>
+       * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
        * @return The bytes for paymentMethod.
        */
       @java.lang.Override
@@ -1137,7 +1137,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
       private volatile java.lang.Object ocrLineDkType_;
       /**
-       * <code>string ocr_line_dk_type = 10;</code>
+       * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
        * @return The ocrLineDkType.
        */
       @java.lang.Override
@@ -1154,7 +1154,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_dk_type = 10;</code>
+       * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
        * @return The bytes for ocrLineDkType.
        */
       @java.lang.Override
@@ -1175,7 +1175,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
       private volatile java.lang.Object ocrLineDkPaymentId_;
       /**
-       * <code>string ocr_line_dk_payment_id = 11;</code>
+       * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
        * @return The ocrLineDkPaymentId.
        */
       @java.lang.Override
@@ -1192,7 +1192,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_dk_payment_id = 11;</code>
+       * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
        * @return The bytes for ocrLineDkPaymentId.
        */
       @java.lang.Override
@@ -1213,7 +1213,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
       private volatile java.lang.Object ocrLineDkCreditorId_;
       /**
-       * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
        * @return The ocrLineDkCreditorId.
        */
       @java.lang.Override
@@ -1230,7 +1230,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_dk_creditor_id = 12;</code>
+       * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
        * @return The bytes for ocrLineDkCreditorId.
        */
       @java.lang.Override
@@ -1251,7 +1251,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
       private volatile java.lang.Object ocrLineSePaymentId_;
       /**
-       * <code>string ocr_line_se_payment_id = 13;</code>
+       * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
        * @return The ocrLineSePaymentId.
        */
       @java.lang.Override
@@ -1268,7 +1268,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_se_payment_id = 13;</code>
+       * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
        * @return The bytes for ocrLineSePaymentId.
        */
       @java.lang.Override
@@ -1289,7 +1289,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
       private volatile java.lang.Object ocrLineSeBankgiroCreditorId_;
       /**
-       * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        * @return The ocrLineSeBankgiroCreditorId.
        */
       @java.lang.Override
@@ -1306,7 +1306,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        * @return The bytes for ocrLineSeBankgiroCreditorId.
        */
       @java.lang.Override
@@ -1327,7 +1327,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
       private volatile java.lang.Object ocrLineSePlusgiroCreditorId_;
       /**
-       * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        * @return The ocrLineSePlusgiroCreditorId.
        */
       @java.lang.Override
@@ -1344,7 +1344,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        * @return The bytes for ocrLineSePlusgiroCreditorId.
        */
       @java.lang.Override
@@ -1365,7 +1365,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
       private volatile java.lang.Object ocrLineNoPaymentId_;
       /**
-       * <code>string ocr_line_no_payment_id = 16;</code>
+       * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
        * @return The ocrLineNoPaymentId.
        */
       @java.lang.Override
@@ -1382,7 +1382,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_no_payment_id = 16;</code>
+       * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
        * @return The bytes for ocrLineNoPaymentId.
        */
       @java.lang.Override
@@ -1403,7 +1403,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
       private volatile java.lang.Object ocrLineFiPaymentId_;
       /**
-       * <code>string ocr_line_fi_payment_id = 17;</code>
+       * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
        * @return The ocrLineFiPaymentId.
        */
       @java.lang.Override
@@ -1420,7 +1420,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_fi_payment_id = 17;</code>
+       * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
        * @return The bytes for ocrLineFiPaymentId.
        */
       @java.lang.Override
@@ -1441,7 +1441,7 @@ public final class MlServiceProtos {
       public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
       private volatile java.lang.Object ocrLineNlPaymentId_;
       /**
-       * <code>string ocr_line_nl_payment_id = 18;</code>
+       * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
        * @return The ocrLineNlPaymentId.
        */
       @java.lang.Override
@@ -1458,7 +1458,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string ocr_line_nl_payment_id = 18;</code>
+       * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
        * @return The bytes for ocrLineNlPaymentId.
        */
       @java.lang.Override
@@ -1479,7 +1479,7 @@ public final class MlServiceProtos {
       public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
       private volatile java.lang.Object supplierCorporateId_;
       /**
-       * <code>string supplier_corporate_id = 19;</code>
+       * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
        * @return The supplierCorporateId.
        */
       @java.lang.Override
@@ -1496,7 +1496,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string supplier_corporate_id = 19;</code>
+       * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
        * @return The bytes for supplierCorporateId.
        */
       @java.lang.Override
@@ -1517,7 +1517,7 @@ public final class MlServiceProtos {
       public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
       private volatile java.lang.Object supplierCountryCode_;
       /**
-       * <code>string supplier_country_code = 20;</code>
+       * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
        * @return The supplierCountryCode.
        */
       @java.lang.Override
@@ -1534,7 +1534,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string supplier_country_code = 20;</code>
+       * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
        * @return The bytes for supplierCountryCode.
        */
       @java.lang.Override
@@ -1555,7 +1555,7 @@ public final class MlServiceProtos {
       public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
       private volatile java.lang.Object invoiceNumber_;
       /**
-       * <code>string invoice_number = 21;</code>
+       * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
        * @return The invoiceNumber.
        */
       @java.lang.Override
@@ -1572,7 +1572,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string invoice_number = 21;</code>
+       * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
        * @return The bytes for invoiceNumber.
        */
       @java.lang.Override
@@ -1593,7 +1593,7 @@ public final class MlServiceProtos {
       public static final int IBAN_FIELD_NUMBER = 22;
       private volatile java.lang.Object iban_;
       /**
-       * <code>string iban = 22;</code>
+       * <code>string iban = 22 [json_name = "iban"];</code>
        * @return The iban.
        */
       @java.lang.Override
@@ -1610,7 +1610,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string iban = 22;</code>
+       * <code>string iban = 22 [json_name = "iban"];</code>
        * @return The bytes for iban.
        */
       @java.lang.Override
@@ -1631,7 +1631,7 @@ public final class MlServiceProtos {
       public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 23;
       private volatile java.lang.Object bankAccountNumber_;
       /**
-       * <code>string bank_account_number = 23;</code>
+       * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
        * @return The bankAccountNumber.
        */
       @java.lang.Override
@@ -1648,7 +1648,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string bank_account_number = 23;</code>
+       * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
        * @return The bytes for bankAccountNumber.
        */
       @java.lang.Override
@@ -1669,7 +1669,7 @@ public final class MlServiceProtos {
       public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 24;
       private volatile java.lang.Object bankRegistrationNumber_;
       /**
-       * <code>string bank_registration_number = 24;</code>
+       * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
        * @return The bankRegistrationNumber.
        */
       @java.lang.Override
@@ -1686,7 +1686,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string bank_registration_number = 24;</code>
+       * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
        * @return The bytes for bankRegistrationNumber.
        */
       @java.lang.Override
@@ -1707,7 +1707,7 @@ public final class MlServiceProtos {
       public static final int SUPPLIER_NAME_FIELD_NUMBER = 25;
       private volatile java.lang.Object supplierName_;
       /**
-       * <code>string supplier_name = 25;</code>
+       * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
        * @return The supplierName.
        */
       @java.lang.Override
@@ -1724,7 +1724,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string supplier_name = 25;</code>
+       * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
        * @return The bytes for supplierName.
        */
       @java.lang.Override
@@ -1745,7 +1745,7 @@ public final class MlServiceProtos {
       public static final int BIC_FIELD_NUMBER = 26;
       private volatile java.lang.Object bic_;
       /**
-       * <code>string bic = 26;</code>
+       * <code>string bic = 26 [json_name = "bic"];</code>
        * @return The bic.
        */
       @java.lang.Override
@@ -1762,7 +1762,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string bic = 26;</code>
+       * <code>string bic = 26 [json_name = "bic"];</code>
        * @return The bytes for bic.
        */
       @java.lang.Override
@@ -1783,7 +1783,7 @@ public final class MlServiceProtos {
       public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 27;
       private volatile java.lang.Object documentNumber_;
       /**
-       * <code>string document_number = 27;</code>
+       * <code>string document_number = 27 [json_name = "documentNumber"];</code>
        * @return The documentNumber.
        */
       @java.lang.Override
@@ -1800,7 +1800,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string document_number = 27;</code>
+       * <code>string document_number = 27 [json_name = "documentNumber"];</code>
        * @return The bytes for documentNumber.
        */
       @java.lang.Override
@@ -1821,7 +1821,7 @@ public final class MlServiceProtos {
       public static final int DOCUMENT_DATE_FIELD_NUMBER = 28;
       private com.google.type.Date documentDate_;
       /**
-       * <code>.google.type.Date document_date = 28;</code>
+       * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
        * @return Whether the documentDate field is set.
        */
       @java.lang.Override
@@ -1829,7 +1829,7 @@ public final class MlServiceProtos {
         return documentDate_ != null;
       }
       /**
-       * <code>.google.type.Date document_date = 28;</code>
+       * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
        * @return The documentDate.
        */
       @java.lang.Override
@@ -1837,7 +1837,7 @@ public final class MlServiceProtos {
         return documentDate_ == null ? com.google.type.Date.getDefaultInstance() : documentDate_;
       }
       /**
-       * <code>.google.type.Date document_date = 28;</code>
+       * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
        */
       @java.lang.Override
       public com.google.type.DateOrBuilder getDocumentDateOrBuilder() {
@@ -1847,7 +1847,7 @@ public final class MlServiceProtos {
       public static final int ORDER_NUMBER_FIELD_NUMBER = 29;
       private volatile java.lang.Object orderNumber_;
       /**
-       * <code>string order_number = 29;</code>
+       * <code>string order_number = 29 [json_name = "orderNumber"];</code>
        * @return The orderNumber.
        */
       @java.lang.Override
@@ -1864,7 +1864,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string order_number = 29;</code>
+       * <code>string order_number = 29 [json_name = "orderNumber"];</code>
        * @return The bytes for orderNumber.
        */
       @java.lang.Override
@@ -1885,7 +1885,7 @@ public final class MlServiceProtos {
       public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 30;
       private volatile java.lang.Object supplierVatNumber_;
       /**
-       * <code>string supplier_vat_number = 30;</code>
+       * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
        * @return The supplierVatNumber.
        */
       @java.lang.Override
@@ -1902,7 +1902,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string supplier_vat_number = 30;</code>
+       * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
        * @return The bytes for supplierVatNumber.
        */
       @java.lang.Override
@@ -1923,7 +1923,7 @@ public final class MlServiceProtos {
       public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 31;
       private volatile java.lang.Object supplierOrganisationNumber_;
       /**
-       * <code>string supplier_organisation_number = 31;</code>
+       * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
        * @return The supplierOrganisationNumber.
        */
       @java.lang.Override
@@ -1940,7 +1940,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string supplier_organisation_number = 31;</code>
+       * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
        * @return The bytes for supplierOrganisationNumber.
        */
       @java.lang.Override
@@ -1961,7 +1961,7 @@ public final class MlServiceProtos {
       public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 32;
       private volatile java.lang.Object supplierAddress_;
       /**
-       * <code>string supplier_address = 32;</code>
+       * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
        * @return The supplierAddress.
        */
       @java.lang.Override
@@ -1978,7 +1978,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string supplier_address = 32;</code>
+       * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
        * @return The bytes for supplierAddress.
        */
       @java.lang.Override
@@ -1999,7 +1999,7 @@ public final class MlServiceProtos {
       public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 33;
       private volatile java.lang.Object creditCardLastFour_;
       /**
-       * <code>string credit_card_last_four = 33;</code>
+       * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
        * @return The creditCardLastFour.
        */
       @java.lang.Override
@@ -2016,7 +2016,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string credit_card_last_four = 33;</code>
+       * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
        * @return The bytes for creditCardLastFour.
        */
       @java.lang.Override
@@ -2927,7 +2927,7 @@ public final class MlServiceProtos {
 
         private double totalInclVat_ ;
         /**
-         * <code>double total_incl_vat = 1;</code>
+         * <code>double total_incl_vat = 1 [json_name = "totalInclVat"];</code>
          * @return The totalInclVat.
          */
         @java.lang.Override
@@ -2935,7 +2935,7 @@ public final class MlServiceProtos {
           return totalInclVat_;
         }
         /**
-         * <code>double total_incl_vat = 1;</code>
+         * <code>double total_incl_vat = 1 [json_name = "totalInclVat"];</code>
          * @param value The totalInclVat to set.
          * @return This builder for chaining.
          */
@@ -2946,7 +2946,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>double total_incl_vat = 1;</code>
+         * <code>double total_incl_vat = 1 [json_name = "totalInclVat"];</code>
          * @return This builder for chaining.
          */
         public Builder clearTotalInclVat() {
@@ -2958,7 +2958,7 @@ public final class MlServiceProtos {
 
         private double totalVat_ ;
         /**
-         * <code>double total_vat = 2;</code>
+         * <code>double total_vat = 2 [json_name = "totalVat"];</code>
          * @return The totalVat.
          */
         @java.lang.Override
@@ -2966,7 +2966,7 @@ public final class MlServiceProtos {
           return totalVat_;
         }
         /**
-         * <code>double total_vat = 2;</code>
+         * <code>double total_vat = 2 [json_name = "totalVat"];</code>
          * @param value The totalVat to set.
          * @return This builder for chaining.
          */
@@ -2977,7 +2977,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>double total_vat = 2;</code>
+         * <code>double total_vat = 2 [json_name = "totalVat"];</code>
          * @return This builder for chaining.
          */
         public Builder clearTotalVat() {
@@ -2989,7 +2989,7 @@ public final class MlServiceProtos {
 
         private double totalExclVat_ ;
         /**
-         * <code>double total_excl_vat = 3;</code>
+         * <code>double total_excl_vat = 3 [json_name = "totalExclVat"];</code>
          * @return The totalExclVat.
          */
         @java.lang.Override
@@ -2997,7 +2997,7 @@ public final class MlServiceProtos {
           return totalExclVat_;
         }
         /**
-         * <code>double total_excl_vat = 3;</code>
+         * <code>double total_excl_vat = 3 [json_name = "totalExclVat"];</code>
          * @param value The totalExclVat to set.
          * @return This builder for chaining.
          */
@@ -3008,7 +3008,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>double total_excl_vat = 3;</code>
+         * <code>double total_excl_vat = 3 [json_name = "totalExclVat"];</code>
          * @return This builder for chaining.
          */
         public Builder clearTotalExclVat() {
@@ -3022,14 +3022,14 @@ public final class MlServiceProtos {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> orderDateBuilder_;
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          * @return Whether the orderDate field is set.
          */
         public boolean hasOrderDate() {
           return orderDateBuilder_ != null || orderDate_ != null;
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          * @return The orderDate.
          */
         public com.google.type.Date getOrderDate() {
@@ -3040,7 +3040,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public Builder setOrderDate(com.google.type.Date value) {
           if (orderDateBuilder_ == null) {
@@ -3056,7 +3056,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public Builder setOrderDate(
             com.google.type.Date.Builder builderForValue) {
@@ -3070,7 +3070,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public Builder mergeOrderDate(com.google.type.Date value) {
           if (orderDateBuilder_ == null) {
@@ -3088,7 +3088,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public Builder clearOrderDate() {
           if (orderDateBuilder_ == null) {
@@ -3102,7 +3102,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public com.google.type.Date.Builder getOrderDateBuilder() {
           
@@ -3110,7 +3110,7 @@ public final class MlServiceProtos {
           return getOrderDateFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
           if (orderDateBuilder_ != null) {
@@ -3121,7 +3121,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>.google.type.Date order_date = 4;</code>
+         * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
@@ -3141,14 +3141,14 @@ public final class MlServiceProtos {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> paymentDueDateBuilder_;
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          * @return Whether the paymentDueDate field is set.
          */
         public boolean hasPaymentDueDate() {
           return paymentDueDateBuilder_ != null || paymentDueDate_ != null;
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          * @return The paymentDueDate.
          */
         public com.google.type.Date getPaymentDueDate() {
@@ -3159,7 +3159,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public Builder setPaymentDueDate(com.google.type.Date value) {
           if (paymentDueDateBuilder_ == null) {
@@ -3175,7 +3175,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public Builder setPaymentDueDate(
             com.google.type.Date.Builder builderForValue) {
@@ -3189,7 +3189,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public Builder mergePaymentDueDate(com.google.type.Date value) {
           if (paymentDueDateBuilder_ == null) {
@@ -3207,7 +3207,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public Builder clearPaymentDueDate() {
           if (paymentDueDateBuilder_ == null) {
@@ -3221,7 +3221,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public com.google.type.Date.Builder getPaymentDueDateBuilder() {
           
@@ -3229,7 +3229,7 @@ public final class MlServiceProtos {
           return getPaymentDueDateFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
           if (paymentDueDateBuilder_ != null) {
@@ -3240,7 +3240,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>.google.type.Date payment_due_date = 5;</code>
+         * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
@@ -3258,7 +3258,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object documentType_ = "";
         /**
-         * <code>string document_type = 6;</code>
+         * <code>string document_type = 6 [json_name = "documentType"];</code>
          * @return The documentType.
          */
         public java.lang.String getDocumentType() {
@@ -3274,7 +3274,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string document_type = 6;</code>
+         * <code>string document_type = 6 [json_name = "documentType"];</code>
          * @return The bytes for documentType.
          */
         public com.google.protobuf.ByteString
@@ -3291,7 +3291,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string document_type = 6;</code>
+         * <code>string document_type = 6 [json_name = "documentType"];</code>
          * @param value The documentType to set.
          * @return This builder for chaining.
          */
@@ -3306,7 +3306,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string document_type = 6;</code>
+         * <code>string document_type = 6 [json_name = "documentType"];</code>
          * @return This builder for chaining.
          */
         public Builder clearDocumentType() {
@@ -3316,7 +3316,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string document_type = 6;</code>
+         * <code>string document_type = 6 [json_name = "documentType"];</code>
          * @param value The bytes for documentType to set.
          * @return This builder for chaining.
          */
@@ -3334,7 +3334,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object currency_ = "";
         /**
-         * <code>string currency = 7;</code>
+         * <code>string currency = 7 [json_name = "currency"];</code>
          * @return The currency.
          */
         public java.lang.String getCurrency() {
@@ -3350,7 +3350,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string currency = 7;</code>
+         * <code>string currency = 7 [json_name = "currency"];</code>
          * @return The bytes for currency.
          */
         public com.google.protobuf.ByteString
@@ -3367,7 +3367,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string currency = 7;</code>
+         * <code>string currency = 7 [json_name = "currency"];</code>
          * @param value The currency to set.
          * @return This builder for chaining.
          */
@@ -3382,7 +3382,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string currency = 7;</code>
+         * <code>string currency = 7 [json_name = "currency"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCurrency() {
@@ -3392,7 +3392,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string currency = 7;</code>
+         * <code>string currency = 7 [json_name = "currency"];</code>
          * @param value The bytes for currency to set.
          * @return This builder for chaining.
          */
@@ -3414,7 +3414,7 @@ public final class MlServiceProtos {
          * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
          * </pre>
          *
-         * <code>string credit_card_number = 8;</code>
+         * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
          * @return The creditCardNumber.
          */
         public java.lang.String getCreditCardNumber() {
@@ -3434,7 +3434,7 @@ public final class MlServiceProtos {
          * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
          * </pre>
          *
-         * <code>string credit_card_number = 8;</code>
+         * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
          * @return The bytes for creditCardNumber.
          */
         public com.google.protobuf.ByteString
@@ -3455,7 +3455,7 @@ public final class MlServiceProtos {
          * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
          * </pre>
          *
-         * <code>string credit_card_number = 8;</code>
+         * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
          * @param value The creditCardNumber to set.
          * @return This builder for chaining.
          */
@@ -3474,7 +3474,7 @@ public final class MlServiceProtos {
          * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
          * </pre>
          *
-         * <code>string credit_card_number = 8;</code>
+         * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreditCardNumber() {
@@ -3488,7 +3488,7 @@ public final class MlServiceProtos {
          * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
          * </pre>
          *
-         * <code>string credit_card_number = 8;</code>
+         * <code>string credit_card_number = 8 [json_name = "creditCardNumber"];</code>
          * @param value The bytes for creditCardNumber to set.
          * @return This builder for chaining.
          */
@@ -3506,7 +3506,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object paymentMethod_ = "";
         /**
-         * <code>string payment_method = 9;</code>
+         * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
          * @return The paymentMethod.
          */
         public java.lang.String getPaymentMethod() {
@@ -3522,7 +3522,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string payment_method = 9;</code>
+         * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
          * @return The bytes for paymentMethod.
          */
         public com.google.protobuf.ByteString
@@ -3539,7 +3539,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string payment_method = 9;</code>
+         * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
          * @param value The paymentMethod to set.
          * @return This builder for chaining.
          */
@@ -3554,7 +3554,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string payment_method = 9;</code>
+         * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPaymentMethod() {
@@ -3564,7 +3564,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string payment_method = 9;</code>
+         * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
          * @param value The bytes for paymentMethod to set.
          * @return This builder for chaining.
          */
@@ -3582,7 +3582,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineDkType_ = "";
         /**
-         * <code>string ocr_line_dk_type = 10;</code>
+         * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
          * @return The ocrLineDkType.
          */
         public java.lang.String getOcrLineDkType() {
@@ -3598,7 +3598,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_dk_type = 10;</code>
+         * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
          * @return The bytes for ocrLineDkType.
          */
         public com.google.protobuf.ByteString
@@ -3615,7 +3615,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_dk_type = 10;</code>
+         * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
          * @param value The ocrLineDkType to set.
          * @return This builder for chaining.
          */
@@ -3630,7 +3630,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_dk_type = 10;</code>
+         * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineDkType() {
@@ -3640,7 +3640,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_dk_type = 10;</code>
+         * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
          * @param value The bytes for ocrLineDkType to set.
          * @return This builder for chaining.
          */
@@ -3658,7 +3658,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineDkPaymentId_ = "";
         /**
-         * <code>string ocr_line_dk_payment_id = 11;</code>
+         * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
          * @return The ocrLineDkPaymentId.
          */
         public java.lang.String getOcrLineDkPaymentId() {
@@ -3674,7 +3674,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_dk_payment_id = 11;</code>
+         * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
          * @return The bytes for ocrLineDkPaymentId.
          */
         public com.google.protobuf.ByteString
@@ -3691,7 +3691,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_dk_payment_id = 11;</code>
+         * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
          * @param value The ocrLineDkPaymentId to set.
          * @return This builder for chaining.
          */
@@ -3706,7 +3706,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_dk_payment_id = 11;</code>
+         * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineDkPaymentId() {
@@ -3716,7 +3716,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_dk_payment_id = 11;</code>
+         * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
          * @param value The bytes for ocrLineDkPaymentId to set.
          * @return This builder for chaining.
          */
@@ -3734,7 +3734,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineDkCreditorId_ = "";
         /**
-         * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
          * @return The ocrLineDkCreditorId.
          */
         public java.lang.String getOcrLineDkCreditorId() {
@@ -3750,7 +3750,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
          * @return The bytes for ocrLineDkCreditorId.
          */
         public com.google.protobuf.ByteString
@@ -3767,7 +3767,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
          * @param value The ocrLineDkCreditorId to set.
          * @return This builder for chaining.
          */
@@ -3782,7 +3782,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineDkCreditorId() {
@@ -3792,7 +3792,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_dk_creditor_id = 12;</code>
+         * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
          * @param value The bytes for ocrLineDkCreditorId to set.
          * @return This builder for chaining.
          */
@@ -3810,7 +3810,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineSePaymentId_ = "";
         /**
-         * <code>string ocr_line_se_payment_id = 13;</code>
+         * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
          * @return The ocrLineSePaymentId.
          */
         public java.lang.String getOcrLineSePaymentId() {
@@ -3826,7 +3826,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_se_payment_id = 13;</code>
+         * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
          * @return The bytes for ocrLineSePaymentId.
          */
         public com.google.protobuf.ByteString
@@ -3843,7 +3843,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_se_payment_id = 13;</code>
+         * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
          * @param value The ocrLineSePaymentId to set.
          * @return This builder for chaining.
          */
@@ -3858,7 +3858,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_se_payment_id = 13;</code>
+         * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineSePaymentId() {
@@ -3868,7 +3868,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_se_payment_id = 13;</code>
+         * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
          * @param value The bytes for ocrLineSePaymentId to set.
          * @return This builder for chaining.
          */
@@ -3886,7 +3886,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineSeBankgiroCreditorId_ = "";
         /**
-         * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
          * @return The ocrLineSeBankgiroCreditorId.
          */
         public java.lang.String getOcrLineSeBankgiroCreditorId() {
@@ -3902,7 +3902,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
          * @return The bytes for ocrLineSeBankgiroCreditorId.
          */
         public com.google.protobuf.ByteString
@@ -3919,7 +3919,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
          * @param value The ocrLineSeBankgiroCreditorId to set.
          * @return This builder for chaining.
          */
@@ -3934,7 +3934,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineSeBankgiroCreditorId() {
@@ -3944,7 +3944,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_se_bankgiro_creditor_id = 14;</code>
+         * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
          * @param value The bytes for ocrLineSeBankgiroCreditorId to set.
          * @return This builder for chaining.
          */
@@ -3962,7 +3962,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineSePlusgiroCreditorId_ = "";
         /**
-         * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
          * @return The ocrLineSePlusgiroCreditorId.
          */
         public java.lang.String getOcrLineSePlusgiroCreditorId() {
@@ -3978,7 +3978,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
          * @return The bytes for ocrLineSePlusgiroCreditorId.
          */
         public com.google.protobuf.ByteString
@@ -3995,7 +3995,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
          * @param value The ocrLineSePlusgiroCreditorId to set.
          * @return This builder for chaining.
          */
@@ -4010,7 +4010,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineSePlusgiroCreditorId() {
@@ -4020,7 +4020,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_se_plusgiro_creditor_id = 15;</code>
+         * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
          * @param value The bytes for ocrLineSePlusgiroCreditorId to set.
          * @return This builder for chaining.
          */
@@ -4038,7 +4038,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineNoPaymentId_ = "";
         /**
-         * <code>string ocr_line_no_payment_id = 16;</code>
+         * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
          * @return The ocrLineNoPaymentId.
          */
         public java.lang.String getOcrLineNoPaymentId() {
@@ -4054,7 +4054,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_no_payment_id = 16;</code>
+         * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
          * @return The bytes for ocrLineNoPaymentId.
          */
         public com.google.protobuf.ByteString
@@ -4071,7 +4071,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_no_payment_id = 16;</code>
+         * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
          * @param value The ocrLineNoPaymentId to set.
          * @return This builder for chaining.
          */
@@ -4086,7 +4086,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_no_payment_id = 16;</code>
+         * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineNoPaymentId() {
@@ -4096,7 +4096,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_no_payment_id = 16;</code>
+         * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
          * @param value The bytes for ocrLineNoPaymentId to set.
          * @return This builder for chaining.
          */
@@ -4114,7 +4114,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineFiPaymentId_ = "";
         /**
-         * <code>string ocr_line_fi_payment_id = 17;</code>
+         * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
          * @return The ocrLineFiPaymentId.
          */
         public java.lang.String getOcrLineFiPaymentId() {
@@ -4130,7 +4130,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_fi_payment_id = 17;</code>
+         * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
          * @return The bytes for ocrLineFiPaymentId.
          */
         public com.google.protobuf.ByteString
@@ -4147,7 +4147,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_fi_payment_id = 17;</code>
+         * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
          * @param value The ocrLineFiPaymentId to set.
          * @return This builder for chaining.
          */
@@ -4162,7 +4162,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_fi_payment_id = 17;</code>
+         * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineFiPaymentId() {
@@ -4172,7 +4172,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_fi_payment_id = 17;</code>
+         * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
          * @param value The bytes for ocrLineFiPaymentId to set.
          * @return This builder for chaining.
          */
@@ -4190,7 +4190,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object ocrLineNlPaymentId_ = "";
         /**
-         * <code>string ocr_line_nl_payment_id = 18;</code>
+         * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
          * @return The ocrLineNlPaymentId.
          */
         public java.lang.String getOcrLineNlPaymentId() {
@@ -4206,7 +4206,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_nl_payment_id = 18;</code>
+         * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
          * @return The bytes for ocrLineNlPaymentId.
          */
         public com.google.protobuf.ByteString
@@ -4223,7 +4223,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string ocr_line_nl_payment_id = 18;</code>
+         * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
          * @param value The ocrLineNlPaymentId to set.
          * @return This builder for chaining.
          */
@@ -4238,7 +4238,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_nl_payment_id = 18;</code>
+         * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOcrLineNlPaymentId() {
@@ -4248,7 +4248,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string ocr_line_nl_payment_id = 18;</code>
+         * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
          * @param value The bytes for ocrLineNlPaymentId to set.
          * @return This builder for chaining.
          */
@@ -4266,7 +4266,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object supplierCorporateId_ = "";
         /**
-         * <code>string supplier_corporate_id = 19;</code>
+         * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
          * @return The supplierCorporateId.
          */
         public java.lang.String getSupplierCorporateId() {
@@ -4282,7 +4282,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_corporate_id = 19;</code>
+         * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
          * @return The bytes for supplierCorporateId.
          */
         public com.google.protobuf.ByteString
@@ -4299,7 +4299,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_corporate_id = 19;</code>
+         * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
          * @param value The supplierCorporateId to set.
          * @return This builder for chaining.
          */
@@ -4314,7 +4314,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_corporate_id = 19;</code>
+         * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSupplierCorporateId() {
@@ -4324,7 +4324,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_corporate_id = 19;</code>
+         * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
          * @param value The bytes for supplierCorporateId to set.
          * @return This builder for chaining.
          */
@@ -4342,7 +4342,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object supplierCountryCode_ = "";
         /**
-         * <code>string supplier_country_code = 20;</code>
+         * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
          * @return The supplierCountryCode.
          */
         public java.lang.String getSupplierCountryCode() {
@@ -4358,7 +4358,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_country_code = 20;</code>
+         * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
          * @return The bytes for supplierCountryCode.
          */
         public com.google.protobuf.ByteString
@@ -4375,7 +4375,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_country_code = 20;</code>
+         * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
          * @param value The supplierCountryCode to set.
          * @return This builder for chaining.
          */
@@ -4390,7 +4390,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_country_code = 20;</code>
+         * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSupplierCountryCode() {
@@ -4400,7 +4400,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_country_code = 20;</code>
+         * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
          * @param value The bytes for supplierCountryCode to set.
          * @return This builder for chaining.
          */
@@ -4418,7 +4418,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object invoiceNumber_ = "";
         /**
-         * <code>string invoice_number = 21;</code>
+         * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
          * @return The invoiceNumber.
          */
         public java.lang.String getInvoiceNumber() {
@@ -4434,7 +4434,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string invoice_number = 21;</code>
+         * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
          * @return The bytes for invoiceNumber.
          */
         public com.google.protobuf.ByteString
@@ -4451,7 +4451,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string invoice_number = 21;</code>
+         * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
          * @param value The invoiceNumber to set.
          * @return This builder for chaining.
          */
@@ -4466,7 +4466,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string invoice_number = 21;</code>
+         * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearInvoiceNumber() {
@@ -4476,7 +4476,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string invoice_number = 21;</code>
+         * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
          * @param value The bytes for invoiceNumber to set.
          * @return This builder for chaining.
          */
@@ -4494,7 +4494,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object iban_ = "";
         /**
-         * <code>string iban = 22;</code>
+         * <code>string iban = 22 [json_name = "iban"];</code>
          * @return The iban.
          */
         public java.lang.String getIban() {
@@ -4510,7 +4510,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string iban = 22;</code>
+         * <code>string iban = 22 [json_name = "iban"];</code>
          * @return The bytes for iban.
          */
         public com.google.protobuf.ByteString
@@ -4527,7 +4527,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string iban = 22;</code>
+         * <code>string iban = 22 [json_name = "iban"];</code>
          * @param value The iban to set.
          * @return This builder for chaining.
          */
@@ -4542,7 +4542,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string iban = 22;</code>
+         * <code>string iban = 22 [json_name = "iban"];</code>
          * @return This builder for chaining.
          */
         public Builder clearIban() {
@@ -4552,7 +4552,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string iban = 22;</code>
+         * <code>string iban = 22 [json_name = "iban"];</code>
          * @param value The bytes for iban to set.
          * @return This builder for chaining.
          */
@@ -4570,7 +4570,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object bankAccountNumber_ = "";
         /**
-         * <code>string bank_account_number = 23;</code>
+         * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
          * @return The bankAccountNumber.
          */
         public java.lang.String getBankAccountNumber() {
@@ -4586,7 +4586,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string bank_account_number = 23;</code>
+         * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
          * @return The bytes for bankAccountNumber.
          */
         public com.google.protobuf.ByteString
@@ -4603,7 +4603,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string bank_account_number = 23;</code>
+         * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
          * @param value The bankAccountNumber to set.
          * @return This builder for chaining.
          */
@@ -4618,7 +4618,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string bank_account_number = 23;</code>
+         * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBankAccountNumber() {
@@ -4628,7 +4628,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string bank_account_number = 23;</code>
+         * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
          * @param value The bytes for bankAccountNumber to set.
          * @return This builder for chaining.
          */
@@ -4646,7 +4646,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object bankRegistrationNumber_ = "";
         /**
-         * <code>string bank_registration_number = 24;</code>
+         * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
          * @return The bankRegistrationNumber.
          */
         public java.lang.String getBankRegistrationNumber() {
@@ -4662,7 +4662,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string bank_registration_number = 24;</code>
+         * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
          * @return The bytes for bankRegistrationNumber.
          */
         public com.google.protobuf.ByteString
@@ -4679,7 +4679,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string bank_registration_number = 24;</code>
+         * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
          * @param value The bankRegistrationNumber to set.
          * @return This builder for chaining.
          */
@@ -4694,7 +4694,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string bank_registration_number = 24;</code>
+         * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBankRegistrationNumber() {
@@ -4704,7 +4704,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string bank_registration_number = 24;</code>
+         * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
          * @param value The bytes for bankRegistrationNumber to set.
          * @return This builder for chaining.
          */
@@ -4722,7 +4722,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object supplierName_ = "";
         /**
-         * <code>string supplier_name = 25;</code>
+         * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
          * @return The supplierName.
          */
         public java.lang.String getSupplierName() {
@@ -4738,7 +4738,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_name = 25;</code>
+         * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
          * @return The bytes for supplierName.
          */
         public com.google.protobuf.ByteString
@@ -4755,7 +4755,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_name = 25;</code>
+         * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
          * @param value The supplierName to set.
          * @return This builder for chaining.
          */
@@ -4770,7 +4770,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_name = 25;</code>
+         * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSupplierName() {
@@ -4780,7 +4780,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_name = 25;</code>
+         * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
          * @param value The bytes for supplierName to set.
          * @return This builder for chaining.
          */
@@ -4798,7 +4798,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object bic_ = "";
         /**
-         * <code>string bic = 26;</code>
+         * <code>string bic = 26 [json_name = "bic"];</code>
          * @return The bic.
          */
         public java.lang.String getBic() {
@@ -4814,7 +4814,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string bic = 26;</code>
+         * <code>string bic = 26 [json_name = "bic"];</code>
          * @return The bytes for bic.
          */
         public com.google.protobuf.ByteString
@@ -4831,7 +4831,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string bic = 26;</code>
+         * <code>string bic = 26 [json_name = "bic"];</code>
          * @param value The bic to set.
          * @return This builder for chaining.
          */
@@ -4846,7 +4846,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string bic = 26;</code>
+         * <code>string bic = 26 [json_name = "bic"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBic() {
@@ -4856,7 +4856,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string bic = 26;</code>
+         * <code>string bic = 26 [json_name = "bic"];</code>
          * @param value The bytes for bic to set.
          * @return This builder for chaining.
          */
@@ -4874,7 +4874,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object documentNumber_ = "";
         /**
-         * <code>string document_number = 27;</code>
+         * <code>string document_number = 27 [json_name = "documentNumber"];</code>
          * @return The documentNumber.
          */
         public java.lang.String getDocumentNumber() {
@@ -4890,7 +4890,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string document_number = 27;</code>
+         * <code>string document_number = 27 [json_name = "documentNumber"];</code>
          * @return The bytes for documentNumber.
          */
         public com.google.protobuf.ByteString
@@ -4907,7 +4907,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string document_number = 27;</code>
+         * <code>string document_number = 27 [json_name = "documentNumber"];</code>
          * @param value The documentNumber to set.
          * @return This builder for chaining.
          */
@@ -4922,7 +4922,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string document_number = 27;</code>
+         * <code>string document_number = 27 [json_name = "documentNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearDocumentNumber() {
@@ -4932,7 +4932,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string document_number = 27;</code>
+         * <code>string document_number = 27 [json_name = "documentNumber"];</code>
          * @param value The bytes for documentNumber to set.
          * @return This builder for chaining.
          */
@@ -4952,14 +4952,14 @@ public final class MlServiceProtos {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> documentDateBuilder_;
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          * @return Whether the documentDate field is set.
          */
         public boolean hasDocumentDate() {
           return documentDateBuilder_ != null || documentDate_ != null;
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          * @return The documentDate.
          */
         public com.google.type.Date getDocumentDate() {
@@ -4970,7 +4970,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public Builder setDocumentDate(com.google.type.Date value) {
           if (documentDateBuilder_ == null) {
@@ -4986,7 +4986,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public Builder setDocumentDate(
             com.google.type.Date.Builder builderForValue) {
@@ -5000,7 +5000,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public Builder mergeDocumentDate(com.google.type.Date value) {
           if (documentDateBuilder_ == null) {
@@ -5018,7 +5018,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public Builder clearDocumentDate() {
           if (documentDateBuilder_ == null) {
@@ -5032,7 +5032,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public com.google.type.Date.Builder getDocumentDateBuilder() {
           
@@ -5040,7 +5040,7 @@ public final class MlServiceProtos {
           return getDocumentDateFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public com.google.type.DateOrBuilder getDocumentDateOrBuilder() {
           if (documentDateBuilder_ != null) {
@@ -5051,7 +5051,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>.google.type.Date document_date = 28;</code>
+         * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
@@ -5069,7 +5069,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object orderNumber_ = "";
         /**
-         * <code>string order_number = 29;</code>
+         * <code>string order_number = 29 [json_name = "orderNumber"];</code>
          * @return The orderNumber.
          */
         public java.lang.String getOrderNumber() {
@@ -5085,7 +5085,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string order_number = 29;</code>
+         * <code>string order_number = 29 [json_name = "orderNumber"];</code>
          * @return The bytes for orderNumber.
          */
         public com.google.protobuf.ByteString
@@ -5102,7 +5102,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string order_number = 29;</code>
+         * <code>string order_number = 29 [json_name = "orderNumber"];</code>
          * @param value The orderNumber to set.
          * @return This builder for chaining.
          */
@@ -5117,7 +5117,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string order_number = 29;</code>
+         * <code>string order_number = 29 [json_name = "orderNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOrderNumber() {
@@ -5127,7 +5127,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string order_number = 29;</code>
+         * <code>string order_number = 29 [json_name = "orderNumber"];</code>
          * @param value The bytes for orderNumber to set.
          * @return This builder for chaining.
          */
@@ -5145,7 +5145,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object supplierVatNumber_ = "";
         /**
-         * <code>string supplier_vat_number = 30;</code>
+         * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
          * @return The supplierVatNumber.
          */
         public java.lang.String getSupplierVatNumber() {
@@ -5161,7 +5161,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_vat_number = 30;</code>
+         * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
          * @return The bytes for supplierVatNumber.
          */
         public com.google.protobuf.ByteString
@@ -5178,7 +5178,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_vat_number = 30;</code>
+         * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
          * @param value The supplierVatNumber to set.
          * @return This builder for chaining.
          */
@@ -5193,7 +5193,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_vat_number = 30;</code>
+         * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSupplierVatNumber() {
@@ -5203,7 +5203,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_vat_number = 30;</code>
+         * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
          * @param value The bytes for supplierVatNumber to set.
          * @return This builder for chaining.
          */
@@ -5221,7 +5221,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object supplierOrganisationNumber_ = "";
         /**
-         * <code>string supplier_organisation_number = 31;</code>
+         * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
          * @return The supplierOrganisationNumber.
          */
         public java.lang.String getSupplierOrganisationNumber() {
@@ -5237,7 +5237,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_organisation_number = 31;</code>
+         * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
          * @return The bytes for supplierOrganisationNumber.
          */
         public com.google.protobuf.ByteString
@@ -5254,7 +5254,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_organisation_number = 31;</code>
+         * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
          * @param value The supplierOrganisationNumber to set.
          * @return This builder for chaining.
          */
@@ -5269,7 +5269,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_organisation_number = 31;</code>
+         * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSupplierOrganisationNumber() {
@@ -5279,7 +5279,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_organisation_number = 31;</code>
+         * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
          * @param value The bytes for supplierOrganisationNumber to set.
          * @return This builder for chaining.
          */
@@ -5297,7 +5297,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object supplierAddress_ = "";
         /**
-         * <code>string supplier_address = 32;</code>
+         * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
          * @return The supplierAddress.
          */
         public java.lang.String getSupplierAddress() {
@@ -5313,7 +5313,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_address = 32;</code>
+         * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
          * @return The bytes for supplierAddress.
          */
         public com.google.protobuf.ByteString
@@ -5330,7 +5330,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string supplier_address = 32;</code>
+         * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
          * @param value The supplierAddress to set.
          * @return This builder for chaining.
          */
@@ -5345,7 +5345,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_address = 32;</code>
+         * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSupplierAddress() {
@@ -5355,7 +5355,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string supplier_address = 32;</code>
+         * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
          * @param value The bytes for supplierAddress to set.
          * @return This builder for chaining.
          */
@@ -5373,7 +5373,7 @@ public final class MlServiceProtos {
 
         private java.lang.Object creditCardLastFour_ = "";
         /**
-         * <code>string credit_card_last_four = 33;</code>
+         * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
          * @return The creditCardLastFour.
          */
         public java.lang.String getCreditCardLastFour() {
@@ -5389,7 +5389,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string credit_card_last_four = 33;</code>
+         * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
          * @return The bytes for creditCardLastFour.
          */
         public com.google.protobuf.ByteString
@@ -5406,7 +5406,7 @@ public final class MlServiceProtos {
           }
         }
         /**
-         * <code>string credit_card_last_four = 33;</code>
+         * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
          * @param value The creditCardLastFour to set.
          * @return This builder for chaining.
          */
@@ -5421,7 +5421,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string credit_card_last_four = 33;</code>
+         * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreditCardLastFour() {
@@ -5431,7 +5431,7 @@ public final class MlServiceProtos {
           return this;
         }
         /**
-         * <code>string credit_card_last_four = 33;</code>
+         * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
          * @param value The bytes for creditCardLastFour to set.
          * @return This builder for chaining.
          */
@@ -5502,7 +5502,7 @@ public final class MlServiceProtos {
     public static final int TRUTH_LABELS_FIELD_NUMBER = 1;
     private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels truthLabels_;
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
      * @return Whether the truthLabels field is set.
      */
     @java.lang.Override
@@ -5510,7 +5510,7 @@ public final class MlServiceProtos {
       return truthLabels_ != null;
     }
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
      * @return The truthLabels.
      */
     @java.lang.Override
@@ -5518,7 +5518,7 @@ public final class MlServiceProtos {
       return truthLabels_ == null ? ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.getDefaultInstance() : truthLabels_;
     }
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
      */
     @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder() {
@@ -5528,7 +5528,7 @@ public final class MlServiceProtos {
     public static final int TEXT_ANNOTATION_FIELD_NUMBER = 2;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return Whether the textAnnotation field is set.
      */
     @java.lang.Override
@@ -5536,7 +5536,7 @@ public final class MlServiceProtos {
       return textAnnotation_ != null;
     }
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      * @return The textAnnotation.
      */
     @java.lang.Override
@@ -5544,7 +5544,7 @@ public final class MlServiceProtos {
       return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
@@ -5554,7 +5554,7 @@ public final class MlServiceProtos {
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -5571,7 +5571,7 @@ public final class MlServiceProtos {
       }
     }
     /**
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -5955,14 +5955,14 @@ public final class MlServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.Builder, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder> truthLabelsBuilder_;
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        * @return Whether the truthLabels field is set.
        */
       public boolean hasTruthLabels() {
         return truthLabelsBuilder_ != null || truthLabels_ != null;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        * @return The truthLabels.
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels getTruthLabels() {
@@ -5973,7 +5973,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public Builder setTruthLabels(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels value) {
         if (truthLabelsBuilder_ == null) {
@@ -5989,7 +5989,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public Builder setTruthLabels(
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.Builder builderForValue) {
@@ -6003,7 +6003,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public Builder mergeTruthLabels(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels value) {
         if (truthLabelsBuilder_ == null) {
@@ -6021,7 +6021,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public Builder clearTruthLabels() {
         if (truthLabelsBuilder_ == null) {
@@ -6035,7 +6035,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.Builder getTruthLabelsBuilder() {
         
@@ -6043,7 +6043,7 @@ public final class MlServiceProtos {
         return getTruthLabelsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder() {
         if (truthLabelsBuilder_ != null) {
@@ -6054,7 +6054,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.Builder, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder> 
@@ -6074,14 +6074,14 @@ public final class MlServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
         return textAnnotationBuilder_ != null || textAnnotation_ != null;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        * @return The textAnnotation.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
@@ -6092,7 +6092,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder setTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -6108,7 +6108,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder setTextAnnotation(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
@@ -6122,7 +6122,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder mergeTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -6140,7 +6140,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder clearTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -6154,7 +6154,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTextAnnotationBuilder() {
         
@@ -6162,7 +6162,7 @@ public final class MlServiceProtos {
         return getTextAnnotationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
         if (textAnnotationBuilder_ != null) {
@@ -6173,7 +6173,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> 
@@ -6191,7 +6191,7 @@ public final class MlServiceProtos {
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -6207,7 +6207,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -6224,7 +6224,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -6239,7 +6239,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -6249,7 +6249,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -6322,17 +6322,17 @@ public final class MlServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return The example.
      */
     org.tensorflow.example.Example getExample();
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      */
     org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder();
   }
@@ -6429,7 +6429,7 @@ public final class MlServiceProtos {
     public static final int EXAMPLE_FIELD_NUMBER = 1;
     private org.tensorflow.example.Example example_;
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -6437,7 +6437,7 @@ public final class MlServiceProtos {
       return example_ != null;
     }
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return The example.
      */
     @java.lang.Override
@@ -6445,7 +6445,7 @@ public final class MlServiceProtos {
       return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      */
     @java.lang.Override
     public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
@@ -6771,14 +6771,14 @@ public final class MlServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        * @return The example.
        */
       public org.tensorflow.example.Example getExample() {
@@ -6789,7 +6789,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder setExample(org.tensorflow.example.Example value) {
         if (exampleBuilder_ == null) {
@@ -6805,7 +6805,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder setExample(
           org.tensorflow.example.Example.Builder builderForValue) {
@@ -6819,7 +6819,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder mergeExample(org.tensorflow.example.Example value) {
         if (exampleBuilder_ == null) {
@@ -6837,7 +6837,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -6851,7 +6851,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public org.tensorflow.example.Example.Builder getExampleBuilder() {
         
@@ -6859,7 +6859,7 @@ public final class MlServiceProtos {
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
@@ -6870,7 +6870,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> 
@@ -6943,22 +6943,22 @@ public final class MlServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return The example.
      */
     org.tensorflow.example.Example getExample();
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      */
     org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder();
 
     /**
-     * <code>uint32 top_n_most_confident = 2;</code>
+     * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
      * @return The topNMostConfident.
      */
     int getTopNMostConfident();
@@ -7061,7 +7061,7 @@ public final class MlServiceProtos {
     public static final int EXAMPLE_FIELD_NUMBER = 1;
     private org.tensorflow.example.Example example_;
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -7069,7 +7069,7 @@ public final class MlServiceProtos {
       return example_ != null;
     }
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      * @return The example.
      */
     @java.lang.Override
@@ -7077,7 +7077,7 @@ public final class MlServiceProtos {
       return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.tensorflow.Example example = 1;</code>
+     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
      */
     @java.lang.Override
     public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
@@ -7087,7 +7087,7 @@ public final class MlServiceProtos {
     public static final int TOP_N_MOST_CONFIDENT_FIELD_NUMBER = 2;
     private int topNMostConfident_;
     /**
-     * <code>uint32 top_n_most_confident = 2;</code>
+     * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
      * @return The topNMostConfident.
      */
     @java.lang.Override
@@ -7431,14 +7431,14 @@ public final class MlServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        * @return The example.
        */
       public org.tensorflow.example.Example getExample() {
@@ -7449,7 +7449,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder setExample(org.tensorflow.example.Example value) {
         if (exampleBuilder_ == null) {
@@ -7465,7 +7465,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder setExample(
           org.tensorflow.example.Example.Builder builderForValue) {
@@ -7479,7 +7479,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder mergeExample(org.tensorflow.example.Example value) {
         if (exampleBuilder_ == null) {
@@ -7497,7 +7497,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -7511,7 +7511,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public org.tensorflow.example.Example.Builder getExampleBuilder() {
         
@@ -7519,7 +7519,7 @@ public final class MlServiceProtos {
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
@@ -7530,7 +7530,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.tensorflow.Example example = 1;</code>
+       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> 
@@ -7548,7 +7548,7 @@ public final class MlServiceProtos {
 
       private int topNMostConfident_ ;
       /**
-       * <code>uint32 top_n_most_confident = 2;</code>
+       * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
        * @return The topNMostConfident.
        */
       @java.lang.Override
@@ -7556,7 +7556,7 @@ public final class MlServiceProtos {
         return topNMostConfident_;
       }
       /**
-       * <code>uint32 top_n_most_confident = 2;</code>
+       * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
        * @param value The topNMostConfident to set.
        * @return This builder for chaining.
        */
@@ -7567,7 +7567,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>uint32 top_n_most_confident = 2;</code>
+       * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTopNMostConfident() {
@@ -7634,241 +7634,241 @@ public final class MlServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOrderDateList();
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOrderDate(int index);
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     int getOrderDateCount();
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOrderDateOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getPaymentDueDateList();
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index);
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     int getPaymentDueDateCount();
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentDueDateOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getCurrencyList();
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getCurrency(int index);
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     int getCurrencyCount();
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCurrencyOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getTotalVatList();
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getTotalVat(int index);
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     int getTotalVatCount();
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalVatOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getTotalInclVatList();
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index);
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     int getTotalInclVatCount();
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalInclVatOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getTotalExclVatList();
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index);
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     int getTotalExclVatCount();
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalExclVatOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierCorporateIdList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     int getSupplierCorporateIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCorporateIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierCountryCodeList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index);
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     int getSupplierCountryCodeCount();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCountryCodeOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getDocumentTypeList();
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getDocumentType(int index);
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     int getDocumentTypeCount();
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentTypeOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getPaymentMethodList();
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index);
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     int getPaymentMethodCount();
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentMethodOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
         int index);
@@ -7878,7 +7878,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getCreditCardNumberList();
@@ -7887,7 +7887,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getCreditCardNumber(int index);
     /**
@@ -7895,7 +7895,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     int getCreditCardNumberCount();
     /**
@@ -7903,7 +7903,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCreditCardNumberOrBuilderList();
@@ -7912,559 +7912,559 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getInvoiceNumberList();
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index);
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     int getInvoiceNumberCount();
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getInvoiceNumberOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineDkTypeList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     int getOcrLineDkTypeCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkTypeOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineDkPaymentIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     int getOcrLineDkPaymentIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineDkCreditorIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     int getOcrLineDkCreditorIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineSePaymentIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     int getOcrLineSePaymentIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineSeBankgiroCreditorIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     int getOcrLineSeBankgiroCreditorIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineSePlusgiroCreditorIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     int getOcrLineSePlusgiroCreditorIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineNoPaymentIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     int getOcrLineNoPaymentIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineFiPaymentIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     int getOcrLineFiPaymentIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineNlPaymentIdList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index);
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     int getOcrLineNlPaymentIdCount();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getIbanList();
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getIban(int index);
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     int getIbanCount();
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getIbanOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.LineCandidate> 
         getLinesList();
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     ssn.type.CandidateOuterClass.LineCandidate getLines(int index);
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     int getLinesCount();
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
         getLinesOrBuilderList();
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getBankAccountNumberList();
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index);
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     int getBankAccountNumberCount();
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getBankAccountNumberOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getBankRegistrationNumberList();
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index);
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     int getBankRegistrationNumberCount();
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getBankRegistrationNumberOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getBicList();
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getBic(int index);
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     int getBicCount();
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getBicOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getDocumentNumberList();
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index);
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     int getDocumentNumberCount();
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentNumberOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getDocumentDateList();
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index);
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     int getDocumentDateCount();
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentDateOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOrderNumberList();
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index);
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     int getOrderNumberCount();
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOrderNumberOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierNameList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierName(int index);
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     int getSupplierNameCount();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierNameOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierVatNumberList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index);
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     int getSupplierVatNumberCount();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierVatNumberOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierOrganisationNumberList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index);
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     int getSupplierOrganisationNumberCount();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierOrganisationNumberOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierAddressList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index);
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     int getSupplierAddressCount();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierAddressOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getCreditCardLastFourList();
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index);
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     int getCreditCardLastFourCount();
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCreditCardLastFourOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
         int index);
@@ -8997,14 +8997,14 @@ public final class MlServiceProtos {
     public static final int ORDER_DATE_FIELD_NUMBER = 1;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderDate_;
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderDateList() {
       return orderDate_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9012,21 +9012,21 @@ public final class MlServiceProtos {
       return orderDate_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public int getOrderDateCount() {
       return orderDate_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOrderDate(int index) {
       return orderDate_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
@@ -9037,14 +9037,14 @@ public final class MlServiceProtos {
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 2;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentDueDate_;
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentDueDateList() {
       return paymentDueDate_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9052,21 +9052,21 @@ public final class MlServiceProtos {
       return paymentDueDate_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public int getPaymentDueDateCount() {
       return paymentDueDate_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index) {
       return paymentDueDate_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
@@ -9077,14 +9077,14 @@ public final class MlServiceProtos {
     public static final int CURRENCY_FIELD_NUMBER = 3;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> currency_;
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCurrencyList() {
       return currency_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9092,21 +9092,21 @@ public final class MlServiceProtos {
       return currency_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public int getCurrencyCount() {
       return currency_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCurrency(int index) {
       return currency_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
@@ -9117,14 +9117,14 @@ public final class MlServiceProtos {
     public static final int TOTAL_VAT_FIELD_NUMBER = 4;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalVat_;
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalVatList() {
       return totalVat_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9132,21 +9132,21 @@ public final class MlServiceProtos {
       return totalVat_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public int getTotalVatCount() {
       return totalVat_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalVat(int index) {
       return totalVat_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
@@ -9157,14 +9157,14 @@ public final class MlServiceProtos {
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 5;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalInclVat_;
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalInclVatList() {
       return totalInclVat_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9172,21 +9172,21 @@ public final class MlServiceProtos {
       return totalInclVat_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public int getTotalInclVatCount() {
       return totalInclVat_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index) {
       return totalInclVat_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
@@ -9197,14 +9197,14 @@ public final class MlServiceProtos {
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 6;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalExclVat_;
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalExclVatList() {
       return totalExclVat_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9212,21 +9212,21 @@ public final class MlServiceProtos {
       return totalExclVat_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public int getTotalExclVatCount() {
       return totalExclVat_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index) {
       return totalExclVat_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
@@ -9237,14 +9237,14 @@ public final class MlServiceProtos {
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 7;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCorporateId_;
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCorporateIdList() {
       return supplierCorporateId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9252,21 +9252,21 @@ public final class MlServiceProtos {
       return supplierCorporateId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public int getSupplierCorporateIdCount() {
       return supplierCorporateId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index) {
       return supplierCorporateId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
@@ -9277,14 +9277,14 @@ public final class MlServiceProtos {
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 8;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCountryCode_;
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCountryCodeList() {
       return supplierCountryCode_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9292,21 +9292,21 @@ public final class MlServiceProtos {
       return supplierCountryCode_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public int getSupplierCountryCodeCount() {
       return supplierCountryCode_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index) {
       return supplierCountryCode_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
@@ -9317,14 +9317,14 @@ public final class MlServiceProtos {
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 9;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentType_;
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentTypeList() {
       return documentType_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9332,21 +9332,21 @@ public final class MlServiceProtos {
       return documentType_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public int getDocumentTypeCount() {
       return documentType_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentType(int index) {
       return documentType_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
@@ -9357,14 +9357,14 @@ public final class MlServiceProtos {
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 10;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentMethod_;
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentMethodList() {
       return paymentMethod_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9372,21 +9372,21 @@ public final class MlServiceProtos {
       return paymentMethod_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public int getPaymentMethodCount() {
       return paymentMethod_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index) {
       return paymentMethod_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
@@ -9401,7 +9401,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardNumberList() {
@@ -9412,7 +9412,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9424,7 +9424,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     @java.lang.Override
     public int getCreditCardNumberCount() {
@@ -9435,7 +9435,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCreditCardNumber(int index) {
@@ -9446,7 +9446,7 @@ public final class MlServiceProtos {
      * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardNumberOrBuilder(
@@ -9457,14 +9457,14 @@ public final class MlServiceProtos {
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 12;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> invoiceNumber_;
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInvoiceNumberList() {
       return invoiceNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9472,21 +9472,21 @@ public final class MlServiceProtos {
       return invoiceNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public int getInvoiceNumberCount() {
       return invoiceNumber_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index) {
       return invoiceNumber_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
@@ -9497,14 +9497,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 13;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkType_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkTypeList() {
       return ocrLineDkType_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9512,21 +9512,21 @@ public final class MlServiceProtos {
       return ocrLineDkType_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public int getOcrLineDkTypeCount() {
       return ocrLineDkType_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index) {
       return ocrLineDkType_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
@@ -9537,14 +9537,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 14;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkPaymentId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkPaymentIdList() {
       return ocrLineDkPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9552,21 +9552,21 @@ public final class MlServiceProtos {
       return ocrLineDkPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineDkPaymentIdCount() {
       return ocrLineDkPaymentId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index) {
       return ocrLineDkPaymentId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
@@ -9577,14 +9577,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 15;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkCreditorId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkCreditorIdList() {
       return ocrLineDkCreditorId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9592,21 +9592,21 @@ public final class MlServiceProtos {
       return ocrLineDkCreditorId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public int getOcrLineDkCreditorIdCount() {
       return ocrLineDkCreditorId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index) {
       return ocrLineDkCreditorId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
@@ -9617,14 +9617,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 16;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePaymentId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePaymentIdList() {
       return ocrLineSePaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9632,21 +9632,21 @@ public final class MlServiceProtos {
       return ocrLineSePaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineSePaymentIdCount() {
       return ocrLineSePaymentId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index) {
       return ocrLineSePaymentId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
@@ -9657,14 +9657,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 17;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSeBankgiroCreditorId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSeBankgiroCreditorIdList() {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9672,21 +9672,21 @@ public final class MlServiceProtos {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public int getOcrLineSeBankgiroCreditorIdCount() {
       return ocrLineSeBankgiroCreditorId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
@@ -9697,14 +9697,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 18;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePlusgiroCreditorId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePlusgiroCreditorIdList() {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9712,21 +9712,21 @@ public final class MlServiceProtos {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public int getOcrLineSePlusgiroCreditorIdCount() {
       return ocrLineSePlusgiroCreditorId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
@@ -9737,14 +9737,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 19;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNoPaymentId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNoPaymentIdList() {
       return ocrLineNoPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9752,21 +9752,21 @@ public final class MlServiceProtos {
       return ocrLineNoPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineNoPaymentIdCount() {
       return ocrLineNoPaymentId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index) {
       return ocrLineNoPaymentId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
@@ -9777,14 +9777,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 20;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineFiPaymentId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineFiPaymentIdList() {
       return ocrLineFiPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9792,21 +9792,21 @@ public final class MlServiceProtos {
       return ocrLineFiPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineFiPaymentIdCount() {
       return ocrLineFiPaymentId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index) {
       return ocrLineFiPaymentId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
@@ -9817,14 +9817,14 @@ public final class MlServiceProtos {
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 21;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNlPaymentId_;
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNlPaymentIdList() {
       return ocrLineNlPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9832,21 +9832,21 @@ public final class MlServiceProtos {
       return ocrLineNlPaymentId_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineNlPaymentIdCount() {
       return ocrLineNlPaymentId_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index) {
       return ocrLineNlPaymentId_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
@@ -9857,14 +9857,14 @@ public final class MlServiceProtos {
     public static final int IBAN_FIELD_NUMBER = 22;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_;
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
       return iban_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9872,21 +9872,21 @@ public final class MlServiceProtos {
       return iban_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public int getIbanCount() {
       return iban_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
       return iban_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate iban = 22;</code>
+     * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
@@ -9897,14 +9897,14 @@ public final class MlServiceProtos {
     public static final int LINES_FIELD_NUMBER = 23;
     private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_;
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
       return lines_;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
@@ -9912,21 +9912,21 @@ public final class MlServiceProtos {
       return lines_;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public int getLinesCount() {
       return lines_.size();
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
       return lines_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
@@ -9937,14 +9937,14 @@ public final class MlServiceProtos {
     public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 24;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankAccountNumber_;
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankAccountNumberList() {
       return bankAccountNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9952,21 +9952,21 @@ public final class MlServiceProtos {
       return bankAccountNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public int getBankAccountNumberCount() {
       return bankAccountNumber_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index) {
       return bankAccountNumber_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
@@ -9977,14 +9977,14 @@ public final class MlServiceProtos {
     public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 25;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankRegistrationNumber_;
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankRegistrationNumberList() {
       return bankRegistrationNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -9992,21 +9992,21 @@ public final class MlServiceProtos {
       return bankRegistrationNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public int getBankRegistrationNumberCount() {
       return bankRegistrationNumber_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index) {
       return bankRegistrationNumber_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
@@ -10017,14 +10017,14 @@ public final class MlServiceProtos {
     public static final int BIC_FIELD_NUMBER = 26;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bic_;
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBicList() {
       return bic_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10032,21 +10032,21 @@ public final class MlServiceProtos {
       return bic_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public int getBicCount() {
       return bic_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getBic(int index) {
       return bic_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate bic = 26;</code>
+     * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
@@ -10057,14 +10057,14 @@ public final class MlServiceProtos {
     public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 27;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentNumber_;
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentNumberList() {
       return documentNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10072,21 +10072,21 @@ public final class MlServiceProtos {
       return documentNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public int getDocumentNumberCount() {
       return documentNumber_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index) {
       return documentNumber_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
@@ -10097,14 +10097,14 @@ public final class MlServiceProtos {
     public static final int DOCUMENT_DATE_FIELD_NUMBER = 28;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentDate_;
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentDateList() {
       return documentDate_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10112,21 +10112,21 @@ public final class MlServiceProtos {
       return documentDate_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public int getDocumentDateCount() {
       return documentDate_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index) {
       return documentDate_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
@@ -10137,14 +10137,14 @@ public final class MlServiceProtos {
     public static final int ORDER_NUMBER_FIELD_NUMBER = 29;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderNumber_;
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderNumberList() {
       return orderNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10152,21 +10152,21 @@ public final class MlServiceProtos {
       return orderNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public int getOrderNumberCount() {
       return orderNumber_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index) {
       return orderNumber_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
@@ -10177,14 +10177,14 @@ public final class MlServiceProtos {
     public static final int SUPPLIER_NAME_FIELD_NUMBER = 30;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierName_;
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierNameList() {
       return supplierName_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10192,21 +10192,21 @@ public final class MlServiceProtos {
       return supplierName_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public int getSupplierNameCount() {
       return supplierName_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierName(int index) {
       return supplierName_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
@@ -10217,14 +10217,14 @@ public final class MlServiceProtos {
     public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierVatNumber_;
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierVatNumberList() {
       return supplierVatNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10232,21 +10232,21 @@ public final class MlServiceProtos {
       return supplierVatNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public int getSupplierVatNumberCount() {
       return supplierVatNumber_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index) {
       return supplierVatNumber_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
@@ -10257,14 +10257,14 @@ public final class MlServiceProtos {
     public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierOrganisationNumber_;
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierOrganisationNumberList() {
       return supplierOrganisationNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10272,21 +10272,21 @@ public final class MlServiceProtos {
       return supplierOrganisationNumber_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public int getSupplierOrganisationNumberCount() {
       return supplierOrganisationNumber_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index) {
       return supplierOrganisationNumber_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
@@ -10297,14 +10297,14 @@ public final class MlServiceProtos {
     public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierAddress_;
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierAddressList() {
       return supplierAddress_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10312,21 +10312,21 @@ public final class MlServiceProtos {
       return supplierAddress_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public int getSupplierAddressCount() {
       return supplierAddress_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index) {
       return supplierAddress_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
@@ -10337,14 +10337,14 @@ public final class MlServiceProtos {
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 34;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardLastFour_;
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardLastFourList() {
       return creditCardLastFour_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -10352,21 +10352,21 @@ public final class MlServiceProtos {
       return creditCardLastFour_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public int getCreditCardLastFourCount() {
       return creditCardLastFour_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index) {
       return creditCardLastFour_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
@@ -12550,7 +12550,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> orderDateBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderDateList() {
         if (orderDateBuilder_ == null) {
@@ -12560,7 +12560,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public int getOrderDateCount() {
         if (orderDateBuilder_ == null) {
@@ -12570,7 +12570,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOrderDate(int index) {
         if (orderDateBuilder_ == null) {
@@ -12580,7 +12580,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder setOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12597,7 +12597,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder setOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12611,7 +12611,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(ssn.type.CandidateOuterClass.Candidate value) {
         if (orderDateBuilder_ == null) {
@@ -12627,7 +12627,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12644,7 +12644,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12658,7 +12658,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12672,7 +12672,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addAllOrderDate(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -12687,7 +12687,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder clearOrderDate() {
         if (orderDateBuilder_ == null) {
@@ -12700,7 +12700,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder removeOrderDate(int index) {
         if (orderDateBuilder_ == null) {
@@ -12713,14 +12713,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOrderDateBuilder(
           int index) {
         return getOrderDateFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
           int index) {
@@ -12730,7 +12730,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOrderDateOrBuilderList() {
@@ -12741,14 +12741,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderDateBuilder() {
         return getOrderDateFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderDateBuilder(
           int index) {
@@ -12756,7 +12756,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOrderDateBuilderList() {
@@ -12790,7 +12790,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> paymentDueDateBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentDueDateList() {
         if (paymentDueDateBuilder_ == null) {
@@ -12800,7 +12800,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public int getPaymentDueDateCount() {
         if (paymentDueDateBuilder_ == null) {
@@ -12810,7 +12810,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index) {
         if (paymentDueDateBuilder_ == null) {
@@ -12820,7 +12820,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder setPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12837,7 +12837,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder setPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12851,7 +12851,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(ssn.type.CandidateOuterClass.Candidate value) {
         if (paymentDueDateBuilder_ == null) {
@@ -12867,7 +12867,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12884,7 +12884,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12898,7 +12898,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12912,7 +12912,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addAllPaymentDueDate(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -12927,7 +12927,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder clearPaymentDueDate() {
         if (paymentDueDateBuilder_ == null) {
@@ -12940,7 +12940,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder removePaymentDueDate(int index) {
         if (paymentDueDateBuilder_ == null) {
@@ -12953,14 +12953,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getPaymentDueDateBuilder(
           int index) {
         return getPaymentDueDateFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
           int index) {
@@ -12970,7 +12970,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getPaymentDueDateOrBuilderList() {
@@ -12981,14 +12981,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentDueDateBuilder() {
         return getPaymentDueDateFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentDueDateBuilder(
           int index) {
@@ -12996,7 +12996,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getPaymentDueDateBuilderList() {
@@ -13030,7 +13030,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> currencyBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCurrencyList() {
         if (currencyBuilder_ == null) {
@@ -13040,7 +13040,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public int getCurrencyCount() {
         if (currencyBuilder_ == null) {
@@ -13050,7 +13050,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getCurrency(int index) {
         if (currencyBuilder_ == null) {
@@ -13060,7 +13060,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder setCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13077,7 +13077,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder setCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13091,7 +13091,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(ssn.type.CandidateOuterClass.Candidate value) {
         if (currencyBuilder_ == null) {
@@ -13107,7 +13107,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13124,7 +13124,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13138,7 +13138,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13152,7 +13152,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addAllCurrency(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -13167,7 +13167,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder clearCurrency() {
         if (currencyBuilder_ == null) {
@@ -13180,7 +13180,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder removeCurrency(int index) {
         if (currencyBuilder_ == null) {
@@ -13193,14 +13193,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getCurrencyBuilder(
           int index) {
         return getCurrencyFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
           int index) {
@@ -13210,7 +13210,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getCurrencyOrBuilderList() {
@@ -13221,14 +13221,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCurrencyBuilder() {
         return getCurrencyFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCurrencyBuilder(
           int index) {
@@ -13236,7 +13236,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getCurrencyBuilderList() {
@@ -13270,7 +13270,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> totalVatBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalVatList() {
         if (totalVatBuilder_ == null) {
@@ -13280,7 +13280,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public int getTotalVatCount() {
         if (totalVatBuilder_ == null) {
@@ -13290,7 +13290,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getTotalVat(int index) {
         if (totalVatBuilder_ == null) {
@@ -13300,7 +13300,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder setTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13317,7 +13317,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder setTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13331,7 +13331,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(ssn.type.CandidateOuterClass.Candidate value) {
         if (totalVatBuilder_ == null) {
@@ -13347,7 +13347,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13364,7 +13364,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13378,7 +13378,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13392,7 +13392,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addAllTotalVat(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -13407,7 +13407,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder clearTotalVat() {
         if (totalVatBuilder_ == null) {
@@ -13420,7 +13420,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder removeTotalVat(int index) {
         if (totalVatBuilder_ == null) {
@@ -13433,14 +13433,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getTotalVatBuilder(
           int index) {
         return getTotalVatFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
           int index) {
@@ -13450,7 +13450,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getTotalVatOrBuilderList() {
@@ -13461,14 +13461,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalVatBuilder() {
         return getTotalVatFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalVatBuilder(
           int index) {
@@ -13476,7 +13476,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getTotalVatBuilderList() {
@@ -13510,7 +13510,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> totalInclVatBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalInclVatList() {
         if (totalInclVatBuilder_ == null) {
@@ -13520,7 +13520,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public int getTotalInclVatCount() {
         if (totalInclVatBuilder_ == null) {
@@ -13530,7 +13530,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index) {
         if (totalInclVatBuilder_ == null) {
@@ -13540,7 +13540,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder setTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13557,7 +13557,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder setTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13571,7 +13571,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(ssn.type.CandidateOuterClass.Candidate value) {
         if (totalInclVatBuilder_ == null) {
@@ -13587,7 +13587,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13604,7 +13604,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13618,7 +13618,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13632,7 +13632,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addAllTotalInclVat(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -13647,7 +13647,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder clearTotalInclVat() {
         if (totalInclVatBuilder_ == null) {
@@ -13660,7 +13660,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder removeTotalInclVat(int index) {
         if (totalInclVatBuilder_ == null) {
@@ -13673,14 +13673,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getTotalInclVatBuilder(
           int index) {
         return getTotalInclVatFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
           int index) {
@@ -13690,7 +13690,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getTotalInclVatOrBuilderList() {
@@ -13701,14 +13701,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalInclVatBuilder() {
         return getTotalInclVatFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalInclVatBuilder(
           int index) {
@@ -13716,7 +13716,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getTotalInclVatBuilderList() {
@@ -13750,7 +13750,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> totalExclVatBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalExclVatList() {
         if (totalExclVatBuilder_ == null) {
@@ -13760,7 +13760,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public int getTotalExclVatCount() {
         if (totalExclVatBuilder_ == null) {
@@ -13770,7 +13770,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index) {
         if (totalExclVatBuilder_ == null) {
@@ -13780,7 +13780,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder setTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13797,7 +13797,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder setTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13811,7 +13811,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(ssn.type.CandidateOuterClass.Candidate value) {
         if (totalExclVatBuilder_ == null) {
@@ -13827,7 +13827,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13844,7 +13844,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13858,7 +13858,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13872,7 +13872,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addAllTotalExclVat(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -13887,7 +13887,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder clearTotalExclVat() {
         if (totalExclVatBuilder_ == null) {
@@ -13900,7 +13900,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder removeTotalExclVat(int index) {
         if (totalExclVatBuilder_ == null) {
@@ -13913,14 +13913,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getTotalExclVatBuilder(
           int index) {
         return getTotalExclVatFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
           int index) {
@@ -13930,7 +13930,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getTotalExclVatOrBuilderList() {
@@ -13941,14 +13941,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalExclVatBuilder() {
         return getTotalExclVatFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalExclVatBuilder(
           int index) {
@@ -13956,7 +13956,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getTotalExclVatBuilderList() {
@@ -13990,7 +13990,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierCorporateIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCorporateIdList() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -14000,7 +14000,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public int getSupplierCorporateIdCount() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -14010,7 +14010,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index) {
         if (supplierCorporateIdBuilder_ == null) {
@@ -14020,7 +14020,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder setSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14037,7 +14037,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder setSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14051,7 +14051,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierCorporateIdBuilder_ == null) {
@@ -14067,7 +14067,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14084,7 +14084,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14098,7 +14098,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14112,7 +14112,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addAllSupplierCorporateId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -14127,7 +14127,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder clearSupplierCorporateId() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -14140,7 +14140,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder removeSupplierCorporateId(int index) {
         if (supplierCorporateIdBuilder_ == null) {
@@ -14153,14 +14153,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierCorporateIdBuilder(
           int index) {
         return getSupplierCorporateIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
           int index) {
@@ -14170,7 +14170,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierCorporateIdOrBuilderList() {
@@ -14181,14 +14181,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCorporateIdBuilder() {
         return getSupplierCorporateIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCorporateIdBuilder(
           int index) {
@@ -14196,7 +14196,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierCorporateIdBuilderList() {
@@ -14230,7 +14230,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierCountryCodeBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCountryCodeList() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -14240,7 +14240,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public int getSupplierCountryCodeCount() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -14250,7 +14250,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index) {
         if (supplierCountryCodeBuilder_ == null) {
@@ -14260,7 +14260,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder setSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14277,7 +14277,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder setSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14291,7 +14291,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierCountryCodeBuilder_ == null) {
@@ -14307,7 +14307,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14324,7 +14324,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14338,7 +14338,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14352,7 +14352,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addAllSupplierCountryCode(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -14367,7 +14367,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder clearSupplierCountryCode() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -14380,7 +14380,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder removeSupplierCountryCode(int index) {
         if (supplierCountryCodeBuilder_ == null) {
@@ -14393,14 +14393,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierCountryCodeBuilder(
           int index) {
         return getSupplierCountryCodeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
           int index) {
@@ -14410,7 +14410,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierCountryCodeOrBuilderList() {
@@ -14421,14 +14421,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCountryCodeBuilder() {
         return getSupplierCountryCodeFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCountryCodeBuilder(
           int index) {
@@ -14436,7 +14436,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierCountryCodeBuilderList() {
@@ -14470,7 +14470,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> documentTypeBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentTypeList() {
         if (documentTypeBuilder_ == null) {
@@ -14480,7 +14480,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public int getDocumentTypeCount() {
         if (documentTypeBuilder_ == null) {
@@ -14490,7 +14490,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getDocumentType(int index) {
         if (documentTypeBuilder_ == null) {
@@ -14500,7 +14500,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder setDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14517,7 +14517,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder setDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14531,7 +14531,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(ssn.type.CandidateOuterClass.Candidate value) {
         if (documentTypeBuilder_ == null) {
@@ -14547,7 +14547,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14564,7 +14564,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14578,7 +14578,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14592,7 +14592,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addAllDocumentType(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -14607,7 +14607,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder clearDocumentType() {
         if (documentTypeBuilder_ == null) {
@@ -14620,7 +14620,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder removeDocumentType(int index) {
         if (documentTypeBuilder_ == null) {
@@ -14633,14 +14633,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentTypeBuilder(
           int index) {
         return getDocumentTypeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
           int index) {
@@ -14650,7 +14650,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getDocumentTypeOrBuilderList() {
@@ -14661,14 +14661,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentTypeBuilder() {
         return getDocumentTypeFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentTypeBuilder(
           int index) {
@@ -14676,7 +14676,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getDocumentTypeBuilderList() {
@@ -14710,7 +14710,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> paymentMethodBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentMethodList() {
         if (paymentMethodBuilder_ == null) {
@@ -14720,7 +14720,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public int getPaymentMethodCount() {
         if (paymentMethodBuilder_ == null) {
@@ -14730,7 +14730,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index) {
         if (paymentMethodBuilder_ == null) {
@@ -14740,7 +14740,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder setPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14757,7 +14757,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder setPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14771,7 +14771,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(ssn.type.CandidateOuterClass.Candidate value) {
         if (paymentMethodBuilder_ == null) {
@@ -14787,7 +14787,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14804,7 +14804,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14818,7 +14818,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14832,7 +14832,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addAllPaymentMethod(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -14847,7 +14847,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder clearPaymentMethod() {
         if (paymentMethodBuilder_ == null) {
@@ -14860,7 +14860,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder removePaymentMethod(int index) {
         if (paymentMethodBuilder_ == null) {
@@ -14873,14 +14873,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getPaymentMethodBuilder(
           int index) {
         return getPaymentMethodFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
           int index) {
@@ -14890,7 +14890,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getPaymentMethodOrBuilderList() {
@@ -14901,14 +14901,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentMethodBuilder() {
         return getPaymentMethodFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentMethodBuilder(
           int index) {
@@ -14916,7 +14916,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getPaymentMethodBuilderList() {
@@ -14954,7 +14954,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardNumberList() {
         if (creditCardNumberBuilder_ == null) {
@@ -14968,7 +14968,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public int getCreditCardNumberCount() {
         if (creditCardNumberBuilder_ == null) {
@@ -14982,7 +14982,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getCreditCardNumber(int index) {
         if (creditCardNumberBuilder_ == null) {
@@ -14996,7 +14996,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder setCreditCardNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15017,7 +15017,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder setCreditCardNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15035,7 +15035,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder addCreditCardNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (creditCardNumberBuilder_ == null) {
@@ -15055,7 +15055,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder addCreditCardNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15076,7 +15076,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder addCreditCardNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15094,7 +15094,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder addCreditCardNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15112,7 +15112,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder addAllCreditCardNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -15131,7 +15131,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder clearCreditCardNumber() {
         if (creditCardNumberBuilder_ == null) {
@@ -15148,7 +15148,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public Builder removeCreditCardNumber(int index) {
         if (creditCardNumberBuilder_ == null) {
@@ -15165,7 +15165,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getCreditCardNumberBuilder(
           int index) {
@@ -15176,7 +15176,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardNumberOrBuilder(
           int index) {
@@ -15190,7 +15190,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getCreditCardNumberOrBuilderList() {
@@ -15205,7 +15205,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardNumberBuilder() {
         return getCreditCardNumberFieldBuilder().addBuilder(
@@ -15216,7 +15216,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardNumberBuilder(
           int index) {
@@ -15228,7 +15228,7 @@ public final class MlServiceProtos {
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_number = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_number = 11 [json_name = "creditCardNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getCreditCardNumberBuilderList() {
@@ -15262,7 +15262,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> invoiceNumberBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInvoiceNumberList() {
         if (invoiceNumberBuilder_ == null) {
@@ -15272,7 +15272,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public int getInvoiceNumberCount() {
         if (invoiceNumberBuilder_ == null) {
@@ -15282,7 +15282,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index) {
         if (invoiceNumberBuilder_ == null) {
@@ -15292,7 +15292,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder setInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15309,7 +15309,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder setInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15323,7 +15323,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (invoiceNumberBuilder_ == null) {
@@ -15339,7 +15339,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15356,7 +15356,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15370,7 +15370,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15384,7 +15384,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addAllInvoiceNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -15399,7 +15399,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder clearInvoiceNumber() {
         if (invoiceNumberBuilder_ == null) {
@@ -15412,7 +15412,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder removeInvoiceNumber(int index) {
         if (invoiceNumberBuilder_ == null) {
@@ -15425,14 +15425,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getInvoiceNumberBuilder(
           int index) {
         return getInvoiceNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
           int index) {
@@ -15442,7 +15442,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getInvoiceNumberOrBuilderList() {
@@ -15453,14 +15453,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addInvoiceNumberBuilder() {
         return getInvoiceNumberFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addInvoiceNumberBuilder(
           int index) {
@@ -15468,7 +15468,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getInvoiceNumberBuilderList() {
@@ -15502,7 +15502,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineDkTypeBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkTypeList() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -15512,7 +15512,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public int getOcrLineDkTypeCount() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -15522,7 +15522,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index) {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -15532,7 +15532,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder setOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15549,7 +15549,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder setOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15563,7 +15563,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -15579,7 +15579,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15596,7 +15596,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15610,7 +15610,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15624,7 +15624,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addAllOcrLineDkType(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -15639,7 +15639,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder clearOcrLineDkType() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -15652,7 +15652,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public Builder removeOcrLineDkType(int index) {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -15665,14 +15665,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineDkTypeBuilder(
           int index) {
         return getOcrLineDkTypeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
           int index) {
@@ -15682,7 +15682,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineDkTypeOrBuilderList() {
@@ -15693,14 +15693,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkTypeBuilder() {
         return getOcrLineDkTypeFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkTypeBuilder(
           int index) {
@@ -15708,7 +15708,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineDkTypeBuilderList() {
@@ -15742,7 +15742,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineDkPaymentIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkPaymentIdList() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -15752,7 +15752,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public int getOcrLineDkPaymentIdCount() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -15762,7 +15762,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -15772,7 +15772,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder setOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15789,7 +15789,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder setOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15803,7 +15803,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -15819,7 +15819,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15836,7 +15836,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15850,7 +15850,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15864,7 +15864,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addAllOcrLineDkPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -15879,7 +15879,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder clearOcrLineDkPaymentId() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -15892,7 +15892,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder removeOcrLineDkPaymentId(int index) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -15905,14 +15905,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineDkPaymentIdBuilder(
           int index) {
         return getOcrLineDkPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
           int index) {
@@ -15922,7 +15922,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineDkPaymentIdOrBuilderList() {
@@ -15933,14 +15933,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkPaymentIdBuilder() {
         return getOcrLineDkPaymentIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkPaymentIdBuilder(
           int index) {
@@ -15948,7 +15948,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineDkPaymentIdBuilderList() {
@@ -15982,7 +15982,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineDkCreditorIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkCreditorIdList() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -15992,7 +15992,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public int getOcrLineDkCreditorIdCount() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -16002,7 +16002,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -16012,7 +16012,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder setOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16029,7 +16029,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder setOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16043,7 +16043,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -16059,7 +16059,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16076,7 +16076,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16090,7 +16090,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16104,7 +16104,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addAllOcrLineDkCreditorId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16119,7 +16119,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder clearOcrLineDkCreditorId() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -16132,7 +16132,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder removeOcrLineDkCreditorId(int index) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -16145,14 +16145,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineDkCreditorIdBuilder(
           int index) {
         return getOcrLineDkCreditorIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
           int index) {
@@ -16162,7 +16162,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineDkCreditorIdOrBuilderList() {
@@ -16173,14 +16173,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkCreditorIdBuilder() {
         return getOcrLineDkCreditorIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkCreditorIdBuilder(
           int index) {
@@ -16188,7 +16188,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineDkCreditorIdBuilderList() {
@@ -16222,7 +16222,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineSePaymentIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePaymentIdList() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -16232,7 +16232,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public int getOcrLineSePaymentIdCount() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -16242,7 +16242,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index) {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -16252,7 +16252,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder setOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16269,7 +16269,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder setOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16283,7 +16283,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -16299,7 +16299,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16316,7 +16316,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16330,7 +16330,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16344,7 +16344,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addAllOcrLineSePaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16359,7 +16359,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder clearOcrLineSePaymentId() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -16372,7 +16372,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder removeOcrLineSePaymentId(int index) {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -16385,14 +16385,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineSePaymentIdBuilder(
           int index) {
         return getOcrLineSePaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
           int index) {
@@ -16402,7 +16402,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineSePaymentIdOrBuilderList() {
@@ -16413,14 +16413,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePaymentIdBuilder() {
         return getOcrLineSePaymentIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePaymentIdBuilder(
           int index) {
@@ -16428,7 +16428,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineSePaymentIdBuilderList() {
@@ -16462,7 +16462,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineSeBankgiroCreditorIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSeBankgiroCreditorIdList() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -16472,7 +16472,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public int getOcrLineSeBankgiroCreditorIdCount() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -16482,7 +16482,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -16492,7 +16492,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder setOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16509,7 +16509,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder setOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16523,7 +16523,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -16539,7 +16539,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16556,7 +16556,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16570,7 +16570,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16584,7 +16584,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addAllOcrLineSeBankgiroCreditorId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16599,7 +16599,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder clearOcrLineSeBankgiroCreditorId() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -16612,7 +16612,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder removeOcrLineSeBankgiroCreditorId(int index) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -16625,14 +16625,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineSeBankgiroCreditorIdBuilder(
           int index) {
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
           int index) {
@@ -16642,7 +16642,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineSeBankgiroCreditorIdOrBuilderList() {
@@ -16653,14 +16653,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSeBankgiroCreditorIdBuilder() {
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSeBankgiroCreditorIdBuilder(
           int index) {
@@ -16668,7 +16668,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineSeBankgiroCreditorIdBuilderList() {
@@ -16702,7 +16702,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineSePlusgiroCreditorIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePlusgiroCreditorIdList() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16712,7 +16712,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public int getOcrLineSePlusgiroCreditorIdCount() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16722,7 +16722,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16732,7 +16732,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder setOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16749,7 +16749,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder setOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16763,7 +16763,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16779,7 +16779,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16796,7 +16796,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16810,7 +16810,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16824,7 +16824,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addAllOcrLineSePlusgiroCreditorId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16839,7 +16839,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder clearOcrLineSePlusgiroCreditorId() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16852,7 +16852,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder removeOcrLineSePlusgiroCreditorId(int index) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16865,14 +16865,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineSePlusgiroCreditorIdBuilder(
           int index) {
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
           int index) {
@@ -16882,7 +16882,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineSePlusgiroCreditorIdOrBuilderList() {
@@ -16893,14 +16893,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePlusgiroCreditorIdBuilder() {
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePlusgiroCreditorIdBuilder(
           int index) {
@@ -16908,7 +16908,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineSePlusgiroCreditorIdBuilderList() {
@@ -16942,7 +16942,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineNoPaymentIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNoPaymentIdList() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16952,7 +16952,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public int getOcrLineNoPaymentIdCount() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16962,7 +16962,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16972,7 +16972,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder setOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16989,7 +16989,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder setOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17003,7 +17003,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -17019,7 +17019,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17036,7 +17036,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17050,7 +17050,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17064,7 +17064,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addAllOcrLineNoPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -17079,7 +17079,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder clearOcrLineNoPaymentId() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -17092,7 +17092,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder removeOcrLineNoPaymentId(int index) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -17105,14 +17105,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineNoPaymentIdBuilder(
           int index) {
         return getOcrLineNoPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
           int index) {
@@ -17122,7 +17122,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineNoPaymentIdOrBuilderList() {
@@ -17133,14 +17133,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNoPaymentIdBuilder() {
         return getOcrLineNoPaymentIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNoPaymentIdBuilder(
           int index) {
@@ -17148,7 +17148,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineNoPaymentIdBuilderList() {
@@ -17182,7 +17182,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineFiPaymentIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineFiPaymentIdList() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -17192,7 +17192,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public int getOcrLineFiPaymentIdCount() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -17202,7 +17202,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -17212,7 +17212,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder setOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17229,7 +17229,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder setOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17243,7 +17243,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -17259,7 +17259,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17276,7 +17276,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17290,7 +17290,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17304,7 +17304,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addAllOcrLineFiPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -17319,7 +17319,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder clearOcrLineFiPaymentId() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -17332,7 +17332,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder removeOcrLineFiPaymentId(int index) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -17345,14 +17345,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineFiPaymentIdBuilder(
           int index) {
         return getOcrLineFiPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
           int index) {
@@ -17362,7 +17362,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineFiPaymentIdOrBuilderList() {
@@ -17373,14 +17373,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineFiPaymentIdBuilder() {
         return getOcrLineFiPaymentIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineFiPaymentIdBuilder(
           int index) {
@@ -17388,7 +17388,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineFiPaymentIdBuilderList() {
@@ -17422,7 +17422,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ocrLineNlPaymentIdBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNlPaymentIdList() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17432,7 +17432,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public int getOcrLineNlPaymentIdCount() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17442,7 +17442,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17452,7 +17452,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder setOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17469,7 +17469,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder setOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17483,7 +17483,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17499,7 +17499,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17516,7 +17516,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17530,7 +17530,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17544,7 +17544,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addAllOcrLineNlPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -17559,7 +17559,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder clearOcrLineNlPaymentId() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17572,7 +17572,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder removeOcrLineNlPaymentId(int index) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17585,14 +17585,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineNlPaymentIdBuilder(
           int index) {
         return getOcrLineNlPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
           int index) {
@@ -17602,7 +17602,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineNlPaymentIdOrBuilderList() {
@@ -17613,14 +17613,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNlPaymentIdBuilder() {
         return getOcrLineNlPaymentIdFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNlPaymentIdBuilder(
           int index) {
@@ -17628,7 +17628,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineNlPaymentIdBuilderList() {
@@ -17662,7 +17662,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ibanBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
         if (ibanBuilder_ == null) {
@@ -17672,7 +17672,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public int getIbanCount() {
         if (ibanBuilder_ == null) {
@@ -17682,7 +17682,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
         if (ibanBuilder_ == null) {
@@ -17692,7 +17692,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder setIban(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17709,7 +17709,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder setIban(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17723,7 +17723,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder addIban(ssn.type.CandidateOuterClass.Candidate value) {
         if (ibanBuilder_ == null) {
@@ -17739,7 +17739,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder addIban(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17756,7 +17756,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder addIban(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17770,7 +17770,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder addIban(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17784,7 +17784,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder addAllIban(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -17799,7 +17799,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder clearIban() {
         if (ibanBuilder_ == null) {
@@ -17812,7 +17812,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public Builder removeIban(int index) {
         if (ibanBuilder_ == null) {
@@ -17825,14 +17825,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getIbanBuilder(
           int index) {
         return getIbanFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
           int index) {
@@ -17842,7 +17842,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getIbanOrBuilderList() {
@@ -17853,14 +17853,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addIbanBuilder() {
         return getIbanFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addIbanBuilder(
           int index) {
@@ -17868,7 +17868,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate iban = 22;</code>
+       * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getIbanBuilderList() {
@@ -17902,7 +17902,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder> linesBuilder_;
 
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
         if (linesBuilder_ == null) {
@@ -17912,7 +17912,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public int getLinesCount() {
         if (linesBuilder_ == null) {
@@ -17922,7 +17922,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
         if (linesBuilder_ == null) {
@@ -17932,7 +17932,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder setLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate value) {
@@ -17949,7 +17949,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder setLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
@@ -17963,7 +17963,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder addLines(ssn.type.CandidateOuterClass.LineCandidate value) {
         if (linesBuilder_ == null) {
@@ -17979,7 +17979,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder addLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate value) {
@@ -17996,7 +17996,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder addLines(
           ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
@@ -18010,7 +18010,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder addLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
@@ -18024,7 +18024,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder addAllLines(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.LineCandidate> values) {
@@ -18039,7 +18039,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder clearLines() {
         if (linesBuilder_ == null) {
@@ -18052,7 +18052,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public Builder removeLines(int index) {
         if (linesBuilder_ == null) {
@@ -18065,14 +18065,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate.Builder getLinesBuilder(
           int index) {
         return getLinesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
           int index) {
@@ -18082,7 +18082,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
            getLinesOrBuilderList() {
@@ -18093,14 +18093,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder() {
         return getLinesFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder(
           int index) {
@@ -18108,7 +18108,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.LineCandidate.Builder> 
            getLinesBuilderList() {
@@ -18142,7 +18142,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> bankAccountNumberBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankAccountNumberList() {
         if (bankAccountNumberBuilder_ == null) {
@@ -18152,7 +18152,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public int getBankAccountNumberCount() {
         if (bankAccountNumberBuilder_ == null) {
@@ -18162,7 +18162,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index) {
         if (bankAccountNumberBuilder_ == null) {
@@ -18172,7 +18172,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder setBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18189,7 +18189,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder setBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18203,7 +18203,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (bankAccountNumberBuilder_ == null) {
@@ -18219,7 +18219,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18236,7 +18236,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18250,7 +18250,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18264,7 +18264,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addAllBankAccountNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -18279,7 +18279,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder clearBankAccountNumber() {
         if (bankAccountNumberBuilder_ == null) {
@@ -18292,7 +18292,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder removeBankAccountNumber(int index) {
         if (bankAccountNumberBuilder_ == null) {
@@ -18305,14 +18305,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getBankAccountNumberBuilder(
           int index) {
         return getBankAccountNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
           int index) {
@@ -18322,7 +18322,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getBankAccountNumberOrBuilderList() {
@@ -18333,14 +18333,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankAccountNumberBuilder() {
         return getBankAccountNumberFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankAccountNumberBuilder(
           int index) {
@@ -18348,7 +18348,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_account_number = 24;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getBankAccountNumberBuilderList() {
@@ -18382,7 +18382,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> bankRegistrationNumberBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankRegistrationNumberList() {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18392,7 +18392,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public int getBankRegistrationNumberCount() {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18402,7 +18402,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index) {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18412,7 +18412,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder setBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18429,7 +18429,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder setBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18443,7 +18443,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18459,7 +18459,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18476,7 +18476,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18490,7 +18490,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18504,7 +18504,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addAllBankRegistrationNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -18519,7 +18519,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder clearBankRegistrationNumber() {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18532,7 +18532,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder removeBankRegistrationNumber(int index) {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18545,14 +18545,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getBankRegistrationNumberBuilder(
           int index) {
         return getBankRegistrationNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
           int index) {
@@ -18562,7 +18562,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getBankRegistrationNumberOrBuilderList() {
@@ -18573,14 +18573,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankRegistrationNumberBuilder() {
         return getBankRegistrationNumberFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankRegistrationNumberBuilder(
           int index) {
@@ -18588,7 +18588,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 25;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getBankRegistrationNumberBuilderList() {
@@ -18622,7 +18622,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> bicBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBicList() {
         if (bicBuilder_ == null) {
@@ -18632,7 +18632,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public int getBicCount() {
         if (bicBuilder_ == null) {
@@ -18642,7 +18642,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getBic(int index) {
         if (bicBuilder_ == null) {
@@ -18652,7 +18652,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder setBic(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18669,7 +18669,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder setBic(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18683,7 +18683,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder addBic(ssn.type.CandidateOuterClass.Candidate value) {
         if (bicBuilder_ == null) {
@@ -18699,7 +18699,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder addBic(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18716,7 +18716,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder addBic(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18730,7 +18730,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder addBic(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18744,7 +18744,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder addAllBic(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -18759,7 +18759,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder clearBic() {
         if (bicBuilder_ == null) {
@@ -18772,7 +18772,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public Builder removeBic(int index) {
         if (bicBuilder_ == null) {
@@ -18785,14 +18785,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getBicBuilder(
           int index) {
         return getBicFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
           int index) {
@@ -18802,7 +18802,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getBicOrBuilderList() {
@@ -18813,14 +18813,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBicBuilder() {
         return getBicFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBicBuilder(
           int index) {
@@ -18828,7 +18828,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate bic = 26;</code>
+       * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getBicBuilderList() {
@@ -18862,7 +18862,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> documentNumberBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentNumberList() {
         if (documentNumberBuilder_ == null) {
@@ -18872,7 +18872,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public int getDocumentNumberCount() {
         if (documentNumberBuilder_ == null) {
@@ -18882,7 +18882,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index) {
         if (documentNumberBuilder_ == null) {
@@ -18892,7 +18892,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder setDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18909,7 +18909,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder setDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18923,7 +18923,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (documentNumberBuilder_ == null) {
@@ -18939,7 +18939,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18956,7 +18956,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18970,7 +18970,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18984,7 +18984,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder addAllDocumentNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -18999,7 +18999,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder clearDocumentNumber() {
         if (documentNumberBuilder_ == null) {
@@ -19012,7 +19012,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public Builder removeDocumentNumber(int index) {
         if (documentNumberBuilder_ == null) {
@@ -19025,14 +19025,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentNumberBuilder(
           int index) {
         return getDocumentNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
           int index) {
@@ -19042,7 +19042,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getDocumentNumberOrBuilderList() {
@@ -19053,14 +19053,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentNumberBuilder() {
         return getDocumentNumberFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentNumberBuilder(
           int index) {
@@ -19068,7 +19068,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_number = 27;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getDocumentNumberBuilderList() {
@@ -19102,7 +19102,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> documentDateBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentDateList() {
         if (documentDateBuilder_ == null) {
@@ -19112,7 +19112,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public int getDocumentDateCount() {
         if (documentDateBuilder_ == null) {
@@ -19122,7 +19122,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index) {
         if (documentDateBuilder_ == null) {
@@ -19132,7 +19132,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder setDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19149,7 +19149,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder setDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19163,7 +19163,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(ssn.type.CandidateOuterClass.Candidate value) {
         if (documentDateBuilder_ == null) {
@@ -19179,7 +19179,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19196,7 +19196,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19210,7 +19210,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19224,7 +19224,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder addAllDocumentDate(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -19239,7 +19239,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder clearDocumentDate() {
         if (documentDateBuilder_ == null) {
@@ -19252,7 +19252,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public Builder removeDocumentDate(int index) {
         if (documentDateBuilder_ == null) {
@@ -19265,14 +19265,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentDateBuilder(
           int index) {
         return getDocumentDateFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
           int index) {
@@ -19282,7 +19282,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getDocumentDateOrBuilderList() {
@@ -19293,14 +19293,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentDateBuilder() {
         return getDocumentDateFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentDateBuilder(
           int index) {
@@ -19308,7 +19308,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate document_date = 28;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getDocumentDateBuilderList() {
@@ -19342,7 +19342,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> orderNumberBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderNumberList() {
         if (orderNumberBuilder_ == null) {
@@ -19352,7 +19352,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public int getOrderNumberCount() {
         if (orderNumberBuilder_ == null) {
@@ -19362,7 +19362,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index) {
         if (orderNumberBuilder_ == null) {
@@ -19372,7 +19372,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder setOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19389,7 +19389,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder setOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19403,7 +19403,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (orderNumberBuilder_ == null) {
@@ -19419,7 +19419,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19436,7 +19436,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19450,7 +19450,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19464,7 +19464,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder addAllOrderNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -19479,7 +19479,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder clearOrderNumber() {
         if (orderNumberBuilder_ == null) {
@@ -19492,7 +19492,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public Builder removeOrderNumber(int index) {
         if (orderNumberBuilder_ == null) {
@@ -19505,14 +19505,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOrderNumberBuilder(
           int index) {
         return getOrderNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
           int index) {
@@ -19522,7 +19522,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOrderNumberOrBuilderList() {
@@ -19533,14 +19533,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderNumberBuilder() {
         return getOrderNumberFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderNumberBuilder(
           int index) {
@@ -19548,7 +19548,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate order_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOrderNumberBuilderList() {
@@ -19582,7 +19582,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierNameBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierNameList() {
         if (supplierNameBuilder_ == null) {
@@ -19592,7 +19592,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public int getSupplierNameCount() {
         if (supplierNameBuilder_ == null) {
@@ -19602,7 +19602,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierName(int index) {
         if (supplierNameBuilder_ == null) {
@@ -19612,7 +19612,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder setSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19629,7 +19629,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder setSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19643,7 +19643,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierNameBuilder_ == null) {
@@ -19659,7 +19659,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19676,7 +19676,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19690,7 +19690,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19704,7 +19704,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder addAllSupplierName(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -19719,7 +19719,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder clearSupplierName() {
         if (supplierNameBuilder_ == null) {
@@ -19732,7 +19732,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public Builder removeSupplierName(int index) {
         if (supplierNameBuilder_ == null) {
@@ -19745,14 +19745,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierNameBuilder(
           int index) {
         return getSupplierNameFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
           int index) {
@@ -19762,7 +19762,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierNameOrBuilderList() {
@@ -19773,14 +19773,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierNameBuilder() {
         return getSupplierNameFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierNameBuilder(
           int index) {
@@ -19788,7 +19788,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_name = 30;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierNameBuilderList() {
@@ -19822,7 +19822,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierVatNumberBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierVatNumberList() {
         if (supplierVatNumberBuilder_ == null) {
@@ -19832,7 +19832,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public int getSupplierVatNumberCount() {
         if (supplierVatNumberBuilder_ == null) {
@@ -19842,7 +19842,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index) {
         if (supplierVatNumberBuilder_ == null) {
@@ -19852,7 +19852,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder setSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19869,7 +19869,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder setSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19883,7 +19883,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierVatNumberBuilder_ == null) {
@@ -19899,7 +19899,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19916,7 +19916,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19930,7 +19930,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19944,7 +19944,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addAllSupplierVatNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -19959,7 +19959,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder clearSupplierVatNumber() {
         if (supplierVatNumberBuilder_ == null) {
@@ -19972,7 +19972,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder removeSupplierVatNumber(int index) {
         if (supplierVatNumberBuilder_ == null) {
@@ -19985,14 +19985,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierVatNumberBuilder(
           int index) {
         return getSupplierVatNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
           int index) {
@@ -20002,7 +20002,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierVatNumberOrBuilderList() {
@@ -20013,14 +20013,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierVatNumberBuilder() {
         return getSupplierVatNumberFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierVatNumberBuilder(
           int index) {
@@ -20028,7 +20028,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierVatNumberBuilderList() {
@@ -20062,7 +20062,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierOrganisationNumberBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierOrganisationNumberList() {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20072,7 +20072,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public int getSupplierOrganisationNumberCount() {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20082,7 +20082,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index) {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20092,7 +20092,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder setSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20109,7 +20109,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder setSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20123,7 +20123,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20139,7 +20139,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20156,7 +20156,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20170,7 +20170,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20184,7 +20184,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addAllSupplierOrganisationNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -20199,7 +20199,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder clearSupplierOrganisationNumber() {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20212,7 +20212,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder removeSupplierOrganisationNumber(int index) {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20225,14 +20225,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierOrganisationNumberBuilder(
           int index) {
         return getSupplierOrganisationNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
           int index) {
@@ -20242,7 +20242,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierOrganisationNumberOrBuilderList() {
@@ -20253,14 +20253,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierOrganisationNumberBuilder() {
         return getSupplierOrganisationNumberFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierOrganisationNumberBuilder(
           int index) {
@@ -20268,7 +20268,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierOrganisationNumberBuilderList() {
@@ -20302,7 +20302,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> supplierAddressBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierAddressList() {
         if (supplierAddressBuilder_ == null) {
@@ -20312,7 +20312,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public int getSupplierAddressCount() {
         if (supplierAddressBuilder_ == null) {
@@ -20322,7 +20322,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index) {
         if (supplierAddressBuilder_ == null) {
@@ -20332,7 +20332,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder setSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20349,7 +20349,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder setSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20363,7 +20363,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierAddressBuilder_ == null) {
@@ -20379,7 +20379,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20396,7 +20396,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20410,7 +20410,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20424,7 +20424,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder addAllSupplierAddress(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -20439,7 +20439,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder clearSupplierAddress() {
         if (supplierAddressBuilder_ == null) {
@@ -20452,7 +20452,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder removeSupplierAddress(int index) {
         if (supplierAddressBuilder_ == null) {
@@ -20465,14 +20465,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierAddressBuilder(
           int index) {
         return getSupplierAddressFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
           int index) {
@@ -20482,7 +20482,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierAddressOrBuilderList() {
@@ -20493,14 +20493,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierAddressBuilder() {
         return getSupplierAddressFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierAddressBuilder(
           int index) {
@@ -20508,7 +20508,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate supplier_address = 33;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierAddressBuilderList() {
@@ -20542,7 +20542,7 @@ public final class MlServiceProtos {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> creditCardLastFourBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardLastFourList() {
         if (creditCardLastFourBuilder_ == null) {
@@ -20552,7 +20552,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public int getCreditCardLastFourCount() {
         if (creditCardLastFourBuilder_ == null) {
@@ -20562,7 +20562,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index) {
         if (creditCardLastFourBuilder_ == null) {
@@ -20572,7 +20572,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder setCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20589,7 +20589,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder setCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20603,7 +20603,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(ssn.type.CandidateOuterClass.Candidate value) {
         if (creditCardLastFourBuilder_ == null) {
@@ -20619,7 +20619,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20636,7 +20636,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20650,7 +20650,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20664,7 +20664,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addAllCreditCardLastFour(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -20679,7 +20679,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder clearCreditCardLastFour() {
         if (creditCardLastFourBuilder_ == null) {
@@ -20692,7 +20692,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public Builder removeCreditCardLastFour(int index) {
         if (creditCardLastFourBuilder_ == null) {
@@ -20705,14 +20705,14 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getCreditCardLastFourBuilder(
           int index) {
         return getCreditCardLastFourFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
           int index) {
@@ -20722,7 +20722,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getCreditCardLastFourOrBuilderList() {
@@ -20733,14 +20733,14 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardLastFourBuilder() {
         return getCreditCardLastFourFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardLastFourBuilder(
           int index) {
@@ -20748,7 +20748,7 @@ public final class MlServiceProtos {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getCreditCardLastFourBuilderList() {
@@ -20826,32 +20826,32 @@ public final class MlServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
      * @return Whether the featureGenRequest field is set.
      */
     boolean hasFeatureGenRequest();
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
      * @return The featureGenRequest.
      */
     ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest getFeatureGenRequest();
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
      */
     ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder getFeatureGenRequestOrBuilder();
 
     /**
-     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
      * @return Whether the predictRequest field is set.
      */
     boolean hasPredictRequest();
     /**
-     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
      * @return The predictRequest.
      */
     ssn.mlservice.v2.MlServiceProtos.PredictRequest getPredictRequest();
     /**
-     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
      */
     ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder getPredictRequestOrBuilder();
   }
@@ -20961,7 +20961,7 @@ public final class MlServiceProtos {
     public static final int FEATURE_GEN_REQUEST_FIELD_NUMBER = 1;
     private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest featureGenRequest_;
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
      * @return Whether the featureGenRequest field is set.
      */
     @java.lang.Override
@@ -20969,7 +20969,7 @@ public final class MlServiceProtos {
       return featureGenRequest_ != null;
     }
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
      * @return The featureGenRequest.
      */
     @java.lang.Override
@@ -20977,7 +20977,7 @@ public final class MlServiceProtos {
       return featureGenRequest_ == null ? ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.getDefaultInstance() : featureGenRequest_;
     }
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
      */
     @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder getFeatureGenRequestOrBuilder() {
@@ -20987,7 +20987,7 @@ public final class MlServiceProtos {
     public static final int PREDICT_REQUEST_FIELD_NUMBER = 2;
     private ssn.mlservice.v2.MlServiceProtos.PredictRequest predictRequest_;
     /**
-     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
      * @return Whether the predictRequest field is set.
      */
     @java.lang.Override
@@ -20995,7 +20995,7 @@ public final class MlServiceProtos {
       return predictRequest_ != null;
     }
     /**
-     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
      * @return The predictRequest.
      */
     @java.lang.Override
@@ -21003,7 +21003,7 @@ public final class MlServiceProtos {
       return predictRequest_ == null ? ssn.mlservice.v2.MlServiceProtos.PredictRequest.getDefaultInstance() : predictRequest_;
     }
     /**
-     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+     * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
      */
     @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder getPredictRequestOrBuilder() {
@@ -21359,14 +21359,14 @@ public final class MlServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.Builder, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder> featureGenRequestBuilder_;
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        * @return Whether the featureGenRequest field is set.
        */
       public boolean hasFeatureGenRequest() {
         return featureGenRequestBuilder_ != null || featureGenRequest_ != null;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        * @return The featureGenRequest.
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest getFeatureGenRequest() {
@@ -21377,7 +21377,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public Builder setFeatureGenRequest(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest value) {
         if (featureGenRequestBuilder_ == null) {
@@ -21393,7 +21393,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public Builder setFeatureGenRequest(
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.Builder builderForValue) {
@@ -21407,7 +21407,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public Builder mergeFeatureGenRequest(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest value) {
         if (featureGenRequestBuilder_ == null) {
@@ -21425,7 +21425,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public Builder clearFeatureGenRequest() {
         if (featureGenRequestBuilder_ == null) {
@@ -21439,7 +21439,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.Builder getFeatureGenRequestBuilder() {
         
@@ -21447,7 +21447,7 @@ public final class MlServiceProtos {
         return getFeatureGenRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder getFeatureGenRequestOrBuilder() {
         if (featureGenRequestBuilder_ != null) {
@@ -21458,7 +21458,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.Builder, ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder> 
@@ -21478,14 +21478,14 @@ public final class MlServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.PredictRequest, ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder, ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder> predictRequestBuilder_;
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        * @return Whether the predictRequest field is set.
        */
       public boolean hasPredictRequest() {
         return predictRequestBuilder_ != null || predictRequest_ != null;
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        * @return The predictRequest.
        */
       public ssn.mlservice.v2.MlServiceProtos.PredictRequest getPredictRequest() {
@@ -21496,7 +21496,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public Builder setPredictRequest(ssn.mlservice.v2.MlServiceProtos.PredictRequest value) {
         if (predictRequestBuilder_ == null) {
@@ -21512,7 +21512,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public Builder setPredictRequest(
           ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder builderForValue) {
@@ -21526,7 +21526,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public Builder mergePredictRequest(ssn.mlservice.v2.MlServiceProtos.PredictRequest value) {
         if (predictRequestBuilder_ == null) {
@@ -21544,7 +21544,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public Builder clearPredictRequest() {
         if (predictRequestBuilder_ == null) {
@@ -21558,7 +21558,7 @@ public final class MlServiceProtos {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder getPredictRequestBuilder() {
         
@@ -21566,7 +21566,7 @@ public final class MlServiceProtos {
         return getPredictRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder getPredictRequestOrBuilder() {
         if (predictRequestBuilder_ != null) {
@@ -21577,7 +21577,7 @@ public final class MlServiceProtos {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2;</code>
+       * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.MlServiceProtos.PredictRequest, ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder, ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder> 
@@ -21687,94 +21687,125 @@ public final class MlServiceProtos {
       "\n ssn/mlservice/v2/mlservice.proto\022\020ssn." +
       "mlservice.v2\032\026google/type/date.proto\032\030ss" +
       "n/type/candidate.proto\032\036ssn/type/text_an" +
-      "notation.proto\032%tensorflow/core/example/" +
-      "example.proto\"\350\010\n\021FeatureGenRequest\022E\n\014t" +
-      "ruth_labels\030\001 \001(\0132/.ssn.mlservice.v2.Fea" +
-      "tureGenRequest.TruthLabels\0221\n\017text_annot" +
-      "ation\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\n\n" +
-      "\002id\030\003 \001(\t\032\314\007\n\013TruthLabels\022\026\n\016total_incl_" +
-      "vat\030\001 \001(\001\022\021\n\ttotal_vat\030\002 \001(\001\022\026\n\016total_ex" +
-      "cl_vat\030\003 \001(\001\022%\n\norder_date\030\004 \001(\0132\021.googl" +
-      "e.type.Date\022+\n\020payment_due_date\030\005 \001(\0132\021." +
-      "google.type.Date\022\025\n\rdocument_type\030\006 \001(\t\022" +
-      "\020\n\010currency\030\007 \001(\t\022\032\n\022credit_card_number\030" +
-      "\010 \001(\t\022\026\n\016payment_method\030\t \001(\t\022\030\n\020ocr_lin" +
-      "e_dk_type\030\n \001(\t\022\036\n\026ocr_line_dk_payment_i" +
-      "d\030\013 \001(\t\022\037\n\027ocr_line_dk_creditor_id\030\014 \001(\t" +
-      "\022\036\n\026ocr_line_se_payment_id\030\r \001(\t\022(\n ocr_" +
-      "line_se_bankgiro_creditor_id\030\016 \001(\t\022(\n oc" +
-      "r_line_se_plusgiro_creditor_id\030\017 \001(\t\022\036\n\026" +
-      "ocr_line_no_payment_id\030\020 \001(\t\022\036\n\026ocr_line" +
-      "_fi_payment_id\030\021 \001(\t\022\036\n\026ocr_line_nl_paym" +
-      "ent_id\030\022 \001(\t\022\035\n\025supplier_corporate_id\030\023 " +
-      "\001(\t\022\035\n\025supplier_country_code\030\024 \001(\t\022\026\n\016in" +
-      "voice_number\030\025 \001(\t\022\014\n\004iban\030\026 \001(\t\022\033\n\023bank" +
-      "_account_number\030\027 \001(\t\022 \n\030bank_registrati" +
-      "on_number\030\030 \001(\t\022\025\n\rsupplier_name\030\031 \001(\t\022\013" +
-      "\n\003bic\030\032 \001(\t\022\027\n\017document_number\030\033 \001(\t\022(\n\r" +
-      "document_date\030\034 \001(\0132\021.google.type.Date\022\024" +
-      "\n\014order_number\030\035 \001(\t\022\033\n\023supplier_vat_num" +
-      "ber\030\036 \001(\t\022$\n\034supplier_organisation_numbe" +
-      "r\030\037 \001(\t\022\030\n\020supplier_address\030  \001(\t\022\035\n\025cre" +
-      "dit_card_last_four\030! \001(\t\":\n\022FeatureGenRe" +
-      "sponse\022$\n\007example\030\001 \001(\0132\023.tensorflow.Exa" +
-      "mple\"T\n\016PredictRequest\022$\n\007example\030\001 \001(\0132" +
-      "\023.tensorflow.Example\022\034\n\024top_n_most_confi" +
-      "dent\030\002 \001(\r\"\364\014\n\017PredictResponse\022\'\n\norder_" +
-      "date\030\001 \003(\0132\023.ssn.type.Candidate\022-\n\020payme" +
-      "nt_due_date\030\002 \003(\0132\023.ssn.type.Candidate\022%" +
-      "\n\010currency\030\003 \003(\0132\023.ssn.type.Candidate\022&\n" +
-      "\ttotal_vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n" +
-      "\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Candida" +
-      "te\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\0222\n\025supplier_corporate_id\030\007 \003(\0132\023" +
-      ".ssn.type.Candidate\0222\n\025supplier_country_" +
-      "code\030\010 \003(\0132\023.ssn.type.Candidate\022*\n\rdocum" +
-      "ent_type\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016p" +
-      "ayment_method\030\n \003(\0132\023.ssn.type.Candidate" +
-      "\022/\n\022credit_card_number\030\013 \003(\0132\023.ssn.type." +
-      "Candidate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn." +
-      "type.Candidate\022-\n\020ocr_line_dk_type\030\r \003(\013" +
-      "2\023.ssn.type.Candidate\0223\n\026ocr_line_dk_pay" +
-      "ment_id\030\016 \003(\0132\023.ssn.type.Candidate\0224\n\027oc" +
-      "r_line_dk_creditor_id\030\017 \003(\0132\023.ssn.type.C" +
-      "andidate\0223\n\026ocr_line_se_payment_id\030\020 \003(\013" +
-      "2\023.ssn.type.Candidate\022=\n ocr_line_se_ban" +
-      "kgiro_creditor_id\030\021 \003(\0132\023.ssn.type.Candi" +
-      "date\022=\n ocr_line_se_plusgiro_creditor_id" +
-      "\030\022 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_" +
-      "no_payment_id\030\023 \003(\0132\023.ssn.type.Candidate" +
-      "\0223\n\026ocr_line_fi_payment_id\030\024 \003(\0132\023.ssn.t" +
-      "ype.Candidate\0223\n\026ocr_line_nl_payment_id\030" +
-      "\025 \003(\0132\023.ssn.type.Candidate\022!\n\004iban\030\026 \003(\013" +
-      "2\023.ssn.type.Candidate\022&\n\005lines\030\027 \003(\0132\027.s" +
-      "sn.type.LineCandidate\0220\n\023bank_account_nu" +
-      "mber\030\030 \003(\0132\023.ssn.type.Candidate\0225\n\030bank_" +
-      "registration_number\030\031 \003(\0132\023.ssn.type.Can" +
-      "didate\022 \n\003bic\030\032 \003(\0132\023.ssn.type.Candidate" +
-      "\022,\n\017document_number\030\033 \003(\0132\023.ssn.type.Can" +
-      "didate\022*\n\rdocument_date\030\034 \003(\0132\023.ssn.type" +
-      ".Candidate\022)\n\014order_number\030\035 \003(\0132\023.ssn.t" +
-      "ype.Candidate\022*\n\rsupplier_name\030\036 \003(\0132\023.s" +
-      "sn.type.Candidate\0220\n\023supplier_vat_number" +
-      "\030\037 \003(\0132\023.ssn.type.Candidate\0229\n\034supplier_" +
-      "organisation_number\030  \003(\0132\023.ssn.type.Can" +
-      "didate\022-\n\020supplier_address\030! \003(\0132\023.ssn.t" +
-      "ype.Candidate\0222\n\025credit_card_last_four\030\"" +
-      " \003(\0132\023.ssn.type.Candidate\"\227\001\n\030FeatureGen" +
-      "PredictRequest\022@\n\023feature_gen_request\030\001 " +
-      "\001(\0132#.ssn.mlservice.v2.FeatureGenRequest" +
-      "\0229\n\017predict_request\030\002 \001(\0132 .ssn.mlservic" +
-      "e.v2.PredictRequest2\230\002\n\tMlService\022W\n\nFea" +
-      "tureGen\022#.ssn.mlservice.v2.FeatureGenReq" +
-      "uest\032$.ssn.mlservice.v2.FeatureGenRespon" +
-      "se\022N\n\007Predict\022 .ssn.mlservice.v2.Predict" +
-      "Request\032!.ssn.mlservice.v2.PredictRespon" +
-      "se\022b\n\021FeatureGenPredict\022*.ssn.mlservice." +
-      "v2.FeatureGenPredictRequest\032!.ssn.mlserv" +
-      "ice.v2.PredictResponseBQB\017MlServiceProto" +
-      "sZ>github.com/e-conomic/vmlapis/gen/go/s" +
-      "sn/mlservice/v2;mlserviceb\006proto3"
+      "notation.proto\032\036ssn/mlservice/v2/example" +
+      ".proto\"\301\r\n\021FeatureGenRequest\022R\n\014truth_la" +
+      "bels\030\001 \001(\0132/.ssn.mlservice.v2.FeatureGen" +
+      "Request.TruthLabelsR\013truthLabels\022A\n\017text" +
+      "_annotation\030\002 \001(\0132\030.ssn.type.TextAnnotat" +
+      "ionR\016textAnnotation\022\016\n\002id\030\003 \001(\tR\002id\032\204\014\n\013" +
+      "TruthLabels\022$\n\016total_incl_vat\030\001 \001(\001R\014tot" +
+      "alInclVat\022\033\n\ttotal_vat\030\002 \001(\001R\010totalVat\022$" +
+      "\n\016total_excl_vat\030\003 \001(\001R\014totalExclVat\0220\n\n" +
+      "order_date\030\004 \001(\0132\021.google.type.DateR\tord" +
+      "erDate\022;\n\020payment_due_date\030\005 \001(\0132\021.googl" +
+      "e.type.DateR\016paymentDueDate\022#\n\rdocument_" +
+      "type\030\006 \001(\tR\014documentType\022\032\n\010currency\030\007 \001" +
+      "(\tR\010currency\022,\n\022credit_card_number\030\010 \001(\t" +
+      "R\020creditCardNumber\022%\n\016payment_method\030\t \001" +
+      "(\tR\rpaymentMethod\022\'\n\020ocr_line_dk_type\030\n " +
+      "\001(\tR\rocrLineDkType\0222\n\026ocr_line_dk_paymen" +
+      "t_id\030\013 \001(\tR\022ocrLineDkPaymentId\0224\n\027ocr_li" +
+      "ne_dk_creditor_id\030\014 \001(\tR\023ocrLineDkCredit" +
+      "orId\0222\n\026ocr_line_se_payment_id\030\r \001(\tR\022oc" +
+      "rLineSePaymentId\022E\n ocr_line_se_bankgiro" +
+      "_creditor_id\030\016 \001(\tR\033ocrLineSeBankgiroCre" +
+      "ditorId\022E\n ocr_line_se_plusgiro_creditor" +
+      "_id\030\017 \001(\tR\033ocrLineSePlusgiroCreditorId\0222" +
+      "\n\026ocr_line_no_payment_id\030\020 \001(\tR\022ocrLineN" +
+      "oPaymentId\0222\n\026ocr_line_fi_payment_id\030\021 \001" +
+      "(\tR\022ocrLineFiPaymentId\0222\n\026ocr_line_nl_pa" +
+      "yment_id\030\022 \001(\tR\022ocrLineNlPaymentId\0222\n\025su" +
+      "pplier_corporate_id\030\023 \001(\tR\023supplierCorpo" +
+      "rateId\0222\n\025supplier_country_code\030\024 \001(\tR\023s" +
+      "upplierCountryCode\022%\n\016invoice_number\030\025 \001" +
+      "(\tR\rinvoiceNumber\022\022\n\004iban\030\026 \001(\tR\004iban\022.\n" +
+      "\023bank_account_number\030\027 \001(\tR\021bankAccountN" +
+      "umber\0228\n\030bank_registration_number\030\030 \001(\tR" +
+      "\026bankRegistrationNumber\022#\n\rsupplier_name" +
+      "\030\031 \001(\tR\014supplierName\022\020\n\003bic\030\032 \001(\tR\003bic\022\'" +
+      "\n\017document_number\030\033 \001(\tR\016documentNumber\022" +
+      "6\n\rdocument_date\030\034 \001(\0132\021.google.type.Dat" +
+      "eR\014documentDate\022!\n\014order_number\030\035 \001(\tR\013o" +
+      "rderNumber\022.\n\023supplier_vat_number\030\036 \001(\tR" +
+      "\021supplierVatNumber\022@\n\034supplier_organisat" +
+      "ion_number\030\037 \001(\tR\032supplierOrganisationNu" +
+      "mber\022)\n\020supplier_address\030  \001(\tR\017supplier" +
+      "Address\0221\n\025credit_card_last_four\030! \001(\tR\022" +
+      "creditCardLastFour\"C\n\022FeatureGenResponse" +
+      "\022-\n\007example\030\001 \001(\0132\023.tensorflow.ExampleR\007" +
+      "example\"p\n\016PredictRequest\022-\n\007example\030\001 \001" +
+      "(\0132\023.tensorflow.ExampleR\007example\022/\n\024top_" +
+      "n_most_confident\030\002 \001(\rR\021topNMostConfiden" +
+      "t\"\263\021\n\017PredictResponse\0222\n\norder_date\030\001 \003(" +
+      "\0132\023.ssn.type.CandidateR\torderDate\022=\n\020pay" +
+      "ment_due_date\030\002 \003(\0132\023.ssn.type.Candidate" +
+      "R\016paymentDueDate\022/\n\010currency\030\003 \003(\0132\023.ssn" +
+      ".type.CandidateR\010currency\0220\n\ttotal_vat\030\004" +
+      " \003(\0132\023.ssn.type.CandidateR\010totalVat\0229\n\016t" +
+      "otal_incl_vat\030\005 \003(\0132\023.ssn.type.Candidate" +
+      "R\014totalInclVat\0229\n\016total_excl_vat\030\006 \003(\0132\023" +
+      ".ssn.type.CandidateR\014totalExclVat\022G\n\025sup" +
+      "plier_corporate_id\030\007 \003(\0132\023.ssn.type.Cand" +
+      "idateR\023supplierCorporateId\022G\n\025supplier_c" +
+      "ountry_code\030\010 \003(\0132\023.ssn.type.CandidateR\023" +
+      "supplierCountryCode\0228\n\rdocument_type\030\t \003" +
+      "(\0132\023.ssn.type.CandidateR\014documentType\022:\n" +
+      "\016payment_method\030\n \003(\0132\023.ssn.type.Candida" +
+      "teR\rpaymentMethod\022A\n\022credit_card_number\030" +
+      "\013 \003(\0132\023.ssn.type.CandidateR\020creditCardNu" +
+      "mber\022:\n\016invoice_number\030\014 \003(\0132\023.ssn.type." +
+      "CandidateR\rinvoiceNumber\022<\n\020ocr_line_dk_" +
+      "type\030\r \003(\0132\023.ssn.type.CandidateR\rocrLine" +
+      "DkType\022G\n\026ocr_line_dk_payment_id\030\016 \003(\0132\023" +
+      ".ssn.type.CandidateR\022ocrLineDkPaymentId\022" +
+      "I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\023ocrLineDkCreditorId\022G\n\026oc" +
+      "r_line_se_payment_id\030\020 \003(\0132\023.ssn.type.Ca" +
+      "ndidateR\022ocrLineSePaymentId\022Z\n ocr_line_" +
+      "se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn.type" +
+      ".CandidateR\033ocrLineSeBankgiroCreditorId\022" +
+      "Z\n ocr_line_se_plusgiro_creditor_id\030\022 \003(" +
+      "\0132\023.ssn.type.CandidateR\033ocrLineSePlusgir" +
+      "oCreditorId\022G\n\026ocr_line_no_payment_id\030\023 " +
+      "\003(\0132\023.ssn.type.CandidateR\022ocrLineNoPayme" +
+      "ntId\022G\n\026ocr_line_fi_payment_id\030\024 \003(\0132\023.s" +
+      "sn.type.CandidateR\022ocrLineFiPaymentId\022G\n" +
+      "\026ocr_line_nl_payment_id\030\025 \003(\0132\023.ssn.type" +
+      ".CandidateR\022ocrLineNlPaymentId\022\'\n\004iban\030\026" +
+      " \003(\0132\023.ssn.type.CandidateR\004iban\022-\n\005lines" +
+      "\030\027 \003(\0132\027.ssn.type.LineCandidateR\005lines\022C" +
+      "\n\023bank_account_number\030\030 \003(\0132\023.ssn.type.C" +
+      "andidateR\021bankAccountNumber\022M\n\030bank_regi" +
+      "stration_number\030\031 \003(\0132\023.ssn.type.Candida" +
+      "teR\026bankRegistrationNumber\022%\n\003bic\030\032 \003(\0132" +
+      "\023.ssn.type.CandidateR\003bic\022<\n\017document_nu" +
+      "mber\030\033 \003(\0132\023.ssn.type.CandidateR\016documen" +
+      "tNumber\0228\n\rdocument_date\030\034 \003(\0132\023.ssn.typ" +
+      "e.CandidateR\014documentDate\0226\n\014order_numbe" +
+      "r\030\035 \003(\0132\023.ssn.type.CandidateR\013orderNumbe" +
+      "r\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.type.Cand" +
+      "idateR\014supplierName\022C\n\023supplier_vat_numb" +
+      "er\030\037 \003(\0132\023.ssn.type.CandidateR\021supplierV" +
+      "atNumber\022U\n\034supplier_organisation_number" +
+      "\030  \003(\0132\023.ssn.type.CandidateR\032supplierOrg" +
+      "anisationNumber\022>\n\020supplier_address\030! \003(" +
+      "\0132\023.ssn.type.CandidateR\017supplierAddress\022" +
+      "F\n\025credit_card_last_four\030\" \003(\0132\023.ssn.typ" +
+      "e.CandidateR\022creditCardLastFour\"\272\001\n\030Feat" +
+      "ureGenPredictRequest\022S\n\023feature_gen_requ" +
+      "est\030\001 \001(\0132#.ssn.mlservice.v2.FeatureGenR" +
+      "equestR\021featureGenRequest\022I\n\017predict_req" +
+      "uest\030\002 \001(\0132 .ssn.mlservice.v2.PredictReq" +
+      "uestR\016predictRequest2\230\002\n\tMlService\022W\n\nFe" +
+      "atureGen\022#.ssn.mlservice.v2.FeatureGenRe" +
+      "quest\032$.ssn.mlservice.v2.FeatureGenRespo" +
+      "nse\022N\n\007Predict\022 .ssn.mlservice.v2.Predic" +
+      "tRequest\032!.ssn.mlservice.v2.PredictRespo" +
+      "nse\022b\n\021FeatureGenPredict\022*.ssn.mlservice" +
+      ".v2.FeatureGenPredictRequest\032!.ssn.mlser" +
+      "vice.v2.PredictResponseBQB\017MlServiceProt" +
+      "osZ>github.com/e-conomic/vmlapis/gen/go/" +
+      "ssn/mlservice/v2;mlserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

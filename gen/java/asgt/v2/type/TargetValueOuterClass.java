@@ -19,24 +19,24 @@ public final class TargetValueOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
@@ -140,7 +140,7 @@ public final class TargetValueOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -157,7 +157,7 @@ public final class TargetValueOuterClass {
       }
     }
     /**
-     * <code>string name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -178,7 +178,7 @@ public final class TargetValueOuterClass {
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -195,7 +195,7 @@ public final class TargetValueOuterClass {
       }
     }
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -538,7 +538,7 @@ public final class TargetValueOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -554,7 +554,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -571,7 +571,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -586,7 +586,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -596,7 +596,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -614,7 +614,7 @@ public final class TargetValueOuterClass {
 
       private java.lang.Object value_ = "";
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @return The value.
        */
       public java.lang.String getValue() {
@@ -630,7 +630,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
@@ -647,7 +647,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -662,7 +662,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -672,7 +672,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
@@ -755,11 +755,11 @@ public final class TargetValueOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/v2/type/target_value.proto\022\014asgt." +
-      "v2.type\032\027validate/validate.proto\"T\n\013Targ" +
-      "etValue\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
-      "z0-9.][A-Za-z0-9_.>-]*$\022\r\n\005value\030\002 \001(\tB;" +
-      "Z9github.com/e-conomic/vmlapis/gen/go/as" +
-      "gt/v2/type;asgttypeb\006proto3"
+      "v2.type\032\027validate/validate.proto\"a\n\013Targ" +
+      "etValue\022<\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
+      "z0-9.][A-Za-z0-9_.>-]*$R\004name\022\024\n\005value\030\002" +
+      " \001(\tR\005valueB;Z9github.com/e-conomic/vmla" +
+      "pis/gen/go/asgt/v2/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

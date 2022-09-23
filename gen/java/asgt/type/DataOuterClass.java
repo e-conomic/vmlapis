@@ -19,17 +19,17 @@ public final class DataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
      * @return Whether the issueDate field is set.
      */
     boolean hasIssueDate();
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
      * @return The issueDate.
      */
     com.google.protobuf.Timestamp getIssueDate();
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder();
 
@@ -38,7 +38,7 @@ public final class DataOuterClass {
      * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>.asgt.type.Supplier supplier = 2;</code>
+     * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
      * @return Whether the supplier field is set.
      */
     boolean hasSupplier();
@@ -47,7 +47,7 @@ public final class DataOuterClass {
      * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>.asgt.type.Supplier supplier = 2;</code>
+     * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
      * @return The supplier.
      */
     asgt.type.DataOuterClass.Supplier getSupplier();
@@ -56,7 +56,7 @@ public final class DataOuterClass {
      * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>.asgt.type.Supplier supplier = 2;</code>
+     * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
      */
     asgt.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder();
 
@@ -65,7 +65,7 @@ public final class DataOuterClass {
      * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string customer_ref = 3;</code>
+     * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
      * @return The customerRef.
      */
     java.lang.String getCustomerRef();
@@ -74,7 +74,7 @@ public final class DataOuterClass {
      * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string customer_ref = 3;</code>
+     * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
      * @return The bytes for customerRef.
      */
     com.google.protobuf.ByteString
@@ -85,7 +85,7 @@ public final class DataOuterClass {
      * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>string text = 4 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -94,7 +94,7 @@ public final class DataOuterClass {
      * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>string text = 4 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -105,7 +105,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [json_name = "currency"];</code>
      * @return The currency.
      */
     java.lang.String getCurrency();
@@ -114,7 +114,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [json_name = "currency"];</code>
      * @return The bytes for currency.
      */
     com.google.protobuf.ByteString
@@ -125,7 +125,7 @@ public final class DataOuterClass {
      * total of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>float total = 7;</code>
+     * <code>float total = 7 [json_name = "total"];</code>
      * @return The total.
      */
     float getTotal();
@@ -262,7 +262,7 @@ public final class DataOuterClass {
     public static final int ISSUE_DATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp issueDate_;
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
      * @return Whether the issueDate field is set.
      */
     @java.lang.Override
@@ -270,7 +270,7 @@ public final class DataOuterClass {
       return issueDate_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
      * @return The issueDate.
      */
     @java.lang.Override
@@ -278,7 +278,7 @@ public final class DataOuterClass {
       return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
     }
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
@@ -292,7 +292,7 @@ public final class DataOuterClass {
      * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>.asgt.type.Supplier supplier = 2;</code>
+     * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
      * @return Whether the supplier field is set.
      */
     @java.lang.Override
@@ -304,7 +304,7 @@ public final class DataOuterClass {
      * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>.asgt.type.Supplier supplier = 2;</code>
+     * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
      * @return The supplier.
      */
     @java.lang.Override
@@ -316,7 +316,7 @@ public final class DataOuterClass {
      * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>.asgt.type.Supplier supplier = 2;</code>
+     * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
@@ -330,7 +330,7 @@ public final class DataOuterClass {
      * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string customer_ref = 3;</code>
+     * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
      * @return The customerRef.
      */
     @java.lang.Override
@@ -351,7 +351,7 @@ public final class DataOuterClass {
      * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string customer_ref = 3;</code>
+     * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
      * @return The bytes for customerRef.
      */
     @java.lang.Override
@@ -376,7 +376,7 @@ public final class DataOuterClass {
      * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>string text = 4 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -397,7 +397,7 @@ public final class DataOuterClass {
      * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>string text = 4 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -422,7 +422,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [json_name = "currency"];</code>
      * @return The currency.
      */
     @java.lang.Override
@@ -443,7 +443,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [json_name = "currency"];</code>
      * @return The bytes for currency.
      */
     @java.lang.Override
@@ -468,7 +468,7 @@ public final class DataOuterClass {
      * total of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>float total = 7;</code>
+     * <code>float total = 7 [json_name = "total"];</code>
      * @return The total.
      */
     @java.lang.Override
@@ -895,14 +895,14 @@ public final class DataOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        * @return Whether the issueDate field is set.
        */
       public boolean hasIssueDate() {
         return issueDateBuilder_ != null || issueDate_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        * @return The issueDate.
        */
       public com.google.protobuf.Timestamp getIssueDate() {
@@ -913,7 +913,7 @@ public final class DataOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public Builder setIssueDate(com.google.protobuf.Timestamp value) {
         if (issueDateBuilder_ == null) {
@@ -929,7 +929,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public Builder setIssueDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -943,7 +943,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
         if (issueDateBuilder_ == null) {
@@ -961,7 +961,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public Builder clearIssueDate() {
         if (issueDateBuilder_ == null) {
@@ -975,7 +975,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
         
@@ -983,7 +983,7 @@ public final class DataOuterClass {
         return getIssueDateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
         if (issueDateBuilder_ != null) {
@@ -994,7 +994,7 @@ public final class DataOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1018,7 +1018,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        * @return Whether the supplier field is set.
        */
       public boolean hasSupplier() {
@@ -1029,7 +1029,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        * @return The supplier.
        */
       public asgt.type.DataOuterClass.Supplier getSupplier() {
@@ -1044,7 +1044,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public Builder setSupplier(asgt.type.DataOuterClass.Supplier value) {
         if (supplierBuilder_ == null) {
@@ -1064,7 +1064,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public Builder setSupplier(
           asgt.type.DataOuterClass.Supplier.Builder builderForValue) {
@@ -1082,7 +1082,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public Builder mergeSupplier(asgt.type.DataOuterClass.Supplier value) {
         if (supplierBuilder_ == null) {
@@ -1104,7 +1104,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public Builder clearSupplier() {
         if (supplierBuilder_ == null) {
@@ -1122,7 +1122,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public asgt.type.DataOuterClass.Supplier.Builder getSupplierBuilder() {
         
@@ -1134,7 +1134,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public asgt.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
         if (supplierBuilder_ != null) {
@@ -1149,7 +1149,7 @@ public final class DataOuterClass {
        * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>.asgt.type.Supplier supplier = 2;</code>
+       * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Supplier, asgt.type.DataOuterClass.Supplier.Builder, asgt.type.DataOuterClass.SupplierOrBuilder> 
@@ -1171,7 +1171,7 @@ public final class DataOuterClass {
        * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string customer_ref = 3;</code>
+       * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
        * @return The customerRef.
        */
       public java.lang.String getCustomerRef() {
@@ -1191,7 +1191,7 @@ public final class DataOuterClass {
        * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string customer_ref = 3;</code>
+       * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
        * @return The bytes for customerRef.
        */
       public com.google.protobuf.ByteString
@@ -1212,7 +1212,7 @@ public final class DataOuterClass {
        * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string customer_ref = 3;</code>
+       * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
        * @param value The customerRef to set.
        * @return This builder for chaining.
        */
@@ -1231,7 +1231,7 @@ public final class DataOuterClass {
        * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string customer_ref = 3;</code>
+       * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerRef() {
@@ -1245,7 +1245,7 @@ public final class DataOuterClass {
        * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string customer_ref = 3;</code>
+       * <code>string customer_ref = 3 [json_name = "customerRef"];</code>
        * @param value The bytes for customerRef to set.
        * @return This builder for chaining.
        */
@@ -1267,7 +1267,7 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 4 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -1287,7 +1287,7 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 4 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -1308,7 +1308,7 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 4 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -1327,7 +1327,7 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 4 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -1341,7 +1341,7 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>string text = 4 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -1363,7 +1363,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [json_name = "currency"];</code>
        * @return The currency.
        */
       public java.lang.String getCurrency() {
@@ -1383,7 +1383,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [json_name = "currency"];</code>
        * @return The bytes for currency.
        */
       public com.google.protobuf.ByteString
@@ -1404,7 +1404,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [json_name = "currency"];</code>
        * @param value The currency to set.
        * @return This builder for chaining.
        */
@@ -1423,7 +1423,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [json_name = "currency"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCurrency() {
@@ -1437,7 +1437,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [json_name = "currency"];</code>
        * @param value The bytes for currency to set.
        * @return This builder for chaining.
        */
@@ -1459,7 +1459,7 @@ public final class DataOuterClass {
        * total of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>float total = 7;</code>
+       * <code>float total = 7 [json_name = "total"];</code>
        * @return The total.
        */
       @java.lang.Override
@@ -1471,7 +1471,7 @@ public final class DataOuterClass {
        * total of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>float total = 7;</code>
+       * <code>float total = 7 [json_name = "total"];</code>
        * @param value The total to set.
        * @return This builder for chaining.
        */
@@ -1486,7 +1486,7 @@ public final class DataOuterClass {
        * total of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>float total = 7;</code>
+       * <code>float total = 7 [json_name = "total"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotal() {
@@ -1557,7 +1557,7 @@ public final class DataOuterClass {
      * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string text = 8;</code>
+     * <code>string text = 8 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -1566,7 +1566,7 @@ public final class DataOuterClass {
      * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string text = 8;</code>
+     * <code>string text = 8 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -1577,7 +1577,7 @@ public final class DataOuterClass {
      * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>string item_id = 9 [json_name = "itemId"];</code>
      * @return The itemId.
      */
     java.lang.String getItemId();
@@ -1586,7 +1586,7 @@ public final class DataOuterClass {
      * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>string item_id = 9 [json_name = "itemId"];</code>
      * @return The bytes for itemId.
      */
     com.google.protobuf.ByteString
@@ -1690,7 +1690,7 @@ public final class DataOuterClass {
      * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string text = 8;</code>
+     * <code>string text = 8 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -1711,7 +1711,7 @@ public final class DataOuterClass {
      * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string text = 8;</code>
+     * <code>string text = 8 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -1736,7 +1736,7 @@ public final class DataOuterClass {
      * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>string item_id = 9 [json_name = "itemId"];</code>
      * @return The itemId.
      */
     @java.lang.Override
@@ -1757,7 +1757,7 @@ public final class DataOuterClass {
      * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string item_id = 9;</code>
+     * <code>string item_id = 9 [json_name = "itemId"];</code>
      * @return The bytes for itemId.
      */
     @java.lang.Override
@@ -2100,7 +2100,7 @@ public final class DataOuterClass {
        * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string text = 8;</code>
+       * <code>string text = 8 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -2120,7 +2120,7 @@ public final class DataOuterClass {
        * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string text = 8;</code>
+       * <code>string text = 8 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -2141,7 +2141,7 @@ public final class DataOuterClass {
        * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string text = 8;</code>
+       * <code>string text = 8 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -2160,7 +2160,7 @@ public final class DataOuterClass {
        * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string text = 8;</code>
+       * <code>string text = 8 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -2174,7 +2174,7 @@ public final class DataOuterClass {
        * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string text = 8;</code>
+       * <code>string text = 8 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -2196,7 +2196,7 @@ public final class DataOuterClass {
        * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 9 [json_name = "itemId"];</code>
        * @return The itemId.
        */
       public java.lang.String getItemId() {
@@ -2216,7 +2216,7 @@ public final class DataOuterClass {
        * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 9 [json_name = "itemId"];</code>
        * @return The bytes for itemId.
        */
       public com.google.protobuf.ByteString
@@ -2237,7 +2237,7 @@ public final class DataOuterClass {
        * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 9 [json_name = "itemId"];</code>
        * @param value The itemId to set.
        * @return This builder for chaining.
        */
@@ -2256,7 +2256,7 @@ public final class DataOuterClass {
        * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 9 [json_name = "itemId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
@@ -2270,7 +2270,7 @@ public final class DataOuterClass {
        * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string item_id = 9;</code>
+       * <code>string item_id = 9 [json_name = "itemId"];</code>
        * @param value The bytes for itemId to set.
        * @return This builder for chaining.
        */
@@ -2347,7 +2347,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -2356,7 +2356,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -2367,7 +2367,7 @@ public final class DataOuterClass {
      * name of the supplier
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2376,7 +2376,7 @@ public final class DataOuterClass {
      * name of the supplier
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2387,7 +2387,7 @@ public final class DataOuterClass {
      * global id of the supplier
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 5 [json_name = "globalId"];</code>
      * @return The globalId.
      */
     java.lang.String getGlobalId();
@@ -2396,7 +2396,7 @@ public final class DataOuterClass {
      * global id of the supplier
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 5 [json_name = "globalId"];</code>
      * @return The bytes for globalId.
      */
     com.google.protobuf.ByteString
@@ -2507,7 +2507,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2528,7 +2528,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -2553,7 +2553,7 @@ public final class DataOuterClass {
      * name of the supplier
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -2574,7 +2574,7 @@ public final class DataOuterClass {
      * name of the supplier
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -2599,7 +2599,7 @@ public final class DataOuterClass {
      * global id of the supplier
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 5 [json_name = "globalId"];</code>
      * @return The globalId.
      */
     @java.lang.Override
@@ -2620,7 +2620,7 @@ public final class DataOuterClass {
      * global id of the supplier
      * </pre>
      *
-     * <code>string global_id = 5;</code>
+     * <code>string global_id = 5 [json_name = "globalId"];</code>
      * @return The bytes for globalId.
      */
     @java.lang.Override
@@ -2980,7 +2980,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -3000,7 +3000,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -3021,7 +3021,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -3040,7 +3040,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -3054,7 +3054,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -3076,7 +3076,7 @@ public final class DataOuterClass {
        * name of the supplier
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3096,7 +3096,7 @@ public final class DataOuterClass {
        * name of the supplier
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3117,7 +3117,7 @@ public final class DataOuterClass {
        * name of the supplier
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3136,7 +3136,7 @@ public final class DataOuterClass {
        * name of the supplier
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3150,7 +3150,7 @@ public final class DataOuterClass {
        * name of the supplier
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3172,7 +3172,7 @@ public final class DataOuterClass {
        * global id of the supplier
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 5 [json_name = "globalId"];</code>
        * @return The globalId.
        */
       public java.lang.String getGlobalId() {
@@ -3192,7 +3192,7 @@ public final class DataOuterClass {
        * global id of the supplier
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 5 [json_name = "globalId"];</code>
        * @return The bytes for globalId.
        */
       public com.google.protobuf.ByteString
@@ -3213,7 +3213,7 @@ public final class DataOuterClass {
        * global id of the supplier
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 5 [json_name = "globalId"];</code>
        * @param value The globalId to set.
        * @return This builder for chaining.
        */
@@ -3232,7 +3232,7 @@ public final class DataOuterClass {
        * global id of the supplier
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 5 [json_name = "globalId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearGlobalId() {
@@ -3246,7 +3246,7 @@ public final class DataOuterClass {
        * global id of the supplier
        * </pre>
        *
-       * <code>string global_id = 5;</code>
+       * <code>string global_id = 5 [json_name = "globalId"];</code>
        * @param value The bytes for globalId to set.
        * @return This builder for chaining.
        */
@@ -3323,7 +3323,7 @@ public final class DataOuterClass {
      * text of the bank transaction. Used in bank requests.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -3332,7 +3332,7 @@ public final class DataOuterClass {
      * text of the bank transaction. Used in bank requests.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -3343,7 +3343,7 @@ public final class DataOuterClass {
      * amount of the transaction. Used in bank requests.
      * </pre>
      *
-     * <code>float amount = 2;</code>
+     * <code>float amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     float getAmount();
@@ -3444,7 +3444,7 @@ public final class DataOuterClass {
      * text of the bank transaction. Used in bank requests.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -3465,7 +3465,7 @@ public final class DataOuterClass {
      * text of the bank transaction. Used in bank requests.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -3490,7 +3490,7 @@ public final class DataOuterClass {
      * amount of the transaction. Used in bank requests.
      * </pre>
      *
-     * <code>float amount = 2;</code>
+     * <code>float amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -3825,7 +3825,7 @@ public final class DataOuterClass {
        * text of the bank transaction. Used in bank requests.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -3845,7 +3845,7 @@ public final class DataOuterClass {
        * text of the bank transaction. Used in bank requests.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -3866,7 +3866,7 @@ public final class DataOuterClass {
        * text of the bank transaction. Used in bank requests.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -3885,7 +3885,7 @@ public final class DataOuterClass {
        * text of the bank transaction. Used in bank requests.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -3899,7 +3899,7 @@ public final class DataOuterClass {
        * text of the bank transaction. Used in bank requests.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -3921,7 +3921,7 @@ public final class DataOuterClass {
        * amount of the transaction. Used in bank requests.
        * </pre>
        *
-       * <code>float amount = 2;</code>
+       * <code>float amount = 2 [json_name = "amount"];</code>
        * @return The amount.
        */
       @java.lang.Override
@@ -3933,7 +3933,7 @@ public final class DataOuterClass {
        * amount of the transaction. Used in bank requests.
        * </pre>
        *
-       * <code>float amount = 2;</code>
+       * <code>float amount = 2 [json_name = "amount"];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -3948,7 +3948,7 @@ public final class DataOuterClass {
        * amount of the transaction. Used in bank requests.
        * </pre>
        *
-       * <code>float amount = 2;</code>
+       * <code>float amount = 2 [json_name = "amount"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -4019,7 +4019,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.type.Transaction transaction = 1;</code>
+     * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return Whether the transaction field is set.
      */
     boolean hasTransaction();
@@ -4028,7 +4028,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.type.Transaction transaction = 1;</code>
+     * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return The transaction.
      */
     asgt.type.DataOuterClass.Transaction getTransaction();
@@ -4037,7 +4037,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.type.Transaction transaction = 1;</code>
+     * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     asgt.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder();
 
@@ -4046,7 +4046,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.type.Invoice invoice = 2;</code>
+     * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return Whether the invoice field is set.
      */
     boolean hasInvoice();
@@ -4055,7 +4055,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.type.Invoice invoice = 2;</code>
+     * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return The invoice.
      */
     asgt.type.DataOuterClass.Invoice getInvoice();
@@ -4064,7 +4064,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.type.Invoice invoice = 2;</code>
+     * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     asgt.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder();
 
@@ -4073,7 +4073,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return Whether the invoiceLine field is set.
      */
     boolean hasInvoiceLine();
@@ -4082,7 +4082,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return The invoiceLine.
      */
     asgt.type.DataOuterClass.InvoiceLine getInvoiceLine();
@@ -4091,7 +4091,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     asgt.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder();
   }
@@ -4218,7 +4218,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.type.Transaction transaction = 1;</code>
+     * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return Whether the transaction field is set.
      */
     @java.lang.Override
@@ -4230,7 +4230,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.type.Transaction transaction = 1;</code>
+     * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return The transaction.
      */
     @java.lang.Override
@@ -4242,7 +4242,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.type.Transaction transaction = 1;</code>
+     * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
@@ -4256,7 +4256,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.type.Invoice invoice = 2;</code>
+     * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return Whether the invoice field is set.
      */
     @java.lang.Override
@@ -4268,7 +4268,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.type.Invoice invoice = 2;</code>
+     * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return The invoice.
      */
     @java.lang.Override
@@ -4280,7 +4280,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.type.Invoice invoice = 2;</code>
+     * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
@@ -4294,7 +4294,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return Whether the invoiceLine field is set.
      */
     @java.lang.Override
@@ -4306,7 +4306,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return The invoiceLine.
      */
     @java.lang.Override
@@ -4318,7 +4318,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
@@ -4708,7 +4708,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        * @return Whether the transaction field is set.
        */
       public boolean hasTransaction() {
@@ -4719,7 +4719,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        * @return The transaction.
        */
       public asgt.type.DataOuterClass.Transaction getTransaction() {
@@ -4734,7 +4734,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder setTransaction(asgt.type.DataOuterClass.Transaction value) {
         if (transactionBuilder_ == null) {
@@ -4754,7 +4754,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder setTransaction(
           asgt.type.DataOuterClass.Transaction.Builder builderForValue) {
@@ -4772,7 +4772,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder mergeTransaction(asgt.type.DataOuterClass.Transaction value) {
         if (transactionBuilder_ == null) {
@@ -4794,7 +4794,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder clearTransaction() {
         if (transactionBuilder_ == null) {
@@ -4812,7 +4812,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public asgt.type.DataOuterClass.Transaction.Builder getTransactionBuilder() {
         
@@ -4824,7 +4824,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public asgt.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
         if (transactionBuilder_ != null) {
@@ -4839,7 +4839,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.type.Transaction transaction = 1;</code>
+       * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Transaction, asgt.type.DataOuterClass.Transaction.Builder, asgt.type.DataOuterClass.TransactionOrBuilder> 
@@ -4863,7 +4863,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        * @return Whether the invoice field is set.
        */
       public boolean hasInvoice() {
@@ -4874,7 +4874,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        * @return The invoice.
        */
       public asgt.type.DataOuterClass.Invoice getInvoice() {
@@ -4889,7 +4889,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder setInvoice(asgt.type.DataOuterClass.Invoice value) {
         if (invoiceBuilder_ == null) {
@@ -4909,7 +4909,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder setInvoice(
           asgt.type.DataOuterClass.Invoice.Builder builderForValue) {
@@ -4927,7 +4927,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder mergeInvoice(asgt.type.DataOuterClass.Invoice value) {
         if (invoiceBuilder_ == null) {
@@ -4949,7 +4949,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder clearInvoice() {
         if (invoiceBuilder_ == null) {
@@ -4967,7 +4967,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public asgt.type.DataOuterClass.Invoice.Builder getInvoiceBuilder() {
         
@@ -4979,7 +4979,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public asgt.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
         if (invoiceBuilder_ != null) {
@@ -4994,7 +4994,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.type.Invoice invoice = 2;</code>
+       * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Invoice, asgt.type.DataOuterClass.Invoice.Builder, asgt.type.DataOuterClass.InvoiceOrBuilder> 
@@ -5018,7 +5018,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        * @return Whether the invoiceLine field is set.
        */
       public boolean hasInvoiceLine() {
@@ -5029,7 +5029,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        * @return The invoiceLine.
        */
       public asgt.type.DataOuterClass.InvoiceLine getInvoiceLine() {
@@ -5044,7 +5044,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder setInvoiceLine(asgt.type.DataOuterClass.InvoiceLine value) {
         if (invoiceLineBuilder_ == null) {
@@ -5064,7 +5064,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder setInvoiceLine(
           asgt.type.DataOuterClass.InvoiceLine.Builder builderForValue) {
@@ -5082,7 +5082,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder mergeInvoiceLine(asgt.type.DataOuterClass.InvoiceLine value) {
         if (invoiceLineBuilder_ == null) {
@@ -5104,7 +5104,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder clearInvoiceLine() {
         if (invoiceLineBuilder_ == null) {
@@ -5122,7 +5122,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public asgt.type.DataOuterClass.InvoiceLine.Builder getInvoiceLineBuilder() {
         
@@ -5134,7 +5134,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public asgt.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
         if (invoiceLineBuilder_ != null) {
@@ -5149,7 +5149,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.InvoiceLine, asgt.type.DataOuterClass.InvoiceLine.Builder, asgt.type.DataOuterClass.InvoiceLineOrBuilder> 
@@ -5252,20 +5252,24 @@ public final class DataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024asgt/type/data.proto\022\tasgt.type\032\037googl" +
-      "e/protobuf/timestamp.proto\"\245\001\n\007Invoice\022." +
+      "e/protobuf/timestamp.proto\"\336\001\n\007Invoice\0229" +
       "\n\nissue_date\030\001 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022%\n\010supplier\030\002 \001(\0132\023.asgt.type.Sup" +
-      "plier\022\024\n\014customer_ref\030\003 \001(\t\022\014\n\004text\030\004 \001(" +
-      "\t\022\020\n\010currency\030\006 \001(\t\022\r\n\005total\030\007 \001(\002\",\n\013In" +
-      "voiceLine\022\014\n\004text\030\010 \001(\t\022\017\n\007item_id\030\t \001(\t" +
-      "\"7\n\010Supplier\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\004 \001(\t\022\021" +
-      "\n\tglobal_id\030\005 \001(\t\"+\n\013Transaction\022\014\n\004text" +
-      "\030\001 \001(\t\022\016\n\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013trans" +
-      "action\030\001 \001(\0132\026.asgt.type.Transaction\022#\n\007" +
-      "invoice\030\002 \001(\0132\022.asgt.type.Invoice\022,\n\014inv" +
-      "oice_line\030\003 \001(\0132\026.asgt.type.InvoiceLineB" +
-      "8Z6github.com/e-conomic/vmlapis/gen/go/a" +
-      "sgt/type;asgttypeb\006proto3"
+      "estampR\tissueDate\022/\n\010supplier\030\002 \001(\0132\023.as" +
+      "gt.type.SupplierR\010supplier\022!\n\014customer_r" +
+      "ef\030\003 \001(\tR\013customerRef\022\022\n\004text\030\004 \001(\tR\004tex" +
+      "t\022\032\n\010currency\030\006 \001(\tR\010currency\022\024\n\005total\030\007" +
+      " \001(\002R\005total\":\n\013InvoiceLine\022\022\n\004text\030\010 \001(\t" +
+      "R\004text\022\027\n\007item_id\030\t \001(\tR\006itemId\"K\n\010Suppl" +
+      "ier\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\004 \001(\tR\004name\022" +
+      "\033\n\tglobal_id\030\005 \001(\tR\010globalId\"9\n\013Transact" +
+      "ion\022\022\n\004text\030\001 \001(\tR\004text\022\026\n\006amount\030\002 \001(\002R" +
+      "\006amount\"\251\001\n\004Data\0228\n\013transaction\030\001 \001(\0132\026." +
+      "asgt.type.TransactionR\013transaction\022,\n\007in" +
+      "voice\030\002 \001(\0132\022.asgt.type.InvoiceR\007invoice" +
+      "\0229\n\014invoice_line\030\003 \001(\0132\026.asgt.type.Invoi" +
+      "ceLineR\013invoiceLineB8Z6github.com/e-cono" +
+      "mic/vmlapis/gen/go/asgt/type;asgttypeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

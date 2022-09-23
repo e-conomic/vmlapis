@@ -25,25 +25,27 @@ namespace Asgt.Jester.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chthc2d0L2plc3Rlci92MS9qZXN0ZXIucHJvdG8SDmFzZ3QuamVzdGVyLnYx",
-            "GhRhc2d0L3R5cGUvZGF0YS5wcm90bxoVYXNndC90eXBlL21vZGVsLnByb3Rv",
-            "Ghphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
-            "dGF0aW9ucy5wcm90bxoZb3B0aW9ucy9hbm5vdGF0aW9ucy5wcm90byJhChJT",
-            "dWdnZXN0aW9uUmVzcG9uc2USKgoLcHJlZGljdGlvbnMYASADKAsyFS5hc2d0",
-            "LnR5cGUuUHJlZGljdGlvbhIfCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5N",
-            "b2RlbCJiChFTdWdnZXN0aW9uT3B0aW9ucxIYChBzdWdnZXN0aW9uX2xpbWl0",
-            "GAEgASgFEjMKDm1pbl9jb25maWRlbmNlGAIgASgOMhsuYXNndC50eXBlLkNv",
-            "bmZpZGVuY2UuTGV2ZWwikgEKEVN1Z2dlc3Rpb25SZXF1ZXN0EgwKBG5hbWUY",
-            "ASABKAkSDAoEdHlwZRgCIAEoCRIfCgZpbnB1dHMYAyADKAsyDy5hc2d0LnR5",
-            "cGUuRGF0YRIyCgdvcHRpb25zGAQgASgLMiEuYXNndC5qZXN0ZXIudjEuU3Vn",
-            "Z2VzdGlvbk9wdGlvbnMSDAoEdGFncxgFIAMoCTKAAQoGSmVzdGVyEnYKB1N1",
-            "Z2dlc3QSIS5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVxdWVzdBoiLmFz",
-            "Z3QuamVzdGVyLnYxLlN1Z2dlc3Rpb25SZXNwb25zZSIkgtPkkwIeIhkvdjEv",
-            "e3R5cGV9L3tuYW1lfTpzdWdnZXN0OgEqQnhaOWdpdGh1Yi5jb20vZS1jb25v",
-            "bWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvamVzdGVyL3YxO2plc3RlcpJBOhIR",
-            "CgtBdXRvU3VnZ2VzdDICdjEqAQIyEGFwcGxpY2F0aW9uL2pzb246EGFwcGxp",
-            "Y2F0aW9uL2pzb25iBnByb3RvMw=="));
+            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGi5wcm90b2MtZ2VuLW9w",
+            "ZW5hcGl2Mi9vcHRpb25zL2Fubm90YXRpb25zLnByb3RvGhphc2d0L3R5cGUv",
+            "cHJlZGljdGlvbi5wcm90bxoVYXNndC90eXBlL21vZGVsLnByb3RvGhRhc2d0",
+            "L3R5cGUvZGF0YS5wcm90byJ1ChJTdWdnZXN0aW9uUmVzcG9uc2USNwoLcHJl",
+            "ZGljdGlvbnMYASADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvblILcHJlZGlj",
+            "dGlvbnMSJgoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVs",
+            "IoIBChFTdWdnZXN0aW9uT3B0aW9ucxIpChBzdWdnZXN0aW9uX2xpbWl0GAEg",
+            "ASgFUg9zdWdnZXN0aW9uTGltaXQSQgoObWluX2NvbmZpZGVuY2UYAiABKA4y",
+            "Gy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbFINbWluQ29uZmlkZW5jZSK1",
+            "AQoRU3VnZ2VzdGlvblJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0",
+            "eXBlGAIgASgJUgR0eXBlEicKBmlucHV0cxgDIAMoCzIPLmFzZ3QudHlwZS5E",
+            "YXRhUgZpbnB1dHMSOwoHb3B0aW9ucxgEIAEoCzIhLmFzZ3QuamVzdGVyLnYx",
+            "LlN1Z2dlc3Rpb25PcHRpb25zUgdvcHRpb25zEhIKBHRhZ3MYBSADKAlSBHRh",
+            "Z3MygAEKBkplc3RlchJ2CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3Vn",
+            "Z2VzdGlvblJlcXVlc3QaIi5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVz",
+            "cG9uc2UiJILT5JMCHiIZL3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdDoBKkJ4",
+            "WjlnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2pl",
+            "c3Rlci92MTtqZXN0ZXKSQToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBs",
+            "aWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.DataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null, null),
@@ -57,23 +59,31 @@ namespace Asgt.Jester.V1 {
   /// <summary>
   /// AutoSuggest
   /// </summary>
-  public sealed partial class SuggestionResponse : pb::IMessage<SuggestionResponse> {
+  public sealed partial class SuggestionResponse : pb::IMessage<SuggestionResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SuggestionResponse> _parser = new pb::MessageParser<SuggestionResponse>(() => new SuggestionResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SuggestionResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Asgt.Jester.V1.JesterReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionResponse() {
       OnConstruction();
     }
@@ -81,6 +91,7 @@ namespace Asgt.Jester.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionResponse(SuggestionResponse other) : this() {
       predictions_ = other.predictions_.Clone();
       model_ = other.model_ != null ? other.model_.Clone() : null;
@@ -88,6 +99,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionResponse Clone() {
       return new SuggestionResponse(this);
     }
@@ -98,6 +110,7 @@ namespace Asgt.Jester.V1 {
         = pb::FieldCodec.ForMessage(10, global::Asgt.Type.Prediction.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Type.Prediction>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.Prediction> Predictions {
       get { return predictions_; }
     }
@@ -106,6 +119,7 @@ namespace Asgt.Jester.V1 {
     public const int ModelFieldNumber = 2;
     private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
@@ -114,11 +128,13 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SuggestionResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SuggestionResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -132,6 +148,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= predictions_.GetHashCode();
@@ -143,12 +160,17 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       predictions_.WriteTo(output, _repeated_predictions_codec);
       if (model_ != null) {
         output.WriteRawTag(18);
@@ -157,9 +179,26 @@ namespace Asgt.Jester.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      predictions_.WriteTo(ref output, _repeated_predictions_codec);
+      if (model_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += predictions_.CalculateSize(_repeated_predictions_codec);
@@ -173,6 +212,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SuggestionResponse other) {
       if (other == null) {
         return;
@@ -188,7 +228,11 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -208,27 +252,62 @@ namespace Asgt.Jester.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            predictions_.AddEntriesFrom(ref input, _repeated_predictions_codec);
+            break;
+          }
+          case 18: {
+            if (model_ == null) {
+              Model = new global::Asgt.Type.Model();
+            }
+            input.ReadMessage(Model);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class SuggestionOptions : pb::IMessage<SuggestionOptions> {
+  public sealed partial class SuggestionOptions : pb::IMessage<SuggestionOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SuggestionOptions> _parser = new pb::MessageParser<SuggestionOptions>(() => new SuggestionOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SuggestionOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Asgt.Jester.V1.JesterReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionOptions() {
       OnConstruction();
     }
@@ -236,6 +315,7 @@ namespace Asgt.Jester.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionOptions(SuggestionOptions other) : this() {
       suggestionLimit_ = other.suggestionLimit_;
       minConfidence_ = other.minConfidence_;
@@ -243,6 +323,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionOptions Clone() {
       return new SuggestionOptions(this);
     }
@@ -251,6 +332,7 @@ namespace Asgt.Jester.V1 {
     public const int SuggestionLimitFieldNumber = 1;
     private int suggestionLimit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SuggestionLimit {
       get { return suggestionLimit_; }
       set {
@@ -262,6 +344,7 @@ namespace Asgt.Jester.V1 {
     public const int MinConfidenceFieldNumber = 2;
     private global::Asgt.Type.Confidence.Types.Level minConfidence_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Confidence.Types.Level MinConfidence {
       get { return minConfidence_; }
       set {
@@ -270,11 +353,13 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SuggestionOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SuggestionOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -288,6 +373,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SuggestionLimit != 0) hash ^= SuggestionLimit.GetHashCode();
@@ -299,12 +385,17 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SuggestionLimit != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(SuggestionLimit);
@@ -316,9 +407,29 @@ namespace Asgt.Jester.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SuggestionLimit != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(SuggestionLimit);
+      }
+      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) MinConfidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SuggestionLimit != 0) {
@@ -334,6 +445,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SuggestionOptions other) {
       if (other == null) {
         return;
@@ -348,7 +460,11 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -365,27 +481,59 @@ namespace Asgt.Jester.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SuggestionLimit = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class SuggestionRequest : pb::IMessage<SuggestionRequest> {
+  public sealed partial class SuggestionRequest : pb::IMessage<SuggestionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SuggestionRequest> _parser = new pb::MessageParser<SuggestionRequest>(() => new SuggestionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SuggestionRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Asgt.Jester.V1.JesterReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionRequest() {
       OnConstruction();
     }
@@ -393,6 +541,7 @@ namespace Asgt.Jester.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionRequest(SuggestionRequest other) : this() {
       name_ = other.name_;
       type_ = other.type_;
@@ -403,6 +552,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SuggestionRequest Clone() {
       return new SuggestionRequest(this);
     }
@@ -411,6 +561,7 @@ namespace Asgt.Jester.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -422,6 +573,7 @@ namespace Asgt.Jester.V1 {
     public const int TypeFieldNumber = 2;
     private string type_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Type {
       get { return type_; }
       set {
@@ -435,6 +587,7 @@ namespace Asgt.Jester.V1 {
         = pb::FieldCodec.ForMessage(26, global::Asgt.Type.Data.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Type.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.Data> Inputs {
       get { return inputs_; }
     }
@@ -443,6 +596,7 @@ namespace Asgt.Jester.V1 {
     public const int OptionsFieldNumber = 4;
     private global::Asgt.Jester.V1.SuggestionOptions options_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Jester.V1.SuggestionOptions Options {
       get { return options_; }
       set {
@@ -456,16 +610,19 @@ namespace Asgt.Jester.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Tags {
       get { return tags_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SuggestionRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SuggestionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -482,6 +639,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -496,12 +654,17 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -519,9 +682,35 @@ namespace Asgt.Jester.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      inputs_.WriteTo(ref output, _repeated_inputs_codec);
+      if (options_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Options);
+      }
+      tags_.WriteTo(ref output, _repeated_tags_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -542,6 +731,7 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SuggestionRequest other) {
       if (other == null) {
         return;
@@ -564,7 +754,11 @@ namespace Asgt.Jester.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -596,7 +790,46 @@ namespace Asgt.Jester.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
+            inputs_.AddEntriesFrom(ref input, _repeated_inputs_codec);
+            break;
+          }
+          case 34: {
+            if (options_ == null) {
+              Options = new global::Asgt.Jester.V1.SuggestionOptions();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
+          case 42: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

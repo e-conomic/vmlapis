@@ -23,26 +23,26 @@ public final class SuggesterServiceOuterClass {
      * Maximum number of suggestions to return per target
      * </pre>
      *
-     * <code>int32 suggest_limit = 1;</code>
+     * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
      * @return The suggestLimit.
      */
     int getSuggestLimit();
 
     /**
      * <pre>
-     * Not implemented yet.
+     * Not implemented yet. 
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
     /**
      * <pre>
-     * Not implemented yet.
+     * Not implemented yet. 
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The minConfidence.
      */
     asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
@@ -143,7 +143,7 @@ public final class SuggesterServiceOuterClass {
      * Maximum number of suggestions to return per target
      * </pre>
      *
-     * <code>int32 suggest_limit = 1;</code>
+     * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
      * @return The suggestLimit.
      */
     @java.lang.Override
@@ -155,10 +155,10 @@ public final class SuggesterServiceOuterClass {
     private int minConfidence_;
     /**
      * <pre>
-     * Not implemented yet.
+     * Not implemented yet. 
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     @java.lang.Override public int getMinConfidenceValue() {
@@ -166,10 +166,10 @@ public final class SuggesterServiceOuterClass {
     }
     /**
      * <pre>
-     * Not implemented yet.
+     * Not implemented yet. 
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The minConfidence.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
@@ -502,7 +502,7 @@ public final class SuggesterServiceOuterClass {
        * Maximum number of suggestions to return per target
        * </pre>
        *
-       * <code>int32 suggest_limit = 1;</code>
+       * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
        * @return The suggestLimit.
        */
       @java.lang.Override
@@ -514,7 +514,7 @@ public final class SuggesterServiceOuterClass {
        * Maximum number of suggestions to return per target
        * </pre>
        *
-       * <code>int32 suggest_limit = 1;</code>
+       * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
        * @param value The suggestLimit to set.
        * @return This builder for chaining.
        */
@@ -529,7 +529,7 @@ public final class SuggesterServiceOuterClass {
        * Maximum number of suggestions to return per target
        * </pre>
        *
-       * <code>int32 suggest_limit = 1;</code>
+       * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSuggestLimit() {
@@ -542,10 +542,10 @@ public final class SuggesterServiceOuterClass {
       private int minConfidence_ = 0;
       /**
        * <pre>
-       * Not implemented yet.
+       * Not implemented yet. 
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @return The enum numeric value on the wire for minConfidence.
        */
       @java.lang.Override public int getMinConfidenceValue() {
@@ -553,10 +553,10 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet.
+       * Not implemented yet. 
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @param value The enum numeric value on the wire for minConfidence to set.
        * @return This builder for chaining.
        */
@@ -568,10 +568,10 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet.
+       * Not implemented yet. 
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @return The minConfidence.
        */
       @java.lang.Override
@@ -582,10 +582,10 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet.
+       * Not implemented yet. 
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @param value The minConfidence to set.
        * @return This builder for chaining.
        */
@@ -600,10 +600,10 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet.
+       * Not implemented yet. 
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
@@ -674,7 +674,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -683,7 +683,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -694,7 +694,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return Whether the input field is set.
      */
     boolean hasInput();
@@ -703,7 +703,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return The input.
      */
     asgt.v2.type.DataOuterClass.Data getInput();
@@ -712,22 +712,22 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder();
 
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -848,7 +848,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -869,7 +869,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -894,7 +894,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return Whether the input field is set.
      */
     @java.lang.Override
@@ -906,7 +906,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return The input.
      */
     @java.lang.Override
@@ -918,7 +918,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
@@ -928,7 +928,7 @@ public final class SuggesterServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 3;
     private asgt.v2.SuggesterServiceOuterClass.SuggestOptions options_;
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -936,7 +936,7 @@ public final class SuggesterServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -944,7 +944,7 @@ public final class SuggesterServiceOuterClass {
       return options_ == null ? asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
@@ -1319,7 +1319,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -1339,7 +1339,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -1360,7 +1360,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -1379,7 +1379,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -1393,7 +1393,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -1417,7 +1417,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        * @return Whether the input field is set.
        */
       public boolean hasInput() {
@@ -1428,7 +1428,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        * @return The input.
        */
       public asgt.v2.type.DataOuterClass.Data getInput() {
@@ -1443,7 +1443,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder setInput(asgt.v2.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
@@ -1463,7 +1463,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder setInput(
           asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -1481,7 +1481,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder mergeInput(asgt.v2.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
@@ -1503,7 +1503,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder clearInput() {
         if (inputBuilder_ == null) {
@@ -1521,7 +1521,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder getInputBuilder() {
         
@@ -1533,7 +1533,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
         if (inputBuilder_ != null) {
@@ -1548,7 +1548,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Data, asgt.v2.type.DataOuterClass.Data.Builder, asgt.v2.type.DataOuterClass.DataOrBuilder> 
@@ -1568,14 +1568,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions() {
@@ -1586,7 +1586,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -1602,7 +1602,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder builderForValue) {
@@ -1616,7 +1616,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -1634,7 +1634,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -1648,7 +1648,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder getOptionsBuilder() {
         
@@ -1656,7 +1656,7 @@ public final class SuggesterServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -1667,7 +1667,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> 
@@ -1740,32 +1740,32 @@ public final class SuggesterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return Whether the prediction field is set.
      */
     boolean hasPrediction();
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return The prediction.
      */
     asgt.type.PredictionOuterClass.Prediction getPrediction();
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      */
     asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder();
 
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
@@ -1875,7 +1875,7 @@ public final class SuggesterServiceOuterClass {
     public static final int PREDICTION_FIELD_NUMBER = 1;
     private asgt.type.PredictionOuterClass.Prediction prediction_;
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return Whether the prediction field is set.
      */
     @java.lang.Override
@@ -1883,7 +1883,7 @@ public final class SuggesterServiceOuterClass {
       return prediction_ != null;
     }
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return The prediction.
      */
     @java.lang.Override
@@ -1891,7 +1891,7 @@ public final class SuggesterServiceOuterClass {
       return prediction_ == null ? asgt.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
     }
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
@@ -1901,7 +1901,7 @@ public final class SuggesterServiceOuterClass {
     public static final int MODEL_FIELD_NUMBER = 2;
     private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -1909,7 +1909,7 @@ public final class SuggesterServiceOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -1917,7 +1917,7 @@ public final class SuggesterServiceOuterClass {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -2273,14 +2273,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionBuilder_;
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        * @return Whether the prediction field is set.
        */
       public boolean hasPrediction() {
         return predictionBuilder_ != null || prediction_ != null;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        * @return The prediction.
        */
       public asgt.type.PredictionOuterClass.Prediction getPrediction() {
@@ -2291,7 +2291,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder setPrediction(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionBuilder_ == null) {
@@ -2307,7 +2307,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder setPrediction(
           asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -2321,7 +2321,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder mergePrediction(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionBuilder_ == null) {
@@ -2339,7 +2339,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder clearPrediction() {
         if (predictionBuilder_ == null) {
@@ -2353,7 +2353,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionBuilder() {
         
@@ -2361,7 +2361,7 @@ public final class SuggesterServiceOuterClass {
         return getPredictionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
         if (predictionBuilder_ != null) {
@@ -2372,7 +2372,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> 
@@ -2392,14 +2392,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -2410,7 +2410,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -2426,7 +2426,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -2440,7 +2440,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -2458,7 +2458,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -2472,7 +2472,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -2480,7 +2480,7 @@ public final class SuggesterServiceOuterClass {
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -2491,7 +2491,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -2568,7 +2568,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -2577,7 +2577,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -2588,7 +2588,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     java.util.List<asgt.v2.type.DataOuterClass.Data> 
         getInputsList();
@@ -2597,7 +2597,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     asgt.v2.type.DataOuterClass.Data getInputs(int index);
     /**
@@ -2605,7 +2605,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     int getInputsCount();
     /**
@@ -2613,7 +2613,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList();
@@ -2622,23 +2622,23 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -2760,7 +2760,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -2781,7 +2781,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -2806,7 +2806,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.v2.type.DataOuterClass.Data> getInputsList() {
@@ -2817,7 +2817,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
@@ -2829,7 +2829,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public int getInputsCount() {
@@ -2840,7 +2840,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.Data getInputs(int index) {
@@ -2851,7 +2851,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
@@ -2862,7 +2862,7 @@ public final class SuggesterServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 3;
     private asgt.v2.SuggesterServiceOuterClass.SuggestOptions options_;
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -2870,7 +2870,7 @@ public final class SuggesterServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -2878,7 +2878,7 @@ public final class SuggesterServiceOuterClass {
       return options_ == null ? asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
@@ -3280,7 +3280,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -3300,7 +3300,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -3321,7 +3321,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -3340,7 +3340,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -3354,7 +3354,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -3387,7 +3387,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public java.util.List<asgt.v2.type.DataOuterClass.Data> getInputsList() {
         if (inputsBuilder_ == null) {
@@ -3401,7 +3401,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -3415,7 +3415,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3429,7 +3429,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder setInputs(
           int index, asgt.v2.type.DataOuterClass.Data value) {
@@ -3450,7 +3450,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder setInputs(
           int index, asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3468,7 +3468,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(asgt.v2.type.DataOuterClass.Data value) {
         if (inputsBuilder_ == null) {
@@ -3488,7 +3488,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           int index, asgt.v2.type.DataOuterClass.Data value) {
@@ -3509,7 +3509,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3527,7 +3527,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           int index, asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3545,7 +3545,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addAllInputs(
           java.lang.Iterable<? extends asgt.v2.type.DataOuterClass.Data> values) {
@@ -3564,7 +3564,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -3581,7 +3581,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3598,7 +3598,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder getInputsBuilder(
           int index) {
@@ -3609,7 +3609,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
           int index) {
@@ -3623,7 +3623,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
            getInputsOrBuilderList() {
@@ -3638,7 +3638,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
@@ -3649,7 +3649,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder addInputsBuilder(
           int index) {
@@ -3661,7 +3661,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public java.util.List<asgt.v2.type.DataOuterClass.Data.Builder> 
            getInputsBuilderList() {
@@ -3686,14 +3686,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions() {
@@ -3704,7 +3704,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -3720,7 +3720,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder builderForValue) {
@@ -3734,7 +3734,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -3752,7 +3752,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -3766,7 +3766,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder getOptionsBuilder() {
         
@@ -3774,7 +3774,7 @@ public final class SuggesterServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -3785,7 +3785,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> 
@@ -3858,41 +3858,41 @@ public final class SuggesterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     java.util.List<asgt.type.PredictionOuterClass.Prediction> 
         getPredictionsList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction getPredictions(int index);
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     int getPredictionsCount();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
@@ -4003,14 +4003,14 @@ public final class SuggesterServiceOuterClass {
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
@@ -4018,21 +4018,21 @@ public final class SuggesterServiceOuterClass {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public int getPredictionsCount() {
       return predictions_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
       return predictions_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
@@ -4043,7 +4043,7 @@ public final class SuggesterServiceOuterClass {
     public static final int MODEL_FIELD_NUMBER = 2;
     private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -4051,7 +4051,7 @@ public final class SuggesterServiceOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -4059,7 +4059,7 @@ public final class SuggesterServiceOuterClass {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -4451,7 +4451,7 @@ public final class SuggesterServiceOuterClass {
           asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
         if (predictionsBuilder_ == null) {
@@ -4461,7 +4461,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public int getPredictionsCount() {
         if (predictionsBuilder_ == null) {
@@ -4471,7 +4471,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -4481,7 +4481,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder setPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction value) {
@@ -4498,7 +4498,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder setPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -4512,7 +4512,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
@@ -4528,7 +4528,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction value) {
@@ -4545,7 +4545,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -4559,7 +4559,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -4573,7 +4573,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addAllPredictions(
           java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction> values) {
@@ -4588,7 +4588,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder clearPredictions() {
         if (predictionsBuilder_ == null) {
@@ -4601,7 +4601,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder removePredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -4614,14 +4614,14 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
           int index) {
         return getPredictionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
           int index) {
@@ -4631,7 +4631,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
            getPredictionsOrBuilderList() {
@@ -4642,14 +4642,14 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
         return getPredictionsFieldBuilder().addBuilder(
             asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
           int index) {
@@ -4657,7 +4657,7 @@ public final class SuggesterServiceOuterClass {
             index, asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Builder> 
            getPredictionsBuilderList() {
@@ -4682,14 +4682,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -4700,7 +4700,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -4716,7 +4716,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -4730,7 +4730,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -4748,7 +4748,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -4762,7 +4762,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -4770,7 +4770,7 @@ public final class SuggesterServiceOuterClass {
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -4781,7 +4781,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -4884,51 +4884,55 @@ public final class SuggesterServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/v2/suggester_service.proto\022\007asgt." +
-      "v2\032\025asgt/type/model.proto\032\032asgt/type/pre" +
-      "diction.proto\032\027asgt/v2/type/data.proto\032\034" +
-      "google/api/annotations.proto\032\031options/an" +
-      "notations.proto\032\027validate/validate.proto" +
-      "\"\201\001\n\016SuggestOptions\022\025\n\rsuggest_limit\030\001 \001" +
-      "(\005\022=\n\016min_confidence\030\002 \001(\0162\033.asgt.type.C" +
-      "onfidence.LevelB\010\372B\005\202\001\002\020\001:\031\222A\0262\024{\"sugges" +
-      "t_limit\": 3}\"\235\001\n\016SuggestRequest\022>\n\014datas" +
-      "et_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
-      "-Za-z0-9_.>-]*$\022!\n\005input\030\002 \001(\0132\022.asgt.v2" +
-      ".type.Data\022(\n\007options\030\003 \001(\0132\027.asgt.v2.Su" +
-      "ggestOptions\"]\n\017SuggestResponse\022)\n\npredi" +
-      "ction\030\001 \001(\0132\025.asgt.type.Prediction\022\037\n\005mo" +
-      "del\030\002 \001(\0132\020.asgt.type.Model\"\243\001\n\023BatchSug" +
-      "gestRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#" +
-      "(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022\"\n\006i" +
-      "nputs\030\002 \003(\0132\022.asgt.v2.type.Data\022(\n\007optio" +
-      "ns\030\003 \001(\0132\027.asgt.v2.SuggestOptions\"c\n\024Bat" +
-      "chSuggestResponse\022*\n\013predictions\030\001 \003(\0132\025" +
-      ".asgt.type.Prediction\022\037\n\005model\030\002 \001(\0132\020.a" +
-      "sgt.type.Model2\273\003\n\020SuggesterService\022l\n\007S" +
-      "uggest\022\027.asgt.v2.SuggestRequest\032\030.asgt.v" +
-      "2.SuggestResponse\".\202\323\344\223\002(\"#/v2/datasets/" +
-      "{dataset_name}:suggest:\001*\022\200\001\n\014BatchSugge" +
-      "st\022\034.asgt.v2.BatchSuggestRequest\032\035.asgt." +
-      "v2.BatchSuggestResponse\"3\202\323\344\223\002-\"(/v2/dat" +
-      "asets/{dataset_name}:batchSuggest:\001*\022\213\001\n" +
-      "\021ModelBatchSuggest\022\034.asgt.v2.BatchSugges" +
-      "tRequest\032\035.asgt.v2.BatchSuggestResponse\"" +
-      "9\202\323\344\223\0023\"./v2/datasets/{dataset_name}/mod" +
-      "el:batchSuggest:\001*\032(\222A%\022#Make prediction" +
-      "s against a dataset.BjZ+github.com/e-con" +
-      "omic/vmlapis/gen/go/asgt/v2\222A:\022\021\n\013AutoSu" +
-      "ggest2\002v2*\001\0022\020application/json:\020applicat" +
-      "ion/jsonb\006proto3"
+      "v2\032\034google/api/annotations.proto\032.protoc" +
+      "-gen-openapiv2/options/annotations.proto" +
+      "\032\027validate/validate.proto\032\032asgt/type/pre" +
+      "diction.proto\032\025asgt/type/model.proto\032\027as" +
+      "gt/v2/type/data.proto\"\236\001\n\016SuggestOptions" +
+      "\022#\n\rsuggest_limit\030\001 \001(\005R\014suggestLimit\022L\n" +
+      "\016min_confidence\030\002 \001(\0162\033.asgt.type.Confid" +
+      "ence.LevelB\010\372B\005\202\001\002\020\001R\rminConfidence:\031\222A\026" +
+      "2\024{\"suggest_limit\": 3}\"\272\001\n\016SuggestReques" +
+      "t\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Z" +
+      "a-z0-9.][A-Za-z0-9_.>-]*$R\013datasetName\022(" +
+      "\n\005input\030\002 \001(\0132\022.asgt.v2.type.DataR\005input" +
+      "\0221\n\007options\030\003 \001(\0132\027.asgt.v2.SuggestOptio" +
+      "nsR\007options\"p\n\017SuggestResponse\0225\n\npredic" +
+      "tion\030\001 \001(\0132\025.asgt.type.PredictionR\npredi" +
+      "ction\022&\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005" +
+      "model\"\301\001\n\023BatchSuggestRequest\022K\n\014dataset" +
+      "_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Z" +
+      "a-z0-9_.>-]*$R\013datasetName\022*\n\006inputs\030\002 \003" +
+      "(\0132\022.asgt.v2.type.DataR\006inputs\0221\n\007option" +
+      "s\030\003 \001(\0132\027.asgt.v2.SuggestOptionsR\007option" +
+      "s\"w\n\024BatchSuggestResponse\0227\n\013predictions" +
+      "\030\001 \003(\0132\025.asgt.type.PredictionR\013predictio" +
+      "ns\022&\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005mod" +
+      "el2\273\003\n\020SuggesterService\022l\n\007Suggest\022\027.asg" +
+      "t.v2.SuggestRequest\032\030.asgt.v2.SuggestRes" +
+      "ponse\".\202\323\344\223\002(\"#/v2/datasets/{dataset_nam" +
+      "e}:suggest:\001*\022\200\001\n\014BatchSuggest\022\034.asgt.v2" +
+      ".BatchSuggestRequest\032\035.asgt.v2.BatchSugg" +
+      "estResponse\"3\202\323\344\223\002-\"(/v2/datasets/{datas" +
+      "et_name}:batchSuggest:\001*\022\213\001\n\021ModelBatchS" +
+      "uggest\022\034.asgt.v2.BatchSuggestRequest\032\035.a" +
+      "sgt.v2.BatchSuggestResponse\"9\202\323\344\223\0023\"./v2" +
+      "/datasets/{dataset_name}/model:batchSugg" +
+      "est:\001*\032(\222A%\022#Make predictions against a " +
+      "dataset.BjZ+github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/v2\222A:\022\021\n\013AutoSuggest2\002v2*\001\002" +
+      "2\020application/json:\020application/jsonb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.PredictionOuterClass.getDescriptor(),
-          asgt.v2.type.DataOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
+          asgt.type.PredictionOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.v2.type.DataOuterClass.getDescriptor(),
         });
     internal_static_asgt_v2_SuggestOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4969,12 +4973,12 @@ public final class SuggesterServiceOuterClass {
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.PredictionOuterClass.getDescriptor();
-    asgt.v2.type.DataOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     io.envoyproxy.pgv.validate.Validate.getDescriptor();
+    asgt.type.PredictionOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
+    asgt.v2.type.DataOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

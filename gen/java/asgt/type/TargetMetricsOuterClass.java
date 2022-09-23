@@ -19,37 +19,37 @@ public final class TargetMetricsOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The target.
      */
     java.lang.String getTarget();
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The bytes for target.
      */
     com.google.protobuf.ByteString
         getTargetBytes();
 
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> 
         getMetricsList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric getMetrics(int index);
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     int getMetricsCount();
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> 
         getMetricsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
         int index);
@@ -157,19 +157,19 @@ public final class TargetMetricsOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>float precision = 1;</code>
+       * <code>float precision = 1 [json_name = "precision"];</code>
        * @return The precision.
        */
       float getPrecision();
 
       /**
-       * <code>float confidence = 2;</code>
+       * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       float getConfidence();
 
       /**
-       * <code>float answer_rate = 3;</code>
+       * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @return The answerRate.
        */
       float getAnswerRate();
@@ -269,7 +269,7 @@ public final class TargetMetricsOuterClass {
       public static final int PRECISION_FIELD_NUMBER = 1;
       private float precision_;
       /**
-       * <code>float precision = 1;</code>
+       * <code>float precision = 1 [json_name = "precision"];</code>
        * @return The precision.
        */
       @java.lang.Override
@@ -280,7 +280,7 @@ public final class TargetMetricsOuterClass {
       public static final int CONFIDENCE_FIELD_NUMBER = 2;
       private float confidence_;
       /**
-       * <code>float confidence = 2;</code>
+       * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -291,7 +291,7 @@ public final class TargetMetricsOuterClass {
       public static final int ANSWER_RATE_FIELD_NUMBER = 3;
       private float answerRate_;
       /**
-       * <code>float answer_rate = 3;</code>
+       * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @return The answerRate.
        */
       @java.lang.Override
@@ -643,7 +643,7 @@ public final class TargetMetricsOuterClass {
 
         private float precision_ ;
         /**
-         * <code>float precision = 1;</code>
+         * <code>float precision = 1 [json_name = "precision"];</code>
          * @return The precision.
          */
         @java.lang.Override
@@ -651,7 +651,7 @@ public final class TargetMetricsOuterClass {
           return precision_;
         }
         /**
-         * <code>float precision = 1;</code>
+         * <code>float precision = 1 [json_name = "precision"];</code>
          * @param value The precision to set.
          * @return This builder for chaining.
          */
@@ -662,7 +662,7 @@ public final class TargetMetricsOuterClass {
           return this;
         }
         /**
-         * <code>float precision = 1;</code>
+         * <code>float precision = 1 [json_name = "precision"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPrecision() {
@@ -674,7 +674,7 @@ public final class TargetMetricsOuterClass {
 
         private float confidence_ ;
         /**
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         @java.lang.Override
@@ -682,7 +682,7 @@ public final class TargetMetricsOuterClass {
           return confidence_;
         }
         /**
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @param value The confidence to set.
          * @return This builder for chaining.
          */
@@ -693,7 +693,7 @@ public final class TargetMetricsOuterClass {
           return this;
         }
         /**
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @return This builder for chaining.
          */
         public Builder clearConfidence() {
@@ -705,7 +705,7 @@ public final class TargetMetricsOuterClass {
 
         private float answerRate_ ;
         /**
-         * <code>float answer_rate = 3;</code>
+         * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
          * @return The answerRate.
          */
         @java.lang.Override
@@ -713,7 +713,7 @@ public final class TargetMetricsOuterClass {
           return answerRate_;
         }
         /**
-         * <code>float answer_rate = 3;</code>
+         * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
          * @param value The answerRate to set.
          * @return This builder for chaining.
          */
@@ -724,7 +724,7 @@ public final class TargetMetricsOuterClass {
           return this;
         }
         /**
-         * <code>float answer_rate = 3;</code>
+         * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAnswerRate() {
@@ -789,7 +789,7 @@ public final class TargetMetricsOuterClass {
     public static final int TARGET_FIELD_NUMBER = 1;
     private volatile java.lang.Object target_;
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The target.
      */
     @java.lang.Override
@@ -806,7 +806,7 @@ public final class TargetMetricsOuterClass {
       }
     }
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The bytes for target.
      */
     @java.lang.Override
@@ -827,14 +827,14 @@ public final class TargetMetricsOuterClass {
     public static final int METRICS_FIELD_NUMBER = 2;
     private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> metrics_;
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> getMetricsList() {
       return metrics_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> 
@@ -842,21 +842,21 @@ public final class TargetMetricsOuterClass {
       return metrics_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric getMetrics(int index) {
       return metrics_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
@@ -1225,7 +1225,7 @@ public final class TargetMetricsOuterClass {
 
       private java.lang.Object target_ = "";
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The target.
        */
       public java.lang.String getTarget() {
@@ -1241,7 +1241,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The bytes for target.
        */
       public com.google.protobuf.ByteString
@@ -1258,7 +1258,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @param value The target to set.
        * @return This builder for chaining.
        */
@@ -1273,7 +1273,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTarget() {
@@ -1283,7 +1283,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @param value The bytes for target to set.
        * @return This builder for chaining.
        */
@@ -1312,7 +1312,7 @@ public final class TargetMetricsOuterClass {
           asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder, asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> metricsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> getMetricsList() {
         if (metricsBuilder_ == null) {
@@ -1322,7 +1322,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public int getMetricsCount() {
         if (metricsBuilder_ == null) {
@@ -1332,7 +1332,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric getMetrics(int index) {
         if (metricsBuilder_ == null) {
@@ -1342,7 +1342,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder setMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric value) {
@@ -1359,7 +1359,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder setMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder builderForValue) {
@@ -1373,7 +1373,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric value) {
         if (metricsBuilder_ == null) {
@@ -1389,7 +1389,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric value) {
@@ -1406,7 +1406,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder builderForValue) {
@@ -1420,7 +1420,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder builderForValue) {
@@ -1434,7 +1434,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addAllMetrics(
           java.lang.Iterable<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> values) {
@@ -1449,7 +1449,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder clearMetrics() {
         if (metricsBuilder_ == null) {
@@ -1462,7 +1462,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder removeMetrics(int index) {
         if (metricsBuilder_ == null) {
@@ -1475,14 +1475,14 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder getMetricsBuilder(
           int index) {
         return getMetricsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
           int index) {
@@ -1492,7 +1492,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> 
            getMetricsOrBuilderList() {
@@ -1503,14 +1503,14 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder addMetricsBuilder() {
         return getMetricsFieldBuilder().addBuilder(
             asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder addMetricsBuilder(
           int index) {
@@ -1518,7 +1518,7 @@ public final class TargetMetricsOuterClass {
             index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder> 
            getMetricsBuilderList() {
@@ -1611,12 +1611,13 @@ public final class TargetMetricsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036asgt/type/target_metrics.proto\022\tasgt.t" +
-      "ype\"\227\001\n\rTargetMetrics\022\016\n\006target\030\001 \001(\t\0220\n" +
-      "\007metrics\030\002 \003(\0132\037.asgt.type.TargetMetrics" +
-      ".Metric\032D\n\006Metric\022\021\n\tprecision\030\001 \001(\002\022\022\n\n" +
-      "confidence\030\002 \001(\002\022\023\n\013answer_rate\030\003 \001(\002B8Z" +
-      "6github.com/e-conomic/vmlapis/gen/go/asg" +
-      "t/type;asgttypeb\006proto3"
+      "ype\"\313\001\n\rTargetMetrics\022\026\n\006target\030\001 \001(\tR\006t" +
+      "arget\0229\n\007metrics\030\002 \003(\0132\037.asgt.type.Targe" +
+      "tMetrics.MetricR\007metrics\032g\n\006Metric\022\034\n\tpr" +
+      "ecision\030\001 \001(\002R\tprecision\022\036\n\nconfidence\030\002" +
+      " \001(\002R\nconfidence\022\037\n\013answer_rate\030\003 \001(\002R\na" +
+      "nswerRateB8Z6github.com/e-conomic/vmlapi" +
+      "s/gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

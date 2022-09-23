@@ -23,7 +23,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>int32 x = 1;</code>
+     * <code>int32 x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     int getX();
@@ -33,7 +33,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>int32 y = 2;</code>
+     * <code>int32 y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     int getY();
@@ -137,7 +137,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>int32 x = 1;</code>
+     * <code>int32 x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     @java.lang.Override
@@ -152,7 +152,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>int32 y = 2;</code>
+     * <code>int32 y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     @java.lang.Override
@@ -490,7 +490,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>int32 x = 1;</code>
+       * <code>int32 x = 1 [json_name = "x"];</code>
        * @return The x.
        */
       @java.lang.Override
@@ -502,7 +502,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>int32 x = 1;</code>
+       * <code>int32 x = 1 [json_name = "x"];</code>
        * @param value The x to set.
        * @return This builder for chaining.
        */
@@ -517,7 +517,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>int32 x = 1;</code>
+       * <code>int32 x = 1 [json_name = "x"];</code>
        * @return This builder for chaining.
        */
       public Builder clearX() {
@@ -533,7 +533,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>int32 y = 2;</code>
+       * <code>int32 y = 2 [json_name = "y"];</code>
        * @return The y.
        */
       @java.lang.Override
@@ -545,7 +545,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>int32 y = 2;</code>
+       * <code>int32 y = 2 [json_name = "y"];</code>
        * @param value The y to set.
        * @return This builder for chaining.
        */
@@ -560,7 +560,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>int32 y = 2;</code>
+       * <code>int32 y = 2 [json_name = "y"];</code>
        * @return This builder for chaining.
        */
       public Builder clearY() {
@@ -631,7 +631,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>float x = 1;</code>
+     * <code>float x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     float getX();
@@ -641,7 +641,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>float y = 2;</code>
+     * <code>float y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     float getY();
@@ -746,7 +746,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>float x = 1;</code>
+     * <code>float x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     @java.lang.Override
@@ -761,7 +761,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>float y = 2;</code>
+     * <code>float y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     @java.lang.Override
@@ -1104,7 +1104,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>float x = 1;</code>
+       * <code>float x = 1 [json_name = "x"];</code>
        * @return The x.
        */
       @java.lang.Override
@@ -1116,7 +1116,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>float x = 1;</code>
+       * <code>float x = 1 [json_name = "x"];</code>
        * @param value The x to set.
        * @return This builder for chaining.
        */
@@ -1131,7 +1131,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>float x = 1;</code>
+       * <code>float x = 1 [json_name = "x"];</code>
        * @return This builder for chaining.
        */
       public Builder clearX() {
@@ -1147,7 +1147,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>float y = 2;</code>
+       * <code>float y = 2 [json_name = "y"];</code>
        * @return The y.
        */
       @java.lang.Override
@@ -1159,7 +1159,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>float y = 2;</code>
+       * <code>float y = 2 [json_name = "y"];</code>
        * @param value The y to set.
        * @return This builder for chaining.
        */
@@ -1174,7 +1174,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>float y = 2;</code>
+       * <code>float y = 2 [json_name = "y"];</code>
        * @return This builder for chaining.
        */
       public Builder clearY() {
@@ -1245,7 +1245,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     java.util.List<ssn.type.Geometry.Vertex> 
         getVerticesList();
@@ -1254,7 +1254,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     ssn.type.Geometry.Vertex getVertices(int index);
     /**
@@ -1262,7 +1262,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     int getVerticesCount();
     /**
@@ -1270,7 +1270,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     java.util.List<? extends ssn.type.Geometry.VertexOrBuilder> 
         getVerticesOrBuilderList();
@@ -1279,7 +1279,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     ssn.type.Geometry.VertexOrBuilder getVerticesOrBuilder(
         int index);
@@ -1289,7 +1289,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     java.util.List<ssn.type.Geometry.NormalizedVertex> 
         getNormalizedVerticesList();
@@ -1298,7 +1298,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     ssn.type.Geometry.NormalizedVertex getNormalizedVertices(int index);
     /**
@@ -1306,7 +1306,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     int getNormalizedVerticesCount();
     /**
@@ -1314,7 +1314,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     java.util.List<? extends ssn.type.Geometry.NormalizedVertexOrBuilder> 
         getNormalizedVerticesOrBuilderList();
@@ -1323,7 +1323,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     ssn.type.Geometry.NormalizedVertexOrBuilder getNormalizedVerticesOrBuilder(
         int index);
@@ -1443,7 +1443,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.Geometry.Vertex> getVerticesList() {
@@ -1454,7 +1454,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.Geometry.VertexOrBuilder> 
@@ -1466,7 +1466,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public int getVerticesCount() {
@@ -1477,7 +1477,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.Vertex getVertices(int index) {
@@ -1488,7 +1488,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.VertexOrBuilder getVerticesOrBuilder(
@@ -1503,7 +1503,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.Geometry.NormalizedVertex> getNormalizedVerticesList() {
@@ -1514,7 +1514,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.Geometry.NormalizedVertexOrBuilder> 
@@ -1526,7 +1526,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public int getNormalizedVerticesCount() {
@@ -1537,7 +1537,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.NormalizedVertex getNormalizedVertices(int index) {
@@ -1548,7 +1548,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.NormalizedVertexOrBuilder getNormalizedVerticesOrBuilder(
@@ -1974,7 +1974,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.Vertex> getVerticesList() {
         if (verticesBuilder_ == null) {
@@ -1988,7 +1988,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public int getVerticesCount() {
         if (verticesBuilder_ == null) {
@@ -2002,7 +2002,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex getVertices(int index) {
         if (verticesBuilder_ == null) {
@@ -2016,7 +2016,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder setVertices(
           int index, ssn.type.Geometry.Vertex value) {
@@ -2037,7 +2037,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder setVertices(
           int index, ssn.type.Geometry.Vertex.Builder builderForValue) {
@@ -2055,7 +2055,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(ssn.type.Geometry.Vertex value) {
         if (verticesBuilder_ == null) {
@@ -2075,7 +2075,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(
           int index, ssn.type.Geometry.Vertex value) {
@@ -2096,7 +2096,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(
           ssn.type.Geometry.Vertex.Builder builderForValue) {
@@ -2114,7 +2114,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(
           int index, ssn.type.Geometry.Vertex.Builder builderForValue) {
@@ -2132,7 +2132,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addAllVertices(
           java.lang.Iterable<? extends ssn.type.Geometry.Vertex> values) {
@@ -2151,7 +2151,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder clearVertices() {
         if (verticesBuilder_ == null) {
@@ -2168,7 +2168,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder removeVertices(int index) {
         if (verticesBuilder_ == null) {
@@ -2185,7 +2185,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex.Builder getVerticesBuilder(
           int index) {
@@ -2196,7 +2196,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.VertexOrBuilder getVerticesOrBuilder(
           int index) {
@@ -2210,7 +2210,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public java.util.List<? extends ssn.type.Geometry.VertexOrBuilder> 
            getVerticesOrBuilderList() {
@@ -2225,7 +2225,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex.Builder addVerticesBuilder() {
         return getVerticesFieldBuilder().addBuilder(
@@ -2236,7 +2236,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex.Builder addVerticesBuilder(
           int index) {
@@ -2248,7 +2248,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.Vertex.Builder> 
            getVerticesBuilderList() {
@@ -2286,7 +2286,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.NormalizedVertex> getNormalizedVerticesList() {
         if (normalizedVerticesBuilder_ == null) {
@@ -2300,7 +2300,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public int getNormalizedVerticesCount() {
         if (normalizedVerticesBuilder_ == null) {
@@ -2314,7 +2314,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex getNormalizedVertices(int index) {
         if (normalizedVerticesBuilder_ == null) {
@@ -2328,7 +2328,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder setNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex value) {
@@ -2349,7 +2349,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder setNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex.Builder builderForValue) {
@@ -2367,7 +2367,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(ssn.type.Geometry.NormalizedVertex value) {
         if (normalizedVerticesBuilder_ == null) {
@@ -2387,7 +2387,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex value) {
@@ -2408,7 +2408,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(
           ssn.type.Geometry.NormalizedVertex.Builder builderForValue) {
@@ -2426,7 +2426,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex.Builder builderForValue) {
@@ -2444,7 +2444,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addAllNormalizedVertices(
           java.lang.Iterable<? extends ssn.type.Geometry.NormalizedVertex> values) {
@@ -2463,7 +2463,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder clearNormalizedVertices() {
         if (normalizedVerticesBuilder_ == null) {
@@ -2480,7 +2480,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder removeNormalizedVertices(int index) {
         if (normalizedVerticesBuilder_ == null) {
@@ -2497,7 +2497,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex.Builder getNormalizedVerticesBuilder(
           int index) {
@@ -2508,7 +2508,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertexOrBuilder getNormalizedVerticesOrBuilder(
           int index) {
@@ -2522,7 +2522,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public java.util.List<? extends ssn.type.Geometry.NormalizedVertexOrBuilder> 
            getNormalizedVerticesOrBuilderList() {
@@ -2537,7 +2537,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex.Builder addNormalizedVerticesBuilder() {
         return getNormalizedVerticesFieldBuilder().addBuilder(
@@ -2548,7 +2548,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex.Builder addNormalizedVerticesBuilder(
           int index) {
@@ -2560,7 +2560,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.NormalizedVertex.Builder> 
            getNormalizedVerticesBuilderList() {
@@ -2657,14 +2657,15 @@ public final class Geometry {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027ssn/type/geometry.proto\022\010ssn.type\"\036\n\006V" +
-      "ertex\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\"(\n\020Normalize" +
-      "dVertex\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"k\n\014Boundin" +
-      "gPoly\022\"\n\010vertices\030\001 \003(\0132\020.ssn.type.Verte" +
-      "x\0227\n\023normalized_vertices\030\002 \003(\0132\032.ssn.typ" +
-      "e.NormalizedVertexB6Z4github.com/e-conom" +
-      "ic/vmlapis/gen/go/ssn/type;ssntypeb\006prot" +
-      "o3"
+      "\n\027ssn/type/geometry.proto\022\010ssn.type\"$\n\006V" +
+      "ertex\022\014\n\001x\030\001 \001(\005R\001x\022\014\n\001y\030\002 \001(\005R\001y\".\n\020Nor" +
+      "malizedVertex\022\014\n\001x\030\001 \001(\002R\001x\022\014\n\001y\030\002 \001(\002R\001" +
+      "y\"\211\001\n\014BoundingPoly\022,\n\010vertices\030\001 \003(\0132\020.s" +
+      "sn.type.VertexR\010vertices\022K\n\023normalized_v" +
+      "ertices\030\002 \003(\0132\032.ssn.type.NormalizedVerte" +
+      "xR\022normalizedVerticesB6Z4github.com/e-co" +
+      "nomic/vmlapis/gen/go/ssn/type;ssntypeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

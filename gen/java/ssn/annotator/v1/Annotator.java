@@ -23,7 +23,7 @@ public final class Annotator {
      * The feature type.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
@@ -32,7 +32,7 @@ public final class Annotator {
      * The feature type.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The type.
      */
     ssn.annotator.v1.Annotator.Feature.Type getType();
@@ -43,7 +43,7 @@ public final class Annotator {
      * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
      * </pre>
      *
-     * <code>int32 max_results = 2;</code>
+     * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
      * @return The maxResults.
      */
     int getMaxResults();
@@ -53,7 +53,7 @@ public final class Annotator {
      * The minimum confidence for predictions that the caller wants returned
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
@@ -62,7 +62,7 @@ public final class Annotator {
      * The minimum confidence for predictions that the caller wants returned
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
      * @return The minConfidence.
      */
     ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence();
@@ -234,8 +234,8 @@ public final class Annotator {
       TOTAL_EXCL_VAT(7),
       /**
        * <pre>
-       * [DEPRECATED] Run supplier corporate id detection.
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * [DEPRECATED] Run supplier corporate id detection. 
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * </pre>
        *
        * <code>SUPPLIER_CORPORATE_ID = 8;</code>
@@ -534,8 +534,8 @@ public final class Annotator {
       public static final int TOTAL_EXCL_VAT_VALUE = 7;
       /**
        * <pre>
-       * [DEPRECATED] Run supplier corporate id detection.
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * [DEPRECATED] Run supplier corporate id detection. 
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * </pre>
        *
        * <code>SUPPLIER_CORPORATE_ID = 8;</code>
@@ -891,7 +891,7 @@ public final class Annotator {
      * The feature type.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
@@ -902,7 +902,7 @@ public final class Annotator {
      * The feature type.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+     * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override public ssn.annotator.v1.Annotator.Feature.Type getType() {
@@ -919,7 +919,7 @@ public final class Annotator {
      * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
      * </pre>
      *
-     * <code>int32 max_results = 2;</code>
+     * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
      * @return The maxResults.
      */
     @java.lang.Override
@@ -934,7 +934,7 @@ public final class Annotator {
      * The minimum confidence for predictions that the caller wants returned
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     @java.lang.Override public int getMinConfidenceValue() {
@@ -945,7 +945,7 @@ public final class Annotator {
      * The minimum confidence for predictions that the caller wants returned
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+     * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
      * @return The minConfidence.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence() {
@@ -1294,7 +1294,7 @@ public final class Annotator {
        * The feature type.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -1305,7 +1305,7 @@ public final class Annotator {
        * The feature type.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -1320,7 +1320,7 @@ public final class Annotator {
        * The feature type.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       @java.lang.Override
@@ -1334,7 +1334,7 @@ public final class Annotator {
        * The feature type.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -1352,7 +1352,7 @@ public final class Annotator {
        * The feature type.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.Feature.Type type = 1;</code>
+       * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -1369,7 +1369,7 @@ public final class Annotator {
        * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
        * </pre>
        *
-       * <code>int32 max_results = 2;</code>
+       * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
        * @return The maxResults.
        */
       @java.lang.Override
@@ -1382,7 +1382,7 @@ public final class Annotator {
        * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
        * </pre>
        *
-       * <code>int32 max_results = 2;</code>
+       * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
        * @param value The maxResults to set.
        * @return This builder for chaining.
        */
@@ -1398,7 +1398,7 @@ public final class Annotator {
        * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
        * </pre>
        *
-       * <code>int32 max_results = 2;</code>
+       * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxResults() {
@@ -1414,7 +1414,7 @@ public final class Annotator {
        * The minimum confidence for predictions that the caller wants returned
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
        * @return The enum numeric value on the wire for minConfidence.
        */
       @java.lang.Override public int getMinConfidenceValue() {
@@ -1425,7 +1425,7 @@ public final class Annotator {
        * The minimum confidence for predictions that the caller wants returned
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
        * @param value The enum numeric value on the wire for minConfidence to set.
        * @return This builder for chaining.
        */
@@ -1440,7 +1440,7 @@ public final class Annotator {
        * The minimum confidence for predictions that the caller wants returned
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
        * @return The minConfidence.
        */
       @java.lang.Override
@@ -1454,7 +1454,7 @@ public final class Annotator {
        * The minimum confidence for predictions that the caller wants returned
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
        * @param value The minConfidence to set.
        * @return This builder for chaining.
        */
@@ -1472,7 +1472,7 @@ public final class Annotator {
        * The minimum confidence for predictions that the caller wants returned
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level min_confidence = 3;</code>
+       * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
@@ -1539,63 +1539,63 @@ public final class Annotator {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
-     * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return The document.
      */
     ssn.annotator.v1.Annotator.Document getDocument();
     /**
-     * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder();
 
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     java.util.List<ssn.annotator.v1.Annotator.Feature> 
         getFeaturesList();
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     ssn.annotator.v1.Annotator.Feature getFeatures(int index);
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     int getFeaturesCount();
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     java.util.List<? extends ssn.annotator.v1.Annotator.FeatureOrBuilder> 
         getFeaturesOrBuilderList();
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     ssn.annotator.v1.Annotator.FeatureOrBuilder getFeaturesOrBuilder(
         int index);
 
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -1603,35 +1603,35 @@ public final class Annotator {
         getTagsBytes(int index);
 
     /**
-     * <code>.ssn.type.Tier tier = 4;</code>
+     * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
      * @return The enum numeric value on the wire for tier.
      */
     int getTierValue();
     /**
-     * <code>.ssn.type.Tier tier = 4;</code>
+     * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
      * @return The tier.
      */
     ssn.type.TierOuterClass.Tier getTier();
 
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @return A list containing the segments.
      */
     java.util.List<java.lang.String>
         getSegmentsList();
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @return The count of segments.
      */
     int getSegmentsCount();
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @param index The index of the element to return.
      * @return The segments at the given index.
      */
     java.lang.String getSegments(int index);
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the segments at the given index.
      */
@@ -1778,7 +1778,7 @@ public final class Annotator {
     public static final int DOCUMENT_FIELD_NUMBER = 1;
     private ssn.annotator.v1.Annotator.Document document_;
     /**
-     * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return Whether the document field is set.
      */
     @java.lang.Override
@@ -1786,7 +1786,7 @@ public final class Annotator {
       return document_ != null;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return The document.
      */
     @java.lang.Override
@@ -1794,7 +1794,7 @@ public final class Annotator {
       return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1;</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
@@ -1804,14 +1804,14 @@ public final class Annotator {
     public static final int FEATURES_FIELD_NUMBER = 2;
     private java.util.List<ssn.annotator.v1.Annotator.Feature> features_;
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.annotator.v1.Annotator.Feature> getFeaturesList() {
       return features_;
     }
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.annotator.v1.Annotator.FeatureOrBuilder> 
@@ -1819,21 +1819,21 @@ public final class Annotator {
       return features_;
     }
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
     public int getFeaturesCount() {
       return features_.size();
     }
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.Feature getFeatures(int index) {
       return features_.get(index);
     }
     /**
-     * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+     * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.FeatureOrBuilder getFeaturesOrBuilder(
@@ -1844,7 +1844,7 @@ public final class Annotator {
     public static final int TAGS_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1852,14 +1852,14 @@ public final class Annotator {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -1867,7 +1867,7 @@ public final class Annotator {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -1879,14 +1879,14 @@ public final class Annotator {
     public static final int TIER_FIELD_NUMBER = 4;
     private int tier_;
     /**
-     * <code>.ssn.type.Tier tier = 4;</code>
+     * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
      * @return The enum numeric value on the wire for tier.
      */
     @java.lang.Override public int getTierValue() {
       return tier_;
     }
     /**
-     * <code>.ssn.type.Tier tier = 4;</code>
+     * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
      * @return The tier.
      */
     @java.lang.Override public ssn.type.TierOuterClass.Tier getTier() {
@@ -1898,7 +1898,7 @@ public final class Annotator {
     public static final int SEGMENTS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList segments_;
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @return A list containing the segments.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1906,14 +1906,14 @@ public final class Annotator {
       return segments_;
     }
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @return The count of segments.
      */
     public int getSegmentsCount() {
       return segments_.size();
     }
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @param index The index of the element to return.
      * @return The segments at the given index.
      */
@@ -1921,7 +1921,7 @@ public final class Annotator {
       return segments_.get(index);
     }
     /**
-     * <code>repeated string segments = 5;</code>
+     * <code>repeated string segments = 5 [json_name = "segments"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the segments at the given index.
      */
@@ -2390,14 +2390,14 @@ public final class Annotator {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> documentBuilder_;
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        * @return The document.
        */
       public ssn.annotator.v1.Annotator.Document getDocument() {
@@ -2408,7 +2408,7 @@ public final class Annotator {
         }
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder setDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
@@ -2424,7 +2424,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder setDocument(
           ssn.annotator.v1.Annotator.Document.Builder builderForValue) {
@@ -2438,7 +2438,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder mergeDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
@@ -2456,7 +2456,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
         if (documentBuilder_ == null) {
@@ -2470,7 +2470,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public ssn.annotator.v1.Annotator.Document.Builder getDocumentBuilder() {
         
@@ -2478,7 +2478,7 @@ public final class Annotator {
         return getDocumentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
         if (documentBuilder_ != null) {
@@ -2489,7 +2489,7 @@ public final class Annotator {
         }
       }
       /**
-       * <code>.ssn.annotator.v1.Document document = 1;</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> 
@@ -2518,7 +2518,7 @@ public final class Annotator {
           ssn.annotator.v1.Annotator.Feature, ssn.annotator.v1.Annotator.Feature.Builder, ssn.annotator.v1.Annotator.FeatureOrBuilder> featuresBuilder_;
 
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public java.util.List<ssn.annotator.v1.Annotator.Feature> getFeaturesList() {
         if (featuresBuilder_ == null) {
@@ -2528,7 +2528,7 @@ public final class Annotator {
         }
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public int getFeaturesCount() {
         if (featuresBuilder_ == null) {
@@ -2538,7 +2538,7 @@ public final class Annotator {
         }
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public ssn.annotator.v1.Annotator.Feature getFeatures(int index) {
         if (featuresBuilder_ == null) {
@@ -2548,7 +2548,7 @@ public final class Annotator {
         }
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder setFeatures(
           int index, ssn.annotator.v1.Annotator.Feature value) {
@@ -2565,7 +2565,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder setFeatures(
           int index, ssn.annotator.v1.Annotator.Feature.Builder builderForValue) {
@@ -2579,7 +2579,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addFeatures(ssn.annotator.v1.Annotator.Feature value) {
         if (featuresBuilder_ == null) {
@@ -2595,7 +2595,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addFeatures(
           int index, ssn.annotator.v1.Annotator.Feature value) {
@@ -2612,7 +2612,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addFeatures(
           ssn.annotator.v1.Annotator.Feature.Builder builderForValue) {
@@ -2626,7 +2626,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addFeatures(
           int index, ssn.annotator.v1.Annotator.Feature.Builder builderForValue) {
@@ -2640,7 +2640,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addAllFeatures(
           java.lang.Iterable<? extends ssn.annotator.v1.Annotator.Feature> values) {
@@ -2655,7 +2655,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
@@ -2668,7 +2668,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder removeFeatures(int index) {
         if (featuresBuilder_ == null) {
@@ -2681,14 +2681,14 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public ssn.annotator.v1.Annotator.Feature.Builder getFeaturesBuilder(
           int index) {
         return getFeaturesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public ssn.annotator.v1.Annotator.FeatureOrBuilder getFeaturesOrBuilder(
           int index) {
@@ -2698,7 +2698,7 @@ public final class Annotator {
         }
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public java.util.List<? extends ssn.annotator.v1.Annotator.FeatureOrBuilder> 
            getFeaturesOrBuilderList() {
@@ -2709,14 +2709,14 @@ public final class Annotator {
         }
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public ssn.annotator.v1.Annotator.Feature.Builder addFeaturesBuilder() {
         return getFeaturesFieldBuilder().addBuilder(
             ssn.annotator.v1.Annotator.Feature.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public ssn.annotator.v1.Annotator.Feature.Builder addFeaturesBuilder(
           int index) {
@@ -2724,7 +2724,7 @@ public final class Annotator {
             index, ssn.annotator.v1.Annotator.Feature.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.annotator.v1.Feature features = 2;</code>
+       * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public java.util.List<ssn.annotator.v1.Annotator.Feature.Builder> 
            getFeaturesBuilderList() {
@@ -2753,7 +2753,7 @@ public final class Annotator {
          }
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -2761,14 +2761,14 @@ public final class Annotator {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -2776,7 +2776,7 @@ public final class Annotator {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -2785,7 +2785,7 @@ public final class Annotator {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -2801,7 +2801,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -2816,7 +2816,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -2829,7 +2829,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -2839,7 +2839,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -2857,14 +2857,14 @@ public final class Annotator {
 
       private int tier_ = 0;
       /**
-       * <code>.ssn.type.Tier tier = 4;</code>
+       * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
        * @return The enum numeric value on the wire for tier.
        */
       @java.lang.Override public int getTierValue() {
         return tier_;
       }
       /**
-       * <code>.ssn.type.Tier tier = 4;</code>
+       * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
        * @param value The enum numeric value on the wire for tier to set.
        * @return This builder for chaining.
        */
@@ -2875,7 +2875,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>.ssn.type.Tier tier = 4;</code>
+       * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
        * @return The tier.
        */
       @java.lang.Override
@@ -2885,7 +2885,7 @@ public final class Annotator {
         return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ssn.type.Tier tier = 4;</code>
+       * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
        * @param value The tier to set.
        * @return This builder for chaining.
        */
@@ -2899,7 +2899,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>.ssn.type.Tier tier = 4;</code>
+       * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTier() {
@@ -2917,7 +2917,7 @@ public final class Annotator {
          }
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @return A list containing the segments.
        */
       public com.google.protobuf.ProtocolStringList
@@ -2925,14 +2925,14 @@ public final class Annotator {
         return segments_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @return The count of segments.
        */
       public int getSegmentsCount() {
         return segments_.size();
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @param index The index of the element to return.
        * @return The segments at the given index.
        */
@@ -2940,7 +2940,7 @@ public final class Annotator {
         return segments_.get(index);
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the segments at the given index.
        */
@@ -2949,7 +2949,7 @@ public final class Annotator {
         return segments_.getByteString(index);
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @param index The index to set the value at.
        * @param value The segments to set.
        * @return This builder for chaining.
@@ -2965,7 +2965,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @param value The segments to add.
        * @return This builder for chaining.
        */
@@ -2980,7 +2980,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @param values The segments to add.
        * @return This builder for chaining.
        */
@@ -2993,7 +2993,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSegments() {
@@ -3003,7 +3003,7 @@ public final class Annotator {
         return this;
       }
       /**
-       * <code>repeated string segments = 5;</code>
+       * <code>repeated string segments = 5 [json_name = "segments"];</code>
        * @param value The bytes of the segments to add.
        * @return This builder for chaining.
        */
@@ -3082,7 +3082,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOrderDateList();
@@ -3093,7 +3093,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOrderDate(int index);
     /**
@@ -3103,7 +3103,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     int getOrderDateCount();
     /**
@@ -3113,7 +3113,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOrderDateOrBuilderList();
@@ -3124,7 +3124,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
         int index);
@@ -3136,7 +3136,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getPaymentDueDateList();
@@ -3147,7 +3147,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index);
     /**
@@ -3157,7 +3157,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     int getPaymentDueDateCount();
     /**
@@ -3167,7 +3167,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentDueDateOrBuilderList();
@@ -3178,7 +3178,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
         int index);
@@ -3190,7 +3190,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getCurrencyList();
@@ -3201,7 +3201,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getCurrency(int index);
     /**
@@ -3211,7 +3211,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     int getCurrencyCount();
     /**
@@ -3221,7 +3221,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCurrencyOrBuilderList();
@@ -3232,7 +3232,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
         int index);
@@ -3244,7 +3244,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getTotalVatList();
@@ -3255,7 +3255,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getTotalVat(int index);
     /**
@@ -3265,7 +3265,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     int getTotalVatCount();
     /**
@@ -3275,7 +3275,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalVatOrBuilderList();
@@ -3286,7 +3286,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
         int index);
@@ -3298,7 +3298,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getTotalInclVatList();
@@ -3309,7 +3309,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index);
     /**
@@ -3319,7 +3319,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     int getTotalInclVatCount();
     /**
@@ -3329,7 +3329,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalInclVatOrBuilderList();
@@ -3340,7 +3340,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
         int index);
@@ -3352,7 +3352,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getTotalExclVatList();
@@ -3363,7 +3363,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index);
     /**
@@ -3373,7 +3373,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     int getTotalExclVatCount();
     /**
@@ -3383,7 +3383,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getTotalExclVatOrBuilderList();
@@ -3394,7 +3394,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
         int index);
@@ -3402,7 +3402,7 @@ public final class Annotator {
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3412,14 +3412,14 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierCorporateIdList();
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3429,13 +3429,13 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index);
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3445,13 +3445,13 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     int getSupplierCorporateIdCount();
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3461,14 +3461,14 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCorporateIdOrBuilderList();
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -3478,7 +3478,7 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
         int index);
@@ -3490,7 +3490,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierCountryCodeList();
@@ -3501,7 +3501,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index);
     /**
@@ -3511,7 +3511,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     int getSupplierCountryCodeCount();
     /**
@@ -3521,7 +3521,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierCountryCodeOrBuilderList();
@@ -3532,7 +3532,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
         int index);
@@ -3543,7 +3543,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getDocumentTypeList();
@@ -3553,7 +3553,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getDocumentType(int index);
     /**
@@ -3562,7 +3562,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     int getDocumentTypeCount();
     /**
@@ -3571,7 +3571,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentTypeOrBuilderList();
@@ -3581,7 +3581,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
         int index);
@@ -3592,7 +3592,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getPaymentMethodList();
@@ -3602,7 +3602,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index);
     /**
@@ -3611,7 +3611,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     int getPaymentMethodCount();
     /**
@@ -3620,7 +3620,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getPaymentMethodOrBuilderList();
@@ -3630,7 +3630,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
         int index);
@@ -3642,7 +3642,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getCreditCardLastFourList();
@@ -3653,7 +3653,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index);
     /**
@@ -3663,7 +3663,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     int getCreditCardLastFourCount();
     /**
@@ -3673,7 +3673,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getCreditCardLastFourOrBuilderList();
@@ -3684,7 +3684,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
         int index);
@@ -3698,7 +3698,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getInvoiceNumberList();
@@ -3711,7 +3711,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index);
     /**
@@ -3723,7 +3723,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     int getInvoiceNumberCount();
     /**
@@ -3735,7 +3735,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getInvoiceNumberOrBuilderList();
@@ -3748,7 +3748,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
         int index);
@@ -3758,7 +3758,7 @@ public final class Annotator {
      * Return text annotation
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
      * @return Whether the textAnnotation field is set.
      */
     boolean hasTextAnnotation();
@@ -3767,7 +3767,7 @@ public final class Annotator {
      * Return text annotation
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
      * @return The textAnnotation.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
@@ -3776,7 +3776,7 @@ public final class Annotator {
      * Return text annotation
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
 
@@ -3785,7 +3785,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineDkTypeList();
@@ -3794,7 +3794,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index);
     /**
@@ -3802,7 +3802,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     int getOcrLineDkTypeCount();
     /**
@@ -3810,7 +3810,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkTypeOrBuilderList();
@@ -3819,7 +3819,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
         int index);
@@ -3829,7 +3829,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineDkPaymentIdList();
@@ -3838,7 +3838,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index);
     /**
@@ -3846,7 +3846,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     int getOcrLineDkPaymentIdCount();
     /**
@@ -3854,7 +3854,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList();
@@ -3863,7 +3863,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index);
@@ -3873,7 +3873,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineDkCreditorIdList();
@@ -3882,7 +3882,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index);
     /**
@@ -3890,7 +3890,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     int getOcrLineDkCreditorIdCount();
     /**
@@ -3898,7 +3898,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList();
@@ -3907,7 +3907,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index);
@@ -3917,7 +3917,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineSePaymentIdList();
@@ -3926,7 +3926,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index);
     /**
@@ -3934,7 +3934,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     int getOcrLineSePaymentIdCount();
     /**
@@ -3942,7 +3942,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList();
@@ -3951,7 +3951,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index);
@@ -3961,7 +3961,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineSeBankgiroCreditorIdList();
@@ -3970,7 +3970,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index);
     /**
@@ -3978,7 +3978,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     int getOcrLineSeBankgiroCreditorIdCount();
     /**
@@ -3986,7 +3986,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList();
@@ -3995,7 +3995,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index);
@@ -4005,7 +4005,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineSePlusgiroCreditorIdList();
@@ -4014,7 +4014,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index);
     /**
@@ -4022,7 +4022,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     int getOcrLineSePlusgiroCreditorIdCount();
     /**
@@ -4030,7 +4030,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList();
@@ -4039,7 +4039,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index);
@@ -4049,7 +4049,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineNoPaymentIdList();
@@ -4058,7 +4058,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index);
     /**
@@ -4066,7 +4066,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     int getOcrLineNoPaymentIdCount();
     /**
@@ -4074,7 +4074,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList();
@@ -4083,7 +4083,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index);
@@ -4093,7 +4093,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineFiPaymentIdList();
@@ -4102,7 +4102,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index);
     /**
@@ -4110,7 +4110,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     int getOcrLineFiPaymentIdCount();
     /**
@@ -4118,7 +4118,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList();
@@ -4127,7 +4127,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index);
@@ -4137,7 +4137,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOcrLineNlPaymentIdList();
@@ -4146,7 +4146,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index);
     /**
@@ -4154,7 +4154,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     int getOcrLineNlPaymentIdCount();
     /**
@@ -4162,7 +4162,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList();
@@ -4171,7 +4171,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index);
@@ -4181,7 +4181,7 @@ public final class Annotator {
      * Return a string containing the text from the document
      * </pre>
      *
-     * <code>string text = 23;</code>
+     * <code>string text = 23 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -4190,7 +4190,7 @@ public final class Annotator {
      * Return a string containing the text from the document
      * </pre>
      *
-     * <code>string text = 23;</code>
+     * <code>string text = 23 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -4202,7 +4202,7 @@ public final class Annotator {
      * Feedback API.
      * </pre>
      *
-     * <code>string feedback_id = 24;</code>
+     * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
      * @return The feedbackId.
      */
     java.lang.String getFeedbackId();
@@ -4212,7 +4212,7 @@ public final class Annotator {
      * Feedback API.
      * </pre>
      *
-     * <code>string feedback_id = 24;</code>
+     * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
      * @return The bytes for feedbackId.
      */
     com.google.protobuf.ByteString
@@ -4225,7 +4225,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getIbanList();
@@ -4236,7 +4236,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getIban(int index);
     /**
@@ -4246,7 +4246,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     int getIbanCount();
     /**
@@ -4256,7 +4256,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getIbanOrBuilderList();
@@ -4267,7 +4267,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
         int index);
@@ -4278,7 +4278,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.LineCandidate> 
         getLinesList();
@@ -4288,7 +4288,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     ssn.type.CandidateOuterClass.LineCandidate getLines(int index);
     /**
@@ -4297,7 +4297,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     int getLinesCount();
     /**
@@ -4306,7 +4306,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
         getLinesOrBuilderList();
@@ -4316,7 +4316,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
         int index);
@@ -4326,7 +4326,7 @@ public final class Annotator {
      * Base64 encoded PNG image  of the first page of PDF document sent in request
      * </pre>
      *
-     * <code>string preview = 27;</code>
+     * <code>string preview = 27 [json_name = "preview"];</code>
      * @return The preview.
      */
     java.lang.String getPreview();
@@ -4335,7 +4335,7 @@ public final class Annotator {
      * Base64 encoded PNG image  of the first page of PDF document sent in request
      * </pre>
      *
-     * <code>string preview = 27;</code>
+     * <code>string preview = 27 [json_name = "preview"];</code>
      * @return The bytes for preview.
      */
     com.google.protobuf.ByteString
@@ -4346,7 +4346,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getBankAccountNumberList();
@@ -4355,7 +4355,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index);
     /**
@@ -4363,7 +4363,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     int getBankAccountNumberCount();
     /**
@@ -4371,7 +4371,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getBankAccountNumberOrBuilderList();
@@ -4380,7 +4380,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
         int index);
@@ -4390,7 +4390,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getBankRegistrationNumberList();
@@ -4399,7 +4399,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index);
     /**
@@ -4407,7 +4407,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     int getBankRegistrationNumberCount();
     /**
@@ -4415,7 +4415,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getBankRegistrationNumberOrBuilderList();
@@ -4424,7 +4424,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
         int index);
@@ -4434,7 +4434,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getBicList();
@@ -4443,7 +4443,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getBic(int index);
     /**
@@ -4451,7 +4451,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     int getBicCount();
     /**
@@ -4459,7 +4459,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getBicOrBuilderList();
@@ -4468,7 +4468,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
         int index);
@@ -4478,7 +4478,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getDocumentNumberList();
@@ -4487,7 +4487,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index);
     /**
@@ -4495,7 +4495,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     int getDocumentNumberCount();
     /**
@@ -4503,7 +4503,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentNumberOrBuilderList();
@@ -4512,7 +4512,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
         int index);
@@ -4522,7 +4522,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getDocumentDateList();
@@ -4531,7 +4531,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index);
     /**
@@ -4539,7 +4539,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     int getDocumentDateCount();
     /**
@@ -4547,7 +4547,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getDocumentDateOrBuilderList();
@@ -4556,7 +4556,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
         int index);
@@ -4566,7 +4566,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getOrderNumberList();
@@ -4575,7 +4575,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index);
     /**
@@ -4583,7 +4583,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     int getOrderNumberCount();
     /**
@@ -4591,7 +4591,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getOrderNumberOrBuilderList();
@@ -4600,7 +4600,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
         int index);
@@ -4610,7 +4610,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierNameList();
@@ -4619,7 +4619,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierName(int index);
     /**
@@ -4627,7 +4627,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     int getSupplierNameCount();
     /**
@@ -4635,7 +4635,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierNameOrBuilderList();
@@ -4644,7 +4644,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
         int index);
@@ -4655,7 +4655,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierVatNumberList();
@@ -4665,7 +4665,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index);
     /**
@@ -4674,7 +4674,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     int getSupplierVatNumberCount();
     /**
@@ -4683,7 +4683,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierVatNumberOrBuilderList();
@@ -4693,7 +4693,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
         int index);
@@ -4704,7 +4704,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierOrganisationNumberList();
@@ -4714,7 +4714,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index);
     /**
@@ -4723,7 +4723,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     int getSupplierOrganisationNumberCount();
     /**
@@ -4732,7 +4732,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierOrganisationNumberOrBuilderList();
@@ -4742,7 +4742,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
         int index);
@@ -4753,7 +4753,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getSupplierAddressList();
@@ -4763,7 +4763,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index);
     /**
@@ -4772,7 +4772,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     int getSupplierAddressCount();
     /**
@@ -4781,7 +4781,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getSupplierAddressOrBuilderList();
@@ -4791,7 +4791,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
         int index);
@@ -5347,7 +5347,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderDateList() {
@@ -5360,7 +5360,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5374,7 +5374,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public int getOrderDateCount() {
@@ -5387,7 +5387,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOrderDate(int index) {
@@ -5400,7 +5400,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
@@ -5417,7 +5417,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentDueDateList() {
@@ -5430,7 +5430,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5444,7 +5444,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public int getPaymentDueDateCount() {
@@ -5457,7 +5457,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index) {
@@ -5470,7 +5470,7 @@ public final class Annotator {
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+     * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
@@ -5487,7 +5487,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCurrencyList() {
@@ -5500,7 +5500,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5514,7 +5514,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public int getCurrencyCount() {
@@ -5527,7 +5527,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCurrency(int index) {
@@ -5540,7 +5540,7 @@ public final class Annotator {
      * Example: "NOK"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate currency = 3;</code>
+     * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
@@ -5557,7 +5557,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalVatList() {
@@ -5570,7 +5570,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5584,7 +5584,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public int getTotalVatCount() {
@@ -5597,7 +5597,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalVat(int index) {
@@ -5610,7 +5610,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+     * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
@@ -5627,7 +5627,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalInclVatList() {
@@ -5640,7 +5640,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5654,7 +5654,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public int getTotalInclVatCount() {
@@ -5667,7 +5667,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index) {
@@ -5680,7 +5680,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+     * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
@@ -5697,7 +5697,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalExclVatList() {
@@ -5710,7 +5710,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5724,7 +5724,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public int getTotalExclVatCount() {
@@ -5737,7 +5737,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index) {
@@ -5750,7 +5750,7 @@ public final class Annotator {
      * Example: "10.0" or "11.11"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+     * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
@@ -5763,7 +5763,7 @@ public final class Annotator {
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5773,7 +5773,7 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCorporateIdList() {
@@ -5782,7 +5782,7 @@ public final class Annotator {
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5792,7 +5792,7 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5802,7 +5802,7 @@ public final class Annotator {
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5812,7 +5812,7 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public int getSupplierCorporateIdCount() {
@@ -5821,7 +5821,7 @@ public final class Annotator {
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5831,7 +5831,7 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index) {
@@ -5840,7 +5840,7 @@ public final class Annotator {
     /**
      * <pre>
      * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
      * supplierCorporateId
      * The company VAT number
      * Example: "123456789B01" (for Dutch companies)
@@ -5850,7 +5850,7 @@ public final class Annotator {
      * to find out which VAT number belongs to the supplier of the invoice.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
@@ -5867,7 +5867,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCountryCodeList() {
@@ -5880,7 +5880,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5894,7 +5894,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public int getSupplierCountryCodeCount() {
@@ -5907,7 +5907,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index) {
@@ -5920,7 +5920,7 @@ public final class Annotator {
      * Example: "NO"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+     * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
@@ -5936,7 +5936,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentTypeList() {
@@ -5948,7 +5948,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -5961,7 +5961,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public int getDocumentTypeCount() {
@@ -5973,7 +5973,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentType(int index) {
@@ -5985,7 +5985,7 @@ public final class Annotator {
      * Either "Receipt" or "Invoice"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+     * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
@@ -6001,7 +6001,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentMethodList() {
@@ -6013,7 +6013,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6026,7 +6026,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public int getPaymentMethodCount() {
@@ -6038,7 +6038,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index) {
@@ -6050,7 +6050,7 @@ public final class Annotator {
      * Either "Cash" or "CreditCard"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+     * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
@@ -6067,7 +6067,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardLastFourList() {
@@ -6080,7 +6080,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6094,7 +6094,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public int getCreditCardLastFourCount() {
@@ -6107,7 +6107,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index) {
@@ -6120,7 +6120,7 @@ public final class Annotator {
      * Example: "0012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+     * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
@@ -6139,7 +6139,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInvoiceNumberList() {
@@ -6154,7 +6154,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6170,7 +6170,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public int getInvoiceNumberCount() {
@@ -6185,7 +6185,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index) {
@@ -6200,7 +6200,7 @@ public final class Annotator {
      * Example: "12345-A99"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
@@ -6215,7 +6215,7 @@ public final class Annotator {
      * Return text annotation
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
      * @return Whether the textAnnotation field is set.
      */
     @java.lang.Override
@@ -6227,7 +6227,7 @@ public final class Annotator {
      * Return text annotation
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
      * @return The textAnnotation.
      */
     @java.lang.Override
@@ -6239,7 +6239,7 @@ public final class Annotator {
      * Return text annotation
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
@@ -6253,7 +6253,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkTypeList() {
@@ -6264,7 +6264,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6276,7 +6276,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public int getOcrLineDkTypeCount() {
@@ -6287,7 +6287,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index) {
@@ -6298,7 +6298,7 @@ public final class Annotator {
      * example: "71"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
@@ -6313,7 +6313,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkPaymentIdList() {
@@ -6324,7 +6324,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6336,7 +6336,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineDkPaymentIdCount() {
@@ -6347,7 +6347,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index) {
@@ -6358,7 +6358,7 @@ public final class Annotator {
      * example: "000002879094031"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
@@ -6373,7 +6373,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkCreditorIdList() {
@@ -6384,7 +6384,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6396,7 +6396,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public int getOcrLineDkCreditorIdCount() {
@@ -6407,7 +6407,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index) {
@@ -6418,7 +6418,7 @@ public final class Annotator {
      *example: "86570807"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
@@ -6433,7 +6433,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePaymentIdList() {
@@ -6444,7 +6444,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6456,7 +6456,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineSePaymentIdCount() {
@@ -6467,7 +6467,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index) {
@@ -6478,7 +6478,7 @@ public final class Annotator {
      * example: "050765098"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
@@ -6493,7 +6493,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSeBankgiroCreditorIdList() {
@@ -6504,7 +6504,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6516,7 +6516,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public int getOcrLineSeBankgiroCreditorIdCount() {
@@ -6527,7 +6527,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index) {
@@ -6538,7 +6538,7 @@ public final class Annotator {
      * example: "2654507"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
@@ -6553,7 +6553,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePlusgiroCreditorIdList() {
@@ -6564,7 +6564,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6576,7 +6576,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public int getOcrLineSePlusgiroCreditorIdCount() {
@@ -6587,7 +6587,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index) {
@@ -6598,7 +6598,7 @@ public final class Annotator {
      * example: "5000872"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
@@ -6613,7 +6613,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNoPaymentIdList() {
@@ -6624,7 +6624,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6636,7 +6636,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineNoPaymentIdCount() {
@@ -6647,7 +6647,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index) {
@@ -6658,7 +6658,7 @@ public final class Annotator {
      * example: "12345678903"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
@@ -6673,7 +6673,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineFiPaymentIdList() {
@@ -6684,7 +6684,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6696,7 +6696,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineFiPaymentIdCount() {
@@ -6707,7 +6707,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index) {
@@ -6718,7 +6718,7 @@ public final class Annotator {
      * example: "0817937867870002"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
@@ -6733,7 +6733,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNlPaymentIdList() {
@@ -6744,7 +6744,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6756,7 +6756,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public int getOcrLineNlPaymentIdCount() {
@@ -6767,7 +6767,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index) {
@@ -6778,7 +6778,7 @@ public final class Annotator {
      * example: "00000159220010146012"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+     * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
@@ -6793,7 +6793,7 @@ public final class Annotator {
      * Return a string containing the text from the document
      * </pre>
      *
-     * <code>string text = 23;</code>
+     * <code>string text = 23 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -6814,7 +6814,7 @@ public final class Annotator {
      * Return a string containing the text from the document
      * </pre>
      *
-     * <code>string text = 23;</code>
+     * <code>string text = 23 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -6840,7 +6840,7 @@ public final class Annotator {
      * Feedback API.
      * </pre>
      *
-     * <code>string feedback_id = 24;</code>
+     * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
      * @return The feedbackId.
      */
     @java.lang.Override
@@ -6862,7 +6862,7 @@ public final class Annotator {
      * Feedback API.
      * </pre>
      *
-     * <code>string feedback_id = 24;</code>
+     * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
      * @return The bytes for feedbackId.
      */
     @java.lang.Override
@@ -6889,7 +6889,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
@@ -6902,7 +6902,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -6916,7 +6916,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public int getIbanCount() {
@@ -6929,7 +6929,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
@@ -6942,7 +6942,7 @@ public final class Annotator {
      * example: "DK50 0040 0440 1162 43", "NO8330001234567"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
@@ -6958,7 +6958,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
@@ -6970,7 +6970,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
@@ -6983,7 +6983,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public int getLinesCount() {
@@ -6995,7 +6995,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
@@ -7007,7 +7007,7 @@ public final class Annotator {
      * to state on which page the line was found
      * </pre>
      *
-     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
@@ -7022,7 +7022,7 @@ public final class Annotator {
      * Base64 encoded PNG image  of the first page of PDF document sent in request
      * </pre>
      *
-     * <code>string preview = 27;</code>
+     * <code>string preview = 27 [json_name = "preview"];</code>
      * @return The preview.
      */
     @java.lang.Override
@@ -7043,7 +7043,7 @@ public final class Annotator {
      * Base64 encoded PNG image  of the first page of PDF document sent in request
      * </pre>
      *
-     * <code>string preview = 27;</code>
+     * <code>string preview = 27 [json_name = "preview"];</code>
      * @return The bytes for preview.
      */
     @java.lang.Override
@@ -7068,7 +7068,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankAccountNumberList() {
@@ -7079,7 +7079,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7091,7 +7091,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public int getBankAccountNumberCount() {
@@ -7102,7 +7102,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index) {
@@ -7113,7 +7113,7 @@ public final class Annotator {
      * Country specific bank account number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+     * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
@@ -7128,7 +7128,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankRegistrationNumberList() {
@@ -7139,7 +7139,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7151,7 +7151,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public int getBankRegistrationNumberCount() {
@@ -7162,7 +7162,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index) {
@@ -7173,7 +7173,7 @@ public final class Annotator {
      * Country specific bank registration number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+     * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
@@ -7188,7 +7188,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBicList() {
@@ -7199,7 +7199,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7211,7 +7211,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public int getBicCount() {
@@ -7222,7 +7222,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getBic(int index) {
@@ -7233,7 +7233,7 @@ public final class Annotator {
      * Returns business identifier code
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate bic = 30;</code>
+     * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
@@ -7248,7 +7248,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentNumberList() {
@@ -7259,7 +7259,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7271,7 +7271,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public int getDocumentNumberCount() {
@@ -7282,7 +7282,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index) {
@@ -7293,7 +7293,7 @@ public final class Annotator {
      * Represents identifier of the document
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+     * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
@@ -7308,7 +7308,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentDateList() {
@@ -7319,7 +7319,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7331,7 +7331,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public int getDocumentDateCount() {
@@ -7342,7 +7342,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index) {
@@ -7353,7 +7353,7 @@ public final class Annotator {
      * Returns document date
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+     * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
@@ -7368,7 +7368,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderNumberList() {
@@ -7379,7 +7379,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7391,7 +7391,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public int getOrderNumberCount() {
@@ -7402,7 +7402,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index) {
@@ -7413,7 +7413,7 @@ public final class Annotator {
      * Represents the identifier that supplier assigned to the order
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+     * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
@@ -7428,7 +7428,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierNameList() {
@@ -7439,7 +7439,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7451,7 +7451,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public int getSupplierNameCount() {
@@ -7462,7 +7462,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierName(int index) {
@@ -7473,7 +7473,7 @@ public final class Annotator {
      * Returns supplier name
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+     * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
@@ -7489,7 +7489,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierVatNumberList() {
@@ -7501,7 +7501,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7514,7 +7514,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public int getSupplierVatNumberCount() {
@@ -7526,7 +7526,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index) {
@@ -7538,7 +7538,7 @@ public final class Annotator {
      * Returns supplier VAT number
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+     * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
@@ -7554,7 +7554,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierOrganisationNumberList() {
@@ -7566,7 +7566,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7579,7 +7579,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public int getSupplierOrganisationNumberCount() {
@@ -7591,7 +7591,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index) {
@@ -7603,7 +7603,7 @@ public final class Annotator {
      * Returns the business ID or organisation number of the supplier
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+     * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
@@ -7619,7 +7619,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierAddressList() {
@@ -7631,7 +7631,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -7644,7 +7644,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public int getSupplierAddressCount() {
@@ -7656,7 +7656,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index) {
@@ -7668,7 +7668,7 @@ public final class Annotator {
      * Returns supplier address
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+     * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
@@ -9880,7 +9880,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderDateList() {
         if (orderDateBuilder_ == null) {
@@ -9896,7 +9896,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public int getOrderDateCount() {
         if (orderDateBuilder_ == null) {
@@ -9912,7 +9912,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOrderDate(int index) {
         if (orderDateBuilder_ == null) {
@@ -9928,7 +9928,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder setOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -9951,7 +9951,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder setOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -9971,7 +9971,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(ssn.type.CandidateOuterClass.Candidate value) {
         if (orderDateBuilder_ == null) {
@@ -9993,7 +9993,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -10016,7 +10016,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10036,7 +10036,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addOrderDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10056,7 +10056,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder addAllOrderDate(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -10077,7 +10077,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder clearOrderDate() {
         if (orderDateBuilder_ == null) {
@@ -10096,7 +10096,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public Builder removeOrderDate(int index) {
         if (orderDateBuilder_ == null) {
@@ -10115,7 +10115,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOrderDateBuilder(
           int index) {
@@ -10128,7 +10128,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderDateOrBuilder(
           int index) {
@@ -10144,7 +10144,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOrderDateOrBuilderList() {
@@ -10161,7 +10161,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderDateBuilder() {
         return getOrderDateFieldBuilder().addBuilder(
@@ -10174,7 +10174,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderDateBuilder(
           int index) {
@@ -10188,7 +10188,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_date = 1;</code>
+       * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOrderDateBuilderList() {
@@ -10228,7 +10228,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentDueDateList() {
         if (paymentDueDateBuilder_ == null) {
@@ -10244,7 +10244,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public int getPaymentDueDateCount() {
         if (paymentDueDateBuilder_ == null) {
@@ -10260,7 +10260,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getPaymentDueDate(int index) {
         if (paymentDueDateBuilder_ == null) {
@@ -10276,7 +10276,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder setPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -10299,7 +10299,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder setPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10319,7 +10319,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(ssn.type.CandidateOuterClass.Candidate value) {
         if (paymentDueDateBuilder_ == null) {
@@ -10341,7 +10341,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -10364,7 +10364,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10384,7 +10384,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addPaymentDueDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10404,7 +10404,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder addAllPaymentDueDate(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -10425,7 +10425,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder clearPaymentDueDate() {
         if (paymentDueDateBuilder_ == null) {
@@ -10444,7 +10444,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public Builder removePaymentDueDate(int index) {
         if (paymentDueDateBuilder_ == null) {
@@ -10463,7 +10463,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getPaymentDueDateBuilder(
           int index) {
@@ -10476,7 +10476,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentDueDateOrBuilder(
           int index) {
@@ -10492,7 +10492,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getPaymentDueDateOrBuilderList() {
@@ -10509,7 +10509,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentDueDateBuilder() {
         return getPaymentDueDateFieldBuilder().addBuilder(
@@ -10522,7 +10522,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentDueDateBuilder(
           int index) {
@@ -10536,7 +10536,7 @@ public final class Annotator {
        * Example: "2019-12-31"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_due_date = 2;</code>
+       * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getPaymentDueDateBuilderList() {
@@ -10576,7 +10576,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCurrencyList() {
         if (currencyBuilder_ == null) {
@@ -10592,7 +10592,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public int getCurrencyCount() {
         if (currencyBuilder_ == null) {
@@ -10608,7 +10608,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getCurrency(int index) {
         if (currencyBuilder_ == null) {
@@ -10624,7 +10624,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder setCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -10647,7 +10647,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder setCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10667,7 +10667,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(ssn.type.CandidateOuterClass.Candidate value) {
         if (currencyBuilder_ == null) {
@@ -10689,7 +10689,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -10712,7 +10712,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10732,7 +10732,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addCurrency(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -10752,7 +10752,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder addAllCurrency(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -10773,7 +10773,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder clearCurrency() {
         if (currencyBuilder_ == null) {
@@ -10792,7 +10792,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public Builder removeCurrency(int index) {
         if (currencyBuilder_ == null) {
@@ -10811,7 +10811,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getCurrencyBuilder(
           int index) {
@@ -10824,7 +10824,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getCurrencyOrBuilder(
           int index) {
@@ -10840,7 +10840,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getCurrencyOrBuilderList() {
@@ -10857,7 +10857,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCurrencyBuilder() {
         return getCurrencyFieldBuilder().addBuilder(
@@ -10870,7 +10870,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCurrencyBuilder(
           int index) {
@@ -10884,7 +10884,7 @@ public final class Annotator {
        * Example: "NOK"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate currency = 3;</code>
+       * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getCurrencyBuilderList() {
@@ -10924,7 +10924,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalVatList() {
         if (totalVatBuilder_ == null) {
@@ -10940,7 +10940,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public int getTotalVatCount() {
         if (totalVatBuilder_ == null) {
@@ -10956,7 +10956,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getTotalVat(int index) {
         if (totalVatBuilder_ == null) {
@@ -10972,7 +10972,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder setTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -10995,7 +10995,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder setTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11015,7 +11015,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(ssn.type.CandidateOuterClass.Candidate value) {
         if (totalVatBuilder_ == null) {
@@ -11037,7 +11037,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -11060,7 +11060,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11080,7 +11080,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addTotalVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11100,7 +11100,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder addAllTotalVat(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -11121,7 +11121,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder clearTotalVat() {
         if (totalVatBuilder_ == null) {
@@ -11140,7 +11140,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public Builder removeTotalVat(int index) {
         if (totalVatBuilder_ == null) {
@@ -11159,7 +11159,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getTotalVatBuilder(
           int index) {
@@ -11172,7 +11172,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalVatOrBuilder(
           int index) {
@@ -11188,7 +11188,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getTotalVatOrBuilderList() {
@@ -11205,7 +11205,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalVatBuilder() {
         return getTotalVatFieldBuilder().addBuilder(
@@ -11218,7 +11218,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalVatBuilder(
           int index) {
@@ -11232,7 +11232,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_vat = 4;</code>
+       * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getTotalVatBuilderList() {
@@ -11272,7 +11272,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalInclVatList() {
         if (totalInclVatBuilder_ == null) {
@@ -11288,7 +11288,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public int getTotalInclVatCount() {
         if (totalInclVatBuilder_ == null) {
@@ -11304,7 +11304,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getTotalInclVat(int index) {
         if (totalInclVatBuilder_ == null) {
@@ -11320,7 +11320,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder setTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -11343,7 +11343,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder setTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11363,7 +11363,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(ssn.type.CandidateOuterClass.Candidate value) {
         if (totalInclVatBuilder_ == null) {
@@ -11385,7 +11385,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -11408,7 +11408,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11428,7 +11428,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addTotalInclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11448,7 +11448,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder addAllTotalInclVat(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -11469,7 +11469,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder clearTotalInclVat() {
         if (totalInclVatBuilder_ == null) {
@@ -11488,7 +11488,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public Builder removeTotalInclVat(int index) {
         if (totalInclVatBuilder_ == null) {
@@ -11507,7 +11507,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getTotalInclVatBuilder(
           int index) {
@@ -11520,7 +11520,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalInclVatOrBuilder(
           int index) {
@@ -11536,7 +11536,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getTotalInclVatOrBuilderList() {
@@ -11553,7 +11553,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalInclVatBuilder() {
         return getTotalInclVatFieldBuilder().addBuilder(
@@ -11566,7 +11566,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalInclVatBuilder(
           int index) {
@@ -11580,7 +11580,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_incl_vat = 5;</code>
+       * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getTotalInclVatBuilderList() {
@@ -11620,7 +11620,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getTotalExclVatList() {
         if (totalExclVatBuilder_ == null) {
@@ -11636,7 +11636,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public int getTotalExclVatCount() {
         if (totalExclVatBuilder_ == null) {
@@ -11652,7 +11652,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getTotalExclVat(int index) {
         if (totalExclVatBuilder_ == null) {
@@ -11668,7 +11668,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder setTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -11691,7 +11691,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder setTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11711,7 +11711,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(ssn.type.CandidateOuterClass.Candidate value) {
         if (totalExclVatBuilder_ == null) {
@@ -11733,7 +11733,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -11756,7 +11756,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11776,7 +11776,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addTotalExclVat(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -11796,7 +11796,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder addAllTotalExclVat(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -11817,7 +11817,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder clearTotalExclVat() {
         if (totalExclVatBuilder_ == null) {
@@ -11836,7 +11836,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public Builder removeTotalExclVat(int index) {
         if (totalExclVatBuilder_ == null) {
@@ -11855,7 +11855,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getTotalExclVatBuilder(
           int index) {
@@ -11868,7 +11868,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getTotalExclVatOrBuilder(
           int index) {
@@ -11884,7 +11884,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getTotalExclVatOrBuilderList() {
@@ -11901,7 +11901,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalExclVatBuilder() {
         return getTotalExclVatFieldBuilder().addBuilder(
@@ -11914,7 +11914,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addTotalExclVatBuilder(
           int index) {
@@ -11928,7 +11928,7 @@ public final class Annotator {
        * Example: "10.0" or "11.11"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate total_excl_vat = 6;</code>
+       * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getTotalExclVatBuilderList() {
@@ -11964,7 +11964,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -11974,7 +11974,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCorporateIdList() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -11986,7 +11986,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -11996,7 +11996,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public int getSupplierCorporateIdCount() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -12008,7 +12008,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12018,7 +12018,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierCorporateId(int index) {
         if (supplierCorporateIdBuilder_ == null) {
@@ -12030,7 +12030,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12040,7 +12040,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder setSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12059,7 +12059,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12069,7 +12069,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder setSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12085,7 +12085,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12095,7 +12095,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierCorporateIdBuilder_ == null) {
@@ -12113,7 +12113,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12123,7 +12123,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12142,7 +12142,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12152,7 +12152,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12168,7 +12168,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12178,7 +12178,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addSupplierCorporateId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12194,7 +12194,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12204,7 +12204,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder addAllSupplierCorporateId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -12221,7 +12221,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12231,7 +12231,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder clearSupplierCorporateId() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -12246,7 +12246,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12256,7 +12256,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public Builder removeSupplierCorporateId(int index) {
         if (supplierCorporateIdBuilder_ == null) {
@@ -12271,7 +12271,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12281,7 +12281,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierCorporateIdBuilder(
           int index) {
@@ -12290,7 +12290,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12300,7 +12300,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
           int index) {
@@ -12312,7 +12312,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12322,7 +12322,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierCorporateIdOrBuilderList() {
@@ -12335,7 +12335,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12345,7 +12345,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCorporateIdBuilder() {
         return getSupplierCorporateIdFieldBuilder().addBuilder(
@@ -12354,7 +12354,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12364,7 +12364,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCorporateIdBuilder(
           int index) {
@@ -12374,7 +12374,7 @@ public final class Annotator {
       /**
        * <pre>
        * [DEPRECATED]
-       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+       * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
        * supplierCorporateId
        * The company VAT number
        * Example: "123456789B01" (for Dutch companies)
@@ -12384,7 +12384,7 @@ public final class Annotator {
        * to find out which VAT number belongs to the supplier of the invoice.
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7;</code>
+       * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierCorporateIdBuilderList() {
@@ -12424,7 +12424,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierCountryCodeList() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -12440,7 +12440,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public int getSupplierCountryCodeCount() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -12456,7 +12456,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierCountryCode(int index) {
         if (supplierCountryCodeBuilder_ == null) {
@@ -12472,7 +12472,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder setSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12495,7 +12495,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder setSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12515,7 +12515,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierCountryCodeBuilder_ == null) {
@@ -12537,7 +12537,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12560,7 +12560,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12580,7 +12580,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addSupplierCountryCode(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12600,7 +12600,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder addAllSupplierCountryCode(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -12621,7 +12621,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder clearSupplierCountryCode() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -12640,7 +12640,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public Builder removeSupplierCountryCode(int index) {
         if (supplierCountryCodeBuilder_ == null) {
@@ -12659,7 +12659,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierCountryCodeBuilder(
           int index) {
@@ -12672,7 +12672,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierCountryCodeOrBuilder(
           int index) {
@@ -12688,7 +12688,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierCountryCodeOrBuilderList() {
@@ -12705,7 +12705,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCountryCodeBuilder() {
         return getSupplierCountryCodeFieldBuilder().addBuilder(
@@ -12718,7 +12718,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierCountryCodeBuilder(
           int index) {
@@ -12732,7 +12732,7 @@ public final class Annotator {
        * Example: "NO"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_country_code = 8;</code>
+       * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierCountryCodeBuilderList() {
@@ -12771,7 +12771,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentTypeList() {
         if (documentTypeBuilder_ == null) {
@@ -12786,7 +12786,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public int getDocumentTypeCount() {
         if (documentTypeBuilder_ == null) {
@@ -12801,7 +12801,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getDocumentType(int index) {
         if (documentTypeBuilder_ == null) {
@@ -12816,7 +12816,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder setDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12838,7 +12838,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder setDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12857,7 +12857,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(ssn.type.CandidateOuterClass.Candidate value) {
         if (documentTypeBuilder_ == null) {
@@ -12878,7 +12878,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -12900,7 +12900,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12919,7 +12919,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addDocumentType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -12938,7 +12938,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder addAllDocumentType(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -12958,7 +12958,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder clearDocumentType() {
         if (documentTypeBuilder_ == null) {
@@ -12976,7 +12976,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public Builder removeDocumentType(int index) {
         if (documentTypeBuilder_ == null) {
@@ -12994,7 +12994,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentTypeBuilder(
           int index) {
@@ -13006,7 +13006,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentTypeOrBuilder(
           int index) {
@@ -13021,7 +13021,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getDocumentTypeOrBuilderList() {
@@ -13037,7 +13037,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentTypeBuilder() {
         return getDocumentTypeFieldBuilder().addBuilder(
@@ -13049,7 +13049,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentTypeBuilder(
           int index) {
@@ -13062,7 +13062,7 @@ public final class Annotator {
        * Either "Receipt" or "Invoice"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_type = 9;</code>
+       * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getDocumentTypeBuilderList() {
@@ -13101,7 +13101,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getPaymentMethodList() {
         if (paymentMethodBuilder_ == null) {
@@ -13116,7 +13116,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public int getPaymentMethodCount() {
         if (paymentMethodBuilder_ == null) {
@@ -13131,7 +13131,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getPaymentMethod(int index) {
         if (paymentMethodBuilder_ == null) {
@@ -13146,7 +13146,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder setPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13168,7 +13168,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder setPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13187,7 +13187,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(ssn.type.CandidateOuterClass.Candidate value) {
         if (paymentMethodBuilder_ == null) {
@@ -13208,7 +13208,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13230,7 +13230,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13249,7 +13249,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addPaymentMethod(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13268,7 +13268,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder addAllPaymentMethod(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -13288,7 +13288,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder clearPaymentMethod() {
         if (paymentMethodBuilder_ == null) {
@@ -13306,7 +13306,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public Builder removePaymentMethod(int index) {
         if (paymentMethodBuilder_ == null) {
@@ -13324,7 +13324,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getPaymentMethodBuilder(
           int index) {
@@ -13336,7 +13336,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getPaymentMethodOrBuilder(
           int index) {
@@ -13351,7 +13351,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getPaymentMethodOrBuilderList() {
@@ -13367,7 +13367,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentMethodBuilder() {
         return getPaymentMethodFieldBuilder().addBuilder(
@@ -13379,7 +13379,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addPaymentMethodBuilder(
           int index) {
@@ -13392,7 +13392,7 @@ public final class Annotator {
        * Either "Cash" or "CreditCard"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate payment_method = 10;</code>
+       * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getPaymentMethodBuilderList() {
@@ -13432,7 +13432,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCreditCardLastFourList() {
         if (creditCardLastFourBuilder_ == null) {
@@ -13448,7 +13448,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public int getCreditCardLastFourCount() {
         if (creditCardLastFourBuilder_ == null) {
@@ -13464,7 +13464,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getCreditCardLastFour(int index) {
         if (creditCardLastFourBuilder_ == null) {
@@ -13480,7 +13480,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder setCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13503,7 +13503,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder setCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13523,7 +13523,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(ssn.type.CandidateOuterClass.Candidate value) {
         if (creditCardLastFourBuilder_ == null) {
@@ -13545,7 +13545,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13568,7 +13568,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13588,7 +13588,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addCreditCardLastFour(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13608,7 +13608,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder addAllCreditCardLastFour(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -13629,7 +13629,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder clearCreditCardLastFour() {
         if (creditCardLastFourBuilder_ == null) {
@@ -13648,7 +13648,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public Builder removeCreditCardLastFour(int index) {
         if (creditCardLastFourBuilder_ == null) {
@@ -13667,7 +13667,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getCreditCardLastFourBuilder(
           int index) {
@@ -13680,7 +13680,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
           int index) {
@@ -13696,7 +13696,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getCreditCardLastFourOrBuilderList() {
@@ -13713,7 +13713,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardLastFourBuilder() {
         return getCreditCardLastFourFieldBuilder().addBuilder(
@@ -13726,7 +13726,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addCreditCardLastFourBuilder(
           int index) {
@@ -13740,7 +13740,7 @@ public final class Annotator {
        * Example: "0012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11;</code>
+       * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getCreditCardLastFourBuilderList() {
@@ -13782,7 +13782,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInvoiceNumberList() {
         if (invoiceNumberBuilder_ == null) {
@@ -13800,7 +13800,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public int getInvoiceNumberCount() {
         if (invoiceNumberBuilder_ == null) {
@@ -13818,7 +13818,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getInvoiceNumber(int index) {
         if (invoiceNumberBuilder_ == null) {
@@ -13836,7 +13836,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder setInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13861,7 +13861,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder setInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13883,7 +13883,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (invoiceNumberBuilder_ == null) {
@@ -13907,7 +13907,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -13932,7 +13932,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13954,7 +13954,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addInvoiceNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -13976,7 +13976,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder addAllInvoiceNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -13999,7 +13999,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder clearInvoiceNumber() {
         if (invoiceNumberBuilder_ == null) {
@@ -14020,7 +14020,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public Builder removeInvoiceNumber(int index) {
         if (invoiceNumberBuilder_ == null) {
@@ -14041,7 +14041,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getInvoiceNumberBuilder(
           int index) {
@@ -14056,7 +14056,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getInvoiceNumberOrBuilder(
           int index) {
@@ -14074,7 +14074,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getInvoiceNumberOrBuilderList() {
@@ -14093,7 +14093,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addInvoiceNumberBuilder() {
         return getInvoiceNumberFieldBuilder().addBuilder(
@@ -14108,7 +14108,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addInvoiceNumberBuilder(
           int index) {
@@ -14124,7 +14124,7 @@ public final class Annotator {
        * Example: "12345-A99"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate invoice_number = 12;</code>
+       * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getInvoiceNumberBuilderList() {
@@ -14153,7 +14153,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
@@ -14164,7 +14164,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        * @return The textAnnotation.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
@@ -14179,7 +14179,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public Builder setTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -14199,7 +14199,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public Builder setTextAnnotation(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
@@ -14217,7 +14217,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public Builder mergeTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -14239,7 +14239,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public Builder clearTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -14257,7 +14257,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTextAnnotationBuilder() {
         
@@ -14269,7 +14269,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
         if (textAnnotationBuilder_ != null) {
@@ -14284,7 +14284,7 @@ public final class Annotator {
        * Return text annotation
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation text_annotation = 13;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> 
@@ -14317,7 +14317,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkTypeList() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -14331,7 +14331,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public int getOcrLineDkTypeCount() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -14345,7 +14345,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineDkType(int index) {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -14359,7 +14359,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder setOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14380,7 +14380,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder setOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14398,7 +14398,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -14418,7 +14418,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14439,7 +14439,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14457,7 +14457,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addOcrLineDkType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14475,7 +14475,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder addAllOcrLineDkType(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -14494,7 +14494,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder clearOcrLineDkType() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -14511,7 +14511,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public Builder removeOcrLineDkType(int index) {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -14528,7 +14528,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineDkTypeBuilder(
           int index) {
@@ -14539,7 +14539,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkTypeOrBuilder(
           int index) {
@@ -14553,7 +14553,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineDkTypeOrBuilderList() {
@@ -14568,7 +14568,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkTypeBuilder() {
         return getOcrLineDkTypeFieldBuilder().addBuilder(
@@ -14579,7 +14579,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkTypeBuilder(
           int index) {
@@ -14591,7 +14591,7 @@ public final class Annotator {
        * example: "71"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineDkTypeBuilderList() {
@@ -14629,7 +14629,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkPaymentIdList() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -14643,7 +14643,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public int getOcrLineDkPaymentIdCount() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -14657,7 +14657,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineDkPaymentId(int index) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -14671,7 +14671,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder setOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14692,7 +14692,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder setOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14710,7 +14710,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -14730,7 +14730,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -14751,7 +14751,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14769,7 +14769,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addOcrLineDkPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -14787,7 +14787,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder addAllOcrLineDkPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -14806,7 +14806,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder clearOcrLineDkPaymentId() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -14823,7 +14823,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder removeOcrLineDkPaymentId(int index) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -14840,7 +14840,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineDkPaymentIdBuilder(
           int index) {
@@ -14851,7 +14851,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkPaymentIdOrBuilder(
           int index) {
@@ -14865,7 +14865,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineDkPaymentIdOrBuilderList() {
@@ -14880,7 +14880,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkPaymentIdBuilder() {
         return getOcrLineDkPaymentIdFieldBuilder().addBuilder(
@@ -14891,7 +14891,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkPaymentIdBuilder(
           int index) {
@@ -14903,7 +14903,7 @@ public final class Annotator {
        * example: "000002879094031"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineDkPaymentIdBuilderList() {
@@ -14941,7 +14941,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineDkCreditorIdList() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -14955,7 +14955,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public int getOcrLineDkCreditorIdCount() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -14969,7 +14969,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineDkCreditorId(int index) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -14983,7 +14983,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder setOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15004,7 +15004,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder setOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15022,7 +15022,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -15042,7 +15042,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15063,7 +15063,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15081,7 +15081,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addOcrLineDkCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15099,7 +15099,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder addAllOcrLineDkCreditorId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -15118,7 +15118,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder clearOcrLineDkCreditorId() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -15135,7 +15135,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder removeOcrLineDkCreditorId(int index) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -15152,7 +15152,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineDkCreditorIdBuilder(
           int index) {
@@ -15163,7 +15163,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineDkCreditorIdOrBuilder(
           int index) {
@@ -15177,7 +15177,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineDkCreditorIdOrBuilderList() {
@@ -15192,7 +15192,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkCreditorIdBuilder() {
         return getOcrLineDkCreditorIdFieldBuilder().addBuilder(
@@ -15203,7 +15203,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineDkCreditorIdBuilder(
           int index) {
@@ -15215,7 +15215,7 @@ public final class Annotator {
        *example: "86570807"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineDkCreditorIdBuilderList() {
@@ -15253,7 +15253,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePaymentIdList() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -15267,7 +15267,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public int getOcrLineSePaymentIdCount() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -15281,7 +15281,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineSePaymentId(int index) {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -15295,7 +15295,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder setOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15316,7 +15316,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder setOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15334,7 +15334,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -15354,7 +15354,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15375,7 +15375,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15393,7 +15393,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addOcrLineSePaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15411,7 +15411,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder addAllOcrLineSePaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -15430,7 +15430,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder clearOcrLineSePaymentId() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -15447,7 +15447,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder removeOcrLineSePaymentId(int index) {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -15464,7 +15464,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineSePaymentIdBuilder(
           int index) {
@@ -15475,7 +15475,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePaymentIdOrBuilder(
           int index) {
@@ -15489,7 +15489,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineSePaymentIdOrBuilderList() {
@@ -15504,7 +15504,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePaymentIdBuilder() {
         return getOcrLineSePaymentIdFieldBuilder().addBuilder(
@@ -15515,7 +15515,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePaymentIdBuilder(
           int index) {
@@ -15527,7 +15527,7 @@ public final class Annotator {
        * example: "050765098"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineSePaymentIdBuilderList() {
@@ -15565,7 +15565,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSeBankgiroCreditorIdList() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -15579,7 +15579,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public int getOcrLineSeBankgiroCreditorIdCount() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -15593,7 +15593,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineSeBankgiroCreditorId(int index) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -15607,7 +15607,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder setOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15628,7 +15628,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder setOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15646,7 +15646,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -15666,7 +15666,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15687,7 +15687,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15705,7 +15705,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15723,7 +15723,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder addAllOcrLineSeBankgiroCreditorId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -15742,7 +15742,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder clearOcrLineSeBankgiroCreditorId() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -15759,7 +15759,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder removeOcrLineSeBankgiroCreditorId(int index) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -15776,7 +15776,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineSeBankgiroCreditorIdBuilder(
           int index) {
@@ -15787,7 +15787,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
           int index) {
@@ -15801,7 +15801,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineSeBankgiroCreditorIdOrBuilderList() {
@@ -15816,7 +15816,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSeBankgiroCreditorIdBuilder() {
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().addBuilder(
@@ -15827,7 +15827,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSeBankgiroCreditorIdBuilder(
           int index) {
@@ -15839,7 +15839,7 @@ public final class Annotator {
        * example: "2654507"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineSeBankgiroCreditorIdBuilderList() {
@@ -15877,7 +15877,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineSePlusgiroCreditorIdList() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -15891,7 +15891,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public int getOcrLineSePlusgiroCreditorIdCount() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -15905,7 +15905,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineSePlusgiroCreditorId(int index) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -15919,7 +15919,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder setOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15940,7 +15940,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder setOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -15958,7 +15958,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -15978,7 +15978,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -15999,7 +15999,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16017,7 +16017,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16035,7 +16035,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder addAllOcrLineSePlusgiroCreditorId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16054,7 +16054,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder clearOcrLineSePlusgiroCreditorId() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16071,7 +16071,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder removeOcrLineSePlusgiroCreditorId(int index) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -16088,7 +16088,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineSePlusgiroCreditorIdBuilder(
           int index) {
@@ -16099,7 +16099,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
           int index) {
@@ -16113,7 +16113,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineSePlusgiroCreditorIdOrBuilderList() {
@@ -16128,7 +16128,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePlusgiroCreditorIdBuilder() {
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().addBuilder(
@@ -16139,7 +16139,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineSePlusgiroCreditorIdBuilder(
           int index) {
@@ -16151,7 +16151,7 @@ public final class Annotator {
        * example: "5000872"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineSePlusgiroCreditorIdBuilderList() {
@@ -16189,7 +16189,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNoPaymentIdList() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16203,7 +16203,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public int getOcrLineNoPaymentIdCount() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16217,7 +16217,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineNoPaymentId(int index) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16231,7 +16231,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder setOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16252,7 +16252,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder setOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16270,7 +16270,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16290,7 +16290,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16311,7 +16311,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16329,7 +16329,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addOcrLineNoPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16347,7 +16347,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder addAllOcrLineNoPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16366,7 +16366,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder clearOcrLineNoPaymentId() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16383,7 +16383,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder removeOcrLineNoPaymentId(int index) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -16400,7 +16400,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineNoPaymentIdBuilder(
           int index) {
@@ -16411,7 +16411,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNoPaymentIdOrBuilder(
           int index) {
@@ -16425,7 +16425,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineNoPaymentIdOrBuilderList() {
@@ -16440,7 +16440,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNoPaymentIdBuilder() {
         return getOcrLineNoPaymentIdFieldBuilder().addBuilder(
@@ -16451,7 +16451,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNoPaymentIdBuilder(
           int index) {
@@ -16463,7 +16463,7 @@ public final class Annotator {
        * example: "12345678903"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineNoPaymentIdBuilderList() {
@@ -16501,7 +16501,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineFiPaymentIdList() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -16515,7 +16515,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public int getOcrLineFiPaymentIdCount() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -16529,7 +16529,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineFiPaymentId(int index) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -16543,7 +16543,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder setOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16564,7 +16564,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder setOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16582,7 +16582,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -16602,7 +16602,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16623,7 +16623,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16641,7 +16641,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addOcrLineFiPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16659,7 +16659,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder addAllOcrLineFiPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16678,7 +16678,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder clearOcrLineFiPaymentId() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -16695,7 +16695,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder removeOcrLineFiPaymentId(int index) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -16712,7 +16712,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineFiPaymentIdBuilder(
           int index) {
@@ -16723,7 +16723,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineFiPaymentIdOrBuilder(
           int index) {
@@ -16737,7 +16737,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineFiPaymentIdOrBuilderList() {
@@ -16752,7 +16752,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineFiPaymentIdBuilder() {
         return getOcrLineFiPaymentIdFieldBuilder().addBuilder(
@@ -16763,7 +16763,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineFiPaymentIdBuilder(
           int index) {
@@ -16775,7 +16775,7 @@ public final class Annotator {
        * example: "0817937867870002"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineFiPaymentIdBuilderList() {
@@ -16813,7 +16813,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOcrLineNlPaymentIdList() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -16827,7 +16827,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public int getOcrLineNlPaymentIdCount() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -16841,7 +16841,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOcrLineNlPaymentId(int index) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -16855,7 +16855,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder setOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16876,7 +16876,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder setOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16894,7 +16894,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(ssn.type.CandidateOuterClass.Candidate value) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -16914,7 +16914,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -16935,7 +16935,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16953,7 +16953,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addOcrLineNlPaymentId(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -16971,7 +16971,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder addAllOcrLineNlPaymentId(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -16990,7 +16990,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder clearOcrLineNlPaymentId() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17007,7 +17007,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder removeOcrLineNlPaymentId(int index) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -17024,7 +17024,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOcrLineNlPaymentIdBuilder(
           int index) {
@@ -17035,7 +17035,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOcrLineNlPaymentIdOrBuilder(
           int index) {
@@ -17049,7 +17049,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOcrLineNlPaymentIdOrBuilderList() {
@@ -17064,7 +17064,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNlPaymentIdBuilder() {
         return getOcrLineNlPaymentIdFieldBuilder().addBuilder(
@@ -17075,7 +17075,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOcrLineNlPaymentIdBuilder(
           int index) {
@@ -17087,7 +17087,7 @@ public final class Annotator {
        * example: "00000159220010146012"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22;</code>
+       * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOcrLineNlPaymentIdBuilderList() {
@@ -17114,7 +17114,7 @@ public final class Annotator {
        * Return a string containing the text from the document
        * </pre>
        *
-       * <code>string text = 23;</code>
+       * <code>string text = 23 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -17134,7 +17134,7 @@ public final class Annotator {
        * Return a string containing the text from the document
        * </pre>
        *
-       * <code>string text = 23;</code>
+       * <code>string text = 23 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -17155,7 +17155,7 @@ public final class Annotator {
        * Return a string containing the text from the document
        * </pre>
        *
-       * <code>string text = 23;</code>
+       * <code>string text = 23 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -17174,7 +17174,7 @@ public final class Annotator {
        * Return a string containing the text from the document
        * </pre>
        *
-       * <code>string text = 23;</code>
+       * <code>string text = 23 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -17188,7 +17188,7 @@ public final class Annotator {
        * Return a string containing the text from the document
        * </pre>
        *
-       * <code>string text = 23;</code>
+       * <code>string text = 23 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -17211,7 +17211,7 @@ public final class Annotator {
        * Feedback API.
        * </pre>
        *
-       * <code>string feedback_id = 24;</code>
+       * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
        * @return The feedbackId.
        */
       public java.lang.String getFeedbackId() {
@@ -17232,7 +17232,7 @@ public final class Annotator {
        * Feedback API.
        * </pre>
        *
-       * <code>string feedback_id = 24;</code>
+       * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
        * @return The bytes for feedbackId.
        */
       public com.google.protobuf.ByteString
@@ -17254,7 +17254,7 @@ public final class Annotator {
        * Feedback API.
        * </pre>
        *
-       * <code>string feedback_id = 24;</code>
+       * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
        * @param value The feedbackId to set.
        * @return This builder for chaining.
        */
@@ -17274,7 +17274,7 @@ public final class Annotator {
        * Feedback API.
        * </pre>
        *
-       * <code>string feedback_id = 24;</code>
+       * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFeedbackId() {
@@ -17289,7 +17289,7 @@ public final class Annotator {
        * Feedback API.
        * </pre>
        *
-       * <code>string feedback_id = 24;</code>
+       * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
        * @param value The bytes for feedbackId to set.
        * @return This builder for chaining.
        */
@@ -17324,7 +17324,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
         if (ibanBuilder_ == null) {
@@ -17340,7 +17340,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public int getIbanCount() {
         if (ibanBuilder_ == null) {
@@ -17356,7 +17356,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
         if (ibanBuilder_ == null) {
@@ -17372,7 +17372,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder setIban(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17395,7 +17395,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder setIban(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17415,7 +17415,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder addIban(ssn.type.CandidateOuterClass.Candidate value) {
         if (ibanBuilder_ == null) {
@@ -17437,7 +17437,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder addIban(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -17460,7 +17460,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder addIban(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17480,7 +17480,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder addIban(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -17500,7 +17500,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder addAllIban(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -17521,7 +17521,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder clearIban() {
         if (ibanBuilder_ == null) {
@@ -17540,7 +17540,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public Builder removeIban(int index) {
         if (ibanBuilder_ == null) {
@@ -17559,7 +17559,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getIbanBuilder(
           int index) {
@@ -17572,7 +17572,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
           int index) {
@@ -17588,7 +17588,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getIbanOrBuilderList() {
@@ -17605,7 +17605,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addIbanBuilder() {
         return getIbanFieldBuilder().addBuilder(
@@ -17618,7 +17618,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addIbanBuilder(
           int index) {
@@ -17632,7 +17632,7 @@ public final class Annotator {
        * example: "DK50 0040 0440 1162 43", "NO8330001234567"
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getIbanBuilderList() {
@@ -17671,7 +17671,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
         if (linesBuilder_ == null) {
@@ -17686,7 +17686,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public int getLinesCount() {
         if (linesBuilder_ == null) {
@@ -17701,7 +17701,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
         if (linesBuilder_ == null) {
@@ -17716,7 +17716,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder setLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate value) {
@@ -17738,7 +17738,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder setLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
@@ -17757,7 +17757,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder addLines(ssn.type.CandidateOuterClass.LineCandidate value) {
         if (linesBuilder_ == null) {
@@ -17778,7 +17778,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder addLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate value) {
@@ -17800,7 +17800,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder addLines(
           ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
@@ -17819,7 +17819,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder addLines(
           int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
@@ -17838,7 +17838,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder addAllLines(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.LineCandidate> values) {
@@ -17858,7 +17858,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder clearLines() {
         if (linesBuilder_ == null) {
@@ -17876,7 +17876,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public Builder removeLines(int index) {
         if (linesBuilder_ == null) {
@@ -17894,7 +17894,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate.Builder getLinesBuilder(
           int index) {
@@ -17906,7 +17906,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
           int index) {
@@ -17921,7 +17921,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
            getLinesOrBuilderList() {
@@ -17937,7 +17937,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder() {
         return getLinesFieldBuilder().addBuilder(
@@ -17949,7 +17949,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder(
           int index) {
@@ -17962,7 +17962,7 @@ public final class Annotator {
        * to state on which page the line was found
        * </pre>
        *
-       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.LineCandidate.Builder> 
            getLinesBuilderList() {
@@ -17989,7 +17989,7 @@ public final class Annotator {
        * Base64 encoded PNG image  of the first page of PDF document sent in request
        * </pre>
        *
-       * <code>string preview = 27;</code>
+       * <code>string preview = 27 [json_name = "preview"];</code>
        * @return The preview.
        */
       public java.lang.String getPreview() {
@@ -18009,7 +18009,7 @@ public final class Annotator {
        * Base64 encoded PNG image  of the first page of PDF document sent in request
        * </pre>
        *
-       * <code>string preview = 27;</code>
+       * <code>string preview = 27 [json_name = "preview"];</code>
        * @return The bytes for preview.
        */
       public com.google.protobuf.ByteString
@@ -18030,7 +18030,7 @@ public final class Annotator {
        * Base64 encoded PNG image  of the first page of PDF document sent in request
        * </pre>
        *
-       * <code>string preview = 27;</code>
+       * <code>string preview = 27 [json_name = "preview"];</code>
        * @param value The preview to set.
        * @return This builder for chaining.
        */
@@ -18049,7 +18049,7 @@ public final class Annotator {
        * Base64 encoded PNG image  of the first page of PDF document sent in request
        * </pre>
        *
-       * <code>string preview = 27;</code>
+       * <code>string preview = 27 [json_name = "preview"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPreview() {
@@ -18063,7 +18063,7 @@ public final class Annotator {
        * Base64 encoded PNG image  of the first page of PDF document sent in request
        * </pre>
        *
-       * <code>string preview = 27;</code>
+       * <code>string preview = 27 [json_name = "preview"];</code>
        * @param value The bytes for preview to set.
        * @return This builder for chaining.
        */
@@ -18096,7 +18096,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankAccountNumberList() {
         if (bankAccountNumberBuilder_ == null) {
@@ -18110,7 +18110,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public int getBankAccountNumberCount() {
         if (bankAccountNumberBuilder_ == null) {
@@ -18124,7 +18124,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getBankAccountNumber(int index) {
         if (bankAccountNumberBuilder_ == null) {
@@ -18138,7 +18138,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder setBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18159,7 +18159,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder setBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18177,7 +18177,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (bankAccountNumberBuilder_ == null) {
@@ -18197,7 +18197,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18218,7 +18218,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18236,7 +18236,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addBankAccountNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18254,7 +18254,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder addAllBankAccountNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -18273,7 +18273,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder clearBankAccountNumber() {
         if (bankAccountNumberBuilder_ == null) {
@@ -18290,7 +18290,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public Builder removeBankAccountNumber(int index) {
         if (bankAccountNumberBuilder_ == null) {
@@ -18307,7 +18307,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getBankAccountNumberBuilder(
           int index) {
@@ -18318,7 +18318,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankAccountNumberOrBuilder(
           int index) {
@@ -18332,7 +18332,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getBankAccountNumberOrBuilderList() {
@@ -18347,7 +18347,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankAccountNumberBuilder() {
         return getBankAccountNumberFieldBuilder().addBuilder(
@@ -18358,7 +18358,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankAccountNumberBuilder(
           int index) {
@@ -18370,7 +18370,7 @@ public final class Annotator {
        * Country specific bank account number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_account_number = 28;</code>
+       * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getBankAccountNumberBuilderList() {
@@ -18408,7 +18408,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBankRegistrationNumberList() {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18422,7 +18422,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public int getBankRegistrationNumberCount() {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18436,7 +18436,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getBankRegistrationNumber(int index) {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18450,7 +18450,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder setBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18471,7 +18471,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder setBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18489,7 +18489,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18509,7 +18509,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18530,7 +18530,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18548,7 +18548,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addBankRegistrationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18566,7 +18566,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder addAllBankRegistrationNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -18585,7 +18585,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder clearBankRegistrationNumber() {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18602,7 +18602,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder removeBankRegistrationNumber(int index) {
         if (bankRegistrationNumberBuilder_ == null) {
@@ -18619,7 +18619,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getBankRegistrationNumberBuilder(
           int index) {
@@ -18630,7 +18630,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getBankRegistrationNumberOrBuilder(
           int index) {
@@ -18644,7 +18644,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getBankRegistrationNumberOrBuilderList() {
@@ -18659,7 +18659,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankRegistrationNumberBuilder() {
         return getBankRegistrationNumberFieldBuilder().addBuilder(
@@ -18670,7 +18670,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBankRegistrationNumberBuilder(
           int index) {
@@ -18682,7 +18682,7 @@ public final class Annotator {
        * Country specific bank registration number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bank_registration_number = 29;</code>
+       * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getBankRegistrationNumberBuilderList() {
@@ -18720,7 +18720,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getBicList() {
         if (bicBuilder_ == null) {
@@ -18734,7 +18734,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public int getBicCount() {
         if (bicBuilder_ == null) {
@@ -18748,7 +18748,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getBic(int index) {
         if (bicBuilder_ == null) {
@@ -18762,7 +18762,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder setBic(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18783,7 +18783,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder setBic(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18801,7 +18801,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder addBic(ssn.type.CandidateOuterClass.Candidate value) {
         if (bicBuilder_ == null) {
@@ -18821,7 +18821,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder addBic(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -18842,7 +18842,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder addBic(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18860,7 +18860,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder addBic(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -18878,7 +18878,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder addAllBic(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -18897,7 +18897,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder clearBic() {
         if (bicBuilder_ == null) {
@@ -18914,7 +18914,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public Builder removeBic(int index) {
         if (bicBuilder_ == null) {
@@ -18931,7 +18931,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getBicBuilder(
           int index) {
@@ -18942,7 +18942,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getBicOrBuilder(
           int index) {
@@ -18956,7 +18956,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getBicOrBuilderList() {
@@ -18971,7 +18971,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBicBuilder() {
         return getBicFieldBuilder().addBuilder(
@@ -18982,7 +18982,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addBicBuilder(
           int index) {
@@ -18994,7 +18994,7 @@ public final class Annotator {
        * Returns business identifier code
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate bic = 30;</code>
+       * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getBicBuilderList() {
@@ -19032,7 +19032,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentNumberList() {
         if (documentNumberBuilder_ == null) {
@@ -19046,7 +19046,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public int getDocumentNumberCount() {
         if (documentNumberBuilder_ == null) {
@@ -19060,7 +19060,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getDocumentNumber(int index) {
         if (documentNumberBuilder_ == null) {
@@ -19074,7 +19074,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder setDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19095,7 +19095,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder setDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19113,7 +19113,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (documentNumberBuilder_ == null) {
@@ -19133,7 +19133,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19154,7 +19154,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19172,7 +19172,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder addDocumentNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19190,7 +19190,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder addAllDocumentNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -19209,7 +19209,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder clearDocumentNumber() {
         if (documentNumberBuilder_ == null) {
@@ -19226,7 +19226,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public Builder removeDocumentNumber(int index) {
         if (documentNumberBuilder_ == null) {
@@ -19243,7 +19243,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentNumberBuilder(
           int index) {
@@ -19254,7 +19254,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentNumberOrBuilder(
           int index) {
@@ -19268,7 +19268,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getDocumentNumberOrBuilderList() {
@@ -19283,7 +19283,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentNumberBuilder() {
         return getDocumentNumberFieldBuilder().addBuilder(
@@ -19294,7 +19294,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentNumberBuilder(
           int index) {
@@ -19306,7 +19306,7 @@ public final class Annotator {
        * Represents identifier of the document
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_number = 31;</code>
+       * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getDocumentNumberBuilderList() {
@@ -19344,7 +19344,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getDocumentDateList() {
         if (documentDateBuilder_ == null) {
@@ -19358,7 +19358,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public int getDocumentDateCount() {
         if (documentDateBuilder_ == null) {
@@ -19372,7 +19372,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getDocumentDate(int index) {
         if (documentDateBuilder_ == null) {
@@ -19386,7 +19386,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder setDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19407,7 +19407,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder setDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19425,7 +19425,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(ssn.type.CandidateOuterClass.Candidate value) {
         if (documentDateBuilder_ == null) {
@@ -19445,7 +19445,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19466,7 +19466,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19484,7 +19484,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder addDocumentDate(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19502,7 +19502,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder addAllDocumentDate(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -19521,7 +19521,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder clearDocumentDate() {
         if (documentDateBuilder_ == null) {
@@ -19538,7 +19538,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public Builder removeDocumentDate(int index) {
         if (documentDateBuilder_ == null) {
@@ -19555,7 +19555,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getDocumentDateBuilder(
           int index) {
@@ -19566,7 +19566,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getDocumentDateOrBuilder(
           int index) {
@@ -19580,7 +19580,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getDocumentDateOrBuilderList() {
@@ -19595,7 +19595,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentDateBuilder() {
         return getDocumentDateFieldBuilder().addBuilder(
@@ -19606,7 +19606,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addDocumentDateBuilder(
           int index) {
@@ -19618,7 +19618,7 @@ public final class Annotator {
        * Returns document date
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate document_date = 32;</code>
+       * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getDocumentDateBuilderList() {
@@ -19656,7 +19656,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getOrderNumberList() {
         if (orderNumberBuilder_ == null) {
@@ -19670,7 +19670,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public int getOrderNumberCount() {
         if (orderNumberBuilder_ == null) {
@@ -19684,7 +19684,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getOrderNumber(int index) {
         if (orderNumberBuilder_ == null) {
@@ -19698,7 +19698,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder setOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19719,7 +19719,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder setOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19737,7 +19737,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (orderNumberBuilder_ == null) {
@@ -19757,7 +19757,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -19778,7 +19778,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19796,7 +19796,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder addOrderNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -19814,7 +19814,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder addAllOrderNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -19833,7 +19833,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder clearOrderNumber() {
         if (orderNumberBuilder_ == null) {
@@ -19850,7 +19850,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public Builder removeOrderNumber(int index) {
         if (orderNumberBuilder_ == null) {
@@ -19867,7 +19867,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getOrderNumberBuilder(
           int index) {
@@ -19878,7 +19878,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getOrderNumberOrBuilder(
           int index) {
@@ -19892,7 +19892,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getOrderNumberOrBuilderList() {
@@ -19907,7 +19907,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderNumberBuilder() {
         return getOrderNumberFieldBuilder().addBuilder(
@@ -19918,7 +19918,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addOrderNumberBuilder(
           int index) {
@@ -19930,7 +19930,7 @@ public final class Annotator {
        * Represents the identifier that supplier assigned to the order
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate order_number = 33;</code>
+       * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getOrderNumberBuilderList() {
@@ -19968,7 +19968,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierNameList() {
         if (supplierNameBuilder_ == null) {
@@ -19982,7 +19982,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public int getSupplierNameCount() {
         if (supplierNameBuilder_ == null) {
@@ -19996,7 +19996,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierName(int index) {
         if (supplierNameBuilder_ == null) {
@@ -20010,7 +20010,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder setSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20031,7 +20031,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder setSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20049,7 +20049,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierNameBuilder_ == null) {
@@ -20069,7 +20069,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20090,7 +20090,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20108,7 +20108,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder addSupplierName(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20126,7 +20126,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder addAllSupplierName(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -20145,7 +20145,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder clearSupplierName() {
         if (supplierNameBuilder_ == null) {
@@ -20162,7 +20162,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public Builder removeSupplierName(int index) {
         if (supplierNameBuilder_ == null) {
@@ -20179,7 +20179,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierNameBuilder(
           int index) {
@@ -20190,7 +20190,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierNameOrBuilder(
           int index) {
@@ -20204,7 +20204,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierNameOrBuilderList() {
@@ -20219,7 +20219,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierNameBuilder() {
         return getSupplierNameFieldBuilder().addBuilder(
@@ -20230,7 +20230,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierNameBuilder(
           int index) {
@@ -20242,7 +20242,7 @@ public final class Annotator {
        * Returns supplier name
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_name = 34;</code>
+       * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierNameBuilderList() {
@@ -20281,7 +20281,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierVatNumberList() {
         if (supplierVatNumberBuilder_ == null) {
@@ -20296,7 +20296,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public int getSupplierVatNumberCount() {
         if (supplierVatNumberBuilder_ == null) {
@@ -20311,7 +20311,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierVatNumber(int index) {
         if (supplierVatNumberBuilder_ == null) {
@@ -20326,7 +20326,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder setSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20348,7 +20348,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder setSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20367,7 +20367,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierVatNumberBuilder_ == null) {
@@ -20388,7 +20388,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20410,7 +20410,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20429,7 +20429,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addSupplierVatNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20448,7 +20448,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder addAllSupplierVatNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -20468,7 +20468,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder clearSupplierVatNumber() {
         if (supplierVatNumberBuilder_ == null) {
@@ -20486,7 +20486,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public Builder removeSupplierVatNumber(int index) {
         if (supplierVatNumberBuilder_ == null) {
@@ -20504,7 +20504,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierVatNumberBuilder(
           int index) {
@@ -20516,7 +20516,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierVatNumberOrBuilder(
           int index) {
@@ -20531,7 +20531,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierVatNumberOrBuilderList() {
@@ -20547,7 +20547,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierVatNumberBuilder() {
         return getSupplierVatNumberFieldBuilder().addBuilder(
@@ -20559,7 +20559,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierVatNumberBuilder(
           int index) {
@@ -20572,7 +20572,7 @@ public final class Annotator {
        * Returns supplier VAT number
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35;</code>
+       * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierVatNumberBuilderList() {
@@ -20611,7 +20611,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierOrganisationNumberList() {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20626,7 +20626,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public int getSupplierOrganisationNumberCount() {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20641,7 +20641,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierOrganisationNumber(int index) {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20656,7 +20656,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder setSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20678,7 +20678,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder setSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20697,7 +20697,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20718,7 +20718,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -20740,7 +20740,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20759,7 +20759,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addSupplierOrganisationNumber(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -20778,7 +20778,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder addAllSupplierOrganisationNumber(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -20798,7 +20798,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder clearSupplierOrganisationNumber() {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20816,7 +20816,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder removeSupplierOrganisationNumber(int index) {
         if (supplierOrganisationNumberBuilder_ == null) {
@@ -20834,7 +20834,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierOrganisationNumberBuilder(
           int index) {
@@ -20846,7 +20846,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder(
           int index) {
@@ -20861,7 +20861,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierOrganisationNumberOrBuilderList() {
@@ -20877,7 +20877,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierOrganisationNumberBuilder() {
         return getSupplierOrganisationNumberFieldBuilder().addBuilder(
@@ -20889,7 +20889,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierOrganisationNumberBuilder(
           int index) {
@@ -20902,7 +20902,7 @@ public final class Annotator {
        * Returns the business ID or organisation number of the supplier
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36;</code>
+       * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierOrganisationNumberBuilderList() {
@@ -20941,7 +20941,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getSupplierAddressList() {
         if (supplierAddressBuilder_ == null) {
@@ -20956,7 +20956,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public int getSupplierAddressCount() {
         if (supplierAddressBuilder_ == null) {
@@ -20971,7 +20971,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getSupplierAddress(int index) {
         if (supplierAddressBuilder_ == null) {
@@ -20986,7 +20986,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder setSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -21008,7 +21008,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder setSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -21027,7 +21027,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(ssn.type.CandidateOuterClass.Candidate value) {
         if (supplierAddressBuilder_ == null) {
@@ -21048,7 +21048,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -21070,7 +21070,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -21089,7 +21089,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder addSupplierAddress(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -21108,7 +21108,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder addAllSupplierAddress(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -21128,7 +21128,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder clearSupplierAddress() {
         if (supplierAddressBuilder_ == null) {
@@ -21146,7 +21146,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public Builder removeSupplierAddress(int index) {
         if (supplierAddressBuilder_ == null) {
@@ -21164,7 +21164,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getSupplierAddressBuilder(
           int index) {
@@ -21176,7 +21176,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
           int index) {
@@ -21191,7 +21191,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getSupplierAddressOrBuilderList() {
@@ -21207,7 +21207,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierAddressBuilder() {
         return getSupplierAddressFieldBuilder().addBuilder(
@@ -21219,7 +21219,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addSupplierAddressBuilder(
           int index) {
@@ -21232,7 +21232,7 @@ public final class Annotator {
        * Returns supplier address
        * </pre>
        *
-       * <code>repeated .ssn.type.Candidate supplier_address = 37;</code>
+       * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getSupplierAddressBuilderList() {
@@ -21316,7 +21316,7 @@ public final class Annotator {
      * representation, whereas JSON representations use base64.
      * </pre>
      *
-     * <code>bytes content = 1;</code>
+     * <code>bytes content = 1 [json_name = "content"];</code>
      * @return The content.
      */
     com.google.protobuf.ByteString getContent();
@@ -21328,7 +21328,7 @@ public final class Annotator {
      * takes precedence and is used to perform the scan request.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
      * @return Whether the source field is set.
      */
     boolean hasSource();
@@ -21339,7 +21339,7 @@ public final class Annotator {
      * takes precedence and is used to perform the scan request.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
      * @return The source.
      */
     ssn.annotator.v1.Annotator.DocumentSource getSource();
@@ -21350,7 +21350,7 @@ public final class Annotator {
      * takes precedence and is used to perform the scan request.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
      */
     ssn.annotator.v1.Annotator.DocumentSourceOrBuilder getSourceOrBuilder();
   }
@@ -21459,7 +21459,7 @@ public final class Annotator {
      * representation, whereas JSON representations use base64.
      * </pre>
      *
-     * <code>bytes content = 1;</code>
+     * <code>bytes content = 1 [json_name = "content"];</code>
      * @return The content.
      */
     @java.lang.Override
@@ -21476,7 +21476,7 @@ public final class Annotator {
      * takes precedence and is used to perform the scan request.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
      * @return Whether the source field is set.
      */
     @java.lang.Override
@@ -21490,7 +21490,7 @@ public final class Annotator {
      * takes precedence and is used to perform the scan request.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
      * @return The source.
      */
     @java.lang.Override
@@ -21504,7 +21504,7 @@ public final class Annotator {
      * takes precedence and is used to perform the scan request.
      * </pre>
      *
-     * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+     * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentSourceOrBuilder getSourceOrBuilder() {
@@ -21851,7 +21851,7 @@ public final class Annotator {
        * representation, whereas JSON representations use base64.
        * </pre>
        *
-       * <code>bytes content = 1;</code>
+       * <code>bytes content = 1 [json_name = "content"];</code>
        * @return The content.
        */
       @java.lang.Override
@@ -21865,7 +21865,7 @@ public final class Annotator {
        * representation, whereas JSON representations use base64.
        * </pre>
        *
-       * <code>bytes content = 1;</code>
+       * <code>bytes content = 1 [json_name = "content"];</code>
        * @param value The content to set.
        * @return This builder for chaining.
        */
@@ -21885,7 +21885,7 @@ public final class Annotator {
        * representation, whereas JSON representations use base64.
        * </pre>
        *
-       * <code>bytes content = 1;</code>
+       * <code>bytes content = 1 [json_name = "content"];</code>
        * @return This builder for chaining.
        */
       public Builder clearContent() {
@@ -21905,7 +21905,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        * @return Whether the source field is set.
        */
       public boolean hasSource() {
@@ -21918,7 +21918,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        * @return The source.
        */
       public ssn.annotator.v1.Annotator.DocumentSource getSource() {
@@ -21935,7 +21935,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public Builder setSource(ssn.annotator.v1.Annotator.DocumentSource value) {
         if (sourceBuilder_ == null) {
@@ -21957,7 +21957,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public Builder setSource(
           ssn.annotator.v1.Annotator.DocumentSource.Builder builderForValue) {
@@ -21977,7 +21977,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public Builder mergeSource(ssn.annotator.v1.Annotator.DocumentSource value) {
         if (sourceBuilder_ == null) {
@@ -22001,7 +22001,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public Builder clearSource() {
         if (sourceBuilder_ == null) {
@@ -22021,7 +22021,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public ssn.annotator.v1.Annotator.DocumentSource.Builder getSourceBuilder() {
         
@@ -22035,7 +22035,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public ssn.annotator.v1.Annotator.DocumentSourceOrBuilder getSourceOrBuilder() {
         if (sourceBuilder_ != null) {
@@ -22052,7 +22052,7 @@ public final class Annotator {
        * takes precedence and is used to perform the scan request.
        * </pre>
        *
-       * <code>.ssn.annotator.v1.DocumentSource source = 2;</code>
+       * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.DocumentSource, ssn.annotator.v1.Annotator.DocumentSource.Builder, ssn.annotator.v1.Annotator.DocumentSourceOrBuilder> 
@@ -22133,7 +22133,7 @@ public final class Annotator {
      *    request (e.g. due to request throttling or DOS prevention).
      * </pre>
      *
-     * <code>string http_uri = 1;</code>
+     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
      * @return The httpUri.
      */
     java.lang.String getHttpUri();
@@ -22146,7 +22146,7 @@ public final class Annotator {
      *    request (e.g. due to request throttling or DOS prevention).
      * </pre>
      *
-     * <code>string http_uri = 1;</code>
+     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
      * @return The bytes for httpUri.
      */
     com.google.protobuf.ByteString
@@ -22247,7 +22247,7 @@ public final class Annotator {
      *    request (e.g. due to request throttling or DOS prevention).
      * </pre>
      *
-     * <code>string http_uri = 1;</code>
+     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
      * @return The httpUri.
      */
     @java.lang.Override
@@ -22272,7 +22272,7 @@ public final class Annotator {
      *    request (e.g. due to request throttling or DOS prevention).
      * </pre>
      *
-     * <code>string http_uri = 1;</code>
+     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
      * @return The bytes for httpUri.
      */
     @java.lang.Override
@@ -22602,7 +22602,7 @@ public final class Annotator {
        *    request (e.g. due to request throttling or DOS prevention).
        * </pre>
        *
-       * <code>string http_uri = 1;</code>
+       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
        * @return The httpUri.
        */
       public java.lang.String getHttpUri() {
@@ -22626,7 +22626,7 @@ public final class Annotator {
        *    request (e.g. due to request throttling or DOS prevention).
        * </pre>
        *
-       * <code>string http_uri = 1;</code>
+       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
        * @return The bytes for httpUri.
        */
       public com.google.protobuf.ByteString
@@ -22651,7 +22651,7 @@ public final class Annotator {
        *    request (e.g. due to request throttling or DOS prevention).
        * </pre>
        *
-       * <code>string http_uri = 1;</code>
+       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
        * @param value The httpUri to set.
        * @return This builder for chaining.
        */
@@ -22674,7 +22674,7 @@ public final class Annotator {
        *    request (e.g. due to request throttling or DOS prevention).
        * </pre>
        *
-       * <code>string http_uri = 1;</code>
+       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHttpUri() {
@@ -22692,7 +22692,7 @@ public final class Annotator {
        *    request (e.g. due to request throttling or DOS prevention).
        * </pre>
        *
-       * <code>string http_uri = 1;</code>
+       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
        * @param value The bytes for httpUri to set.
        * @return This builder for chaining.
        */
@@ -22796,91 +22796,109 @@ public final class Annotator {
     java.lang.String[] descriptorData = {
       "\n ssn/annotator/v1/annotator.proto\022\020ssn." +
       "annotator.v1\032\034google/api/annotations.pro" +
-      "to\032\031options/annotations.proto\032\030ssn/type/" +
-      "candidate.proto\032\036ssn/type/text_annotatio" +
-      "n.proto\032\023ssn/type/tier.proto\"\267\007\n\007Feature" +
-      "\022,\n\004type\030\001 \001(\0162\036.ssn.annotator.v1.Featur" +
-      "e.Type\022\023\n\013max_results\030\002 \001(\005\0222\n\016min_confi" +
-      "dence\030\003 \001(\0162\032.ssn.type.Confidence.Level\"" +
-      "\264\006\n\004Type\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION" +
-      "\020\001\022\016\n\nORDER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003" +
-      "\022\014\n\010CURRENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_I" +
-      "NCL_VAT\020\006\022\022\n\016TOTAL_EXCL_VAT\020\007\022\031\n\025SUPPLIE" +
-      "R_CORPORATE_ID\020\010\022\031\n\025SUPPLIER_COUNTRY_COD" +
-      "E\020\t\022\021\n\rDOCUMENT_TYPE\020\n\022\022\n\016PAYMENT_METHOD" +
-      "\020\013\022\031\n\025CREDIT_CARD_LAST_FOUR\020\014\022\022\n\016INVOICE" +
-      "_NUMBER\020\r\022\024\n\020OCR_LINE_DK_TYPE\020\016\022\032\n\026OCR_L" +
-      "INE_DK_PAYMENT_ID\020\017\022\033\n\027OCR_LINE_DK_CREDI" +
-      "TOR_ID\020\020\022\032\n\026OCR_LINE_SE_PAYMENT_ID\020\021\022$\n " +
-      "OCR_LINE_SE_BANKGIRO_CREDITOR_ID\020\022\022$\n OC" +
-      "R_LINE_SE_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_" +
-      "LINE_NO_PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYM" +
-      "ENT_ID\020\025\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004" +
-      "TEXT\020\027\022\010\n\004IBAN\020\030\022\t\n\005LINES\020\031\022\013\n\007PREVIEW\020\032" +
-      "\022\027\n\023BANK_ACCOUNT_NUMBER\020\033\022\034\n\030BANK_REGIST" +
-      "RATION_NUMBER\020\034\022\007\n\003BIC\020\035\022\023\n\017DOCUMENT_NUM" +
-      "BER\020\036\022\021\n\rDOCUMENT_DATE\020\037\022\020\n\014ORDER_NUMBER" +
-      "\020 \022\021\n\rSUPPLIER_NAME\020!\022\027\n\023SUPPLIER_VAT_NU" +
-      "MBER\020\"\022 \n\034SUPPLIER_ORGANISATION_NUMBER\020#" +
-      "\022\024\n\020SUPPLIER_ADDRESS\020$\"\263\001\n\030DocumentAnnot" +
-      "atorRequest\022,\n\010document\030\001 \001(\0132\032.ssn.anno" +
-      "tator.v1.Document\022+\n\010features\030\002 \003(\0132\031.ss" +
-      "n.annotator.v1.Feature\022\014\n\004tags\030\003 \003(\t\022\034\n\004" +
-      "tier\030\004 \001(\0162\016.ssn.type.Tier\022\020\n\010segments\030\005" +
-      " \003(\t\"\264\r\n\031DocumentAnnotatorResponse\022\'\n\nor" +
-      "der_date\030\001 \003(\0132\023.ssn.type.Candidate\022-\n\020p" +
-      "ayment_due_date\030\002 \003(\0132\023.ssn.type.Candida" +
-      "te\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Candidat" +
-      "e\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Candidat" +
-      "e\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Can" +
-      "didate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.typ" +
-      "e.Candidate\0222\n\025supplier_corporate_id\030\007 \003" +
-      "(\0132\023.ssn.type.Candidate\0222\n\025supplier_coun" +
-      "try_code\030\010 \003(\0132\023.ssn.type.Candidate\022*\n\rd" +
-      "ocument_type\030\t \003(\0132\023.ssn.type.Candidate\022" +
-      "+\n\016payment_method\030\n \003(\0132\023.ssn.type.Candi" +
-      "date\0222\n\025credit_card_last_four\030\013 \003(\0132\023.ss" +
-      "n.type.Candidate\022+\n\016invoice_number\030\014 \003(\013" +
-      "2\023.ssn.type.Candidate\0221\n\017text_annotation" +
-      "\030\r \001(\0132\030.ssn.type.TextAnnotation\022-\n\020ocr_" +
-      "line_dk_type\030\016 \003(\0132\023.ssn.type.Candidate\022" +
-      "3\n\026ocr_line_dk_payment_id\030\017 \003(\0132\023.ssn.ty" +
-      "pe.Candidate\0224\n\027ocr_line_dk_creditor_id\030" +
-      "\020 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_s" +
-      "e_payment_id\030\021 \003(\0132\023.ssn.type.Candidate\022" +
-      "=\n ocr_line_se_bankgiro_creditor_id\030\022 \003(" +
-      "\0132\023.ssn.type.Candidate\022=\n ocr_line_se_pl" +
-      "usgiro_creditor_id\030\023 \003(\0132\023.ssn.type.Cand" +
-      "idate\0223\n\026ocr_line_no_payment_id\030\024 \003(\0132\023." +
-      "ssn.type.Candidate\0223\n\026ocr_line_fi_paymen" +
-      "t_id\030\025 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_l" +
-      "ine_nl_payment_id\030\026 \003(\0132\023.ssn.type.Candi" +
-      "date\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(\t\022" +
-      "!\n\004iban\030\031 \003(\0132\023.ssn.type.Candidate\022&\n\005li" +
-      "nes\030\032 \003(\0132\027.ssn.type.LineCandidate\022\017\n\007pr" +
-      "eview\030\033 \001(\t\0220\n\023bank_account_number\030\034 \003(\013" +
-      "2\023.ssn.type.Candidate\0225\n\030bank_registrati" +
-      "on_number\030\035 \003(\0132\023.ssn.type.Candidate\022 \n\003" +
-      "bic\030\036 \003(\0132\023.ssn.type.Candidate\022,\n\017docume" +
-      "nt_number\030\037 \003(\0132\023.ssn.type.Candidate\022*\n\r" +
-      "document_date\030  \003(\0132\023.ssn.type.Candidate" +
-      "\022)\n\014order_number\030! \003(\0132\023.ssn.type.Candid" +
-      "ate\022*\n\rsupplier_name\030\" \003(\0132\023.ssn.type.Ca" +
-      "ndidate\0220\n\023supplier_vat_number\030# \003(\0132\023.s" +
-      "sn.type.Candidate\0229\n\034supplier_organisati" +
-      "on_number\030$ \003(\0132\023.ssn.type.Candidate\022-\n\020" +
-      "supplier_address\030% \003(\0132\023.ssn.type.Candid" +
-      "ate\"M\n\010Document\022\017\n\007content\030\001 \001(\014\0220\n\006sour" +
-      "ce\030\002 \001(\0132 .ssn.annotator.v1.DocumentSour" +
-      "ce\"\"\n\016DocumentSource\022\020\n\010http_uri\030\001 \001(\t2\243" +
-      "\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDocumen" +
-      "t\022*.ssn.annotator.v1.DocumentAnnotatorRe" +
-      "quest\032+.ssn.annotator.v1.DocumentAnnotat" +
-      "orResponse\" \202\323\344\223\002\032\"\025/v1/document:annotat" +
-      "e:\001*B{Z>github.com/e-conomic/vmlapis/gen" +
-      "/go/ssn/annotator/v1;annotator\222A8\022\017\n\tSma" +
-      "rtScan2\002v1*\001\0022\020application/json:\020applica" +
-      "tion/jsonb\006proto3"
+      "to\032.protoc-gen-openapiv2/options/annotat" +
+      "ions.proto\032\030ssn/type/candidate.proto\032\036ss" +
+      "n/type/text_annotation.proto\032\023ssn/type/t" +
+      "ier.proto\"\330\007\n\007Feature\0222\n\004type\030\001 \001(\0162\036.ss" +
+      "n.annotator.v1.Feature.TypeR\004type\022\037\n\013max" +
+      "_results\030\002 \001(\005R\nmaxResults\022A\n\016min_confid" +
+      "ence\030\003 \001(\0162\032.ssn.type.Confidence.LevelR\r" +
+      "minConfidence\"\264\006\n\004Type\022\013\n\007DEFAULT\020\000\022\023\n\017T" +
+      "EXT_ANNOTATION\020\001\022\016\n\nORDER_DATE\020\002\022\024\n\020PAYM" +
+      "ENT_DUE_DATE\020\003\022\014\n\010CURRENCY\020\004\022\r\n\tTOTAL_VA" +
+      "T\020\005\022\022\n\016TOTAL_INCL_VAT\020\006\022\022\n\016TOTAL_EXCL_VA" +
+      "T\020\007\022\031\n\025SUPPLIER_CORPORATE_ID\020\010\022\031\n\025SUPPLI" +
+      "ER_COUNTRY_CODE\020\t\022\021\n\rDOCUMENT_TYPE\020\n\022\022\n\016" +
+      "PAYMENT_METHOD\020\013\022\031\n\025CREDIT_CARD_LAST_FOU" +
+      "R\020\014\022\022\n\016INVOICE_NUMBER\020\r\022\024\n\020OCR_LINE_DK_T" +
+      "YPE\020\016\022\032\n\026OCR_LINE_DK_PAYMENT_ID\020\017\022\033\n\027OCR" +
+      "_LINE_DK_CREDITOR_ID\020\020\022\032\n\026OCR_LINE_SE_PA" +
+      "YMENT_ID\020\021\022$\n OCR_LINE_SE_BANKGIRO_CREDI" +
+      "TOR_ID\020\022\022$\n OCR_LINE_SE_PLUSGIRO_CREDITO" +
+      "R_ID\020\023\022\032\n\026OCR_LINE_NO_PAYMENT_ID\020\024\022\032\n\026OC" +
+      "R_LINE_FI_PAYMENT_ID\020\025\022\032\n\026OCR_LINE_NL_PA" +
+      "YMENT_ID\020\026\022\010\n\004TEXT\020\027\022\010\n\004IBAN\020\030\022\t\n\005LINES\020" +
+      "\031\022\013\n\007PREVIEW\020\032\022\027\n\023BANK_ACCOUNT_NUMBER\020\033\022" +
+      "\034\n\030BANK_REGISTRATION_NUMBER\020\034\022\007\n\003BIC\020\035\022\023" +
+      "\n\017DOCUMENT_NUMBER\020\036\022\021\n\rDOCUMENT_DATE\020\037\022\020" +
+      "\n\014ORDER_NUMBER\020 \022\021\n\rSUPPLIER_NAME\020!\022\027\n\023S" +
+      "UPPLIER_VAT_NUMBER\020\"\022 \n\034SUPPLIER_ORGANIS" +
+      "ATION_NUMBER\020#\022\024\n\020SUPPLIER_ADDRESS\020$\"\335\001\n" +
+      "\030DocumentAnnotatorRequest\0226\n\010document\030\001 " +
+      "\001(\0132\032.ssn.annotator.v1.DocumentR\010documen" +
+      "t\0225\n\010features\030\002 \003(\0132\031.ssn.annotator.v1.F" +
+      "eatureR\010features\022\022\n\004tags\030\003 \003(\tR\004tags\022\"\n\004" +
+      "tier\030\004 \001(\0162\016.ssn.type.TierR\004tier\022\032\n\010segm" +
+      "ents\030\005 \003(\tR\010segments\"\214\022\n\031DocumentAnnotat" +
+      "orResponse\0222\n\norder_date\030\001 \003(\0132\023.ssn.typ" +
+      "e.CandidateR\torderDate\022=\n\020payment_due_da" +
+      "te\030\002 \003(\0132\023.ssn.type.CandidateR\016paymentDu" +
+      "eDate\022/\n\010currency\030\003 \003(\0132\023.ssn.type.Candi" +
+      "dateR\010currency\0220\n\ttotal_vat\030\004 \003(\0132\023.ssn." +
+      "type.CandidateR\010totalVat\0229\n\016total_incl_v" +
+      "at\030\005 \003(\0132\023.ssn.type.CandidateR\014totalIncl" +
+      "Vat\0229\n\016total_excl_vat\030\006 \003(\0132\023.ssn.type.C" +
+      "andidateR\014totalExclVat\022G\n\025supplier_corpo" +
+      "rate_id\030\007 \003(\0132\023.ssn.type.CandidateR\023supp" +
+      "lierCorporateId\022G\n\025supplier_country_code" +
+      "\030\010 \003(\0132\023.ssn.type.CandidateR\023supplierCou" +
+      "ntryCode\0228\n\rdocument_type\030\t \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\014documentType\022:\n\016payment_me" +
+      "thod\030\n \003(\0132\023.ssn.type.CandidateR\rpayment" +
+      "Method\022F\n\025credit_card_last_four\030\013 \003(\0132\023." +
+      "ssn.type.CandidateR\022creditCardLastFour\022:" +
+      "\n\016invoice_number\030\014 \003(\0132\023.ssn.type.Candid" +
+      "ateR\rinvoiceNumber\022A\n\017text_annotation\030\r " +
+      "\001(\0132\030.ssn.type.TextAnnotationR\016textAnnot" +
+      "ation\022<\n\020ocr_line_dk_type\030\016 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\rocrLineDkType\022G\n\026ocr_line_" +
+      "dk_payment_id\030\017 \003(\0132\023.ssn.type.Candidate" +
+      "R\022ocrLineDkPaymentId\022I\n\027ocr_line_dk_cred" +
+      "itor_id\030\020 \003(\0132\023.ssn.type.CandidateR\023ocrL" +
+      "ineDkCreditorId\022G\n\026ocr_line_se_payment_i" +
+      "d\030\021 \003(\0132\023.ssn.type.CandidateR\022ocrLineSeP" +
+      "aymentId\022Z\n ocr_line_se_bankgiro_credito" +
+      "r_id\030\022 \003(\0132\023.ssn.type.CandidateR\033ocrLine" +
+      "SeBankgiroCreditorId\022Z\n ocr_line_se_plus" +
+      "giro_creditor_id\030\023 \003(\0132\023.ssn.type.Candid" +
+      "ateR\033ocrLineSePlusgiroCreditorId\022G\n\026ocr_" +
+      "line_no_payment_id\030\024 \003(\0132\023.ssn.type.Cand" +
+      "idateR\022ocrLineNoPaymentId\022G\n\026ocr_line_fi" +
+      "_payment_id\030\025 \003(\0132\023.ssn.type.CandidateR\022" +
+      "ocrLineFiPaymentId\022G\n\026ocr_line_nl_paymen" +
+      "t_id\030\026 \003(\0132\023.ssn.type.CandidateR\022ocrLine" +
+      "NlPaymentId\022\022\n\004text\030\027 \001(\tR\004text\022\037\n\013feedb" +
+      "ack_id\030\030 \001(\tR\nfeedbackId\022\'\n\004iban\030\031 \003(\0132\023" +
+      ".ssn.type.CandidateR\004iban\022-\n\005lines\030\032 \003(\013" +
+      "2\027.ssn.type.LineCandidateR\005lines\022\030\n\007prev" +
+      "iew\030\033 \001(\tR\007preview\022C\n\023bank_account_numbe" +
+      "r\030\034 \003(\0132\023.ssn.type.CandidateR\021bankAccoun" +
+      "tNumber\022M\n\030bank_registration_number\030\035 \003(" +
+      "\0132\023.ssn.type.CandidateR\026bankRegistration" +
+      "Number\022%\n\003bic\030\036 \003(\0132\023.ssn.type.Candidate" +
+      "R\003bic\022<\n\017document_number\030\037 \003(\0132\023.ssn.typ" +
+      "e.CandidateR\016documentNumber\0228\n\rdocument_" +
+      "date\030  \003(\0132\023.ssn.type.CandidateR\014documen" +
+      "tDate\0226\n\014order_number\030! \003(\0132\023.ssn.type.C" +
+      "andidateR\013orderNumber\0228\n\rsupplier_name\030\"" +
+      " \003(\0132\023.ssn.type.CandidateR\014supplierName\022" +
+      "C\n\023supplier_vat_number\030# \003(\0132\023.ssn.type." +
+      "CandidateR\021supplierVatNumber\022U\n\034supplier" +
+      "_organisation_number\030$ \003(\0132\023.ssn.type.Ca" +
+      "ndidateR\032supplierOrganisationNumber\022>\n\020s" +
+      "upplier_address\030% \003(\0132\023.ssn.type.Candida" +
+      "teR\017supplierAddress\"^\n\010Document\022\030\n\007conte" +
+      "nt\030\001 \001(\014R\007content\0228\n\006source\030\002 \001(\0132 .ssn." +
+      "annotator.v1.DocumentSourceR\006source\"+\n\016D" +
+      "ocumentSource\022\031\n\010http_uri\030\001 \001(\tR\007httpUri" +
+      "2\243\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDocum" +
+      "ent\022*.ssn.annotator.v1.DocumentAnnotator" +
+      "Request\032+.ssn.annotator.v1.DocumentAnnot" +
+      "atorResponse\" \202\323\344\223\002\032\"\025/v1/document:annot" +
+      "ate:\001*B{Z>github.com/e-conomic/vmlapis/g" +
+      "en/go/ssn/annotator/v1;annotator\222A8\022\017\n\tS" +
+      "martScan2\002v1*\001\0022\020application/json:\020appli" +
+      "cation/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

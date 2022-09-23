@@ -19,60 +19,60 @@ public final class DatasetOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string consumer = 1;</code>
+     * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return The consumer.
      */
     java.lang.String getConsumer();
     /**
-     * <code>string consumer = 1;</code>
+     * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return The bytes for consumer.
      */
     com.google.protobuf.ByteString
         getConsumerBytes();
 
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 3;</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
-     * <code>string type = 3;</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -80,24 +80,24 @@ public final class DatasetOuterClass {
         getTagsBytes(int index);
 
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @return A list containing the targets.
      */
     java.util.List<java.lang.String>
         getTargetsList();
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @return The count of targets.
      */
     int getTargetsCount();
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param index The index of the element to return.
      * @return The targets at the given index.
      */
     java.lang.String getTargets(int index);
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the targets at the given index.
      */
@@ -105,47 +105,47 @@ public final class DatasetOuterClass {
         getTargetsBytes(int index);
 
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
      * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
      * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
@@ -154,23 +154,23 @@ public final class DatasetOuterClass {
      * Number of samples in the dataset reflecting added entries that meet the retention policy
      * </pre>
      *
-     * <code>int64 size = 12;</code>
+     * <code>int64 size = 12 [json_name = "size"];</code>
      * @return The size.
      */
     long getSize();
 
     /**
-     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      * @return Whether the truncatedAt field is set.
      */
     boolean hasTruncatedAt();
     /**
-     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      * @return The truncatedAt.
      */
     com.google.protobuf.Timestamp getTruncatedAt();
     /**
-     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder();
   }
@@ -359,7 +359,7 @@ public final class DatasetOuterClass {
     public static final int CONSUMER_FIELD_NUMBER = 1;
     private volatile java.lang.Object consumer_;
     /**
-     * <code>string consumer = 1;</code>
+     * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return The consumer.
      */
     @java.lang.Override
@@ -376,7 +376,7 @@ public final class DatasetOuterClass {
       }
     }
     /**
-     * <code>string consumer = 1;</code>
+     * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return The bytes for consumer.
      */
     @java.lang.Override
@@ -397,7 +397,7 @@ public final class DatasetOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -414,7 +414,7 @@ public final class DatasetOuterClass {
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -435,7 +435,7 @@ public final class DatasetOuterClass {
     public static final int TYPE_FIELD_NUMBER = 3;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 3;</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -452,7 +452,7 @@ public final class DatasetOuterClass {
       }
     }
     /**
-     * <code>string type = 3;</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     @java.lang.Override
@@ -473,7 +473,7 @@ public final class DatasetOuterClass {
     public static final int TAGS_FIELD_NUMBER = 4;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -481,14 +481,14 @@ public final class DatasetOuterClass {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -496,7 +496,7 @@ public final class DatasetOuterClass {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -508,7 +508,7 @@ public final class DatasetOuterClass {
     public static final int TARGETS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList targets_;
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @return A list containing the targets.
      */
     public com.google.protobuf.ProtocolStringList
@@ -516,14 +516,14 @@ public final class DatasetOuterClass {
       return targets_;
     }
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @return The count of targets.
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param index The index of the element to return.
      * @return The targets at the given index.
      */
@@ -531,7 +531,7 @@ public final class DatasetOuterClass {
       return targets_.get(index);
     }
     /**
-     * <code>repeated string targets = 5;</code>
+     * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the targets at the given index.
      */
@@ -543,7 +543,7 @@ public final class DatasetOuterClass {
     public static final int RETENTION_POLICY_FIELD_NUMBER = 9;
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
      * @return Whether the retentionPolicy field is set.
      */
     @java.lang.Override
@@ -551,7 +551,7 @@ public final class DatasetOuterClass {
       return retentionPolicy_ != null;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
      * @return The retentionPolicy.
      */
     @java.lang.Override
@@ -559,7 +559,7 @@ public final class DatasetOuterClass {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
      */
     @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
@@ -569,7 +569,7 @@ public final class DatasetOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     @java.lang.Override
@@ -577,7 +577,7 @@ public final class DatasetOuterClass {
       return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     @java.lang.Override
@@ -585,7 +585,7 @@ public final class DatasetOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -595,7 +595,7 @@ public final class DatasetOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 11;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      * @return Whether the updatedAt field is set.
      */
     @java.lang.Override
@@ -603,7 +603,7 @@ public final class DatasetOuterClass {
       return updatedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      * @return The updatedAt.
      */
     @java.lang.Override
@@ -611,7 +611,7 @@ public final class DatasetOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -625,7 +625,7 @@ public final class DatasetOuterClass {
      * Number of samples in the dataset reflecting added entries that meet the retention policy
      * </pre>
      *
-     * <code>int64 size = 12;</code>
+     * <code>int64 size = 12 [json_name = "size"];</code>
      * @return The size.
      */
     @java.lang.Override
@@ -636,7 +636,7 @@ public final class DatasetOuterClass {
     public static final int TRUNCATED_AT_FIELD_NUMBER = 13;
     private com.google.protobuf.Timestamp truncatedAt_;
     /**
-     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      * @return Whether the truncatedAt field is set.
      */
     @java.lang.Override
@@ -644,7 +644,7 @@ public final class DatasetOuterClass {
       return truncatedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      * @return The truncatedAt.
      */
     @java.lang.Override
@@ -652,7 +652,7 @@ public final class DatasetOuterClass {
       return truncatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+     * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
@@ -1205,7 +1205,7 @@ public final class DatasetOuterClass {
 
       private java.lang.Object consumer_ = "";
       /**
-       * <code>string consumer = 1;</code>
+       * <code>string consumer = 1 [json_name = "consumer"];</code>
        * @return The consumer.
        */
       public java.lang.String getConsumer() {
@@ -1221,7 +1221,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>string consumer = 1;</code>
+       * <code>string consumer = 1 [json_name = "consumer"];</code>
        * @return The bytes for consumer.
        */
       public com.google.protobuf.ByteString
@@ -1238,7 +1238,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>string consumer = 1;</code>
+       * <code>string consumer = 1 [json_name = "consumer"];</code>
        * @param value The consumer to set.
        * @return This builder for chaining.
        */
@@ -1253,7 +1253,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>string consumer = 1;</code>
+       * <code>string consumer = 1 [json_name = "consumer"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConsumer() {
@@ -1263,7 +1263,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>string consumer = 1;</code>
+       * <code>string consumer = 1 [json_name = "consumer"];</code>
        * @param value The bytes for consumer to set.
        * @return This builder for chaining.
        */
@@ -1281,7 +1281,7 @@ public final class DatasetOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -1297,7 +1297,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -1314,7 +1314,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -1329,7 +1329,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -1339,7 +1339,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -1357,7 +1357,7 @@ public final class DatasetOuterClass {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 3;</code>
+       * <code>string type = 3 [json_name = "type"];</code>
        * @return The type.
        */
       public java.lang.String getType() {
@@ -1373,7 +1373,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>string type = 3;</code>
+       * <code>string type = 3 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
@@ -1390,7 +1390,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>string type = 3;</code>
+       * <code>string type = 3 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -1405,7 +1405,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>string type = 3;</code>
+       * <code>string type = 3 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -1415,7 +1415,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>string type = 3;</code>
+       * <code>string type = 3 [json_name = "type"];</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
@@ -1439,7 +1439,7 @@ public final class DatasetOuterClass {
          }
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -1447,14 +1447,14 @@ public final class DatasetOuterClass {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -1462,7 +1462,7 @@ public final class DatasetOuterClass {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -1471,7 +1471,7 @@ public final class DatasetOuterClass {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -1487,7 +1487,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -1502,7 +1502,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -1515,7 +1515,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -1525,7 +1525,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -1549,7 +1549,7 @@ public final class DatasetOuterClass {
          }
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @return A list containing the targets.
        */
       public com.google.protobuf.ProtocolStringList
@@ -1557,14 +1557,14 @@ public final class DatasetOuterClass {
         return targets_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @return The count of targets.
        */
       public int getTargetsCount() {
         return targets_.size();
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @param index The index of the element to return.
        * @return The targets at the given index.
        */
@@ -1572,7 +1572,7 @@ public final class DatasetOuterClass {
         return targets_.get(index);
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the targets at the given index.
        */
@@ -1581,7 +1581,7 @@ public final class DatasetOuterClass {
         return targets_.getByteString(index);
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @param index The index to set the value at.
        * @param value The targets to set.
        * @return This builder for chaining.
@@ -1597,7 +1597,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @param value The targets to add.
        * @return This builder for chaining.
        */
@@ -1612,7 +1612,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @param values The targets to add.
        * @return This builder for chaining.
        */
@@ -1625,7 +1625,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTargets() {
@@ -1635,7 +1635,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>repeated string targets = 5;</code>
+       * <code>repeated string targets = 5 [json_name = "targets"];</code>
        * @param value The bytes of the targets to add.
        * @return This builder for chaining.
        */
@@ -1655,14 +1655,14 @@ public final class DatasetOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
@@ -1673,7 +1673,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public Builder setRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -1689,7 +1689,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public Builder setRetentionPolicy(
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
@@ -1703,7 +1703,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public Builder mergeRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -1721,7 +1721,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public Builder clearRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -1735,7 +1735,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
@@ -1743,7 +1743,7 @@ public final class DatasetOuterClass {
         return getRetentionPolicyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
@@ -1754,7 +1754,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> 
@@ -1774,14 +1774,14 @@ public final class DatasetOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1792,7 +1792,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -1808,7 +1808,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1822,7 +1822,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -1840,7 +1840,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1854,7 +1854,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
         
@@ -1862,7 +1862,7 @@ public final class DatasetOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -1873,7 +1873,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1893,14 +1893,14 @@ public final class DatasetOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
@@ -1911,7 +1911,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
@@ -1927,7 +1927,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public Builder setUpdatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1941,7 +1941,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
@@ -1959,7 +1959,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public Builder clearUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -1973,7 +1973,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
         
@@ -1981,7 +1981,7 @@ public final class DatasetOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
         if (updatedAtBuilder_ != null) {
@@ -1992,7 +1992,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2014,7 +2014,7 @@ public final class DatasetOuterClass {
        * Number of samples in the dataset reflecting added entries that meet the retention policy
        * </pre>
        *
-       * <code>int64 size = 12;</code>
+       * <code>int64 size = 12 [json_name = "size"];</code>
        * @return The size.
        */
       @java.lang.Override
@@ -2026,7 +2026,7 @@ public final class DatasetOuterClass {
        * Number of samples in the dataset reflecting added entries that meet the retention policy
        * </pre>
        *
-       * <code>int64 size = 12;</code>
+       * <code>int64 size = 12 [json_name = "size"];</code>
        * @param value The size to set.
        * @return This builder for chaining.
        */
@@ -2041,7 +2041,7 @@ public final class DatasetOuterClass {
        * Number of samples in the dataset reflecting added entries that meet the retention policy
        * </pre>
        *
-       * <code>int64 size = 12;</code>
+       * <code>int64 size = 12 [json_name = "size"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSize() {
@@ -2055,14 +2055,14 @@ public final class DatasetOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> truncatedAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        * @return Whether the truncatedAt field is set.
        */
       public boolean hasTruncatedAt() {
         return truncatedAtBuilder_ != null || truncatedAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        * @return The truncatedAt.
        */
       public com.google.protobuf.Timestamp getTruncatedAt() {
@@ -2073,7 +2073,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public Builder setTruncatedAt(com.google.protobuf.Timestamp value) {
         if (truncatedAtBuilder_ == null) {
@@ -2089,7 +2089,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public Builder setTruncatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2103,7 +2103,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public Builder mergeTruncatedAt(com.google.protobuf.Timestamp value) {
         if (truncatedAtBuilder_ == null) {
@@ -2121,7 +2121,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public Builder clearTruncatedAt() {
         if (truncatedAtBuilder_ == null) {
@@ -2135,7 +2135,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getTruncatedAtBuilder() {
         
@@ -2143,7 +2143,7 @@ public final class DatasetOuterClass {
         return getTruncatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
         if (truncatedAtBuilder_ != null) {
@@ -2154,7 +2154,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp truncated_at = 13;</code>
+       * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2238,16 +2238,19 @@ public final class DatasetOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027asgt/type/dataset.proto\022\tasgt.type\032 as" +
       "gt/type/retention_policy.proto\032\037google/p" +
-      "rotobuf/timestamp.proto\"\262\002\n\007Dataset\022\020\n\010c" +
-      "onsumer\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004type\030\003 \001(" +
-      "\t\022\014\n\004tags\030\004 \003(\t\022\017\n\007targets\030\005 \003(\t\0224\n\020rete" +
-      "ntion_policy\030\t \001(\0132\032.asgt.type.Retention" +
-      "Policy\022.\n\ncreated_at\030\n \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022\014\n\004size\030\014 \001(\003\0220\n\014" +
-      "truncated_at\030\r \001(\0132\032.google.protobuf.Tim" +
-      "estampJ\004\010\006\020\tB8Z6github.com/e-conomic/vml" +
-      "apis/gen/go/asgt/type;asgttypeb\006proto3"
+      "rotobuf/timestamp.proto\"\221\003\n\007Dataset\022\032\n\010c" +
+      "onsumer\030\001 \001(\tR\010consumer\022\022\n\004name\030\002 \001(\tR\004n" +
+      "ame\022\022\n\004type\030\003 \001(\tR\004type\022\022\n\004tags\030\004 \003(\tR\004t" +
+      "ags\022\030\n\007targets\030\005 \003(\tR\007targets\022E\n\020retenti" +
+      "on_policy\030\t \001(\0132\032.asgt.type.RetentionPol" +
+      "icyR\017retentionPolicy\0229\n\ncreated_at\030\n \001(\013" +
+      "2\032.google.protobuf.TimestampR\tcreatedAt\022" +
+      "9\n\nupdated_at\030\013 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\tupdatedAt\022\022\n\004size\030\014 \001(\003R\004size\022=" +
+      "\n\014truncated_at\030\r \001(\0132\032.google.protobuf.T" +
+      "imestampR\013truncatedAtJ\004\010\006\020\tB8Z6github.co" +
+      "m/e-conomic/vmlapis/gen/go/asgt/type;asg" +
+      "ttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

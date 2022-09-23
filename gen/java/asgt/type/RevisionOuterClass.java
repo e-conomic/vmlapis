@@ -19,23 +19,23 @@ public final class RevisionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 number = 1;</code>
+     * <code>int64 number = 1 [json_name = "number"];</code>
      * @return The number.
      */
     long getNumber();
 
     /**
-     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
@@ -44,7 +44,7 @@ public final class RevisionOuterClass {
      * Number of samples added to the dataset in this revision
      * </pre>
      *
-     * <code>int64 size = 3;</code>
+     * <code>int64 size = 3 [json_name = "size"];</code>
      * @return The size.
      */
     long getSize();
@@ -152,7 +152,7 @@ public final class RevisionOuterClass {
     public static final int NUMBER_FIELD_NUMBER = 1;
     private long number_;
     /**
-     * <code>int64 number = 1;</code>
+     * <code>int64 number = 1 [json_name = "number"];</code>
      * @return The number.
      */
     @java.lang.Override
@@ -163,7 +163,7 @@ public final class RevisionOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     @java.lang.Override
@@ -171,7 +171,7 @@ public final class RevisionOuterClass {
       return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     @java.lang.Override
@@ -179,7 +179,7 @@ public final class RevisionOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -193,7 +193,7 @@ public final class RevisionOuterClass {
      * Number of samples added to the dataset in this revision
      * </pre>
      *
-     * <code>int64 size = 3;</code>
+     * <code>int64 size = 3 [json_name = "size"];</code>
      * @return The size.
      */
     @java.lang.Override
@@ -554,7 +554,7 @@ public final class RevisionOuterClass {
 
       private long number_ ;
       /**
-       * <code>int64 number = 1;</code>
+       * <code>int64 number = 1 [json_name = "number"];</code>
        * @return The number.
        */
       @java.lang.Override
@@ -562,7 +562,7 @@ public final class RevisionOuterClass {
         return number_;
       }
       /**
-       * <code>int64 number = 1;</code>
+       * <code>int64 number = 1 [json_name = "number"];</code>
        * @param value The number to set.
        * @return This builder for chaining.
        */
@@ -573,7 +573,7 @@ public final class RevisionOuterClass {
         return this;
       }
       /**
-       * <code>int64 number = 1;</code>
+       * <code>int64 number = 1 [json_name = "number"];</code>
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
@@ -587,14 +587,14 @@ public final class RevisionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -605,7 +605,7 @@ public final class RevisionOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -621,7 +621,7 @@ public final class RevisionOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -635,7 +635,7 @@ public final class RevisionOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -653,7 +653,7 @@ public final class RevisionOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -667,7 +667,7 @@ public final class RevisionOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
         
@@ -675,7 +675,7 @@ public final class RevisionOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -686,7 +686,7 @@ public final class RevisionOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -708,7 +708,7 @@ public final class RevisionOuterClass {
        * Number of samples added to the dataset in this revision
        * </pre>
        *
-       * <code>int64 size = 3;</code>
+       * <code>int64 size = 3 [json_name = "size"];</code>
        * @return The size.
        */
       @java.lang.Override
@@ -720,7 +720,7 @@ public final class RevisionOuterClass {
        * Number of samples added to the dataset in this revision
        * </pre>
        *
-       * <code>int64 size = 3;</code>
+       * <code>int64 size = 3 [json_name = "size"];</code>
        * @param value The size to set.
        * @return This builder for chaining.
        */
@@ -735,7 +735,7 @@ public final class RevisionOuterClass {
        * Number of samples added to the dataset in this revision
        * </pre>
        *
-       * <code>int64 size = 3;</code>
+       * <code>int64 size = 3 [json_name = "size"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSize() {
@@ -812,11 +812,12 @@ public final class RevisionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030asgt/type/revision.proto\022\tasgt.type\032\037g" +
-      "oogle/protobuf/timestamp.proto\"X\n\010Revisi" +
-      "on\022\016\n\006number\030\001 \001(\003\022.\n\ncreated_at\030\002 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\014\n\004size\030\003 \001(\003" +
-      "B8Z6github.com/e-conomic/vmlapis/gen/go/" +
-      "asgt/type;asgttypeb\006proto3"
+      "oogle/protobuf/timestamp.proto\"q\n\010Revisi" +
+      "on\022\026\n\006number\030\001 \001(\003R\006number\0229\n\ncreated_at" +
+      "\030\002 \001(\0132\032.google.protobuf.TimestampR\tcrea" +
+      "tedAt\022\022\n\004size\030\003 \001(\003R\004sizeB8Z6github.com/" +
+      "e-conomic/vmlapis/gen/go/asgt/type;asgtt" +
+      "ypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -19,41 +19,41 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     java.util.List<asgt.type.PredictionOuterClass.Prediction> 
         getPredictionsList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction getPredictions(int index);
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     int getPredictionsCount();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
@@ -168,14 +168,14 @@ public final class JesterOuterClass {
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
@@ -183,21 +183,21 @@ public final class JesterOuterClass {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public int getPredictionsCount() {
       return predictions_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
       return predictions_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
@@ -208,7 +208,7 @@ public final class JesterOuterClass {
     public static final int MODEL_FIELD_NUMBER = 2;
     private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -216,7 +216,7 @@ public final class JesterOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -224,7 +224,7 @@ public final class JesterOuterClass {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -620,7 +620,7 @@ public final class JesterOuterClass {
           asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
         if (predictionsBuilder_ == null) {
@@ -630,7 +630,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public int getPredictionsCount() {
         if (predictionsBuilder_ == null) {
@@ -640,7 +640,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -650,7 +650,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder setPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction value) {
@@ -667,7 +667,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder setPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -681,7 +681,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
@@ -697,7 +697,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction value) {
@@ -714,7 +714,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -728,7 +728,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -742,7 +742,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addAllPredictions(
           java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction> values) {
@@ -757,7 +757,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder clearPredictions() {
         if (predictionsBuilder_ == null) {
@@ -770,7 +770,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder removePredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -783,14 +783,14 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
           int index) {
         return getPredictionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
           int index) {
@@ -800,7 +800,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
            getPredictionsOrBuilderList() {
@@ -811,14 +811,14 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
         return getPredictionsFieldBuilder().addBuilder(
             asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
           int index) {
@@ -826,7 +826,7 @@ public final class JesterOuterClass {
             index, asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Builder> 
            getPredictionsBuilderList() {
@@ -851,14 +851,14 @@ public final class JesterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -869,7 +869,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -885,7 +885,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -899,7 +899,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -917,7 +917,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -931,7 +931,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -939,7 +939,7 @@ public final class JesterOuterClass {
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -950,7 +950,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -1023,18 +1023,18 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 suggestion_limit = 1;</code>
+     * <code>int32 suggestion_limit = 1 [json_name = "suggestionLimit"];</code>
      * @return The suggestionLimit.
      */
     int getSuggestionLimit();
 
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
      * @return The minConfidence.
      */
     asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
@@ -1131,7 +1131,7 @@ public final class JesterOuterClass {
     public static final int SUGGESTION_LIMIT_FIELD_NUMBER = 1;
     private int suggestionLimit_;
     /**
-     * <code>int32 suggestion_limit = 1;</code>
+     * <code>int32 suggestion_limit = 1 [json_name = "suggestionLimit"];</code>
      * @return The suggestionLimit.
      */
     @java.lang.Override
@@ -1142,14 +1142,14 @@ public final class JesterOuterClass {
     public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
     private int minConfidence_;
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     @java.lang.Override public int getMinConfidenceValue() {
       return minConfidence_;
     }
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
      * @return The minConfidence.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
@@ -1478,7 +1478,7 @@ public final class JesterOuterClass {
 
       private int suggestionLimit_ ;
       /**
-       * <code>int32 suggestion_limit = 1;</code>
+       * <code>int32 suggestion_limit = 1 [json_name = "suggestionLimit"];</code>
        * @return The suggestionLimit.
        */
       @java.lang.Override
@@ -1486,7 +1486,7 @@ public final class JesterOuterClass {
         return suggestionLimit_;
       }
       /**
-       * <code>int32 suggestion_limit = 1;</code>
+       * <code>int32 suggestion_limit = 1 [json_name = "suggestionLimit"];</code>
        * @param value The suggestionLimit to set.
        * @return This builder for chaining.
        */
@@ -1497,7 +1497,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>int32 suggestion_limit = 1;</code>
+       * <code>int32 suggestion_limit = 1 [json_name = "suggestionLimit"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSuggestionLimit() {
@@ -1509,14 +1509,14 @@ public final class JesterOuterClass {
 
       private int minConfidence_ = 0;
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
        * @return The enum numeric value on the wire for minConfidence.
        */
       @java.lang.Override public int getMinConfidenceValue() {
         return minConfidence_;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
        * @param value The enum numeric value on the wire for minConfidence to set.
        * @return This builder for chaining.
        */
@@ -1527,7 +1527,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
        * @return The minConfidence.
        */
       @java.lang.Override
@@ -1537,7 +1537,7 @@ public final class JesterOuterClass {
         return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
        * @param value The minConfidence to set.
        * @return This builder for chaining.
        */
@@ -1551,7 +1551,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
@@ -1618,87 +1618,87 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     java.util.List<asgt.type.DataOuterClass.Data> 
         getInputsList();
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     asgt.type.DataOuterClass.Data getInputs(int index);
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.jester.v1.JesterOuterClass.SuggestionOptions getOptions();
     /**
-     * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
      */
     asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder getOptionsOrBuilder();
 
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -1839,7 +1839,7 @@ public final class JesterOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -1856,7 +1856,7 @@ public final class JesterOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -1877,7 +1877,7 @@ public final class JesterOuterClass {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -1894,7 +1894,7 @@ public final class JesterOuterClass {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     @java.lang.Override
@@ -1915,14 +1915,14 @@ public final class JesterOuterClass {
     public static final int INPUTS_FIELD_NUMBER = 3;
     private java.util.List<asgt.type.DataOuterClass.Data> inputs_;
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.DataOuterClass.Data> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
@@ -1930,21 +1930,21 @@ public final class JesterOuterClass {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.Data getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
@@ -1955,7 +1955,7 @@ public final class JesterOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 4;
     private asgt.jester.v1.JesterOuterClass.SuggestionOptions options_;
     /**
-     * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -1963,7 +1963,7 @@ public final class JesterOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -1971,7 +1971,7 @@ public final class JesterOuterClass {
       return options_ == null ? asgt.jester.v1.JesterOuterClass.SuggestionOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder getOptionsOrBuilder() {
@@ -1981,7 +1981,7 @@ public final class JesterOuterClass {
     public static final int TAGS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1989,14 +1989,14 @@ public final class JesterOuterClass {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -2004,7 +2004,7 @@ public final class JesterOuterClass {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 5 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -2455,7 +2455,7 @@ public final class JesterOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -2471,7 +2471,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -2488,7 +2488,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -2503,7 +2503,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -2513,7 +2513,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -2531,7 +2531,7 @@ public final class JesterOuterClass {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
       public java.lang.String getType() {
@@ -2547,7 +2547,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
@@ -2564,7 +2564,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -2579,7 +2579,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -2589,7 +2589,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
@@ -2618,7 +2618,7 @@ public final class JesterOuterClass {
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public java.util.List<asgt.type.DataOuterClass.Data> getInputsList() {
         if (inputsBuilder_ == null) {
@@ -2628,7 +2628,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -2638,7 +2638,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public asgt.type.DataOuterClass.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -2648,7 +2648,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder setInputs(
           int index, asgt.type.DataOuterClass.Data value) {
@@ -2665,7 +2665,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder setInputs(
           int index, asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -2679,7 +2679,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder addInputs(asgt.type.DataOuterClass.Data value) {
         if (inputsBuilder_ == null) {
@@ -2695,7 +2695,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           int index, asgt.type.DataOuterClass.Data value) {
@@ -2712,7 +2712,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -2726,7 +2726,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           int index, asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -2740,7 +2740,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder addAllInputs(
           java.lang.Iterable<? extends asgt.type.DataOuterClass.Data> values) {
@@ -2755,7 +2755,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -2768,7 +2768,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -2781,14 +2781,14 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public asgt.type.DataOuterClass.Data.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
           int index) {
@@ -2798,7 +2798,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
            getInputsOrBuilderList() {
@@ -2809,14 +2809,14 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public asgt.type.DataOuterClass.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
             asgt.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public asgt.type.DataOuterClass.Data.Builder addInputsBuilder(
           int index) {
@@ -2824,7 +2824,7 @@ public final class JesterOuterClass {
             index, asgt.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
        */
       public java.util.List<asgt.type.DataOuterClass.Data.Builder> 
            getInputsBuilderList() {
@@ -2849,14 +2849,14 @@ public final class JesterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.jester.v1.JesterOuterClass.SuggestionOptions, asgt.jester.v1.JesterOuterClass.SuggestionOptions.Builder, asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.jester.v1.JesterOuterClass.SuggestionOptions getOptions() {
@@ -2867,7 +2867,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.jester.v1.JesterOuterClass.SuggestionOptions value) {
         if (optionsBuilder_ == null) {
@@ -2883,7 +2883,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.jester.v1.JesterOuterClass.SuggestionOptions.Builder builderForValue) {
@@ -2897,7 +2897,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.jester.v1.JesterOuterClass.SuggestionOptions value) {
         if (optionsBuilder_ == null) {
@@ -2915,7 +2915,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -2929,7 +2929,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public asgt.jester.v1.JesterOuterClass.SuggestionOptions.Builder getOptionsBuilder() {
         
@@ -2937,7 +2937,7 @@ public final class JesterOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -2948,7 +2948,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.jester.v1.JesterOuterClass.SuggestionOptions, asgt.jester.v1.JesterOuterClass.SuggestionOptions.Builder, asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder> 
@@ -2972,7 +2972,7 @@ public final class JesterOuterClass {
          }
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -2980,14 +2980,14 @@ public final class JesterOuterClass {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -2995,7 +2995,7 @@ public final class JesterOuterClass {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -3004,7 +3004,7 @@ public final class JesterOuterClass {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -3020,7 +3020,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -3035,7 +3035,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -3048,7 +3048,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -3058,7 +3058,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 5 [json_name = "tags"];</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -3151,34 +3151,37 @@ public final class JesterOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033asgt/jester/v1/jester.proto\022\016asgt.jest" +
-      "er.v1\032\024asgt/type/data.proto\032\025asgt/type/m" +
-      "odel.proto\032\032asgt/type/prediction.proto\032\034" +
-      "google/api/annotations.proto\032\031options/an" +
-      "notations.proto\"a\n\022SuggestionResponse\022*\n" +
-      "\013predictions\030\001 \003(\0132\025.asgt.type.Predictio" +
-      "n\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"b\n\021Su" +
-      "ggestionOptions\022\030\n\020suggestion_limit\030\001 \001(" +
-      "\005\0223\n\016min_confidence\030\002 \001(\0162\033.asgt.type.Co" +
-      "nfidence.Level\"\222\001\n\021SuggestionRequest\022\014\n\004" +
-      "name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\037\n\006inputs\030\003 \003(\013" +
-      "2\017.asgt.type.Data\0222\n\007options\030\004 \001(\0132!.asg" +
-      "t.jester.v1.SuggestionOptions\022\014\n\004tags\030\005 " +
-      "\003(\t2\200\001\n\006Jester\022v\n\007Suggest\022!.asgt.jester." +
-      "v1.SuggestionRequest\032\".asgt.jester.v1.Su" +
-      "ggestionResponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{na" +
-      "me}:suggest:\001*BxZ9github.com/e-conomic/v" +
-      "mlapis/gen/go/asgt/jester/v1;jester\222A:\022\021" +
-      "\n\013AutoSuggest2\002v1*\001\0022\020application/json:\020" +
-      "application/jsonb\006proto3"
+      "er.v1\032\034google/api/annotations.proto\032.pro" +
+      "toc-gen-openapiv2/options/annotations.pr" +
+      "oto\032\032asgt/type/prediction.proto\032\025asgt/ty" +
+      "pe/model.proto\032\024asgt/type/data.proto\"u\n\022" +
+      "SuggestionResponse\0227\n\013predictions\030\001 \003(\0132" +
+      "\025.asgt.type.PredictionR\013predictions\022&\n\005m" +
+      "odel\030\002 \001(\0132\020.asgt.type.ModelR\005model\"\202\001\n\021" +
+      "SuggestionOptions\022)\n\020suggestion_limit\030\001 " +
+      "\001(\005R\017suggestionLimit\022B\n\016min_confidence\030\002" +
+      " \001(\0162\033.asgt.type.Confidence.LevelR\rminCo" +
+      "nfidence\"\265\001\n\021SuggestionRequest\022\022\n\004name\030\001" +
+      " \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\022\'\n\006inputs" +
+      "\030\003 \003(\0132\017.asgt.type.DataR\006inputs\022;\n\007optio" +
+      "ns\030\004 \001(\0132!.asgt.jester.v1.SuggestionOpti" +
+      "onsR\007options\022\022\n\004tags\030\005 \003(\tR\004tags2\200\001\n\006Jes" +
+      "ter\022v\n\007Suggest\022!.asgt.jester.v1.Suggesti" +
+      "onRequest\032\".asgt.jester.v1.SuggestionRes" +
+      "ponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{name}:suggest" +
+      ":\001*BxZ9github.com/e-conomic/vmlapis/gen/" +
+      "go/asgt/jester/v1;jester\222A:\022\021\n\013AutoSugge" +
+      "st2\002v1*\001\0022\020application/json:\020application" +
+      "/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.type.DataOuterClass.getDescriptor(),
-          asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.PredictionOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
+          asgt.type.PredictionOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.type.DataOuterClass.getDescriptor(),
         });
     internal_static_asgt_jester_v1_SuggestionResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3204,11 +3207,11 @@ public final class JesterOuterClass {
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    asgt.type.DataOuterClass.getDescriptor();
-    asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.PredictionOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
+    asgt.type.PredictionOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
+    asgt.type.DataOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

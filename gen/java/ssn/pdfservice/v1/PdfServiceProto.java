@@ -19,46 +19,46 @@ public final class PdfServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bytes data = 1;</code>
+     * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     com.google.protobuf.ByteString getData();
 
     /**
-     * <code>uint32 dpi = 2;</code>
+     * <code>uint32 dpi = 2 [json_name = "dpi"];</code>
      * @return The dpi.
      */
     int getDpi();
 
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
      * @return The enum numeric value on the wire for format.
      */
     int getFormatValue();
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
      * @return The format.
      */
     ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat();
 
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
      * @return The enum numeric value on the wire for color.
      */
     int getColorValue();
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
      * @return The color.
      */
     ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor();
 
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
      * @return The enum numeric value on the wire for pages.
      */
     int getPagesValue();
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
      * @return The pages.
      */
     ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages();
@@ -526,7 +526,7 @@ public final class PdfServiceProto {
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString data_;
     /**
-     * <code>bytes data = 1;</code>
+     * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -537,7 +537,7 @@ public final class PdfServiceProto {
     public static final int DPI_FIELD_NUMBER = 2;
     private int dpi_;
     /**
-     * <code>uint32 dpi = 2;</code>
+     * <code>uint32 dpi = 2 [json_name = "dpi"];</code>
      * @return The dpi.
      */
     @java.lang.Override
@@ -548,14 +548,14 @@ public final class PdfServiceProto {
     public static final int FORMAT_FIELD_NUMBER = 3;
     private int format_;
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
      * @return The enum numeric value on the wire for format.
      */
     @java.lang.Override public int getFormatValue() {
       return format_;
     }
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
      * @return The format.
      */
     @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat() {
@@ -567,14 +567,14 @@ public final class PdfServiceProto {
     public static final int COLOR_FIELD_NUMBER = 4;
     private int color_;
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
      * @return The enum numeric value on the wire for color.
      */
     @java.lang.Override public int getColorValue() {
       return color_;
     }
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
      * @return The color.
      */
     @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor() {
@@ -586,14 +586,14 @@ public final class PdfServiceProto {
     public static final int PAGES_FIELD_NUMBER = 5;
     private int pages_;
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
      * @return The enum numeric value on the wire for pages.
      */
     @java.lang.Override public int getPagesValue() {
       return pages_;
     }
     /**
-     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+     * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
      * @return The pages.
      */
     @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages() {
@@ -971,7 +971,7 @@ public final class PdfServiceProto {
 
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes data = 1;</code>
+       * <code>bytes data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       @java.lang.Override
@@ -979,7 +979,7 @@ public final class PdfServiceProto {
         return data_;
       }
       /**
-       * <code>bytes data = 1;</code>
+       * <code>bytes data = 1 [json_name = "data"];</code>
        * @param value The data to set.
        * @return This builder for chaining.
        */
@@ -993,7 +993,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>bytes data = 1;</code>
+       * <code>bytes data = 1 [json_name = "data"];</code>
        * @return This builder for chaining.
        */
       public Builder clearData() {
@@ -1005,7 +1005,7 @@ public final class PdfServiceProto {
 
       private int dpi_ ;
       /**
-       * <code>uint32 dpi = 2;</code>
+       * <code>uint32 dpi = 2 [json_name = "dpi"];</code>
        * @return The dpi.
        */
       @java.lang.Override
@@ -1013,7 +1013,7 @@ public final class PdfServiceProto {
         return dpi_;
       }
       /**
-       * <code>uint32 dpi = 2;</code>
+       * <code>uint32 dpi = 2 [json_name = "dpi"];</code>
        * @param value The dpi to set.
        * @return This builder for chaining.
        */
@@ -1024,7 +1024,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>uint32 dpi = 2;</code>
+       * <code>uint32 dpi = 2 [json_name = "dpi"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDpi() {
@@ -1036,14 +1036,14 @@ public final class PdfServiceProto {
 
       private int format_ = 0;
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
        * @return The enum numeric value on the wire for format.
        */
       @java.lang.Override public int getFormatValue() {
         return format_;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
        * @param value The enum numeric value on the wire for format to set.
        * @return This builder for chaining.
        */
@@ -1054,7 +1054,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
        * @return The format.
        */
       @java.lang.Override
@@ -1064,7 +1064,7 @@ public final class PdfServiceProto {
         return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
        * @param value The format to set.
        * @return This builder for chaining.
        */
@@ -1078,7 +1078,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFormat() {
@@ -1090,14 +1090,14 @@ public final class PdfServiceProto {
 
       private int color_ = 0;
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
        * @return The enum numeric value on the wire for color.
        */
       @java.lang.Override public int getColorValue() {
         return color_;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
        * @param value The enum numeric value on the wire for color to set.
        * @return This builder for chaining.
        */
@@ -1108,7 +1108,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
        * @return The color.
        */
       @java.lang.Override
@@ -1118,7 +1118,7 @@ public final class PdfServiceProto {
         return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
        * @param value The color to set.
        * @return This builder for chaining.
        */
@@ -1132,7 +1132,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
        * @return This builder for chaining.
        */
       public Builder clearColor() {
@@ -1144,14 +1144,14 @@ public final class PdfServiceProto {
 
       private int pages_ = 0;
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
        * @return The enum numeric value on the wire for pages.
        */
       @java.lang.Override public int getPagesValue() {
         return pages_;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
        * @param value The enum numeric value on the wire for pages to set.
        * @return This builder for chaining.
        */
@@ -1162,7 +1162,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
        * @return The pages.
        */
       @java.lang.Override
@@ -1172,7 +1172,7 @@ public final class PdfServiceProto {
         return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
        * @param value The pages to set.
        * @return This builder for chaining.
        */
@@ -1186,7 +1186,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5;</code>
+       * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPages() {
@@ -1253,25 +1253,25 @@ public final class PdfServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 index = 1;</code>
+     * <code>uint32 index = 1 [json_name = "index"];</code>
      * @return The index.
      */
     int getIndex();
 
     /**
-     * <code>bytes data = 2;</code>
+     * <code>bytes data = 2 [json_name = "data"];</code>
      * @return The data.
      */
     com.google.protobuf.ByteString getData();
 
     /**
-     * <code>uint32 width = 3;</code>
+     * <code>uint32 width = 3 [json_name = "width"];</code>
      * @return The width.
      */
     int getWidth();
 
     /**
-     * <code>uint32 height = 4;</code>
+     * <code>uint32 height = 4 [json_name = "height"];</code>
      * @return The height.
      */
     int getHeight();
@@ -1281,7 +1281,7 @@ public final class PdfServiceProto {
      * Compared to a 72 dpi page
      * </pre>
      *
-     * <code>double scale = 5;</code>
+     * <code>double scale = 5 [json_name = "scale"];</code>
      * @return The scale.
      */
     double getScale();
@@ -1392,7 +1392,7 @@ public final class PdfServiceProto {
     public static final int INDEX_FIELD_NUMBER = 1;
     private int index_;
     /**
-     * <code>uint32 index = 1;</code>
+     * <code>uint32 index = 1 [json_name = "index"];</code>
      * @return The index.
      */
     @java.lang.Override
@@ -1403,7 +1403,7 @@ public final class PdfServiceProto {
     public static final int DATA_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString data_;
     /**
-     * <code>bytes data = 2;</code>
+     * <code>bytes data = 2 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -1414,7 +1414,7 @@ public final class PdfServiceProto {
     public static final int WIDTH_FIELD_NUMBER = 3;
     private int width_;
     /**
-     * <code>uint32 width = 3;</code>
+     * <code>uint32 width = 3 [json_name = "width"];</code>
      * @return The width.
      */
     @java.lang.Override
@@ -1425,7 +1425,7 @@ public final class PdfServiceProto {
     public static final int HEIGHT_FIELD_NUMBER = 4;
     private int height_;
     /**
-     * <code>uint32 height = 4;</code>
+     * <code>uint32 height = 4 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -1440,7 +1440,7 @@ public final class PdfServiceProto {
      * Compared to a 72 dpi page
      * </pre>
      *
-     * <code>double scale = 5;</code>
+     * <code>double scale = 5 [json_name = "scale"];</code>
      * @return The scale.
      */
     @java.lang.Override
@@ -1822,7 +1822,7 @@ public final class PdfServiceProto {
 
       private int index_ ;
       /**
-       * <code>uint32 index = 1;</code>
+       * <code>uint32 index = 1 [json_name = "index"];</code>
        * @return The index.
        */
       @java.lang.Override
@@ -1830,7 +1830,7 @@ public final class PdfServiceProto {
         return index_;
       }
       /**
-       * <code>uint32 index = 1;</code>
+       * <code>uint32 index = 1 [json_name = "index"];</code>
        * @param value The index to set.
        * @return This builder for chaining.
        */
@@ -1841,7 +1841,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>uint32 index = 1;</code>
+       * <code>uint32 index = 1 [json_name = "index"];</code>
        * @return This builder for chaining.
        */
       public Builder clearIndex() {
@@ -1853,7 +1853,7 @@ public final class PdfServiceProto {
 
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes data = 2;</code>
+       * <code>bytes data = 2 [json_name = "data"];</code>
        * @return The data.
        */
       @java.lang.Override
@@ -1861,7 +1861,7 @@ public final class PdfServiceProto {
         return data_;
       }
       /**
-       * <code>bytes data = 2;</code>
+       * <code>bytes data = 2 [json_name = "data"];</code>
        * @param value The data to set.
        * @return This builder for chaining.
        */
@@ -1875,7 +1875,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>bytes data = 2;</code>
+       * <code>bytes data = 2 [json_name = "data"];</code>
        * @return This builder for chaining.
        */
       public Builder clearData() {
@@ -1887,7 +1887,7 @@ public final class PdfServiceProto {
 
       private int width_ ;
       /**
-       * <code>uint32 width = 3;</code>
+       * <code>uint32 width = 3 [json_name = "width"];</code>
        * @return The width.
        */
       @java.lang.Override
@@ -1895,7 +1895,7 @@ public final class PdfServiceProto {
         return width_;
       }
       /**
-       * <code>uint32 width = 3;</code>
+       * <code>uint32 width = 3 [json_name = "width"];</code>
        * @param value The width to set.
        * @return This builder for chaining.
        */
@@ -1906,7 +1906,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>uint32 width = 3;</code>
+       * <code>uint32 width = 3 [json_name = "width"];</code>
        * @return This builder for chaining.
        */
       public Builder clearWidth() {
@@ -1918,7 +1918,7 @@ public final class PdfServiceProto {
 
       private int height_ ;
       /**
-       * <code>uint32 height = 4;</code>
+       * <code>uint32 height = 4 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
@@ -1926,7 +1926,7 @@ public final class PdfServiceProto {
         return height_;
       }
       /**
-       * <code>uint32 height = 4;</code>
+       * <code>uint32 height = 4 [json_name = "height"];</code>
        * @param value The height to set.
        * @return This builder for chaining.
        */
@@ -1937,7 +1937,7 @@ public final class PdfServiceProto {
         return this;
       }
       /**
-       * <code>uint32 height = 4;</code>
+       * <code>uint32 height = 4 [json_name = "height"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
@@ -1953,7 +1953,7 @@ public final class PdfServiceProto {
        * Compared to a 72 dpi page
        * </pre>
        *
-       * <code>double scale = 5;</code>
+       * <code>double scale = 5 [json_name = "scale"];</code>
        * @return The scale.
        */
       @java.lang.Override
@@ -1965,7 +1965,7 @@ public final class PdfServiceProto {
        * Compared to a 72 dpi page
        * </pre>
        *
-       * <code>double scale = 5;</code>
+       * <code>double scale = 5 [json_name = "scale"];</code>
        * @param value The scale to set.
        * @return This builder for chaining.
        */
@@ -1980,7 +1980,7 @@ public final class PdfServiceProto {
        * Compared to a 72 dpi page
        * </pre>
        *
-       * <code>double scale = 5;</code>
+       * <code>double scale = 5 [json_name = "scale"];</code>
        * @return This builder for chaining.
        */
       public Builder clearScale() {
@@ -2062,24 +2062,26 @@ public final class PdfServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"ssn/pdfservice/v1/pdfservice.proto\022\021ss" +
-      "n.pdfservice.v1\"\371\002\n\023RasterizePdfRequest\022" +
-      "\014\n\004data\030\001 \001(\014\022\013\n\003dpi\030\002 \001(\r\022=\n\006format\030\003 \001" +
-      "(\0162-.ssn.pdfservice.v1.RasterizePdfReque" +
-      "st.Format\022@\n\005color\030\004 \001(\01621.ssn.pdfservic" +
-      "e.v1.RasterizePdfRequest.ColorSpace\022@\n\005p" +
-      "ages\030\005 \001(\01621.ssn.pdfservice.v1.Rasterize" +
-      "PdfRequest.PageOption\"%\n\006Format\022\007\n\003PNG\020\000" +
-      "\022\010\n\004JPEG\020\001\022\010\n\004WEBP\020\002\"!\n\nColorSpace\022\010\n\004GR" +
-      "AY\020\000\022\t\n\005COLOR\020\001\":\n\nPageOption\022\016\n\nFIRST_L" +
-      "AST\020\000\022\t\n\005FIRST\020\001\022\010\n\004LAST\020\002\022\007\n\003ALL\020\003\"a\n\024R" +
-      "asterizePdfResponse\022\r\n\005index\030\001 \001(\r\022\014\n\004da" +
-      "ta\030\002 \001(\014\022\r\n\005width\030\003 \001(\r\022\016\n\006height\030\004 \001(\r\022" +
-      "\r\n\005scale\030\005 \001(\0012o\n\nPdfService\022a\n\014Rasteriz" +
-      "ePdf\022&.ssn.pdfservice.v1.RasterizePdfReq" +
-      "uest\032\'.ssn.pdfservice.v1.RasterizePdfRes" +
-      "ponse0\001BSB\017PdfServiceProtoZ@github.com/e" +
-      "-conomic/vmlapis/gen/go/ssn/pdfservice/v" +
-      "1;pdfserviceb\006proto3"
+      "n.pdfservice.v1\"\232\003\n\023RasterizePdfRequest\022" +
+      "\022\n\004data\030\001 \001(\014R\004data\022\020\n\003dpi\030\002 \001(\rR\003dpi\022E\n" +
+      "\006format\030\003 \001(\0162-.ssn.pdfservice.v1.Raster" +
+      "izePdfRequest.FormatR\006format\022G\n\005color\030\004 " +
+      "\001(\01621.ssn.pdfservice.v1.RasterizePdfRequ" +
+      "est.ColorSpaceR\005color\022G\n\005pages\030\005 \001(\01621.s" +
+      "sn.pdfservice.v1.RasterizePdfRequest.Pag" +
+      "eOptionR\005pages\"%\n\006Format\022\007\n\003PNG\020\000\022\010\n\004JPE" +
+      "G\020\001\022\010\n\004WEBP\020\002\"!\n\nColorSpace\022\010\n\004GRAY\020\000\022\t\n" +
+      "\005COLOR\020\001\":\n\nPageOption\022\016\n\nFIRST_LAST\020\000\022\t" +
+      "\n\005FIRST\020\001\022\010\n\004LAST\020\002\022\007\n\003ALL\020\003\"\204\001\n\024Rasteri" +
+      "zePdfResponse\022\024\n\005index\030\001 \001(\rR\005index\022\022\n\004d" +
+      "ata\030\002 \001(\014R\004data\022\024\n\005width\030\003 \001(\rR\005width\022\026\n" +
+      "\006height\030\004 \001(\rR\006height\022\024\n\005scale\030\005 \001(\001R\005sc" +
+      "ale2o\n\nPdfService\022a\n\014RasterizePdf\022&.ssn." +
+      "pdfservice.v1.RasterizePdfRequest\032\'.ssn." +
+      "pdfservice.v1.RasterizePdfResponse0\001BSB\017" +
+      "PdfServiceProtoZ@github.com/e-conomic/vm" +
+      "lapis/gen/go/ssn/pdfservice/v1;pdfservic" +
+      "eb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

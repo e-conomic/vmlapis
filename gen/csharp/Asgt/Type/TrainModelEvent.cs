@@ -25,13 +25,15 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFhc2d0L3R5cGUvdHJhaW5fbW9kZWxfZXZlbnQucHJvdG8SCWFzZ3QudHlw",
-            "ZRoXYXNndC90eXBlL2RhdGFzZXQucHJvdG8i1QEKD1RyYWluTW9kZWxFdmVu",
-            "dBIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFzZXQSFQoNbW9k",
-            "ZWxfdmVyc2lvbhgEIAEoAxIOCgZzdGF0dXMYBSABKAkSFgoOc3RhdHVzX21l",
-            "c3NhZ2UYBiABKAkSNgoJYXJ0aWZhY3RzGAcgAygLMiMuYXNndC50eXBlLlRy",
-            "YWluTW9kZWxFdmVudC5BcnRpZmFjdBomCghBcnRpZmFjdBIMCgR0eXBlGAEg",
-            "ASgJEgwKBHBhdGgYAiABKAlCOFo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
-            "YXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
+            "ZRoXYXNndC90eXBlL2RhdGFzZXQucHJvdG8imgIKD1RyYWluTW9kZWxFdmVu",
+            "dBIsCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFzZXRSB2RhdGFz",
+            "ZXQSIwoNbW9kZWxfdmVyc2lvbhgEIAEoA1IMbW9kZWxWZXJzaW9uEhYKBnN0",
+            "YXR1cxgFIAEoCVIGc3RhdHVzEiUKDnN0YXR1c19tZXNzYWdlGAYgASgJUg1z",
+            "dGF0dXNNZXNzYWdlEkEKCWFydGlmYWN0cxgHIAMoCzIjLmFzZ3QudHlwZS5U",
+            "cmFpbk1vZGVsRXZlbnQuQXJ0aWZhY3RSCWFydGlmYWN0cxoyCghBcnRpZmFj",
+            "dBISCgR0eXBlGAEgASgJUgR0eXBlEhIKBHBhdGgYAiABKAlSBHBhdGhCOFo2",
+            "Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBl",
+            "O2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -42,23 +44,31 @@ namespace Asgt.Type {
 
   }
   #region Messages
-  public sealed partial class TrainModelEvent : pb::IMessage<TrainModelEvent> {
+  public sealed partial class TrainModelEvent : pb::IMessage<TrainModelEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TrainModelEvent> _parser = new pb::MessageParser<TrainModelEvent>(() => new TrainModelEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TrainModelEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Asgt.Type.TrainModelEventReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainModelEvent() {
       OnConstruction();
     }
@@ -66,6 +76,7 @@ namespace Asgt.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainModelEvent(TrainModelEvent other) : this() {
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       modelVersion_ = other.modelVersion_;
@@ -76,6 +87,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainModelEvent Clone() {
       return new TrainModelEvent(this);
     }
@@ -84,6 +96,7 @@ namespace Asgt.Type {
     public const int DatasetFieldNumber = 1;
     private global::Asgt.Type.Dataset dataset_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Dataset Dataset {
       get { return dataset_; }
       set {
@@ -95,6 +108,7 @@ namespace Asgt.Type {
     public const int ModelVersionFieldNumber = 4;
     private long modelVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ModelVersion {
       get { return modelVersion_; }
       set {
@@ -106,6 +120,7 @@ namespace Asgt.Type {
     public const int StatusFieldNumber = 5;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
       get { return status_; }
       set {
@@ -117,6 +132,7 @@ namespace Asgt.Type {
     public const int StatusMessageFieldNumber = 6;
     private string statusMessage_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StatusMessage {
       get { return statusMessage_; }
       set {
@@ -130,16 +146,19 @@ namespace Asgt.Type {
         = pb::FieldCodec.ForMessage(58, global::Asgt.Type.TrainModelEvent.Types.Artifact.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.TrainModelEvent.Types.Artifact> artifacts_ = new pbc::RepeatedField<global::Asgt.Type.TrainModelEvent.Types.Artifact>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.TrainModelEvent.Types.Artifact> Artifacts {
       get { return artifacts_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TrainModelEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TrainModelEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -156,6 +175,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
@@ -170,12 +190,17 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (dataset_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Dataset);
@@ -196,9 +221,38 @@ namespace Asgt.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dataset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Dataset);
+      }
+      if (ModelVersion != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(ModelVersion);
+      }
+      if (Status.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Status);
+      }
+      if (StatusMessage.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(StatusMessage);
+      }
+      artifacts_.WriteTo(ref output, _repeated_artifacts_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (dataset_ != null) {
@@ -221,6 +275,7 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TrainModelEvent other) {
       if (other == null) {
         return;
@@ -245,7 +300,11 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -277,29 +336,77 @@ namespace Asgt.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (dataset_ == null) {
+              Dataset = new global::Asgt.Type.Dataset();
+            }
+            input.ReadMessage(Dataset);
+            break;
+          }
+          case 32: {
+            ModelVersion = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            Status = input.ReadString();
+            break;
+          }
+          case 50: {
+            StatusMessage = input.ReadString();
+            break;
+          }
+          case 58: {
+            artifacts_.AddEntriesFrom(ref input, _repeated_artifacts_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TrainModelEvent message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
-      public sealed partial class Artifact : pb::IMessage<Artifact> {
+      public sealed partial class Artifact : pb::IMessage<Artifact>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Artifact> _parser = new pb::MessageParser<Artifact>(() => new Artifact());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Artifact> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Asgt.Type.TrainModelEvent.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Artifact() {
           OnConstruction();
         }
@@ -307,6 +414,7 @@ namespace Asgt.Type {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Artifact(Artifact other) : this() {
           type_ = other.type_;
           path_ = other.path_;
@@ -314,6 +422,7 @@ namespace Asgt.Type {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Artifact Clone() {
           return new Artifact(this);
         }
@@ -322,6 +431,7 @@ namespace Asgt.Type {
         public const int TypeFieldNumber = 1;
         private string type_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Type {
           get { return type_; }
           set {
@@ -333,6 +443,7 @@ namespace Asgt.Type {
         public const int PathFieldNumber = 2;
         private string path_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Path {
           get { return path_; }
           set {
@@ -341,11 +452,13 @@ namespace Asgt.Type {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Artifact);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Artifact other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -359,6 +472,7 @@ namespace Asgt.Type {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Type.Length != 0) hash ^= Type.GetHashCode();
@@ -370,12 +484,17 @@ namespace Asgt.Type {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Type.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Type);
@@ -387,9 +506,29 @@ namespace Asgt.Type {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
 
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Type);
+          }
+          if (Path.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Path);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Type.Length != 0) {
@@ -405,6 +544,7 @@ namespace Asgt.Type {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Artifact other) {
           if (other == null) {
             return;
@@ -419,7 +559,11 @@ namespace Asgt.Type {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -436,7 +580,31 @@ namespace Asgt.Type {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Type = input.ReadString();
+                break;
+              }
+              case 18: {
+                Path = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

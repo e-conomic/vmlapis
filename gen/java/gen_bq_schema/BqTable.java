@@ -25,7 +25,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The tableName.
      */
     java.lang.String getTableName();
@@ -35,7 +35,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The bytes for tableName.
      */
     com.google.protobuf.ByteString
@@ -47,7 +47,7 @@ public final class BqTable {
      * not its original/proto field name.
      * </pre>
      *
-     * <code>bool use_json_names = 2;</code>
+     * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
      * @return The useJsonNames.
      */
     boolean getUseJsonNames();
@@ -149,7 +149,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The tableName.
      */
     @java.lang.Override
@@ -171,7 +171,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The bytes for tableName.
      */
     @java.lang.Override
@@ -197,7 +197,7 @@ public final class BqTable {
      * not its original/proto field name.
      * </pre>
      *
-     * <code>bool use_json_names = 2;</code>
+     * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
      * @return The useJsonNames.
      */
     @java.lang.Override
@@ -532,7 +532,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @return The tableName.
        */
       public java.lang.String getTableName() {
@@ -553,7 +553,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @return The bytes for tableName.
        */
       public com.google.protobuf.ByteString
@@ -575,7 +575,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @param value The tableName to set.
        * @return This builder for chaining.
        */
@@ -595,7 +595,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTableName() {
@@ -610,7 +610,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @param value The bytes for tableName to set.
        * @return This builder for chaining.
        */
@@ -633,7 +633,7 @@ public final class BqTable {
        * not its original/proto field name.
        * </pre>
        *
-       * <code>bool use_json_names = 2;</code>
+       * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
        * @return The useJsonNames.
        */
       @java.lang.Override
@@ -646,7 +646,7 @@ public final class BqTable {
        * not its original/proto field name.
        * </pre>
        *
-       * <code>bool use_json_names = 2;</code>
+       * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
        * @param value The useJsonNames to set.
        * @return This builder for chaining.
        */
@@ -662,7 +662,7 @@ public final class BqTable {
        * not its original/proto field name.
        * </pre>
        *
-       * <code>bool use_json_names = 2;</code>
+       * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUseJsonNames() {
@@ -757,12 +757,13 @@ public final class BqTable {
     java.lang.String[] descriptorData = {
       "\n\034gen_bq_schema/bq_table.proto\022\rgen_bq_s" +
       "chema\032 google/protobuf/descriptor.proto\"" +
-      "D\n\026BigQueryMessageOptions\022\022\n\ntable_name\030" +
-      "\001 \001(\t\022\026\n\016use_json_names\030\002 \001(\010:^\n\rbigquer" +
-      "y_opts\022\037.google.protobuf.MessageOptions\030" +
-      "\375\007 \001(\0132%.gen_bq_schema.BigQueryMessageOp" +
-      "tionsBAZ?github.com/e-conomic/vmlapis/ge" +
-      "n/go/gen_bq_schema;gen_bq_schemab\006proto3"
+      "]\n\026BigQueryMessageOptions\022\035\n\ntable_name\030" +
+      "\001 \001(\tR\ttableName\022$\n\016use_json_names\030\002 \001(\010" +
+      "R\014useJsonNames:l\n\rbigquery_opts\022\037.google" +
+      ".protobuf.MessageOptions\030\375\007 \001(\0132%.gen_bq" +
+      "_schema.BigQueryMessageOptionsR\014bigquery" +
+      "OptsBAZ?github.com/e-conomic/vmlapis/gen" +
+      "/go/gen_bq_schema;gen_bq_schemab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

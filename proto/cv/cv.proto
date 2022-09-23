@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package cv.scanner.v1;
 
+option go_package = "github.com/e-conomic/vmlapis/gen/go/cv/cv/v1;cv";
+
 import "google/api/annotations.proto";
 import "google/api/http.proto";
 

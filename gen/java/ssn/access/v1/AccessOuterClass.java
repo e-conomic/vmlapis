@@ -24,7 +24,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The sub.
      */
     java.lang.String getSub();
@@ -34,7 +34,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The bytes for sub.
      */
     com.google.protobuf.ByteString
@@ -47,7 +47,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.4
      * </pre>
      *
-     * <code>int64 exp = 2;</code>
+     * <code>int64 exp = 2 [json_name = "exp"];</code>
      * @return The exp.
      */
     long getExp();
@@ -149,7 +149,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The sub.
      */
     @java.lang.Override
@@ -171,7 +171,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The bytes for sub.
      */
     @java.lang.Override
@@ -198,7 +198,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.4
      * </pre>
      *
-     * <code>int64 exp = 2;</code>
+     * <code>int64 exp = 2 [json_name = "exp"];</code>
      * @return The exp.
      */
     @java.lang.Override
@@ -533,7 +533,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @return The sub.
        */
       public java.lang.String getSub() {
@@ -554,7 +554,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @return The bytes for sub.
        */
       public com.google.protobuf.ByteString
@@ -576,7 +576,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @param value The sub to set.
        * @return This builder for chaining.
        */
@@ -596,7 +596,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSub() {
@@ -611,7 +611,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @param value The bytes for sub to set.
        * @return This builder for chaining.
        */
@@ -635,7 +635,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>int64 exp = 2;</code>
+       * <code>int64 exp = 2 [json_name = "exp"];</code>
        * @return The exp.
        */
       @java.lang.Override
@@ -649,7 +649,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>int64 exp = 2;</code>
+       * <code>int64 exp = 2 [json_name = "exp"];</code>
        * @param value The exp to set.
        * @return This builder for chaining.
        */
@@ -666,7 +666,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>int64 exp = 2;</code>
+       * <code>int64 exp = 2 [json_name = "exp"];</code>
        * @return This builder for chaining.
        */
       public Builder clearExp() {
@@ -737,7 +737,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -746,7 +746,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -757,7 +757,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The token.
      */
     java.lang.String getToken();
@@ -766,7 +766,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The bytes for token.
      */
     com.google.protobuf.ByteString
@@ -870,7 +870,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -891,7 +891,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -916,7 +916,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The token.
      */
     @java.lang.Override
@@ -937,7 +937,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The bytes for token.
      */
     @java.lang.Override
@@ -1280,7 +1280,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1300,7 +1300,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1321,7 +1321,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1340,7 +1340,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1354,7 +1354,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1376,7 +1376,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @return The token.
        */
       public java.lang.String getToken() {
@@ -1396,7 +1396,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @return The bytes for token.
        */
       public com.google.protobuf.ByteString
@@ -1417,7 +1417,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @param value The token to set.
        * @return This builder for chaining.
        */
@@ -1436,7 +1436,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @return This builder for chaining.
        */
       public Builder clearToken() {
@@ -1450,7 +1450,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @param value The bytes for token to set.
        * @return This builder for chaining.
        */
@@ -1538,14 +1538,15 @@ public final class AccessOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032ssn/access/v1/access.proto\022\rssn.access" +
-      ".v1\032\034google/api/annotations.proto\"+\n\017Val" +
-      "etKeyRequest\022\013\n\003sub\030\001 \001(\t\022\013\n\003exp\030\002 \001(\003\"-" +
-      "\n\020ValetKeyResponse\022\n\n\002id\030\001 \001(\t\022\r\n\005token\030" +
-      "\002 \001(\t2}\n\006Access\022s\n\020GenerateValetKey\022\036.ss" +
-      "n.access.v1.ValetKeyRequest\032\037.ssn.access" +
-      ".v1.ValetKeyResponse\"\036\202\323\344\223\002\030\"\023/v1/access" +
-      "/valetkey:\001*B:Z8github.com/e-conomic/vml" +
-      "apis/gen/go/ssn/access/v1;accessb\006proto3"
+      ".v1\032\034google/api/annotations.proto\"5\n\017Val" +
+      "etKeyRequest\022\020\n\003sub\030\001 \001(\tR\003sub\022\020\n\003exp\030\002 " +
+      "\001(\003R\003exp\"8\n\020ValetKeyResponse\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\022\024\n\005token\030\002 \001(\tR\005token2}\n\006Access\022s\n\020" +
+      "GenerateValetKey\022\036.ssn.access.v1.ValetKe" +
+      "yRequest\032\037.ssn.access.v1.ValetKeyRespons" +
+      "e\"\036\202\323\344\223\002\030\"\023/v1/access/valetkey:\001*B:Z8git" +
+      "hub.com/e-conomic/vmlapis/gen/go/ssn/acc" +
+      "ess/v1;accessb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

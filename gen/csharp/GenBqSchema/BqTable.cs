@@ -25,13 +25,13 @@ namespace GenBqSchema {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxnZW5fYnFfc2NoZW1hL2JxX3RhYmxlLnByb3RvEg1nZW5fYnFfc2NoZW1h",
-            "GiBnb29nbGUvcHJvdG9idWYvZGVzY3JpcHRvci5wcm90byJEChZCaWdRdWVy",
-            "eU1lc3NhZ2VPcHRpb25zEhIKCnRhYmxlX25hbWUYASABKAkSFgoOdXNlX2pz",
-            "b25fbmFtZXMYAiABKAg6XgoNYmlncXVlcnlfb3B0cxIfLmdvb2dsZS5wcm90",
-            "b2J1Zi5NZXNzYWdlT3B0aW9ucxj9ByABKAsyJS5nZW5fYnFfc2NoZW1hLkJp",
-            "Z1F1ZXJ5TWVzc2FnZU9wdGlvbnNCQVo/Z2l0aHViLmNvbS9lLWNvbm9taWMv",
-            "dm1sYXBpcy9nZW4vZ28vZ2VuX2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZw",
-            "cm90bzM="));
+            "GiBnb29nbGUvcHJvdG9idWYvZGVzY3JpcHRvci5wcm90byJdChZCaWdRdWVy",
+            "eU1lc3NhZ2VPcHRpb25zEh0KCnRhYmxlX25hbWUYASABKAlSCXRhYmxlTmFt",
+            "ZRIkCg51c2VfanNvbl9uYW1lcxgCIAEoCFIMdXNlSnNvbk5hbWVzOmwKDWJp",
+            "Z3F1ZXJ5X29wdHMSHy5nb29nbGUucHJvdG9idWYuTWVzc2FnZU9wdGlvbnMY",
+            "/QcgASgLMiUuZ2VuX2JxX3NjaGVtYS5CaWdRdWVyeU1lc3NhZ2VPcHRpb25z",
+            "UgxiaWdxdWVyeU9wdHNCQVo/Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vZ2VuX2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { BqTableExtensions.BigqueryOpts }, new pbr::GeneratedClrTypeInfo[] {
@@ -54,23 +54,31 @@ namespace GenBqSchema {
   }
 
   #region Messages
-  public sealed partial class BigQueryMessageOptions : pb::IMessage<BigQueryMessageOptions> {
+  public sealed partial class BigQueryMessageOptions : pb::IMessage<BigQueryMessageOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BigQueryMessageOptions> _parser = new pb::MessageParser<BigQueryMessageOptions>(() => new BigQueryMessageOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BigQueryMessageOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::GenBqSchema.BqTableReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryMessageOptions() {
       OnConstruction();
     }
@@ -78,6 +86,7 @@ namespace GenBqSchema {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryMessageOptions(BigQueryMessageOptions other) : this() {
       tableName_ = other.tableName_;
       useJsonNames_ = other.useJsonNames_;
@@ -85,6 +94,7 @@ namespace GenBqSchema {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryMessageOptions Clone() {
       return new BigQueryMessageOptions(this);
     }
@@ -98,6 +108,7 @@ namespace GenBqSchema {
     /// If not blank, indicates the message is a type of record to be stored into BigQuery.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TableName {
       get { return tableName_; }
       set {
@@ -113,6 +124,7 @@ namespace GenBqSchema {
     /// not its original/proto field name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UseJsonNames {
       get { return useJsonNames_; }
       set {
@@ -121,11 +133,13 @@ namespace GenBqSchema {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BigQueryMessageOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BigQueryMessageOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -139,6 +153,7 @@ namespace GenBqSchema {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
@@ -150,12 +165,17 @@ namespace GenBqSchema {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TableName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(TableName);
@@ -167,9 +187,29 @@ namespace GenBqSchema {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TableName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TableName);
+      }
+      if (UseJsonNames != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(UseJsonNames);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TableName.Length != 0) {
@@ -185,6 +225,7 @@ namespace GenBqSchema {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BigQueryMessageOptions other) {
       if (other == null) {
         return;
@@ -199,7 +240,11 @@ namespace GenBqSchema {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -216,7 +261,31 @@ namespace GenBqSchema {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TableName = input.ReadString();
+            break;
+          }
+          case 16: {
+            UseJsonNames = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

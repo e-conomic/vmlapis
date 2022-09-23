@@ -19,54 +19,54 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      * @return Whether the endTime field is set.
      */
     boolean hasEndTime();
     /**
-     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      * @return The endTime.
      */
     com.google.protobuf.Timestamp getEndTime();
     /**
-     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -193,7 +193,7 @@ public final class DataServiceProtos {
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      * @return Whether the startTime field is set.
      */
     @java.lang.Override
@@ -201,7 +201,7 @@ public final class DataServiceProtos {
       return startTime_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      * @return The startTime.
      */
     @java.lang.Override
@@ -209,7 +209,7 @@ public final class DataServiceProtos {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -219,7 +219,7 @@ public final class DataServiceProtos {
     public static final int END_TIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp endTime_;
     /**
-     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      * @return Whether the endTime field is set.
      */
     @java.lang.Override
@@ -227,7 +227,7 @@ public final class DataServiceProtos {
       return endTime_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      * @return The endTime.
      */
     @java.lang.Override
@@ -235,7 +235,7 @@ public final class DataServiceProtos {
       return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
     }
     /**
-     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
@@ -245,7 +245,7 @@ public final class DataServiceProtos {
     public static final int TAGS_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -253,14 +253,14 @@ public final class DataServiceProtos {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -268,7 +268,7 @@ public final class DataServiceProtos {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -662,14 +662,14 @@ public final class DataServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        * @return The startTime.
        */
       public com.google.protobuf.Timestamp getStartTime() {
@@ -680,7 +680,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
         if (startTimeBuilder_ == null) {
@@ -696,7 +696,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder setStartTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -710,7 +710,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
         if (startTimeBuilder_ == null) {
@@ -728,7 +728,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder clearStartTime() {
         if (startTimeBuilder_ == null) {
@@ -742,7 +742,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
         
@@ -750,7 +750,7 @@ public final class DataServiceProtos {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
         if (startTimeBuilder_ != null) {
@@ -761,7 +761,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -781,14 +781,14 @@ public final class DataServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        * @return Whether the endTime field is set.
        */
       public boolean hasEndTime() {
         return endTimeBuilder_ != null || endTime_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        * @return The endTime.
        */
       public com.google.protobuf.Timestamp getEndTime() {
@@ -799,7 +799,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public Builder setEndTime(com.google.protobuf.Timestamp value) {
         if (endTimeBuilder_ == null) {
@@ -815,7 +815,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public Builder setEndTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -829,7 +829,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
         if (endTimeBuilder_ == null) {
@@ -847,7 +847,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public Builder clearEndTime() {
         if (endTimeBuilder_ == null) {
@@ -861,7 +861,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
         
@@ -869,7 +869,7 @@ public final class DataServiceProtos {
         return getEndTimeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
         if (endTimeBuilder_ != null) {
@@ -880,7 +880,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -904,7 +904,7 @@ public final class DataServiceProtos {
          }
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -912,14 +912,14 @@ public final class DataServiceProtos {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -927,7 +927,7 @@ public final class DataServiceProtos {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -936,7 +936,7 @@ public final class DataServiceProtos {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -952,7 +952,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -967,7 +967,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -980,7 +980,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -990,7 +990,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -1063,25 +1063,25 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> 
         getMetricsList();
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getMetrics(int index);
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     int getMetricsCount();
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     java.util.List<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
         getMetricsOrBuilderList();
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
         int index);
@@ -1182,40 +1182,40 @@ public final class DataServiceProtos {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The target.
        */
       java.lang.String getTarget();
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The bytes for target.
        */
       com.google.protobuf.ByteString
           getTargetBytes();
 
       /**
-       * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
        * @return Whether the confidence field is set.
        */
       boolean hasConfidence();
       /**
-       * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       com.google.protobuf.FloatValue getConfidence();
       /**
-       * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
        */
       com.google.protobuf.FloatValueOrBuilder getConfidenceOrBuilder();
 
       /**
-       * <code>int32 correct = 3;</code>
+       * <code>int32 correct = 3 [json_name = "correct"];</code>
        * @return The correct.
        */
       int getCorrect();
 
       /**
-       * <code>int32 incorrect = 4;</code>
+       * <code>int32 incorrect = 4 [json_name = "incorrect"];</code>
        * @return The incorrect.
        */
       int getIncorrect();
@@ -1330,7 +1330,7 @@ public final class DataServiceProtos {
       public static final int TARGET_FIELD_NUMBER = 1;
       private volatile java.lang.Object target_;
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The target.
        */
       @java.lang.Override
@@ -1347,7 +1347,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The bytes for target.
        */
       @java.lang.Override
@@ -1368,7 +1368,7 @@ public final class DataServiceProtos {
       public static final int CONFIDENCE_FIELD_NUMBER = 2;
       private com.google.protobuf.FloatValue confidence_;
       /**
-       * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
        * @return Whether the confidence field is set.
        */
       @java.lang.Override
@@ -1376,7 +1376,7 @@ public final class DataServiceProtos {
         return confidence_ != null;
       }
       /**
-       * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -1384,7 +1384,7 @@ public final class DataServiceProtos {
         return confidence_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : confidence_;
       }
       /**
-       * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
        */
       @java.lang.Override
       public com.google.protobuf.FloatValueOrBuilder getConfidenceOrBuilder() {
@@ -1394,7 +1394,7 @@ public final class DataServiceProtos {
       public static final int CORRECT_FIELD_NUMBER = 3;
       private int correct_;
       /**
-       * <code>int32 correct = 3;</code>
+       * <code>int32 correct = 3 [json_name = "correct"];</code>
        * @return The correct.
        */
       @java.lang.Override
@@ -1405,7 +1405,7 @@ public final class DataServiceProtos {
       public static final int INCORRECT_FIELD_NUMBER = 4;
       private int incorrect_;
       /**
-       * <code>int32 incorrect = 4;</code>
+       * <code>int32 incorrect = 4 [json_name = "incorrect"];</code>
        * @return The incorrect.
        */
       @java.lang.Override
@@ -1781,7 +1781,7 @@ public final class DataServiceProtos {
 
         private java.lang.Object target_ = "";
         /**
-         * <code>string target = 1;</code>
+         * <code>string target = 1 [json_name = "target"];</code>
          * @return The target.
          */
         public java.lang.String getTarget() {
@@ -1797,7 +1797,7 @@ public final class DataServiceProtos {
           }
         }
         /**
-         * <code>string target = 1;</code>
+         * <code>string target = 1 [json_name = "target"];</code>
          * @return The bytes for target.
          */
         public com.google.protobuf.ByteString
@@ -1814,7 +1814,7 @@ public final class DataServiceProtos {
           }
         }
         /**
-         * <code>string target = 1;</code>
+         * <code>string target = 1 [json_name = "target"];</code>
          * @param value The target to set.
          * @return This builder for chaining.
          */
@@ -1829,7 +1829,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>string target = 1;</code>
+         * <code>string target = 1 [json_name = "target"];</code>
          * @return This builder for chaining.
          */
         public Builder clearTarget() {
@@ -1839,7 +1839,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>string target = 1;</code>
+         * <code>string target = 1 [json_name = "target"];</code>
          * @param value The bytes for target to set.
          * @return This builder for chaining.
          */
@@ -1859,14 +1859,14 @@ public final class DataServiceProtos {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> confidenceBuilder_;
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          * @return Whether the confidence field is set.
          */
         public boolean hasConfidence() {
           return confidenceBuilder_ != null || confidence_ != null;
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         public com.google.protobuf.FloatValue getConfidence() {
@@ -1877,7 +1877,7 @@ public final class DataServiceProtos {
           }
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public Builder setConfidence(com.google.protobuf.FloatValue value) {
           if (confidenceBuilder_ == null) {
@@ -1893,7 +1893,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public Builder setConfidence(
             com.google.protobuf.FloatValue.Builder builderForValue) {
@@ -1907,7 +1907,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public Builder mergeConfidence(com.google.protobuf.FloatValue value) {
           if (confidenceBuilder_ == null) {
@@ -1925,7 +1925,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public Builder clearConfidence() {
           if (confidenceBuilder_ == null) {
@@ -1939,7 +1939,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public com.google.protobuf.FloatValue.Builder getConfidenceBuilder() {
           
@@ -1947,7 +1947,7 @@ public final class DataServiceProtos {
           return getConfidenceFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public com.google.protobuf.FloatValueOrBuilder getConfidenceOrBuilder() {
           if (confidenceBuilder_ != null) {
@@ -1958,7 +1958,7 @@ public final class DataServiceProtos {
           }
         }
         /**
-         * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
@@ -1976,7 +1976,7 @@ public final class DataServiceProtos {
 
         private int correct_ ;
         /**
-         * <code>int32 correct = 3;</code>
+         * <code>int32 correct = 3 [json_name = "correct"];</code>
          * @return The correct.
          */
         @java.lang.Override
@@ -1984,7 +1984,7 @@ public final class DataServiceProtos {
           return correct_;
         }
         /**
-         * <code>int32 correct = 3;</code>
+         * <code>int32 correct = 3 [json_name = "correct"];</code>
          * @param value The correct to set.
          * @return This builder for chaining.
          */
@@ -1995,7 +1995,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>int32 correct = 3;</code>
+         * <code>int32 correct = 3 [json_name = "correct"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCorrect() {
@@ -2007,7 +2007,7 @@ public final class DataServiceProtos {
 
         private int incorrect_ ;
         /**
-         * <code>int32 incorrect = 4;</code>
+         * <code>int32 incorrect = 4 [json_name = "incorrect"];</code>
          * @return The incorrect.
          */
         @java.lang.Override
@@ -2015,7 +2015,7 @@ public final class DataServiceProtos {
           return incorrect_;
         }
         /**
-         * <code>int32 incorrect = 4;</code>
+         * <code>int32 incorrect = 4 [json_name = "incorrect"];</code>
          * @param value The incorrect to set.
          * @return This builder for chaining.
          */
@@ -2026,7 +2026,7 @@ public final class DataServiceProtos {
           return this;
         }
         /**
-         * <code>int32 incorrect = 4;</code>
+         * <code>int32 incorrect = 4 [json_name = "incorrect"];</code>
          * @return This builder for chaining.
          */
         public Builder clearIncorrect() {
@@ -2091,14 +2091,14 @@ public final class DataServiceProtos {
     public static final int METRICS_FIELD_NUMBER = 1;
     private java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> metrics_;
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> getMetricsList() {
       return metrics_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
@@ -2106,21 +2106,21 @@ public final class DataServiceProtos {
       return metrics_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getMetrics(int index) {
       return metrics_.get(index);
     }
     /**
-     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+     * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
@@ -2483,7 +2483,7 @@ public final class DataServiceProtos {
           asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> metricsBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> getMetricsList() {
         if (metricsBuilder_ == null) {
@@ -2493,7 +2493,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public int getMetricsCount() {
         if (metricsBuilder_ == null) {
@@ -2503,7 +2503,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getMetrics(int index) {
         if (metricsBuilder_ == null) {
@@ -2513,7 +2513,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder setMetrics(
           int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow value) {
@@ -2530,7 +2530,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder setMetrics(
           int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
@@ -2544,7 +2544,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow value) {
         if (metricsBuilder_ == null) {
@@ -2560,7 +2560,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow value) {
@@ -2577,7 +2577,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
@@ -2591,7 +2591,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
@@ -2605,7 +2605,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder addAllMetrics(
           java.lang.Iterable<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> values) {
@@ -2620,7 +2620,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder clearMetrics() {
         if (metricsBuilder_ == null) {
@@ -2633,7 +2633,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public Builder removeMetrics(int index) {
         if (metricsBuilder_ == null) {
@@ -2646,14 +2646,14 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder getMetricsBuilder(
           int index) {
         return getMetricsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
           int index) {
@@ -2663,7 +2663,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public java.util.List<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
            getMetricsOrBuilderList() {
@@ -2674,14 +2674,14 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder addMetricsBuilder() {
         return getMetricsFieldBuilder().addBuilder(
             asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder addMetricsBuilder(
           int index) {
@@ -2689,7 +2689,7 @@ public final class DataServiceProtos {
             index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
+       * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
        */
       public java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder> 
            getMetricsBuilderList() {
@@ -2767,48 +2767,48 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -2816,24 +2816,24 @@ public final class DataServiceProtos {
         getTagsBytes(int index);
 
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @return A list containing the targets.
      */
     java.util.List<java.lang.String>
         getTargetsList();
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @return The count of targets.
      */
     int getTargetsCount();
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @param index The index of the element to return.
      * @return The targets at the given index.
      */
     java.lang.String getTargets(int index);
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the targets at the given index.
      */
@@ -2841,41 +2841,41 @@ public final class DataServiceProtos {
         getTargetsBytes(int index);
 
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     java.util.List<asgt.type.SampleOuterClass.Sample> 
         getSamplesList();
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     asgt.type.SampleOuterClass.Sample getSamples(int index);
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     int getSamplesCount();
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
      * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
      * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
   }
@@ -3026,7 +3026,7 @@ public final class DataServiceProtos {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3043,7 +3043,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -3064,7 +3064,7 @@ public final class DataServiceProtos {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -3081,7 +3081,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     @java.lang.Override
@@ -3102,7 +3102,7 @@ public final class DataServiceProtos {
     public static final int TAGS_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3110,14 +3110,14 @@ public final class DataServiceProtos {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -3125,7 +3125,7 @@ public final class DataServiceProtos {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -3137,7 +3137,7 @@ public final class DataServiceProtos {
     public static final int TARGETS_FIELD_NUMBER = 6;
     private com.google.protobuf.LazyStringList targets_;
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @return A list containing the targets.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3145,14 +3145,14 @@ public final class DataServiceProtos {
       return targets_;
     }
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @return The count of targets.
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @param index The index of the element to return.
      * @return The targets at the given index.
      */
@@ -3160,7 +3160,7 @@ public final class DataServiceProtos {
       return targets_.get(index);
     }
     /**
-     * <code>repeated string targets = 6;</code>
+     * <code>repeated string targets = 6 [json_name = "targets"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the targets at the given index.
      */
@@ -3172,14 +3172,14 @@ public final class DataServiceProtos {
     public static final int SAMPLES_FIELD_NUMBER = 4;
     private java.util.List<asgt.type.SampleOuterClass.Sample> samples_;
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
@@ -3187,21 +3187,21 @@ public final class DataServiceProtos {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
@@ -3212,7 +3212,7 @@ public final class DataServiceProtos {
     public static final int RETENTION_POLICY_FIELD_NUMBER = 5;
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
      * @return Whether the retentionPolicy field is set.
      */
     @java.lang.Override
@@ -3220,7 +3220,7 @@ public final class DataServiceProtos {
       return retentionPolicy_ != null;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
      * @return The retentionPolicy.
      */
     @java.lang.Override
@@ -3228,7 +3228,7 @@ public final class DataServiceProtos {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
      */
     @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
@@ -3711,7 +3711,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3727,7 +3727,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3744,7 +3744,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3759,7 +3759,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3769,7 +3769,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3787,7 +3787,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
       public java.lang.String getType() {
@@ -3803,7 +3803,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
@@ -3820,7 +3820,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -3835,7 +3835,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -3845,7 +3845,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
@@ -3869,7 +3869,7 @@ public final class DataServiceProtos {
          }
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3877,14 +3877,14 @@ public final class DataServiceProtos {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -3892,7 +3892,7 @@ public final class DataServiceProtos {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -3901,7 +3901,7 @@ public final class DataServiceProtos {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -3917,7 +3917,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -3932,7 +3932,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -3945,7 +3945,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -3955,7 +3955,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -3979,7 +3979,7 @@ public final class DataServiceProtos {
          }
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @return A list containing the targets.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3987,14 +3987,14 @@ public final class DataServiceProtos {
         return targets_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @return The count of targets.
        */
       public int getTargetsCount() {
         return targets_.size();
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @param index The index of the element to return.
        * @return The targets at the given index.
        */
@@ -4002,7 +4002,7 @@ public final class DataServiceProtos {
         return targets_.get(index);
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the targets at the given index.
        */
@@ -4011,7 +4011,7 @@ public final class DataServiceProtos {
         return targets_.getByteString(index);
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @param index The index to set the value at.
        * @param value The targets to set.
        * @return This builder for chaining.
@@ -4027,7 +4027,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @param value The targets to add.
        * @return This builder for chaining.
        */
@@ -4042,7 +4042,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @param values The targets to add.
        * @return This builder for chaining.
        */
@@ -4055,7 +4055,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTargets() {
@@ -4065,7 +4065,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string targets = 6;</code>
+       * <code>repeated string targets = 6 [json_name = "targets"];</code>
        * @param value The bytes of the targets to add.
        * @return This builder for chaining.
        */
@@ -4094,7 +4094,7 @@ public final class DataServiceProtos {
           asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder> samplesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
         if (samplesBuilder_ == null) {
@@ -4104,7 +4104,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public int getSamplesCount() {
         if (samplesBuilder_ == null) {
@@ -4114,7 +4114,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample getSamples(int index) {
         if (samplesBuilder_ == null) {
@@ -4124,7 +4124,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder setSamples(
           int index, asgt.type.SampleOuterClass.Sample value) {
@@ -4141,7 +4141,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder setSamples(
           int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
@@ -4155,7 +4155,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder addSamples(asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
@@ -4171,7 +4171,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder addSamples(
           int index, asgt.type.SampleOuterClass.Sample value) {
@@ -4188,7 +4188,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder addSamples(
           asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
@@ -4202,7 +4202,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder addSamples(
           int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
@@ -4216,7 +4216,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder addAllSamples(
           java.lang.Iterable<? extends asgt.type.SampleOuterClass.Sample> values) {
@@ -4231,7 +4231,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
@@ -4244,7 +4244,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public Builder removeSamples(int index) {
         if (samplesBuilder_ == null) {
@@ -4257,14 +4257,14 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample.Builder getSamplesBuilder(
           int index) {
         return getSamplesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
           int index) {
@@ -4274,7 +4274,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
            getSamplesOrBuilderList() {
@@ -4285,14 +4285,14 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder() {
         return getSamplesFieldBuilder().addBuilder(
             asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder(
           int index) {
@@ -4300,7 +4300,7 @@ public final class DataServiceProtos {
             index, asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
        */
       public java.util.List<asgt.type.SampleOuterClass.Sample.Builder> 
            getSamplesBuilderList() {
@@ -4325,14 +4325,14 @@ public final class DataServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
@@ -4343,7 +4343,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public Builder setRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -4359,7 +4359,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public Builder setRetentionPolicy(
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
@@ -4373,7 +4373,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public Builder mergeRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -4391,7 +4391,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public Builder clearRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -4405,7 +4405,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
@@ -4413,7 +4413,7 @@ public final class DataServiceProtos {
         return getRetentionPolicyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
@@ -4424,7 +4424,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> 
@@ -4497,49 +4497,49 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     java.util.List<asgt.type.SampleOuterClass.Sample> 
         getSamplesList();
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     asgt.type.SampleOuterClass.Sample getSamples(int index);
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     int getSamplesCount();
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index);
@@ -4652,7 +4652,7 @@ public final class DataServiceProtos {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -4669,7 +4669,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4690,7 +4690,7 @@ public final class DataServiceProtos {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -4707,7 +4707,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     @java.lang.Override
@@ -4728,14 +4728,14 @@ public final class DataServiceProtos {
     public static final int SAMPLES_FIELD_NUMBER = 3;
     private java.util.List<asgt.type.SampleOuterClass.Sample> samples_;
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
@@ -4743,21 +4743,21 @@ public final class DataServiceProtos {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
      */
     @java.lang.Override
     public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
@@ -5143,7 +5143,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5159,7 +5159,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5176,7 +5176,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5191,7 +5191,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -5201,7 +5201,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5219,7 +5219,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
       public java.lang.String getType() {
@@ -5235,7 +5235,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
@@ -5252,7 +5252,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -5267,7 +5267,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -5277,7 +5277,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
@@ -5306,7 +5306,7 @@ public final class DataServiceProtos {
           asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder> samplesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
         if (samplesBuilder_ == null) {
@@ -5316,7 +5316,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public int getSamplesCount() {
         if (samplesBuilder_ == null) {
@@ -5326,7 +5326,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample getSamples(int index) {
         if (samplesBuilder_ == null) {
@@ -5336,7 +5336,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder setSamples(
           int index, asgt.type.SampleOuterClass.Sample value) {
@@ -5353,7 +5353,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder setSamples(
           int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
@@ -5367,7 +5367,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder addSamples(asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
@@ -5383,7 +5383,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder addSamples(
           int index, asgt.type.SampleOuterClass.Sample value) {
@@ -5400,7 +5400,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder addSamples(
           asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
@@ -5414,7 +5414,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder addSamples(
           int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
@@ -5428,7 +5428,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder addAllSamples(
           java.lang.Iterable<? extends asgt.type.SampleOuterClass.Sample> values) {
@@ -5443,7 +5443,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
@@ -5456,7 +5456,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public Builder removeSamples(int index) {
         if (samplesBuilder_ == null) {
@@ -5469,14 +5469,14 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample.Builder getSamplesBuilder(
           int index) {
         return getSamplesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
           int index) {
@@ -5486,7 +5486,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
            getSamplesOrBuilderList() {
@@ -5497,14 +5497,14 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder() {
         return getSamplesFieldBuilder().addBuilder(
             asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder(
           int index) {
@@ -5512,7 +5512,7 @@ public final class DataServiceProtos {
             index, asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
        */
       public java.util.List<asgt.type.SampleOuterClass.Sample.Builder> 
            getSamplesBuilderList() {
@@ -5590,36 +5590,46 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [json_name = "type"];</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string tag = 3;</code>
+     * <code>string tag = 3 [json_name = "tag"];</code>
+     * @return Whether the tag field is set.
+     */
+    boolean hasTag();
+    /**
+     * <code>string tag = 3 [json_name = "tag"];</code>
      * @return The tag.
      */
     java.lang.String getTag();
     /**
-     * <code>string tag = 3;</code>
+     * <code>string tag = 3 [json_name = "tag"];</code>
      * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
@@ -5767,7 +5777,7 @@ public final class DataServiceProtos {
     public static final int TYPE_FIELD_NUMBER = 1;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -5784,7 +5794,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     @java.lang.Override
@@ -5804,7 +5814,14 @@ public final class DataServiceProtos {
 
     public static final int NAME_FIELD_NUMBER = 2;
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return Whether the name field is set.
+     */
+    public boolean hasName() {
+      return matchCase_ == 2;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -5825,7 +5842,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -5849,7 +5866,14 @@ public final class DataServiceProtos {
 
     public static final int TAG_FIELD_NUMBER = 3;
     /**
-     * <code>string tag = 3;</code>
+     * <code>string tag = 3 [json_name = "tag"];</code>
+     * @return Whether the tag field is set.
+     */
+    public boolean hasTag() {
+      return matchCase_ == 3;
+    }
+    /**
+     * <code>string tag = 3 [json_name = "tag"];</code>
      * @return The tag.
      */
     public java.lang.String getTag() {
@@ -5870,7 +5894,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string tag = 3;</code>
+     * <code>string tag = 3 [json_name = "tag"];</code>
      * @return The bytes for tag.
      */
     public com.google.protobuf.ByteString
@@ -6274,7 +6298,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       public java.lang.String getType() {
@@ -6290,7 +6314,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
@@ -6307,7 +6331,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -6322,7 +6346,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -6332,7 +6356,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
@@ -6349,7 +6373,15 @@ public final class DataServiceProtos {
       }
 
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return Whether the name field is set.
+       */
+      @java.lang.Override
+      public boolean hasName() {
+        return matchCase_ == 2;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
       @java.lang.Override
@@ -6371,7 +6403,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       @java.lang.Override
@@ -6394,7 +6426,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -6409,7 +6441,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -6421,7 +6453,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -6438,7 +6470,15 @@ public final class DataServiceProtos {
       }
 
       /**
-       * <code>string tag = 3;</code>
+       * <code>string tag = 3 [json_name = "tag"];</code>
+       * @return Whether the tag field is set.
+       */
+      @java.lang.Override
+      public boolean hasTag() {
+        return matchCase_ == 3;
+      }
+      /**
+       * <code>string tag = 3 [json_name = "tag"];</code>
        * @return The tag.
        */
       @java.lang.Override
@@ -6460,7 +6500,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string tag = 3;</code>
+       * <code>string tag = 3 [json_name = "tag"];</code>
        * @return The bytes for tag.
        */
       @java.lang.Override
@@ -6483,7 +6523,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string tag = 3;</code>
+       * <code>string tag = 3 [json_name = "tag"];</code>
        * @param value The tag to set.
        * @return This builder for chaining.
        */
@@ -6498,7 +6538,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string tag = 3;</code>
+       * <code>string tag = 3 [json_name = "tag"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTag() {
@@ -6510,7 +6550,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string tag = 3;</code>
+       * <code>string tag = 3 [json_name = "tag"];</code>
        * @param value The bytes for tag to set.
        * @return This builder for chaining.
        */
@@ -6583,24 +6623,24 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     com.google.protobuf.ByteString
@@ -6700,7 +6740,7 @@ public final class DataServiceProtos {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -6717,7 +6757,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -6738,7 +6778,7 @@ public final class DataServiceProtos {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -6755,7 +6795,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     @java.lang.Override
@@ -7094,7 +7134,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -7110,7 +7150,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7127,7 +7167,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7142,7 +7182,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7152,7 +7192,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -7170,7 +7210,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
       public java.lang.String getType() {
@@ -7186,7 +7226,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
@@ -7203,7 +7243,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -7218,7 +7258,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -7228,7 +7268,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
@@ -7301,41 +7341,41 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
   }
@@ -7446,7 +7486,7 @@ public final class DataServiceProtos {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -7463,7 +7503,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7484,7 +7524,7 @@ public final class DataServiceProtos {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -7501,7 +7541,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     @java.lang.Override
@@ -7522,7 +7562,7 @@ public final class DataServiceProtos {
     public static final int RETENTION_POLICY_FIELD_NUMBER = 3;
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      * @return Whether the retentionPolicy field is set.
      */
     @java.lang.Override
@@ -7530,7 +7570,7 @@ public final class DataServiceProtos {
       return retentionPolicy_ != null;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      * @return The retentionPolicy.
      */
     @java.lang.Override
@@ -7538,7 +7578,7 @@ public final class DataServiceProtos {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
@@ -7896,7 +7936,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -7912,7 +7952,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7929,7 +7969,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7944,7 +7984,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7954,7 +7994,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -7972,7 +8012,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
       public java.lang.String getType() {
@@ -7988,7 +8028,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
@@ -8005,7 +8045,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -8020,7 +8060,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -8030,7 +8070,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [json_name = "type"];</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
@@ -8050,14 +8090,14 @@ public final class DataServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
@@ -8068,7 +8108,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public Builder setRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -8084,7 +8124,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public Builder setRetentionPolicy(
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
@@ -8098,7 +8138,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public Builder mergeRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -8116,7 +8156,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public Builder clearRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -8130,7 +8170,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
@@ -8138,7 +8178,7 @@ public final class DataServiceProtos {
         return getRetentionPolicyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
@@ -8149,7 +8189,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> 
@@ -8222,17 +8262,17 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
@@ -8241,7 +8281,7 @@ public final class DataServiceProtos {
      * The most recently trained model; empty if no model has been trained
      * </pre>
      *
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
@@ -8250,7 +8290,7 @@ public final class DataServiceProtos {
      * The most recently trained model; empty if no model has been trained
      * </pre>
      *
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
@@ -8259,7 +8299,7 @@ public final class DataServiceProtos {
      * The most recently trained model; empty if no model has been trained
      * </pre>
      *
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
@@ -8369,7 +8409,7 @@ public final class DataServiceProtos {
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     @java.lang.Override
@@ -8377,7 +8417,7 @@ public final class DataServiceProtos {
       return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -8385,7 +8425,7 @@ public final class DataServiceProtos {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -8399,7 +8439,7 @@ public final class DataServiceProtos {
      * The most recently trained model; empty if no model has been trained
      * </pre>
      *
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -8411,7 +8451,7 @@ public final class DataServiceProtos {
      * The most recently trained model; empty if no model has been trained
      * </pre>
      *
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -8423,7 +8463,7 @@ public final class DataServiceProtos {
      * The most recently trained model; empty if no model has been trained
      * </pre>
      *
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -8779,14 +8819,14 @@ public final class DataServiceProtos {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
@@ -8797,7 +8837,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -8813,7 +8853,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -8827,7 +8867,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -8845,7 +8885,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -8859,7 +8899,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -8867,7 +8907,7 @@ public final class DataServiceProtos {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -8878,7 +8918,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -8902,7 +8942,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
@@ -8913,7 +8953,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -8928,7 +8968,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -8948,7 +8988,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -8966,7 +9006,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -8988,7 +9028,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -9006,7 +9046,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -9018,7 +9058,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -9033,7 +9073,7 @@ public final class DataServiceProtos {
        * The most recently trained model; empty if no model has been trained
        * </pre>
        *
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -9106,54 +9146,54 @@ public final class DataServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     java.lang.String getDataset();
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return The bytes for dataset.
      */
     com.google.protobuf.ByteString
         getDatasetBytes();
 
     /**
-     * <code>string model_type = 2;</code>
+     * <code>string model_type = 2 [json_name = "modelType"];</code>
      * @return The modelType.
      */
     java.lang.String getModelType();
     /**
-     * <code>string model_type = 2;</code>
+     * <code>string model_type = 2 [json_name = "modelType"];</code>
      * @return The bytes for modelType.
      */
     com.google.protobuf.ByteString
         getModelTypeBytes();
 
     /**
-     * <code>int32 batch_size = 3;</code>
+     * <code>int32 batch_size = 3 [json_name = "batchSize"];</code>
      * @return The batchSize.
      */
     int getBatchSize();
 
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -9273,7 +9313,7 @@ public final class DataServiceProtos {
     public static final int DATASET_FIELD_NUMBER = 1;
     private volatile java.lang.Object dataset_;
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -9290,7 +9330,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return The bytes for dataset.
      */
     @java.lang.Override
@@ -9311,7 +9351,7 @@ public final class DataServiceProtos {
     public static final int MODEL_TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object modelType_;
     /**
-     * <code>string model_type = 2;</code>
+     * <code>string model_type = 2 [json_name = "modelType"];</code>
      * @return The modelType.
      */
     @java.lang.Override
@@ -9328,7 +9368,7 @@ public final class DataServiceProtos {
       }
     }
     /**
-     * <code>string model_type = 2;</code>
+     * <code>string model_type = 2 [json_name = "modelType"];</code>
      * @return The bytes for modelType.
      */
     @java.lang.Override
@@ -9349,7 +9389,7 @@ public final class DataServiceProtos {
     public static final int BATCH_SIZE_FIELD_NUMBER = 3;
     private int batchSize_;
     /**
-     * <code>int32 batch_size = 3;</code>
+     * <code>int32 batch_size = 3 [json_name = "batchSize"];</code>
      * @return The batchSize.
      */
     @java.lang.Override
@@ -9360,7 +9400,7 @@ public final class DataServiceProtos {
     public static final int TAGS_FIELD_NUMBER = 4;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -9368,14 +9408,14 @@ public final class DataServiceProtos {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -9383,7 +9423,7 @@ public final class DataServiceProtos {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -9766,7 +9806,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object dataset_ = "";
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset = 1 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public java.lang.String getDataset() {
@@ -9782,7 +9822,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset = 1 [json_name = "dataset"];</code>
        * @return The bytes for dataset.
        */
       public com.google.protobuf.ByteString
@@ -9799,7 +9839,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset = 1 [json_name = "dataset"];</code>
        * @param value The dataset to set.
        * @return This builder for chaining.
        */
@@ -9814,7 +9854,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset = 1 [json_name = "dataset"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDataset() {
@@ -9824,7 +9864,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset = 1 [json_name = "dataset"];</code>
        * @param value The bytes for dataset to set.
        * @return This builder for chaining.
        */
@@ -9842,7 +9882,7 @@ public final class DataServiceProtos {
 
       private java.lang.Object modelType_ = "";
       /**
-       * <code>string model_type = 2;</code>
+       * <code>string model_type = 2 [json_name = "modelType"];</code>
        * @return The modelType.
        */
       public java.lang.String getModelType() {
@@ -9858,7 +9898,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string model_type = 2;</code>
+       * <code>string model_type = 2 [json_name = "modelType"];</code>
        * @return The bytes for modelType.
        */
       public com.google.protobuf.ByteString
@@ -9875,7 +9915,7 @@ public final class DataServiceProtos {
         }
       }
       /**
-       * <code>string model_type = 2;</code>
+       * <code>string model_type = 2 [json_name = "modelType"];</code>
        * @param value The modelType to set.
        * @return This builder for chaining.
        */
@@ -9890,7 +9930,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string model_type = 2;</code>
+       * <code>string model_type = 2 [json_name = "modelType"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModelType() {
@@ -9900,7 +9940,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>string model_type = 2;</code>
+       * <code>string model_type = 2 [json_name = "modelType"];</code>
        * @param value The bytes for modelType to set.
        * @return This builder for chaining.
        */
@@ -9918,7 +9958,7 @@ public final class DataServiceProtos {
 
       private int batchSize_ ;
       /**
-       * <code>int32 batch_size = 3;</code>
+       * <code>int32 batch_size = 3 [json_name = "batchSize"];</code>
        * @return The batchSize.
        */
       @java.lang.Override
@@ -9926,7 +9966,7 @@ public final class DataServiceProtos {
         return batchSize_;
       }
       /**
-       * <code>int32 batch_size = 3;</code>
+       * <code>int32 batch_size = 3 [json_name = "batchSize"];</code>
        * @param value The batchSize to set.
        * @return This builder for chaining.
        */
@@ -9937,7 +9977,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>int32 batch_size = 3;</code>
+       * <code>int32 batch_size = 3 [json_name = "batchSize"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBatchSize() {
@@ -9955,7 +9995,7 @@ public final class DataServiceProtos {
          }
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -9963,14 +10003,14 @@ public final class DataServiceProtos {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -9978,7 +10018,7 @@ public final class DataServiceProtos {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -9987,7 +10027,7 @@ public final class DataServiceProtos {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -10003,7 +10043,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -10018,7 +10058,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -10031,7 +10071,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -10041,7 +10081,7 @@ public final class DataServiceProtos {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 4 [json_name = "tags"];</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -10169,76 +10209,83 @@ public final class DataServiceProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/data/v1/data_service.proto\022\023asgt." +
-      "dataservice.v1\032\027asgt/type/dataset.proto\032" +
-      "\025asgt/type/model.proto\032 asgt/type/retent" +
-      "ion_policy.proto\032\026asgt/type/sample.proto" +
-      "\032\034google/api/annotations.proto\032\033google/p" +
-      "rotobuf/empty.proto\032\037google/protobuf/tim" +
-      "estamp.proto\032\036google/protobuf/wrappers.p" +
-      "roto\032$ssn/dataservice/v1/dataservice.pro" +
-      "to\"\205\001\n\027CalculateMetricsRequest\022.\n\nstart_" +
-      "time\030\001 \001(\0132\032.google.protobuf.Timestamp\022," +
-      "\n\010end_time\030\002 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022\014\n\004tags\030\003 \003(\t\"\326\001\n\030CalculateMetricsR" +
-      "esponse\022H\n\007metrics\030\001 \003(\01327.asgt.dataserv" +
-      "ice.v1.CalculateMetricsResponse.MetricRo" +
-      "w\032p\n\tMetricRow\022\016\n\006target\030\001 \001(\t\022/\n\nconfid" +
-      "ence\030\002 \001(\0132\033.google.protobuf.FloatValue\022" +
-      "\017\n\007correct\030\003 \001(\005\022\021\n\tincorrect\030\004 \001(\005\"\244\001\n\r" +
-      "CreateRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
-      "\t\022\014\n\004tags\030\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samp" +
-      "les\030\004 \003(\0132\021.asgt.type.Sample\0224\n\020retentio" +
-      "n_policy\030\005 \001(\0132\032.asgt.type.RetentionPoli" +
-      "cy\"S\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n" +
-      "\004type\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type" +
-      ".Sample\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016" +
-      "\n\004name\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\"," +
-      "\n\016GetInfoRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002" +
-      " \001(\t\"h\n\024UpdateDatasetRequest\022\014\n\004name\030\001 \001" +
-      "(\t\022\014\n\004type\030\002 \001(\t\0224\n\020retention_policy\030\003 \001" +
-      "(\0132\032.asgt.type.RetentionPolicy\"W\n\017GetInf" +
-      "oResponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.D" +
-      "ataset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"" +
-      "b\n\031RegisterQueryStatsRequest\022\017\n\007dataset\030" +
-      "\001 \001(\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030" +
-      "\003 \001(\005\022\014\n\004tags\030\004 \003(\t2\353\006\n\013DataService\022i\n\rC" +
-      "reateDataset\022\".asgt.dataservice.v1.Creat" +
-      "eRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026" +
-      "\"\021/v1/{type}:create:\001*\022q\n\nAppendData\022&.a" +
-      "sgt.dataservice.v1.AppendDataRequest\032\026.g" +
-      "oogle.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}" +
-      "/{name}:append:\001*\022f\n\nDeleteData\022\".asgt.d" +
-      "ataservice.v1.DeleteRequest\032\026.google.pro" +
-      "tobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001" +
-      "*\022t\n\007GetInfo\022#.asgt.dataservice.v1.GetIn" +
-      "foRequest\032$.asgt.dataservice.v1.GetInfoR" +
-      "esponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022" +
-      "w\n\rUpdateDataset\022).asgt.dataservice.v1.U" +
-      "pdateDatasetRequest\032\026.google.protobuf.Em" +
-      "pty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*" +
-      "\022\\\n\022RegisterQueryStats\022..asgt.dataservic" +
-      "e.v1.RegisterQueryStatsRequest\032\026.google." +
-      "protobuf.Empty\022X\n\023CallsPerMonthMetric\022\026." +
-      "google.protobuf.Empty\032).ssn.dataservice." +
-      "v1.CallsPerMonthResponse\022o\n\020CalculateMet" +
-      "rics\022,.asgt.dataservice.v1.CalculateMetr" +
-      "icsRequest\032-.asgt.dataservice.v1.Calcula" +
-      "teMetricsResponseBJB\021DataServiceProtosZ5" +
-      "github.com/e-conomic/vmlapis/gen/go/asgt" +
-      "/data/v1;datab\006proto3"
+      "dataservice.v1\032\034google/api/annotations.p" +
+      "roto\032\033google/protobuf/empty.proto\032 asgt/" +
+      "type/retention_policy.proto\032\025asgt/type/m" +
+      "odel.proto\032\027asgt/type/dataset.proto\032\026asg" +
+      "t/type/sample.proto\032$ssn/dataservice/v1/" +
+      "dataservice.proto\032\036google/protobuf/wrapp" +
+      "ers.proto\032\037google/protobuf/timestamp.pro" +
+      "to\"\237\001\n\027CalculateMetricsRequest\0229\n\nstart_" +
+      "time\030\001 \001(\0132\032.google.protobuf.TimestampR\t" +
+      "startTime\0225\n\010end_time\030\002 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\007endTime\022\022\n\004tags\030\003 \003(\tR\004" +
+      "tags\"\210\002\n\030CalculateMetricsResponse\022Q\n\007met" +
+      "rics\030\001 \003(\01327.asgt.dataservice.v1.Calcula" +
+      "teMetricsResponse.MetricRowR\007metrics\032\230\001\n" +
+      "\tMetricRow\022\026\n\006target\030\001 \001(\tR\006target\022;\n\nco" +
+      "nfidence\030\002 \001(\0132\033.google.protobuf.FloatVa" +
+      "lueR\nconfidence\022\030\n\007correct\030\003 \001(\005R\007correc" +
+      "t\022\034\n\tincorrect\030\004 \001(\005R\tincorrect\"\331\001\n\rCrea" +
+      "teRequest\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004type\030\002 " +
+      "\001(\tR\004type\022\022\n\004tags\030\003 \003(\tR\004tags\022\030\n\007targets" +
+      "\030\006 \003(\tR\007targets\022+\n\007samples\030\004 \003(\0132\021.asgt." +
+      "type.SampleR\007samples\022E\n\020retention_policy" +
+      "\030\005 \001(\0132\032.asgt.type.RetentionPolicyR\017rete" +
+      "ntionPolicy\"h\n\021AppendDataRequest\022\022\n\004name" +
+      "\030\001 \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\022+\n\007samp" +
+      "les\030\003 \003(\0132\021.asgt.type.SampleR\007samples\"V\n" +
+      "\rDeleteRequest\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\004na" +
+      "me\030\002 \001(\tH\000R\004name\022\022\n\003tag\030\003 \001(\tH\000R\003tagB\007\n\005" +
+      "match\"8\n\016GetInfoRequest\022\022\n\004name\030\001 \001(\tR\004n" +
+      "ame\022\022\n\004type\030\002 \001(\tR\004type\"\205\001\n\024UpdateDatase" +
+      "tRequest\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004type\030\002 \001" +
+      "(\tR\004type\022E\n\020retention_policy\030\003 \001(\0132\032.asg" +
+      "t.type.RetentionPolicyR\017retentionPolicy\"" +
+      "g\n\017GetInfoResponse\022,\n\007dataset\030\001 \001(\0132\022.as" +
+      "gt.type.DatasetR\007dataset\022&\n\005model\030\002 \001(\0132" +
+      "\020.asgt.type.ModelR\005model\"\207\001\n\031RegisterQue" +
+      "ryStatsRequest\022\030\n\007dataset\030\001 \001(\tR\007dataset" +
+      "\022\035\n\nmodel_type\030\002 \001(\tR\tmodelType\022\035\n\nbatch" +
+      "_size\030\003 \001(\005R\tbatchSize\022\022\n\004tags\030\004 \003(\tR\004ta" +
+      "gs2\353\006\n\013DataService\022i\n\rCreateDataset\022\".as" +
+      "gt.dataservice.v1.CreateRequest\032\026.google" +
+      ".protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:crea" +
+      "te:\001*\022q\n\nAppendData\022&.asgt.dataservice.v" +
+      "1.AppendDataRequest\032\026.google.protobuf.Em" +
+      "pty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001*" +
+      "\022f\n\nDeleteData\022\".asgt.dataservice.v1.Del" +
+      "eteRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223" +
+      "\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.as" +
+      "gt.dataservice.v1.GetInfoRequest\032$.asgt." +
+      "dataservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022\026" +
+      "/v1/{type}/{name}:info\022w\n\rUpdateDataset\022" +
+      ").asgt.dataservice.v1.UpdateDatasetReque" +
+      "st\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1/" +
+      "{type}/{name}:update:\001*\022\\\n\022RegisterQuery" +
+      "Stats\022..asgt.dataservice.v1.RegisterQuer" +
+      "yStatsRequest\032\026.google.protobuf.Empty\022X\n" +
+      "\023CallsPerMonthMetric\022\026.google.protobuf.E" +
+      "mpty\032).ssn.dataservice.v1.CallsPerMonthR" +
+      "esponse\022o\n\020CalculateMetrics\022,.asgt.datas" +
+      "ervice.v1.CalculateMetricsRequest\032-.asgt" +
+      ".dataservice.v1.CalculateMetricsResponse" +
+      "BJB\021DataServiceProtosZ5github.com/e-cono" +
+      "mic/vmlapis/gen/go/asgt/data/v1;datab\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.type.DatasetOuterClass.getDescriptor(),
-          asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.RetentionPolicyOuterClass.getDescriptor(),
-          asgt.type.SampleOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
+          asgt.type.RetentionPolicyOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.type.DatasetOuterClass.getDescriptor(),
+          asgt.type.SampleOuterClass.getDescriptor(),
           ssn.dataservice.v1.DataServiceProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10305,15 +10352,15 @@ public final class DataServiceProtos {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    asgt.type.DatasetOuterClass.getDescriptor();
-    asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.RetentionPolicyOuterClass.getDescriptor();
-    asgt.type.SampleOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
+    asgt.type.RetentionPolicyOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
+    asgt.type.DatasetOuterClass.getDescriptor();
+    asgt.type.SampleOuterClass.getDescriptor();
     ssn.dataservice.v1.DataServiceProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

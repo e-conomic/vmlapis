@@ -19,70 +19,70 @@ public final class TrainModelEventOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
     /**
-     * <code>int64 model_version = 4;</code>
+     * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     long getModelVersion();
 
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The status.
      */
     java.lang.String getStatus();
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The statusMessage.
      */
     java.lang.String getStatusMessage();
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The bytes for statusMessage.
      */
     com.google.protobuf.ByteString
         getStatusMessageBytes();
 
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> 
         getArtifactsList();
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact getArtifacts(int index);
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     int getArtifactsCount();
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     java.util.List<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> 
         getArtifactsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder getArtifactsOrBuilder(
         int index);
@@ -215,24 +215,24 @@ public final class TrainModelEventOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       java.lang.String getType();
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       com.google.protobuf.ByteString
           getTypeBytes();
 
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The path.
        */
       java.lang.String getPath();
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The bytes for path.
        */
       com.google.protobuf.ByteString
@@ -332,7 +332,7 @@ public final class TrainModelEventOuterClass {
       public static final int TYPE_FIELD_NUMBER = 1;
       private volatile java.lang.Object type_;
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       @java.lang.Override
@@ -349,7 +349,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       @java.lang.Override
@@ -370,7 +370,7 @@ public final class TrainModelEventOuterClass {
       public static final int PATH_FIELD_NUMBER = 2;
       private volatile java.lang.Object path_;
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The path.
        */
       @java.lang.Override
@@ -387,7 +387,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The bytes for path.
        */
       @java.lang.Override
@@ -726,7 +726,7 @@ public final class TrainModelEventOuterClass {
 
         private java.lang.Object type_ = "";
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @return The type.
          */
         public java.lang.String getType() {
@@ -742,7 +742,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @return The bytes for type.
          */
         public com.google.protobuf.ByteString
@@ -759,7 +759,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @param value The type to set.
          * @return This builder for chaining.
          */
@@ -774,7 +774,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @return This builder for chaining.
          */
         public Builder clearType() {
@@ -784,7 +784,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @param value The bytes for type to set.
          * @return This builder for chaining.
          */
@@ -802,7 +802,7 @@ public final class TrainModelEventOuterClass {
 
         private java.lang.Object path_ = "";
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @return The path.
          */
         public java.lang.String getPath() {
@@ -818,7 +818,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @return The bytes for path.
          */
         public com.google.protobuf.ByteString
@@ -835,7 +835,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @param value The path to set.
          * @return This builder for chaining.
          */
@@ -850,7 +850,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPath() {
@@ -860,7 +860,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @param value The bytes for path to set.
          * @return This builder for chaining.
          */
@@ -931,7 +931,7 @@ public final class TrainModelEventOuterClass {
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     @java.lang.Override
@@ -939,7 +939,7 @@ public final class TrainModelEventOuterClass {
       return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -947,7 +947,7 @@ public final class TrainModelEventOuterClass {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -957,7 +957,7 @@ public final class TrainModelEventOuterClass {
     public static final int MODEL_VERSION_FIELD_NUMBER = 4;
     private long modelVersion_;
     /**
-     * <code>int64 model_version = 4;</code>
+     * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     @java.lang.Override
@@ -968,7 +968,7 @@ public final class TrainModelEventOuterClass {
     public static final int STATUS_FIELD_NUMBER = 5;
     private volatile java.lang.Object status_;
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The status.
      */
     @java.lang.Override
@@ -985,7 +985,7 @@ public final class TrainModelEventOuterClass {
       }
     }
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The bytes for status.
      */
     @java.lang.Override
@@ -1006,7 +1006,7 @@ public final class TrainModelEventOuterClass {
     public static final int STATUS_MESSAGE_FIELD_NUMBER = 6;
     private volatile java.lang.Object statusMessage_;
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The statusMessage.
      */
     @java.lang.Override
@@ -1023,7 +1023,7 @@ public final class TrainModelEventOuterClass {
       }
     }
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The bytes for statusMessage.
      */
     @java.lang.Override
@@ -1044,14 +1044,14 @@ public final class TrainModelEventOuterClass {
     public static final int ARTIFACTS_FIELD_NUMBER = 7;
     private java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> artifacts_;
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> getArtifactsList() {
       return artifacts_;
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> 
@@ -1059,21 +1059,21 @@ public final class TrainModelEventOuterClass {
       return artifacts_;
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public int getArtifactsCount() {
       return artifacts_.size();
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact getArtifacts(int index) {
       return artifacts_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder getArtifactsOrBuilder(
@@ -1509,14 +1509,14 @@ public final class TrainModelEventOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
@@ -1527,7 +1527,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1543,7 +1543,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -1557,7 +1557,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1575,7 +1575,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -1589,7 +1589,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -1597,7 +1597,7 @@ public final class TrainModelEventOuterClass {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -1608,7 +1608,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -1626,7 +1626,7 @@ public final class TrainModelEventOuterClass {
 
       private long modelVersion_ ;
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @return The modelVersion.
        */
       @java.lang.Override
@@ -1634,7 +1634,7 @@ public final class TrainModelEventOuterClass {
         return modelVersion_;
       }
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @param value The modelVersion to set.
        * @return This builder for chaining.
        */
@@ -1645,7 +1645,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
@@ -1657,7 +1657,7 @@ public final class TrainModelEventOuterClass {
 
       private java.lang.Object status_ = "";
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @return The status.
        */
       public java.lang.String getStatus() {
@@ -1673,7 +1673,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
@@ -1690,7 +1690,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -1705,7 +1705,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -1715,7 +1715,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
@@ -1733,7 +1733,7 @@ public final class TrainModelEventOuterClass {
 
       private java.lang.Object statusMessage_ = "";
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @return The statusMessage.
        */
       public java.lang.String getStatusMessage() {
@@ -1749,7 +1749,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @return The bytes for statusMessage.
        */
       public com.google.protobuf.ByteString
@@ -1766,7 +1766,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @param value The statusMessage to set.
        * @return This builder for chaining.
        */
@@ -1781,7 +1781,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatusMessage() {
@@ -1791,7 +1791,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @param value The bytes for statusMessage to set.
        * @return This builder for chaining.
        */
@@ -1820,7 +1820,7 @@ public final class TrainModelEventOuterClass {
           asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder, asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> artifactsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> getArtifactsList() {
         if (artifactsBuilder_ == null) {
@@ -1830,7 +1830,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public int getArtifactsCount() {
         if (artifactsBuilder_ == null) {
@@ -1840,7 +1840,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact getArtifacts(int index) {
         if (artifactsBuilder_ == null) {
@@ -1850,7 +1850,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder setArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact value) {
@@ -1867,7 +1867,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder setArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder builderForValue) {
@@ -1881,7 +1881,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact value) {
         if (artifactsBuilder_ == null) {
@@ -1897,7 +1897,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact value) {
@@ -1914,7 +1914,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(
           asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder builderForValue) {
@@ -1928,7 +1928,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder builderForValue) {
@@ -1942,7 +1942,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addAllArtifacts(
           java.lang.Iterable<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> values) {
@@ -1957,7 +1957,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder clearArtifacts() {
         if (artifactsBuilder_ == null) {
@@ -1970,7 +1970,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder removeArtifacts(int index) {
         if (artifactsBuilder_ == null) {
@@ -1983,14 +1983,14 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder getArtifactsBuilder(
           int index) {
         return getArtifactsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder getArtifactsOrBuilder(
           int index) {
@@ -2000,7 +2000,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public java.util.List<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> 
            getArtifactsOrBuilderList() {
@@ -2011,14 +2011,14 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder addArtifactsBuilder() {
         return getArtifactsFieldBuilder().addBuilder(
             asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder addArtifactsBuilder(
           int index) {
@@ -2026,7 +2026,7 @@ public final class TrainModelEventOuterClass {
             index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder> 
            getArtifactsBuilderList() {
@@ -2119,14 +2119,16 @@ public final class TrainModelEventOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!asgt/type/train_model_event.proto\022\tasg" +
-      "t.type\032\027asgt/type/dataset.proto\"\325\001\n\017Trai" +
-      "nModelEvent\022#\n\007dataset\030\001 \001(\0132\022.asgt.type" +
-      ".Dataset\022\025\n\rmodel_version\030\004 \001(\003\022\016\n\006statu" +
-      "s\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t\0226\n\tartif" +
-      "acts\030\007 \003(\0132#.asgt.type.TrainModelEvent.A" +
-      "rtifact\032&\n\010Artifact\022\014\n\004type\030\001 \001(\t\022\014\n\004pat" +
-      "h\030\002 \001(\tB8Z6github.com/e-conomic/vmlapis/" +
-      "gen/go/asgt/type;asgttypeb\006proto3"
+      "t.type\032\027asgt/type/dataset.proto\"\232\002\n\017Trai" +
+      "nModelEvent\022,\n\007dataset\030\001 \001(\0132\022.asgt.type" +
+      ".DatasetR\007dataset\022#\n\rmodel_version\030\004 \001(\003" +
+      "R\014modelVersion\022\026\n\006status\030\005 \001(\tR\006status\022%" +
+      "\n\016status_message\030\006 \001(\tR\rstatusMessage\022A\n" +
+      "\tartifacts\030\007 \003(\0132#.asgt.type.TrainModelE" +
+      "vent.ArtifactR\tartifacts\0322\n\010Artifact\022\022\n\004" +
+      "type\030\001 \001(\tR\004type\022\022\n\004path\030\002 \001(\tR\004pathB8Z6" +
+      "github.com/e-conomic/vmlapis/gen/go/asgt" +
+      "/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -25,25 +25,27 @@ namespace Asgt.Dataservice.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1hc2d0L2RhdGEvdjEvYnFfZW50cmllcy5wcm90bxITYXNndC5kYXRhc2Vy",
-            "dmljZS52MRoUYXNndC90eXBlL2RhdGEucHJvdG8aFWFzZ3QvdHlwZS9tb2Rl",
-            "bC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8aHGFzZ3QvdHlw",
-            "ZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfZmllbGQu",
-            "cHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8i+gMKBUVudHJ5",
-            "Ej4KAmlkGAEgASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3Qg",
-            "aWQgaWYgZmVlZGJhY2sgZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAES",
-            "GwoMZGF0YXNldF9uYW1lGAMgASgJQgXqPwIIARIbCgxkYXRhc2V0X3R5cGUY",
-            "DCABKAlCBeo/AggBEi8KCmRhdGFzZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlx",
-            "dWUgSUQgb2YgZGF0YXNldBJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVm",
-            "aW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxl",
-            "dGtleSBpcyB1c2VkEh0KBGRhdGEYBSABKAsyDy5hc2d0LnR5cGUuRGF0YRIt",
-            "Cg10YXJnZXRfdmFsdWVzGAYgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVl",
-            "Eh8KBW1vZGVsGAkgASgLMhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rp",
-            "b24YCiADKAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGlt",
-            "ZV9hZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoQ6j8NCgtzYW1wbGVf",
-            "ZGF0YUI3WjVnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9h",
-            "c2d0L2RhdGEvdjE7ZGF0YWIGcHJvdG8z"));
+            "dmljZS52MRocZ2VuX2JxX3NjaGVtYS9icV9maWVsZC5wcm90bxocZ2VuX2Jx",
+            "X3NjaGVtYS9icV90YWJsZS5wcm90bxoUYXNndC90eXBlL2RhdGEucHJvdG8a",
+            "FWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24u",
+            "cHJvdG8aHGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8i5QQKBUVudHJ5",
+            "EkIKAmlkGAEgASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3Qg",
+            "aWQgaWYgZmVlZGJhY2sgZGF0YVICaWQSIQoIY29uc3VtZXIYAiABKAlCBeo/",
+            "AggBUghjb25zdW1lchIoCgxkYXRhc2V0X25hbWUYAyABKAlCBeo/AggBUgtk",
+            "YXRhc2V0TmFtZRIoCgxkYXRhc2V0X3R5cGUYDCABKAlCBeo/AggBUgtkYXRh",
+            "c2V0VHlwZRI6CgpkYXRhc2V0X2lkGAsgASgJQhvqPxgIASIUdW5pcXVlIElE",
+            "IG9mIGRhdGFzZXRSCWRhdGFzZXRJZBJaCgR0YWdzGAQgAygJQkbqP0MiQVRh",
+            "Z3MgZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBp",
+            "ZiB2YWxldGtleSBpcyB1c2VkUgR0YWdzEiMKBGRhdGEYBSABKAsyDy5hc2d0",
+            "LnR5cGUuRGF0YVIEZGF0YRI7Cg10YXJnZXRfdmFsdWVzGAYgAygLMhYuYXNn",
+            "dC50eXBlLlRhcmdldFZhbHVlUgx0YXJnZXRWYWx1ZXMSJgoFbW9kZWwYCSAB",
+            "KAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVsEjwKCnByZWRpY3Rpb24YCiAD",
+            "KAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXRSCnByZWRpY3Rpb24S",
+            "LwoKdGltZV9hZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUFIJdGltZUFk",
+            "ZGVkOhDqPw0KC3NhbXBsZV9kYXRhQjdaNWdpdGh1Yi5jb20vZS1jb25vbWlj",
+            "L3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvZGF0YS92MTtkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.Entry), global::Asgt.Dataservice.V1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null, null)
           }));
@@ -55,23 +57,31 @@ namespace Asgt.Dataservice.V1 {
   /// <summary>
   /// BQ schema gen - could be used for adding direct developer data endpoints
   /// </summary>
-  public sealed partial class Entry : pb::IMessage<Entry> {
+  public sealed partial class Entry : pb::IMessage<Entry>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Entry> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Asgt.Dataservice.V1.BqEntriesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entry() {
       OnConstruction();
     }
@@ -79,6 +89,7 @@ namespace Asgt.Dataservice.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entry(Entry other) : this() {
       id_ = other.id_;
       consumer_ = other.consumer_;
@@ -95,6 +106,7 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entry Clone() {
       return new Entry(this);
     }
@@ -103,6 +115,7 @@ namespace Asgt.Dataservice.V1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -114,6 +127,7 @@ namespace Asgt.Dataservice.V1 {
     public const int ConsumerFieldNumber = 2;
     private string consumer_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Consumer {
       get { return consumer_; }
       set {
@@ -125,6 +139,7 @@ namespace Asgt.Dataservice.V1 {
     public const int DatasetNameFieldNumber = 3;
     private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatasetName {
       get { return datasetName_; }
       set {
@@ -136,6 +151,7 @@ namespace Asgt.Dataservice.V1 {
     public const int DatasetTypeFieldNumber = 12;
     private string datasetType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatasetType {
       get { return datasetType_; }
       set {
@@ -147,6 +163,7 @@ namespace Asgt.Dataservice.V1 {
     public const int DatasetIdFieldNumber = 11;
     private string datasetId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatasetId {
       get { return datasetId_; }
       set {
@@ -160,6 +177,7 @@ namespace Asgt.Dataservice.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Tags {
       get { return tags_; }
     }
@@ -168,6 +186,7 @@ namespace Asgt.Dataservice.V1 {
     public const int DataFieldNumber = 5;
     private global::Asgt.Type.Data data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Data Data {
       get { return data_; }
       set {
@@ -181,6 +200,7 @@ namespace Asgt.Dataservice.V1 {
         = pb::FieldCodec.ForMessage(50, global::Asgt.Type.TargetValue.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
       get { return targetValues_; }
     }
@@ -189,6 +209,7 @@ namespace Asgt.Dataservice.V1 {
     public const int ModelFieldNumber = 9;
     private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
@@ -202,6 +223,7 @@ namespace Asgt.Dataservice.V1 {
         = pb::FieldCodec.ForMessage(82, global::Asgt.Type.Prediction.Types.Target.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target> prediction_ = new pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target> Prediction {
       get { return prediction_; }
     }
@@ -210,6 +232,7 @@ namespace Asgt.Dataservice.V1 {
     public const int TimeAddedFieldNumber = 8;
     private ulong timeAdded_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ulong TimeAdded {
       get { return timeAdded_; }
       set {
@@ -218,11 +241,13 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Entry);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Entry other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -245,6 +270,7 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -265,12 +291,17 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
@@ -309,9 +340,56 @@ namespace Asgt.Dataservice.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Consumer.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Consumer);
+      }
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DatasetName);
+      }
+      tags_.WriteTo(ref output, _repeated_tags_codec);
+      if (data_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Data);
+      }
+      targetValues_.WriteTo(ref output, _repeated_targetValues_codec);
+      if (TimeAdded != 0UL) {
+        output.WriteRawTag(64);
+        output.WriteUInt64(TimeAdded);
+      }
+      if (model_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Model);
+      }
+      prediction_.WriteTo(ref output, _repeated_prediction_codec);
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(DatasetId);
+      }
+      if (DatasetType.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DatasetType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -348,6 +426,7 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Entry other) {
       if (other == null) {
         return;
@@ -389,7 +468,11 @@ namespace Asgt.Dataservice.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -448,7 +531,73 @@ namespace Asgt.Dataservice.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 26: {
+            DatasetName = input.ReadString();
+            break;
+          }
+          case 34: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 42: {
+            if (data_ == null) {
+              Data = new global::Asgt.Type.Data();
+            }
+            input.ReadMessage(Data);
+            break;
+          }
+          case 50: {
+            targetValues_.AddEntriesFrom(ref input, _repeated_targetValues_codec);
+            break;
+          }
+          case 64: {
+            TimeAdded = input.ReadUInt64();
+            break;
+          }
+          case 74: {
+            if (model_ == null) {
+              Model = new global::Asgt.Type.Model();
+            }
+            input.ReadMessage(Model);
+            break;
+          }
+          case 82: {
+            prediction_.AddEntriesFrom(ref input, _repeated_prediction_codec);
+            break;
+          }
+          case 90: {
+            DatasetId = input.ReadString();
+            break;
+          }
+          case 98: {
+            DatasetType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

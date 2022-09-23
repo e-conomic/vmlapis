@@ -23,7 +23,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     java.util.List<ssn.type.TextAnnotationOuterClass.Page> 
         getPagesList();
@@ -32,7 +32,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     ssn.type.TextAnnotationOuterClass.Page getPages(int index);
     /**
@@ -40,7 +40,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     int getPagesCount();
     /**
@@ -48,7 +48,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     java.util.List<? extends ssn.type.TextAnnotationOuterClass.PageOrBuilder> 
         getPagesOrBuilderList();
@@ -57,7 +57,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     ssn.type.TextAnnotationOuterClass.PageOrBuilder getPagesOrBuilder(
         int index);
@@ -67,7 +67,7 @@ public final class TextAnnotationOuterClass {
      * UTF-8 text detected on the pages.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -76,7 +76,7 @@ public final class TextAnnotationOuterClass {
      * UTF-8 text detected on the pages.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -202,7 +202,7 @@ public final class TextAnnotationOuterClass {
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
        * </pre>
        *
-       * <code>string language_code = 1;</code>
+       * <code>string language_code = 1 [json_name = "languageCode"];</code>
        * @return The languageCode.
        */
       java.lang.String getLanguageCode();
@@ -213,7 +213,7 @@ public final class TextAnnotationOuterClass {
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
        * </pre>
        *
-       * <code>string language_code = 1;</code>
+       * <code>string language_code = 1 [json_name = "languageCode"];</code>
        * @return The bytes for languageCode.
        */
       com.google.protobuf.ByteString
@@ -224,7 +224,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of detected language. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 2;</code>
+       * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       float getConfidence();
@@ -331,7 +331,7 @@ public final class TextAnnotationOuterClass {
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
        * </pre>
        *
-       * <code>string language_code = 1;</code>
+       * <code>string language_code = 1 [json_name = "languageCode"];</code>
        * @return The languageCode.
        */
       @java.lang.Override
@@ -354,7 +354,7 @@ public final class TextAnnotationOuterClass {
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
        * </pre>
        *
-       * <code>string language_code = 1;</code>
+       * <code>string language_code = 1 [json_name = "languageCode"];</code>
        * @return The bytes for languageCode.
        */
       @java.lang.Override
@@ -379,7 +379,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of detected language. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 2;</code>
+       * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -720,7 +720,7 @@ public final class TextAnnotationOuterClass {
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
          * </pre>
          *
-         * <code>string language_code = 1;</code>
+         * <code>string language_code = 1 [json_name = "languageCode"];</code>
          * @return The languageCode.
          */
         public java.lang.String getLanguageCode() {
@@ -742,7 +742,7 @@ public final class TextAnnotationOuterClass {
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
          * </pre>
          *
-         * <code>string language_code = 1;</code>
+         * <code>string language_code = 1 [json_name = "languageCode"];</code>
          * @return The bytes for languageCode.
          */
         public com.google.protobuf.ByteString
@@ -765,7 +765,7 @@ public final class TextAnnotationOuterClass {
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
          * </pre>
          *
-         * <code>string language_code = 1;</code>
+         * <code>string language_code = 1 [json_name = "languageCode"];</code>
          * @param value The languageCode to set.
          * @return This builder for chaining.
          */
@@ -786,7 +786,7 @@ public final class TextAnnotationOuterClass {
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
          * </pre>
          *
-         * <code>string language_code = 1;</code>
+         * <code>string language_code = 1 [json_name = "languageCode"];</code>
          * @return This builder for chaining.
          */
         public Builder clearLanguageCode() {
@@ -802,7 +802,7 @@ public final class TextAnnotationOuterClass {
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
          * </pre>
          *
-         * <code>string language_code = 1;</code>
+         * <code>string language_code = 1 [json_name = "languageCode"];</code>
          * @param value The bytes for languageCode to set.
          * @return This builder for chaining.
          */
@@ -824,7 +824,7 @@ public final class TextAnnotationOuterClass {
          * Confidence of detected language. Range [0, 1].
          * </pre>
          *
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         @java.lang.Override
@@ -836,7 +836,7 @@ public final class TextAnnotationOuterClass {
          * Confidence of detected language. Range [0, 1].
          * </pre>
          *
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @param value The confidence to set.
          * @return This builder for chaining.
          */
@@ -851,7 +851,7 @@ public final class TextAnnotationOuterClass {
          * Confidence of detected language. Range [0, 1].
          * </pre>
          *
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @return This builder for chaining.
          */
         public Builder clearConfidence() {
@@ -922,7 +922,7 @@ public final class TextAnnotationOuterClass {
        * Detected break type.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
       int getTypeValue();
@@ -931,7 +931,7 @@ public final class TextAnnotationOuterClass {
        * Detected break type.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType getType();
@@ -941,7 +941,7 @@ public final class TextAnnotationOuterClass {
        * True if break prepends the element.
        * </pre>
        *
-       * <code>bool is_prefix = 2;</code>
+       * <code>bool is_prefix = 2 [json_name = "isPrefix"];</code>
        * @return The isPrefix.
        */
       boolean getIsPrefix();
@@ -1244,7 +1244,7 @@ public final class TextAnnotationOuterClass {
        * Detected break type.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -1255,7 +1255,7 @@ public final class TextAnnotationOuterClass {
        * Detected break type.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       @java.lang.Override public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.BreakType getType() {
@@ -1271,7 +1271,7 @@ public final class TextAnnotationOuterClass {
        * True if break prepends the element.
        * </pre>
        *
-       * <code>bool is_prefix = 2;</code>
+       * <code>bool is_prefix = 2 [json_name = "isPrefix"];</code>
        * @return The isPrefix.
        */
       @java.lang.Override
@@ -1608,7 +1608,7 @@ public final class TextAnnotationOuterClass {
          * Detected break type.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
          * @return The enum numeric value on the wire for type.
          */
         @java.lang.Override public int getTypeValue() {
@@ -1619,7 +1619,7 @@ public final class TextAnnotationOuterClass {
          * Detected break type.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
          * @param value The enum numeric value on the wire for type to set.
          * @return This builder for chaining.
          */
@@ -1634,7 +1634,7 @@ public final class TextAnnotationOuterClass {
          * Detected break type.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
          * @return The type.
          */
         @java.lang.Override
@@ -1648,7 +1648,7 @@ public final class TextAnnotationOuterClass {
          * Detected break type.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
          * @param value The type to set.
          * @return This builder for chaining.
          */
@@ -1666,7 +1666,7 @@ public final class TextAnnotationOuterClass {
          * Detected break type.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak.BreakType type = 1 [json_name = "type"];</code>
          * @return This builder for chaining.
          */
         public Builder clearType() {
@@ -1682,7 +1682,7 @@ public final class TextAnnotationOuterClass {
          * True if break prepends the element.
          * </pre>
          *
-         * <code>bool is_prefix = 2;</code>
+         * <code>bool is_prefix = 2 [json_name = "isPrefix"];</code>
          * @return The isPrefix.
          */
         @java.lang.Override
@@ -1694,7 +1694,7 @@ public final class TextAnnotationOuterClass {
          * True if break prepends the element.
          * </pre>
          *
-         * <code>bool is_prefix = 2;</code>
+         * <code>bool is_prefix = 2 [json_name = "isPrefix"];</code>
          * @param value The isPrefix to set.
          * @return This builder for chaining.
          */
@@ -1709,7 +1709,7 @@ public final class TextAnnotationOuterClass {
          * True if break prepends the element.
          * </pre>
          *
-         * <code>bool is_prefix = 2;</code>
+         * <code>bool is_prefix = 2 [json_name = "isPrefix"];</code>
          * @return This builder for chaining.
          */
         public Builder clearIsPrefix() {
@@ -1780,7 +1780,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       java.util.List<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage> 
           getDetectedLanguagesList();
@@ -1789,7 +1789,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage getDetectedLanguages(int index);
       /**
@@ -1797,7 +1797,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       int getDetectedLanguagesCount();
       /**
@@ -1805,7 +1805,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       java.util.List<? extends ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder> 
           getDetectedLanguagesOrBuilderList();
@@ -1814,7 +1814,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder getDetectedLanguagesOrBuilder(
           int index);
@@ -1824,7 +1824,7 @@ public final class TextAnnotationOuterClass {
        * Detected start or end of a text segment.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
        * @return Whether the detectedBreak field is set.
        */
       boolean hasDetectedBreak();
@@ -1833,7 +1833,7 @@ public final class TextAnnotationOuterClass {
        * Detected start or end of a text segment.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
        * @return The detectedBreak.
        */
       ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak getDetectedBreak();
@@ -1842,7 +1842,7 @@ public final class TextAnnotationOuterClass {
        * Detected start or end of a text segment.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
        */
       ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreakOrBuilder getDetectedBreakOrBuilder();
     }
@@ -1961,7 +1961,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       @java.lang.Override
       public java.util.List<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage> getDetectedLanguagesList() {
@@ -1972,7 +1972,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       @java.lang.Override
       public java.util.List<? extends ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder> 
@@ -1984,7 +1984,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       @java.lang.Override
       public int getDetectedLanguagesCount() {
@@ -1995,7 +1995,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage getDetectedLanguages(int index) {
@@ -2006,7 +2006,7 @@ public final class TextAnnotationOuterClass {
        * A list of detected languages together with confidence.
        * </pre>
        *
-       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+       * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
        */
       @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder getDetectedLanguagesOrBuilder(
@@ -2021,7 +2021,7 @@ public final class TextAnnotationOuterClass {
        * Detected start or end of a text segment.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
        * @return Whether the detectedBreak field is set.
        */
       @java.lang.Override
@@ -2033,7 +2033,7 @@ public final class TextAnnotationOuterClass {
        * Detected start or end of a text segment.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
        * @return The detectedBreak.
        */
       @java.lang.Override
@@ -2045,7 +2045,7 @@ public final class TextAnnotationOuterClass {
        * Detected start or end of a text segment.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+       * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
        */
       @java.lang.Override
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreakOrBuilder getDetectedBreakOrBuilder() {
@@ -2445,7 +2445,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public java.util.List<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage> getDetectedLanguagesList() {
           if (detectedLanguagesBuilder_ == null) {
@@ -2459,7 +2459,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public int getDetectedLanguagesCount() {
           if (detectedLanguagesBuilder_ == null) {
@@ -2473,7 +2473,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage getDetectedLanguages(int index) {
           if (detectedLanguagesBuilder_ == null) {
@@ -2487,7 +2487,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder setDetectedLanguages(
             int index, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage value) {
@@ -2508,7 +2508,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder setDetectedLanguages(
             int index, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder builderForValue) {
@@ -2526,7 +2526,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder addDetectedLanguages(ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage value) {
           if (detectedLanguagesBuilder_ == null) {
@@ -2546,7 +2546,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder addDetectedLanguages(
             int index, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage value) {
@@ -2567,7 +2567,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder addDetectedLanguages(
             ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder builderForValue) {
@@ -2585,7 +2585,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder addDetectedLanguages(
             int index, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder builderForValue) {
@@ -2603,7 +2603,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder addAllDetectedLanguages(
             java.lang.Iterable<? extends ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage> values) {
@@ -2622,7 +2622,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder clearDetectedLanguages() {
           if (detectedLanguagesBuilder_ == null) {
@@ -2639,7 +2639,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public Builder removeDetectedLanguages(int index) {
           if (detectedLanguagesBuilder_ == null) {
@@ -2656,7 +2656,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder getDetectedLanguagesBuilder(
             int index) {
@@ -2667,7 +2667,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder getDetectedLanguagesOrBuilder(
             int index) {
@@ -2681,7 +2681,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public java.util.List<? extends ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguageOrBuilder> 
              getDetectedLanguagesOrBuilderList() {
@@ -2696,7 +2696,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder addDetectedLanguagesBuilder() {
           return getDetectedLanguagesFieldBuilder().addBuilder(
@@ -2707,7 +2707,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder addDetectedLanguagesBuilder(
             int index) {
@@ -2719,7 +2719,7 @@ public final class TextAnnotationOuterClass {
          * A list of detected languages together with confidence.
          * </pre>
          *
-         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1;</code>
+         * <code>repeated .ssn.type.TextAnnotation.DetectedLanguage detected_languages = 1 [json_name = "detectedLanguages"];</code>
          */
         public java.util.List<ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedLanguage.Builder> 
              getDetectedLanguagesBuilderList() {
@@ -2748,7 +2748,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          * @return Whether the detectedBreak field is set.
          */
         public boolean hasDetectedBreak() {
@@ -2759,7 +2759,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          * @return The detectedBreak.
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak getDetectedBreak() {
@@ -2774,7 +2774,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          */
         public Builder setDetectedBreak(ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak value) {
           if (detectedBreakBuilder_ == null) {
@@ -2794,7 +2794,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          */
         public Builder setDetectedBreak(
             ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.Builder builderForValue) {
@@ -2812,7 +2812,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          */
         public Builder mergeDetectedBreak(ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak value) {
           if (detectedBreakBuilder_ == null) {
@@ -2834,7 +2834,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          */
         public Builder clearDetectedBreak() {
           if (detectedBreakBuilder_ == null) {
@@ -2852,7 +2852,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.Builder getDetectedBreakBuilder() {
           
@@ -2864,7 +2864,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          */
         public ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreakOrBuilder getDetectedBreakOrBuilder() {
           if (detectedBreakBuilder_ != null) {
@@ -2879,7 +2879,7 @@ public final class TextAnnotationOuterClass {
          * Detected start or end of a text segment.
          * </pre>
          *
-         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2;</code>
+         * <code>.ssn.type.TextAnnotation.DetectedBreak detected_break = 2 [json_name = "detectedBreak"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreak.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.DetectedBreakOrBuilder> 
@@ -2954,7 +2954,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Page> getPagesList() {
@@ -2965,7 +2965,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.PageOrBuilder> 
@@ -2977,7 +2977,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     @java.lang.Override
     public int getPagesCount() {
@@ -2988,7 +2988,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Page getPages(int index) {
@@ -2999,7 +2999,7 @@ public final class TextAnnotationOuterClass {
      * List of pages detected by OCR.
      * </pre>
      *
-     * <code>repeated .ssn.type.Page pages = 1;</code>
+     * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.PageOrBuilder getPagesOrBuilder(
@@ -3014,7 +3014,7 @@ public final class TextAnnotationOuterClass {
      * UTF-8 text detected on the pages.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -3035,7 +3035,7 @@ public final class TextAnnotationOuterClass {
      * UTF-8 text detected on the pages.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -3440,7 +3440,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Page> getPagesList() {
         if (pagesBuilder_ == null) {
@@ -3454,7 +3454,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public int getPagesCount() {
         if (pagesBuilder_ == null) {
@@ -3468,7 +3468,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Page getPages(int index) {
         if (pagesBuilder_ == null) {
@@ -3482,7 +3482,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder setPages(
           int index, ssn.type.TextAnnotationOuterClass.Page value) {
@@ -3503,7 +3503,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder setPages(
           int index, ssn.type.TextAnnotationOuterClass.Page.Builder builderForValue) {
@@ -3521,7 +3521,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder addPages(ssn.type.TextAnnotationOuterClass.Page value) {
         if (pagesBuilder_ == null) {
@@ -3541,7 +3541,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder addPages(
           int index, ssn.type.TextAnnotationOuterClass.Page value) {
@@ -3562,7 +3562,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder addPages(
           ssn.type.TextAnnotationOuterClass.Page.Builder builderForValue) {
@@ -3580,7 +3580,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder addPages(
           int index, ssn.type.TextAnnotationOuterClass.Page.Builder builderForValue) {
@@ -3598,7 +3598,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder addAllPages(
           java.lang.Iterable<? extends ssn.type.TextAnnotationOuterClass.Page> values) {
@@ -3617,7 +3617,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder clearPages() {
         if (pagesBuilder_ == null) {
@@ -3634,7 +3634,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public Builder removePages(int index) {
         if (pagesBuilder_ == null) {
@@ -3651,7 +3651,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Page.Builder getPagesBuilder(
           int index) {
@@ -3662,7 +3662,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.PageOrBuilder getPagesOrBuilder(
           int index) {
@@ -3676,7 +3676,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public java.util.List<? extends ssn.type.TextAnnotationOuterClass.PageOrBuilder> 
            getPagesOrBuilderList() {
@@ -3691,7 +3691,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Page.Builder addPagesBuilder() {
         return getPagesFieldBuilder().addBuilder(
@@ -3702,7 +3702,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Page.Builder addPagesBuilder(
           int index) {
@@ -3714,7 +3714,7 @@ public final class TextAnnotationOuterClass {
        * List of pages detected by OCR.
        * </pre>
        *
-       * <code>repeated .ssn.type.Page pages = 1;</code>
+       * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Page.Builder> 
            getPagesBuilderList() {
@@ -3741,7 +3741,7 @@ public final class TextAnnotationOuterClass {
        * UTF-8 text detected on the pages.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -3761,7 +3761,7 @@ public final class TextAnnotationOuterClass {
        * UTF-8 text detected on the pages.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -3782,7 +3782,7 @@ public final class TextAnnotationOuterClass {
        * UTF-8 text detected on the pages.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -3801,7 +3801,7 @@ public final class TextAnnotationOuterClass {
        * UTF-8 text detected on the pages.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -3815,7 +3815,7 @@ public final class TextAnnotationOuterClass {
        * UTF-8 text detected on the pages.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -3892,7 +3892,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected on the page.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     boolean hasProperty();
@@ -3901,7 +3901,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected on the page.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
@@ -3910,7 +3910,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected on the page.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder();
 
@@ -3920,7 +3920,7 @@ public final class TextAnnotationOuterClass {
      * TIFFs) the unit is pixels.
      * </pre>
      *
-     * <code>int32 width = 2;</code>
+     * <code>int32 width = 2 [json_name = "width"];</code>
      * @return The width.
      */
     int getWidth();
@@ -3931,7 +3931,7 @@ public final class TextAnnotationOuterClass {
      * TIFFs) the unit is pixels.
      * </pre>
      *
-     * <code>int32 height = 3;</code>
+     * <code>int32 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
     int getHeight();
@@ -3941,7 +3941,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     java.util.List<ssn.type.TextAnnotationOuterClass.Block> 
         getBlocksList();
@@ -3950,7 +3950,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     ssn.type.TextAnnotationOuterClass.Block getBlocks(int index);
     /**
@@ -3958,7 +3958,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     int getBlocksCount();
     /**
@@ -3966,7 +3966,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     java.util.List<? extends ssn.type.TextAnnotationOuterClass.BlockOrBuilder> 
         getBlocksOrBuilderList();
@@ -3975,7 +3975,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     ssn.type.TextAnnotationOuterClass.BlockOrBuilder getBlocksOrBuilder(
         int index);
@@ -3985,7 +3985,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results on the page. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 5;</code>
+     * <code>float confidence = 5 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     float getConfidence();
@@ -4120,7 +4120,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected on the page.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     @java.lang.Override
@@ -4132,7 +4132,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected on the page.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     @java.lang.Override
@@ -4144,7 +4144,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected on the page.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
@@ -4159,7 +4159,7 @@ public final class TextAnnotationOuterClass {
      * TIFFs) the unit is pixels.
      * </pre>
      *
-     * <code>int32 width = 2;</code>
+     * <code>int32 width = 2 [json_name = "width"];</code>
      * @return The width.
      */
     @java.lang.Override
@@ -4175,7 +4175,7 @@ public final class TextAnnotationOuterClass {
      * TIFFs) the unit is pixels.
      * </pre>
      *
-     * <code>int32 height = 3;</code>
+     * <code>int32 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -4190,7 +4190,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Block> getBlocksList() {
@@ -4201,7 +4201,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.BlockOrBuilder> 
@@ -4213,7 +4213,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     @java.lang.Override
     public int getBlocksCount() {
@@ -4224,7 +4224,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Block getBlocks(int index) {
@@ -4235,7 +4235,7 @@ public final class TextAnnotationOuterClass {
      * List of blocks of text, images etc on this page.
      * </pre>
      *
-     * <code>repeated .ssn.type.Block blocks = 4;</code>
+     * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.BlockOrBuilder getBlocksOrBuilder(
@@ -4250,7 +4250,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results on the page. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 5;</code>
+     * <code>float confidence = 5 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -4695,7 +4695,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return Whether the property field is set.
        */
       public boolean hasProperty() {
@@ -4706,7 +4706,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
@@ -4721,7 +4721,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -4741,7 +4741,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder builderForValue) {
@@ -4759,7 +4759,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder mergeProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -4781,7 +4781,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder clearProperty() {
         if (propertyBuilder_ == null) {
@@ -4799,7 +4799,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder getPropertyBuilder() {
         
@@ -4811,7 +4811,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
         if (propertyBuilder_ != null) {
@@ -4826,7 +4826,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected on the page.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> 
@@ -4849,7 +4849,7 @@ public final class TextAnnotationOuterClass {
        * TIFFs) the unit is pixels.
        * </pre>
        *
-       * <code>int32 width = 2;</code>
+       * <code>int32 width = 2 [json_name = "width"];</code>
        * @return The width.
        */
       @java.lang.Override
@@ -4862,7 +4862,7 @@ public final class TextAnnotationOuterClass {
        * TIFFs) the unit is pixels.
        * </pre>
        *
-       * <code>int32 width = 2;</code>
+       * <code>int32 width = 2 [json_name = "width"];</code>
        * @param value The width to set.
        * @return This builder for chaining.
        */
@@ -4878,7 +4878,7 @@ public final class TextAnnotationOuterClass {
        * TIFFs) the unit is pixels.
        * </pre>
        *
-       * <code>int32 width = 2;</code>
+       * <code>int32 width = 2 [json_name = "width"];</code>
        * @return This builder for chaining.
        */
       public Builder clearWidth() {
@@ -4895,7 +4895,7 @@ public final class TextAnnotationOuterClass {
        * TIFFs) the unit is pixels.
        * </pre>
        *
-       * <code>int32 height = 3;</code>
+       * <code>int32 height = 3 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
@@ -4908,7 +4908,7 @@ public final class TextAnnotationOuterClass {
        * TIFFs) the unit is pixels.
        * </pre>
        *
-       * <code>int32 height = 3;</code>
+       * <code>int32 height = 3 [json_name = "height"];</code>
        * @param value The height to set.
        * @return This builder for chaining.
        */
@@ -4924,7 +4924,7 @@ public final class TextAnnotationOuterClass {
        * TIFFs) the unit is pixels.
        * </pre>
        *
-       * <code>int32 height = 3;</code>
+       * <code>int32 height = 3 [json_name = "height"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
@@ -4951,7 +4951,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Block> getBlocksList() {
         if (blocksBuilder_ == null) {
@@ -4965,7 +4965,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public int getBlocksCount() {
         if (blocksBuilder_ == null) {
@@ -4979,7 +4979,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Block getBlocks(int index) {
         if (blocksBuilder_ == null) {
@@ -4993,7 +4993,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder setBlocks(
           int index, ssn.type.TextAnnotationOuterClass.Block value) {
@@ -5014,7 +5014,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder setBlocks(
           int index, ssn.type.TextAnnotationOuterClass.Block.Builder builderForValue) {
@@ -5032,7 +5032,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder addBlocks(ssn.type.TextAnnotationOuterClass.Block value) {
         if (blocksBuilder_ == null) {
@@ -5052,7 +5052,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder addBlocks(
           int index, ssn.type.TextAnnotationOuterClass.Block value) {
@@ -5073,7 +5073,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder addBlocks(
           ssn.type.TextAnnotationOuterClass.Block.Builder builderForValue) {
@@ -5091,7 +5091,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder addBlocks(
           int index, ssn.type.TextAnnotationOuterClass.Block.Builder builderForValue) {
@@ -5109,7 +5109,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder addAllBlocks(
           java.lang.Iterable<? extends ssn.type.TextAnnotationOuterClass.Block> values) {
@@ -5128,7 +5128,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder clearBlocks() {
         if (blocksBuilder_ == null) {
@@ -5145,7 +5145,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public Builder removeBlocks(int index) {
         if (blocksBuilder_ == null) {
@@ -5162,7 +5162,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Block.Builder getBlocksBuilder(
           int index) {
@@ -5173,7 +5173,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.BlockOrBuilder getBlocksOrBuilder(
           int index) {
@@ -5187,7 +5187,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public java.util.List<? extends ssn.type.TextAnnotationOuterClass.BlockOrBuilder> 
            getBlocksOrBuilderList() {
@@ -5202,7 +5202,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Block.Builder addBlocksBuilder() {
         return getBlocksFieldBuilder().addBuilder(
@@ -5213,7 +5213,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Block.Builder addBlocksBuilder(
           int index) {
@@ -5225,7 +5225,7 @@ public final class TextAnnotationOuterClass {
        * List of blocks of text, images etc on this page.
        * </pre>
        *
-       * <code>repeated .ssn.type.Block blocks = 4;</code>
+       * <code>repeated .ssn.type.Block blocks = 4 [json_name = "blocks"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Block.Builder> 
            getBlocksBuilderList() {
@@ -5252,7 +5252,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results on the page. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 5;</code>
+       * <code>float confidence = 5 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -5264,7 +5264,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results on the page. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 5;</code>
+       * <code>float confidence = 5 [json_name = "confidence"];</code>
        * @param value The confidence to set.
        * @return This builder for chaining.
        */
@@ -5279,7 +5279,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results on the page. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 5;</code>
+       * <code>float confidence = 5 [json_name = "confidence"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConfidence() {
@@ -5350,7 +5350,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the block.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     boolean hasProperty();
@@ -5359,7 +5359,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the block.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
@@ -5368,7 +5368,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the block.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder();
 
@@ -5391,7 +5391,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
@@ -5414,7 +5414,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
@@ -5437,7 +5437,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
@@ -5446,7 +5446,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     java.util.List<ssn.type.TextAnnotationOuterClass.Paragraph> 
         getParagraphsList();
@@ -5455,7 +5455,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     ssn.type.TextAnnotationOuterClass.Paragraph getParagraphs(int index);
     /**
@@ -5463,7 +5463,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     int getParagraphsCount();
     /**
@@ -5471,7 +5471,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     java.util.List<? extends ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder> 
         getParagraphsOrBuilderList();
@@ -5480,7 +5480,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder getParagraphsOrBuilder(
         int index);
@@ -5490,7 +5490,7 @@ public final class TextAnnotationOuterClass {
      * Detected block type (text, image etc) for this block.
      * </pre>
      *
-     * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+     * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
      * @return The enum numeric value on the wire for blockType.
      */
     int getBlockTypeValue();
@@ -5499,7 +5499,7 @@ public final class TextAnnotationOuterClass {
      * Detected block type (text, image etc) for this block.
      * </pre>
      *
-     * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+     * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
      * @return The blockType.
      */
     ssn.type.TextAnnotationOuterClass.Block.BlockType getBlockType();
@@ -5509,7 +5509,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results on the block. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 5;</code>
+     * <code>float confidence = 5 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     float getConfidence();
@@ -5850,7 +5850,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the block.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     @java.lang.Override
@@ -5862,7 +5862,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the block.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     @java.lang.Override
@@ -5874,7 +5874,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the block.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
@@ -5902,7 +5902,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     @java.lang.Override
@@ -5928,7 +5928,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     @java.lang.Override
@@ -5954,7 +5954,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -5968,7 +5968,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Paragraph> getParagraphsList() {
@@ -5979,7 +5979,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder> 
@@ -5991,7 +5991,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     @java.lang.Override
     public int getParagraphsCount() {
@@ -6002,7 +6002,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Paragraph getParagraphs(int index) {
@@ -6013,7 +6013,7 @@ public final class TextAnnotationOuterClass {
      * List of paragraphs in this block (if this blocks is of type text).
      * </pre>
      *
-     * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+     * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder getParagraphsOrBuilder(
@@ -6028,7 +6028,7 @@ public final class TextAnnotationOuterClass {
      * Detected block type (text, image etc) for this block.
      * </pre>
      *
-     * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+     * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
      * @return The enum numeric value on the wire for blockType.
      */
     @java.lang.Override public int getBlockTypeValue() {
@@ -6039,7 +6039,7 @@ public final class TextAnnotationOuterClass {
      * Detected block type (text, image etc) for this block.
      * </pre>
      *
-     * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+     * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
      * @return The blockType.
      */
     @java.lang.Override public ssn.type.TextAnnotationOuterClass.Block.BlockType getBlockType() {
@@ -6055,7 +6055,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results on the block. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 5;</code>
+     * <code>float confidence = 5 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -6512,7 +6512,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return Whether the property field is set.
        */
       public boolean hasProperty() {
@@ -6523,7 +6523,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
@@ -6538,7 +6538,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -6558,7 +6558,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder builderForValue) {
@@ -6576,7 +6576,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder mergeProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -6598,7 +6598,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder clearProperty() {
         if (propertyBuilder_ == null) {
@@ -6616,7 +6616,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder getPropertyBuilder() {
         
@@ -6628,7 +6628,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
         if (propertyBuilder_ != null) {
@@ -6643,7 +6643,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the block.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> 
@@ -6681,7 +6681,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
@@ -6706,7 +6706,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
@@ -6735,7 +6735,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -6769,7 +6769,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(
           ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
@@ -6801,7 +6801,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -6837,7 +6837,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder clearBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -6869,7 +6869,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
         
@@ -6895,7 +6895,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
         if (boundingBoxBuilder_ != null) {
@@ -6924,7 +6924,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> 
@@ -6957,7 +6957,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Paragraph> getParagraphsList() {
         if (paragraphsBuilder_ == null) {
@@ -6971,7 +6971,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public int getParagraphsCount() {
         if (paragraphsBuilder_ == null) {
@@ -6985,7 +6985,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Paragraph getParagraphs(int index) {
         if (paragraphsBuilder_ == null) {
@@ -6999,7 +6999,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder setParagraphs(
           int index, ssn.type.TextAnnotationOuterClass.Paragraph value) {
@@ -7020,7 +7020,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder setParagraphs(
           int index, ssn.type.TextAnnotationOuterClass.Paragraph.Builder builderForValue) {
@@ -7038,7 +7038,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder addParagraphs(ssn.type.TextAnnotationOuterClass.Paragraph value) {
         if (paragraphsBuilder_ == null) {
@@ -7058,7 +7058,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder addParagraphs(
           int index, ssn.type.TextAnnotationOuterClass.Paragraph value) {
@@ -7079,7 +7079,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder addParagraphs(
           ssn.type.TextAnnotationOuterClass.Paragraph.Builder builderForValue) {
@@ -7097,7 +7097,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder addParagraphs(
           int index, ssn.type.TextAnnotationOuterClass.Paragraph.Builder builderForValue) {
@@ -7115,7 +7115,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder addAllParagraphs(
           java.lang.Iterable<? extends ssn.type.TextAnnotationOuterClass.Paragraph> values) {
@@ -7134,7 +7134,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder clearParagraphs() {
         if (paragraphsBuilder_ == null) {
@@ -7151,7 +7151,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public Builder removeParagraphs(int index) {
         if (paragraphsBuilder_ == null) {
@@ -7168,7 +7168,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Paragraph.Builder getParagraphsBuilder(
           int index) {
@@ -7179,7 +7179,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder getParagraphsOrBuilder(
           int index) {
@@ -7193,7 +7193,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public java.util.List<? extends ssn.type.TextAnnotationOuterClass.ParagraphOrBuilder> 
            getParagraphsOrBuilderList() {
@@ -7208,7 +7208,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Paragraph.Builder addParagraphsBuilder() {
         return getParagraphsFieldBuilder().addBuilder(
@@ -7219,7 +7219,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Paragraph.Builder addParagraphsBuilder(
           int index) {
@@ -7231,7 +7231,7 @@ public final class TextAnnotationOuterClass {
        * List of paragraphs in this block (if this blocks is of type text).
        * </pre>
        *
-       * <code>repeated .ssn.type.Paragraph paragraphs = 3;</code>
+       * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Paragraph.Builder> 
            getParagraphsBuilderList() {
@@ -7258,7 +7258,7 @@ public final class TextAnnotationOuterClass {
        * Detected block type (text, image etc) for this block.
        * </pre>
        *
-       * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+       * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
        * @return The enum numeric value on the wire for blockType.
        */
       @java.lang.Override public int getBlockTypeValue() {
@@ -7269,7 +7269,7 @@ public final class TextAnnotationOuterClass {
        * Detected block type (text, image etc) for this block.
        * </pre>
        *
-       * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+       * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
        * @param value The enum numeric value on the wire for blockType to set.
        * @return This builder for chaining.
        */
@@ -7284,7 +7284,7 @@ public final class TextAnnotationOuterClass {
        * Detected block type (text, image etc) for this block.
        * </pre>
        *
-       * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+       * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
        * @return The blockType.
        */
       @java.lang.Override
@@ -7298,7 +7298,7 @@ public final class TextAnnotationOuterClass {
        * Detected block type (text, image etc) for this block.
        * </pre>
        *
-       * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+       * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
        * @param value The blockType to set.
        * @return This builder for chaining.
        */
@@ -7316,7 +7316,7 @@ public final class TextAnnotationOuterClass {
        * Detected block type (text, image etc) for this block.
        * </pre>
        *
-       * <code>.ssn.type.Block.BlockType block_type = 4;</code>
+       * <code>.ssn.type.Block.BlockType block_type = 4 [json_name = "blockType"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlockType() {
@@ -7332,7 +7332,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results on the block. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 5;</code>
+       * <code>float confidence = 5 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -7344,7 +7344,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results on the block. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 5;</code>
+       * <code>float confidence = 5 [json_name = "confidence"];</code>
        * @param value The confidence to set.
        * @return This builder for chaining.
        */
@@ -7359,7 +7359,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results on the block. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 5;</code>
+       * <code>float confidence = 5 [json_name = "confidence"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConfidence() {
@@ -7430,7 +7430,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the paragraph.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     boolean hasProperty();
@@ -7439,7 +7439,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the paragraph.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
@@ -7448,7 +7448,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the paragraph.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder();
 
@@ -7471,7 +7471,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
@@ -7494,7 +7494,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
@@ -7517,7 +7517,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
@@ -7526,7 +7526,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     java.util.List<ssn.type.TextAnnotationOuterClass.Word> 
         getWordsList();
@@ -7535,7 +7535,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     ssn.type.TextAnnotationOuterClass.Word getWords(int index);
     /**
@@ -7543,7 +7543,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     int getWordsCount();
     /**
@@ -7551,7 +7551,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     java.util.List<? extends ssn.type.TextAnnotationOuterClass.WordOrBuilder> 
         getWordsOrBuilderList();
@@ -7560,7 +7560,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     ssn.type.TextAnnotationOuterClass.WordOrBuilder getWordsOrBuilder(
         int index);
@@ -7570,7 +7570,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results for the paragraph. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 4;</code>
+     * <code>float confidence = 4 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     float getConfidence();
@@ -7708,7 +7708,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the paragraph.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     @java.lang.Override
@@ -7720,7 +7720,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the paragraph.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     @java.lang.Override
@@ -7732,7 +7732,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the paragraph.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
@@ -7760,7 +7760,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     @java.lang.Override
@@ -7786,7 +7786,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     @java.lang.Override
@@ -7812,7 +7812,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -7826,7 +7826,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Word> getWordsList() {
@@ -7837,7 +7837,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.WordOrBuilder> 
@@ -7849,7 +7849,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     @java.lang.Override
     public int getWordsCount() {
@@ -7860,7 +7860,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Word getWords(int index) {
@@ -7871,7 +7871,7 @@ public final class TextAnnotationOuterClass {
      * List of words in this paragraph.
      * </pre>
      *
-     * <code>repeated .ssn.type.Word words = 3;</code>
+     * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.WordOrBuilder getWordsOrBuilder(
@@ -7886,7 +7886,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results for the paragraph. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 4;</code>
+     * <code>float confidence = 4 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -8327,7 +8327,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return Whether the property field is set.
        */
       public boolean hasProperty() {
@@ -8338,7 +8338,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
@@ -8353,7 +8353,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -8373,7 +8373,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder builderForValue) {
@@ -8391,7 +8391,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder mergeProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -8413,7 +8413,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder clearProperty() {
         if (propertyBuilder_ == null) {
@@ -8431,7 +8431,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder getPropertyBuilder() {
         
@@ -8443,7 +8443,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
         if (propertyBuilder_ != null) {
@@ -8458,7 +8458,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the paragraph.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> 
@@ -8496,7 +8496,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
@@ -8521,7 +8521,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
@@ -8550,7 +8550,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -8584,7 +8584,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(
           ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
@@ -8616,7 +8616,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -8652,7 +8652,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder clearBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -8684,7 +8684,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
         
@@ -8710,7 +8710,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
         if (boundingBoxBuilder_ != null) {
@@ -8739,7 +8739,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> 
@@ -8772,7 +8772,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Word> getWordsList() {
         if (wordsBuilder_ == null) {
@@ -8786,7 +8786,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public int getWordsCount() {
         if (wordsBuilder_ == null) {
@@ -8800,7 +8800,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Word getWords(int index) {
         if (wordsBuilder_ == null) {
@@ -8814,7 +8814,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder setWords(
           int index, ssn.type.TextAnnotationOuterClass.Word value) {
@@ -8835,7 +8835,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder setWords(
           int index, ssn.type.TextAnnotationOuterClass.Word.Builder builderForValue) {
@@ -8853,7 +8853,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder addWords(ssn.type.TextAnnotationOuterClass.Word value) {
         if (wordsBuilder_ == null) {
@@ -8873,7 +8873,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder addWords(
           int index, ssn.type.TextAnnotationOuterClass.Word value) {
@@ -8894,7 +8894,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder addWords(
           ssn.type.TextAnnotationOuterClass.Word.Builder builderForValue) {
@@ -8912,7 +8912,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder addWords(
           int index, ssn.type.TextAnnotationOuterClass.Word.Builder builderForValue) {
@@ -8930,7 +8930,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder addAllWords(
           java.lang.Iterable<? extends ssn.type.TextAnnotationOuterClass.Word> values) {
@@ -8949,7 +8949,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder clearWords() {
         if (wordsBuilder_ == null) {
@@ -8966,7 +8966,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public Builder removeWords(int index) {
         if (wordsBuilder_ == null) {
@@ -8983,7 +8983,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Word.Builder getWordsBuilder(
           int index) {
@@ -8994,7 +8994,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.WordOrBuilder getWordsOrBuilder(
           int index) {
@@ -9008,7 +9008,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public java.util.List<? extends ssn.type.TextAnnotationOuterClass.WordOrBuilder> 
            getWordsOrBuilderList() {
@@ -9023,7 +9023,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Word.Builder addWordsBuilder() {
         return getWordsFieldBuilder().addBuilder(
@@ -9034,7 +9034,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Word.Builder addWordsBuilder(
           int index) {
@@ -9046,7 +9046,7 @@ public final class TextAnnotationOuterClass {
        * List of words in this paragraph.
        * </pre>
        *
-       * <code>repeated .ssn.type.Word words = 3;</code>
+       * <code>repeated .ssn.type.Word words = 3 [json_name = "words"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Word.Builder> 
            getWordsBuilderList() {
@@ -9073,7 +9073,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the paragraph. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -9085,7 +9085,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the paragraph. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @param value The confidence to set.
        * @return This builder for chaining.
        */
@@ -9100,7 +9100,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the paragraph. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConfidence() {
@@ -9171,7 +9171,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the word.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     boolean hasProperty();
@@ -9180,7 +9180,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the word.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
@@ -9189,7 +9189,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the word.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder();
 
@@ -9212,7 +9212,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
@@ -9235,7 +9235,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
@@ -9258,7 +9258,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
@@ -9268,7 +9268,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     java.util.List<ssn.type.TextAnnotationOuterClass.Symbol> 
         getSymbolsList();
@@ -9278,7 +9278,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     ssn.type.TextAnnotationOuterClass.Symbol getSymbols(int index);
     /**
@@ -9287,7 +9287,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     int getSymbolsCount();
     /**
@@ -9296,7 +9296,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     java.util.List<? extends ssn.type.TextAnnotationOuterClass.SymbolOrBuilder> 
         getSymbolsOrBuilderList();
@@ -9306,7 +9306,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     ssn.type.TextAnnotationOuterClass.SymbolOrBuilder getSymbolsOrBuilder(
         int index);
@@ -9316,7 +9316,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results for the word. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 4;</code>
+     * <code>float confidence = 4 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     float getConfidence();
@@ -9454,7 +9454,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the word.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     @java.lang.Override
@@ -9466,7 +9466,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the word.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     @java.lang.Override
@@ -9478,7 +9478,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the word.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
@@ -9506,7 +9506,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     @java.lang.Override
@@ -9532,7 +9532,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     @java.lang.Override
@@ -9558,7 +9558,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -9573,7 +9573,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.TextAnnotationOuterClass.Symbol> getSymbolsList() {
@@ -9585,7 +9585,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.TextAnnotationOuterClass.SymbolOrBuilder> 
@@ -9598,7 +9598,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     @java.lang.Override
     public int getSymbolsCount() {
@@ -9610,7 +9610,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.Symbol getSymbols(int index) {
@@ -9622,7 +9622,7 @@ public final class TextAnnotationOuterClass {
      * The order of the symbols follows the natural reading order.
      * </pre>
      *
-     * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+     * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.SymbolOrBuilder getSymbolsOrBuilder(
@@ -9637,7 +9637,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results for the word. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 4;</code>
+     * <code>float confidence = 4 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -10078,7 +10078,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return Whether the property field is set.
        */
       public boolean hasProperty() {
@@ -10089,7 +10089,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
@@ -10104,7 +10104,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -10124,7 +10124,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder builderForValue) {
@@ -10142,7 +10142,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder mergeProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -10164,7 +10164,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder clearProperty() {
         if (propertyBuilder_ == null) {
@@ -10182,7 +10182,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder getPropertyBuilder() {
         
@@ -10194,7 +10194,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
         if (propertyBuilder_ != null) {
@@ -10209,7 +10209,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the word.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> 
@@ -10247,7 +10247,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
@@ -10272,7 +10272,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
@@ -10301,7 +10301,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -10335,7 +10335,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(
           ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
@@ -10367,7 +10367,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -10403,7 +10403,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder clearBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -10435,7 +10435,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
         
@@ -10461,7 +10461,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
         if (boundingBoxBuilder_ != null) {
@@ -10490,7 +10490,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> 
@@ -10524,7 +10524,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Symbol> getSymbolsList() {
         if (symbolsBuilder_ == null) {
@@ -10539,7 +10539,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public int getSymbolsCount() {
         if (symbolsBuilder_ == null) {
@@ -10554,7 +10554,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Symbol getSymbols(int index) {
         if (symbolsBuilder_ == null) {
@@ -10569,7 +10569,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder setSymbols(
           int index, ssn.type.TextAnnotationOuterClass.Symbol value) {
@@ -10591,7 +10591,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder setSymbols(
           int index, ssn.type.TextAnnotationOuterClass.Symbol.Builder builderForValue) {
@@ -10610,7 +10610,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder addSymbols(ssn.type.TextAnnotationOuterClass.Symbol value) {
         if (symbolsBuilder_ == null) {
@@ -10631,7 +10631,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder addSymbols(
           int index, ssn.type.TextAnnotationOuterClass.Symbol value) {
@@ -10653,7 +10653,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder addSymbols(
           ssn.type.TextAnnotationOuterClass.Symbol.Builder builderForValue) {
@@ -10672,7 +10672,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder addSymbols(
           int index, ssn.type.TextAnnotationOuterClass.Symbol.Builder builderForValue) {
@@ -10691,7 +10691,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder addAllSymbols(
           java.lang.Iterable<? extends ssn.type.TextAnnotationOuterClass.Symbol> values) {
@@ -10711,7 +10711,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder clearSymbols() {
         if (symbolsBuilder_ == null) {
@@ -10729,7 +10729,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public Builder removeSymbols(int index) {
         if (symbolsBuilder_ == null) {
@@ -10747,7 +10747,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Symbol.Builder getSymbolsBuilder(
           int index) {
@@ -10759,7 +10759,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.SymbolOrBuilder getSymbolsOrBuilder(
           int index) {
@@ -10774,7 +10774,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public java.util.List<? extends ssn.type.TextAnnotationOuterClass.SymbolOrBuilder> 
            getSymbolsOrBuilderList() {
@@ -10790,7 +10790,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Symbol.Builder addSymbolsBuilder() {
         return getSymbolsFieldBuilder().addBuilder(
@@ -10802,7 +10802,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.Symbol.Builder addSymbolsBuilder(
           int index) {
@@ -10815,7 +10815,7 @@ public final class TextAnnotationOuterClass {
        * The order of the symbols follows the natural reading order.
        * </pre>
        *
-       * <code>repeated .ssn.type.Symbol symbols = 3;</code>
+       * <code>repeated .ssn.type.Symbol symbols = 3 [json_name = "symbols"];</code>
        */
       public java.util.List<ssn.type.TextAnnotationOuterClass.Symbol.Builder> 
            getSymbolsBuilderList() {
@@ -10842,7 +10842,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the word. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -10854,7 +10854,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the word. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @param value The confidence to set.
        * @return This builder for chaining.
        */
@@ -10869,7 +10869,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the word. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConfidence() {
@@ -10940,7 +10940,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the symbol.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     boolean hasProperty();
@@ -10949,7 +10949,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the symbol.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty();
@@ -10958,7 +10958,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the symbol.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder();
 
@@ -10981,7 +10981,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertice order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
@@ -11004,7 +11004,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertice order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
@@ -11027,7 +11027,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertice order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
@@ -11036,7 +11036,7 @@ public final class TextAnnotationOuterClass {
      * The actual UTF-8 representation of the symbol.
      * </pre>
      *
-     * <code>string text = 3;</code>
+     * <code>string text = 3 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -11045,7 +11045,7 @@ public final class TextAnnotationOuterClass {
      * The actual UTF-8 representation of the symbol.
      * </pre>
      *
-     * <code>string text = 3;</code>
+     * <code>string text = 3 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -11056,7 +11056,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results for the symbol. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 4;</code>
+     * <code>float confidence = 4 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     float getConfidence();
@@ -11187,7 +11187,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the symbol.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return Whether the property field is set.
      */
     @java.lang.Override
@@ -11199,7 +11199,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the symbol.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      * @return The property.
      */
     @java.lang.Override
@@ -11211,7 +11211,7 @@ public final class TextAnnotationOuterClass {
      * Additional information detected for the symbol.
      * </pre>
      *
-     * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+     * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
@@ -11239,7 +11239,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertice order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     @java.lang.Override
@@ -11265,7 +11265,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertice order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     @java.lang.Override
@@ -11291,7 +11291,7 @@ public final class TextAnnotationOuterClass {
      *   and the vertice order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -11305,7 +11305,7 @@ public final class TextAnnotationOuterClass {
      * The actual UTF-8 representation of the symbol.
      * </pre>
      *
-     * <code>string text = 3;</code>
+     * <code>string text = 3 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -11326,7 +11326,7 @@ public final class TextAnnotationOuterClass {
      * The actual UTF-8 representation of the symbol.
      * </pre>
      *
-     * <code>string text = 3;</code>
+     * <code>string text = 3 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -11351,7 +11351,7 @@ public final class TextAnnotationOuterClass {
      * Confidence of the OCR results for the symbol. Range [0, 1].
      * </pre>
      *
-     * <code>float confidence = 4;</code>
+     * <code>float confidence = 4 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -11752,7 +11752,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return Whether the property field is set.
        */
       public boolean hasProperty() {
@@ -11763,7 +11763,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        * @return The property.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty getProperty() {
@@ -11778,7 +11778,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -11798,7 +11798,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder setProperty(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder builderForValue) {
@@ -11816,7 +11816,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder mergeProperty(ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty value) {
         if (propertyBuilder_ == null) {
@@ -11838,7 +11838,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public Builder clearProperty() {
         if (propertyBuilder_ == null) {
@@ -11856,7 +11856,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder getPropertyBuilder() {
         
@@ -11868,7 +11868,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder() {
         if (propertyBuilder_ != null) {
@@ -11883,7 +11883,7 @@ public final class TextAnnotationOuterClass {
        * Additional information detected for the symbol.
        * </pre>
        *
-       * <code>.ssn.type.TextAnnotation.TextProperty property = 1;</code>
+       * <code>.ssn.type.TextAnnotation.TextProperty property = 1 [json_name = "property"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextProperty.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotation.TextPropertyOrBuilder> 
@@ -11921,7 +11921,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
@@ -11946,7 +11946,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
@@ -11975,7 +11975,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -12009,7 +12009,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(
           ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
@@ -12041,7 +12041,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -12077,7 +12077,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public Builder clearBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -12109,7 +12109,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
         
@@ -12135,7 +12135,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
         if (boundingBoxBuilder_ != null) {
@@ -12164,7 +12164,7 @@ public final class TextAnnotationOuterClass {
        *   and the vertice order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 2;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> 
@@ -12186,7 +12186,7 @@ public final class TextAnnotationOuterClass {
        * The actual UTF-8 representation of the symbol.
        * </pre>
        *
-       * <code>string text = 3;</code>
+       * <code>string text = 3 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -12206,7 +12206,7 @@ public final class TextAnnotationOuterClass {
        * The actual UTF-8 representation of the symbol.
        * </pre>
        *
-       * <code>string text = 3;</code>
+       * <code>string text = 3 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -12227,7 +12227,7 @@ public final class TextAnnotationOuterClass {
        * The actual UTF-8 representation of the symbol.
        * </pre>
        *
-       * <code>string text = 3;</code>
+       * <code>string text = 3 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -12246,7 +12246,7 @@ public final class TextAnnotationOuterClass {
        * The actual UTF-8 representation of the symbol.
        * </pre>
        *
-       * <code>string text = 3;</code>
+       * <code>string text = 3 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -12260,7 +12260,7 @@ public final class TextAnnotationOuterClass {
        * The actual UTF-8 representation of the symbol.
        * </pre>
        *
-       * <code>string text = 3;</code>
+       * <code>string text = 3 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -12282,7 +12282,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the symbol. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -12294,7 +12294,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the symbol. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @param value The confidence to set.
        * @return This builder for chaining.
        */
@@ -12309,7 +12309,7 @@ public final class TextAnnotationOuterClass {
        * Confidence of the OCR results for the symbol. Range [0, 1].
        * </pre>
        *
-       * <code>float confidence = 4;</code>
+       * <code>float confidence = 4 [json_name = "confidence"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConfidence() {
@@ -12426,44 +12426,52 @@ public final class TextAnnotationOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036ssn/type/text_annotation.proto\022\010ssn.ty" +
-      "pe\032\027ssn/type/geometry.proto\"\336\003\n\016TextAnno" +
-      "tation\022\035\n\005pages\030\001 \003(\0132\016.ssn.type.Page\022\014\n" +
-      "\004text\030\002 \001(\t\032=\n\020DetectedLanguage\022\025\n\rlangu" +
-      "age_code\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\002\032\307\001\n\rD" +
-      "etectedBreak\022>\n\004type\030\001 \001(\01620.ssn.type.Te" +
-      "xtAnnotation.DetectedBreak.BreakType\022\021\n\t" +
-      "is_prefix\030\002 \001(\010\"c\n\tBreakType\022\013\n\007UNKNOWN\020" +
-      "\000\022\t\n\005SPACE\020\001\022\016\n\nSURE_SPACE\020\002\022\022\n\016EOL_SURE" +
-      "_SPACE\020\003\022\n\n\006HYPHEN\020\004\022\016\n\nLINE_BREAK\020\005\032\225\001\n" +
-      "\014TextProperty\022E\n\022detected_languages\030\001 \003(" +
-      "\0132).ssn.type.TextAnnotation.DetectedLang" +
-      "uage\022>\n\016detected_break\030\002 \001(\0132&.ssn.type." +
-      "TextAnnotation.DetectedBreak\"\223\001\n\004Page\0227\n" +
-      "\010property\030\001 \001(\0132%.ssn.type.TextAnnotatio" +
-      "n.TextProperty\022\r\n\005width\030\002 \001(\005\022\016\n\006height\030" +
-      "\003 \001(\005\022\037\n\006blocks\030\004 \003(\0132\017.ssn.type.Block\022\022" +
-      "\n\nconfidence\030\005 \001(\002\"\256\002\n\005Block\0227\n\010property" +
-      "\030\001 \001(\0132%.ssn.type.TextAnnotation.TextPro" +
-      "perty\022,\n\014bounding_box\030\002 \001(\0132\026.ssn.type.B" +
-      "oundingPoly\022\'\n\nparagraphs\030\003 \003(\0132\023.ssn.ty" +
-      "pe.Paragraph\022-\n\nblock_type\030\004 \001(\0162\031.ssn.t" +
-      "ype.Block.BlockType\022\022\n\nconfidence\030\005 \001(\002\"" +
-      "R\n\tBlockType\022\013\n\007UNKNOWN\020\000\022\010\n\004TEXT\020\001\022\t\n\005T" +
-      "ABLE\020\002\022\013\n\007PICTURE\020\003\022\t\n\005RULER\020\004\022\013\n\007BARCOD" +
-      "E\020\005\"\245\001\n\tParagraph\0227\n\010property\030\001 \001(\0132%.ss" +
-      "n.type.TextAnnotation.TextProperty\022,\n\014bo" +
-      "unding_box\030\002 \001(\0132\026.ssn.type.BoundingPoly" +
-      "\022\035\n\005words\030\003 \003(\0132\016.ssn.type.Word\022\022\n\nconfi" +
-      "dence\030\004 \001(\002\"\244\001\n\004Word\0227\n\010property\030\001 \001(\0132%" +
-      ".ssn.type.TextAnnotation.TextProperty\022,\n" +
-      "\014bounding_box\030\002 \001(\0132\026.ssn.type.BoundingP" +
-      "oly\022!\n\007symbols\030\003 \003(\0132\020.ssn.type.Symbol\022\022" +
-      "\n\nconfidence\030\004 \001(\002\"\221\001\n\006Symbol\0227\n\010propert" +
-      "y\030\001 \001(\0132%.ssn.type.TextAnnotation.TextPr" +
-      "operty\022,\n\014bounding_box\030\002 \001(\0132\026.ssn.type." +
-      "BoundingPoly\022\014\n\004text\030\003 \001(\t\022\022\n\nconfidence" +
-      "\030\004 \001(\002B6Z4github.com/e-conomic/vmlapis/g" +
-      "en/go/ssn/type;ssntypeb\006proto3"
+      "pe\032\027ssn/type/geometry.proto\"\267\004\n\016TextAnno" +
+      "tation\022$\n\005pages\030\001 \003(\0132\016.ssn.type.PageR\005p" +
+      "ages\022\022\n\004text\030\002 \001(\tR\004text\032W\n\020DetectedLang" +
+      "uage\022#\n\rlanguage_code\030\001 \001(\tR\014languageCod" +
+      "e\022\036\n\nconfidence\030\002 \001(\002R\nconfidence\032\327\001\n\rDe" +
+      "tectedBreak\022D\n\004type\030\001 \001(\01620.ssn.type.Tex" +
+      "tAnnotation.DetectedBreak.BreakTypeR\004typ" +
+      "e\022\033\n\tis_prefix\030\002 \001(\010R\010isPrefix\"c\n\tBreakT" +
+      "ype\022\013\n\007UNKNOWN\020\000\022\t\n\005SPACE\020\001\022\016\n\nSURE_SPAC" +
+      "E\020\002\022\022\n\016EOL_SURE_SPACE\020\003\022\n\n\006HYPHEN\020\004\022\016\n\nL" +
+      "INE_BREAK\020\005\032\267\001\n\014TextProperty\022X\n\022detected" +
+      "_languages\030\001 \003(\0132).ssn.type.TextAnnotati" +
+      "on.DetectedLanguageR\021detectedLanguages\022M" +
+      "\n\016detected_break\030\002 \001(\0132&.ssn.type.TextAn" +
+      "notation.DetectedBreakR\rdetectedBreak\"\300\001" +
+      "\n\004Page\022A\n\010property\030\001 \001(\0132%.ssn.type.Text" +
+      "Annotation.TextPropertyR\010property\022\024\n\005wid" +
+      "th\030\002 \001(\005R\005width\022\026\n\006height\030\003 \001(\005R\006height\022" +
+      "\'\n\006blocks\030\004 \003(\0132\017.ssn.type.BlockR\006blocks" +
+      "\022\036\n\nconfidence\030\005 \001(\002R\nconfidence\"\350\002\n\005Blo" +
+      "ck\022A\n\010property\030\001 \001(\0132%.ssn.type.TextAnno" +
+      "tation.TextPropertyR\010property\0229\n\014boundin" +
+      "g_box\030\002 \001(\0132\026.ssn.type.BoundingPolyR\013bou" +
+      "ndingBox\0223\n\nparagraphs\030\003 \003(\0132\023.ssn.type." +
+      "ParagraphR\nparagraphs\0228\n\nblock_type\030\004 \001(" +
+      "\0162\031.ssn.type.Block.BlockTypeR\tblockType\022" +
+      "\036\n\nconfidence\030\005 \001(\002R\nconfidence\"R\n\tBlock" +
+      "Type\022\013\n\007UNKNOWN\020\000\022\010\n\004TEXT\020\001\022\t\n\005TABLE\020\002\022\013" +
+      "\n\007PICTURE\020\003\022\t\n\005RULER\020\004\022\013\n\007BARCODE\020\005\"\317\001\n\t" +
+      "Paragraph\022A\n\010property\030\001 \001(\0132%.ssn.type.T" +
+      "extAnnotation.TextPropertyR\010property\0229\n\014" +
+      "bounding_box\030\002 \001(\0132\026.ssn.type.BoundingPo" +
+      "lyR\013boundingBox\022$\n\005words\030\003 \003(\0132\016.ssn.typ" +
+      "e.WordR\005words\022\036\n\nconfidence\030\004 \001(\002R\nconfi" +
+      "dence\"\320\001\n\004Word\022A\n\010property\030\001 \001(\0132%.ssn.t" +
+      "ype.TextAnnotation.TextPropertyR\010propert" +
+      "y\0229\n\014bounding_box\030\002 \001(\0132\026.ssn.type.Bound" +
+      "ingPolyR\013boundingBox\022*\n\007symbols\030\003 \003(\0132\020." +
+      "ssn.type.SymbolR\007symbols\022\036\n\nconfidence\030\004" +
+      " \001(\002R\nconfidence\"\272\001\n\006Symbol\022A\n\010property\030" +
+      "\001 \001(\0132%.ssn.type.TextAnnotation.TextProp" +
+      "ertyR\010property\0229\n\014bounding_box\030\002 \001(\0132\026.s" +
+      "sn.type.BoundingPolyR\013boundingBox\022\022\n\004tex" +
+      "t\030\003 \001(\tR\004text\022\036\n\nconfidence\030\004 \001(\002R\nconfi" +
+      "denceB6Z4github.com/e-conomic/vmlapis/ge" +
+      "n/go/ssn/type;ssntypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

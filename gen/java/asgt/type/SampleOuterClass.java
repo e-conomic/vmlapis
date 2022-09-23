@@ -19,40 +19,40 @@ public final class SampleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     boolean hasData();
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     asgt.type.DataOuterClass.Data getData();
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      */
     asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
         getTargetValuesList();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
         getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
@@ -164,7 +164,7 @@ public final class SampleOuterClass {
     public static final int DATA_FIELD_NUMBER = 1;
     private asgt.type.DataOuterClass.Data data_;
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -172,7 +172,7 @@ public final class SampleOuterClass {
       return data_ != null;
     }
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -180,7 +180,7 @@ public final class SampleOuterClass {
       return data_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
     }
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
@@ -190,14 +190,14 @@ public final class SampleOuterClass {
     public static final int TARGET_VALUES_FIELD_NUMBER = 2;
     private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
@@ -205,21 +205,21 @@ public final class SampleOuterClass {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public int getTargetValuesCount() {
       return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
       return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
@@ -603,14 +603,14 @@ public final class SampleOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> dataBuilder_;
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       public asgt.type.DataOuterClass.Data getData() {
@@ -621,7 +621,7 @@ public final class SampleOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder setData(asgt.type.DataOuterClass.Data value) {
         if (dataBuilder_ == null) {
@@ -637,7 +637,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder setData(
           asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -651,7 +651,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder mergeData(asgt.type.DataOuterClass.Data value) {
         if (dataBuilder_ == null) {
@@ -669,7 +669,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder clearData() {
         if (dataBuilder_ == null) {
@@ -683,7 +683,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public asgt.type.DataOuterClass.Data.Builder getDataBuilder() {
         
@@ -691,7 +691,7 @@ public final class SampleOuterClass {
         return getDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
         if (dataBuilder_ != null) {
@@ -702,7 +702,7 @@ public final class SampleOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> 
@@ -731,7 +731,7 @@ public final class SampleOuterClass {
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
         if (targetValuesBuilder_ == null) {
@@ -741,7 +741,7 @@ public final class SampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public int getTargetValuesCount() {
         if (targetValuesBuilder_ == null) {
@@ -751,7 +751,7 @@ public final class SampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -761,7 +761,7 @@ public final class SampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
@@ -778,7 +778,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -792,7 +792,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
         if (targetValuesBuilder_ == null) {
@@ -808,7 +808,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
@@ -825,7 +825,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -839,7 +839,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -853,7 +853,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
@@ -868,7 +868,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder clearTargetValues() {
         if (targetValuesBuilder_ == null) {
@@ -881,7 +881,7 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder removeTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -894,14 +894,14 @@ public final class SampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
         return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
@@ -911,7 +911,7 @@ public final class SampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
            getTargetValuesOrBuilderList() {
@@ -922,14 +922,14 @@ public final class SampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
         return getTargetValuesFieldBuilder().addBuilder(
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
@@ -937,7 +937,7 @@ public final class SampleOuterClass {
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
            getTargetValuesBuilderList() {
@@ -1026,11 +1026,11 @@ public final class SampleOuterClass {
     java.lang.String[] descriptorData = {
       "\n\026asgt/type/sample.proto\022\tasgt.type\032\024asg" +
       "t/type/data.proto\032\034asgt/type/target_valu" +
-      "e.proto\"V\n\006Sample\022\035\n\004data\030\001 \001(\0132\017.asgt.t" +
-      "ype.Data\022-\n\rtarget_values\030\002 \003(\0132\026.asgt.t" +
-      "ype.TargetValueB8Z6github.com/e-conomic/" +
-      "vmlapis/gen/go/asgt/type;asgttypeb\006proto" +
-      "3"
+      "e.proto\"j\n\006Sample\022#\n\004data\030\001 \001(\0132\017.asgt.t" +
+      "ype.DataR\004data\022;\n\rtarget_values\030\002 \003(\0132\026." +
+      "asgt.type.TargetValueR\014targetValuesB8Z6g" +
+      "ithub.com/e-conomic/vmlapis/gen/go/asgt/" +
+      "type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

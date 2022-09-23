@@ -24,7 +24,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
@@ -34,7 +34,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     asgt.type.PredictionOuterClass.Confidence.Level getLevel();
@@ -44,7 +44,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     boolean hasValue();
@@ -53,7 +53,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     com.google.protobuf.FloatValue getValue();
@@ -62,7 +62,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     com.google.protobuf.FloatValueOrBuilder getValueOrBuilder();
   }
@@ -319,7 +319,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     @java.lang.Override public int getLevelValue() {
@@ -331,7 +331,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getLevel() {
@@ -347,7 +347,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     @java.lang.Override
@@ -359,7 +359,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -371,7 +371,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
@@ -720,7 +720,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The enum numeric value on the wire for level.
        */
       @java.lang.Override public int getLevelValue() {
@@ -732,7 +732,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
        */
@@ -748,7 +748,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The level.
        */
       @java.lang.Override
@@ -763,7 +763,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The level to set.
        * @return This builder for chaining.
        */
@@ -782,7 +782,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
@@ -800,7 +800,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return Whether the value field is set.
        */
       public boolean hasValue() {
@@ -811,7 +811,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return The value.
        */
       public com.google.protobuf.FloatValue getValue() {
@@ -826,7 +826,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -846,7 +846,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(
           com.google.protobuf.FloatValue.Builder builderForValue) {
@@ -864,7 +864,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder mergeValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -886,7 +886,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder clearValue() {
         if (valueBuilder_ == null) {
@@ -904,7 +904,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValue.Builder getValueBuilder() {
         
@@ -916,7 +916,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
         if (valueBuilder_ != null) {
@@ -931,7 +931,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
@@ -1004,25 +1004,25 @@ public final class PredictionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> 
         getTargetsList();
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index);
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     int getTargetsCount();
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
         getTargetsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
         int index);
@@ -1123,37 +1123,37 @@ public final class PredictionOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       java.lang.String getName();
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
 
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> 
           getCandidatesList();
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index);
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       int getCandidatesCount();
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
           getCandidatesOrBuilderList();
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
           int index);
@@ -1261,29 +1261,29 @@ public final class PredictionOuterClass {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The value.
          */
         java.lang.String getValue();
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The bytes for value.
          */
         com.google.protobuf.ByteString
             getValueBytes();
 
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return Whether the confidence field is set.
          */
         boolean hasConfidence();
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         asgt.type.PredictionOuterClass.Confidence getConfidence();
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          */
         asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
       }
@@ -1387,7 +1387,7 @@ public final class PredictionOuterClass {
         public static final int VALUE_FIELD_NUMBER = 1;
         private volatile java.lang.Object value_;
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The value.
          */
         @java.lang.Override
@@ -1404,7 +1404,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The bytes for value.
          */
         @java.lang.Override
@@ -1425,7 +1425,7 @@ public final class PredictionOuterClass {
         public static final int CONFIDENCE_FIELD_NUMBER = 2;
         private asgt.type.PredictionOuterClass.Confidence confidence_;
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return Whether the confidence field is set.
          */
         @java.lang.Override
@@ -1433,7 +1433,7 @@ public final class PredictionOuterClass {
           return confidence_ != null;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         @java.lang.Override
@@ -1441,7 +1441,7 @@ public final class PredictionOuterClass {
           return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          */
         @java.lang.Override
         public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
@@ -1782,7 +1782,7 @@ public final class PredictionOuterClass {
 
           private java.lang.Object value_ = "";
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @return The value.
            */
           public java.lang.String getValue() {
@@ -1798,7 +1798,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @return The bytes for value.
            */
           public com.google.protobuf.ByteString
@@ -1815,7 +1815,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @param value The value to set.
            * @return This builder for chaining.
            */
@@ -1830,7 +1830,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @return This builder for chaining.
            */
           public Builder clearValue() {
@@ -1840,7 +1840,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @param value The bytes for value to set.
            * @return This builder for chaining.
            */
@@ -1860,14 +1860,14 @@ public final class PredictionOuterClass {
           private com.google.protobuf.SingleFieldBuilderV3<
               asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            * @return Whether the confidence field is set.
            */
           public boolean hasConfidence() {
             return confidenceBuilder_ != null || confidence_ != null;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            * @return The confidence.
            */
           public asgt.type.PredictionOuterClass.Confidence getConfidence() {
@@ -1878,7 +1878,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder setConfidence(asgt.type.PredictionOuterClass.Confidence value) {
             if (confidenceBuilder_ == null) {
@@ -1894,7 +1894,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder setConfidence(
               asgt.type.PredictionOuterClass.Confidence.Builder builderForValue) {
@@ -1908,7 +1908,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder mergeConfidence(asgt.type.PredictionOuterClass.Confidence value) {
             if (confidenceBuilder_ == null) {
@@ -1926,7 +1926,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder clearConfidence() {
             if (confidenceBuilder_ == null) {
@@ -1940,7 +1940,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public asgt.type.PredictionOuterClass.Confidence.Builder getConfidenceBuilder() {
             
@@ -1948,7 +1948,7 @@ public final class PredictionOuterClass {
             return getConfidenceFieldBuilder().getBuilder();
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
             if (confidenceBuilder_ != null) {
@@ -1959,7 +1959,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> 
@@ -2030,7 +2030,7 @@ public final class PredictionOuterClass {
       public static final int NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object name_;
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       @java.lang.Override
@@ -2047,7 +2047,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       @java.lang.Override
@@ -2068,14 +2068,14 @@ public final class PredictionOuterClass {
       public static final int CANDIDATES_FIELD_NUMBER = 2;
       private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> candidates_;
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> getCandidatesList() {
         return candidates_;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
@@ -2083,21 +2083,21 @@ public final class PredictionOuterClass {
         return candidates_;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public int getCandidatesCount() {
         return candidates_.size();
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index) {
         return candidates_.get(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
@@ -2466,7 +2466,7 @@ public final class PredictionOuterClass {
 
         private java.lang.Object name_ = "";
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return The name.
          */
         public java.lang.String getName() {
@@ -2482,7 +2482,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
@@ -2499,7 +2499,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @param value The name to set.
          * @return This builder for chaining.
          */
@@ -2514,7 +2514,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return This builder for chaining.
          */
         public Builder clearName() {
@@ -2524,7 +2524,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @param value The bytes for name to set.
          * @return This builder for chaining.
          */
@@ -2553,7 +2553,7 @@ public final class PredictionOuterClass {
             asgt.type.PredictionOuterClass.Prediction.Target.Candidate, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> candidatesBuilder_;
 
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> getCandidatesList() {
           if (candidatesBuilder_ == null) {
@@ -2563,7 +2563,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public int getCandidatesCount() {
           if (candidatesBuilder_ == null) {
@@ -2573,7 +2573,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index) {
           if (candidatesBuilder_ == null) {
@@ -2583,7 +2583,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder setCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
@@ -2600,7 +2600,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder setCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
@@ -2614,7 +2614,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
           if (candidatesBuilder_ == null) {
@@ -2630,7 +2630,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
@@ -2647,7 +2647,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(
             asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
@@ -2661,7 +2661,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
@@ -2675,7 +2675,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addAllCandidates(
             java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Target.Candidate> values) {
@@ -2690,7 +2690,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder clearCandidates() {
           if (candidatesBuilder_ == null) {
@@ -2703,7 +2703,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder removeCandidates(int index) {
           if (candidatesBuilder_ == null) {
@@ -2716,14 +2716,14 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder getCandidatesBuilder(
             int index) {
           return getCandidatesFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
             int index) {
@@ -2733,7 +2733,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
              getCandidatesOrBuilderList() {
@@ -2744,14 +2744,14 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder addCandidatesBuilder() {
           return getCandidatesFieldBuilder().addBuilder(
               asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance());
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder addCandidatesBuilder(
             int index) {
@@ -2759,7 +2759,7 @@ public final class PredictionOuterClass {
               index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance());
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder> 
              getCandidatesBuilderList() {
@@ -2835,14 +2835,14 @@ public final class PredictionOuterClass {
     public static final int TARGETS_FIELD_NUMBER = 1;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> targets_;
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getTargetsList() {
       return targets_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
@@ -2850,21 +2850,21 @@ public final class PredictionOuterClass {
       return targets_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
@@ -3227,7 +3227,7 @@ public final class PredictionOuterClass {
           asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> targetsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getTargetsList() {
         if (targetsBuilder_ == null) {
@@ -3237,7 +3237,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public int getTargetsCount() {
         if (targetsBuilder_ == null) {
@@ -3247,7 +3247,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index) {
         if (targetsBuilder_ == null) {
@@ -3257,7 +3257,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder setTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
@@ -3274,7 +3274,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder setTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -3288,7 +3288,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(asgt.type.PredictionOuterClass.Prediction.Target value) {
         if (targetsBuilder_ == null) {
@@ -3304,7 +3304,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
@@ -3321,7 +3321,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
           asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -3335,7 +3335,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -3349,7 +3349,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addAllTargets(
           java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Target> values) {
@@ -3364,7 +3364,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder clearTargets() {
         if (targetsBuilder_ == null) {
@@ -3377,7 +3377,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder removeTargets(int index) {
         if (targetsBuilder_ == null) {
@@ -3390,14 +3390,14 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder getTargetsBuilder(
           int index) {
         return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
           int index) {
@@ -3407,7 +3407,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
            getTargetsOrBuilderList() {
@@ -3418,14 +3418,14 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder addTargetsBuilder() {
         return getTargetsFieldBuilder().addBuilder(
             asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder addTargetsBuilder(
           int index) {
@@ -3433,7 +3433,7 @@ public final class PredictionOuterClass {
             index, asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Builder> 
            getTargetsBuilderList() {
@@ -3536,26 +3536,27 @@ public final class PredictionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032asgt/type/prediction.proto\022\tasgt.type\032" +
-      "\034gen_bq_schema/bq_field.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\"\263\001\n\nConfidence\022*\n\005" +
+      "\036google/protobuf/wrappers.proto\032\034gen_bq_" +
+      "schema/bq_field.proto\"\301\001\n\nConfidence\0221\n\005" +
       "level\030\001 \001(\0162\033.asgt.type.Confidence.Level" +
-      "\022*\n\005value\030\002 \001(\0132\033.google.protobuf.FloatV" +
-      "alue\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001" +
-      "\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIG" +
-      "H\020\005\"\336\001\n\nPrediction\022-\n\007targets\030\001 \003(\0132\034.as" +
-      "gt.type.Prediction.Target\032\240\001\n\006Target\022\014\n\004" +
-      "name\030\001 \001(\t\022:\n\ncandidates\030\002 \003(\0132&.asgt.ty" +
-      "pe.Prediction.Target.Candidate\032L\n\tCandid" +
-      "ate\022\024\n\005value\030\001 \001(\tB\005\352?\002\010\001\022)\n\nconfidence\030" +
-      "\002 \001(\0132\025.asgt.type.ConfidenceB8Z6github.c" +
-      "om/e-conomic/vmlapis/gen/go/asgt/type;as" +
-      "gttypeb\006proto3"
+      "R\005level\0221\n\005value\030\002 \001(\0132\033.google.protobuf" +
+      ".FloatValueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000" +
+      "\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH" +
+      "\020\004\022\r\n\tVERY_HIGH\020\005\"\214\002\n\nPrediction\0226\n\007targ" +
+      "ets\030\001 \003(\0132\034.asgt.type.Prediction.TargetR" +
+      "\007targets\032\305\001\n\006Target\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "F\n\ncandidates\030\002 \003(\0132&.asgt.type.Predicti" +
+      "on.Target.CandidateR\ncandidates\032_\n\tCandi" +
+      "date\022\033\n\005value\030\001 \001(\tB\005\352?\002\010\001R\005value\0225\n\ncon" +
+      "fidence\030\002 \001(\0132\025.asgt.type.ConfidenceR\nco" +
+      "nfidenceB8Z6github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          gen_bq_schema.BqField.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
+          gen_bq_schema.BqField.getDescriptor(),
         });
     internal_static_asgt_type_Confidence_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3586,8 +3587,8 @@ public final class PredictionOuterClass {
     registry.add(gen_bq_schema.BqField.bigquery);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    gen_bq_schema.BqField.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
+    gen_bq_schema.BqField.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

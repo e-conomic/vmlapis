@@ -10,10 +10,9 @@ plugins:
      - require_unimplemented_servers=false
   - name: python
     out: gen/python
-  # python -m pip install grpcio
-  - name: python-grpc
+  # pip install grpclib protobuf
+  - name: python_grpc
     out: gen/python
-    path: protoc-gen-python_grpc
   - name: js
     out: gen/js
     opt: import_style=commonjs,binary
@@ -24,3 +23,8 @@ plugins:
     path: grpc_tools_node_protoc_plugin
   - name: ts
     out: gen/js
+  - name: java
+    out: gen/java
+  - name: csharp
+    out: gen/csharp
+    opt: base_namespace=

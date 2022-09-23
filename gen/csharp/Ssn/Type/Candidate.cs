@@ -26,21 +26,24 @@ namespace Ssn.Type {
           string.Concat(
             "Chhzc24vdHlwZS9jYW5kaWRhdGUucHJvdG8SCHNzbi50eXBlGh5nb29nbGUv",
             "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8aF3Nzbi90eXBlL2dlb21ldHJ5LnBy",
-            "b3RvIrIBCgpDb25maWRlbmNlEikKBWxldmVsGAEgASgOMhouc3NuLnR5cGUu",
-            "Q29uZmlkZW5jZS5MZXZlbBIqCgV2YWx1ZRgCIAEoCzIbLmdvb2dsZS5wcm90",
-            "b2J1Zi5GbG9hdFZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZ",
-            "X0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJ",
-            "R0gQBSKVAgoJQ2FuZGlkYXRlEg0KBXZhbHVlGAEgASgJEgwKBHRleHQYAiAB",
-            "KAkSKAoKY29uZmlkZW5jZRgDIAEoCzIULnNzbi50eXBlLkNvbmZpZGVuY2US",
-            "LAoMYm91bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5",
-            "EiYKBHR5cGUYBSABKA4yGC5zc24udHlwZS5DYW5kaWRhdGUuVHlwZRIQCghw",
-            "YWdlX3JlZhgGIAEoDRIrCg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNzbi50",
-            "eXBlLk1vZGVsU3BlYyIsCgRUeXBlEgsKB1VOS05PV04QABIJCgVGSUVMRBAB",
-            "EgwKCERPQ1VNRU5UEAIiTwoJTW9kZWxTcGVjEhIKCm1vZGVsX25hbWUYASAB",
-            "KAkSLgoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0",
-            "VmFsdWUiPwoNTGluZUNhbmRpZGF0ZRIMCgR0ZXh0GAEgASgJEg4KBmFtb3Vu",
-            "dBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUI2WjRnaXRodWIuY29tL2UtY29u",
-            "b21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlYgZwcm90bzM="));
+            "b3RvIsABCgpDb25maWRlbmNlEjAKBWxldmVsGAEgASgOMhouc3NuLnR5cGUu",
+            "Q29uZmlkZW5jZS5MZXZlbFIFbGV2ZWwSMQoFdmFsdWUYAiABKAsyGy5nb29n",
+            "bGUucHJvdG9idWYuRmxvYXRWYWx1ZVIFdmFsdWUiTQoFTGV2ZWwSCwoHVU5L",
+            "Tk9XThAAEgwKCFZFUllfTE9XEAESBwoDTE9XEAISBwoDTUlEEAMSCAoESElH",
+            "SBAEEg0KCVZFUllfSElHSBAFItkCCglDYW5kaWRhdGUSFAoFdmFsdWUYASAB",
+            "KAlSBXZhbHVlEhIKBHRleHQYAiABKAlSBHRleHQSNAoKY29uZmlkZW5jZRgD",
+            "IAEoCzIULnNzbi50eXBlLkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USOQoMYm91",
+            "bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5Ugtib3Vu",
+            "ZGluZ0JveBIsCgR0eXBlGAUgASgOMhguc3NuLnR5cGUuQ2FuZGlkYXRlLlR5",
+            "cGVSBHR5cGUSGQoIcGFnZV9yZWYYBiABKA1SB3BhZ2VSZWYSOgoObW9kZWxf",
+            "bWV0YWRhdGEYByABKAsyEy5zc24udHlwZS5Nb2RlbFNwZWNSDW1vZGVsTWV0",
+            "YWRhdGEiLAoEVHlwZRILCgdVTktOT1dOEAASCQoFRklFTEQQARIMCghET0NV",
+            "TUVOVBACImQKCU1vZGVsU3BlYxIdCgptb2RlbF9uYW1lGAEgASgJUgltb2Rl",
+            "bE5hbWUSOAoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLklu",
+            "dDY0VmFsdWVSCG1vZGVsVmVyIlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgB",
+            "IAEoCVIEdGV4dBIWCgZhbW91bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3Jl",
+            "ZhgGIAEoDVIHcGFnZVJlZkI2WjRnaXRodWIuY29tL2UtY29ub21pYy92bWxh",
+            "cGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,23 +57,31 @@ namespace Ssn.Type {
 
   }
   #region Messages
-  public sealed partial class Confidence : pb::IMessage<Confidence> {
+  public sealed partial class Confidence : pb::IMessage<Confidence>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Confidence> _parser = new pb::MessageParser<Confidence>(() => new Confidence());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Confidence> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Confidence() {
       OnConstruction();
     }
@@ -78,6 +89,7 @@ namespace Ssn.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Confidence(Confidence other) : this() {
       level_ = other.level_;
       Value = other.Value;
@@ -85,6 +97,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Confidence Clone() {
       return new Confidence(this);
     }
@@ -97,6 +110,7 @@ namespace Ssn.Type {
     /// highly stable results across model upgrades.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.Confidence.Types.Level Level {
       get { return level_; }
       set {
@@ -112,6 +126,7 @@ namespace Ssn.Type {
     /// The confidence value
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float? Value {
       get { return value_; }
       set {
@@ -121,11 +136,13 @@ namespace Ssn.Type {
 
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Confidence);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Confidence other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -139,6 +156,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Level != global::Ssn.Type.Confidence.Types.Level.Unknown) hash ^= Level.GetHashCode();
@@ -150,12 +168,17 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Level != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Level);
@@ -166,9 +189,28 @@ namespace Ssn.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Level != global::Ssn.Type.Confidence.Types.Level.Unknown) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Level);
+      }
+      if (value_ != null) {
+        _single_value_codec.WriteTagAndValue(ref output, Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Level != global::Ssn.Type.Confidence.Types.Level.Unknown) {
@@ -184,6 +226,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Confidence other) {
       if (other == null) {
         return;
@@ -200,7 +243,11 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -220,11 +267,39 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Level = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            float? value = _single_value_codec.Read(ref input);
+            if (value_ == null || value != 0F) {
+              Value = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Confidence message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public enum Level {
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
@@ -240,23 +315,31 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class Candidate : pb::IMessage<Candidate> {
+  public sealed partial class Candidate : pb::IMessage<Candidate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Candidate> _parser = new pb::MessageParser<Candidate>(() => new Candidate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Candidate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Candidate() {
       OnConstruction();
     }
@@ -264,6 +347,7 @@ namespace Ssn.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Candidate(Candidate other) : this() {
       value_ = other.value_;
       text_ = other.text_;
@@ -276,6 +360,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Candidate Clone() {
       return new Candidate(this);
     }
@@ -287,6 +372,7 @@ namespace Ssn.Type {
     /// Normalized value 01-01-2019
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
       get { return value_; }
       set {
@@ -302,6 +388,7 @@ namespace Ssn.Type {
     /// useful for overlays
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
       get { return text_; }
       set {
@@ -316,6 +403,7 @@ namespace Ssn.Type {
     /// Confidence
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.Confidence Confidence {
       get { return confidence_; }
       set {
@@ -349,6 +437,7 @@ namespace Ssn.Type {
     ///   and the vertex order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.BoundingPoly BoundingBox {
       get { return boundingBox_; }
       set {
@@ -363,6 +452,7 @@ namespace Ssn.Type {
     /// Indicate the type of the candidate
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.Candidate.Types.Type Type {
       get { return type_; }
       set {
@@ -378,6 +468,7 @@ namespace Ssn.Type {
     /// page_ref start from 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint PageRef {
       get { return pageRef_; }
       set {
@@ -392,6 +483,7 @@ namespace Ssn.Type {
     /// Model spec of the TensorFlow Serving model that predicted this candidate
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.ModelSpec ModelMetadata {
       get { return modelMetadata_; }
       set {
@@ -400,11 +492,13 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Candidate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Candidate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -423,6 +517,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Value.Length != 0) hash ^= Value.GetHashCode();
@@ -439,12 +534,17 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Value.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Value);
@@ -476,9 +576,49 @@ namespace Ssn.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Value.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Value);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (confidence_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Confidence);
+      }
+      if (boundingBox_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BoundingBox);
+      }
+      if (Type != global::Ssn.Type.Candidate.Types.Type.Unknown) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Type);
+      }
+      if (PageRef != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(PageRef);
+      }
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Value.Length != 0) {
@@ -509,6 +649,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Candidate other) {
       if (other == null) {
         return;
@@ -547,7 +688,11 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -593,11 +738,65 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Value = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
+            break;
+          }
+          case 34: {
+            if (boundingBox_ == null) {
+              BoundingBox = new global::Ssn.Type.BoundingPoly();
+            }
+            input.ReadMessage(BoundingBox);
+            break;
+          }
+          case 40: {
+            Type = (global::Ssn.Type.Candidate.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Candidate message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public enum Type {
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
@@ -610,23 +809,31 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class ModelSpec : pb::IMessage<ModelSpec> {
+  public sealed partial class ModelSpec : pb::IMessage<ModelSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ModelSpec> _parser = new pb::MessageParser<ModelSpec>(() => new ModelSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ModelSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelSpec() {
       OnConstruction();
     }
@@ -634,6 +841,7 @@ namespace Ssn.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelSpec(ModelSpec other) : this() {
       modelName_ = other.modelName_;
       ModelVer = other.ModelVer;
@@ -641,6 +849,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelSpec Clone() {
       return new ModelSpec(this);
     }
@@ -652,6 +861,7 @@ namespace Ssn.Type {
     /// The name of the TensorFlow Serving model
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ModelName {
       get { return modelName_; }
       set {
@@ -667,6 +877,7 @@ namespace Ssn.Type {
     /// The version number of the TensorFlow Serving model
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long? ModelVer {
       get { return modelVer_; }
       set {
@@ -676,11 +887,13 @@ namespace Ssn.Type {
 
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ModelSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ModelSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -694,6 +907,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
@@ -705,12 +919,17 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ModelName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ModelName);
@@ -721,9 +940,28 @@ namespace Ssn.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ModelName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ModelName);
+      }
+      if (modelVer_ != null) {
+        _single_modelVer_codec.WriteTagAndValue(ref output, ModelVer);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ModelName.Length != 0) {
@@ -739,6 +977,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ModelSpec other) {
       if (other == null) {
         return;
@@ -755,7 +994,11 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -775,27 +1018,62 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 18: {
+            long? value = _single_modelVer_codec.Read(ref input);
+            if (modelVer_ == null || value != 0L) {
+              ModelVer = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class LineCandidate : pb::IMessage<LineCandidate> {
+  public sealed partial class LineCandidate : pb::IMessage<LineCandidate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LineCandidate> _parser = new pb::MessageParser<LineCandidate>(() => new LineCandidate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LineCandidate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LineCandidate() {
       OnConstruction();
     }
@@ -803,6 +1081,7 @@ namespace Ssn.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LineCandidate(LineCandidate other) : this() {
       text_ = other.text_;
       amount_ = other.amount_;
@@ -811,6 +1090,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LineCandidate Clone() {
       return new LineCandidate(this);
     }
@@ -823,6 +1103,7 @@ namespace Ssn.Type {
     /// Example: "3 Dark and Stormy"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
       get { return text_; }
       set {
@@ -838,6 +1119,7 @@ namespace Ssn.Type {
     /// Example: 300.0
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Amount {
       get { return amount_; }
       set {
@@ -853,6 +1135,7 @@ namespace Ssn.Type {
     /// page_ref start from 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint PageRef {
       get { return pageRef_; }
       set {
@@ -861,11 +1144,13 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LineCandidate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LineCandidate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -880,6 +1165,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -892,12 +1178,17 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Text.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Text);
@@ -913,9 +1204,33 @@ namespace Ssn.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Text.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Text);
+      }
+      if (Amount != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Amount);
+      }
+      if (PageRef != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(PageRef);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Text.Length != 0) {
@@ -934,6 +1249,7 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LineCandidate other) {
       if (other == null) {
         return;
@@ -951,7 +1267,11 @@ namespace Ssn.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -972,7 +1292,35 @@ namespace Ssn.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Text = input.ReadString();
+            break;
+          }
+          case 17: {
+            Amount = input.ReadDouble();
+            break;
+          }
+          case 48: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
