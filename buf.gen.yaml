@@ -1,13 +1,13 @@
 version: v1
-plugins:  
+plugins:
   - name: go
     out: gen/go
     opt: paths=source_relative
   - name: go-grpc
     out: gen/go
     opt:
-     - paths=source_relative
-     - require_unimplemented_servers=false
+      - paths=source_relative
+      - require_unimplemented_servers=false
   - name: python
     out: gen/python
   # pip install grpclib protobuf
@@ -28,3 +28,9 @@ plugins:
   - name: csharp
     out: gen/csharp
     opt: base_namespace=
+  - name: validate
+    out: gen/go
+    path: protoc-gen-validate
+    opt:
+      - lang=go
+      - paths=source_relative
