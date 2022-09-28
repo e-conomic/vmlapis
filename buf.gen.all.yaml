@@ -28,9 +28,3 @@ plugins:
   - name: csharp
     out: gen/csharp
     opt: base_namespace=
-  - name: validate
-    out: gen/go
-    path: protoc-gen-validate
-    opt:
-      - lang=go
-      - paths=source_relative

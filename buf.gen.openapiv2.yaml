@@ -1,0 +1,8 @@
+version: v1
+plugins:
+  - name: openapiv2
+    out: gen/openapiv2
+    opt:
+      - logtostderr=true
+      - allow_merge=true
+      - merge_file_name={_FILE_NAME}
