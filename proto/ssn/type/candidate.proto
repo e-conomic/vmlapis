@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package ssn.type;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
-
 import "google/protobuf/wrappers.proto";
 import "ssn/type/geometry.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
 message Confidence {
   enum Level {
@@ -67,10 +67,10 @@ message Candidate {
 }
 
 message ModelSpec {
-    // The name of the TensorFlow Serving model
-    string model_name = 1;
-    // The version number of the TensorFlow Serving model
-    google.protobuf.Int64Value model_ver = 2;
+  // The name of the TensorFlow Serving model
+  string model_name = 1;
+  // The version number of the TensorFlow Serving model
+  google.protobuf.Int64Value model_ver = 2;
 }
 
 message LineCandidate {

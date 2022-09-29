@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package ssn.access.v1;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access";
-
 import "google/api/annotations.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access";
 
 service Access {
   rpc GenerateValetKey(ValetKeyRequest) returns (ValetKeyResponse) {

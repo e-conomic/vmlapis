@@ -17,9 +17,9 @@ syntax = "proto3";
 
 package ssn.type;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
-
 import "ssn/type/geometry.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
 // TextAnnotation contains a structured representation of OCR extracted text.
 // The hierarchy of an OCR extracted text structure is like this:

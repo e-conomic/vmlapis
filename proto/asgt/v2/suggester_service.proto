@@ -2,16 +2,14 @@ syntax = "proto3";
 
 package asgt.v2;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
-
+import "asgt/type/model.proto";
+import "asgt/type/prediction.proto";
+import "asgt/v2/type/data.proto";
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
 
-import "asgt/type/prediction.proto";
-import "asgt/type/model.proto";
-import "asgt/v2/type/data.proto";
-
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
     title: "AutoSuggest";
@@ -25,11 +23,11 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
 
 service SuggesterService {
   option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {
-      description: "Make predictions against a dataset."
+    description: "Make predictions against a dataset."
   };
 
   // Suggest target values for some input using a dataset, returning an empty result if no model exists.
-  rpc Suggest (SuggestRequest) returns (SuggestResponse) {
+  rpc Suggest(SuggestRequest) returns (SuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}:suggest"
       body: "*"
@@ -37,7 +35,7 @@ service SuggesterService {
   }
 
   // BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
-  rpc BatchSuggest (BatchSuggestRequest) returns (BatchSuggestResponse) {
+  rpc BatchSuggest(BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}:batchSuggest"
       body: "*"
@@ -46,7 +44,7 @@ service SuggesterService {
 
   // Suggest target values for multiple inputs using the most recently trained model in a dataset.
   // Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
-  rpc ModelBatchSuggest (BatchSuggestRequest) returns (BatchSuggestResponse) {
+  rpc ModelBatchSuggest(BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}/model:batchSuggest"
       body: "*"
@@ -56,18 +54,21 @@ service SuggesterService {
 
 message SuggestOptions {
   option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-			example: "{\"suggest_limit\": 3}"
-	};
+    example: "{\"suggest_limit\": 3}"
+  };
 
   // Maximum number of suggestions to return per target
   int32 suggest_limit = 1;
-  // Not implemented yet. 
+  // Not implemented yet.
   asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
 }
 
 message SuggestRequest {
   // Name of the dataset to make prediction against
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
   // Input data to use for prediction
   asgt.v2.type.Data input = 2;
   SuggestOptions options = 3;
@@ -80,7 +81,10 @@ message SuggestResponse {
 
 message BatchSuggestRequest {
   // Name of the dataset to make prediction against
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
   // Input data to use for prediction
   repeated asgt.v2.type.Data inputs = 2;
   SuggestOptions options = 3;

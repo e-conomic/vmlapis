@@ -13,11 +13,12 @@
 // limitations under the License.
 
 syntax = "proto3";
+
 package gen_bq_schema;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema";
-
 import "google/protobuf/descriptor.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema";
 
 extend google.protobuf.MessageOptions {
   // NB: There used to be a custom option named "table_name". But only one tag
@@ -32,7 +33,6 @@ extend google.protobuf.MessageOptions {
   //    option (gen_bq_schema.bigquery_opts).table_name = "foo";
   // There was no backwards compatible way to make this change. Sorry for
   // the inconvenience.
-
 
   // BigQuery message schema generation options.
   //

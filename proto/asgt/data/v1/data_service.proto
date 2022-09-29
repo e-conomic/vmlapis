@@ -2,59 +2,58 @@ syntax = "proto3";
 
 package asgt.dataservice.v1;
 
+import "asgt/type/dataset.proto";
+import "asgt/type/model.proto";
+import "asgt/type/retention_policy.proto";
+import "asgt/type/sample.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "ssn/dataservice/v1/dataservice.proto";
+
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data";
 option java_outer_classname = "DataServiceProtos";
 
-import "google/api/annotations.proto";
-import "google/protobuf/empty.proto";
-import "asgt/type/retention_policy.proto";
-import "asgt/type/model.proto";
-import "asgt/type/dataset.proto";
-import "asgt/type/sample.proto";
-import "ssn/dataservice/v1/dataservice.proto";
-
-import "google/protobuf/wrappers.proto";
-import "google/protobuf/timestamp.proto";
-
 service DataService {
-  rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
+  rpc CreateDataset(CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/{type}:create"
       body: "*"
     };
   }
 
-  rpc AppendData (AppendDataRequest) returns (google.protobuf.Empty) {
+  rpc AppendData(AppendDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/{type}/{name}:append"
       body: "*"
     };
   }
 
-  rpc DeleteData (DeleteRequest) returns (google.protobuf.Empty) {
+  rpc DeleteData(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/{type}:delete"
       body: "*"
     };
   }
 
-  rpc GetInfo (GetInfoRequest) returns (GetInfoResponse) {
+  rpc GetInfo(GetInfoRequest) returns (GetInfoResponse) {
     option (google.api.http) = {
       get: "/v1/{type}/{name}:info"
     };
   }
 
-  rpc UpdateDataset (UpdateDatasetRequest) returns (google.protobuf.Empty) {
+  rpc UpdateDataset(UpdateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       put: "/v1/{type}/{name}:update"
       body: "*"
     };
   }
 
-  rpc RegisterQueryStats (RegisterQueryStatsRequest) returns (google.protobuf.Empty);
-  
+  rpc RegisterQueryStats(RegisterQueryStatsRequest) returns (google.protobuf.Empty);
+
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
-  
+
   rpc CalculateMetrics(CalculateMetricsRequest) returns (CalculateMetricsResponse);
 }
 

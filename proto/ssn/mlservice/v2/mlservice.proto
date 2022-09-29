@@ -2,13 +2,13 @@ syntax = "proto3";
 
 package ssn.mlservice.v2;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2;mlservice";
-option java_outer_classname = "MlServiceProtos";
-
 import "google/type/date.proto";
+import "ssn/mlservice/v2/example.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
-import "ssn/mlservice/v2/example.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2;mlservice";
+option java_outer_classname = "MlServiceProtos";
 
 // Feature Generation Service
 service MlService {
@@ -26,7 +26,7 @@ message FeatureGenRequest {
     google.type.Date order_date = 4;
     google.type.Date payment_due_date = 5;
     string document_type = 6;
-    string currency = 7; 
+    string currency = 7;
     // NOTE(mde): Should be removed because it is renamed to credit_card_last_four
     string credit_card_number = 8;
     string payment_method = 9;
@@ -81,7 +81,7 @@ message PredictResponse {
   repeated ssn.type.Candidate supplier_country_code = 8;
   repeated ssn.type.Candidate document_type = 9;
   repeated ssn.type.Candidate payment_method = 10;
-   // NOTE(mde): Should be removed because it is renamed to credit_card_last_four
+  // NOTE(mde): Should be removed because it is renamed to credit_card_last_four
   repeated ssn.type.Candidate credit_card_number = 11;
   repeated ssn.type.Candidate invoice_number = 12;
   repeated ssn.type.Candidate ocr_line_dk_type = 13;
