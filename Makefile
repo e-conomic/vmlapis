@@ -46,7 +46,11 @@ all:
 #	buf format -w
 
 	buf generate proto --template buf.gen.all.yaml
-	buf generate proto --template buf.gen.grpc.yaml --exclude-path proto/asgt/type --exclude-path proto/asgt/v2/type --exclude-path proto/ssn/type --exclude-path proto/gen_bq_schema
+	buf generate proto --template buf.gen.grpc.yaml \
+		--exclude-path proto/asgt/type \
+		--exclude-path proto/asgt/v2/type \
+		--exclude-path proto/ssn/type \
+		--exclude-path proto/gen_bq_schema
 
 	buf generate proto --template buf.gen.go.validate.yaml --path proto/asgt/v2
 
@@ -64,4 +68,13 @@ all:
 	buf generate proto --template buf.gen.openapiv2.v1dataservice.yaml --path proto/ssn/dataservice
 	rm buf.gen.openapiv2.v1annotator.yaml buf.gen.openapiv2.v1dataservice.yaml
 
-	buf build proto -o gen/descriptor.bin --path proto/ssn/annotator/v1/annotator.proto --path proto/ssn/access/v1/access.proto --path proto/ssn/dataservice/v1/dataservice.proto --path proto/asgt/jester/v1/jester.proto --path proto/asgt/data/v1/data_service.proto --path proto/asgt/v2/dataset_service.proto --path proto/asgt/v2/suggester_service.proto
+	buf build proto -o gen/descriptor.bin \
+		--path proto/ssn/annotator/v1/annotator.proto \
+		--path proto/ssn/access/v1/access.proto \
+		--path proto/ssn/dataservice/v1/dataservice.proto \
+		--path proto/asgt/jester/v1/jester.proto \
+		--path proto/asgt/data/v1/data_service.proto \
+		--path proto/asgt/v2/dataset_service.proto \
+		--path proto/asgt/v2/suggester_service.proto
+
+	./scripts/gomock.sh
