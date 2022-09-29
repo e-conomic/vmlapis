@@ -1,0 +1,10 @@
+version: v1
+plugins:
+  # pip install grpclib protobuf
+  - name: python_grpc
+    out: gen/python
+  # npm install grpc-tools --global
+  - name: js-ts-grpc
+    out: gen/js
+    opt: import_style=commonjs,mode=grpcwebtext
+    path: grpc_tools_node_protoc_plugin

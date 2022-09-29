@@ -10,17 +10,9 @@ plugins:
       - require_unimplemented_servers=false
   - name: python
     out: gen/python
-  # pip install grpclib protobuf
-  - name: python_grpc
-    out: gen/python
   - name: js
     out: gen/js
     opt: import_style=commonjs,binary
-  # npm install grpc-tools --global
-  - name: js-ts-grpc
-    out: gen/js
-    opt: import_style=commonjs,mode=grpcwebtext
-    path: grpc_tools_node_protoc_plugin
   - name: ts
     out: gen/js
   - name: java
