@@ -9,12 +9,10 @@ import * as jspb from "google-protobuf";
 export class TargetMetrics extends jspb.Message { 
     getTarget(): string;
     setTarget(value: string): TargetMetrics;
-
     clearMetricsList(): void;
     getMetricsList(): Array<TargetMetrics.Metric>;
     setMetricsList(value: Array<TargetMetrics.Metric>): TargetMetrics;
     addMetrics(value?: TargetMetrics.Metric, index?: number): TargetMetrics.Metric;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TargetMetrics.AsObject;
@@ -36,13 +34,10 @@ export namespace TargetMetrics {
     export class Metric extends jspb.Message { 
         getPrecision(): number;
         setPrecision(value: number): Metric;
-
         getConfidence(): number;
         setConfidence(value: number): Metric;
-
         getAnswerRate(): number;
         setAnswerRate(value: number): Metric;
-
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): Metric.AsObject;

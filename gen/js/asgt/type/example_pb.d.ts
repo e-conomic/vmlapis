@@ -14,15 +14,12 @@ export class Example extends jspb.Message {
     clearData(): void;
     getData(): asgt_type_data_pb.Data | undefined;
     setData(value?: asgt_type_data_pb.Data): Example;
-
     clearTargetValuesList(): void;
     getTargetValuesList(): Array<asgt_type_target_value_pb.TargetValue>;
     setTargetValuesList(value: Array<asgt_type_target_value_pb.TargetValue>): Example;
     addTargetValues(value?: asgt_type_target_value_pb.TargetValue, index?: number): asgt_type_target_value_pb.TargetValue;
-
     getId(): string;
     setId(value: string): Example;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Example.AsObject;

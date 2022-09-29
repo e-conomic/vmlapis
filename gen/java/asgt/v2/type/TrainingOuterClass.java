@@ -323,6 +323,8 @@ public final class TrainingOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -659,13 +661,13 @@ public final class TrainingOuterClass {
       if (createdAt_ != null) {
         output.writeMessage(1, getCreatedAt());
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
       }
-      if (!getTrainingStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatus_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, trainingStatus_);
       }
-      if (!getTrainingStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatusMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, trainingStatusMessage_);
       }
       if (finishTime_ != null) {
@@ -690,13 +692,13 @@ public final class TrainingOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreatedAt());
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
       }
-      if (!getTrainingStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatus_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, trainingStatus_);
       }
-      if (!getTrainingStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatusMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, trainingStatusMessage_);
       }
       if (finishTime_ != null) {

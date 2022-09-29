@@ -170,6 +170,8 @@ public final class ExampleOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -328,7 +330,7 @@ public final class ExampleOuterClass {
       for (int i = 0; i < targetValues_.size(); i++) {
         output.writeMessage(2, targetValues_.get(i));
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
       unknownFields.writeTo(output);
@@ -348,7 +350,7 @@ public final class ExampleOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, targetValues_.get(i));
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
       size += unknownFields.getSerializedSize();

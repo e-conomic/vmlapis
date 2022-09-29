@@ -344,6 +344,8 @@ public final class BqEntries {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -756,13 +758,13 @@ public final class BqEntries {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getConsumerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, consumer_);
       }
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, datasetName_);
       }
       for (int i = 0; i < tags_.size(); i++) {
@@ -783,10 +785,10 @@ public final class BqEntries {
       for (int i = 0; i < prediction_.size(); i++) {
         output.writeMessage(10, prediction_.get(i));
       }
-      if (!getDatasetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, datasetId_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, datasetType_);
       }
       unknownFields.writeTo(output);
@@ -798,13 +800,13 @@ public final class BqEntries {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getConsumerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, consumer_);
       }
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, datasetName_);
       }
       {
@@ -835,10 +837,10 @@ public final class BqEntries {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, prediction_.get(i));
       }
-      if (!getDatasetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, datasetId_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, datasetType_);
       }
       size += unknownFields.getSerializedSize();

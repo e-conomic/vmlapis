@@ -14,17 +14,14 @@ export class ScanDocumentRequest extends jspb.Message {
     clearDocument(): void;
     getDocument(): Document | undefined;
     setDocument(value?: Document): ScanDocumentRequest;
-
     clearFeaturesList(): void;
     getFeaturesList(): Array<Feature>;
     setFeaturesList(value: Array<Feature>): ScanDocumentRequest;
     addFeatures(value?: Feature, index?: number): Feature;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): ScanDocumentRequest;
     addTags(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ScanDocumentRequest.AsObject;
@@ -50,7 +47,6 @@ export class ScanDocumentResponse extends jspb.Message {
     setOrderDateList(value: Array<ssn_type_candidate_pb.Candidate>): ScanDocumentResponse;
     addOrderDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ScanDocumentResponse.AsObject;
     static toObject(includeInstance: boolean, msg: ScanDocumentResponse): ScanDocumentResponse.AsObject;
@@ -70,10 +66,8 @@ export namespace ScanDocumentResponse {
 export class Feature extends jspb.Message { 
     getType(): Feature.Type;
     setType(value: Feature.Type): Feature;
-
     getMaxResults(): number;
     setMaxResults(value: number): Feature;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Feature.AsObject;
@@ -124,12 +118,10 @@ export class Document extends jspb.Message {
     getContent_asB64(): string;
     setContent(value: Uint8Array | string): Document;
 
-
     hasSource(): boolean;
     clearSource(): void;
     getSource(): DocumentSource | undefined;
     setSource(value?: DocumentSource): Document;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Document.AsObject;
@@ -151,7 +143,6 @@ export namespace Document {
 export class DocumentSource extends jspb.Message { 
     getHttpUri(): string;
     setHttpUri(value: string): DocumentSource;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DocumentSource.AsObject;

@@ -142,6 +142,8 @@ public final class Annotator {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1745,6 +1747,8 @@ public final class Annotator {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5218,6 +5222,8 @@ public final class Annotator {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7756,10 +7762,10 @@ public final class Annotator {
       for (int i = 0; i < ocrLineNlPaymentId_.size(); i++) {
         output.writeMessage(22, ocrLineNlPaymentId_.get(i));
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, text_);
       }
-      if (!getFeedbackIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedbackId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 24, feedbackId_);
       }
       for (int i = 0; i < iban_.size(); i++) {
@@ -7768,7 +7774,7 @@ public final class Annotator {
       for (int i = 0; i < lines_.size(); i++) {
         output.writeMessage(26, lines_.get(i));
       }
-      if (!getPreviewBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preview_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, preview_);
       }
       for (int i = 0; i < bankAccountNumber_.size(); i++) {
@@ -7898,10 +7904,10 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, ocrLineNlPaymentId_.get(i));
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, text_);
       }
-      if (!getFeedbackIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedbackId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, feedbackId_);
       }
       for (int i = 0; i < iban_.size(); i++) {
@@ -7912,7 +7918,7 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, lines_.get(i));
       }
-      if (!getPreviewBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preview_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, preview_);
       }
       for (int i = 0; i < bankAccountNumber_.size(); i++) {
@@ -21429,6 +21435,8 @@ public final class Annotator {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -22215,6 +22223,8 @@ public final class Annotator {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -22304,7 +22314,7 @@ public final class Annotator {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpUri_);
       }
       unknownFields.writeTo(output);
@@ -22316,7 +22326,7 @@ public final class Annotator {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpUri_);
       }
       size += unknownFields.getSerializedSize();

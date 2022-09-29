@@ -15,49 +15,38 @@ import * as asgt_type_target_value_pb from "../../../asgt/type/target_value_pb";
 export class Entry extends jspb.Message { 
     getId(): string;
     setId(value: string): Entry;
-
     getConsumer(): string;
     setConsumer(value: string): Entry;
-
     getDatasetName(): string;
     setDatasetName(value: string): Entry;
-
     getDatasetType(): string;
     setDatasetType(value: string): Entry;
-
     getDatasetId(): string;
     setDatasetId(value: string): Entry;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): Entry;
     addTags(value: string, index?: number): string;
 
-
     hasData(): boolean;
     clearData(): void;
     getData(): asgt_type_data_pb.Data | undefined;
     setData(value?: asgt_type_data_pb.Data): Entry;
-
     clearTargetValuesList(): void;
     getTargetValuesList(): Array<asgt_type_target_value_pb.TargetValue>;
     setTargetValuesList(value: Array<asgt_type_target_value_pb.TargetValue>): Entry;
     addTargetValues(value?: asgt_type_target_value_pb.TargetValue, index?: number): asgt_type_target_value_pb.TargetValue;
 
-
     hasModel(): boolean;
     clearModel(): void;
     getModel(): asgt_type_model_pb.Model | undefined;
     setModel(value?: asgt_type_model_pb.Model): Entry;
-
     clearPredictionList(): void;
     getPredictionList(): Array<asgt_type_prediction_pb.Prediction.Target>;
     setPredictionList(value: Array<asgt_type_prediction_pb.Prediction.Target>): Entry;
     addPrediction(value?: asgt_type_prediction_pb.Prediction.Target, index?: number): asgt_type_prediction_pb.Prediction.Target;
-
     getTimeAdded(): number;
     setTimeAdded(value: number): Entry;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Entry.AsObject;

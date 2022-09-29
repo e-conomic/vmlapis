@@ -11,19 +11,14 @@ export class RasterizePdfRequest extends jspb.Message {
     getData_asU8(): Uint8Array;
     getData_asB64(): string;
     setData(value: Uint8Array | string): RasterizePdfRequest;
-
     getDpi(): number;
     setDpi(value: number): RasterizePdfRequest;
-
     getFormat(): RasterizePdfRequest.Format;
     setFormat(value: RasterizePdfRequest.Format): RasterizePdfRequest;
-
     getColor(): RasterizePdfRequest.ColorSpace;
     setColor(value: RasterizePdfRequest.ColorSpace): RasterizePdfRequest;
-
     getPages(): RasterizePdfRequest.PageOption;
     setPages(value: RasterizePdfRequest.PageOption): RasterizePdfRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RasterizePdfRequest.AsObject;
@@ -67,21 +62,16 @@ export namespace RasterizePdfRequest {
 export class RasterizePdfResponse extends jspb.Message { 
     getIndex(): number;
     setIndex(value: number): RasterizePdfResponse;
-
     getData(): Uint8Array | string;
     getData_asU8(): Uint8Array;
     getData_asB64(): string;
     setData(value: Uint8Array | string): RasterizePdfResponse;
-
     getWidth(): number;
     setWidth(value: number): RasterizePdfResponse;
-
     getHeight(): number;
     setHeight(value: number): RasterizePdfResponse;
-
     getScale(): number;
     setScale(value: number): RasterizePdfResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RasterizePdfResponse.AsObject;

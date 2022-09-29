@@ -13,29 +13,22 @@ export class Model extends jspb.Message {
     getVersion(): number;
     setVersion(value: number): Model;
 
-
     hasCreatedAt(): boolean;
     clearCreatedAt(): void;
     getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
     setCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): Model;
-
     getDatasetSize(): number;
     setDatasetSize(value: number): Model;
-
     getTrainingSize(): number;
     setTrainingSize(value: number): Model;
-
     clearConfidenceScoresList(): void;
     getConfidenceScoresList(): Array<asgt_type_target_metrics_pb.TargetMetrics>;
     setConfidenceScoresList(value: Array<asgt_type_target_metrics_pb.TargetMetrics>): Model;
     addConfidenceScores(value?: asgt_type_target_metrics_pb.TargetMetrics, index?: number): asgt_type_target_metrics_pb.TargetMetrics;
-
     getInputType(): Model.InputType;
     setInputType(value: Model.InputType): Model;
-
     getDatasetType(): string;
     setDatasetType(value: string): Model;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Model.AsObject;

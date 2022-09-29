@@ -167,6 +167,8 @@ public final class TextAnnotationOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -301,6 +303,8 @@ public final class TextAnnotationOuterClass {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -401,10 +405,10 @@ public final class TextAnnotationOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getLanguageCodeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, languageCode_);
         }
-        if (confidence_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
           output.writeFloat(2, confidence_);
         }
         unknownFields.writeTo(output);
@@ -416,10 +420,10 @@ public final class TextAnnotationOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getLanguageCodeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, languageCode_);
         }
-        if (confidence_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(2, confidence_);
         }
@@ -1018,6 +1022,8 @@ public final class TextAnnotationOuterClass {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -1930,6 +1936,8 @@ public final class TextAnnotationOuterClass {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -3070,7 +3078,7 @@ public final class TextAnnotationOuterClass {
       for (int i = 0; i < pages_.size(); i++) {
         output.writeMessage(1, pages_.get(i));
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
       unknownFields.writeTo(output);
@@ -3086,7 +3094,7 @@ public final class TextAnnotationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, pages_.get(i));
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
       }
       size += unknownFields.getSerializedSize();
@@ -4089,6 +4097,8 @@ public final class TextAnnotationOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4284,7 +4294,7 @@ public final class TextAnnotationOuterClass {
       for (int i = 0; i < blocks_.size(); i++) {
         output.writeMessage(4, blocks_.get(i));
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         output.writeFloat(5, confidence_);
       }
       unknownFields.writeTo(output);
@@ -4312,7 +4322,7 @@ public final class TextAnnotationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, blocks_.get(i));
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(5, confidence_);
       }
@@ -5623,6 +5633,8 @@ public final class TextAnnotationOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6089,7 +6101,7 @@ public final class TextAnnotationOuterClass {
       if (blockType_ != ssn.type.TextAnnotationOuterClass.Block.BlockType.UNKNOWN.getNumber()) {
         output.writeEnum(4, blockType_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         output.writeFloat(5, confidence_);
       }
       unknownFields.writeTo(output);
@@ -6117,7 +6129,7 @@ public final class TextAnnotationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, blockType_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(5, confidence_);
       }
@@ -7677,6 +7689,8 @@ public final class TextAnnotationOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7917,7 +7931,7 @@ public final class TextAnnotationOuterClass {
       for (int i = 0; i < words_.size(); i++) {
         output.writeMessage(3, words_.get(i));
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         output.writeFloat(4, confidence_);
       }
       unknownFields.writeTo(output);
@@ -7941,7 +7955,7 @@ public final class TextAnnotationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, words_.get(i));
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, confidence_);
       }
@@ -9423,6 +9437,8 @@ public final class TextAnnotationOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9668,7 +9684,7 @@ public final class TextAnnotationOuterClass {
       for (int i = 0; i < symbols_.size(); i++) {
         output.writeMessage(3, symbols_.get(i));
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         output.writeFloat(4, confidence_);
       }
       unknownFields.writeTo(output);
@@ -9692,7 +9708,7 @@ public final class TextAnnotationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, symbols_.get(i));
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, confidence_);
       }
@@ -11159,6 +11175,8 @@ public final class TextAnnotationOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11379,10 +11397,10 @@ public final class TextAnnotationOuterClass {
       if (boundingBox_ != null) {
         output.writeMessage(2, getBoundingBox());
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, text_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         output.writeFloat(4, confidence_);
       }
       unknownFields.writeTo(output);
@@ -11402,10 +11420,10 @@ public final class TextAnnotationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBoundingBox());
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, text_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, confidence_);
       }

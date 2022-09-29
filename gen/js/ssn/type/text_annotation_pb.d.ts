@@ -12,10 +12,8 @@ export class TextAnnotation extends jspb.Message {
     getPagesList(): Array<Page>;
     setPagesList(value: Array<Page>): TextAnnotation;
     addPages(value?: Page, index?: number): Page;
-
     getText(): string;
     setText(value: string): TextAnnotation;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TextAnnotation.AsObject;
@@ -37,10 +35,8 @@ export namespace TextAnnotation {
     export class DetectedLanguage extends jspb.Message { 
         getLanguageCode(): string;
         setLanguageCode(value: string): DetectedLanguage;
-
         getConfidence(): number;
         setConfidence(value: number): DetectedLanguage;
-
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): DetectedLanguage.AsObject;
@@ -62,10 +58,8 @@ export namespace TextAnnotation {
     export class DetectedBreak extends jspb.Message { 
         getType(): TextAnnotation.DetectedBreak.BreakType;
         setType(value: TextAnnotation.DetectedBreak.BreakType): DetectedBreak;
-
         getIsPrefix(): boolean;
         setIsPrefix(value: boolean): DetectedBreak;
-
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): DetectedBreak.AsObject;
@@ -100,12 +94,10 @@ export namespace TextAnnotation {
         setDetectedLanguagesList(value: Array<TextAnnotation.DetectedLanguage>): TextProperty;
         addDetectedLanguages(value?: TextAnnotation.DetectedLanguage, index?: number): TextAnnotation.DetectedLanguage;
 
-
         hasDetectedBreak(): boolean;
         clearDetectedBreak(): void;
         getDetectedBreak(): TextAnnotation.DetectedBreak | undefined;
         setDetectedBreak(value?: TextAnnotation.DetectedBreak): TextProperty;
-
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): TextProperty.AsObject;
@@ -132,21 +124,16 @@ export class Page extends jspb.Message {
     clearProperty(): void;
     getProperty(): TextAnnotation.TextProperty | undefined;
     setProperty(value?: TextAnnotation.TextProperty): Page;
-
     getWidth(): number;
     setWidth(value: number): Page;
-
     getHeight(): number;
     setHeight(value: number): Page;
-
     clearBlocksList(): void;
     getBlocksList(): Array<Block>;
     setBlocksList(value: Array<Block>): Page;
     addBlocks(value?: Block, index?: number): Block;
-
     getConfidence(): number;
     setConfidence(value: number): Page;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Page.AsObject;
@@ -175,23 +162,18 @@ export class Block extends jspb.Message {
     getProperty(): TextAnnotation.TextProperty | undefined;
     setProperty(value?: TextAnnotation.TextProperty): Block;
 
-
     hasBoundingBox(): boolean;
     clearBoundingBox(): void;
     getBoundingBox(): ssn_type_geometry_pb.BoundingPoly | undefined;
     setBoundingBox(value?: ssn_type_geometry_pb.BoundingPoly): Block;
-
     clearParagraphsList(): void;
     getParagraphsList(): Array<Paragraph>;
     setParagraphsList(value: Array<Paragraph>): Block;
     addParagraphs(value?: Paragraph, index?: number): Paragraph;
-
     getBlockType(): Block.BlockType;
     setBlockType(value: Block.BlockType): Block;
-
     getConfidence(): number;
     setConfidence(value: number): Block;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Block.AsObject;
@@ -230,20 +212,16 @@ export class Paragraph extends jspb.Message {
     getProperty(): TextAnnotation.TextProperty | undefined;
     setProperty(value?: TextAnnotation.TextProperty): Paragraph;
 
-
     hasBoundingBox(): boolean;
     clearBoundingBox(): void;
     getBoundingBox(): ssn_type_geometry_pb.BoundingPoly | undefined;
     setBoundingBox(value?: ssn_type_geometry_pb.BoundingPoly): Paragraph;
-
     clearWordsList(): void;
     getWordsList(): Array<Word>;
     setWordsList(value: Array<Word>): Paragraph;
     addWords(value?: Word, index?: number): Word;
-
     getConfidence(): number;
     setConfidence(value: number): Paragraph;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Paragraph.AsObject;
@@ -271,20 +249,16 @@ export class Word extends jspb.Message {
     getProperty(): TextAnnotation.TextProperty | undefined;
     setProperty(value?: TextAnnotation.TextProperty): Word;
 
-
     hasBoundingBox(): boolean;
     clearBoundingBox(): void;
     getBoundingBox(): ssn_type_geometry_pb.BoundingPoly | undefined;
     setBoundingBox(value?: ssn_type_geometry_pb.BoundingPoly): Word;
-
     clearSymbolsList(): void;
     getSymbolsList(): Array<Symbol>;
     setSymbolsList(value: Array<Symbol>): Word;
     addSymbols(value?: Symbol, index?: number): Symbol;
-
     getConfidence(): number;
     setConfidence(value: number): Word;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Word.AsObject;
@@ -312,18 +286,14 @@ export class Symbol extends jspb.Message {
     getProperty(): TextAnnotation.TextProperty | undefined;
     setProperty(value?: TextAnnotation.TextProperty): Symbol;
 
-
     hasBoundingBox(): boolean;
     clearBoundingBox(): void;
     getBoundingBox(): ssn_type_geometry_pb.BoundingPoly | undefined;
     setBoundingBox(value?: ssn_type_geometry_pb.BoundingPoly): Symbol;
-
     getText(): string;
     setText(value: string): Symbol;
-
     getConfidence(): number;
     setConfidence(value: number): Symbol;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Symbol.AsObject;

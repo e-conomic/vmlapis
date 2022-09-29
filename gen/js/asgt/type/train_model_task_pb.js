@@ -13,7 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js');
 goog.object.extend(proto, asgt_type_dataset_pb);

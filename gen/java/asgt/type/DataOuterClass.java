@@ -238,6 +238,8 @@ public final class DataOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -496,16 +498,16 @@ public final class DataOuterClass {
       if (supplier_ != null) {
         output.writeMessage(2, getSupplier());
       }
-      if (!getCustomerRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerRef_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customerRef_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, currency_);
       }
-      if (total_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(total_) != 0) {
         output.writeFloat(7, total_);
       }
       unknownFields.writeTo(output);
@@ -525,16 +527,16 @@ public final class DataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSupplier());
       }
-      if (!getCustomerRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerRef_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customerRef_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, currency_);
       }
-      if (total_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(total_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(7, total_);
       }
@@ -1662,6 +1664,8 @@ public final class DataOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1789,10 +1793,10 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, text_);
       }
-      if (!getItemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, itemId_);
       }
       unknownFields.writeTo(output);
@@ -1804,10 +1808,10 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, text_);
       }
-      if (!getItemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, itemId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2479,6 +2483,8 @@ public final class DataOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2652,13 +2658,13 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getGlobalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, globalId_);
       }
       unknownFields.writeTo(output);
@@ -2670,13 +2676,13 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getGlobalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, globalId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3416,6 +3422,8 @@ public final class DataOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3512,10 +3520,10 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         output.writeFloat(2, amount_);
       }
       unknownFields.writeTo(output);
@@ -3527,10 +3535,10 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, amount_);
       }
@@ -4190,6 +4198,8 @@ public final class DataOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

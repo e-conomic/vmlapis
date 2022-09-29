@@ -19,33 +19,26 @@ export class RegisterModelRequest extends jspb.Message {
     getDataset(): asgt_type_dataset_pb.Dataset | undefined;
     setDataset(value?: asgt_type_dataset_pb.Dataset): RegisterModelRequest;
 
-
     hasRevision(): boolean;
     clearRevision(): void;
     getRevision(): asgt_type_revision_pb.Revision | undefined;
     setRevision(value?: asgt_type_revision_pb.Revision): RegisterModelRequest;
-
     getModelVersion(): number;
     setModelVersion(value: number): RegisterModelRequest;
 
-
     getMetricsMap(): jspb.Map<string, number>;
     clearMetricsMap(): void;
-
     clearTargetMetricsList(): void;
     getTargetMetricsList(): Array<asgt_type_target_metrics_pb.TargetMetrics>;
     setTargetMetricsList(value: Array<asgt_type_target_metrics_pb.TargetMetrics>): RegisterModelRequest;
     addTargetMetrics(value?: asgt_type_target_metrics_pb.TargetMetrics, index?: number): asgt_type_target_metrics_pb.TargetMetrics;
-
     getInputType(): asgt_type_model_pb.Model.InputType;
     setInputType(value: asgt_type_model_pb.Model.InputType): RegisterModelRequest;
-
 
     hasTrainStatistics(): boolean;
     clearTrainStatistics(): void;
     getTrainStatistics(): asgt_type_train_statistics_pb.TrainStatistics | undefined;
     setTrainStatistics(value?: asgt_type_train_statistics_pb.TrainStatistics): RegisterModelRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RegisterModelRequest.AsObject;
@@ -77,7 +70,6 @@ export class GetCurrentModelRequest extends jspb.Message {
     getDataset(): asgt_type_dataset_pb.Dataset | undefined;
     setDataset(value?: asgt_type_dataset_pb.Dataset): GetCurrentModelRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetCurrentModelRequest.AsObject;
     static toObject(includeInstance: boolean, msg: GetCurrentModelRequest): GetCurrentModelRequest.AsObject;
@@ -100,7 +92,6 @@ export class GetCurrentModelResponse extends jspb.Message {
     clearModel(): void;
     getModel(): asgt_type_model_pb.Model | undefined;
     setModel(value?: asgt_type_model_pb.Model): GetCurrentModelResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetCurrentModelResponse.AsObject;

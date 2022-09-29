@@ -9,10 +9,8 @@ import * as jspb from "google-protobuf";
 export class ValetKeyRequest extends jspb.Message { 
     getSub(): string;
     setSub(value: string): ValetKeyRequest;
-
     getExp(): number;
     setExp(value: number): ValetKeyRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ValetKeyRequest.AsObject;
@@ -34,10 +32,8 @@ export namespace ValetKeyRequest {
 export class ValetKeyResponse extends jspb.Message { 
     getId(): string;
     setId(value: string): ValetKeyResponse;
-
     getToken(): string;
     setToken(value: string): ValetKeyResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ValetKeyResponse.AsObject;

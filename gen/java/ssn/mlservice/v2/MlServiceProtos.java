@@ -149,6 +149,8 @@ public final class MlServiceProtos {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -868,6 +870,8 @@ public final class MlServiceProtos {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -2048,13 +2052,13 @@ public final class MlServiceProtos {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (totalInclVat_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(totalInclVat_) != 0) {
           output.writeDouble(1, totalInclVat_);
         }
-        if (totalVat_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(totalVat_) != 0) {
           output.writeDouble(2, totalVat_);
         }
-        if (totalExclVat_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(totalExclVat_) != 0) {
           output.writeDouble(3, totalExclVat_);
         }
         if (orderDate_ != null) {
@@ -2063,88 +2067,88 @@ public final class MlServiceProtos {
         if (paymentDueDate_ != null) {
           output.writeMessage(5, getPaymentDueDate());
         }
-        if (!getDocumentTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentType_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, documentType_);
         }
-        if (!getCurrencyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 7, currency_);
         }
-        if (!getCreditCardNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 8, creditCardNumber_);
         }
-        if (!getPaymentMethodBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentMethod_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 9, paymentMethod_);
         }
-        if (!getOcrLineDkTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineDkType_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 10, ocrLineDkType_);
         }
-        if (!getOcrLineDkPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineDkPaymentId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 11, ocrLineDkPaymentId_);
         }
-        if (!getOcrLineDkCreditorIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineDkCreditorId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 12, ocrLineDkCreditorId_);
         }
-        if (!getOcrLineSePaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineSePaymentId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 13, ocrLineSePaymentId_);
         }
-        if (!getOcrLineSeBankgiroCreditorIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineSeBankgiroCreditorId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 14, ocrLineSeBankgiroCreditorId_);
         }
-        if (!getOcrLineSePlusgiroCreditorIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineSePlusgiroCreditorId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 15, ocrLineSePlusgiroCreditorId_);
         }
-        if (!getOcrLineNoPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineNoPaymentId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 16, ocrLineNoPaymentId_);
         }
-        if (!getOcrLineFiPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineFiPaymentId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 17, ocrLineFiPaymentId_);
         }
-        if (!getOcrLineNlPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineNlPaymentId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 18, ocrLineNlPaymentId_);
         }
-        if (!getSupplierCorporateIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierCorporateId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 19, supplierCorporateId_);
         }
-        if (!getSupplierCountryCodeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierCountryCode_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 20, supplierCountryCode_);
         }
-        if (!getInvoiceNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 21, invoiceNumber_);
         }
-        if (!getIbanBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iban_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 22, iban_);
         }
-        if (!getBankAccountNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bankAccountNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 23, bankAccountNumber_);
         }
-        if (!getBankRegistrationNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bankRegistrationNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 24, bankRegistrationNumber_);
         }
-        if (!getSupplierNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierName_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 25, supplierName_);
         }
-        if (!getBicBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bic_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 26, bic_);
         }
-        if (!getDocumentNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 27, documentNumber_);
         }
         if (documentDate_ != null) {
           output.writeMessage(28, getDocumentDate());
         }
-        if (!getOrderNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 29, orderNumber_);
         }
-        if (!getSupplierVatNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierVatNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 30, supplierVatNumber_);
         }
-        if (!getSupplierOrganisationNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierOrganisationNumber_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 31, supplierOrganisationNumber_);
         }
-        if (!getSupplierAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierAddress_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 32, supplierAddress_);
         }
-        if (!getCreditCardLastFourBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardLastFour_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 33, creditCardLastFour_);
         }
         unknownFields.writeTo(output);
@@ -2156,15 +2160,15 @@ public final class MlServiceProtos {
         if (size != -1) return size;
 
         size = 0;
-        if (totalInclVat_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(totalInclVat_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(1, totalInclVat_);
         }
-        if (totalVat_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(totalVat_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(2, totalVat_);
         }
-        if (totalExclVat_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(totalExclVat_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(3, totalExclVat_);
         }
@@ -2176,89 +2180,89 @@ public final class MlServiceProtos {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, getPaymentDueDate());
         }
-        if (!getDocumentTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentType_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, documentType_);
         }
-        if (!getCurrencyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, currency_);
         }
-        if (!getCreditCardNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, creditCardNumber_);
         }
-        if (!getPaymentMethodBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentMethod_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, paymentMethod_);
         }
-        if (!getOcrLineDkTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineDkType_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, ocrLineDkType_);
         }
-        if (!getOcrLineDkPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineDkPaymentId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, ocrLineDkPaymentId_);
         }
-        if (!getOcrLineDkCreditorIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineDkCreditorId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, ocrLineDkCreditorId_);
         }
-        if (!getOcrLineSePaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineSePaymentId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, ocrLineSePaymentId_);
         }
-        if (!getOcrLineSeBankgiroCreditorIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineSeBankgiroCreditorId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, ocrLineSeBankgiroCreditorId_);
         }
-        if (!getOcrLineSePlusgiroCreditorIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineSePlusgiroCreditorId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, ocrLineSePlusgiroCreditorId_);
         }
-        if (!getOcrLineNoPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineNoPaymentId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, ocrLineNoPaymentId_);
         }
-        if (!getOcrLineFiPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineFiPaymentId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, ocrLineFiPaymentId_);
         }
-        if (!getOcrLineNlPaymentIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineNlPaymentId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, ocrLineNlPaymentId_);
         }
-        if (!getSupplierCorporateIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierCorporateId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, supplierCorporateId_);
         }
-        if (!getSupplierCountryCodeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierCountryCode_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, supplierCountryCode_);
         }
-        if (!getInvoiceNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, invoiceNumber_);
         }
-        if (!getIbanBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iban_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, iban_);
         }
-        if (!getBankAccountNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bankAccountNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, bankAccountNumber_);
         }
-        if (!getBankRegistrationNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bankRegistrationNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, bankRegistrationNumber_);
         }
-        if (!getSupplierNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierName_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, supplierName_);
         }
-        if (!getBicBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bic_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, bic_);
         }
-        if (!getDocumentNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, documentNumber_);
         }
         if (documentDate_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(28, getDocumentDate());
         }
-        if (!getOrderNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, orderNumber_);
         }
-        if (!getSupplierVatNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierVatNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, supplierVatNumber_);
         }
-        if (!getSupplierOrganisationNumberBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierOrganisationNumber_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, supplierOrganisationNumber_);
         }
-        if (!getSupplierAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplierAddress_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, supplierAddress_);
         }
-        if (!getCreditCardLastFourBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardLastFour_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, creditCardLastFour_);
         }
         size += unknownFields.getSerializedSize();
@@ -5609,7 +5613,7 @@ public final class MlServiceProtos {
       if (textAnnotation_ != null) {
         output.writeMessage(2, getTextAnnotation());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
       unknownFields.writeTo(output);
@@ -5629,7 +5633,7 @@ public final class MlServiceProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTextAnnotation());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -6405,6 +6409,8 @@ public final class MlServiceProtos {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7037,6 +7043,8 @@ public final class MlServiceProtos {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8871,6 +8879,8 @@ public final class MlServiceProtos {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -20937,6 +20947,8 @@ public final class MlServiceProtos {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

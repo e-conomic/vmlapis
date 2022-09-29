@@ -13,21 +13,16 @@ export class TrainModelEvent extends jspb.Message {
     clearDataset(): void;
     getDataset(): asgt_type_dataset_pb.Dataset | undefined;
     setDataset(value?: asgt_type_dataset_pb.Dataset): TrainModelEvent;
-
     getModelVersion(): number;
     setModelVersion(value: number): TrainModelEvent;
-
     getStatus(): string;
     setStatus(value: string): TrainModelEvent;
-
     getStatusMessage(): string;
     setStatusMessage(value: string): TrainModelEvent;
-
     clearArtifactsList(): void;
     getArtifactsList(): Array<TrainModelEvent.Artifact>;
     setArtifactsList(value: Array<TrainModelEvent.Artifact>): TrainModelEvent;
     addArtifacts(value?: TrainModelEvent.Artifact, index?: number): TrainModelEvent.Artifact;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TrainModelEvent.AsObject;
@@ -52,10 +47,8 @@ export namespace TrainModelEvent {
     export class Artifact extends jspb.Message { 
         getType(): string;
         setType(value: string): Artifact;
-
         getPath(): string;
         setPath(value: string): Artifact;
-
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): Artifact.AsObject;

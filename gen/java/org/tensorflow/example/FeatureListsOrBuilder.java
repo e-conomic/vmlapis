@@ -47,9 +47,11 @@ public interface FeatureListsOrBuilder extends
    * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
    */
 
-  org.tensorflow.example.FeatureList getFeatureListOrDefault(
+  /* nullable */
+org.tensorflow.example.FeatureList getFeatureListOrDefault(
       java.lang.String key,
-      org.tensorflow.example.FeatureList defaultValue);
+      /* nullable */
+org.tensorflow.example.FeatureList defaultValue);
   /**
    * <pre>
    * Map from feature name to feature list.

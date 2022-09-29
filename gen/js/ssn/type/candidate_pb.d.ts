@@ -12,12 +12,10 @@ export class Confidence extends jspb.Message {
     getLevel(): Confidence.Level;
     setLevel(value: Confidence.Level): Confidence;
 
-
     hasValue(): boolean;
     clearValue(): void;
     getValue(): google_protobuf_wrappers_pb.FloatValue | undefined;
     setValue(value?: google_protobuf_wrappers_pb.FloatValue): Confidence;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Confidence.AsObject;
@@ -49,34 +47,27 @@ export namespace Confidence {
 export class Candidate extends jspb.Message { 
     getValue(): string;
     setValue(value: string): Candidate;
-
     getText(): string;
     setText(value: string): Candidate;
-
 
     hasConfidence(): boolean;
     clearConfidence(): void;
     getConfidence(): Confidence | undefined;
     setConfidence(value?: Confidence): Candidate;
 
-
     hasBoundingBox(): boolean;
     clearBoundingBox(): void;
     getBoundingBox(): ssn_type_geometry_pb.BoundingPoly | undefined;
     setBoundingBox(value?: ssn_type_geometry_pb.BoundingPoly): Candidate;
-
     getType(): Candidate.Type;
     setType(value: Candidate.Type): Candidate;
-
     getPageRef(): number;
     setPageRef(value: number): Candidate;
-
 
     hasModelMetadata(): boolean;
     clearModelMetadata(): void;
     getModelMetadata(): ModelSpec | undefined;
     setModelMetadata(value?: ModelSpec): Candidate;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Candidate.AsObject;
@@ -111,12 +102,10 @@ export class ModelSpec extends jspb.Message {
     getModelName(): string;
     setModelName(value: string): ModelSpec;
 
-
     hasModelVer(): boolean;
     clearModelVer(): void;
     getModelVer(): google_protobuf_wrappers_pb.Int64Value | undefined;
     setModelVer(value?: google_protobuf_wrappers_pb.Int64Value): ModelSpec;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ModelSpec.AsObject;
@@ -138,13 +127,10 @@ export namespace ModelSpec {
 export class LineCandidate extends jspb.Message { 
     getText(): string;
     setText(value: string): LineCandidate;
-
     getAmount(): number;
     setAmount(value: number): LineCandidate;
-
     getPageRef(): number;
     setPageRef(value: number): LineCandidate;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): LineCandidate.AsObject;

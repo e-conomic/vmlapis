@@ -128,6 +128,8 @@ public final class TargetMetricsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -245,6 +247,8 @@ public final class TargetMetricsOuterClass {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -313,13 +317,13 @@ public final class TargetMetricsOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (precision_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(precision_) != 0) {
           output.writeFloat(1, precision_);
         }
-        if (confidence_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
           output.writeFloat(2, confidence_);
         }
-        if (answerRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(answerRate_) != 0) {
           output.writeFloat(3, answerRate_);
         }
         unknownFields.writeTo(output);
@@ -331,15 +335,15 @@ public final class TargetMetricsOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (precision_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(precision_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(1, precision_);
         }
-        if (confidence_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(2, confidence_);
         }
-        if (answerRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(answerRate_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(3, answerRate_);
         }
@@ -878,7 +882,7 @@ public final class TargetMetricsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(target_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, target_);
       }
       for (int i = 0; i < metrics_.size(); i++) {
@@ -893,7 +897,7 @@ public final class TargetMetricsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(target_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, target_);
       }
       for (int i = 0; i < metrics_.size(); i++) {

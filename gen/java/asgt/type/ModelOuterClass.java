@@ -207,6 +207,8 @@ public final class ModelOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -527,7 +529,7 @@ public final class ModelOuterClass {
       if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
         output.writeEnum(8, inputType_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, datasetType_);
       }
       unknownFields.writeTo(output);
@@ -563,7 +565,7 @@ public final class ModelOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, inputType_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, datasetType_);
       }
       size += unknownFields.getSerializedSize();

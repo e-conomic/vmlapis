@@ -14,10 +14,8 @@ import * as asgt_v2_type_data_pb from "../../asgt/v2/type/data_pb";
 export class SuggestOptions extends jspb.Message { 
     getSuggestLimit(): number;
     setSuggestLimit(value: number): SuggestOptions;
-
     getMinConfidence(): asgt_type_prediction_pb.Confidence.Level;
     setMinConfidence(value: asgt_type_prediction_pb.Confidence.Level): SuggestOptions;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SuggestOptions.AsObject;
@@ -40,18 +38,15 @@ export class SuggestRequest extends jspb.Message {
     getDatasetName(): string;
     setDatasetName(value: string): SuggestRequest;
 
-
     hasInput(): boolean;
     clearInput(): void;
     getInput(): asgt_v2_type_data_pb.Data | undefined;
     setInput(value?: asgt_v2_type_data_pb.Data): SuggestRequest;
 
-
     hasOptions(): boolean;
     clearOptions(): void;
     getOptions(): SuggestOptions | undefined;
     setOptions(value?: SuggestOptions): SuggestRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SuggestRequest.AsObject;
@@ -78,12 +73,10 @@ export class SuggestResponse extends jspb.Message {
     getPrediction(): asgt_type_prediction_pb.Prediction | undefined;
     setPrediction(value?: asgt_type_prediction_pb.Prediction): SuggestResponse;
 
-
     hasModel(): boolean;
     clearModel(): void;
     getModel(): asgt_type_model_pb.Model | undefined;
     setModel(value?: asgt_type_model_pb.Model): SuggestResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SuggestResponse.AsObject;
@@ -105,18 +98,15 @@ export namespace SuggestResponse {
 export class BatchSuggestRequest extends jspb.Message { 
     getDatasetName(): string;
     setDatasetName(value: string): BatchSuggestRequest;
-
     clearInputsList(): void;
     getInputsList(): Array<asgt_v2_type_data_pb.Data>;
     setInputsList(value: Array<asgt_v2_type_data_pb.Data>): BatchSuggestRequest;
     addInputs(value?: asgt_v2_type_data_pb.Data, index?: number): asgt_v2_type_data_pb.Data;
 
-
     hasOptions(): boolean;
     clearOptions(): void;
     getOptions(): SuggestOptions | undefined;
     setOptions(value?: SuggestOptions): BatchSuggestRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): BatchSuggestRequest.AsObject;
@@ -142,12 +132,10 @@ export class BatchSuggestResponse extends jspb.Message {
     setPredictionsList(value: Array<asgt_type_prediction_pb.Prediction>): BatchSuggestResponse;
     addPredictions(value?: asgt_type_prediction_pb.Prediction, index?: number): asgt_type_prediction_pb.Prediction;
 
-
     hasModel(): boolean;
     clearModel(): void;
     getModel(): asgt_type_model_pb.Model | undefined;
     setModel(value?: asgt_type_model_pb.Model): BatchSuggestResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): BatchSuggestResponse.AsObject;

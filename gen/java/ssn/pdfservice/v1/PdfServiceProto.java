@@ -151,6 +151,8 @@ public final class PdfServiceProto {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1368,6 +1370,8 @@ public final class PdfServiceProto {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1474,7 +1478,7 @@ public final class PdfServiceProto {
       if (height_ != 0) {
         output.writeUInt32(4, height_);
       }
-      if (scale_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(scale_) != 0) {
         output.writeDouble(5, scale_);
       }
       unknownFields.writeTo(output);
@@ -1502,7 +1506,7 @@ public final class PdfServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, height_);
       }
-      if (scale_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(scale_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(5, scale_);
       }

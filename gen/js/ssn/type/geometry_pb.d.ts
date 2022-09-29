@@ -9,10 +9,8 @@ import * as jspb from "google-protobuf";
 export class Vertex extends jspb.Message { 
     getX(): number;
     setX(value: number): Vertex;
-
     getY(): number;
     setY(value: number): Vertex;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Vertex.AsObject;
@@ -34,10 +32,8 @@ export namespace Vertex {
 export class NormalizedVertex extends jspb.Message { 
     getX(): number;
     setX(value: number): NormalizedVertex;
-
     getY(): number;
     setY(value: number): NormalizedVertex;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): NormalizedVertex.AsObject;
@@ -61,12 +57,10 @@ export class BoundingPoly extends jspb.Message {
     getVerticesList(): Array<Vertex>;
     setVerticesList(value: Array<Vertex>): BoundingPoly;
     addVertices(value?: Vertex, index?: number): Vertex;
-
     clearNormalizedVerticesList(): void;
     getNormalizedVerticesList(): Array<NormalizedVertex>;
     setNormalizedVerticesList(value: Array<NormalizedVertex>): BoundingPoly;
     addNormalizedVertices(value?: NormalizedVertex, index?: number): NormalizedVertex;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): BoundingPoly.AsObject;

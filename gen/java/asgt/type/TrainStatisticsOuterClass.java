@@ -123,6 +123,8 @@ public final class TrainStatisticsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -226,10 +228,10 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClassNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, className_);
       }
-      if (relativeDatasetProportion_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(relativeDatasetProportion_) != 0) {
         output.writeFloat(2, relativeDatasetProportion_);
       }
       if (absoluteDatasetProportion_ != 0) {
@@ -244,10 +246,10 @@ public final class TrainStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClassNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, className_);
       }
-      if (relativeDatasetProportion_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(relativeDatasetProportion_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, relativeDatasetProportion_);
       }
@@ -879,6 +881,8 @@ public final class TrainStatisticsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1789,6 +1793,8 @@ public final class TrainStatisticsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2039,13 +2045,13 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFeatureNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(featureName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, featureName_);
       }
       if (featureType_ != asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.INT.getNumber()) {
         output.writeEnum(2, featureType_);
       }
-      if (informationGain_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(informationGain_) != 0) {
         output.writeFloat(3, informationGain_);
       }
       unknownFields.writeTo(output);
@@ -2057,14 +2063,14 @@ public final class TrainStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFeatureNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(featureName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, featureName_);
       }
       if (featureType_ != asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.INT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, featureType_);
       }
-      if (informationGain_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(informationGain_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, informationGain_);
       }
@@ -2722,6 +2728,8 @@ public final class TrainStatisticsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3556,9 +3564,11 @@ public final class TrainStatisticsOuterClass {
      * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
 
-    asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
+    /* nullable */
+asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
         java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue);
+        /* nullable */
+asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue);
     /**
      * <pre>
      * target statistics for each target (classification task)
@@ -3610,9 +3620,11 @@ public final class TrainStatisticsOuterClass {
      * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
 
-    asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
+    /* nullable */
+asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
         java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
+        /* nullable */
+asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
     /**
      * <pre>
      * feature statistics for each target (classification task)
@@ -3722,6 +3734,8 @@ public final class TrainStatisticsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3794,7 +3808,7 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public boolean containsTargetStatsByTarget(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetTargetStatsByTarget().getMap().containsKey(key);
     }
     /**
@@ -3829,7 +3843,7 @@ public final class TrainStatisticsOuterClass {
     public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
         java.lang.String key,
         asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> map =
           internalGetTargetStatsByTarget().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3845,7 +3859,7 @@ public final class TrainStatisticsOuterClass {
 
     public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> map =
           internalGetTargetStatsByTarget().getMap();
       if (!map.containsKey(key)) {
@@ -3891,7 +3905,7 @@ public final class TrainStatisticsOuterClass {
     @java.lang.Override
     public boolean containsFeatureStatsByTarget(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetFeatureStatsByTarget().getMap().containsKey(key);
     }
     /**
@@ -3926,7 +3940,7 @@ public final class TrainStatisticsOuterClass {
     public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
         java.lang.String key,
         asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> map =
           internalGetFeatureStatsByTarget().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3942,7 +3956,7 @@ public final class TrainStatisticsOuterClass {
 
     public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> map =
           internalGetFeatureStatsByTarget().getMap();
       if (!map.containsKey(key)) {
@@ -3992,7 +4006,7 @@ public final class TrainStatisticsOuterClass {
           internalGetFeatureStatsByTarget(),
           FeatureStatsByTargetDefaultEntryHolder.defaultEntry,
           2);
-      if (similarityIndex_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
         output.writeFloat(3, similarityIndex_);
       }
       unknownFields.writeTo(output);
@@ -4024,7 +4038,7 @@ public final class TrainStatisticsOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, featureStatsByTarget__);
       }
-      if (similarityIndex_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, similarityIndex_);
       }
@@ -4389,7 +4403,7 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public boolean containsTargetStatsByTarget(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetTargetStatsByTarget().getMap().containsKey(key);
       }
       /**
@@ -4424,7 +4438,7 @@ public final class TrainStatisticsOuterClass {
       public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
           java.lang.String key,
           asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> map =
             internalGetTargetStatsByTarget().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4440,7 +4454,7 @@ public final class TrainStatisticsOuterClass {
 
       public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> map =
             internalGetTargetStatsByTarget().getMap();
         if (!map.containsKey(key)) {
@@ -4464,7 +4478,7 @@ public final class TrainStatisticsOuterClass {
 
       public Builder removeTargetStatsByTarget(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableTargetStatsByTarget().getMutableMap()
             .remove(key);
         return this;
@@ -4487,8 +4501,11 @@ public final class TrainStatisticsOuterClass {
       public Builder putTargetStatsByTarget(
           java.lang.String key,
           asgt.type.TrainStatisticsOuterClass.TargetStats value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableTargetStatsByTarget().getMutableMap()
             .put(key, value);
         return this;
@@ -4545,7 +4562,7 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public boolean containsFeatureStatsByTarget(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetFeatureStatsByTarget().getMap().containsKey(key);
       }
       /**
@@ -4580,7 +4597,7 @@ public final class TrainStatisticsOuterClass {
       public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
           java.lang.String key,
           asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> map =
             internalGetFeatureStatsByTarget().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4596,7 +4613,7 @@ public final class TrainStatisticsOuterClass {
 
       public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> map =
             internalGetFeatureStatsByTarget().getMap();
         if (!map.containsKey(key)) {
@@ -4620,7 +4637,7 @@ public final class TrainStatisticsOuterClass {
 
       public Builder removeFeatureStatsByTarget(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableFeatureStatsByTarget().getMutableMap()
             .remove(key);
         return this;
@@ -4643,8 +4660,11 @@ public final class TrainStatisticsOuterClass {
       public Builder putFeatureStatsByTarget(
           java.lang.String key,
           asgt.type.TrainStatisticsOuterClass.FeatureStats value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableFeatureStatsByTarget().getMutableMap()
             .put(key, value);
         return this;

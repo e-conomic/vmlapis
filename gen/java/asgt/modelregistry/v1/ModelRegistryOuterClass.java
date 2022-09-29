@@ -269,6 +269,8 @@ public final class ModelRegistryOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -401,7 +403,7 @@ public final class ModelRegistryOuterClass {
     @java.lang.Override
     public boolean containsMetrics(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetrics().getMap().containsKey(key);
     }
     /**
@@ -428,7 +430,7 @@ public final class ModelRegistryOuterClass {
     public int getMetricsOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetMetrics().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -440,7 +442,7 @@ public final class ModelRegistryOuterClass {
 
     public int getMetricsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetMetrics().getMap();
       if (!map.containsKey(key)) {
@@ -1351,7 +1353,7 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public boolean containsMetrics(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetrics().getMap().containsKey(key);
       }
       /**
@@ -1378,7 +1380,7 @@ public final class ModelRegistryOuterClass {
       public int getMetricsOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetMetrics().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1390,7 +1392,7 @@ public final class ModelRegistryOuterClass {
 
       public int getMetricsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetMetrics().getMap();
         if (!map.containsKey(key)) {
@@ -1410,7 +1412,7 @@ public final class ModelRegistryOuterClass {
 
       public Builder removeMetrics(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetrics().getMutableMap()
             .remove(key);
         return this;
@@ -1429,7 +1431,7 @@ public final class ModelRegistryOuterClass {
       public Builder putMetrics(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableMetrics().getMutableMap()
             .put(key, value);
@@ -1999,6 +2001,8 @@ public final class ModelRegistryOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2620,6 +2624,8 @@ public final class ModelRegistryOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

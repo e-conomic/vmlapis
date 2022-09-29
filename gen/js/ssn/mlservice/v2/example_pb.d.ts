@@ -14,7 +14,6 @@ export class Example extends jspb.Message {
     getFeatures(): ssn_mlservice_v2_feature_pb.Features | undefined;
     setFeatures(value?: ssn_mlservice_v2_feature_pb.Features): Example;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Example.AsObject;
     static toObject(includeInstance: boolean, msg: Example): Example.AsObject;
@@ -38,12 +37,10 @@ export class SequenceExample extends jspb.Message {
     getContext(): ssn_mlservice_v2_feature_pb.Features | undefined;
     setContext(value?: ssn_mlservice_v2_feature_pb.Features): SequenceExample;
 
-
     hasFeatureLists(): boolean;
     clearFeatureLists(): void;
     getFeatureLists(): ssn_mlservice_v2_feature_pb.FeatureLists | undefined;
     setFeatureLists(value?: ssn_mlservice_v2_feature_pb.FeatureLists): SequenceExample;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SequenceExample.AsObject;

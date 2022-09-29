@@ -15,10 +15,8 @@ export class GetTextAnnotationRequest extends jspb.Message {
     clearDocument(): void;
     getDocument(): ssn_annotator_v1_annotator_pb.Document | undefined;
     setDocument(value?: ssn_annotator_v1_annotator_pb.Document): GetTextAnnotationRequest;
-
     getPreview(): boolean;
     setPreview(value: boolean): GetTextAnnotationRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetTextAnnotationRequest.AsObject;
@@ -44,12 +42,10 @@ export class GetTextAnnotationResponse extends jspb.Message {
     getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
     setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): GetTextAnnotationResponse;
 
-
     hasImage(): boolean;
     clearImage(): void;
     getImage(): google_protobuf_wrappers_pb.BytesValue | undefined;
     setImage(value?: google_protobuf_wrappers_pb.BytesValue): GetTextAnnotationResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetTextAnnotationResponse.AsObject;
@@ -74,7 +70,6 @@ export class OcrScanImageRequest extends jspb.Message {
     getData_asB64(): string;
     setData(value: Uint8Array | string): OcrScanImageRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): OcrScanImageRequest.AsObject;
     static toObject(includeInstance: boolean, msg: OcrScanImageRequest): OcrScanImageRequest.AsObject;
@@ -94,7 +89,6 @@ export namespace OcrScanImageRequest {
 export class OcrScanImageResponse extends jspb.Message { 
     getTessHocr(): string;
     setTessHocr(value: string): OcrScanImageResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): OcrScanImageResponse.AsObject;

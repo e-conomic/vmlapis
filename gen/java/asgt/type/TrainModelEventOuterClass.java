@@ -186,6 +186,8 @@ public final class TrainModelEventOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -308,6 +310,8 @@ public final class TrainModelEventOuterClass {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -419,10 +423,10 @@ public final class TrainModelEventOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, path_);
         }
         unknownFields.writeTo(output);
@@ -434,10 +438,10 @@ public final class TrainModelEventOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, path_);
         }
         size += unknownFields.getSerializedSize();
@@ -1101,10 +1105,10 @@ public final class TrainModelEventOuterClass {
       if (modelVersion_ != 0L) {
         output.writeInt64(4, modelVersion_);
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
       }
-      if (!getStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, statusMessage_);
       }
       for (int i = 0; i < artifacts_.size(); i++) {
@@ -1127,10 +1131,10 @@ public final class TrainModelEventOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, modelVersion_);
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
       }
-      if (!getStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, statusMessage_);
       }
       for (int i = 0; i < artifacts_.size(); i++) {

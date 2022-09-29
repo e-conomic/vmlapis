@@ -21,17 +21,14 @@ export class CalculateMetricsRequest extends jspb.Message {
     getStartTime(): google_protobuf_timestamp_pb.Timestamp | undefined;
     setStartTime(value?: google_protobuf_timestamp_pb.Timestamp): CalculateMetricsRequest;
 
-
     hasEndTime(): boolean;
     clearEndTime(): void;
     getEndTime(): google_protobuf_timestamp_pb.Timestamp | undefined;
     setEndTime(value?: google_protobuf_timestamp_pb.Timestamp): CalculateMetricsRequest;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): CalculateMetricsRequest;
     addTags(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CalculateMetricsRequest.AsObject;
@@ -57,7 +54,6 @@ export class CalculateMetricsResponse extends jspb.Message {
     setMetricsList(value: Array<CalculateMetricsResponse.MetricRow>): CalculateMetricsResponse;
     addMetrics(value?: CalculateMetricsResponse.MetricRow, index?: number): CalculateMetricsResponse.MetricRow;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CalculateMetricsResponse.AsObject;
     static toObject(includeInstance: boolean, msg: CalculateMetricsResponse): CalculateMetricsResponse.AsObject;
@@ -78,18 +74,14 @@ export namespace CalculateMetricsResponse {
         getTarget(): string;
         setTarget(value: string): MetricRow;
 
-
         hasConfidence(): boolean;
         clearConfidence(): void;
         getConfidence(): google_protobuf_wrappers_pb.FloatValue | undefined;
         setConfidence(value?: google_protobuf_wrappers_pb.FloatValue): MetricRow;
-
         getCorrect(): number;
         setCorrect(value: number): MetricRow;
-
         getIncorrect(): number;
         setIncorrect(value: number): MetricRow;
-
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): MetricRow.AsObject;
@@ -115,31 +107,25 @@ export namespace CalculateMetricsResponse {
 export class CreateRequest extends jspb.Message { 
     getName(): string;
     setName(value: string): CreateRequest;
-
     getType(): string;
     setType(value: string): CreateRequest;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): CreateRequest;
     addTags(value: string, index?: number): string;
-
     clearTargetsList(): void;
     getTargetsList(): Array<string>;
     setTargetsList(value: Array<string>): CreateRequest;
     addTargets(value: string, index?: number): string;
-
     clearSamplesList(): void;
     getSamplesList(): Array<asgt_type_sample_pb.Sample>;
     setSamplesList(value: Array<asgt_type_sample_pb.Sample>): CreateRequest;
     addSamples(value?: asgt_type_sample_pb.Sample, index?: number): asgt_type_sample_pb.Sample;
 
-
     hasRetentionPolicy(): boolean;
     clearRetentionPolicy(): void;
     getRetentionPolicy(): asgt_type_retention_policy_pb.RetentionPolicy | undefined;
     setRetentionPolicy(value?: asgt_type_retention_policy_pb.RetentionPolicy): CreateRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateRequest.AsObject;
@@ -165,15 +151,12 @@ export namespace CreateRequest {
 export class AppendDataRequest extends jspb.Message { 
     getName(): string;
     setName(value: string): AppendDataRequest;
-
     getType(): string;
     setType(value: string): AppendDataRequest;
-
     clearSamplesList(): void;
     getSamplesList(): Array<asgt_type_sample_pb.Sample>;
     setSamplesList(value: Array<asgt_type_sample_pb.Sample>): AppendDataRequest;
     addSamples(value?: asgt_type_sample_pb.Sample, index?: number): asgt_type_sample_pb.Sample;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): AppendDataRequest.AsObject;
@@ -197,18 +180,15 @@ export class DeleteRequest extends jspb.Message {
     getType(): string;
     setType(value: string): DeleteRequest;
 
-
     hasName(): boolean;
     clearName(): void;
     getName(): string;
     setName(value: string): DeleteRequest;
 
-
     hasTag(): boolean;
     clearTag(): void;
     getTag(): string;
     setTag(value: string): DeleteRequest;
-
 
     getMatchCase(): DeleteRequest.MatchCase;
 
@@ -231,11 +211,8 @@ export namespace DeleteRequest {
 
     export enum MatchCase {
         MATCH_NOT_SET = 0,
-    
-    NAME = 2,
-
-    TAG = 3,
-
+        NAME = 2,
+        TAG = 3,
     }
 
 }
@@ -243,10 +220,8 @@ export namespace DeleteRequest {
 export class GetInfoRequest extends jspb.Message { 
     getName(): string;
     setName(value: string): GetInfoRequest;
-
     getType(): string;
     setType(value: string): GetInfoRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetInfoRequest.AsObject;
@@ -268,16 +243,13 @@ export namespace GetInfoRequest {
 export class UpdateDatasetRequest extends jspb.Message { 
     getName(): string;
     setName(value: string): UpdateDatasetRequest;
-
     getType(): string;
     setType(value: string): UpdateDatasetRequest;
-
 
     hasRetentionPolicy(): boolean;
     clearRetentionPolicy(): void;
     getRetentionPolicy(): asgt_type_retention_policy_pb.RetentionPolicy | undefined;
     setRetentionPolicy(value?: asgt_type_retention_policy_pb.RetentionPolicy): UpdateDatasetRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): UpdateDatasetRequest.AsObject;
@@ -304,12 +276,10 @@ export class GetInfoResponse extends jspb.Message {
     getDataset(): asgt_type_dataset_pb.Dataset | undefined;
     setDataset(value?: asgt_type_dataset_pb.Dataset): GetInfoResponse;
 
-
     hasModel(): boolean;
     clearModel(): void;
     getModel(): asgt_type_model_pb.Model | undefined;
     setModel(value?: asgt_type_model_pb.Model): GetInfoResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetInfoResponse.AsObject;
@@ -331,18 +301,14 @@ export namespace GetInfoResponse {
 export class RegisterQueryStatsRequest extends jspb.Message { 
     getDataset(): string;
     setDataset(value: string): RegisterQueryStatsRequest;
-
     getModelType(): string;
     setModelType(value: string): RegisterQueryStatsRequest;
-
     getBatchSize(): number;
     setBatchSize(value: number): RegisterQueryStatsRequest;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): RegisterQueryStatsRequest;
     addTags(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RegisterQueryStatsRequest.AsObject;

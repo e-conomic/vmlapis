@@ -16,7 +16,6 @@ export class GetDatasetRequest extends jspb.Message {
     getDatasetName(): string;
     setDatasetName(value: string): GetDatasetRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetDatasetRequest.AsObject;
     static toObject(includeInstance: boolean, msg: GetDatasetRequest): GetDatasetRequest.AsObject;
@@ -36,12 +35,10 @@ export namespace GetDatasetRequest {
 export class CreateDatasetRequest extends jspb.Message { 
     getDatasetName(): string;
     setDatasetName(value: string): CreateDatasetRequest;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): CreateDatasetRequest;
     addTags(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateDatasetRequest.AsObject;
@@ -64,7 +61,6 @@ export class CreateOrUpdateDatasetRequest extends jspb.Message {
     getDatasetName(): string;
     setDatasetName(value: string): CreateOrUpdateDatasetRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateOrUpdateDatasetRequest.AsObject;
     static toObject(includeInstance: boolean, msg: CreateOrUpdateDatasetRequest): CreateOrUpdateDatasetRequest.AsObject;
@@ -84,7 +80,6 @@ export namespace CreateOrUpdateDatasetRequest {
 export class DeleteDatasetRequest extends jspb.Message { 
     getDatasetName(): string;
     setDatasetName(value: string): DeleteDatasetRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DeleteDatasetRequest.AsObject;
@@ -106,7 +101,6 @@ export class DeleteTagRequest extends jspb.Message {
     getTagName(): string;
     setTagName(value: string): DeleteTagRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DeleteTagRequest.AsObject;
     static toObject(includeInstance: boolean, msg: DeleteTagRequest): DeleteTagRequest.AsObject;
@@ -127,12 +121,10 @@ export class CreateExampleRequest extends jspb.Message {
     getDatasetName(): string;
     setDatasetName(value: string): CreateExampleRequest;
 
-
     hasExample(): boolean;
     clearExample(): void;
     getExample(): asgt_v2_type_example_pb.Example | undefined;
     setExample(value?: asgt_v2_type_example_pb.Example): CreateExampleRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateExampleRequest.AsObject;
@@ -155,12 +147,10 @@ export class CreateOrUpdateExampleRequest extends jspb.Message {
     getDatasetName(): string;
     setDatasetName(value: string): CreateOrUpdateExampleRequest;
 
-
     hasExample(): boolean;
     clearExample(): void;
     getExample(): asgt_v2_type_example_pb.Example | undefined;
     setExample(value?: asgt_v2_type_example_pb.Example): CreateOrUpdateExampleRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateOrUpdateExampleRequest.AsObject;
@@ -182,12 +172,10 @@ export namespace CreateOrUpdateExampleRequest {
 export class BatchCreateExampleRequest extends jspb.Message { 
     getDatasetName(): string;
     setDatasetName(value: string): BatchCreateExampleRequest;
-
     clearExamplesList(): void;
     getExamplesList(): Array<asgt_v2_type_example_pb.Example>;
     setExamplesList(value: Array<asgt_v2_type_example_pb.Example>): BatchCreateExampleRequest;
     addExamples(value?: asgt_v2_type_example_pb.Example, index?: number): asgt_v2_type_example_pb.Example;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): BatchCreateExampleRequest.AsObject;
@@ -210,7 +198,6 @@ export class TruncateDatasetRequest extends jspb.Message {
     getDatasetName(): string;
     setDatasetName(value: string): TruncateDatasetRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TruncateDatasetRequest.AsObject;
     static toObject(includeInstance: boolean, msg: TruncateDatasetRequest): TruncateDatasetRequest.AsObject;
@@ -230,7 +217,6 @@ export namespace TruncateDatasetRequest {
 export class TrainingRequestOptions extends jspb.Message { 
     getLimit(): number;
     setLimit(value: number): TrainingRequestOptions;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TrainingRequestOptions.AsObject;
@@ -252,12 +238,10 @@ export class GetDatasetTrainingsRequest extends jspb.Message {
     getDatasetName(): string;
     setDatasetName(value: string): GetDatasetTrainingsRequest;
 
-
     hasOptions(): boolean;
     clearOptions(): void;
     getOptions(): TrainingRequestOptions | undefined;
     setOptions(value?: TrainingRequestOptions): GetDatasetTrainingsRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetDatasetTrainingsRequest.AsObject;
@@ -283,7 +267,6 @@ export class GetTrainingsRequest extends jspb.Message {
     getOptions(): TrainingRequestOptions | undefined;
     setOptions(value?: TrainingRequestOptions): GetTrainingsRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): GetTrainingsRequest.AsObject;
     static toObject(includeInstance: boolean, msg: GetTrainingsRequest): GetTrainingsRequest.AsObject;
@@ -305,7 +288,6 @@ export class TrainingsResponse extends jspb.Message {
     getTrainingsList(): Array<asgt_v2_type_training_pb.Training>;
     setTrainingsList(value: Array<asgt_v2_type_training_pb.Training>): TrainingsResponse;
     addTrainings(value?: asgt_v2_type_training_pb.Training, index?: number): asgt_v2_type_training_pb.Training;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TrainingsResponse.AsObject;

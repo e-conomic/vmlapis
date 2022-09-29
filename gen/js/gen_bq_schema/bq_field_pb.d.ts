@@ -10,19 +10,14 @@ import * as google_protobuf_descriptor_pb from "google-protobuf/google/protobuf/
 export class BigQueryFieldOptions extends jspb.Message { 
     getRequire(): boolean;
     setRequire(value: boolean): BigQueryFieldOptions;
-
     getTypeOverride(): string;
     setTypeOverride(value: string): BigQueryFieldOptions;
-
     getIgnore(): boolean;
     setIgnore(value: boolean): BigQueryFieldOptions;
-
     getDescription(): string;
     setDescription(value: string): BigQueryFieldOptions;
-
     getName(): string;
     setName(value: string): BigQueryFieldOptions;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): BigQueryFieldOptions.AsObject;

@@ -9,10 +9,8 @@ import * as jspb from "google-protobuf";
 export class TargetValue extends jspb.Message { 
     getName(): string;
     setName(value: string): TargetValue;
-
     getValue(): string;
     setValue(value: string): TargetValue;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TargetValue.AsObject;

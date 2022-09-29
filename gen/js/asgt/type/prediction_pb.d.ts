@@ -12,12 +12,10 @@ export class Confidence extends jspb.Message {
     getLevel(): Confidence.Level;
     setLevel(value: Confidence.Level): Confidence;
 
-
     hasValue(): boolean;
     clearValue(): void;
     getValue(): google_protobuf_wrappers_pb.FloatValue | undefined;
     setValue(value?: google_protobuf_wrappers_pb.FloatValue): Confidence;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Confidence.AsObject;
@@ -52,7 +50,6 @@ export class Prediction extends jspb.Message {
     setTargetsList(value: Array<Prediction.Target>): Prediction;
     addTargets(value?: Prediction.Target, index?: number): Prediction.Target;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Prediction.AsObject;
     static toObject(includeInstance: boolean, msg: Prediction): Prediction.AsObject;
@@ -72,12 +69,10 @@ export namespace Prediction {
     export class Target extends jspb.Message { 
         getName(): string;
         setName(value: string): Target;
-
         clearCandidatesList(): void;
         getCandidatesList(): Array<Prediction.Target.Candidate>;
         setCandidatesList(value: Array<Prediction.Target.Candidate>): Target;
         addCandidates(value?: Prediction.Target.Candidate, index?: number): Prediction.Target.Candidate;
-
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): Target.AsObject;
@@ -100,12 +95,10 @@ export namespace Prediction {
             getValue(): string;
             setValue(value: string): Candidate;
 
-
             hasConfidence(): boolean;
             clearConfidence(): void;
             getConfidence(): Confidence | undefined;
             setConfidence(value?: Confidence): Candidate;
-
 
             serializeBinary(): Uint8Array;
             toObject(includeInstance?: boolean): Candidate.AsObject;

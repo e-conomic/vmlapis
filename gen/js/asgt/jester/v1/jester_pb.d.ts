@@ -16,12 +16,10 @@ export class SuggestionResponse extends jspb.Message {
     setPredictionsList(value: Array<asgt_type_prediction_pb.Prediction>): SuggestionResponse;
     addPredictions(value?: asgt_type_prediction_pb.Prediction, index?: number): asgt_type_prediction_pb.Prediction;
 
-
     hasModel(): boolean;
     clearModel(): void;
     getModel(): asgt_type_model_pb.Model | undefined;
     setModel(value?: asgt_type_model_pb.Model): SuggestionResponse;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SuggestionResponse.AsObject;
@@ -43,10 +41,8 @@ export namespace SuggestionResponse {
 export class SuggestionOptions extends jspb.Message { 
     getSuggestionLimit(): number;
     setSuggestionLimit(value: number): SuggestionOptions;
-
     getMinConfidence(): asgt_type_prediction_pb.Confidence.Level;
     setMinConfidence(value: asgt_type_prediction_pb.Confidence.Level): SuggestionOptions;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SuggestionOptions.AsObject;
@@ -68,26 +64,21 @@ export namespace SuggestionOptions {
 export class SuggestionRequest extends jspb.Message { 
     getName(): string;
     setName(value: string): SuggestionRequest;
-
     getType(): string;
     setType(value: string): SuggestionRequest;
-
     clearInputsList(): void;
     getInputsList(): Array<asgt_type_data_pb.Data>;
     setInputsList(value: Array<asgt_type_data_pb.Data>): SuggestionRequest;
     addInputs(value?: asgt_type_data_pb.Data, index?: number): asgt_type_data_pb.Data;
 
-
     hasOptions(): boolean;
     clearOptions(): void;
     getOptions(): SuggestionOptions | undefined;
     setOptions(value?: SuggestionOptions): SuggestionRequest;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): SuggestionRequest;
     addTags(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SuggestionRequest.AsObject;

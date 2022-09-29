@@ -14,24 +14,18 @@ export class Invoice extends jspb.Message {
     getIssueDate(): google_protobuf_timestamp_pb.Timestamp | undefined;
     setIssueDate(value?: google_protobuf_timestamp_pb.Timestamp): Invoice;
 
-
     hasSupplier(): boolean;
     clearSupplier(): void;
     getSupplier(): Supplier | undefined;
     setSupplier(value?: Supplier): Invoice;
-
     getCustomerRef(): string;
     setCustomerRef(value: string): Invoice;
-
     getText(): string;
     setText(value: string): Invoice;
-
     getCurrency(): string;
     setCurrency(value: string): Invoice;
-
     getTotal(): number;
     setTotal(value: number): Invoice;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Invoice.AsObject;
@@ -57,10 +51,8 @@ export namespace Invoice {
 export class InvoiceLine extends jspb.Message { 
     getText(): string;
     setText(value: string): InvoiceLine;
-
     getItemId(): string;
     setItemId(value: string): InvoiceLine;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): InvoiceLine.AsObject;
@@ -82,13 +74,10 @@ export namespace InvoiceLine {
 export class Supplier extends jspb.Message { 
     getId(): string;
     setId(value: string): Supplier;
-
     getName(): string;
     setName(value: string): Supplier;
-
     getGlobalId(): string;
     setGlobalId(value: string): Supplier;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Supplier.AsObject;
@@ -111,10 +100,8 @@ export namespace Supplier {
 export class Transaction extends jspb.Message { 
     getText(): string;
     setText(value: string): Transaction;
-
     getAmount(): number;
     setAmount(value: number): Transaction;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Transaction.AsObject;
@@ -140,18 +127,15 @@ export class Data extends jspb.Message {
     getTransaction(): Transaction | undefined;
     setTransaction(value?: Transaction): Data;
 
-
     hasInvoice(): boolean;
     clearInvoice(): void;
     getInvoice(): Invoice | undefined;
     setInvoice(value?: Invoice): Data;
 
-
     hasInvoiceLine(): boolean;
     clearInvoiceLine(): void;
     getInvoiceLine(): InvoiceLine | undefined;
     setInvoiceLine(value?: InvoiceLine): Data;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Data.AsObject;

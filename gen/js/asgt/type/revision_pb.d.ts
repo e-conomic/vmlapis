@@ -11,15 +11,12 @@ export class Revision extends jspb.Message {
     getNumber(): number;
     setNumber(value: number): Revision;
 
-
     hasCreatedAt(): boolean;
     clearCreatedAt(): void;
     getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
     setCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): Revision;
-
     getSize(): number;
     setSize(value: number): Revision;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Revision.AsObject;

@@ -10,10 +10,8 @@ import * as validate_validate_pb from "../../../validate/validate_pb";
 export class TargetValue extends jspb.Message { 
     getName(): string;
     setName(value: string): TargetValue;
-
     getValue(): string;
     setValue(value: string): TargetValue;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TargetValue.AsObject;

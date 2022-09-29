@@ -10,10 +10,8 @@ import * as google_protobuf_descriptor_pb from "google-protobuf/google/protobuf/
 export class BigQueryMessageOptions extends jspb.Message { 
     getTableName(): string;
     setTableName(value: string): BigQueryMessageOptions;
-
     getUseJsonNames(): boolean;
     setUseJsonNames(value: boolean): BigQueryMessageOptions;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): BigQueryMessageOptions.AsObject;

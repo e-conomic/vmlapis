@@ -15,15 +15,12 @@ export class TrainModelTask extends jspb.Message {
     getDataset(): asgt_type_dataset_pb.Dataset | undefined;
     setDataset(value?: asgt_type_dataset_pb.Dataset): TrainModelTask;
 
-
     hasRevision(): boolean;
     clearRevision(): void;
     getRevision(): asgt_type_revision_pb.Revision | undefined;
     setRevision(value?: asgt_type_revision_pb.Revision): TrainModelTask;
-
     getModelVersion(): number;
     setModelVersion(value: number): TrainModelTask;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TrainModelTask.AsObject;

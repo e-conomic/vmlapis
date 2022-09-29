@@ -20,50 +20,40 @@ export class Document extends jspb.Message {
     clearTa(): void;
     getTa(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
     setTa(value?: ssn_type_text_annotation_pb.TextAnnotation): Document;
-
     getBytes(): Uint8Array | string;
     getBytes_asU8(): Uint8Array;
     getBytes_asB64(): string;
     setBytes(value: Uint8Array | string): Document;
-
     getId(): string;
     setId(value: string): Document;
-
     getConsumer(): string;
     setConsumer(value: string): Document;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): Document;
     addTags(value: string, index?: number): string;
-
 
     hasTrueValues(): boolean;
     clearTrueValues(): void;
     getTrueValues(): TrueValues | undefined;
     setTrueValues(value?: TrueValues): Document;
 
-
     hasPredictionValues(): boolean;
     clearPredictionValues(): void;
     getPredictionValues(): PredictionValues | undefined;
     setPredictionValues(value?: PredictionValues): Document;
-
     getFeedbackTime(): number;
     setFeedbackTime(value: number): Document;
-
 
     hasPredictionConfidences(): boolean;
     clearPredictionConfidences(): void;
     getPredictionConfidences(): PredictionConfidences | undefined;
     setPredictionConfidences(value?: PredictionConfidences): Document;
 
-
     hasPredictionMetadata(): boolean;
     clearPredictionMetadata(): void;
     getPredictionMetadata(): PredictionMetadata | undefined;
     setPredictionMetadata(value?: PredictionMetadata): Document;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Document.AsObject;
@@ -97,198 +87,165 @@ export class TrueValues extends jspb.Message {
     getTotalInclVat(): google_protobuf_wrappers_pb.DoubleValue | undefined;
     setTotalInclVat(value?: google_protobuf_wrappers_pb.DoubleValue): TrueValues;
 
-
     hasTotalVat(): boolean;
     clearTotalVat(): void;
     getTotalVat(): google_protobuf_wrappers_pb.DoubleValue | undefined;
     setTotalVat(value?: google_protobuf_wrappers_pb.DoubleValue): TrueValues;
-
 
     hasTotalExclVat(): boolean;
     clearTotalExclVat(): void;
     getTotalExclVat(): google_protobuf_wrappers_pb.DoubleValue | undefined;
     setTotalExclVat(value?: google_protobuf_wrappers_pb.DoubleValue): TrueValues;
 
-
     hasOrderDate(): boolean;
     clearOrderDate(): void;
     getOrderDate(): google_type_date_pb.Date | undefined;
     setOrderDate(value?: google_type_date_pb.Date): TrueValues;
-
 
     hasPaymentDueDate(): boolean;
     clearPaymentDueDate(): void;
     getPaymentDueDate(): google_type_date_pb.Date | undefined;
     setPaymentDueDate(value?: google_type_date_pb.Date): TrueValues;
 
-
     hasDocumentType(): boolean;
     clearDocumentType(): void;
     getDocumentType(): google_protobuf_wrappers_pb.StringValue | undefined;
     setDocumentType(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasCurrency(): boolean;
     clearCurrency(): void;
     getCurrency(): google_protobuf_wrappers_pb.StringValue | undefined;
     setCurrency(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasCreditCardLastFour(): boolean;
     clearCreditCardLastFour(): void;
     getCreditCardLastFour(): google_protobuf_wrappers_pb.StringValue | undefined;
     setCreditCardLastFour(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasPaymentMethod(): boolean;
     clearPaymentMethod(): void;
     getPaymentMethod(): google_protobuf_wrappers_pb.StringValue | undefined;
     setPaymentMethod(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasOcrLineDkType(): boolean;
     clearOcrLineDkType(): void;
     getOcrLineDkType(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineDkType(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasOcrLineDkPaymentId(): boolean;
     clearOcrLineDkPaymentId(): void;
     getOcrLineDkPaymentId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineDkPaymentId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasOcrLineDkCreditorId(): boolean;
     clearOcrLineDkCreditorId(): void;
     getOcrLineDkCreditorId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineDkCreditorId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasOcrLineSePaymentId(): boolean;
     clearOcrLineSePaymentId(): void;
     getOcrLineSePaymentId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineSePaymentId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasOcrLineSeBankgiroCreditorId(): boolean;
     clearOcrLineSeBankgiroCreditorId(): void;
     getOcrLineSeBankgiroCreditorId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineSeBankgiroCreditorId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasOcrLineSePlusgiroCreditorId(): boolean;
     clearOcrLineSePlusgiroCreditorId(): void;
     getOcrLineSePlusgiroCreditorId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineSePlusgiroCreditorId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasOcrLineNoPaymentId(): boolean;
     clearOcrLineNoPaymentId(): void;
     getOcrLineNoPaymentId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineNoPaymentId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasOcrLineFiPaymentId(): boolean;
     clearOcrLineFiPaymentId(): void;
     getOcrLineFiPaymentId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineFiPaymentId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasOcrLineNlPaymentId(): boolean;
     clearOcrLineNlPaymentId(): void;
     getOcrLineNlPaymentId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOcrLineNlPaymentId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasSupplierCorporateId(): boolean;
     clearSupplierCorporateId(): void;
     getSupplierCorporateId(): google_protobuf_wrappers_pb.StringValue | undefined;
     setSupplierCorporateId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasSupplierCountryCode(): boolean;
     clearSupplierCountryCode(): void;
     getSupplierCountryCode(): google_protobuf_wrappers_pb.StringValue | undefined;
     setSupplierCountryCode(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasInvoiceNumber(): boolean;
     clearInvoiceNumber(): void;
     getInvoiceNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
     setInvoiceNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasIban(): boolean;
     clearIban(): void;
     getIban(): google_protobuf_wrappers_pb.StringValue | undefined;
     setIban(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasOrderReference(): boolean;
     clearOrderReference(): void;
     getOrderReference(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOrderReference(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasBankAccountNumber(): boolean;
     clearBankAccountNumber(): void;
     getBankAccountNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
     setBankAccountNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasBankRegistrationNumber(): boolean;
     clearBankRegistrationNumber(): void;
     getBankRegistrationNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
     setBankRegistrationNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasSupplierName(): boolean;
     clearSupplierName(): void;
     getSupplierName(): google_protobuf_wrappers_pb.StringValue | undefined;
     setSupplierName(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasBic(): boolean;
     clearBic(): void;
     getBic(): google_protobuf_wrappers_pb.StringValue | undefined;
     setBic(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasDocumentNumber(): boolean;
     clearDocumentNumber(): void;
     getDocumentNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
     setDocumentNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasDocumentDate(): boolean;
     clearDocumentDate(): void;
     getDocumentDate(): google_type_date_pb.Date | undefined;
     setDocumentDate(value?: google_type_date_pb.Date): TrueValues;
 
-
     hasOrderNumber(): boolean;
     clearOrderNumber(): void;
     getOrderNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
     setOrderNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     hasSupplierVatNumber(): boolean;
     clearSupplierVatNumber(): void;
     getSupplierVatNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
     setSupplierVatNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasSupplierOrganisationNumber(): boolean;
     clearSupplierOrganisationNumber(): void;
     getSupplierOrganisationNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
     setSupplierOrganisationNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
 
-
     hasSupplierAddress(): boolean;
     clearSupplierAddress(): void;
     getSupplierAddress(): google_protobuf_wrappers_pb.StringValue | undefined;
     setSupplierAddress(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TrueValues.AsObject;
@@ -343,167 +300,134 @@ export class PredictionValues extends jspb.Message {
     getTotalInclVatList(): Array<google_protobuf_wrappers_pb.DoubleValue>;
     setTotalInclVatList(value: Array<google_protobuf_wrappers_pb.DoubleValue>): PredictionValues;
     addTotalInclVat(value?: google_protobuf_wrappers_pb.DoubleValue, index?: number): google_protobuf_wrappers_pb.DoubleValue;
-
     clearTotalVatList(): void;
     getTotalVatList(): Array<google_protobuf_wrappers_pb.DoubleValue>;
     setTotalVatList(value: Array<google_protobuf_wrappers_pb.DoubleValue>): PredictionValues;
     addTotalVat(value?: google_protobuf_wrappers_pb.DoubleValue, index?: number): google_protobuf_wrappers_pb.DoubleValue;
-
     clearTotalExclVatList(): void;
     getTotalExclVatList(): Array<google_protobuf_wrappers_pb.DoubleValue>;
     setTotalExclVatList(value: Array<google_protobuf_wrappers_pb.DoubleValue>): PredictionValues;
     addTotalExclVat(value?: google_protobuf_wrappers_pb.DoubleValue, index?: number): google_protobuf_wrappers_pb.DoubleValue;
-
     clearOrderDateList(): void;
     getOrderDateList(): Array<google_type_date_pb.Date>;
     setOrderDateList(value: Array<google_type_date_pb.Date>): PredictionValues;
     addOrderDate(value?: google_type_date_pb.Date, index?: number): google_type_date_pb.Date;
-
     clearPaymentDueDateList(): void;
     getPaymentDueDateList(): Array<google_type_date_pb.Date>;
     setPaymentDueDateList(value: Array<google_type_date_pb.Date>): PredictionValues;
     addPaymentDueDate(value?: google_type_date_pb.Date, index?: number): google_type_date_pb.Date;
-
     clearDocumentTypeList(): void;
     getDocumentTypeList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setDocumentTypeList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addDocumentType(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearCurrencyList(): void;
     getCurrencyList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setCurrencyList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addCurrency(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearCreditCardLastFourList(): void;
     getCreditCardLastFourList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setCreditCardLastFourList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addCreditCardLastFour(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearPaymentMethodList(): void;
     getPaymentMethodList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setPaymentMethodList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addPaymentMethod(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineDkTypeList(): void;
     getOcrLineDkTypeList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineDkTypeList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineDkType(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineDkPaymentIdList(): void;
     getOcrLineDkPaymentIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineDkPaymentIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineDkPaymentId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineDkCreditorIdList(): void;
     getOcrLineDkCreditorIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineDkCreditorIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineDkCreditorId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineSePaymentIdList(): void;
     getOcrLineSePaymentIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineSePaymentIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineSePaymentId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineSeBankgiroCreditorIdList(): void;
     getOcrLineSeBankgiroCreditorIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineSeBankgiroCreditorIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineSeBankgiroCreditorId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineSePlusgiroCreditorIdList(): void;
     getOcrLineSePlusgiroCreditorIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineSePlusgiroCreditorIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineSePlusgiroCreditorId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineNoPaymentIdList(): void;
     getOcrLineNoPaymentIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineNoPaymentIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineNoPaymentId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineFiPaymentIdList(): void;
     getOcrLineFiPaymentIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineFiPaymentIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineFiPaymentId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOcrLineNlPaymentIdList(): void;
     getOcrLineNlPaymentIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOcrLineNlPaymentIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOcrLineNlPaymentId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearSupplierCorporateIdList(): void;
     getSupplierCorporateIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setSupplierCorporateIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addSupplierCorporateId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearSupplierCountryCodeList(): void;
     getSupplierCountryCodeList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setSupplierCountryCodeList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addSupplierCountryCode(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearInvoiceNumberList(): void;
     getInvoiceNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setInvoiceNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addInvoiceNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearIbanList(): void;
     getIbanList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setIbanList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addIban(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearOrderReferenceList(): void;
     getOrderReferenceList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOrderReferenceList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOrderReference(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearBankAccountNumberList(): void;
     getBankAccountNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setBankAccountNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addBankAccountNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearBankRegistrationNumberList(): void;
     getBankRegistrationNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setBankRegistrationNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addBankRegistrationNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearSupplierNameList(): void;
     getSupplierNameList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setSupplierNameList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addSupplierName(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearBicList(): void;
     getBicList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setBicList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addBic(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearDocumentNumberList(): void;
     getDocumentNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setDocumentNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addDocumentNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearDocumentDateList(): void;
     getDocumentDateList(): Array<google_type_date_pb.Date>;
     setDocumentDateList(value: Array<google_type_date_pb.Date>): PredictionValues;
     addDocumentDate(value?: google_type_date_pb.Date, index?: number): google_type_date_pb.Date;
-
     clearOrderNumberList(): void;
     getOrderNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setOrderNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addOrderNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearSupplierVatNumberList(): void;
     getSupplierVatNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setSupplierVatNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addSupplierVatNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearSupplierOrganisationNumberList(): void;
     getSupplierOrganisationNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setSupplierOrganisationNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addSupplierOrganisationNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
     clearSupplierAddressList(): void;
     getSupplierAddressList(): Array<google_protobuf_wrappers_pb.StringValue>;
     setSupplierAddressList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
     addSupplierAddress(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): PredictionValues.AsObject;
@@ -558,167 +482,134 @@ export class PredictionConfidences extends jspb.Message {
     getTotalInclVatList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setTotalInclVatList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addTotalInclVat(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearTotalVatList(): void;
     getTotalVatList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setTotalVatList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addTotalVat(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearTotalExclVatList(): void;
     getTotalExclVatList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setTotalExclVatList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addTotalExclVat(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOrderDateList(): void;
     getOrderDateList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOrderDateList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOrderDate(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearPaymentDueDateList(): void;
     getPaymentDueDateList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setPaymentDueDateList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addPaymentDueDate(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearDocumentTypeList(): void;
     getDocumentTypeList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setDocumentTypeList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addDocumentType(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearCurrencyList(): void;
     getCurrencyList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setCurrencyList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addCurrency(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearCreditCardLastFourList(): void;
     getCreditCardLastFourList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setCreditCardLastFourList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addCreditCardLastFour(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearPaymentMethodList(): void;
     getPaymentMethodList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setPaymentMethodList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addPaymentMethod(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineDkTypeList(): void;
     getOcrLineDkTypeList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineDkTypeList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineDkType(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineDkPaymentIdList(): void;
     getOcrLineDkPaymentIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineDkPaymentIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineDkPaymentId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineDkCreditorIdList(): void;
     getOcrLineDkCreditorIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineDkCreditorIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineDkCreditorId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineSePaymentIdList(): void;
     getOcrLineSePaymentIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineSePaymentIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineSePaymentId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineSeBankgiroCreditorIdList(): void;
     getOcrLineSeBankgiroCreditorIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineSeBankgiroCreditorIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineSeBankgiroCreditorId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineSePlusgiroCreditorIdList(): void;
     getOcrLineSePlusgiroCreditorIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineSePlusgiroCreditorIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineSePlusgiroCreditorId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineNoPaymentIdList(): void;
     getOcrLineNoPaymentIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineNoPaymentIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineNoPaymentId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineFiPaymentIdList(): void;
     getOcrLineFiPaymentIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineFiPaymentIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineFiPaymentId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOcrLineNlPaymentIdList(): void;
     getOcrLineNlPaymentIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOcrLineNlPaymentIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOcrLineNlPaymentId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearSupplierCorporateIdList(): void;
     getSupplierCorporateIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setSupplierCorporateIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addSupplierCorporateId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearSupplierCountryCodeList(): void;
     getSupplierCountryCodeList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setSupplierCountryCodeList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addSupplierCountryCode(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearInvoiceNumberList(): void;
     getInvoiceNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setInvoiceNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addInvoiceNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearIbanList(): void;
     getIbanList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setIbanList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addIban(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOrderReferenceList(): void;
     getOrderReferenceList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOrderReferenceList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOrderReference(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearBankAccountNumberList(): void;
     getBankAccountNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setBankAccountNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addBankAccountNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearBankRegistrationNumberList(): void;
     getBankRegistrationNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setBankRegistrationNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addBankRegistrationNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearSupplierNameList(): void;
     getSupplierNameList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setSupplierNameList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addSupplierName(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearBicList(): void;
     getBicList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setBicList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addBic(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearDocumentNumberList(): void;
     getDocumentNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setDocumentNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addDocumentNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearDocumentDateList(): void;
     getDocumentDateList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setDocumentDateList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addDocumentDate(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearOrderNumberList(): void;
     getOrderNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setOrderNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addOrderNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearSupplierVatNumberList(): void;
     getSupplierVatNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setSupplierVatNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addSupplierVatNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearSupplierOrganisationNumberList(): void;
     getSupplierOrganisationNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setSupplierOrganisationNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addSupplierOrganisationNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
     clearSupplierAddressList(): void;
     getSupplierAddressList(): Array<google_protobuf_wrappers_pb.FloatValue>;
     setSupplierAddressList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
     addSupplierAddress(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): PredictionConfidences.AsObject;
@@ -773,167 +664,134 @@ export class PredictionMetadata extends jspb.Message {
     getTotalInclVatList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setTotalInclVatList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addTotalInclVat(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearTotalVatList(): void;
     getTotalVatList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setTotalVatList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addTotalVat(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearTotalExclVatList(): void;
     getTotalExclVatList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setTotalExclVatList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addTotalExclVat(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOrderDateList(): void;
     getOrderDateList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOrderDateList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOrderDate(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearPaymentDueDateList(): void;
     getPaymentDueDateList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setPaymentDueDateList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addPaymentDueDate(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearDocumentTypeList(): void;
     getDocumentTypeList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setDocumentTypeList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addDocumentType(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearCurrencyList(): void;
     getCurrencyList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setCurrencyList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addCurrency(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearCreditCardLastFourList(): void;
     getCreditCardLastFourList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setCreditCardLastFourList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addCreditCardLastFour(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearPaymentMethodList(): void;
     getPaymentMethodList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setPaymentMethodList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addPaymentMethod(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineDkTypeList(): void;
     getOcrLineDkTypeList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineDkTypeList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineDkType(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineDkPaymentIdList(): void;
     getOcrLineDkPaymentIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineDkPaymentIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineDkPaymentId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineDkCreditorIdList(): void;
     getOcrLineDkCreditorIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineDkCreditorIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineDkCreditorId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineSePaymentIdList(): void;
     getOcrLineSePaymentIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineSePaymentIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineSePaymentId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineSeBankgiroCreditorIdList(): void;
     getOcrLineSeBankgiroCreditorIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineSeBankgiroCreditorIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineSeBankgiroCreditorId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineSePlusgiroCreditorIdList(): void;
     getOcrLineSePlusgiroCreditorIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineSePlusgiroCreditorIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineSePlusgiroCreditorId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineNoPaymentIdList(): void;
     getOcrLineNoPaymentIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineNoPaymentIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineNoPaymentId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineFiPaymentIdList(): void;
     getOcrLineFiPaymentIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineFiPaymentIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineFiPaymentId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOcrLineNlPaymentIdList(): void;
     getOcrLineNlPaymentIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOcrLineNlPaymentIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOcrLineNlPaymentId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearSupplierCorporateIdList(): void;
     getSupplierCorporateIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setSupplierCorporateIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addSupplierCorporateId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearSupplierCountryCodeList(): void;
     getSupplierCountryCodeList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setSupplierCountryCodeList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addSupplierCountryCode(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearInvoiceNumberList(): void;
     getInvoiceNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setInvoiceNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addInvoiceNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearIbanList(): void;
     getIbanList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setIbanList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addIban(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOrderReferenceList(): void;
     getOrderReferenceList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOrderReferenceList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOrderReference(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearBankAccountNumberList(): void;
     getBankAccountNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setBankAccountNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addBankAccountNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearBankRegistrationNumberList(): void;
     getBankRegistrationNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setBankRegistrationNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addBankRegistrationNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearSupplierNameList(): void;
     getSupplierNameList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setSupplierNameList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addSupplierName(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearBicList(): void;
     getBicList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setBicList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addBic(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearDocumentNumberList(): void;
     getDocumentNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setDocumentNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addDocumentNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearDocumentDateList(): void;
     getDocumentDateList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setDocumentDateList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addDocumentDate(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearOrderNumberList(): void;
     getOrderNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setOrderNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addOrderNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearSupplierVatNumberList(): void;
     getSupplierVatNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setSupplierVatNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addSupplierVatNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearSupplierOrganisationNumberList(): void;
     getSupplierOrganisationNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setSupplierOrganisationNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addSupplierOrganisationNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
     clearSupplierAddressList(): void;
     getSupplierAddressList(): Array<ssn_type_candidate_pb.ModelSpec>;
     setSupplierAddressList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
     addSupplierAddress(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
@@ -990,7 +848,6 @@ export class CreateDocumentRequest extends jspb.Message {
     getDocument(): Document | undefined;
     setDocument(value?: Document): CreateDocumentRequest;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateDocumentRequest.AsObject;
     static toObject(includeInstance: boolean, msg: CreateDocumentRequest): CreateDocumentRequest.AsObject;
@@ -1011,7 +868,6 @@ export class CreateDocumentResponse extends jspb.Message {
     getId(): string;
     setId(value: string): CreateDocumentResponse;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateDocumentResponse.AsObject;
     static toObject(includeInstance: boolean, msg: CreateDocumentResponse): CreateDocumentResponse.AsObject;
@@ -1031,7 +887,6 @@ export namespace CreateDocumentResponse {
 export class ReadDocumentRequest extends jspb.Message { 
     getId(): string;
     setId(value: string): ReadDocumentRequest;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ReadDocumentRequest.AsObject;
@@ -1056,7 +911,6 @@ export class ReadDocumentResponse extends jspb.Message {
     getDocument(): Document | undefined;
     setDocument(value?: Document): ReadDocumentResponse;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ReadDocumentResponse.AsObject;
     static toObject(includeInstance: boolean, msg: ReadDocumentResponse): ReadDocumentResponse.AsObject;
@@ -1077,48 +931,39 @@ export class PrepareFeedbackRequest extends jspb.Message {
     getId(): string;
     setId(value: string): PrepareFeedbackRequest;
 
-
     hasTa(): boolean;
     clearTa(): void;
     getTa(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
     setTa(value?: ssn_type_text_annotation_pb.TextAnnotation): PrepareFeedbackRequest;
-
     getDocumentBytes(): Uint8Array | string;
     getDocumentBytes_asU8(): Uint8Array;
     getDocumentBytes_asB64(): string;
     setDocumentBytes(value: Uint8Array | string): PrepareFeedbackRequest;
 
-
     hasPredictions(): boolean;
     clearPredictions(): void;
     getPredictions(): PredictionValues | undefined;
     setPredictions(value?: PredictionValues): PrepareFeedbackRequest;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): PrepareFeedbackRequest;
     addTags(value: string, index?: number): string;
-
 
     hasConfidences(): boolean;
     clearConfidences(): void;
     getConfidences(): PredictionConfidences | undefined;
     setConfidences(value?: PredictionConfidences): PrepareFeedbackRequest;
 
-
     hasPredictionMetadata(): boolean;
     clearPredictionMetadata(): void;
     getPredictionMetadata(): PredictionMetadata | undefined;
     setPredictionMetadata(value?: PredictionMetadata): PrepareFeedbackRequest;
-
     getTier(): ssn_type_tier_pb.Tier;
     setTier(value: ssn_type_tier_pb.Tier): PrepareFeedbackRequest;
-
     clearSegmentsList(): void;
     getSegmentsList(): Array<string>;
     setSegmentsList(value: Array<string>): PrepareFeedbackRequest;
     addSegments(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): PrepareFeedbackRequest.AsObject;
@@ -1148,17 +993,14 @@ export class FeedbackRequest extends jspb.Message {
     getId(): string;
     setId(value: string): FeedbackRequest;
 
-
     hasTrueValues(): boolean;
     clearTrueValues(): void;
     getTrueValues(): TrueValues | undefined;
     setTrueValues(value?: TrueValues): FeedbackRequest;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): FeedbackRequest;
     addTags(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): FeedbackRequest.AsObject;
@@ -1181,20 +1023,16 @@ export namespace FeedbackRequest {
 export class MetricsRequest extends jspb.Message { 
     getStartTime(): number;
     setStartTime(value: number): MetricsRequest;
-
     getEndTime(): number;
     setEndTime(value: number): MetricsRequest;
-
     clearFieldsList(): void;
     getFieldsList(): Array<string>;
     setFieldsList(value: Array<string>): MetricsRequest;
     addFields(value: string, index?: number): string;
-
     clearTagsList(): void;
     getTagsList(): Array<string>;
     setTagsList(value: Array<string>): MetricsRequest;
     addTags(value: string, index?: number): string;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): MetricsRequest.AsObject;
@@ -1218,21 +1056,17 @@ export namespace MetricsRequest {
 export class FeedbackMetrics extends jspb.Message { 
     getDocumentCount(): number;
     setDocumentCount(value: number): FeedbackMetrics;
-
     getFeedbackCount(): number;
     setFeedbackCount(value: number): FeedbackMetrics;
-
 
     hasOverallCorrectness(): boolean;
     clearOverallCorrectness(): void;
     getOverallCorrectness(): Correctness | undefined;
     setOverallCorrectness(value?: Correctness): FeedbackMetrics;
-
     clearFieldCorrectnessList(): void;
     getFieldCorrectnessList(): Array<Correctness>;
     setFieldCorrectnessList(value: Array<Correctness>): FeedbackMetrics;
     addFieldCorrectness(value?: Correctness, index?: number): Correctness;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): FeedbackMetrics.AsObject;
@@ -1256,19 +1090,14 @@ export namespace FeedbackMetrics {
 export class Correctness extends jspb.Message { 
     getField(): string;
     setField(value: string): Correctness;
-
     getCorrectPercentage(): number;
     setCorrectPercentage(value: number): Correctness;
-
     getIncompletePercentage(): number;
     setIncompletePercentage(value: number): Correctness;
-
     getErrorPercentage(): number;
     setErrorPercentage(value: number): Correctness;
-
     getSupport(): number;
     setSupport(value: number): Correctness;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Correctness.AsObject;
@@ -1296,7 +1125,6 @@ export class DeleteRequest extends jspb.Message {
     setTagsList(value: Array<string>): DeleteRequest;
     addTags(value: string, index?: number): string;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DeleteRequest.AsObject;
     static toObject(includeInstance: boolean, msg: DeleteRequest): DeleteRequest.AsObject;
@@ -1316,10 +1144,8 @@ export namespace DeleteRequest {
 export class CallsPerMonth extends jspb.Message { 
     getCalls(): number;
     setCalls(value: number): CallsPerMonth;
-
     getMonthName(): string;
     setMonthName(value: string): CallsPerMonth;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CallsPerMonth.AsObject;
@@ -1343,7 +1169,6 @@ export class CallsPerMonthResponse extends jspb.Message {
     getCallsPerMonthList(): Array<CallsPerMonth>;
     setCallsPerMonthList(value: Array<CallsPerMonth>): CallsPerMonthResponse;
     addCallsPerMonth(value?: CallsPerMonth, index?: number): CallsPerMonth;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CallsPerMonthResponse.AsObject;

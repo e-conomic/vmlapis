@@ -10,7 +10,6 @@ export class RetentionPolicy extends jspb.Message {
     getMaxDays(): number;
     setMaxDays(value: number): RetentionPolicy;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RetentionPolicy.AsObject;
     static toObject(includeInstance: boolean, msg: RetentionPolicy): RetentionPolicy.AsObject;

@@ -73,6 +73,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -143,7 +145,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean containsFeature(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetFeature().getMap().containsKey(key);
   }
   /**
@@ -178,7 +180,7 @@ private static final long serialVersionUID = 0L;
   public org.tensorflow.example.Feature getFeatureOrDefault(
       java.lang.String key,
       org.tensorflow.example.Feature defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, org.tensorflow.example.Feature> map =
         internalGetFeature().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -194,7 +196,7 @@ private static final long serialVersionUID = 0L;
 
   public org.tensorflow.example.Feature getFeatureOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, org.tensorflow.example.Feature> map =
         internalGetFeature().getMap();
     if (!map.containsKey(key)) {
@@ -576,7 +578,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean containsFeature(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetFeature().getMap().containsKey(key);
     }
     /**
@@ -611,7 +613,7 @@ private static final long serialVersionUID = 0L;
     public org.tensorflow.example.Feature getFeatureOrDefault(
         java.lang.String key,
         org.tensorflow.example.Feature defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, org.tensorflow.example.Feature> map =
           internalGetFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -627,7 +629,7 @@ private static final long serialVersionUID = 0L;
 
     public org.tensorflow.example.Feature getFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, org.tensorflow.example.Feature> map =
           internalGetFeature().getMap();
       if (!map.containsKey(key)) {
@@ -651,7 +653,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder removeFeature(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableFeature().getMutableMap()
           .remove(key);
       return this;
@@ -674,8 +676,11 @@ private static final long serialVersionUID = 0L;
     public Builder putFeature(
         java.lang.String key,
         org.tensorflow.example.Feature value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) {
+  throw new NullPointerException("map value");
+}
+
       internalGetMutableFeature().getMutableMap()
           .put(key, value);
       return this;

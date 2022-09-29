@@ -13,7 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 var ssn_mlservice_v2_feature_pb = require('../../../ssn/mlservice/v2/feature_pb.js');
 goog.object.extend(proto, ssn_mlservice_v2_feature_pb);

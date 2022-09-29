@@ -9,13 +9,10 @@ import * as jspb from "google-protobuf";
 export class TargetStat extends jspb.Message { 
     getClassName(): string;
     setClassName(value: string): TargetStat;
-
     getRelativeDatasetProportion(): number;
     setRelativeDatasetProportion(value: number): TargetStat;
-
     getAbsoluteDatasetProportion(): number;
     setAbsoluteDatasetProportion(value: number): TargetStat;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TargetStat.AsObject;
@@ -41,7 +38,6 @@ export class TargetStats extends jspb.Message {
     setTargetStatsList(value: Array<TargetStat>): TargetStats;
     addTargetStats(value?: TargetStat, index?: number): TargetStat;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TargetStats.AsObject;
     static toObject(includeInstance: boolean, msg: TargetStats): TargetStats.AsObject;
@@ -61,13 +57,10 @@ export namespace TargetStats {
 export class FeatureStat extends jspb.Message { 
     getFeatureName(): string;
     setFeatureName(value: string): FeatureStat;
-
     getFeatureType(): FeatureStat.Type;
     setFeatureType(value: FeatureStat.Type): FeatureStat;
-
     getInformationGain(): number;
     setInformationGain(value: number): FeatureStat;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): FeatureStat.AsObject;
@@ -102,7 +95,6 @@ export class FeatureStats extends jspb.Message {
     setFeatureStatsList(value: Array<FeatureStat>): FeatureStats;
     addFeatureStats(value?: FeatureStat, index?: number): FeatureStat;
 
-
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): FeatureStats.AsObject;
     static toObject(includeInstance: boolean, msg: FeatureStats): FeatureStats.AsObject;
@@ -124,13 +116,10 @@ export class TrainStatistics extends jspb.Message {
     getTargetStatsByTargetMap(): jspb.Map<string, TargetStats>;
     clearTargetStatsByTargetMap(): void;
 
-
     getFeatureStatsByTargetMap(): jspb.Map<string, FeatureStats>;
     clearFeatureStatsByTargetMap(): void;
-
     getSimilarityIndex(): number;
     setSimilarityIndex(value: number): TrainStatistics;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TrainStatistics.AsObject;
