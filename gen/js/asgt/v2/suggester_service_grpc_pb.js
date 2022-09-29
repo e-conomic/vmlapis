@@ -3,12 +3,12 @@
 'use strict';
 var grpc = require('grpc');
 var asgt_v2_suggester_service_pb = require('../../asgt/v2/suggester_service_pb.js');
+var asgt_type_model_pb = require('../../asgt/type/model_pb.js');
+var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js');
+var asgt_v2_type_data_pb = require('../../asgt/v2/type/data_pb.js');
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
 var protoc$gen$openapiv2_options_annotations_pb = require('../../protoc-gen-openapiv2/options/annotations_pb.js');
 var validate_validate_pb = require('../../validate/validate_pb.js');
-var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js');
-var asgt_type_model_pb = require('../../asgt/type/model_pb.js');
-var asgt_v2_type_data_pb = require('../../asgt/v2/type/data_pb.js');
 
 function serialize_asgt_v2_BatchSuggestRequest(arg) {
   if (!(arg instanceof asgt_v2_suggester_service_pb.BatchSuggestRequest)) {

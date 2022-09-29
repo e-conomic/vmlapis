@@ -9,12 +9,12 @@ import grpclib.client
 if typing.TYPE_CHECKING:
     import grpclib.server
 
-import google.protobuf.empty_pb2
-import asgt.type.model_pb2
 import asgt.type.dataset_pb2
+import asgt.type.model_pb2
 import asgt.type.revision_pb2
 import asgt.type.target_metrics_pb2
 import asgt.type.train_statistics_pb2
+import google.protobuf.empty_pb2
 import asgt.modelregistry.v1.model_registry_pb2
 
 

@@ -6,9 +6,9 @@
 
 import * as jspb from "google-protobuf";
 import * as google_type_date_pb from "../../../google/type/date_pb";
+import * as ssn_mlservice_v2_example_pb from "../../../ssn/mlservice/v2/example_pb";
 import * as ssn_type_candidate_pb from "../../../ssn/type/candidate_pb";
 import * as ssn_type_text_annotation_pb from "../../../ssn/type/text_annotation_pb";
-import * as ssn_mlservice_v2_example_pb from "../../../ssn/mlservice/v2/example_pb";
 
 export class FeatureGenRequest extends jspb.Message { 
 

@@ -20,7 +20,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * Invoice text from the SmartScan product. 
+     * Invoice text from the SmartScan product.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -29,7 +29,7 @@ public final class DataOuterClass {
     java.lang.String getText();
     /**
      * <pre>
-     * Invoice text from the SmartScan product. 
+     * Invoice text from the SmartScan product.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -132,7 +132,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Invoice text from the SmartScan product. 
+     * Invoice text from the SmartScan product.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -153,7 +153,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * Invoice text from the SmartScan product. 
+     * Invoice text from the SmartScan product.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -483,7 +483,7 @@ public final class DataOuterClass {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Invoice text from the SmartScan product. 
+       * Invoice text from the SmartScan product.
        * </pre>
        *
        * <code>string text = 1 [json_name = "text"];</code>
@@ -503,7 +503,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Invoice text from the SmartScan product. 
+       * Invoice text from the SmartScan product.
        * </pre>
        *
        * <code>string text = 1 [json_name = "text"];</code>
@@ -524,7 +524,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Invoice text from the SmartScan product. 
+       * Invoice text from the SmartScan product.
        * </pre>
        *
        * <code>string text = 1 [json_name = "text"];</code>
@@ -543,7 +543,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Invoice text from the SmartScan product. 
+       * Invoice text from the SmartScan product.
        * </pre>
        *
        * <code>string text = 1 [json_name = "text"];</code>
@@ -557,7 +557,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Invoice text from the SmartScan product. 
+       * Invoice text from the SmartScan product.
        * </pre>
        *
        * <code>string text = 1 [json_name = "text"];</code>
@@ -654,7 +654,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * Amount of the transaction. 
+     * Amount of the transaction.
      * </pre>
      *
      * <code>float amount = 2 [json_name = "amount"];</code>
@@ -807,7 +807,7 @@ public final class DataOuterClass {
     private float amount_;
     /**
      * <pre>
-     * Amount of the transaction. 
+     * Amount of the transaction.
      * </pre>
      *
      * <code>float amount = 2 [json_name = "amount"];</code>
@@ -1242,7 +1242,7 @@ public final class DataOuterClass {
       private float amount_ ;
       /**
        * <pre>
-       * Amount of the transaction. 
+       * Amount of the transaction.
        * </pre>
        *
        * <code>float amount = 2 [json_name = "amount"];</code>
@@ -1254,7 +1254,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Amount of the transaction. 
+       * Amount of the transaction.
        * </pre>
        *
        * <code>float amount = 2 [json_name = "amount"];</code>
@@ -1269,7 +1269,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Amount of the transaction. 
+       * Amount of the transaction.
        * </pre>
        *
        * <code>float amount = 2 [json_name = "amount"];</code>
@@ -1360,7 +1360,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * Text of the invoice line. 
+     * Text of the invoice line.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1369,7 +1369,7 @@ public final class DataOuterClass {
     java.lang.String getText();
     /**
      * <pre>
-     * Text of the invoice line. 
+     * Text of the invoice line.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1442,7 +1442,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * Amount of the invoice line. 
+     * Amount of the invoice line.
      * </pre>
      *
      * <code>float amount = 7 [json_name = "amount"];</code>
@@ -1635,7 +1635,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Text of the invoice line. 
+     * Text of the invoice line.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1656,7 +1656,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * Text of the invoice line. 
+     * Text of the invoice line.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1791,7 +1791,7 @@ public final class DataOuterClass {
     private float amount_;
     /**
      * <pre>
-     * Amount of the invoice line. 
+     * Amount of the invoice line.
      * </pre>
      *
      * <code>float amount = 7 [json_name = "amount"];</code>
@@ -2320,7 +2320,7 @@ public final class DataOuterClass {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Text of the invoice line. 
+       * Text of the invoice line.
        * </pre>
        *
        * <code>string text = 2 [json_name = "text"];</code>
@@ -2340,7 +2340,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Text of the invoice line. 
+       * Text of the invoice line.
        * </pre>
        *
        * <code>string text = 2 [json_name = "text"];</code>
@@ -2361,7 +2361,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Text of the invoice line. 
+       * Text of the invoice line.
        * </pre>
        *
        * <code>string text = 2 [json_name = "text"];</code>
@@ -2380,7 +2380,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Text of the invoice line. 
+       * Text of the invoice line.
        * </pre>
        *
        * <code>string text = 2 [json_name = "text"];</code>
@@ -2394,7 +2394,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Text of the invoice line. 
+       * Text of the invoice line.
        * </pre>
        *
        * <code>string text = 2 [json_name = "text"];</code>
@@ -2786,7 +2786,7 @@ public final class DataOuterClass {
       private float amount_ ;
       /**
        * <pre>
-       * Amount of the invoice line. 
+       * Amount of the invoice line.
        * </pre>
        *
        * <code>float amount = 7 [json_name = "amount"];</code>
@@ -2798,7 +2798,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Amount of the invoice line. 
+       * Amount of the invoice line.
        * </pre>
        *
        * <code>float amount = 7 [json_name = "amount"];</code>
@@ -2813,7 +2813,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * Amount of the invoice line. 
+       * Amount of the invoice line.
        * </pre>
        *
        * <code>float amount = 7 [json_name = "amount"];</code>
@@ -3945,7 +3945,7 @@ public final class DataOuterClass {
   }
   /**
    * <pre>
-   * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine 
+   * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
    * structures can be used at a time.
    * </pre>
    *
@@ -4441,7 +4441,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine 
+     * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
      * structures can be used at a time.
      * </pre>
      *

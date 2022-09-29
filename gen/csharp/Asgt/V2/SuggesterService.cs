@@ -24,11 +24,11 @@ namespace Asgt.V2 {
     static SuggesterServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9hc2d0L3YyL3N1Z2dlc3Rlcl9zZXJ2aWNlLnByb3RvEgdhc2d0LnYyGhxn",
-            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGi5wcm90b2MtZ2VuLW9wZW5h",
-            "cGl2Mi9vcHRpb25zL2Fubm90YXRpb25zLnByb3RvGhd2YWxpZGF0ZS92YWxp",
-            "ZGF0ZS5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8aFWFzZ3Qv",
-            "dHlwZS9tb2RlbC5wcm90bxoXYXNndC92Mi90eXBlL2RhdGEucHJvdG8ingEK",
+            "Ch9hc2d0L3YyL3N1Z2dlc3Rlcl9zZXJ2aWNlLnByb3RvEgdhc2d0LnYyGhVh",
+            "c2d0L3R5cGUvbW9kZWwucHJvdG8aGmFzZ3QvdHlwZS9wcmVkaWN0aW9uLnBy",
+            "b3RvGhdhc2d0L3YyL3R5cGUvZGF0YS5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
+            "dGF0aW9ucy5wcm90bxoucHJvdG9jLWdlbi1vcGVuYXBpdjIvb3B0aW9ucy9h",
+            "bm5vdGF0aW9ucy5wcm90bxoXdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8ingEK",
             "DlN1Z2dlc3RPcHRpb25zEiMKDXN1Z2dlc3RfbGltaXQYASABKAVSDHN1Z2dl",
             "c3RMaW1pdBJMCg5taW5fY29uZmlkZW5jZRgCIAEoDjIbLmFzZ3QudHlwZS5D",
             "b25maWRlbmNlLkxldmVsQgj6QgWCAQIQAVINbWluQ29uZmlkZW5jZToZkkEW",
@@ -60,7 +60,7 @@ namespace Asgt.V2 {
             "Z28vYXNndC92MpJBOhIRCgtBdXRvU3VnZ2VzdDICdjIqAQIyEGFwcGxpY2F0",
             "aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestRequest), global::Asgt.V2.SuggestRequest.Parser, new[]{ "DatasetName", "Input", "Options" }, null, null, null, null),
@@ -137,7 +137,7 @@ namespace Asgt.V2 {
     public const int MinConfidenceFieldNumber = 2;
     private global::Asgt.Type.Confidence.Types.Level minConfidence_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
     /// <summary>
-    /// Not implemented yet. 
+    /// Not implemented yet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

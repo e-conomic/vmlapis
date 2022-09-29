@@ -3,11 +3,11 @@
 'use strict';
 var grpc = require('grpc');
 var asgt_jester_v1_jester_pb = require('../../../asgt/jester/v1/jester_pb.js');
+var asgt_type_data_pb = require('../../../asgt/type/data_pb.js');
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
+var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js');
-var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
-var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
-var asgt_type_data_pb = require('../../../asgt/type/data_pb.js');
 
 function serialize_asgt_jester_v1_SuggestionRequest(arg) {
   if (!(arg instanceof asgt_jester_v1_jester_pb.SuggestionRequest)) {

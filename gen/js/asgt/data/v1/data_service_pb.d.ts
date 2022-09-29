@@ -5,14 +5,14 @@
 /* eslint-disable */
 
 import * as jspb from "google-protobuf";
-import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
-import * as asgt_type_retention_policy_pb from "../../../asgt/type/retention_policy_pb";
-import * as asgt_type_model_pb from "../../../asgt/type/model_pb";
 import * as asgt_type_dataset_pb from "../../../asgt/type/dataset_pb";
+import * as asgt_type_model_pb from "../../../asgt/type/model_pb";
+import * as asgt_type_retention_policy_pb from "../../../asgt/type/retention_policy_pb";
 import * as asgt_type_sample_pb from "../../../asgt/type/sample_pb";
-import * as ssn_dataservice_v1_dataservice_pb from "../../../ssn/dataservice/v1/dataservice_pb";
-import * as google_protobuf_wrappers_pb from "google-protobuf/google/protobuf/wrappers_pb";
+import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as google_protobuf_wrappers_pb from "google-protobuf/google/protobuf/wrappers_pb";
+import * as ssn_dataservice_v1_dataservice_pb from "../../../ssn/dataservice/v1/dataservice_pb";
 
 export class CalculateMetricsRequest extends jspb.Message { 
 

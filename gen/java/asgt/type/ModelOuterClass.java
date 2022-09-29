@@ -1602,10 +1602,10 @@ public final class ModelOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025asgt/type/model.proto\022\tasgt.type\032\034gen_" +
-      "bq_schema/bq_field.proto\032\037google/protobu" +
-      "f/timestamp.proto\032\036asgt/type/target_metr" +
-      "ics.proto\"\241\003\n\005Model\022\037\n\007version\030\003 \001(\003B\005\352?" +
+      "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
+      "/type/target_metrics.proto\032\034gen_bq_schem" +
+      "a/bq_field.proto\032\037google/protobuf/timest" +
+      "amp.proto\"\241\003\n\005Model\022\037\n\007version\030\003 \001(\003B\005\352?" +
       "\002\010\001R\007version\0229\n\ncreated_at\030\004 \001(\0132\032.googl" +
       "e.protobuf.TimestampR\tcreatedAt\022(\n\014datas" +
       "et_size\030\005 \001(\005B\005\352?\002\030\001R\013datasetSize\022*\n\rtra" +
@@ -1622,9 +1622,9 @@ public final class ModelOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.TargetMetricsOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-          asgt.type.TargetMetricsOuterClass.getDescriptor(),
         });
     internal_static_asgt_type_Model_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1637,9 +1637,9 @@ public final class ModelOuterClass {
     registry.add(gen_bq_schema.BqField.bigquery);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.TargetMetricsOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
-    asgt.type.TargetMetricsOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

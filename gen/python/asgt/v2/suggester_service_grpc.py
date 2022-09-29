@@ -9,12 +9,12 @@ import grpclib.client
 if typing.TYPE_CHECKING:
     import grpclib.server
 
+import asgt.type.model_pb2
+import asgt.type.prediction_pb2
+import asgt.v2.type.data_pb2
 import google.api.annotations_pb2
 import protoc_gen_openapiv2.options.annotations_pb2
 import validate.validate_pb2
-import asgt.type.prediction_pb2
-import asgt.type.model_pb2
-import asgt.v2.type.data_pb2
 import asgt.v2.suggester_service_pb2
 
 

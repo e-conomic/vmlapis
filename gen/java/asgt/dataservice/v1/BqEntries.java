@@ -2648,11 +2648,11 @@ public final class BqEntries {
   static {
     java.lang.String[] descriptorData = {
       "\n\035asgt/data/v1/bq_entries.proto\022\023asgt.da" +
-      "taservice.v1\032\034gen_bq_schema/bq_field.pro" +
-      "to\032\034gen_bq_schema/bq_table.proto\032\024asgt/t" +
-      "ype/data.proto\032\025asgt/type/model.proto\032\032a" +
-      "sgt/type/prediction.proto\032\034asgt/type/tar" +
-      "get_value.proto\"\345\004\n\005Entry\022B\n\002id\030\001 \001(\tB2\352" +
+      "taservice.v1\032\024asgt/type/data.proto\032\025asgt" +
+      "/type/model.proto\032\032asgt/type/prediction." +
+      "proto\032\034asgt/type/target_value.proto\032\034gen" +
+      "_bq_schema/bq_field.proto\032\034gen_bq_schema" +
+      "/bq_table.proto\"\345\004\n\005Entry\022B\n\002id\030\001 \001(\tB2\352" +
       "?/\"-ID, matches Envoy request id if feed" +
       "back dataR\002id\022!\n\010consumer\030\002 \001(\tB\005\352?\002\010\001R\010" +
       "consumer\022(\n\014dataset_name\030\003 \001(\tB\005\352?\002\010\001R\013d" +
@@ -2674,12 +2674,12 @@ public final class BqEntries {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          gen_bq_schema.BqField.getDescriptor(),
-          gen_bq_schema.BqTable.getDescriptor(),
           asgt.type.DataOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
           asgt.type.TargetValueOuterClass.getDescriptor(),
+          gen_bq_schema.BqField.getDescriptor(),
+          gen_bq_schema.BqTable.getDescriptor(),
         });
     internal_static_asgt_dataservice_v1_Entry_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2693,12 +2693,12 @@ public final class BqEntries {
     registry.add(gen_bq_schema.BqTable.bigqueryOpts);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    gen_bq_schema.BqField.getDescriptor();
-    gen_bq_schema.BqTable.getDescriptor();
     asgt.type.DataOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.PredictionOuterClass.getDescriptor();
     asgt.type.TargetValueOuterClass.getDescriptor();
+    gen_bq_schema.BqField.getDescriptor();
+    gen_bq_schema.BqTable.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

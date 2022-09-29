@@ -6,11 +6,11 @@
 
 import * as grpc from "grpc";
 import * as asgt_v2_suggester_service_pb from "../../asgt/v2/suggester_service_pb";
+import * as asgt_type_model_pb from "../../asgt/type/model_pb";
+import * as asgt_type_prediction_pb from "../../asgt/type/prediction_pb";
+import * as asgt_v2_type_data_pb from "../../asgt/v2/type/data_pb";
 import * as protoc_gen_openapiv2_options_annotations_pb from "../../protoc-gen-openapiv2/options/annotations_pb";
 import * as validate_validate_pb from "../../validate/validate_pb";
-import * as asgt_type_prediction_pb from "../../asgt/type/prediction_pb";
-import * as asgt_type_model_pb from "../../asgt/type/model_pb";
-import * as asgt_v2_type_data_pb from "../../asgt/v2/type/data_pb";
 
 interface ISuggesterServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
     suggest: ISuggesterServiceService_ISuggest;

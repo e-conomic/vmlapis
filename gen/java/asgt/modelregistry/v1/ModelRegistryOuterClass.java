@@ -3189,11 +3189,11 @@ public final class ModelRegistryOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n*asgt/modelregistry/v1/model_registry.p" +
-      "roto\022\025asgt.modelregistry.v1\032\033google/prot" +
-      "obuf/empty.proto\032\025asgt/type/model.proto\032" +
-      "\027asgt/type/dataset.proto\032\030asgt/type/revi" +
-      "sion.proto\032\036asgt/type/target_metrics.pro" +
-      "to\032 asgt/type/train_statistics.proto\"\355\003\n" +
+      "roto\022\025asgt.modelregistry.v1\032\027asgt/type/d" +
+      "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
+      "t/type/revision.proto\032\036asgt/type/target_" +
+      "metrics.proto\032 asgt/type/train_statistic" +
+      "s.proto\032\033google/protobuf/empty.proto\"\355\003\n" +
       "\024RegisterModelRequest\022,\n\007dataset\030\001 \001(\0132\022" +
       ".asgt.type.DatasetR\007dataset\022/\n\010revision\030" +
       "\002 \001(\0132\023.asgt.type.RevisionR\010revision\022#\n\r" +
@@ -3222,12 +3222,12 @@ public final class ModelRegistryOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.EmptyProto.getDescriptor(),
-          asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.DatasetOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.RevisionOuterClass.getDescriptor(),
           asgt.type.TargetMetricsOuterClass.getDescriptor(),
           asgt.type.TrainStatisticsOuterClass.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
         });
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3253,12 +3253,12 @@ public final class ModelRegistryOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_GetCurrentModelResponse_descriptor,
         new java.lang.String[] { "Model", });
-    com.google.protobuf.EmptyProto.getDescriptor();
-    asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.DatasetOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.RevisionOuterClass.getDescriptor();
     asgt.type.TargetMetricsOuterClass.getDescriptor();
     asgt.type.TrainStatisticsOuterClass.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

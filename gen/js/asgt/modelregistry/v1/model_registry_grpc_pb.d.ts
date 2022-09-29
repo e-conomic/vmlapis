@@ -6,12 +6,12 @@
 
 import * as grpc from "grpc";
 import * as asgt_modelregistry_v1_model_registry_pb from "../../../asgt/modelregistry/v1/model_registry_pb";
-import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
-import * as asgt_type_model_pb from "../../../asgt/type/model_pb";
 import * as asgt_type_dataset_pb from "../../../asgt/type/dataset_pb";
+import * as asgt_type_model_pb from "../../../asgt/type/model_pb";
 import * as asgt_type_revision_pb from "../../../asgt/type/revision_pb";
 import * as asgt_type_target_metrics_pb from "../../../asgt/type/target_metrics_pb";
 import * as asgt_type_train_statistics_pb from "../../../asgt/type/train_statistics_pb";
+import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
 
 interface IModelRegistryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
     registerModel: IModelRegistryService_IRegisterModel;

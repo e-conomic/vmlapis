@@ -59,7 +59,7 @@ public final class TrainingOuterClass {
 
     /**
      * <pre>
-     * Status of the training. 
+     * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
      * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
@@ -76,7 +76,7 @@ public final class TrainingOuterClass {
     java.lang.String getTrainingStatus();
     /**
      * <pre>
-     * Status of the training. 
+     * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
      * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
@@ -426,7 +426,7 @@ public final class TrainingOuterClass {
     private volatile java.lang.Object trainingStatus_;
     /**
      * <pre>
-     * Status of the training. 
+     * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
      * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
@@ -455,7 +455,7 @@ public final class TrainingOuterClass {
     }
     /**
      * <pre>
-     * Status of the training. 
+     * Status of the training.
      * SCHEDULED - Training is scheduled to be run in a specific time. This
      * could be in between 1 minute or 24 hours depending on how recently the dataset
      * was created
@@ -1334,7 +1334,7 @@ public final class TrainingOuterClass {
       private java.lang.Object trainingStatus_ = "";
       /**
        * <pre>
-       * Status of the training. 
+       * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
        * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
@@ -1362,7 +1362,7 @@ public final class TrainingOuterClass {
       }
       /**
        * <pre>
-       * Status of the training. 
+       * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
        * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
@@ -1391,7 +1391,7 @@ public final class TrainingOuterClass {
       }
       /**
        * <pre>
-       * Status of the training. 
+       * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
        * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
@@ -1418,7 +1418,7 @@ public final class TrainingOuterClass {
       }
       /**
        * <pre>
-       * Status of the training. 
+       * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
        * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
@@ -1440,7 +1440,7 @@ public final class TrainingOuterClass {
       }
       /**
        * <pre>
-       * Status of the training. 
+       * Status of the training.
        * SCHEDULED - Training is scheduled to be run in a specific time. This
        * could be in between 1 minute or 24 hours depending on how recently the dataset
        * was created
@@ -2095,8 +2095,8 @@ public final class TrainingOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033asgt/v2/type/training.proto\022\014asgt.v2.t" +
-      "ype\032\037google/protobuf/timestamp.proto\032\027as" +
-      "gt/type/dataset.proto\"\352\002\n\010Training\0229\n\ncr" +
+      "ype\032\027asgt/type/dataset.proto\032\037google/pro" +
+      "tobuf/timestamp.proto\"\352\002\n\010Training\0229\n\ncr" +
       "eated_at\030\001 \001(\0132\032.google.protobuf.Timesta" +
       "mpR\tcreatedAt\022\026\n\006status\030\002 \001(\tR\006status\022\'\n" +
       "\017training_status\030\003 \001(\tR\016trainingStatus\0226" +
@@ -2112,8 +2112,8 @@ public final class TrainingOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
           asgt.type.DatasetOuterClass.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_asgt_v2_type_Training_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2121,8 +2121,8 @@ public final class TrainingOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_type_Training_descriptor,
         new java.lang.String[] { "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset", "ScheduleTime", });
-    com.google.protobuf.TimestampProto.getDescriptor();
     asgt.type.DatasetOuterClass.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -5,9 +5,9 @@
 /* eslint-disable */
 
 import * as jspb from "google-protobuf";
+import * as asgt_type_target_metrics_pb from "../../asgt/type/target_metrics_pb";
 import * as gen_bq_schema_bq_field_pb from "../../gen_bq_schema/bq_field_pb";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
-import * as asgt_type_target_metrics_pb from "../../asgt/type/target_metrics_pb";
 
 export class Model extends jspb.Message { 
     getVersion(): number;

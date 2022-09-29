@@ -17,12 +17,12 @@ var global = (function() { return this || window || global || self || Function('
 
 var google_type_date_pb = require('../../../google/type/date_pb.js');
 goog.object.extend(proto, google_type_date_pb);
+var ssn_mlservice_v2_example_pb = require('../../../ssn/mlservice/v2/example_pb.js');
+goog.object.extend(proto, ssn_mlservice_v2_example_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.object.extend(proto, ssn_type_text_annotation_pb);
-var ssn_mlservice_v2_example_pb = require('../../../ssn/mlservice/v2/example_pb.js');
-goog.object.extend(proto, ssn_mlservice_v2_example_pb);
 goog.exportSymbol('proto.ssn.mlservice.v2.FeatureGenPredictRequest', null, global);
 goog.exportSymbol('proto.ssn.mlservice.v2.FeatureGenRequest', null, global);
 goog.exportSymbol('proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels', null, global);

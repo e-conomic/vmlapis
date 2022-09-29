@@ -11,11 +11,11 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61sgt/v2/type/training.proto\x12\x0c\x61sgt.v2.type\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x17\x61sgt/type/dataset.proto\"\xea\x02\n\x08Training\x12\x39\n\ncreated_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x16\n\x06status\x18\x02 \x01(\tR\x06status\x12\'\n\x0ftraining_status\x18\x03 \x01(\tR\x0etrainingStatus\x12\x36\n\x17training_status_message\x18\x04 \x01(\tR\x15trainingStatusMessage\x12;\n\x0b\x66inish_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\nfinishTime\x12,\n\x07\x64\x61taset\x18\x06 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12?\n\rschedule_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0cscheduleTimeB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61sgt/v2/type/training.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/type/dataset.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xea\x02\n\x08Training\x12\x39\n\ncreated_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x16\n\x06status\x18\x02 \x01(\tR\x06status\x12\'\n\x0ftraining_status\x18\x03 \x01(\tR\x0etrainingStatus\x12\x36\n\x17training_status_message\x18\x04 \x01(\tR\x15trainingStatusMessage\x12;\n\x0b\x66inish_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\nfinishTime\x12,\n\x07\x64\x61taset\x18\x06 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12?\n\rschedule_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0cscheduleTimeB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.v2.type.training_pb2', globals())

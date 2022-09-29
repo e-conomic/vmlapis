@@ -24,9 +24,9 @@ namespace Asgt.V2.Type {
     static TrainingReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chthc2d0L3YyL3R5cGUvdHJhaW5pbmcucHJvdG8SDGFzZ3QudjIudHlwZRof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXYXNndC90eXBlL2Rh",
-            "dGFzZXQucHJvdG8i6gIKCFRyYWluaW5nEjkKCmNyZWF0ZWRfYXQYASABKAsy",
+            "Chthc2d0L3YyL3R5cGUvdHJhaW5pbmcucHJvdG8SDGFzZ3QudjIudHlwZRoX",
+            "YXNndC90eXBlL2RhdGFzZXQucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
+            "c3RhbXAucHJvdG8i6gIKCFRyYWluaW5nEjkKCmNyZWF0ZWRfYXQYASABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgljcmVhdGVkQXQSFgoGc3Rh",
             "dHVzGAIgASgJUgZzdGF0dXMSJwoPdHJhaW5pbmdfc3RhdHVzGAMgASgJUg50",
             "cmFpbmluZ1N0YXR1cxI2Chd0cmFpbmluZ19zdGF0dXNfbWVzc2FnZRgEIAEo",
@@ -37,7 +37,7 @@ namespace Asgt.V2.Type {
             "bXBSDHNjaGVkdWxlVGltZUI7WjlnaXRodWIuY29tL2UtY29ub21pYy92bWxh",
             "cGlzL2dlbi9nby9hc2d0L3YyL3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Asgt.Type.DatasetReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Training), global::Asgt.V2.Type.Training.Parser, new[]{ "CreatedAt", "Status", "TrainingStatus", "TrainingStatusMessage", "FinishTime", "Dataset", "ScheduleTime" }, null, null, null, null)
           }));
@@ -127,7 +127,7 @@ namespace Asgt.V2.Type {
     public const int TrainingStatusFieldNumber = 3;
     private string trainingStatus_ = "";
     /// <summary>
-    /// Status of the training. 
+    /// Status of the training.
     /// SCHEDULED - Training is scheduled to be run in a specific time. This
     /// could be in between 1 minute or 24 hours depending on how recently the dataset
     /// was created

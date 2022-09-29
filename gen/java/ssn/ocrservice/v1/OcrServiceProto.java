@@ -2628,9 +2628,9 @@ public final class OcrServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"ssn/ocrservice/v1/ocrservice.proto\022\021ss" +
-      "n.ocrservice.v1\032 ssn/annotator/v1/annota" +
-      "tor.proto\032\036ssn/type/text_annotation.prot" +
-      "o\032\036google/protobuf/wrappers.proto\"l\n\030Get" +
+      "n.ocrservice.v1\032\036google/protobuf/wrapper" +
+      "s.proto\032 ssn/annotator/v1/annotator.prot" +
+      "o\032\036ssn/type/text_annotation.proto\"l\n\030Get" +
       "TextAnnotationRequest\0226\n\010document\030\002 \001(\0132" +
       "\032.ssn.annotator.v1.DocumentR\010document\022\030\n" +
       "\007preview\030\003 \001(\010R\007preview\"\221\001\n\031GetTextAnnot" +
@@ -2652,9 +2652,9 @@ public final class OcrServiceProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.annotator.v1.Annotator.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2680,9 +2680,9 @@ public final class OcrServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor,
         new java.lang.String[] { "TessHocr", });
+    com.google.protobuf.WrappersProto.getDescriptor();
     ssn.annotator.v1.Annotator.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

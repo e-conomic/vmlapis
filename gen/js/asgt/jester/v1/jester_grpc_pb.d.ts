@@ -6,10 +6,10 @@
 
 import * as grpc from "grpc";
 import * as asgt_jester_v1_jester_pb from "../../../asgt/jester/v1/jester_pb";
-import * as protoc_gen_openapiv2_options_annotations_pb from "../../../protoc-gen-openapiv2/options/annotations_pb";
-import * as asgt_type_prediction_pb from "../../../asgt/type/prediction_pb";
-import * as asgt_type_model_pb from "../../../asgt/type/model_pb";
 import * as asgt_type_data_pb from "../../../asgt/type/data_pb";
+import * as asgt_type_model_pb from "../../../asgt/type/model_pb";
+import * as asgt_type_prediction_pb from "../../../asgt/type/prediction_pb";
+import * as protoc_gen_openapiv2_options_annotations_pb from "../../../protoc-gen-openapiv2/options/annotations_pb";
 
 interface IJesterService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
     suggest: IJesterService_ISuggest;

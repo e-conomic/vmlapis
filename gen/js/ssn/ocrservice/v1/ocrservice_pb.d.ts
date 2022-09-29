@@ -5,9 +5,9 @@
 /* eslint-disable */
 
 import * as jspb from "google-protobuf";
+import * as google_protobuf_wrappers_pb from "google-protobuf/google/protobuf/wrappers_pb";
 import * as ssn_annotator_v1_annotator_pb from "../../../ssn/annotator/v1/annotator_pb";
 import * as ssn_type_text_annotation_pb from "../../../ssn/type/text_annotation_pb";
-import * as google_protobuf_wrappers_pb from "google-protobuf/google/protobuf/wrappers_pb";
 
 export class GetTextAnnotationRequest extends jspb.Message { 
 

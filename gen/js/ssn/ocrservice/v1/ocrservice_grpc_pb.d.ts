@@ -6,9 +6,9 @@
 
 import * as grpc from "grpc";
 import * as ssn_ocrservice_v1_ocrservice_pb from "../../../ssn/ocrservice/v1/ocrservice_pb";
+import * as google_protobuf_wrappers_pb from "google-protobuf/google/protobuf/wrappers_pb";
 import * as ssn_annotator_v1_annotator_pb from "../../../ssn/annotator/v1/annotator_pb";
 import * as ssn_type_text_annotation_pb from "../../../ssn/type/text_annotation_pb";
-import * as google_protobuf_wrappers_pb from "google-protobuf/google/protobuf/wrappers_pb";
 
 interface IOcrServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
     ocrScanImage: IOcrServiceService_IOcrScanImage;

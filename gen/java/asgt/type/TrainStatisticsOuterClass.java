@@ -1691,7 +1691,7 @@ public final class TrainStatisticsOuterClass {
 
     /**
      * <pre>
-     * name of the feature 
+     * name of the feature
      * </pre>
      *
      * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -1700,7 +1700,7 @@ public final class TrainStatisticsOuterClass {
     int getFeatureTypeValue();
     /**
      * <pre>
-     * name of the feature 
+     * name of the feature
      * </pre>
      *
      * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -1710,7 +1710,7 @@ public final class TrainStatisticsOuterClass {
 
     /**
      * <pre>
-     * type of the feature 
+     * type of the feature
      * </pre>
      *
      * <code>float information_gain = 3 [json_name = "informationGain"];</code>
@@ -1993,7 +1993,7 @@ public final class TrainStatisticsOuterClass {
     private int featureType_;
     /**
      * <pre>
-     * name of the feature 
+     * name of the feature
      * </pre>
      *
      * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -2004,7 +2004,7 @@ public final class TrainStatisticsOuterClass {
     }
     /**
      * <pre>
-     * name of the feature 
+     * name of the feature
      * </pre>
      *
      * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -2020,7 +2020,7 @@ public final class TrainStatisticsOuterClass {
     private float informationGain_;
     /**
      * <pre>
-     * type of the feature 
+     * type of the feature
      * </pre>
      *
      * <code>float information_gain = 3 [json_name = "informationGain"];</code>
@@ -2447,7 +2447,7 @@ public final class TrainStatisticsOuterClass {
       private int featureType_ = 0;
       /**
        * <pre>
-       * name of the feature 
+       * name of the feature
        * </pre>
        *
        * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -2458,7 +2458,7 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature 
+       * name of the feature
        * </pre>
        *
        * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -2473,7 +2473,7 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature 
+       * name of the feature
        * </pre>
        *
        * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -2487,7 +2487,7 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature 
+       * name of the feature
        * </pre>
        *
        * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -2505,7 +2505,7 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * name of the feature 
+       * name of the feature
        * </pre>
        *
        * <code>.asgt.type.FeatureStat.Type feature_type = 2 [json_name = "featureType"];</code>
@@ -2521,7 +2521,7 @@ public final class TrainStatisticsOuterClass {
       private float informationGain_ ;
       /**
        * <pre>
-       * type of the feature 
+       * type of the feature
        * </pre>
        *
        * <code>float information_gain = 3 [json_name = "informationGain"];</code>
@@ -2533,7 +2533,7 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature 
+       * type of the feature
        * </pre>
        *
        * <code>float information_gain = 3 [json_name = "informationGain"];</code>
@@ -2548,7 +2548,7 @@ public final class TrainStatisticsOuterClass {
       }
       /**
        * <pre>
-       * type of the feature 
+       * type of the feature
        * </pre>
        *
        * <code>float information_gain = 3 [json_name = "informationGain"];</code>

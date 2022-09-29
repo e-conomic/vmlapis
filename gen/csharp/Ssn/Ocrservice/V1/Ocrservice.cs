@@ -25,9 +25,9 @@ namespace Ssn.Ocrservice.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJzc24vb2Nyc2VydmljZS92MS9vY3JzZXJ2aWNlLnByb3RvEhFzc24ub2Ny",
-            "c2VydmljZS52MRogc3NuL2Fubm90YXRvci92MS9hbm5vdGF0b3IucHJvdG8a",
-            "HnNzbi90eXBlL3RleHRfYW5ub3RhdGlvbi5wcm90bxoeZ29vZ2xlL3Byb3Rv",
-            "YnVmL3dyYXBwZXJzLnByb3RvImwKGEdldFRleHRBbm5vdGF0aW9uUmVxdWVz",
+            "c2VydmljZS52MRoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGiBz",
+            "c24vYW5ub3RhdG9yL3YxL2Fubm90YXRvci5wcm90bxoec3NuL3R5cGUvdGV4",
+            "dF9hbm5vdGF0aW9uLnByb3RvImwKGEdldFRleHRBbm5vdGF0aW9uUmVxdWVz",
             "dBI2Cghkb2N1bWVudBgCIAEoCzIaLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1l",
             "bnRSCGRvY3VtZW50EhgKB3ByZXZpZXcYAyABKAhSB3ByZXZpZXcikQEKGUdl",
             "dFRleHRBbm5vdGF0aW9uUmVzcG9uc2USQQoPdGV4dF9hbm5vdGF0aW9uGAIg",
@@ -44,7 +44,7 @@ namespace Ssn.Ocrservice.V1 {
             "Y29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vb2Nyc2VydmljZS92MTtvY3Jz",
             "ZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null, null),

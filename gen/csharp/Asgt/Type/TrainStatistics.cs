@@ -576,7 +576,7 @@ namespace Asgt.Type {
     public const int FeatureTypeFieldNumber = 2;
     private global::Asgt.Type.FeatureStat.Types.Type featureType_ = global::Asgt.Type.FeatureStat.Types.Type.Int;
     /// <summary>
-    /// name of the feature 
+    /// name of the feature
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -591,7 +591,7 @@ namespace Asgt.Type {
     public const int InformationGainFieldNumber = 3;
     private float informationGain_;
     /// <summary>
-    /// type of the feature 
+    /// type of the feature
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -25,10 +25,10 @@ namespace Asgt.Dataservice.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1hc2d0L2RhdGEvdjEvYnFfZW50cmllcy5wcm90bxITYXNndC5kYXRhc2Vy",
-            "dmljZS52MRocZ2VuX2JxX3NjaGVtYS9icV9maWVsZC5wcm90bxocZ2VuX2Jx",
-            "X3NjaGVtYS9icV90YWJsZS5wcm90bxoUYXNndC90eXBlL2RhdGEucHJvdG8a",
-            "FWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24u",
-            "cHJvdG8aHGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8i5QQKBUVudHJ5",
+            "dmljZS52MRoUYXNndC90eXBlL2RhdGEucHJvdG8aFWFzZ3QvdHlwZS9tb2Rl",
+            "bC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8aHGFzZ3QvdHlw",
+            "ZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfZmllbGQu",
+            "cHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8i5QQKBUVudHJ5",
             "EkIKAmlkGAEgASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3Qg",
             "aWQgaWYgZmVlZGJhY2sgZGF0YVICaWQSIQoIY29uc3VtZXIYAiABKAlCBeo/",
             "AggBUghjb25zdW1lchIoCgxkYXRhc2V0X25hbWUYAyABKAlCBeo/AggBUgtk",
@@ -45,7 +45,7 @@ namespace Asgt.Dataservice.V1 {
             "ZGVkOhDqPw0KC3NhbXBsZV9kYXRhQjdaNWdpdGh1Yi5jb20vZS1jb25vbWlj",
             "L3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvZGF0YS92MTtkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.Entry), global::Asgt.Dataservice.V1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null, null)
           }));

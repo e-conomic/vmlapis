@@ -107,7 +107,7 @@ namespace Asgt.V2.Type {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// Invoice text from the SmartScan product. 
+    /// Invoice text from the SmartScan product.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -318,7 +318,7 @@ namespace Asgt.V2.Type {
     public const int AmountFieldNumber = 2;
     private float amount_;
     /// <summary>
-    /// Amount of the transaction. 
+    /// Amount of the transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -557,7 +557,7 @@ namespace Asgt.V2.Type {
     public const int TextFieldNumber = 2;
     private string text_ = "";
     /// <summary>
-    /// Text of the invoice line. 
+    /// Text of the invoice line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -614,7 +614,7 @@ namespace Asgt.V2.Type {
     public const int AmountFieldNumber = 7;
     private float amount_;
     /// <summary>
-    /// Amount of the invoice line. 
+    /// Amount of the invoice line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1169,7 +1169,7 @@ namespace Asgt.V2.Type {
   }
 
   /// <summary>
-  /// Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine 
+  /// Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
   /// structures can be used at a time.
   /// </summary>
   public sealed partial class Data : pb::IMessage<Data>

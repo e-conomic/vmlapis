@@ -21697,9 +21697,9 @@ public final class MlServiceProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n ssn/mlservice/v2/mlservice.proto\022\020ssn." +
-      "mlservice.v2\032\026google/type/date.proto\032\030ss" +
-      "n/type/candidate.proto\032\036ssn/type/text_an" +
-      "notation.proto\032\036ssn/mlservice/v2/example" +
+      "mlservice.v2\032\026google/type/date.proto\032\036ss" +
+      "n/mlservice/v2/example.proto\032\030ssn/type/c" +
+      "andidate.proto\032\036ssn/type/text_annotation" +
       ".proto\"\301\r\n\021FeatureGenRequest\022R\n\014truth_la" +
       "bels\030\001 \001(\0132/.ssn.mlservice.v2.FeatureGen" +
       "Request.TruthLabelsR\013truthLabels\022A\n\017text" +
@@ -21823,9 +21823,9 @@ public final class MlServiceProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.type.DateProto.getDescriptor(),
+          org.tensorflow.example.ExampleProtos.getDescriptor(),
           ssn.type.CandidateOuterClass.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
-          org.tensorflow.example.ExampleProtos.getDescriptor(),
         });
     internal_static_ssn_mlservice_v2_FeatureGenRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -21864,9 +21864,9 @@ public final class MlServiceProtos {
         internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_descriptor,
         new java.lang.String[] { "FeatureGenRequest", "PredictRequest", });
     com.google.type.DateProto.getDescriptor();
+    org.tensorflow.example.ExampleProtos.getDescriptor();
     ssn.type.CandidateOuterClass.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
-    org.tensorflow.example.ExampleProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

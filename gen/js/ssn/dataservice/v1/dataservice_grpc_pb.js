@@ -10,8 +10,8 @@ var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 var google_type_date_pb = require('../../../google/type/date_pb.js');
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
-var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js');
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
+var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js');
 
 function serialize_google_protobuf_Empty(arg) {
   if (!(arg instanceof google_protobuf_empty_pb.Empty)) {

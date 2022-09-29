@@ -15,12 +15,12 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
+goog.object.extend(proto, google_protobuf_wrappers_pb);
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js');
 goog.object.extend(proto, ssn_annotator_v1_annotator_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.object.extend(proto, ssn_type_text_annotation_pb);
-var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
-goog.object.extend(proto, google_protobuf_wrappers_pb);
 goog.exportSymbol('proto.ssn.ocrservice.v1.GetTextAnnotationRequest', null, global);
 goog.exportSymbol('proto.ssn.ocrservice.v1.GetTextAnnotationResponse', null, global);
 goog.exportSymbol('proto.ssn.ocrservice.v1.OcrScanImageRequest', null, global);

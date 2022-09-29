@@ -3,12 +3,12 @@
 'use strict';
 var grpc = require('grpc');
 var asgt_modelregistry_v1_model_registry_pb = require('../../../asgt/modelregistry/v1/model_registry_pb.js');
-var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
-var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 var asgt_type_target_metrics_pb = require('../../../asgt/type/target_metrics_pb.js');
 var asgt_type_train_statistics_pb = require('../../../asgt/type/train_statistics_pb.js');
+var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 
 function serialize_asgt_modelregistry_v1_GetCurrentModelRequest(arg) {
   if (!(arg instanceof asgt_modelregistry_v1_model_registry_pb.GetCurrentModelRequest)) {

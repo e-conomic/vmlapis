@@ -12,8 +12,8 @@ import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty
 import * as google_protobuf_wrappers_pb from "google-protobuf/google/protobuf/wrappers_pb";
 import * as google_type_date_pb from "../../../google/type/date_pb";
 import * as ssn_type_candidate_pb from "../../../ssn/type/candidate_pb";
-import * as ssn_type_tier_pb from "../../../ssn/type/tier_pb";
 import * as ssn_type_text_annotation_pb from "../../../ssn/type/text_annotation_pb";
+import * as ssn_type_tier_pb from "../../../ssn/type/tier_pb";
 
 interface IDataServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
     createDocument: IDataServiceService_ICreateDocument;

@@ -25,10 +25,10 @@ namespace Asgt.Jester.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chthc2d0L2plc3Rlci92MS9qZXN0ZXIucHJvdG8SDmFzZ3QuamVzdGVyLnYx",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGi5wcm90b2MtZ2VuLW9w",
-            "ZW5hcGl2Mi9vcHRpb25zL2Fubm90YXRpb25zLnByb3RvGhphc2d0L3R5cGUv",
-            "cHJlZGljdGlvbi5wcm90bxoVYXNndC90eXBlL21vZGVsLnByb3RvGhRhc2d0",
-            "L3R5cGUvZGF0YS5wcm90byJ1ChJTdWdnZXN0aW9uUmVzcG9uc2USNwoLcHJl",
+            "GhRhc2d0L3R5cGUvZGF0YS5wcm90bxoVYXNndC90eXBlL21vZGVsLnByb3Rv",
+            "Ghphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
+            "dGF0aW9ucy5wcm90bxoucHJvdG9jLWdlbi1vcGVuYXBpdjIvb3B0aW9ucy9h",
+            "bm5vdGF0aW9ucy5wcm90byJ1ChJTdWdnZXN0aW9uUmVzcG9uc2USNwoLcHJl",
             "ZGljdGlvbnMYASADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvblILcHJlZGlj",
             "dGlvbnMSJgoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVs",
             "IoIBChFTdWdnZXN0aW9uT3B0aW9ucxIpChBzdWdnZXN0aW9uX2xpbWl0GAEg",
@@ -45,7 +45,7 @@ namespace Asgt.Jester.V1 {
             "c3Rlci92MTtqZXN0ZXKSQToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBs",
             "aWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.DataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null, null),

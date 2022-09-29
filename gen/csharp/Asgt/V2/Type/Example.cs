@@ -24,16 +24,16 @@ namespace Asgt.V2.Type {
     static ExampleReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chphc2d0L3YyL3R5cGUvZXhhbXBsZS5wcm90bxIMYXNndC52Mi50eXBlGhd2",
-            "YWxpZGF0ZS92YWxpZGF0ZS5wcm90bxoXYXNndC92Mi90eXBlL2RhdGEucHJv",
-            "dG8aH2FzZ3QvdjIvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8imgEKB0V4YW1w",
+            "Chphc2d0L3YyL3R5cGUvZXhhbXBsZS5wcm90bxIMYXNndC52Mi50eXBlGhdh",
+            "c2d0L3YyL3R5cGUvZGF0YS5wcm90bxofYXNndC92Mi90eXBlL3RhcmdldF92",
+            "YWx1ZS5wcm90bxoXdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8imgEKB0V4YW1w",
             "bGUSJgoEZGF0YRgBIAEoCzISLmFzZ3QudjIudHlwZS5EYXRhUgRkYXRhEkoK",
             "DXRhcmdldF92YWx1ZXMYAiADKAsyGS5hc2d0LnYyLnR5cGUuVGFyZ2V0VmFs",
             "dWVCCvpCB5IBBAgBKABSDHRhcmdldFZhbHVlcxIbCgJpZBgDIAEoCUIL+kII",
             "cgawAQHQAQFSAmlkQjtaOWdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
             "Z2VuL2dvL2FzZ3QvdjIvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Validate.ValidateReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Asgt.V2.Type.TargetValueReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.V2.Type.DataReflection.Descriptor, global::Asgt.V2.Type.TargetValueReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Example), global::Asgt.V2.Type.Example.Parser, new[]{ "Data", "TargetValues", "Id" }, null, null, null, null)
           }));

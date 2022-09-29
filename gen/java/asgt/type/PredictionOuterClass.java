@@ -3544,8 +3544,8 @@ public final class PredictionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032asgt/type/prediction.proto\022\tasgt.type\032" +
-      "\036google/protobuf/wrappers.proto\032\034gen_bq_" +
-      "schema/bq_field.proto\"\301\001\n\nConfidence\0221\n\005" +
+      "\034gen_bq_schema/bq_field.proto\032\036google/pr" +
+      "otobuf/wrappers.proto\"\301\001\n\nConfidence\0221\n\005" +
       "level\030\001 \001(\0162\033.asgt.type.Confidence.Level" +
       "R\005level\0221\n\005value\030\002 \001(\0132\033.google.protobuf" +
       ".FloatValueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000" +
@@ -3563,8 +3563,8 @@ public final class PredictionOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.WrappersProto.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_asgt_type_Confidence_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3595,8 +3595,8 @@ public final class PredictionOuterClass {
     registry.add(gen_bq_schema.BqField.bigquery);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.WrappersProto.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

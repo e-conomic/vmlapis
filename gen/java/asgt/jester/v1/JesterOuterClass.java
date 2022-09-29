@@ -3157,10 +3157,10 @@ public final class JesterOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033asgt/jester/v1/jester.proto\022\016asgt.jest" +
-      "er.v1\032\034google/api/annotations.proto\032.pro" +
-      "toc-gen-openapiv2/options/annotations.pr" +
-      "oto\032\032asgt/type/prediction.proto\032\025asgt/ty" +
-      "pe/model.proto\032\024asgt/type/data.proto\"u\n\022" +
+      "er.v1\032\024asgt/type/data.proto\032\025asgt/type/m" +
+      "odel.proto\032\032asgt/type/prediction.proto\032\034" +
+      "google/api/annotations.proto\032.protoc-gen" +
+      "-openapiv2/options/annotations.proto\"u\n\022" +
       "SuggestionResponse\0227\n\013predictions\030\001 \003(\0132" +
       "\025.asgt.type.PredictionR\013predictions\022&\n\005m" +
       "odel\030\002 \001(\0132\020.asgt.type.ModelR\005model\"\202\001\n\021" +
@@ -3183,11 +3183,11 @@ public final class JesterOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.DataOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.type.PredictionOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
-          asgt.type.PredictionOuterClass.getDescriptor(),
-          asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.DataOuterClass.getDescriptor(),
         });
     internal_static_asgt_jester_v1_SuggestionResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3213,11 +3213,11 @@ public final class JesterOuterClass {
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.DataOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
+    asgt.type.PredictionOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
-    asgt.type.PredictionOuterClass.getDescriptor();
-    asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.DataOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,7 +30,7 @@ public final class SuggesterServiceOuterClass {
 
     /**
      * <pre>
-     * Not implemented yet. 
+     * Not implemented yet.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -39,7 +39,7 @@ public final class SuggesterServiceOuterClass {
     int getMinConfidenceValue();
     /**
      * <pre>
-     * Not implemented yet. 
+     * Not implemented yet.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -157,7 +157,7 @@ public final class SuggesterServiceOuterClass {
     private int minConfidence_;
     /**
      * <pre>
-     * Not implemented yet. 
+     * Not implemented yet.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -168,7 +168,7 @@ public final class SuggesterServiceOuterClass {
     }
     /**
      * <pre>
-     * Not implemented yet. 
+     * Not implemented yet.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -544,7 +544,7 @@ public final class SuggesterServiceOuterClass {
       private int minConfidence_ = 0;
       /**
        * <pre>
-       * Not implemented yet. 
+       * Not implemented yet.
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -555,7 +555,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet. 
+       * Not implemented yet.
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -570,7 +570,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet. 
+       * Not implemented yet.
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -584,7 +584,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet. 
+       * Not implemented yet.
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -602,7 +602,7 @@ public final class SuggesterServiceOuterClass {
       }
       /**
        * <pre>
-       * Not implemented yet. 
+       * Not implemented yet.
        * </pre>
        *
        * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -4894,11 +4894,11 @@ public final class SuggesterServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/v2/suggester_service.proto\022\007asgt." +
-      "v2\032\034google/api/annotations.proto\032.protoc" +
-      "-gen-openapiv2/options/annotations.proto" +
-      "\032\027validate/validate.proto\032\032asgt/type/pre" +
-      "diction.proto\032\025asgt/type/model.proto\032\027as" +
-      "gt/v2/type/data.proto\"\236\001\n\016SuggestOptions" +
+      "v2\032\025asgt/type/model.proto\032\032asgt/type/pre" +
+      "diction.proto\032\027asgt/v2/type/data.proto\032\034" +
+      "google/api/annotations.proto\032.protoc-gen" +
+      "-openapiv2/options/annotations.proto\032\027va" +
+      "lidate/validate.proto\"\236\001\n\016SuggestOptions" +
       "\022#\n\rsuggest_limit\030\001 \001(\005R\014suggestLimit\022L\n" +
       "\016min_confidence\030\002 \001(\0162\033.asgt.type.Confid" +
       "ence.LevelB\010\372B\005\202\001\002\020\001R\rminConfidence:\031\222A\026" +
@@ -4937,12 +4937,12 @@ public final class SuggesterServiceOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.type.PredictionOuterClass.getDescriptor(),
+          asgt.v2.type.DataOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
-          asgt.type.PredictionOuterClass.getDescriptor(),
-          asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.v2.type.DataOuterClass.getDescriptor(),
         });
     internal_static_asgt_v2_SuggestOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4983,12 +4983,12 @@ public final class SuggesterServiceOuterClass {
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.ModelOuterClass.getDescriptor();
+    asgt.type.PredictionOuterClass.getDescriptor();
+    asgt.v2.type.DataOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     io.envoyproxy.pgv.validate.Validate.getDescriptor();
-    asgt.type.PredictionOuterClass.getDescriptor();
-    asgt.type.ModelOuterClass.getDescriptor();
-    asgt.v2.type.DataOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

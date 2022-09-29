@@ -5,12 +5,12 @@
 /* eslint-disable */
 
 import * as jspb from "google-protobuf";
+import * as asgt_type_dataset_pb from "../../asgt/type/dataset_pb";
+import * as asgt_v2_type_example_pb from "../../asgt/v2/type/example_pb";
+import * as asgt_v2_type_training_pb from "../../asgt/v2/type/training_pb";
 import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
 import * as protoc_gen_openapiv2_options_annotations_pb from "../../protoc-gen-openapiv2/options/annotations_pb";
 import * as validate_validate_pb from "../../validate/validate_pb";
-import * as asgt_v2_type_example_pb from "../../asgt/v2/type/example_pb";
-import * as asgt_v2_type_training_pb from "../../asgt/v2/type/training_pb";
-import * as asgt_type_dataset_pb from "../../asgt/type/dataset_pb";
 
 export class GetDatasetRequest extends jspb.Message { 
     getDatasetName(): string;

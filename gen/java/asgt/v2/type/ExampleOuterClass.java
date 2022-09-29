@@ -1230,8 +1230,8 @@ public final class ExampleOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032asgt/v2/type/example.proto\022\014asgt.v2.ty" +
-      "pe\032\027validate/validate.proto\032\027asgt/v2/typ" +
-      "e/data.proto\032\037asgt/v2/type/target_value." +
+      "pe\032\027asgt/v2/type/data.proto\032\037asgt/v2/typ" +
+      "e/target_value.proto\032\027validate/validate." +
       "proto\"\232\001\n\007Example\022&\n\004data\030\001 \001(\0132\022.asgt.v" +
       "2.type.DataR\004data\022J\n\rtarget_values\030\002 \003(\013" +
       "2\031.asgt.v2.type.TargetValueB\n\372B\007\222\001\004\010\001(\000R" +
@@ -1242,9 +1242,9 @@ public final class ExampleOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           asgt.v2.type.DataOuterClass.getDescriptor(),
           asgt.v2.type.TargetValueOuterClass.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_asgt_v2_type_Example_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1257,9 +1257,9 @@ public final class ExampleOuterClass {
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     asgt.v2.type.DataOuterClass.getDescriptor();
     asgt.v2.type.TargetValueOuterClass.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

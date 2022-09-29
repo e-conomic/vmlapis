@@ -9350,12 +9350,12 @@ public final class DatasetServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035asgt/v2/dataset_service.proto\022\007asgt.v2" +
-      "\032\034google/api/annotations.proto\032\033google/p" +
-      "rotobuf/empty.proto\032.protoc-gen-openapiv" +
-      "2/options/annotations.proto\032\027validate/va" +
-      "lidate.proto\032\032asgt/v2/type/example.proto" +
-      "\032\033asgt/v2/type/training.proto\032\027asgt/type" +
-      "/dataset.proto\"`\n\021GetDatasetRequest\022K\n\014d" +
+      "\032\027asgt/type/dataset.proto\032\032asgt/v2/type/" +
+      "example.proto\032\033asgt/v2/type/training.pro" +
+      "to\032\034google/api/annotations.proto\032\033google" +
+      "/protobuf/empty.proto\032.protoc-gen-openap" +
+      "iv2/options/annotations.proto\032\027validate/" +
+      "validate.proto\"`\n\021GetDatasetRequest\022K\n\014d" +
       "ataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
       ".][A-Za-z0-9_.>-]*$R\013datasetName\"\235\001\n\024Cre" +
       "ateDatasetRequest\022K\n\014dataset_name\030\001 \001(\tB" +
@@ -9434,13 +9434,13 @@ public final class DatasetServiceOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.DatasetOuterClass.getDescriptor(),
+          asgt.v2.type.ExampleOuterClass.getDescriptor(),
+          asgt.v2.type.TrainingOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           io.envoyproxy.pgv.validate.Validate.getDescriptor(),
-          asgt.v2.type.ExampleOuterClass.getDescriptor(),
-          asgt.v2.type.TrainingOuterClass.getDescriptor(),
-          asgt.type.DatasetOuterClass.getDescriptor(),
         });
     internal_static_asgt_v2_GetDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9527,13 +9527,13 @@ public final class DatasetServiceOuterClass {
     registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.DatasetOuterClass.getDescriptor();
+    asgt.v2.type.ExampleOuterClass.getDescriptor();
+    asgt.v2.type.TrainingOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     io.envoyproxy.pgv.validate.Validate.getDescriptor();
-    asgt.v2.type.ExampleOuterClass.getDescriptor();
-    asgt.v2.type.TrainingOuterClass.getDescriptor();
-    asgt.type.DatasetOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

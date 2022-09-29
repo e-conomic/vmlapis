@@ -9,13 +9,13 @@ import grpclib.client
 if typing.TYPE_CHECKING:
     import grpclib.server
 
+import asgt.type.dataset_pb2
+import asgt.v2.type.example_pb2
+import asgt.v2.type.training_pb2
 import google.api.annotations_pb2
 import google.protobuf.empty_pb2
 import protoc_gen_openapiv2.options.annotations_pb2
 import validate.validate_pb2
-import asgt.v2.type.example_pb2
-import asgt.v2.type.training_pb2
-import asgt.type.dataset_pb2
 import asgt.v2.dataset_service_pb2
 
 

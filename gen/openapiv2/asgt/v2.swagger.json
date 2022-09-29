@@ -118,7 +118,7 @@
         ]
       },
       "put": {
-        "summary": "Not implemented yet. \nCreates a new dataset. If a dataset with such name already exsits, it will be updated with the \nprovided data.",
+        "summary": "Not implemented yet.\nCreates a new dataset. If a dataset with such name already exsits, it will be updated with the\nprovided data.",
         "operationId": "DatasetService_CreateOrUpdateDataset",
         "responses": {
           "200": {
@@ -225,7 +225,7 @@
     },
     "/v2/datasets/{datasetName}/examples/{example.id}": {
       "put": {
-        "summary": "Not implemented yet. \nUploads or updates a new single example. \nIf the specified example already exists, the example \nis updated with the provided values according to provided ID.",
+        "summary": "Not implemented yet.\nUploads or updates a new single example.\nIf the specified example already exists, the example\nis updated with the provided values according to provided ID.",
         "operationId": "DatasetService_CreateOrUpdateExample",
         "responses": {
           "200": {
@@ -389,7 +389,7 @@
     },
     "/v2/datasets/{datasetName}/trainings": {
       "get": {
-        "summary": "Get the specified number of the most recent dataset's trainings. \nNumber of requested trainings has to be larger than 0 but no larger than 100.",
+        "summary": "Get the specified number of the most recent dataset's trainings.\nNumber of requested trainings has to be larger than 0 but no larger than 100.",
         "operationId": "DatasetService_GetDatasetTrainings",
         "responses": {
           "200": {
@@ -714,7 +714,7 @@
           "title": "Line-level information for e-invoices; use one sample per invoice line"
         }
       },
-      "description": "Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine \nstructures can be used at a time."
+      "description": "Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine\nstructures can be used at a time."
     },
     "typeDataset": {
       "type": "object",
@@ -931,7 +931,7 @@
         },
         "trainingStatus": {
           "type": "string",
-          "description": "Status of the training. \nSCHEDULED - Training is scheduled to be run in a specific time. This\ncould be in between 1 minute or 24 hours depending on how recently the dataset\nwas created\nPENDING - The training is ready to be picked up by a worker.\nRUNNING - The training is currently running.\nDONE - The training has completed successfully.\nFAILED - The training failed due to an error. See training status for\nmore information."
+          "description": "Status of the training.\nSCHEDULED - Training is scheduled to be run in a specific time. This\ncould be in between 1 minute or 24 hours depending on how recently the dataset\nwas created\nPENDING - The training is ready to be picked up by a worker.\nRUNNING - The training is currently running.\nDONE - The training has completed successfully.\nFAILED - The training failed due to an error. See training status for\nmore information."
         },
         "trainingStatusMessage": {
           "type": "string",

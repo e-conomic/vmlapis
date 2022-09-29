@@ -29,8 +29,8 @@ namespace Ssn.Dataservice.V1 {
             "Z2VuX2JxX3NjaGVtYS9icV90YWJsZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
             "dGF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh5n",
             "b29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aFmdvb2dsZS90eXBlL2Rh",
-            "dGUucHJvdG8aGHNzbi90eXBlL2NhbmRpZGF0ZS5wcm90bxoTc3NuL3R5cGUv",
-            "dGllci5wcm90bxoec3NuL3R5cGUvdGV4dF9hbm5vdGF0aW9uLnByb3RvIq8F",
+            "dGUucHJvdG8aGHNzbi90eXBlL2NhbmRpZGF0ZS5wcm90bxoec3NuL3R5cGUv",
+            "dGV4dF9hbm5vdGF0aW9uLnByb3RvGhNzc24vdHlwZS90aWVyLnByb3RvIq8F",
             "CghEb2N1bWVudBIvCgJ0YRgBIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0",
             "aW9uQgXqPwIYAVICdGESGwoFYnl0ZXMYAiABKAxCBeo/AhgBUgVieXRlcxI8",
             "CgJpZBgDIAEoCUIs6j8pCAEiJUZlZWRiYWNrIElELCBzYW1lIGFzIEVudm95",
@@ -314,7 +314,7 @@ namespace Ssn.Dataservice.V1 {
             "b21pYy92bWxhcGlzL2dlbi9nby9zc24vZGF0YXNlcnZpY2UvdjE7ZGF0YXNl",
             "cnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Document), global::Ssn.Dataservice.V1.Document.Parser, new[]{ "Ta", "Bytes", "Id", "Consumer", "Tags", "TrueValues", "PredictionValues", "FeedbackTime", "PredictionConfidences", "PredictionMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.TrueValues), global::Ssn.Dataservice.V1.TrueValues.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress" }, null, null, null, null),

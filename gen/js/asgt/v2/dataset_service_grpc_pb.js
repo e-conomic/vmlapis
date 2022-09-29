@@ -3,13 +3,13 @@
 'use strict';
 var grpc = require('grpc');
 var asgt_v2_dataset_service_pb = require('../../asgt/v2/dataset_service_pb.js');
+var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js');
+var asgt_v2_type_example_pb = require('../../asgt/v2/type/example_pb.js');
+var asgt_v2_type_training_pb = require('../../asgt/v2/type/training_pb.js');
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 var protoc$gen$openapiv2_options_annotations_pb = require('../../protoc-gen-openapiv2/options/annotations_pb.js');
 var validate_validate_pb = require('../../validate/validate_pb.js');
-var asgt_v2_type_example_pb = require('../../asgt/v2/type/example_pb.js');
-var asgt_v2_type_training_pb = require('../../asgt/v2/type/training_pb.js');
-var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js');
 
 function serialize_asgt_type_Dataset(arg) {
   if (!(arg instanceof asgt_type_dataset_pb.Dataset)) {
@@ -192,8 +192,8 @@ createDataset: {
     responseSerialize: serialize_google_protobuf_Empty,
     responseDeserialize: deserialize_google_protobuf_Empty,
   },
-  // Not implemented yet. 
-// Creates a new dataset. If a dataset with such name already exsits, it will be updated with the 
+  // Not implemented yet.
+// Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
 // provided data.
 createOrUpdateDataset: {
     path: '/asgt.v2.DatasetService/CreateOrUpdateDataset',
@@ -243,9 +243,9 @@ createExample: {
     responseSerialize: serialize_google_protobuf_Empty,
     responseDeserialize: deserialize_google_protobuf_Empty,
   },
-  // Not implemented yet. 
-// Uploads or updates a new single example. 
-// If the specified example already exists, the example 
+  // Not implemented yet.
+// Uploads or updates a new single example.
+// If the specified example already exists, the example
 // is updated with the provided values according to provided ID.
 createOrUpdateExample: {
     path: '/asgt.v2.DatasetService/CreateOrUpdateExample',
@@ -283,7 +283,7 @@ truncateDataset: {
     responseSerialize: serialize_google_protobuf_Empty,
     responseDeserialize: deserialize_google_protobuf_Empty,
   },
-  // Get the specified number of the most recent dataset's trainings. 
+  // Get the specified number of the most recent dataset's trainings.
 // Number of requested trainings has to be larger than 0 but no larger than 100.
 getDatasetTrainings: {
     path: '/asgt.v2.DatasetService/GetDatasetTrainings',

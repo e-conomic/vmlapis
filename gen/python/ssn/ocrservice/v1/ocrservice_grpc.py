@@ -9,9 +9,9 @@ import grpclib.client
 if typing.TYPE_CHECKING:
     import grpclib.server
 
+import google.protobuf.wrappers_pb2
 import ssn.annotator.v1.annotator_pb2
 import ssn.type.text_annotation_pb2
-import google.protobuf.wrappers_pb2
 import ssn.ocrservice.v1.ocrservice_pb2
 
 

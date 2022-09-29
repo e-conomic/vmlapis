@@ -10,9 +10,9 @@ if typing.TYPE_CHECKING:
     import grpclib.server
 
 import google.type.date_pb2
+import ssn.mlservice.v2.example_pb2
 import ssn.type.candidate_pb2
 import ssn.type.text_annotation_pb2
-import ssn.mlservice.v2.example_pb2
 import ssn.mlservice.v2.mlservice_pb2
 
 

@@ -10229,13 +10229,13 @@ public final class DataServiceProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/data/v1/data_service.proto\022\023asgt." +
-      "dataservice.v1\032\034google/api/annotations.p" +
-      "roto\032\033google/protobuf/empty.proto\032 asgt/" +
-      "type/retention_policy.proto\032\025asgt/type/m" +
-      "odel.proto\032\027asgt/type/dataset.proto\032\026asg" +
-      "t/type/sample.proto\032$ssn/dataservice/v1/" +
-      "dataservice.proto\032\036google/protobuf/wrapp" +
-      "ers.proto\032\037google/protobuf/timestamp.pro" +
+      "dataservice.v1\032\027asgt/type/dataset.proto\032" +
+      "\025asgt/type/model.proto\032 asgt/type/retent" +
+      "ion_policy.proto\032\026asgt/type/sample.proto" +
+      "\032\034google/api/annotations.proto\032\033google/p" +
+      "rotobuf/empty.proto\032\037google/protobuf/tim" +
+      "estamp.proto\032\036google/protobuf/wrappers.p" +
+      "roto\032$ssn/dataservice/v1/dataservice.pro" +
       "to\"\237\001\n\027CalculateMetricsRequest\0229\n\nstart_" +
       "time\030\001 \001(\0132\032.google.protobuf.TimestampR\t" +
       "startTime\0225\n\010end_time\030\002 \001(\0132\032.google.pro" +
@@ -10297,15 +10297,15 @@ public final class DataServiceProtos {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.DatasetOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.type.RetentionPolicyOuterClass.getDescriptor(),
+          asgt.type.SampleOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          asgt.type.RetentionPolicyOuterClass.getDescriptor(),
-          asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.DatasetOuterClass.getDescriptor(),
-          asgt.type.SampleOuterClass.getDescriptor(),
-          ssn.dataservice.v1.DataServiceProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          ssn.dataservice.v1.DataServiceProto.getDescriptor(),
         });
     internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10372,15 +10372,15 @@ public final class DataServiceProtos {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.DatasetOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
+    asgt.type.RetentionPolicyOuterClass.getDescriptor();
+    asgt.type.SampleOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    asgt.type.RetentionPolicyOuterClass.getDescriptor();
-    asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.DatasetOuterClass.getDescriptor();
-    asgt.type.SampleOuterClass.getDescriptor();
-    ssn.dataservice.v1.DataServiceProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    ssn.dataservice.v1.DataServiceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -57887,8 +57887,8 @@ public final class DataServiceProto {
       "google/api/annotations.proto\032\033google/pro" +
       "tobuf/empty.proto\032\036google/protobuf/wrapp" +
       "ers.proto\032\026google/type/date.proto\032\030ssn/t" +
-      "ype/candidate.proto\032\023ssn/type/tier.proto" +
-      "\032\036ssn/type/text_annotation.proto\"\257\005\n\010Doc" +
+      "ype/candidate.proto\032\036ssn/type/text_annot" +
+      "ation.proto\032\023ssn/type/tier.proto\"\257\005\n\010Doc" +
       "ument\022/\n\002ta\030\001 \001(\0132\030.ssn.type.TextAnnotat" +
       "ionB\005\352?\002\030\001R\002ta\022\033\n\005bytes\030\002 \001(\014B\005\352?\002\030\001R\005by" +
       "tes\022<\n\002id\030\003 \001(\tB,\352?)\010\001\"%Feedback ID, sam" +
@@ -58217,8 +58217,8 @@ public final class DataServiceProto {
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.DateProto.getDescriptor(),
           ssn.type.CandidateOuterClass.getDescriptor(),
-          ssn.type.TierOuterClass.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
+          ssn.type.TierOuterClass.getDescriptor(),
         });
     internal_static_ssn_dataservice_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -58336,8 +58336,8 @@ public final class DataServiceProto {
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.DateProto.getDescriptor();
     ssn.type.CandidateOuterClass.getDescriptor();
-    ssn.type.TierOuterClass.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
+    ssn.type.TierOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

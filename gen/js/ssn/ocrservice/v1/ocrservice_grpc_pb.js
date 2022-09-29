@@ -3,9 +3,9 @@
 'use strict';
 var grpc = require('grpc');
 var ssn_ocrservice_v1_ocrservice_pb = require('../../../ssn/ocrservice/v1/ocrservice_pb.js');
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js');
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
-var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 
 function serialize_ssn_ocrservice_v1_GetTextAnnotationRequest(arg) {
   if (!(arg instanceof ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationRequest)) {

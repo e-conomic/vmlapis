@@ -25,11 +25,11 @@ namespace Asgt.Modelregistry.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ciphc2d0L21vZGVscmVnaXN0cnkvdjEvbW9kZWxfcmVnaXN0cnkucHJvdG8S",
-            "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
-            "LnByb3RvGhVhc2d0L3R5cGUvbW9kZWwucHJvdG8aF2FzZ3QvdHlwZS9kYXRh",
-            "c2V0LnByb3RvGhhhc2d0L3R5cGUvcmV2aXNpb24ucHJvdG8aHmFzZ3QvdHlw",
-            "ZS90YXJnZXRfbWV0cmljcy5wcm90bxogYXNndC90eXBlL3RyYWluX3N0YXRp",
-            "c3RpY3MucHJvdG8i7QMKFFJlZ2lzdGVyTW9kZWxSZXF1ZXN0EiwKB2RhdGFz",
+            "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRoXYXNndC90eXBlL2RhdGFzZXQucHJv",
+            "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
+            "LnByb3RvGh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aIGFzZ3Qv",
+            "dHlwZS90cmFpbl9zdGF0aXN0aWNzLnByb3RvGhtnb29nbGUvcHJvdG9idWYv",
+            "ZW1wdHkucHJvdG8i7QMKFFJlZ2lzdGVyTW9kZWxSZXF1ZXN0EiwKB2RhdGFz",
             "ZXQYASABKAsyEi5hc2d0LnR5cGUuRGF0YXNldFIHZGF0YXNldBIvCghyZXZp",
             "c2lvbhgCIAEoCzITLmFzZ3QudHlwZS5SZXZpc2lvblIIcmV2aXNpb24SIwoN",
             "bW9kZWxfdmVyc2lvbhgDIAEoA1IMbW9kZWxWZXJzaW9uElIKB21ldHJpY3MY",
@@ -52,7 +52,7 @@ namespace Asgt.Modelregistry.V1 {
             "L2dvL2FzZ3QvbW9kZWxyZWdpc3RyeS92MTttb2RlbHJlZ2lzdHJ5YgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Asgt.Type.TrainStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Asgt.Type.TrainStatisticsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null, null),

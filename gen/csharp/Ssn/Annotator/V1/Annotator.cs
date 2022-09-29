@@ -441,8 +441,8 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("TOTAL_EXCL_VAT")] TotalExclVat = 7,
         /// <summary>
-        /// [DEPRECATED] Run supplier corporate id detection. 
-        /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
+        /// [DEPRECATED] Run supplier corporate id detection.
+        /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
         /// </summary>
         [pbr::OriginalName("SUPPLIER_CORPORATE_ID")] SupplierCorporateId = 8,
         /// <summary>
@@ -1060,7 +1060,7 @@ namespace Ssn.Annotator.V1 {
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierCorporateId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
     /// [DEPRECATED]
-    /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
+    /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
     /// supplierCorporateId
     /// The company VAT number
     /// Example: "123456789B01" (for Dutch companies)

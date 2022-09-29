@@ -16,8 +16,8 @@ import google.protobuf.empty_pb2
 import google.protobuf.wrappers_pb2
 import google.type.date_pb2
 import ssn.type.candidate_pb2
-import ssn.type.tier_pb2
 import ssn.type.text_annotation_pb2
+import ssn.type.tier_pb2
 import ssn.dataservice.v1.dataservice_pb2
 
 

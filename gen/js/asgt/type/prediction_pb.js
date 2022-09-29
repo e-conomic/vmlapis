@@ -15,10 +15,10 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
-var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
-goog.object.extend(proto, google_protobuf_wrappers_pb);
 var gen_bq_schema_bq_field_pb = require('../../gen_bq_schema/bq_field_pb.js');
 goog.object.extend(proto, gen_bq_schema_bq_field_pb);
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
+goog.object.extend(proto, google_protobuf_wrappers_pb);
 goog.exportSymbol('proto.asgt.type.Confidence', null, global);
 goog.exportSymbol('proto.asgt.type.Confidence.Level', null, global);
 goog.exportSymbol('proto.asgt.type.Prediction', null, global);
