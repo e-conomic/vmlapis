@@ -1,22 +1,20 @@
 version: v1
 plugins:
-  - name: go
+  - remote: buf.build/protocolbuffers/plugins/go
     out: gen/go
     opt: paths=source_relative
-  - name: go-grpc
+  - remote: buf.build/grpc/plugins/go
     out: gen/go
     opt:
       - paths=source_relative
       - require_unimplemented_servers=false
-  - name: python
+  - remote: buf.build/protocolbuffers/plugins/python
     out: gen/python
-  - name: js
+  - remote: buf.build/protocolbuffers/plugins/js
     out: gen/js
     opt: import_style=commonjs,binary
-  - name: ts
-    out: gen/js
-  - name: java
+  - remote: buf.build/protocolbuffers/plugins/java
     out: gen/java
-  - name: csharp
+  - remote: buf.build/protocolbuffers/plugins/csharp
     out: gen/csharp
     opt: base_namespace=

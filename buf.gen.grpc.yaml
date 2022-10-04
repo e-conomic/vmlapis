@@ -1,10 +1,7 @@
 version: v1
 plugins:
-  # pip install grpclib protobuf
-  - name: python_grpc
+  - remote: buf.build/grpc/plugins/python
     out: gen/python
-  # npm install grpc-tools --global
-  - name: js-ts-grpc
+  - remote: buf.build/grpc/plugins/web
     out: gen/js
-    opt: import_style=commonjs,mode=grpcwebtext
-    path: grpc_tools_node_protoc_plugin
+    opt: import_style=commonjs+dts,mode=grpcwebtext
