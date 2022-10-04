@@ -74,3 +74,4 @@ all:
 		--path proto/asgt/v2/suggester_service.proto
 
 	./scripts/gomock.sh
+	./scripts/py_fixes.sh
