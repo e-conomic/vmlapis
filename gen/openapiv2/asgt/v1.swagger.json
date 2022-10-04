@@ -1,13 +1,19 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "asgt/data/v1/bq_entries.proto",
-    "version": "version not set"
+    "title": "AutoSuggest",
+    "version": "v1"
   },
   "tags": [
     {
+      "name": "Jester"
+    },
+    {
       "name": "DataService"
     }
+  ],
+  "schemes": [
+    "https"
   ],
   "consumes": [
     "application/json"
@@ -102,6 +108,67 @@
         ],
         "tags": [
           "DataService"
+        ]
+      }
+    },
+    "/v1/{type}/{name}:suggest": {
+      "post": {
+        "operationId": "Jester_Suggest",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1SuggestionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "inputs": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/typeData"
+                  }
+                },
+                "options": {
+                  "$ref": "#/definitions/v1SuggestionOptions"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "Jester"
         ]
       }
     },
@@ -297,6 +364,31 @@
       ],
       "default": "FEATURE_TENSORS"
     },
+    "PredictionTarget": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PredictionTargetCandidate"
+          }
+        }
+      }
+    },
+    "PredictionTargetCandidate": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/definitions/asgttypeConfidence"
+        }
+      }
+    },
     "TargetMetricsMetric": {
       "type": "object",
       "properties": {
@@ -313,6 +405,33 @@
           "format": "float"
         }
       }
+    },
+    "asgttypeConfidence": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "$ref": "#/definitions/asgttypeConfidenceLevel",
+          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
+        },
+        "value": {
+          "type": "number",
+          "format": "float",
+          "title": "The confidence value"
+        }
+      },
+      "title": "Common types"
+    },
+    "asgttypeConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "VERY_LOW",
+        "LOW",
+        "MID",
+        "HIGH",
+        "VERY_HIGH"
+      ],
+      "default": "UNKNOWN"
     },
     "protobufAny": {
       "type": "object",
@@ -480,6 +599,17 @@
         }
       }
     },
+    "typePrediction": {
+      "type": "object",
+      "properties": {
+        "targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PredictionTarget"
+          }
+        }
+      }
+    },
     "typeRetentionPolicy": {
       "type": "object",
       "properties": {
@@ -605,6 +735,33 @@
           "title": "The most recently trained model; empty if no model has been trained"
         }
       }
+    },
+    "v1SuggestionOptions": {
+      "type": "object",
+      "properties": {
+        "suggestionLimit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "minConfidence": {
+          "$ref": "#/definitions/asgttypeConfidenceLevel"
+        }
+      }
+    },
+    "v1SuggestionResponse": {
+      "type": "object",
+      "properties": {
+        "predictions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typePrediction"
+          }
+        },
+        "model": {
+          "$ref": "#/definitions/typeModel"
+        }
+      },
+      "title": "AutoSuggest"
     }
   }
 }
