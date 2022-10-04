@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from ssn.mlservice.v2 import feature_pb2 as ssn_dot_mlservice_dot_v2_dot_feature__pb2
+from vml_proto.ssn.mlservice.v2 import feature_pb2 as ssn_dot_mlservice_dot_v2_dot_feature__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1essn/mlservice/v2/example.proto\x12\ntensorflow\x1a\x1essn/mlservice/v2/feature.proto\";\n\x07\x45xample\x12\x30\n\x08\x66\x65\x61tures\x18\x01 \x01(\x0b\x32\x14.tensorflow.FeaturesR\x08\x66\x65\x61tures\"\x80\x01\n\x0fSequenceExample\x12.\n\x07\x63ontext\x18\x01 \x01(\x0b\x32\x14.tensorflow.FeaturesR\x07\x63ontext\x12=\n\rfeature_lists\x18\x02 \x01(\x0b\x32\x18.tensorflow.FeatureListsR\x0c\x66\x65\x61tureListsBh\n\x16org.tensorflow.exampleB\rExampleProtosP\x01Z:github.com/e-conomic/tensorflow/tensorflow/go/core/example\xf8\x01\x01\x62\x06proto3')

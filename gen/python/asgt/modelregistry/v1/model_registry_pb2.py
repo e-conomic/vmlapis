@@ -11,11 +11,11 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
-from asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
-from asgt.type import revision_pb2 as asgt_dot_type_dot_revision__pb2
-from asgt.type import target_metrics_pb2 as asgt_dot_type_dot_target__metrics__pb2
-from asgt.type import train_statistics_pb2 as asgt_dot_type_dot_train__statistics__pb2
+from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
+from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
+from vml_proto.asgt.type import revision_pb2 as asgt_dot_type_dot_revision__pb2
+from vml_proto.asgt.type import target_metrics_pb2 as asgt_dot_type_dot_target__metrics__pb2
+from vml_proto.asgt.type import train_statistics_pb2 as asgt_dot_type_dot_train__statistics__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 

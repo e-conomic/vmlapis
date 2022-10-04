@@ -11,8 +11,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.v2.type import data_pb2 as asgt_dot_v2_dot_type_dot_data__pb2
-from asgt.v2.type import target_value_pb2 as asgt_dot_v2_dot_type_dot_target__value__pb2
+from vml_proto.asgt.v2.type import data_pb2 as asgt_dot_v2_dot_type_dot_data__pb2
+from vml_proto.asgt.v2.type import target_value_pb2 as asgt_dot_v2_dot_type_dot_target__value__pb2
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 

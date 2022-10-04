@@ -11,10 +11,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
-from asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
-from asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
-from asgt.type import sample_pb2 as asgt_dot_type_dot_sample__pb2
+from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
+from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
+from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
+from vml_proto.asgt.type import sample_pb2 as asgt_dot_type_dot_sample__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
