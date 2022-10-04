@@ -52,21 +52,17 @@ all:
 		--exclude-path proto/ssn/type \
 		--exclude-path proto/gen_bq_schema
 
-	buf generate proto --template buf.gen.go.validate.yaml --path proto/asgt/v2
+	buf generate proto --template buf.gen.validate.go.yaml --path proto/asgt/v2
 
-	sed "s/{_FILE_NAME}/asgt\/v1.dataservice.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.v1dataservice.yaml
-	buf generate proto --template buf.gen.openapiv2.v1dataservice.yaml --path proto/asgt/data/v1
-	sed "s/{_FILE_NAME}/asgt\/v1.jester.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.v1jester.yaml
-	buf generate proto --template buf.gen.openapiv2.v1jester.yaml --path proto/asgt/jester/v1
-	sed "s/{_FILE_NAME}/asgt\/v2.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.v2.yaml
-	buf generate proto --template buf.gen.openapiv2.v2.yaml --path proto/asgt/v2 --exclude-path proto/asgt/v2/type
-	rm buf.gen.openapiv2.v1dataservice.yaml buf.gen.openapiv2.v1jester.yaml buf.gen.openapiv2.v2.yaml
+	sed "s/{_FILE_NAME}/asgt\/v1.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.asgt.v1.yaml
+	buf generate proto --template buf.gen.openapiv2.asgt.v1.yaml --path proto/asgt/data/v1 --path proto/asgt/jester/v1
+	sed "s/{_FILE_NAME}/asgt\/v2.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.asgt.v2.yaml
+	buf generate proto --template buf.gen.openapiv2.asgt.v2.yaml --path proto/asgt/v2 --exclude-path proto/asgt/v2/type
+	rm buf.gen.openapiv2.asgt.v1.yaml buf.gen.openapiv2.asgt.v2.yaml
 
-	sed "s/{_FILE_NAME}/ssn\/v1.annotator.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.v1annotator.yaml
-	buf generate proto --template buf.gen.openapiv2.v1annotator.yaml --path proto/ssn/annotator
-	sed "s/{_FILE_NAME}/ssn\/v1.dataservice.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.v1dataservice.yaml
-	buf generate proto --template buf.gen.openapiv2.v1dataservice.yaml --path proto/ssn/dataservice
-	rm buf.gen.openapiv2.v1annotator.yaml buf.gen.openapiv2.v1dataservice.yaml
+	sed "s/{_FILE_NAME}/ssn\/v1.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.ssn.v1.yaml
+	buf generate proto --template buf.gen.openapiv2.ssn.v1.yaml --path proto/ssn/annotator --path proto/ssn/dataservice
+	rm buf.gen.openapiv2.ssn.v1.yaml
 
 	buf build proto -o gen/descriptor.bin \
 		--path proto/ssn/annotator/v1/annotator.proto \
