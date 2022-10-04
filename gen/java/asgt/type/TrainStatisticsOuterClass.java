@@ -78,61 +78,6 @@ public final class TrainStatisticsOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TargetStat(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              className_ = s;
-              break;
-            }
-            case 21: {
-
-              relativeDatasetProportion_ = input.readFloat();
-              break;
-            }
-            case 24: {
-
-              absoluteDatasetProportion_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_TargetStat_descriptor;
@@ -237,7 +182,7 @@ public final class TrainStatisticsOuterClass {
       if (absoluteDatasetProportion_ != 0) {
         output.writeInt32(3, absoluteDatasetProportion_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -257,7 +202,7 @@ public final class TrainStatisticsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, absoluteDatasetProportion_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -279,7 +224,7 @@ public final class TrainStatisticsOuterClass {
               other.getRelativeDatasetProportion())) return false;
       if (getAbsoluteDatasetProportion()
           != other.getAbsoluteDatasetProportion()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -297,7 +242,7 @@ public final class TrainStatisticsOuterClass {
           getRelativeDatasetProportion());
       hash = (37 * hash) + ABSOLUTE_DATASET_PROPORTION_FIELD_NUMBER;
       hash = (53 * hash) + getAbsoluteDatasetProportion();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -414,18 +359,13 @@ public final class TrainStatisticsOuterClass {
 
       // Construct using asgt.type.TrainStatisticsOuterClass.TargetStat.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -523,7 +463,7 @@ public final class TrainStatisticsOuterClass {
         if (other.getAbsoluteDatasetProportion() != 0) {
           setAbsoluteDatasetProportion(other.getAbsoluteDatasetProportion());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -538,17 +478,45 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TrainStatisticsOuterClass.TargetStat parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                className_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 21: {
+                relativeDatasetProportion_ = input.readFloat();
+
+                break;
+              } // case 21
+              case 24: {
+                absoluteDatasetProportion_ = input.readInt32();
+
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TrainStatisticsOuterClass.TargetStat) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -746,7 +714,18 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TargetStat(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -842,58 +821,6 @@ public final class TrainStatisticsOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TargetStats(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targetStats_ = new java.util.ArrayList<asgt.type.TrainStatisticsOuterClass.TargetStat>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              targetStats_.add(
-                  input.readMessage(asgt.type.TrainStatisticsOuterClass.TargetStat.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          targetStats_ = java.util.Collections.unmodifiableList(targetStats_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_TargetStats_descriptor;
@@ -984,7 +911,7 @@ public final class TrainStatisticsOuterClass {
       for (int i = 0; i < targetStats_.size(); i++) {
         output.writeMessage(1, targetStats_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -997,7 +924,7 @@ public final class TrainStatisticsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, targetStats_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1014,7 +941,7 @@ public final class TrainStatisticsOuterClass {
 
       if (!getTargetStatsList()
           .equals(other.getTargetStatsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1029,7 +956,7 @@ public final class TrainStatisticsOuterClass {
         hash = (37 * hash) + TARGET_STATS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetStatsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1146,29 +1073,24 @@ public final class TrainStatisticsOuterClass {
 
       // Construct using asgt.type.TrainStatisticsOuterClass.TargetStats.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetStatsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (targetStatsBuilder_ == null) {
           targetStats_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          targetStats_ = null;
           targetStatsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1279,7 +1201,7 @@ public final class TrainStatisticsOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1294,17 +1216,43 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TrainStatisticsOuterClass.TargetStats parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                asgt.type.TrainStatisticsOuterClass.TargetStat m =
+                    input.readMessage(
+                        asgt.type.TrainStatisticsOuterClass.TargetStat.parser(),
+                        extensionRegistry);
+                if (targetStatsBuilder_ == null) {
+                  ensureTargetStatsIsMutable();
+                  targetStats_.add(m);
+                } else {
+                  targetStatsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TrainStatisticsOuterClass.TargetStats) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1653,7 +1601,18 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TargetStats(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1746,62 +1705,6 @@ public final class TrainStatisticsOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private FeatureStat(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              featureName_ = s;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              featureType_ = rawValue;
-              break;
-            }
-            case 29: {
-
-              informationGain_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -2054,7 +1957,7 @@ public final class TrainStatisticsOuterClass {
       if (java.lang.Float.floatToRawIntBits(informationGain_) != 0) {
         output.writeFloat(3, informationGain_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2074,7 +1977,7 @@ public final class TrainStatisticsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, informationGain_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2095,7 +1998,7 @@ public final class TrainStatisticsOuterClass {
       if (java.lang.Float.floatToIntBits(getInformationGain())
           != java.lang.Float.floatToIntBits(
               other.getInformationGain())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2113,7 +2016,7 @@ public final class TrainStatisticsOuterClass {
       hash = (37 * hash) + INFORMATION_GAIN_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getInformationGain());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2230,18 +2133,13 @@ public final class TrainStatisticsOuterClass {
 
       // Construct using asgt.type.TrainStatisticsOuterClass.FeatureStat.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2339,7 +2237,7 @@ public final class TrainStatisticsOuterClass {
         if (other.getInformationGain() != 0F) {
           setInformationGain(other.getInformationGain());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2354,17 +2252,45 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TrainStatisticsOuterClass.FeatureStat parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                featureName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                featureType_ = input.readEnum();
+
+                break;
+              } // case 16
+              case 29: {
+                informationGain_ = input.readFloat();
+
+                break;
+              } // case 29
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TrainStatisticsOuterClass.FeatureStat) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2593,7 +2519,18 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FeatureStat(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2689,58 +2626,6 @@ public final class TrainStatisticsOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FeatureStats(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                featureStats_ = new java.util.ArrayList<asgt.type.TrainStatisticsOuterClass.FeatureStat>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              featureStats_.add(
-                  input.readMessage(asgt.type.TrainStatisticsOuterClass.FeatureStat.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          featureStats_ = java.util.Collections.unmodifiableList(featureStats_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.TrainStatisticsOuterClass.internal_static_asgt_type_FeatureStats_descriptor;
@@ -2831,7 +2716,7 @@ public final class TrainStatisticsOuterClass {
       for (int i = 0; i < featureStats_.size(); i++) {
         output.writeMessage(1, featureStats_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2844,7 +2729,7 @@ public final class TrainStatisticsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, featureStats_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2861,7 +2746,7 @@ public final class TrainStatisticsOuterClass {
 
       if (!getFeatureStatsList()
           .equals(other.getFeatureStatsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2876,7 +2761,7 @@ public final class TrainStatisticsOuterClass {
         hash = (37 * hash) + FEATURE_STATS_FIELD_NUMBER;
         hash = (53 * hash) + getFeatureStatsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2993,29 +2878,24 @@ public final class TrainStatisticsOuterClass {
 
       // Construct using asgt.type.TrainStatisticsOuterClass.FeatureStats.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeatureStatsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (featureStatsBuilder_ == null) {
           featureStats_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          featureStats_ = null;
           featureStatsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -3126,7 +3006,7 @@ public final class TrainStatisticsOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3141,17 +3021,43 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TrainStatisticsOuterClass.FeatureStats parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                asgt.type.TrainStatisticsOuterClass.FeatureStat m =
+                    input.readMessage(
+                        asgt.type.TrainStatisticsOuterClass.FeatureStat.parser(),
+                        extensionRegistry);
+                if (featureStatsBuilder_ == null) {
+                  ensureFeatureStatsIsMutable();
+                  featureStats_.add(m);
+                } else {
+                  featureStatsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TrainStatisticsOuterClass.FeatureStats) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3500,7 +3406,18 @@ public final class TrainStatisticsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FeatureStats(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3672,77 +3589,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private TrainStatistics(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targetStatsByTarget_ = com.google.protobuf.MapField.newMapField(
-                    TargetStatsByTargetDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats>
-              targetStatsByTarget__ = input.readMessage(
-                  TargetStatsByTargetDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              targetStatsByTarget_.getMutableMap().put(
-                  targetStatsByTarget__.getKey(), targetStatsByTarget__.getValue());
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                featureStatsByTarget_ = com.google.protobuf.MapField.newMapField(
-                    FeatureStatsByTargetDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats>
-              featureStatsByTarget__ = input.readMessage(
-                  FeatureStatsByTargetDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              featureStatsByTarget_.getMutableMap().put(
-                  featureStatsByTarget__.getKey(), featureStatsByTarget__.getValue());
-              break;
-            }
-            case 29: {
-
-              similarityIndex_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4009,7 +3855,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
         output.writeFloat(3, similarityIndex_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4042,7 +3888,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, similarityIndex_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4064,7 +3910,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       if (java.lang.Float.floatToIntBits(getSimilarityIndex())
           != java.lang.Float.floatToIntBits(
               other.getSimilarityIndex())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4086,7 +3932,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       hash = (37 * hash) + SIMILARITY_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getSimilarityIndex());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4229,18 +4075,13 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
 
       // Construct using asgt.type.TrainStatisticsOuterClass.TrainStatistics.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4336,7 +4177,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         if (other.getSimilarityIndex() != 0F) {
           setSimilarityIndex(other.getSimilarityIndex());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4351,17 +4192,51 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TrainStatisticsOuterClass.TrainStatistics parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats>
+                targetStatsByTarget__ = input.readMessage(
+                    TargetStatsByTargetDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableTargetStatsByTarget().getMutableMap().put(
+                    targetStatsByTarget__.getKey(), targetStatsByTarget__.getValue());
+                break;
+              } // case 10
+              case 18: {
+                com.google.protobuf.MapEntry<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats>
+                featureStatsByTarget__ = input.readMessage(
+                    FeatureStatsByTargetDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableFeatureStatsByTarget().getMutableMap().put(
+                    featureStatsByTarget__.getKey(), featureStatsByTarget__.getValue());
+                break;
+              } // case 18
+              case 29: {
+                similarityIndex_ = input.readFloat();
+
+                break;
+              } // case 29
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TrainStatisticsOuterClass.TrainStatistics) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -4759,7 +4634,18 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrainStatistics(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

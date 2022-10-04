@@ -226,7 +226,6 @@ type Feature struct {
 	// Each feature can be exactly one kind.
 	//
 	// Types that are assignable to Kind:
-	//
 	//	*Feature_BytesList
 	//	*Feature_FloatList
 	//	*Feature_Int64List
@@ -370,6 +369,7 @@ func (x *Features) GetFeature() map[string]*Feature {
 //
 // FeatureLists are organized into categories by name.  The FeatureLists message
 // contains the mapping from name to FeatureList.
+//
 type FeatureList struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

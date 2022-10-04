@@ -1,41 +1,38 @@
-// package: ssn.annotator.v1
-// file: ssn/annotator/v1/annotator.proto
+import * as jspb from 'google-protobuf'
 
-/* tslint:disable */
-/* eslint-disable */
+import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
+import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb';
+import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
+import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb';
+import * as ssn_type_tier_pb from '../../../ssn/type/tier_pb';
 
-import * as jspb from "google-protobuf";
-import * as protoc_gen_openapiv2_options_annotations_pb from "../../../protoc-gen-openapiv2/options/annotations_pb";
-import * as ssn_type_candidate_pb from "../../../ssn/type/candidate_pb";
-import * as ssn_type_text_annotation_pb from "../../../ssn/type/text_annotation_pb";
-import * as ssn_type_tier_pb from "../../../ssn/type/tier_pb";
 
-export class Feature extends jspb.Message { 
-    getType(): Feature.Type;
-    setType(value: Feature.Type): Feature;
-    getMaxResults(): number;
-    setMaxResults(value: number): Feature;
-    getMinConfidence(): ssn_type_candidate_pb.Confidence.Level;
-    setMinConfidence(value: ssn_type_candidate_pb.Confidence.Level): Feature;
+export class Feature extends jspb.Message {
+  getType(): Feature.Type;
+  setType(value: Feature.Type): Feature;
 
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): Feature.AsObject;
-    static toObject(includeInstance: boolean, msg: Feature): Feature.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Feature, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): Feature;
-    static deserializeBinaryFromReader(message: Feature, reader: jspb.BinaryReader): Feature;
+  getMaxResults(): number;
+  setMaxResults(value: number): Feature;
+
+  getMinConfidence(): ssn_type_candidate_pb.Confidence.Level;
+  setMinConfidence(value: ssn_type_candidate_pb.Confidence.Level): Feature;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Feature.AsObject;
+  static toObject(includeInstance: boolean, msg: Feature): Feature.AsObject;
+  static serializeBinaryToWriter(message: Feature, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Feature;
+  static deserializeBinaryFromReader(message: Feature, reader: jspb.BinaryReader): Feature;
 }
 
 export namespace Feature {
-    export type AsObject = {
-        type: Feature.Type,
-        maxResults: number,
-        minConfidence: ssn_type_candidate_pb.Confidence.Level,
-    }
+  export type AsObject = {
+    type: Feature.Type,
+    maxResults: number,
+    minConfidence: ssn_type_candidate_pb.Confidence.Level,
+  }
 
-    export enum Type {
+  export enum Type { 
     DEFAULT = 0,
     TEXT_ANNOTATION = 1,
     ORDER_DATE = 2,
@@ -73,292 +70,322 @@ export namespace Feature {
     SUPPLIER_VAT_NUMBER = 34,
     SUPPLIER_ORGANISATION_NUMBER = 35,
     SUPPLIER_ADDRESS = 36,
-    }
-
+  }
 }
 
-export class DocumentAnnotatorRequest extends jspb.Message { 
+export class DocumentAnnotatorRequest extends jspb.Message {
+  getDocument(): Document | undefined;
+  setDocument(value?: Document): DocumentAnnotatorRequest;
+  hasDocument(): boolean;
+  clearDocument(): DocumentAnnotatorRequest;
 
-    hasDocument(): boolean;
-    clearDocument(): void;
-    getDocument(): Document | undefined;
-    setDocument(value?: Document): DocumentAnnotatorRequest;
-    clearFeaturesList(): void;
-    getFeaturesList(): Array<Feature>;
-    setFeaturesList(value: Array<Feature>): DocumentAnnotatorRequest;
-    addFeatures(value?: Feature, index?: number): Feature;
-    clearTagsList(): void;
-    getTagsList(): Array<string>;
-    setTagsList(value: Array<string>): DocumentAnnotatorRequest;
-    addTags(value: string, index?: number): string;
-    getTier(): ssn_type_tier_pb.Tier;
-    setTier(value: ssn_type_tier_pb.Tier): DocumentAnnotatorRequest;
-    clearSegmentsList(): void;
-    getSegmentsList(): Array<string>;
-    setSegmentsList(value: Array<string>): DocumentAnnotatorRequest;
-    addSegments(value: string, index?: number): string;
+  getFeaturesList(): Array<Feature>;
+  setFeaturesList(value: Array<Feature>): DocumentAnnotatorRequest;
+  clearFeaturesList(): DocumentAnnotatorRequest;
+  addFeatures(value?: Feature, index?: number): Feature;
 
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): DocumentAnnotatorRequest.AsObject;
-    static toObject(includeInstance: boolean, msg: DocumentAnnotatorRequest): DocumentAnnotatorRequest.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: DocumentAnnotatorRequest, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): DocumentAnnotatorRequest;
-    static deserializeBinaryFromReader(message: DocumentAnnotatorRequest, reader: jspb.BinaryReader): DocumentAnnotatorRequest;
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): DocumentAnnotatorRequest;
+  clearTagsList(): DocumentAnnotatorRequest;
+  addTags(value: string, index?: number): DocumentAnnotatorRequest;
+
+  getTier(): ssn_type_tier_pb.Tier;
+  setTier(value: ssn_type_tier_pb.Tier): DocumentAnnotatorRequest;
+
+  getSegmentsList(): Array<string>;
+  setSegmentsList(value: Array<string>): DocumentAnnotatorRequest;
+  clearSegmentsList(): DocumentAnnotatorRequest;
+  addSegments(value: string, index?: number): DocumentAnnotatorRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentAnnotatorRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentAnnotatorRequest): DocumentAnnotatorRequest.AsObject;
+  static serializeBinaryToWriter(message: DocumentAnnotatorRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentAnnotatorRequest;
+  static deserializeBinaryFromReader(message: DocumentAnnotatorRequest, reader: jspb.BinaryReader): DocumentAnnotatorRequest;
 }
 
 export namespace DocumentAnnotatorRequest {
-    export type AsObject = {
-        document?: Document.AsObject,
-        featuresList: Array<Feature.AsObject>,
-        tagsList: Array<string>,
-        tier: ssn_type_tier_pb.Tier,
-        segmentsList: Array<string>,
-    }
+  export type AsObject = {
+    document?: Document.AsObject,
+    featuresList: Array<Feature.AsObject>,
+    tagsList: Array<string>,
+    tier: ssn_type_tier_pb.Tier,
+    segmentsList: Array<string>,
+  }
 }
 
-export class DocumentAnnotatorResponse extends jspb.Message { 
-    clearOrderDateList(): void;
-    getOrderDateList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOrderDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOrderDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearPaymentDueDateList(): void;
-    getPaymentDueDateList(): Array<ssn_type_candidate_pb.Candidate>;
-    setPaymentDueDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addPaymentDueDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearCurrencyList(): void;
-    getCurrencyList(): Array<ssn_type_candidate_pb.Candidate>;
-    setCurrencyList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addCurrency(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearTotalVatList(): void;
-    getTotalVatList(): Array<ssn_type_candidate_pb.Candidate>;
-    setTotalVatList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addTotalVat(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearTotalInclVatList(): void;
-    getTotalInclVatList(): Array<ssn_type_candidate_pb.Candidate>;
-    setTotalInclVatList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addTotalInclVat(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearTotalExclVatList(): void;
-    getTotalExclVatList(): Array<ssn_type_candidate_pb.Candidate>;
-    setTotalExclVatList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addTotalExclVat(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearSupplierCorporateIdList(): void;
-    getSupplierCorporateIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setSupplierCorporateIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addSupplierCorporateId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearSupplierCountryCodeList(): void;
-    getSupplierCountryCodeList(): Array<ssn_type_candidate_pb.Candidate>;
-    setSupplierCountryCodeList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addSupplierCountryCode(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearDocumentTypeList(): void;
-    getDocumentTypeList(): Array<ssn_type_candidate_pb.Candidate>;
-    setDocumentTypeList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addDocumentType(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearPaymentMethodList(): void;
-    getPaymentMethodList(): Array<ssn_type_candidate_pb.Candidate>;
-    setPaymentMethodList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addPaymentMethod(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearCreditCardLastFourList(): void;
-    getCreditCardLastFourList(): Array<ssn_type_candidate_pb.Candidate>;
-    setCreditCardLastFourList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addCreditCardLastFour(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearInvoiceNumberList(): void;
-    getInvoiceNumberList(): Array<ssn_type_candidate_pb.Candidate>;
-    setInvoiceNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addInvoiceNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+export class DocumentAnnotatorResponse extends jspb.Message {
+  getOrderDateList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOrderDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOrderDateList(): DocumentAnnotatorResponse;
+  addOrderDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
-    hasTextAnnotation(): boolean;
-    clearTextAnnotation(): void;
-    getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
-    setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): DocumentAnnotatorResponse;
-    clearOcrLineDkTypeList(): void;
-    getOcrLineDkTypeList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineDkTypeList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineDkType(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineDkPaymentIdList(): void;
-    getOcrLineDkPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineDkPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineDkPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineDkCreditorIdList(): void;
-    getOcrLineDkCreditorIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineDkCreditorIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineDkCreditorId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineSePaymentIdList(): void;
-    getOcrLineSePaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineSePaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineSePaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineSeBankgiroCreditorIdList(): void;
-    getOcrLineSeBankgiroCreditorIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineSeBankgiroCreditorIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineSeBankgiroCreditorId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineSePlusgiroCreditorIdList(): void;
-    getOcrLineSePlusgiroCreditorIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineSePlusgiroCreditorIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineSePlusgiroCreditorId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineNoPaymentIdList(): void;
-    getOcrLineNoPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineNoPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineNoPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineFiPaymentIdList(): void;
-    getOcrLineFiPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineFiPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineFiPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOcrLineNlPaymentIdList(): void;
-    getOcrLineNlPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOcrLineNlPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOcrLineNlPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    getText(): string;
-    setText(value: string): DocumentAnnotatorResponse;
-    getFeedbackId(): string;
-    setFeedbackId(value: string): DocumentAnnotatorResponse;
-    clearIbanList(): void;
-    getIbanList(): Array<ssn_type_candidate_pb.Candidate>;
-    setIbanList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addIban(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearLinesList(): void;
-    getLinesList(): Array<ssn_type_candidate_pb.LineCandidate>;
-    setLinesList(value: Array<ssn_type_candidate_pb.LineCandidate>): DocumentAnnotatorResponse;
-    addLines(value?: ssn_type_candidate_pb.LineCandidate, index?: number): ssn_type_candidate_pb.LineCandidate;
-    getPreview(): string;
-    setPreview(value: string): DocumentAnnotatorResponse;
-    clearBankAccountNumberList(): void;
-    getBankAccountNumberList(): Array<ssn_type_candidate_pb.Candidate>;
-    setBankAccountNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addBankAccountNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearBankRegistrationNumberList(): void;
-    getBankRegistrationNumberList(): Array<ssn_type_candidate_pb.Candidate>;
-    setBankRegistrationNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addBankRegistrationNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearBicList(): void;
-    getBicList(): Array<ssn_type_candidate_pb.Candidate>;
-    setBicList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addBic(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearDocumentNumberList(): void;
-    getDocumentNumberList(): Array<ssn_type_candidate_pb.Candidate>;
-    setDocumentNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addDocumentNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearDocumentDateList(): void;
-    getDocumentDateList(): Array<ssn_type_candidate_pb.Candidate>;
-    setDocumentDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addDocumentDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearOrderNumberList(): void;
-    getOrderNumberList(): Array<ssn_type_candidate_pb.Candidate>;
-    setOrderNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addOrderNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearSupplierNameList(): void;
-    getSupplierNameList(): Array<ssn_type_candidate_pb.Candidate>;
-    setSupplierNameList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addSupplierName(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearSupplierVatNumberList(): void;
-    getSupplierVatNumberList(): Array<ssn_type_candidate_pb.Candidate>;
-    setSupplierVatNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addSupplierVatNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearSupplierOrganisationNumberList(): void;
-    getSupplierOrganisationNumberList(): Array<ssn_type_candidate_pb.Candidate>;
-    setSupplierOrganisationNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addSupplierOrganisationNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-    clearSupplierAddressList(): void;
-    getSupplierAddressList(): Array<ssn_type_candidate_pb.Candidate>;
-    setSupplierAddressList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
-    addSupplierAddress(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+  getPaymentDueDateList(): Array<ssn_type_candidate_pb.Candidate>;
+  setPaymentDueDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearPaymentDueDateList(): DocumentAnnotatorResponse;
+  addPaymentDueDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
-    static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: DocumentAnnotatorResponse, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): DocumentAnnotatorResponse;
-    static deserializeBinaryFromReader(message: DocumentAnnotatorResponse, reader: jspb.BinaryReader): DocumentAnnotatorResponse;
+  getCurrencyList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCurrencyList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearCurrencyList(): DocumentAnnotatorResponse;
+  addCurrency(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getTotalVatList(): Array<ssn_type_candidate_pb.Candidate>;
+  setTotalVatList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearTotalVatList(): DocumentAnnotatorResponse;
+  addTotalVat(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getTotalInclVatList(): Array<ssn_type_candidate_pb.Candidate>;
+  setTotalInclVatList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearTotalInclVatList(): DocumentAnnotatorResponse;
+  addTotalInclVat(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getTotalExclVatList(): Array<ssn_type_candidate_pb.Candidate>;
+  setTotalExclVatList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearTotalExclVatList(): DocumentAnnotatorResponse;
+  addTotalExclVat(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getSupplierCorporateIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setSupplierCorporateIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearSupplierCorporateIdList(): DocumentAnnotatorResponse;
+  addSupplierCorporateId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getSupplierCountryCodeList(): Array<ssn_type_candidate_pb.Candidate>;
+  setSupplierCountryCodeList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearSupplierCountryCodeList(): DocumentAnnotatorResponse;
+  addSupplierCountryCode(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getDocumentTypeList(): Array<ssn_type_candidate_pb.Candidate>;
+  setDocumentTypeList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearDocumentTypeList(): DocumentAnnotatorResponse;
+  addDocumentType(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getPaymentMethodList(): Array<ssn_type_candidate_pb.Candidate>;
+  setPaymentMethodList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearPaymentMethodList(): DocumentAnnotatorResponse;
+  addPaymentMethod(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getCreditCardLastFourList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCreditCardLastFourList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearCreditCardLastFourList(): DocumentAnnotatorResponse;
+  addCreditCardLastFour(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getInvoiceNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setInvoiceNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearInvoiceNumberList(): DocumentAnnotatorResponse;
+  addInvoiceNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): DocumentAnnotatorResponse;
+  hasTextAnnotation(): boolean;
+  clearTextAnnotation(): DocumentAnnotatorResponse;
+
+  getOcrLineDkTypeList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineDkTypeList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineDkTypeList(): DocumentAnnotatorResponse;
+  addOcrLineDkType(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineDkPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineDkPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineDkPaymentIdList(): DocumentAnnotatorResponse;
+  addOcrLineDkPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineDkCreditorIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineDkCreditorIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineDkCreditorIdList(): DocumentAnnotatorResponse;
+  addOcrLineDkCreditorId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineSePaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineSePaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineSePaymentIdList(): DocumentAnnotatorResponse;
+  addOcrLineSePaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineSeBankgiroCreditorIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineSeBankgiroCreditorIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineSeBankgiroCreditorIdList(): DocumentAnnotatorResponse;
+  addOcrLineSeBankgiroCreditorId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineSePlusgiroCreditorIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineSePlusgiroCreditorIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineSePlusgiroCreditorIdList(): DocumentAnnotatorResponse;
+  addOcrLineSePlusgiroCreditorId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineNoPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineNoPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineNoPaymentIdList(): DocumentAnnotatorResponse;
+  addOcrLineNoPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineFiPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineFiPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineFiPaymentIdList(): DocumentAnnotatorResponse;
+  addOcrLineFiPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineNlPaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineNlPaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineNlPaymentIdList(): DocumentAnnotatorResponse;
+  addOcrLineNlPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getText(): string;
+  setText(value: string): DocumentAnnotatorResponse;
+
+  getFeedbackId(): string;
+  setFeedbackId(value: string): DocumentAnnotatorResponse;
+
+  getIbanList(): Array<ssn_type_candidate_pb.Candidate>;
+  setIbanList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearIbanList(): DocumentAnnotatorResponse;
+  addIban(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getLinesList(): Array<ssn_type_candidate_pb.LineCandidate>;
+  setLinesList(value: Array<ssn_type_candidate_pb.LineCandidate>): DocumentAnnotatorResponse;
+  clearLinesList(): DocumentAnnotatorResponse;
+  addLines(value?: ssn_type_candidate_pb.LineCandidate, index?: number): ssn_type_candidate_pb.LineCandidate;
+
+  getPreview(): string;
+  setPreview(value: string): DocumentAnnotatorResponse;
+
+  getBankAccountNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setBankAccountNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearBankAccountNumberList(): DocumentAnnotatorResponse;
+  addBankAccountNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getBankRegistrationNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setBankRegistrationNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearBankRegistrationNumberList(): DocumentAnnotatorResponse;
+  addBankRegistrationNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getBicList(): Array<ssn_type_candidate_pb.Candidate>;
+  setBicList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearBicList(): DocumentAnnotatorResponse;
+  addBic(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getDocumentNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setDocumentNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearDocumentNumberList(): DocumentAnnotatorResponse;
+  addDocumentNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getDocumentDateList(): Array<ssn_type_candidate_pb.Candidate>;
+  setDocumentDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearDocumentDateList(): DocumentAnnotatorResponse;
+  addDocumentDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOrderNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOrderNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOrderNumberList(): DocumentAnnotatorResponse;
+  addOrderNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getSupplierNameList(): Array<ssn_type_candidate_pb.Candidate>;
+  setSupplierNameList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearSupplierNameList(): DocumentAnnotatorResponse;
+  addSupplierName(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getSupplierVatNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setSupplierVatNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearSupplierVatNumberList(): DocumentAnnotatorResponse;
+  addSupplierVatNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getSupplierOrganisationNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setSupplierOrganisationNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearSupplierOrganisationNumberList(): DocumentAnnotatorResponse;
+  addSupplierOrganisationNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getSupplierAddressList(): Array<ssn_type_candidate_pb.Candidate>;
+  setSupplierAddressList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearSupplierAddressList(): DocumentAnnotatorResponse;
+  addSupplierAddress(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
+  static serializeBinaryToWriter(message: DocumentAnnotatorResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentAnnotatorResponse;
+  static deserializeBinaryFromReader(message: DocumentAnnotatorResponse, reader: jspb.BinaryReader): DocumentAnnotatorResponse;
 }
 
 export namespace DocumentAnnotatorResponse {
-    export type AsObject = {
-        orderDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        paymentDueDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        currencyList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        totalVatList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        totalInclVatList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        totalExclVatList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        supplierCorporateIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        supplierCountryCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        documentTypeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        paymentMethodList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        creditCardLastFourList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        invoiceNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
-        ocrLineDkTypeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineDkPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineDkCreditorIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineSePaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineSeBankgiroCreditorIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineSePlusgiroCreditorIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineNoPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineFiPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        ocrLineNlPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        text: string,
-        feedbackId: string,
-        ibanList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        linesList: Array<ssn_type_candidate_pb.LineCandidate.AsObject>,
-        preview: string,
-        bankAccountNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        bankRegistrationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        bicList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        documentNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        documentDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        orderNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        supplierNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        supplierVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        supplierOrganisationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-        supplierAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-    }
+  export type AsObject = {
+    orderDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    paymentDueDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    currencyList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    totalVatList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    totalInclVatList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    totalExclVatList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    supplierCorporateIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    supplierCountryCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    documentTypeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    paymentMethodList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    creditCardLastFourList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    invoiceNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    ocrLineDkTypeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineDkPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineDkCreditorIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineSePaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineSeBankgiroCreditorIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineSePlusgiroCreditorIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineNoPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineFiPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineNlPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    text: string,
+    feedbackId: string,
+    ibanList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    linesList: Array<ssn_type_candidate_pb.LineCandidate.AsObject>,
+    preview: string,
+    bankAccountNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    bankRegistrationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    bicList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    documentNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    documentDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    orderNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    supplierNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    supplierVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    supplierOrganisationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    supplierAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+  }
 }
 
-export class Document extends jspb.Message { 
-    getContent(): Uint8Array | string;
-    getContent_asU8(): Uint8Array;
-    getContent_asB64(): string;
-    setContent(value: Uint8Array | string): Document;
+export class Document extends jspb.Message {
+  getContent(): Uint8Array | string;
+  getContent_asU8(): Uint8Array;
+  getContent_asB64(): string;
+  setContent(value: Uint8Array | string): Document;
 
-    hasSource(): boolean;
-    clearSource(): void;
-    getSource(): DocumentSource | undefined;
-    setSource(value?: DocumentSource): Document;
+  getSource(): DocumentSource | undefined;
+  setSource(value?: DocumentSource): Document;
+  hasSource(): boolean;
+  clearSource(): Document;
 
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): Document.AsObject;
-    static toObject(includeInstance: boolean, msg: Document): Document.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Document, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): Document;
-    static deserializeBinaryFromReader(message: Document, reader: jspb.BinaryReader): Document;
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Document.AsObject;
+  static toObject(includeInstance: boolean, msg: Document): Document.AsObject;
+  static serializeBinaryToWriter(message: Document, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Document;
+  static deserializeBinaryFromReader(message: Document, reader: jspb.BinaryReader): Document;
 }
 
 export namespace Document {
-    export type AsObject = {
-        content: Uint8Array | string,
-        source?: DocumentSource.AsObject,
-    }
+  export type AsObject = {
+    content: Uint8Array | string,
+    source?: DocumentSource.AsObject,
+  }
 }
 
-export class DocumentSource extends jspb.Message { 
-    getHttpUri(): string;
-    setHttpUri(value: string): DocumentSource;
+export class DocumentSource extends jspb.Message {
+  getHttpUri(): string;
+  setHttpUri(value: string): DocumentSource;
 
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): DocumentSource.AsObject;
-    static toObject(includeInstance: boolean, msg: DocumentSource): DocumentSource.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: DocumentSource, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): DocumentSource;
-    static deserializeBinaryFromReader(message: DocumentSource, reader: jspb.BinaryReader): DocumentSource;
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentSource.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentSource): DocumentSource.AsObject;
+  static serializeBinaryToWriter(message: DocumentSource, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentSource;
+  static deserializeBinaryFromReader(message: DocumentSource, reader: jspb.BinaryReader): DocumentSource;
 }
 
 export namespace DocumentSource {
-    export type AsObject = {
-        httpUri: string,
-    }
+  export type AsObject = {
+    httpUri: string,
+  }
 }
+

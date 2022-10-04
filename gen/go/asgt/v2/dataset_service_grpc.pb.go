@@ -30,7 +30,7 @@ type DatasetServiceClient interface {
 	// until CreateExample or BatchCreateExample is called after the creation of the dataset.
 	CreateDataset(ctx context.Context, in *CreateDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	// Not implemented yet.
-	// Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
+	//Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
 	// provided data.
 	CreateOrUpdateDataset(ctx context.Context, in *CreateOrUpdateDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	// Delete a dataset with the specified name.
@@ -175,7 +175,7 @@ type DatasetServiceServer interface {
 	// until CreateExample or BatchCreateExample is called after the creation of the dataset.
 	CreateDataset(context.Context, *CreateDatasetRequest) (*emptypb.Empty, error)
 	// Not implemented yet.
-	// Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
+	//Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
 	// provided data.
 	CreateOrUpdateDataset(context.Context, *CreateOrUpdateDatasetRequest) (*emptypb.Empty, error)
 	// Delete a dataset with the specified name.

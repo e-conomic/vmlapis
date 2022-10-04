@@ -226,143 +226,6 @@ public final class BqEntries {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Entry(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              consumer_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              tags_.add(s);
-              break;
-            }
-            case 42: {
-              asgt.type.DataOuterClass.Data.Builder subBuilder = null;
-              if (data_ != null) {
-                subBuilder = data_.toBuilder();
-              }
-              data_ = input.readMessage(asgt.type.DataOuterClass.Data.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(data_);
-                data_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targetValues_.add(
-                  input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
-              break;
-            }
-            case 64: {
-
-              timeAdded_ = input.readUInt64();
-              break;
-            }
-            case 74: {
-              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
-              if (model_ != null) {
-                subBuilder = model_.toBuilder();
-              }
-              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(model_);
-                model_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                prediction_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              prediction_.add(
-                  input.readMessage(asgt.type.PredictionOuterClass.Prediction.Target.parser(), extensionRegistry));
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetId_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetType_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          prediction_ = java.util.Collections.unmodifiableList(prediction_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.dataservice.v1.BqEntries.internal_static_asgt_dataservice_v1_Entry_descriptor;
@@ -791,7 +654,7 @@ public final class BqEntries {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, datasetType_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -843,7 +706,7 @@ public final class BqEntries {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, datasetType_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -886,7 +749,7 @@ public final class BqEntries {
           .equals(other.getPredictionList())) return false;
       if (getTimeAdded()
           != other.getTimeAdded()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -930,7 +793,7 @@ public final class BqEntries {
       hash = (37 * hash) + TIME_ADDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTimeAdded());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1051,20 +914,13 @@ public final class BqEntries {
 
       // Construct using asgt.dataservice.v1.BqEntries.Entry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetValuesFieldBuilder();
-          getPredictionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1089,10 +945,11 @@ public final class BqEntries {
         }
         if (targetValuesBuilder_ == null) {
           targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          targetValues_ = null;
           targetValuesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (modelBuilder_ == null) {
           model_ = null;
         } else {
@@ -1101,10 +958,11 @@ public final class BqEntries {
         }
         if (predictionBuilder_ == null) {
           prediction_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          prediction_ = null;
           predictionBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         timeAdded_ = 0L;
 
         return this;
@@ -1312,7 +1170,7 @@ public final class BqEntries {
         if (other.getTimeAdded() != 0L) {
           setTimeAdded(other.getTimeAdded());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1327,17 +1185,106 @@ public final class BqEntries {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.BqEntries.Entry parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                consumer_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTagsIsMutable();
+                tags_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 50: {
+                asgt.type.TargetValueOuterClass.TargetValue m =
+                    input.readMessage(
+                        asgt.type.TargetValueOuterClass.TargetValue.parser(),
+                        extensionRegistry);
+                if (targetValuesBuilder_ == null) {
+                  ensureTargetValuesIsMutable();
+                  targetValues_.add(m);
+                } else {
+                  targetValuesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 64: {
+                timeAdded_ = input.readUInt64();
+
+                break;
+              } // case 64
+              case 74: {
+                input.readMessage(
+                    getModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 82: {
+                asgt.type.PredictionOuterClass.Prediction.Target m =
+                    input.readMessage(
+                        asgt.type.PredictionOuterClass.Prediction.Target.parser(),
+                        extensionRegistry);
+                if (predictionBuilder_ == null) {
+                  ensurePredictionIsMutable();
+                  prediction_.add(m);
+                } else {
+                  predictionBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                datasetId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 98: {
+                datasetType_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.BqEntries.Entry) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2613,7 +2560,18 @@ public final class BqEntries {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Entry(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

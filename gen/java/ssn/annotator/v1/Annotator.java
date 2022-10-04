@@ -96,62 +96,6 @@ public final class Annotator {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Feature(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
-              break;
-            }
-            case 16: {
-
-              maxResults_ = input.readInt32();
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              minConfidence_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.annotator.v1.Annotator.internal_static_ssn_annotator_v1_Feature_descriptor;
@@ -979,7 +923,7 @@ public final class Annotator {
       if (minConfidence_ != ssn.type.CandidateOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         output.writeEnum(3, minConfidence_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1000,7 +944,7 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, minConfidence_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1019,7 +963,7 @@ public final class Annotator {
       if (getMaxResults()
           != other.getMaxResults()) return false;
       if (minConfidence_ != other.minConfidence_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1036,7 +980,7 @@ public final class Annotator {
       hash = (53 * hash) + getMaxResults();
       hash = (37 * hash) + MIN_CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + minConfidence_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1153,18 +1097,13 @@ public final class Annotator {
 
       // Construct using ssn.annotator.v1.Annotator.Feature.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1261,7 +1200,7 @@ public final class Annotator {
         if (other.minConfidence_ != 0) {
           setMinConfidenceValue(other.getMinConfidenceValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1276,17 +1215,45 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.annotator.v1.Annotator.Feature parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                type_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 16: {
+                maxResults_ = input.readInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                minConfidence_ = input.readEnum();
+
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.annotator.v1.Annotator.Feature) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1516,7 +1483,18 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Feature(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1670,101 +1648,6 @@ public final class Annotator {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private DocumentAnnotatorRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              ssn.annotator.v1.Annotator.Document.Builder subBuilder = null;
-              if (document_ != null) {
-                subBuilder = document_.toBuilder();
-              }
-              document_ = input.readMessage(ssn.annotator.v1.Annotator.Document.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(document_);
-                document_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                features_ = new java.util.ArrayList<ssn.annotator.v1.Annotator.Feature>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              features_.add(
-                  input.readMessage(ssn.annotator.v1.Annotator.Feature.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              tags_.add(s);
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              tier_ = rawValue;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                segments_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              segments_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          features_ = java.util.Collections.unmodifiableList(features_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          segments_ = segments_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -1963,7 +1846,7 @@ public final class Annotator {
       for (int i = 0; i < segments_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, segments_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2000,7 +1883,7 @@ public final class Annotator {
         size += dataSize;
         size += 1 * getSegmentsList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2027,7 +1910,7 @@ public final class Annotator {
       if (tier_ != other.tier_) return false;
       if (!getSegmentsList()
           .equals(other.getSegmentsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2056,7 +1939,7 @@ public final class Annotator {
         hash = (37 * hash) + SEGMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getSegmentsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2173,19 +2056,13 @@ public final class Annotator {
 
       // Construct using ssn.annotator.v1.Annotator.DocumentAnnotatorRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeaturesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2198,10 +2075,11 @@ public final class Annotator {
         }
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          features_ = null;
           featuresBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
         tier_ = 0;
@@ -2360,7 +2238,7 @@ public final class Annotator {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2375,17 +2253,67 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.annotator.v1.Annotator.DocumentAnnotatorRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDocumentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                ssn.annotator.v1.Annotator.Feature m =
+                    input.readMessage(
+                        ssn.annotator.v1.Annotator.Feature.parser(),
+                        extensionRegistry);
+                if (featuresBuilder_ == null) {
+                  ensureFeaturesIsMutable();
+                  features_.add(m);
+                } else {
+                  featuresBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTagsIsMutable();
+                tags_.add(s);
+                break;
+              } // case 26
+              case 32: {
+                tier_ = input.readEnum();
+
+                break;
+              } // case 32
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSegmentsIsMutable();
+                segments_.add(s);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.annotator.v1.Annotator.DocumentAnnotatorRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3055,7 +2983,18 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DocumentAnnotatorRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4862,474 +4801,6 @@ public final class Annotator {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private DocumentAnnotatorResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      int mutable_bitField1_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                orderDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              orderDate_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                paymentDueDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              paymentDueDate_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                currency_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              currency_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                totalVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              totalVat_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                totalInclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              totalInclVat_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                totalExclVat_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              totalExclVat_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                supplierCorporateId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              supplierCorporateId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
-                supplierCountryCode_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000080;
-              }
-              supplierCountryCode_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
-                documentType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              documentType_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
-                paymentMethod_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000200;
-              }
-              paymentMethod_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
-                creditCardLastFour_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000400;
-              }
-              creditCardLastFour_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 98: {
-              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
-                invoiceNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00000800;
-              }
-              invoiceNumber_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 106: {
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder subBuilder = null;
-              if (textAnnotation_ != null) {
-                subBuilder = textAnnotation_.toBuilder();
-              }
-              textAnnotation_ = input.readMessage(ssn.type.TextAnnotationOuterClass.TextAnnotation.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(textAnnotation_);
-                textAnnotation_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 114: {
-              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
-                ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00001000;
-              }
-              ocrLineDkType_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 122: {
-              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
-                ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00002000;
-              }
-              ocrLineDkPaymentId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 130: {
-              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
-                ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00004000;
-              }
-              ocrLineDkCreditorId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 138: {
-              if (!((mutable_bitField0_ & 0x00008000) != 0)) {
-                ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00008000;
-              }
-              ocrLineSePaymentId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 146: {
-              if (!((mutable_bitField0_ & 0x00010000) != 0)) {
-                ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00010000;
-              }
-              ocrLineSeBankgiroCreditorId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 154: {
-              if (!((mutable_bitField0_ & 0x00020000) != 0)) {
-                ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00020000;
-              }
-              ocrLineSePlusgiroCreditorId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 162: {
-              if (!((mutable_bitField0_ & 0x00040000) != 0)) {
-                ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00040000;
-              }
-              ocrLineNoPaymentId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 170: {
-              if (!((mutable_bitField0_ & 0x00080000) != 0)) {
-                ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00080000;
-              }
-              ocrLineFiPaymentId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 178: {
-              if (!((mutable_bitField0_ & 0x00100000) != 0)) {
-                ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00100000;
-              }
-              ocrLineNlPaymentId_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 186: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            case 194: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              feedbackId_ = s;
-              break;
-            }
-            case 202: {
-              if (!((mutable_bitField0_ & 0x00200000) != 0)) {
-                iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00200000;
-              }
-              iban_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 210: {
-              if (!((mutable_bitField0_ & 0x00400000) != 0)) {
-                lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>();
-                mutable_bitField0_ |= 0x00400000;
-              }
-              lines_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.LineCandidate.parser(), extensionRegistry));
-              break;
-            }
-            case 218: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              preview_ = s;
-              break;
-            }
-            case 226: {
-              if (!((mutable_bitField0_ & 0x00800000) != 0)) {
-                bankAccountNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x00800000;
-              }
-              bankAccountNumber_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 234: {
-              if (!((mutable_bitField0_ & 0x01000000) != 0)) {
-                bankRegistrationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x01000000;
-              }
-              bankRegistrationNumber_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 242: {
-              if (!((mutable_bitField0_ & 0x02000000) != 0)) {
-                bic_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x02000000;
-              }
-              bic_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 250: {
-              if (!((mutable_bitField0_ & 0x04000000) != 0)) {
-                documentNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x04000000;
-              }
-              documentNumber_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 258: {
-              if (!((mutable_bitField0_ & 0x08000000) != 0)) {
-                documentDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x08000000;
-              }
-              documentDate_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 266: {
-              if (!((mutable_bitField0_ & 0x10000000) != 0)) {
-                orderNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x10000000;
-              }
-              orderNumber_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 274: {
-              if (!((mutable_bitField0_ & 0x20000000) != 0)) {
-                supplierName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x20000000;
-              }
-              supplierName_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 282: {
-              if (!((mutable_bitField0_ & 0x40000000) != 0)) {
-                supplierVatNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x40000000;
-              }
-              supplierVatNumber_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 290: {
-              if (!((mutable_bitField0_ & 0x80000000) != 0)) {
-                supplierOrganisationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField0_ |= 0x80000000;
-              }
-              supplierOrganisationNumber_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            case 298: {
-              if (!((mutable_bitField1_ & 0x00000001) != 0)) {
-                supplierAddress_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
-                mutable_bitField1_ |= 0x00000001;
-              }
-              supplierAddress_.add(
-                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          currency_ = java.util.Collections.unmodifiableList(currency_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
-        }
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
-          supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
-        }
-        if (((mutable_bitField0_ & 0x00000080) != 0)) {
-          supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
-        }
-        if (((mutable_bitField0_ & 0x00000100) != 0)) {
-          documentType_ = java.util.Collections.unmodifiableList(documentType_);
-        }
-        if (((mutable_bitField0_ & 0x00000200) != 0)) {
-          paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
-        }
-        if (((mutable_bitField0_ & 0x00000400) != 0)) {
-          creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
-        }
-        if (((mutable_bitField0_ & 0x00000800) != 0)) {
-          invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
-        }
-        if (((mutable_bitField0_ & 0x00001000) != 0)) {
-          ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
-        }
-        if (((mutable_bitField0_ & 0x00002000) != 0)) {
-          ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
-        }
-        if (((mutable_bitField0_ & 0x00004000) != 0)) {
-          ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
-        }
-        if (((mutable_bitField0_ & 0x00008000) != 0)) {
-          ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
-        }
-        if (((mutable_bitField0_ & 0x00010000) != 0)) {
-          ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
-        }
-        if (((mutable_bitField0_ & 0x00020000) != 0)) {
-          ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
-        }
-        if (((mutable_bitField0_ & 0x00040000) != 0)) {
-          ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
-        }
-        if (((mutable_bitField0_ & 0x00080000) != 0)) {
-          ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
-        }
-        if (((mutable_bitField0_ & 0x00100000) != 0)) {
-          ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
-        }
-        if (((mutable_bitField0_ & 0x00200000) != 0)) {
-          iban_ = java.util.Collections.unmodifiableList(iban_);
-        }
-        if (((mutable_bitField0_ & 0x00400000) != 0)) {
-          lines_ = java.util.Collections.unmodifiableList(lines_);
-        }
-        if (((mutable_bitField0_ & 0x00800000) != 0)) {
-          bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
-        }
-        if (((mutable_bitField0_ & 0x01000000) != 0)) {
-          bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
-        }
-        if (((mutable_bitField0_ & 0x02000000) != 0)) {
-          bic_ = java.util.Collections.unmodifiableList(bic_);
-        }
-        if (((mutable_bitField0_ & 0x04000000) != 0)) {
-          documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
-        }
-        if (((mutable_bitField0_ & 0x08000000) != 0)) {
-          documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
-        }
-        if (((mutable_bitField0_ & 0x10000000) != 0)) {
-          orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
-        }
-        if (((mutable_bitField0_ & 0x20000000) != 0)) {
-          supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
-        }
-        if (((mutable_bitField0_ & 0x40000000) != 0)) {
-          supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
-        }
-        if (((mutable_bitField0_ & 0x80000000) != 0)) {
-          supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
-        }
-        if (((mutable_bitField1_ & 0x00000001) != 0)) {
-          supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -7807,7 +7278,7 @@ public final class Annotator {
       for (int i = 0; i < supplierAddress_.size(); i++) {
         output.writeMessage(37, supplierAddress_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7961,7 +7432,7 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(37, supplierAddress_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8053,7 +7524,7 @@ public final class Annotator {
           .equals(other.getSupplierOrganisationNumberList())) return false;
       if (!getSupplierAddressList()
           .equals(other.getSupplierAddressList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8206,7 +7677,7 @@ public final class Annotator {
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddressList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8323,127 +7794,101 @@ public final class Annotator {
 
       // Construct using ssn.annotator.v1.Annotator.DocumentAnnotatorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrderDateFieldBuilder();
-          getPaymentDueDateFieldBuilder();
-          getCurrencyFieldBuilder();
-          getTotalVatFieldBuilder();
-          getTotalInclVatFieldBuilder();
-          getTotalExclVatFieldBuilder();
-          getSupplierCorporateIdFieldBuilder();
-          getSupplierCountryCodeFieldBuilder();
-          getDocumentTypeFieldBuilder();
-          getPaymentMethodFieldBuilder();
-          getCreditCardLastFourFieldBuilder();
-          getInvoiceNumberFieldBuilder();
-          getOcrLineDkTypeFieldBuilder();
-          getOcrLineDkPaymentIdFieldBuilder();
-          getOcrLineDkCreditorIdFieldBuilder();
-          getOcrLineSePaymentIdFieldBuilder();
-          getOcrLineSeBankgiroCreditorIdFieldBuilder();
-          getOcrLineSePlusgiroCreditorIdFieldBuilder();
-          getOcrLineNoPaymentIdFieldBuilder();
-          getOcrLineFiPaymentIdFieldBuilder();
-          getOcrLineNlPaymentIdFieldBuilder();
-          getIbanFieldBuilder();
-          getLinesFieldBuilder();
-          getBankAccountNumberFieldBuilder();
-          getBankRegistrationNumberFieldBuilder();
-          getBicFieldBuilder();
-          getDocumentNumberFieldBuilder();
-          getDocumentDateFieldBuilder();
-          getOrderNumberFieldBuilder();
-          getSupplierNameFieldBuilder();
-          getSupplierVatNumberFieldBuilder();
-          getSupplierOrganisationNumberFieldBuilder();
-          getSupplierAddressFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (orderDateBuilder_ == null) {
           orderDate_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          orderDate_ = null;
           orderDateBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (paymentDueDateBuilder_ == null) {
           paymentDueDate_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          paymentDueDate_ = null;
           paymentDueDateBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (currencyBuilder_ == null) {
           currency_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          currency_ = null;
           currencyBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (totalVatBuilder_ == null) {
           totalVat_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          totalVat_ = null;
           totalVatBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (totalInclVatBuilder_ == null) {
           totalInclVat_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
+          totalInclVat_ = null;
           totalInclVatBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (totalExclVatBuilder_ == null) {
           totalExclVat_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
+          totalExclVat_ = null;
           totalExclVatBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (supplierCorporateIdBuilder_ == null) {
           supplierCorporateId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
+          supplierCorporateId_ = null;
           supplierCorporateIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000040);
         if (supplierCountryCodeBuilder_ == null) {
           supplierCountryCode_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
+          supplierCountryCode_ = null;
           supplierCountryCodeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (documentTypeBuilder_ == null) {
           documentType_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
+          documentType_ = null;
           documentTypeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000100);
         if (paymentMethodBuilder_ == null) {
           paymentMethod_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
+          paymentMethod_ = null;
           paymentMethodBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000200);
         if (creditCardLastFourBuilder_ == null) {
           creditCardLastFour_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
+          creditCardLastFour_ = null;
           creditCardLastFourBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000400);
         if (invoiceNumberBuilder_ == null) {
           invoiceNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
         } else {
+          invoiceNumber_ = null;
           invoiceNumberBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000800);
         if (textAnnotationBuilder_ == null) {
           textAnnotation_ = null;
         } else {
@@ -8452,136 +7897,157 @@ public final class Annotator {
         }
         if (ocrLineDkTypeBuilder_ == null) {
           ocrLineDkType_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00001000);
         } else {
+          ocrLineDkType_ = null;
           ocrLineDkTypeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00001000);
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ocrLineDkPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00002000);
         } else {
+          ocrLineDkPaymentId_ = null;
           ocrLineDkPaymentIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00002000);
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ocrLineDkCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
         } else {
+          ocrLineDkCreditorId_ = null;
           ocrLineDkCreditorIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00004000);
         if (ocrLineSePaymentIdBuilder_ == null) {
           ocrLineSePaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00008000);
         } else {
+          ocrLineSePaymentId_ = null;
           ocrLineSePaymentIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00008000);
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00010000);
         } else {
+          ocrLineSeBankgiroCreditorId_ = null;
           ocrLineSeBankgiroCreditorIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00010000);
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00020000);
         } else {
+          ocrLineSePlusgiroCreditorId_ = null;
           ocrLineSePlusgiroCreditorIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00020000);
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ocrLineNoPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00040000);
         } else {
+          ocrLineNoPaymentId_ = null;
           ocrLineNoPaymentIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00040000);
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ocrLineFiPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00080000);
         } else {
+          ocrLineFiPaymentId_ = null;
           ocrLineFiPaymentIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00080000);
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ocrLineNlPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00100000);
         } else {
+          ocrLineNlPaymentId_ = null;
           ocrLineNlPaymentIdBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00100000);
         text_ = "";
 
         feedbackId_ = "";
 
         if (ibanBuilder_ == null) {
           iban_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00200000);
         } else {
+          iban_ = null;
           ibanBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00200000);
         if (linesBuilder_ == null) {
           lines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00400000);
         } else {
+          lines_ = null;
           linesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00400000);
         preview_ = "";
 
         if (bankAccountNumberBuilder_ == null) {
           bankAccountNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00800000);
         } else {
+          bankAccountNumber_ = null;
           bankAccountNumberBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00800000);
         if (bankRegistrationNumberBuilder_ == null) {
           bankRegistrationNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x01000000);
         } else {
+          bankRegistrationNumber_ = null;
           bankRegistrationNumberBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x01000000);
         if (bicBuilder_ == null) {
           bic_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x02000000);
         } else {
+          bic_ = null;
           bicBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x02000000);
         if (documentNumberBuilder_ == null) {
           documentNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x04000000);
         } else {
+          documentNumber_ = null;
           documentNumberBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x04000000);
         if (documentDateBuilder_ == null) {
           documentDate_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x08000000);
         } else {
+          documentDate_ = null;
           documentDateBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x08000000);
         if (orderNumberBuilder_ == null) {
           orderNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x10000000);
         } else {
+          orderNumber_ = null;
           orderNumberBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x10000000);
         if (supplierNameBuilder_ == null) {
           supplierName_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x20000000);
         } else {
+          supplierName_ = null;
           supplierNameBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x20000000);
         if (supplierVatNumberBuilder_ == null) {
           supplierVatNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x40000000);
         } else {
+          supplierVatNumber_ = null;
           supplierVatNumberBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x40000000);
         if (supplierOrganisationNumberBuilder_ == null) {
           supplierOrganisationNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x80000000);
         } else {
+          supplierOrganisationNumber_ = null;
           supplierOrganisationNumberBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x80000000);
         if (supplierAddressBuilder_ == null) {
           supplierAddress_ = java.util.Collections.emptyList();
-          bitField1_ = (bitField1_ & ~0x00000001);
         } else {
+          supplierAddress_ = null;
           supplierAddressBuilder_.clear();
         }
+        bitField1_ = (bitField1_ & ~0x00000001);
         return this;
       }
 
@@ -9836,7 +9302,7 @@ public final class Annotator {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9851,17 +9317,481 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.annotator.v1.Annotator.DocumentAnnotatorResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (orderDateBuilder_ == null) {
+                  ensureOrderDateIsMutable();
+                  orderDate_.add(m);
+                } else {
+                  orderDateBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (paymentDueDateBuilder_ == null) {
+                  ensurePaymentDueDateIsMutable();
+                  paymentDueDate_.add(m);
+                } else {
+                  paymentDueDateBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (currencyBuilder_ == null) {
+                  ensureCurrencyIsMutable();
+                  currency_.add(m);
+                } else {
+                  currencyBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (totalVatBuilder_ == null) {
+                  ensureTotalVatIsMutable();
+                  totalVat_.add(m);
+                } else {
+                  totalVatBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (totalInclVatBuilder_ == null) {
+                  ensureTotalInclVatIsMutable();
+                  totalInclVat_.add(m);
+                } else {
+                  totalInclVatBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (totalExclVatBuilder_ == null) {
+                  ensureTotalExclVatIsMutable();
+                  totalExclVat_.add(m);
+                } else {
+                  totalExclVatBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (supplierCorporateIdBuilder_ == null) {
+                  ensureSupplierCorporateIdIsMutable();
+                  supplierCorporateId_.add(m);
+                } else {
+                  supplierCorporateIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (supplierCountryCodeBuilder_ == null) {
+                  ensureSupplierCountryCodeIsMutable();
+                  supplierCountryCode_.add(m);
+                } else {
+                  supplierCountryCodeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (documentTypeBuilder_ == null) {
+                  ensureDocumentTypeIsMutable();
+                  documentType_.add(m);
+                } else {
+                  documentTypeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (paymentMethodBuilder_ == null) {
+                  ensurePaymentMethodIsMutable();
+                  paymentMethod_.add(m);
+                } else {
+                  paymentMethodBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (creditCardLastFourBuilder_ == null) {
+                  ensureCreditCardLastFourIsMutable();
+                  creditCardLastFour_.add(m);
+                } else {
+                  creditCardLastFourBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              case 98: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (invoiceNumberBuilder_ == null) {
+                  ensureInvoiceNumberIsMutable();
+                  invoiceNumber_.add(m);
+                } else {
+                  invoiceNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getTextAnnotationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 106
+              case 114: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineDkTypeBuilder_ == null) {
+                  ensureOcrLineDkTypeIsMutable();
+                  ocrLineDkType_.add(m);
+                } else {
+                  ocrLineDkTypeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 114
+              case 122: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineDkPaymentIdBuilder_ == null) {
+                  ensureOcrLineDkPaymentIdIsMutable();
+                  ocrLineDkPaymentId_.add(m);
+                } else {
+                  ocrLineDkPaymentIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 122
+              case 130: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineDkCreditorIdBuilder_ == null) {
+                  ensureOcrLineDkCreditorIdIsMutable();
+                  ocrLineDkCreditorId_.add(m);
+                } else {
+                  ocrLineDkCreditorIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 130
+              case 138: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineSePaymentIdBuilder_ == null) {
+                  ensureOcrLineSePaymentIdIsMutable();
+                  ocrLineSePaymentId_.add(m);
+                } else {
+                  ocrLineSePaymentIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 138
+              case 146: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+                  ensureOcrLineSeBankgiroCreditorIdIsMutable();
+                  ocrLineSeBankgiroCreditorId_.add(m);
+                } else {
+                  ocrLineSeBankgiroCreditorIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 146
+              case 154: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+                  ensureOcrLineSePlusgiroCreditorIdIsMutable();
+                  ocrLineSePlusgiroCreditorId_.add(m);
+                } else {
+                  ocrLineSePlusgiroCreditorIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 154
+              case 162: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineNoPaymentIdBuilder_ == null) {
+                  ensureOcrLineNoPaymentIdIsMutable();
+                  ocrLineNoPaymentId_.add(m);
+                } else {
+                  ocrLineNoPaymentIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 162
+              case 170: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineFiPaymentIdBuilder_ == null) {
+                  ensureOcrLineFiPaymentIdIsMutable();
+                  ocrLineFiPaymentId_.add(m);
+                } else {
+                  ocrLineFiPaymentIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 170
+              case 178: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ocrLineNlPaymentIdBuilder_ == null) {
+                  ensureOcrLineNlPaymentIdIsMutable();
+                  ocrLineNlPaymentId_.add(m);
+                } else {
+                  ocrLineNlPaymentIdBuilder_.addMessage(m);
+                }
+                break;
+              } // case 178
+              case 186: {
+                text_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 186
+              case 194: {
+                feedbackId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 194
+              case 202: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (ibanBuilder_ == null) {
+                  ensureIbanIsMutable();
+                  iban_.add(m);
+                } else {
+                  ibanBuilder_.addMessage(m);
+                }
+                break;
+              } // case 202
+              case 210: {
+                ssn.type.CandidateOuterClass.LineCandidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.LineCandidate.parser(),
+                        extensionRegistry);
+                if (linesBuilder_ == null) {
+                  ensureLinesIsMutable();
+                  lines_.add(m);
+                } else {
+                  linesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 210
+              case 218: {
+                preview_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 218
+              case 226: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (bankAccountNumberBuilder_ == null) {
+                  ensureBankAccountNumberIsMutable();
+                  bankAccountNumber_.add(m);
+                } else {
+                  bankAccountNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 226
+              case 234: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (bankRegistrationNumberBuilder_ == null) {
+                  ensureBankRegistrationNumberIsMutable();
+                  bankRegistrationNumber_.add(m);
+                } else {
+                  bankRegistrationNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 234
+              case 242: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (bicBuilder_ == null) {
+                  ensureBicIsMutable();
+                  bic_.add(m);
+                } else {
+                  bicBuilder_.addMessage(m);
+                }
+                break;
+              } // case 242
+              case 250: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (documentNumberBuilder_ == null) {
+                  ensureDocumentNumberIsMutable();
+                  documentNumber_.add(m);
+                } else {
+                  documentNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 250
+              case 258: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (documentDateBuilder_ == null) {
+                  ensureDocumentDateIsMutable();
+                  documentDate_.add(m);
+                } else {
+                  documentDateBuilder_.addMessage(m);
+                }
+                break;
+              } // case 258
+              case 266: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (orderNumberBuilder_ == null) {
+                  ensureOrderNumberIsMutable();
+                  orderNumber_.add(m);
+                } else {
+                  orderNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 266
+              case 274: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (supplierNameBuilder_ == null) {
+                  ensureSupplierNameIsMutable();
+                  supplierName_.add(m);
+                } else {
+                  supplierNameBuilder_.addMessage(m);
+                }
+                break;
+              } // case 274
+              case 282: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (supplierVatNumberBuilder_ == null) {
+                  ensureSupplierVatNumberIsMutable();
+                  supplierVatNumber_.add(m);
+                } else {
+                  supplierVatNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 282
+              case 290: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (supplierOrganisationNumberBuilder_ == null) {
+                  ensureSupplierOrganisationNumberIsMutable();
+                  supplierOrganisationNumber_.add(m);
+                } else {
+                  supplierOrganisationNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 290
+              case 298: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (supplierAddressBuilder_ == null) {
+                  ensureSupplierAddressIsMutable();
+                  supplierAddress_.add(m);
+                } else {
+                  supplierAddressBuilder_.addMessage(m);
+                }
+                break;
+              } // case 298
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.annotator.v1.Annotator.DocumentAnnotatorResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -21291,7 +21221,18 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DocumentAnnotatorResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -21388,63 +21329,6 @@ public final class Annotator {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Document(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              content_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              ssn.annotator.v1.Annotator.DocumentSource.Builder subBuilder = null;
-              if (source_ != null) {
-                subBuilder = source_.toBuilder();
-              }
-              source_ = input.readMessage(ssn.annotator.v1.Annotator.DocumentSource.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(source_);
-                source_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.annotator.v1.Annotator.internal_static_ssn_annotator_v1_Document_descriptor;
@@ -21539,7 +21423,7 @@ public final class Annotator {
       if (source_ != null) {
         output.writeMessage(2, getSource());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -21556,7 +21440,7 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSource());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -21578,7 +21462,7 @@ public final class Annotator {
         if (!getSource()
             .equals(other.getSource())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -21595,7 +21479,7 @@ public final class Annotator {
         hash = (37 * hash) + SOURCE_FIELD_NUMBER;
         hash = (53 * hash) + getSource().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -21712,18 +21596,13 @@ public final class Annotator {
 
       // Construct using ssn.annotator.v1.Annotator.Document.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -21822,7 +21701,7 @@ public final class Annotator {
         if (other.hasSource()) {
           mergeSource(other.getSource());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -21837,17 +21716,42 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.annotator.v1.Annotator.Document parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                content_ = input.readBytes();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.annotator.v1.Annotator.Document) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -22108,7 +22012,18 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Document(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -22187,51 +22102,6 @@ public final class Annotator {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private DocumentSource(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              httpUri_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -22317,7 +22187,7 @@ public final class Annotator {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpUri_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -22329,7 +22199,7 @@ public final class Annotator {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpUri_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -22346,7 +22216,7 @@ public final class Annotator {
 
       if (!getHttpUri()
           .equals(other.getHttpUri())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -22359,7 +22229,7 @@ public final class Annotator {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + HTTP_URI_FIELD_NUMBER;
       hash = (53 * hash) + getHttpUri().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -22476,18 +22346,13 @@ public final class Annotator {
 
       // Construct using ssn.annotator.v1.Annotator.DocumentSource.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -22573,7 +22438,7 @@ public final class Annotator {
           httpUri_ = other.httpUri_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -22588,17 +22453,35 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.annotator.v1.Annotator.DocumentSource parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                httpUri_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.annotator.v1.Annotator.DocumentSource) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -22750,7 +22633,18 @@ public final class Annotator {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DocumentSource(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -22904,8 +22798,8 @@ public final class Annotator {
       "2\243\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDocum" +
       "ent\022*.ssn.annotator.v1.DocumentAnnotator" +
       "Request\032+.ssn.annotator.v1.DocumentAnnot" +
-      "atorResponse\" \202\323\344\223\002\032\"\025/v1/document:annot" +
-      "ate:\001*B{Z>github.com/e-conomic/vmlapis/g" +
+      "atorResponse\" \202\323\344\223\002\032:\001*\"\025/v1/document:an" +
+      "notateB{Z>github.com/e-conomic/vmlapis/g" +
       "en/go/ssn/annotator/v1;annotator\222A8\022\017\n\tS" +
       "martScan2\002v1*\001\0022\020application/json:\020appli" +
       "cation/jsonb\006proto3"

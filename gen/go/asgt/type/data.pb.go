@@ -175,7 +175,7 @@ type Supplier struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// id of the supplier; not nullable
+	//  id of the supplier; not nullable
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	// name of the supplier
 	Name string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`

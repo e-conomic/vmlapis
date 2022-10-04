@@ -167,121 +167,6 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RegisterModelRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
-              if (dataset_ != null) {
-                subBuilder = dataset_.toBuilder();
-              }
-              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataset_);
-                dataset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              asgt.type.RevisionOuterClass.Revision.Builder subBuilder = null;
-              if (revision_ != null) {
-                subBuilder = revision_.toBuilder();
-              }
-              revision_ = input.readMessage(asgt.type.RevisionOuterClass.Revision.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(revision_);
-                revision_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-
-              modelVersion_ = input.readInt64();
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metrics_ = com.google.protobuf.MapField.newMapField(
-                    MetricsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
-              metrics__ = input.readMessage(
-                  MetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              metrics_.getMutableMap().put(
-                  metrics__.getKey(), metrics__.getValue());
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                targetMetrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targetMetrics_.add(
-                  input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-
-              inputType_ = rawValue;
-              break;
-            }
-            case 58: {
-              asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder subBuilder = null;
-              if (trainStatistics_ != null) {
-                subBuilder = trainStatistics_.toBuilder();
-              }
-              trainStatistics_ = input.readMessage(asgt.type.TrainStatisticsOuterClass.TrainStatistics.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trainStatistics_);
-                trainStatistics_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor;
@@ -574,7 +459,7 @@ public final class ModelRegistryOuterClass {
       if (trainStatistics_ != null) {
         output.writeMessage(7, getTrainStatistics());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -617,7 +502,7 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getTrainStatistics());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -654,7 +539,7 @@ public final class ModelRegistryOuterClass {
         if (!getTrainStatistics()
             .equals(other.getTrainStatistics())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -690,7 +575,7 @@ public final class ModelRegistryOuterClass {
         hash = (37 * hash) + TRAIN_STATISTICS_FIELD_NUMBER;
         hash = (53 * hash) + getTrainStatistics().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -829,19 +714,13 @@ public final class ModelRegistryOuterClass {
 
       // Construct using asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetMetricsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -863,10 +742,11 @@ public final class ModelRegistryOuterClass {
         internalGetMutableMetrics().clear();
         if (targetMetricsBuilder_ == null) {
           targetMetrics_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          targetMetrics_ = null;
           targetMetricsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         inputType_ = 0;
 
         if (trainStatisticsBuilder_ == null) {
@@ -1021,7 +901,7 @@ public final class ModelRegistryOuterClass {
         if (other.hasTrainStatistics()) {
           mergeTrainStatistics(other.getTrainStatistics());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1036,17 +916,82 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatasetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRevisionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 24: {
+                modelVersion_ = input.readInt64();
+
+                break;
+              } // case 24
+              case 34: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+                metrics__ = input.readMessage(
+                    MetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMetrics().getMutableMap().put(
+                    metrics__.getKey(), metrics__.getValue());
+                break;
+              } // case 34
+              case 42: {
+                asgt.type.TargetMetricsOuterClass.TargetMetrics m =
+                    input.readMessage(
+                        asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(),
+                        extensionRegistry);
+                if (targetMetricsBuilder_ == null) {
+                  ensureTargetMetricsIsMutable();
+                  targetMetrics_.add(m);
+                } else {
+                  targetMetricsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 48: {
+                inputType_ = input.readEnum();
+
+                break;
+              } // case 48
+              case 58: {
+                input.readMessage(
+                    getTrainStatisticsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1893,7 +1838,18 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RegisterModelRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1959,58 +1915,6 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetCurrentModelRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
-              if (dataset_ != null) {
-                subBuilder = dataset_.toBuilder();
-              }
-              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataset_);
-                dataset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor;
@@ -2067,7 +1971,7 @@ public final class ModelRegistryOuterClass {
       if (dataset_ != null) {
         output.writeMessage(1, getDataset());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2080,7 +1984,7 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataset());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2100,7 +2004,7 @@ public final class ModelRegistryOuterClass {
         if (!getDataset()
             .equals(other.getDataset())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2115,7 +2019,7 @@ public final class ModelRegistryOuterClass {
         hash = (37 * hash) + DATASET_FIELD_NUMBER;
         hash = (53 * hash) + getDataset().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2232,18 +2136,13 @@ public final class ModelRegistryOuterClass {
 
       // Construct using asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2336,7 +2235,7 @@ public final class ModelRegistryOuterClass {
         if (other.hasDataset()) {
           mergeDataset(other.getDataset());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2351,17 +2250,37 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatasetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2516,7 +2435,18 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetCurrentModelRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2582,58 +2512,6 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetCurrentModelResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
-              if (model_ != null) {
-                subBuilder = model_.toBuilder();
-              }
-              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(model_);
-                model_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_GetCurrentModelResponse_descriptor;
@@ -2690,7 +2568,7 @@ public final class ModelRegistryOuterClass {
       if (model_ != null) {
         output.writeMessage(1, getModel());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2703,7 +2581,7 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getModel());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2723,7 +2601,7 @@ public final class ModelRegistryOuterClass {
         if (!getModel()
             .equals(other.getModel())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2738,7 +2616,7 @@ public final class ModelRegistryOuterClass {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + getModel().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2855,18 +2733,13 @@ public final class ModelRegistryOuterClass {
 
       // Construct using asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2959,7 +2832,7 @@ public final class ModelRegistryOuterClass {
         if (other.hasModel()) {
           mergeModel(other.getModel());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2974,17 +2847,37 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3139,7 +3032,18 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetCurrentModelResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -296,7 +296,6 @@ type Data struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to DataStructure:
-	//
 	//	*Data_Transaction
 	//	*Data_Invoice
 	//	*Data_InvoiceLine

@@ -128,98 +128,6 @@ public final class ModelOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Model(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              version_ = input.readInt64();
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createdAt_ != null) {
-                subBuilder = createdAt_.toBuilder();
-              }
-              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(createdAt_);
-                createdAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-
-              datasetSize_ = input.readInt32();
-              break;
-            }
-            case 48: {
-
-              trainingSize_ = input.readInt32();
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                confidenceScores_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              confidenceScores_.add(
-                  input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
-              break;
-            }
-            case 64: {
-              int rawValue = input.readEnum();
-
-              inputType_ = rawValue;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetType_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          confidenceScores_ = java.util.Collections.unmodifiableList(confidenceScores_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.ModelOuterClass.internal_static_asgt_type_Model_descriptor;
@@ -532,7 +440,7 @@ public final class ModelOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, datasetType_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -568,7 +476,7 @@ public final class ModelOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, datasetType_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -599,7 +507,7 @@ public final class ModelOuterClass {
       if (inputType_ != other.inputType_) return false;
       if (!getDatasetType()
           .equals(other.getDatasetType())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -629,7 +537,7 @@ public final class ModelOuterClass {
       hash = (53 * hash) + inputType_;
       hash = (37 * hash) + DATASET_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetType().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -746,19 +654,13 @@ public final class ModelOuterClass {
 
       // Construct using asgt.type.ModelOuterClass.Model.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfidenceScoresFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -777,10 +679,11 @@ public final class ModelOuterClass {
 
         if (confidenceScoresBuilder_ == null) {
           confidenceScores_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          confidenceScores_ = null;
           confidenceScoresBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         inputType_ = 0;
 
         datasetType_ = "";
@@ -924,7 +827,7 @@ public final class ModelOuterClass {
           datasetType_ = other.datasetType_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -939,17 +842,75 @@ public final class ModelOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.ModelOuterClass.Model parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                version_ = input.readInt64();
+
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 40: {
+                datasetSize_ = input.readInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                trainingSize_ = input.readInt32();
+
+                break;
+              } // case 48
+              case 58: {
+                asgt.type.TargetMetricsOuterClass.TargetMetrics m =
+                    input.readMessage(
+                        asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(),
+                        extensionRegistry);
+                if (confidenceScoresBuilder_ == null) {
+                  ensureConfidenceScoresIsMutable();
+                  confidenceScores_.add(m);
+                } else {
+                  confidenceScoresBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 64: {
+                inputType_ = input.readEnum();
+
+                break;
+              } // case 64
+              case 74: {
+                datasetType_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.ModelOuterClass.Model) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1568,7 +1529,18 @@ public final class ModelOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Model(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
