@@ -1,4 +1,4 @@
-// source: protoc-gen-validate/validate/validate.proto
+// source: validate/validate.proto
 /**
  * @fileoverview
  * @enhanceable
