@@ -73,5 +73,7 @@ all:
 		--path proto/asgt/v2/dataset_service.proto \
 		--path proto/asgt/v2/suggester_service.proto
 
+	buf generate deps --template buf.gen.deps.js.yaml
+
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
