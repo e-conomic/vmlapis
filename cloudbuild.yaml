@@ -1,10 +1,18 @@
 steps:
-  - name: "python:3.7-buster"
+  - id: install
+    name: "python:3.7-buster"
     entrypoint: "bash"
     args:
       - "-c"
       - |
         pip install twine keyrings.google-artifactregistry-auth
+    waitFor: ["-"] # The '-' indicates that this step begins immediately.
+  - id: deploy
+    name: "python:3.7-buster"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
         python setup.py bdist_wheel
         twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
-    id: deploy
+    waitFor: ["install"]
