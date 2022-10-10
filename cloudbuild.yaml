@@ -4,18 +4,7 @@ steps:
     args:
       - "-c"
       - |
-        if [ "$TAG_NAME" ] ; then
-          pip install twine
-          python setup.py bdist_wheel
-          twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
-        fi
-    env:
-      - "TAG_NAME=${TAG_NAME}"
-    secretEnv:
-      - "ARTIFACTORY_PW"
+        pip install twine
+        python setup.py bdist_wheel
+        twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
     id: deploy
-
-secrets:
-  - kmsKeyName: projects/dev-vml-cm/locations/global/keyRings/builder/cryptoKeys/artifactory-pw
-    secretEnv:
-      ARTIFACTORY_PW: CiQABn9jLUW+LqR7sIGt+qNrDfIizwL4UNyumnqsi5I9/ofLHj0ScgBPNwwDR4MZUFeoGyz5P/OLqlGE27q0vayqbXUyd3AM9Mka2GMuqbGaJSpQvAxTEz3/vanIZLRJ3NPA5SRDzJraulDl7UaDm4F//N6UNI3DuPNSnfNqLPtL41ko67wTSfJgattedTz8xxjVWVnyUqwpLw==
