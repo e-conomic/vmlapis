@@ -5,6 +5,10 @@ steps:
     args:
       - "-c"
       - |
-        pip install twine keyrings.google-artifactregistry-auth
-        python setup.py bdist_wheel
-        twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
+        if [ "$TAG_NAME" ] ; then
+          pip install twine keyrings.google-artifactregistry-auth
+          python setup.py bdist_wheel
+          twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
+        fi
+    env:
+      - "TAG_NAME=${TAG_NAME}"
