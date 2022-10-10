@@ -4,7 +4,7 @@ steps:
     args:
       - "-c"
       - |
-        pip install -r requirements.txt --user
+        pip install twine keyrings.google-artifactregistry-auth
     id: install
   - name: "python:3.7-buster"
     entrypoint: "bash"
