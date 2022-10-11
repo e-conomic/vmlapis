@@ -43,7 +43,7 @@ all:
 	@echo "Generate all the things"
 
 #	buf breaking proto --against gen/descriptor.bin
-#	buf format -w
+#	buf format proto -w
 
 	buf generate proto --template buf.gen.all.yaml
 	buf generate proto --template buf.gen.grpc.yaml \
@@ -77,3 +77,14 @@ all:
 
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
+
+docker:
+	@rm -rf gen
+	docker build --progress plain -t vmlapis . --no-cache
+	DOCKERID=$$(docker create vmlapis) ;\
+	docker cp $$DOCKERID:/app/gen ./ ;\
+	docker rm $$DOCKERID
+
+.PHONY: all
+.PHONY: docker
+.DEFAULT_GOAL := docker
