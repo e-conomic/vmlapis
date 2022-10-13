@@ -4,16 +4,10 @@
 
 Generation is now done with a dockerfile
 
-``` bash
+```bash
 make
 ```
 
-If new truth values are added to dataservice updating bigquery is done via terraform.
+The files in the `proto/` directory are automatically formatted by the [Buf's linter](https://docs.buf.build/lint/overview).
 
-Do
-
-```bash
-make bigquery
-```
-
- to copy the generated schema to the ssn-terraform folder and then terraform.
+Code is checked for breaking changes against the `master` branch. If generation fails at the `buf breaking` command during the `make` process, follow the instructions from the output to make the new code backwards-compatible.
