@@ -19,70 +19,70 @@ public final class TrainModelEventOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
     /**
-     * <code>int64 model_version = 4;</code>
+     * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     long getModelVersion();
 
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The status.
      */
     java.lang.String getStatus();
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The statusMessage.
      */
     java.lang.String getStatusMessage();
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The bytes for statusMessage.
      */
     com.google.protobuf.ByteString
         getStatusMessageBytes();
 
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> 
         getArtifactsList();
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact getArtifacts(int index);
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     int getArtifactsCount();
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     java.util.List<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> 
         getArtifactsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder getArtifactsOrBuilder(
         int index);
@@ -117,86 +117,6 @@ public final class TrainModelEventOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrainModelEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
-              if (dataset_ != null) {
-                subBuilder = dataset_.toBuilder();
-              }
-              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataset_);
-                dataset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 32: {
-
-              modelVersion_ = input.readInt64();
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              status_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              statusMessage_ = s;
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                artifacts_ = new java.util.ArrayList<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              artifacts_.add(
-                  input.readMessage(asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          artifacts_ = java.util.Collections.unmodifiableList(artifacts_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.TrainModelEventOuterClass.internal_static_asgt_type_TrainModelEvent_descriptor;
@@ -215,24 +135,24 @@ public final class TrainModelEventOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       java.lang.String getType();
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       com.google.protobuf.ByteString
           getTypeBytes();
 
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The path.
        */
       java.lang.String getPath();
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The bytes for path.
        */
       com.google.protobuf.ByteString
@@ -267,55 +187,6 @@ public final class TrainModelEventOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Artifact(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                type_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                path_ = s;
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return asgt.type.TrainModelEventOuterClass.internal_static_asgt_type_TrainModelEvent_Artifact_descriptor;
@@ -332,7 +203,7 @@ public final class TrainModelEventOuterClass {
       public static final int TYPE_FIELD_NUMBER = 1;
       private volatile java.lang.Object type_;
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The type.
        */
       @java.lang.Override
@@ -349,7 +220,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [json_name = "type"];</code>
        * @return The bytes for type.
        */
       @java.lang.Override
@@ -370,7 +241,7 @@ public final class TrainModelEventOuterClass {
       public static final int PATH_FIELD_NUMBER = 2;
       private volatile java.lang.Object path_;
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The path.
        */
       @java.lang.Override
@@ -387,7 +258,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string path = 2;</code>
+       * <code>string path = 2 [json_name = "path"];</code>
        * @return The bytes for path.
        */
       @java.lang.Override
@@ -419,13 +290,13 @@ public final class TrainModelEventOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, path_);
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -434,13 +305,13 @@ public final class TrainModelEventOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, path_);
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -459,7 +330,7 @@ public final class TrainModelEventOuterClass {
             .equals(other.getType())) return false;
         if (!getPath()
             .equals(other.getPath())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -474,7 +345,7 @@ public final class TrainModelEventOuterClass {
         hash = (53 * hash) + getType().hashCode();
         hash = (37 * hash) + PATH_FIELD_NUMBER;
         hash = (53 * hash) + getPath().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -591,18 +462,13 @@ public final class TrainModelEventOuterClass {
 
         // Construct using asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -695,7 +561,7 @@ public final class TrainModelEventOuterClass {
             path_ = other.path_;
             onChanged();
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -710,23 +576,46 @@ public final class TrainModelEventOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  type_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+                case 18: {
+                  path_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
 
         private java.lang.Object type_ = "";
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @return The type.
          */
         public java.lang.String getType() {
@@ -742,7 +631,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @return The bytes for type.
          */
         public com.google.protobuf.ByteString
@@ -759,7 +648,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @param value The type to set.
          * @return This builder for chaining.
          */
@@ -774,7 +663,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @return This builder for chaining.
          */
         public Builder clearType() {
@@ -784,7 +673,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string type = 1;</code>
+         * <code>string type = 1 [json_name = "type"];</code>
          * @param value The bytes for type to set.
          * @return This builder for chaining.
          */
@@ -802,7 +691,7 @@ public final class TrainModelEventOuterClass {
 
         private java.lang.Object path_ = "";
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @return The path.
          */
         public java.lang.String getPath() {
@@ -818,7 +707,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @return The bytes for path.
          */
         public com.google.protobuf.ByteString
@@ -835,7 +724,7 @@ public final class TrainModelEventOuterClass {
           }
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @param value The path to set.
          * @return This builder for chaining.
          */
@@ -850,7 +739,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPath() {
@@ -860,7 +749,7 @@ public final class TrainModelEventOuterClass {
           return this;
         }
         /**
-         * <code>string path = 2;</code>
+         * <code>string path = 2 [json_name = "path"];</code>
          * @param value The bytes for path to set.
          * @return This builder for chaining.
          */
@@ -908,7 +797,18 @@ public final class TrainModelEventOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Artifact(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -931,7 +831,7 @@ public final class TrainModelEventOuterClass {
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     @java.lang.Override
@@ -939,7 +839,7 @@ public final class TrainModelEventOuterClass {
       return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -947,7 +847,7 @@ public final class TrainModelEventOuterClass {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -957,7 +857,7 @@ public final class TrainModelEventOuterClass {
     public static final int MODEL_VERSION_FIELD_NUMBER = 4;
     private long modelVersion_;
     /**
-     * <code>int64 model_version = 4;</code>
+     * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     @java.lang.Override
@@ -968,7 +868,7 @@ public final class TrainModelEventOuterClass {
     public static final int STATUS_FIELD_NUMBER = 5;
     private volatile java.lang.Object status_;
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The status.
      */
     @java.lang.Override
@@ -985,7 +885,7 @@ public final class TrainModelEventOuterClass {
       }
     }
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 5 [json_name = "status"];</code>
      * @return The bytes for status.
      */
     @java.lang.Override
@@ -1006,7 +906,7 @@ public final class TrainModelEventOuterClass {
     public static final int STATUS_MESSAGE_FIELD_NUMBER = 6;
     private volatile java.lang.Object statusMessage_;
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The statusMessage.
      */
     @java.lang.Override
@@ -1023,7 +923,7 @@ public final class TrainModelEventOuterClass {
       }
     }
     /**
-     * <code>string status_message = 6;</code>
+     * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The bytes for statusMessage.
      */
     @java.lang.Override
@@ -1044,14 +944,14 @@ public final class TrainModelEventOuterClass {
     public static final int ARTIFACTS_FIELD_NUMBER = 7;
     private java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> artifacts_;
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> getArtifactsList() {
       return artifacts_;
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> 
@@ -1059,21 +959,21 @@ public final class TrainModelEventOuterClass {
       return artifacts_;
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public int getArtifactsCount() {
       return artifacts_.size();
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact getArtifacts(int index) {
       return artifacts_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+     * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder getArtifactsOrBuilder(
@@ -1101,16 +1001,16 @@ public final class TrainModelEventOuterClass {
       if (modelVersion_ != 0L) {
         output.writeInt64(4, modelVersion_);
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
       }
-      if (!getStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, statusMessage_);
       }
       for (int i = 0; i < artifacts_.size(); i++) {
         output.writeMessage(7, artifacts_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1127,17 +1027,17 @@ public final class TrainModelEventOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, modelVersion_);
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
       }
-      if (!getStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, statusMessage_);
       }
       for (int i = 0; i < artifacts_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, artifacts_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1165,7 +1065,7 @@ public final class TrainModelEventOuterClass {
           .equals(other.getStatusMessage())) return false;
       if (!getArtifactsList()
           .equals(other.getArtifactsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1191,7 +1091,7 @@ public final class TrainModelEventOuterClass {
         hash = (37 * hash) + ARTIFACTS_FIELD_NUMBER;
         hash = (53 * hash) + getArtifactsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1308,19 +1208,13 @@ public final class TrainModelEventOuterClass {
 
       // Construct using asgt.type.TrainModelEventOuterClass.TrainModelEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getArtifactsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1339,10 +1233,11 @@ public final class TrainModelEventOuterClass {
 
         if (artifactsBuilder_ == null) {
           artifacts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          artifacts_ = null;
           artifactsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1475,7 +1370,7 @@ public final class TrainModelEventOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1490,17 +1385,65 @@ public final class TrainModelEventOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TrainModelEventOuterClass.TrainModelEvent parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatasetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 32: {
+                modelVersion_ = input.readInt64();
+
+                break;
+              } // case 32
+              case 42: {
+                status_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 50: {
+                statusMessage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact m =
+                    input.readMessage(
+                        asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.parser(),
+                        extensionRegistry);
+                if (artifactsBuilder_ == null) {
+                  ensureArtifactsIsMutable();
+                  artifacts_.add(m);
+                } else {
+                  artifactsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TrainModelEventOuterClass.TrainModelEvent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1509,14 +1452,14 @@ public final class TrainModelEventOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
@@ -1527,7 +1470,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1543,7 +1486,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -1557,7 +1500,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1575,7 +1518,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -1589,7 +1532,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -1597,7 +1540,7 @@ public final class TrainModelEventOuterClass {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -1608,7 +1551,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -1626,7 +1569,7 @@ public final class TrainModelEventOuterClass {
 
       private long modelVersion_ ;
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @return The modelVersion.
        */
       @java.lang.Override
@@ -1634,7 +1577,7 @@ public final class TrainModelEventOuterClass {
         return modelVersion_;
       }
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @param value The modelVersion to set.
        * @return This builder for chaining.
        */
@@ -1645,7 +1588,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
@@ -1657,7 +1600,7 @@ public final class TrainModelEventOuterClass {
 
       private java.lang.Object status_ = "";
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @return The status.
        */
       public java.lang.String getStatus() {
@@ -1673,7 +1616,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
@@ -1690,7 +1633,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -1705,7 +1648,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -1715,7 +1658,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status = 5;</code>
+       * <code>string status = 5 [json_name = "status"];</code>
        * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
@@ -1733,7 +1676,7 @@ public final class TrainModelEventOuterClass {
 
       private java.lang.Object statusMessage_ = "";
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @return The statusMessage.
        */
       public java.lang.String getStatusMessage() {
@@ -1749,7 +1692,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @return The bytes for statusMessage.
        */
       public com.google.protobuf.ByteString
@@ -1766,7 +1709,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @param value The statusMessage to set.
        * @return This builder for chaining.
        */
@@ -1781,7 +1724,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatusMessage() {
@@ -1791,7 +1734,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>string status_message = 6;</code>
+       * <code>string status_message = 6 [json_name = "statusMessage"];</code>
        * @param value The bytes for statusMessage to set.
        * @return This builder for chaining.
        */
@@ -1820,7 +1763,7 @@ public final class TrainModelEventOuterClass {
           asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder, asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> artifactsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> getArtifactsList() {
         if (artifactsBuilder_ == null) {
@@ -1830,7 +1773,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public int getArtifactsCount() {
         if (artifactsBuilder_ == null) {
@@ -1840,7 +1783,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact getArtifacts(int index) {
         if (artifactsBuilder_ == null) {
@@ -1850,7 +1793,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder setArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact value) {
@@ -1867,7 +1810,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder setArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder builderForValue) {
@@ -1881,7 +1824,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact value) {
         if (artifactsBuilder_ == null) {
@@ -1897,7 +1840,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact value) {
@@ -1914,7 +1857,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(
           asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder builderForValue) {
@@ -1928,7 +1871,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addArtifacts(
           int index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder builderForValue) {
@@ -1942,7 +1885,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder addAllArtifacts(
           java.lang.Iterable<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> values) {
@@ -1957,7 +1900,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder clearArtifacts() {
         if (artifactsBuilder_ == null) {
@@ -1970,7 +1913,7 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public Builder removeArtifacts(int index) {
         if (artifactsBuilder_ == null) {
@@ -1983,14 +1926,14 @@ public final class TrainModelEventOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder getArtifactsBuilder(
           int index) {
         return getArtifactsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder getArtifactsOrBuilder(
           int index) {
@@ -2000,7 +1943,7 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public java.util.List<? extends asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder> 
            getArtifactsOrBuilderList() {
@@ -2011,14 +1954,14 @@ public final class TrainModelEventOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder addArtifactsBuilder() {
         return getArtifactsFieldBuilder().addBuilder(
             asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder addArtifactsBuilder(
           int index) {
@@ -2026,7 +1969,7 @@ public final class TrainModelEventOuterClass {
             index, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7;</code>
+       * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
        */
       public java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder> 
            getArtifactsBuilderList() {
@@ -2079,7 +2022,18 @@ public final class TrainModelEventOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrainModelEvent(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2119,14 +2073,16 @@ public final class TrainModelEventOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!asgt/type/train_model_event.proto\022\tasg" +
-      "t.type\032\027asgt/type/dataset.proto\"\325\001\n\017Trai" +
-      "nModelEvent\022#\n\007dataset\030\001 \001(\0132\022.asgt.type" +
-      ".Dataset\022\025\n\rmodel_version\030\004 \001(\003\022\016\n\006statu" +
-      "s\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t\0226\n\tartif" +
-      "acts\030\007 \003(\0132#.asgt.type.TrainModelEvent.A" +
-      "rtifact\032&\n\010Artifact\022\014\n\004type\030\001 \001(\t\022\014\n\004pat" +
-      "h\030\002 \001(\tB8Z6github.com/e-conomic/vmlapis/" +
-      "gen/go/asgt/type;asgttypeb\006proto3"
+      "t.type\032\027asgt/type/dataset.proto\"\232\002\n\017Trai" +
+      "nModelEvent\022,\n\007dataset\030\001 \001(\0132\022.asgt.type" +
+      ".DatasetR\007dataset\022#\n\rmodel_version\030\004 \001(\003" +
+      "R\014modelVersion\022\026\n\006status\030\005 \001(\tR\006status\022%" +
+      "\n\016status_message\030\006 \001(\tR\rstatusMessage\022A\n" +
+      "\tartifacts\030\007 \003(\0132#.asgt.type.TrainModelE" +
+      "vent.ArtifactR\tartifacts\0322\n\010Artifact\022\022\n\004" +
+      "type\030\001 \001(\tR\004type\022\022\n\004path\030\002 \001(\tR\004pathB8Z6" +
+      "github.com/e-conomic/vmlapis/gen/go/asgt" +
+      "/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

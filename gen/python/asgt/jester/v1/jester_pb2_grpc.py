@@ -54,6 +54,7 @@ class Jester(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -62,4 +63,4 @@ class Jester(object):
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package grpc.gateway.protoc_gen_openapiv2.options;
 
-option go_package = "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options";
-
 import "google/protobuf/struct.proto";
+
+option go_package = "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options";
 
 // Scheme describes the schemes supported by the OpenAPI Swagger
 // and Operation objects.
@@ -26,7 +26,7 @@ enum Scheme {
 //    info: {
 //      title: "Echo API";
 //      version: "1.0";
-//      description: ";
+//      description: "";
 //      contact: {
 //        name: "gRPC-Gateway project";
 //        url: "https://github.com/grpc-ecosystem/grpc-gateway";
@@ -248,7 +248,7 @@ message Response {
 //    info: {
 //      title: "Echo API";
 //      version: "1.0";
-//      description: ";
+//      description: "";
 //      contact: {
 //        name: "gRPC-Gateway project";
 //        url: "https://github.com/grpc-ecosystem/grpc-gateway";
@@ -411,7 +411,7 @@ message Schema {
 //    // Id represents the message identifier.
 //    string id = 1; [
 //        (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//          {description: "The unique identifier of the simple message."
+//          description: "The unique identifier of the simple message."
 //        }];
 //  }
 //
@@ -505,6 +505,20 @@ message JSONSchema {
   reserved 43 to 45;
   // Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
   repeated string enum = 46;
+
+  // Additional field level properties used when generating the OpenAPI v2 file.
+  FieldConfiguration field_configuration = 1001;
+
+  // 'FieldConfiguration' provides additional field level properties used when generating the OpenAPI v2 file.
+  // These properties are not defined by OpenAPIv2, but they are used to control the generation.
+  message FieldConfiguration {
+    // Alternative parameter name when used as path parameter. If set, this will
+    // be used as the complete parameter name when this field is used as a path
+    // parameter. Use this to avoid having auto generated path parameter names
+    // for overlapping paths.
+    string path_param_name = 47;
+  }
+  map<string, google.protobuf.Value> extensions = 48;
 }
 
 // `Tag` is a representation of OpenAPI v2 specification's Tag object.

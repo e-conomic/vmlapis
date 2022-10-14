@@ -90,6 +90,7 @@ class MlService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -98,7 +99,7 @@ class MlService(object):
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenRequest.SerializeToString,
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Predict(request,
@@ -106,6 +107,7 @@ class MlService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -114,7 +116,7 @@ class MlService(object):
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictRequest.SerializeToString,
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def FeatureGenPredict(request,
@@ -122,6 +124,7 @@ class MlService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -130,4 +133,4 @@ class MlService(object):
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenPredictRequest.SerializeToString,
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

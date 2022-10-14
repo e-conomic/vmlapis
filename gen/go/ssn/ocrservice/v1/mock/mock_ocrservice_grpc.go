@@ -129,18 +129,6 @@ func (mr *MockOcrServiceServerMockRecorder) OcrScanImage(arg0, arg1 interface{})
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OcrScanImage", reflect.TypeOf((*MockOcrServiceServer)(nil).OcrScanImage), arg0, arg1)
 }
 
-// mustEmbedUnimplementedOcrServiceServer mocks base method.
-func (m *MockOcrServiceServer) mustEmbedUnimplementedOcrServiceServer() {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "mustEmbedUnimplementedOcrServiceServer")
-}
-
-// mustEmbedUnimplementedOcrServiceServer indicates an expected call of mustEmbedUnimplementedOcrServiceServer.
-func (mr *MockOcrServiceServerMockRecorder) mustEmbedUnimplementedOcrServiceServer() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedOcrServiceServer", reflect.TypeOf((*MockOcrServiceServer)(nil).mustEmbedUnimplementedOcrServiceServer))
-}
-
 // MockUnsafeOcrServiceServer is a mock of UnsafeOcrServiceServer interface.
 type MockUnsafeOcrServiceServer struct {
 	ctrl     *gomock.Controller

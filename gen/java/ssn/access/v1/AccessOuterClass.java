@@ -24,7 +24,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The sub.
      */
     java.lang.String getSub();
@@ -34,7 +34,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The bytes for sub.
      */
     com.google.protobuf.ByteString
@@ -47,7 +47,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.4
      * </pre>
      *
-     * <code>int64 exp = 2;</code>
+     * <code>int64 exp = 2 [json_name = "exp"];</code>
      * @return The exp.
      */
     long getExp();
@@ -80,54 +80,6 @@ public final class AccessOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ValetKeyRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sub_ = s;
-              break;
-            }
-            case 16: {
-
-              exp_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.access.v1.AccessOuterClass.internal_static_ssn_access_v1_ValetKeyRequest_descriptor;
@@ -149,7 +101,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The sub.
      */
     @java.lang.Override
@@ -171,7 +123,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>string sub = 1;</code>
+     * <code>string sub = 1 [json_name = "sub"];</code>
      * @return The bytes for sub.
      */
     @java.lang.Override
@@ -198,7 +150,7 @@ public final class AccessOuterClass {
      * https://tools.ietf.org/html/rfc7519#section-4.1.4
      * </pre>
      *
-     * <code>int64 exp = 2;</code>
+     * <code>int64 exp = 2 [json_name = "exp"];</code>
      * @return The exp.
      */
     @java.lang.Override
@@ -220,13 +172,13 @@ public final class AccessOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sub_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sub_);
       }
       if (exp_ != 0L) {
         output.writeInt64(2, exp_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -235,14 +187,14 @@ public final class AccessOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sub_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sub_);
       }
       if (exp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, exp_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -261,7 +213,7 @@ public final class AccessOuterClass {
           .equals(other.getSub())) return false;
       if (getExp()
           != other.getExp()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -277,7 +229,7 @@ public final class AccessOuterClass {
       hash = (37 * hash) + EXP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getExp());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -394,18 +346,13 @@ public final class AccessOuterClass {
 
       // Construct using ssn.access.v1.AccessOuterClass.ValetKeyRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -497,7 +444,7 @@ public final class AccessOuterClass {
         if (other.getExp() != 0L) {
           setExp(other.getExp());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -512,17 +459,40 @@ public final class AccessOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.access.v1.AccessOuterClass.ValetKeyRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sub_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                exp_ = input.readInt64();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.access.v1.AccessOuterClass.ValetKeyRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -533,7 +503,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @return The sub.
        */
       public java.lang.String getSub() {
@@ -554,7 +524,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @return The bytes for sub.
        */
       public com.google.protobuf.ByteString
@@ -576,7 +546,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @param value The sub to set.
        * @return This builder for chaining.
        */
@@ -596,7 +566,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSub() {
@@ -611,7 +581,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>string sub = 1;</code>
+       * <code>string sub = 1 [json_name = "sub"];</code>
        * @param value The bytes for sub to set.
        * @return This builder for chaining.
        */
@@ -635,7 +605,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>int64 exp = 2;</code>
+       * <code>int64 exp = 2 [json_name = "exp"];</code>
        * @return The exp.
        */
       @java.lang.Override
@@ -649,7 +619,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>int64 exp = 2;</code>
+       * <code>int64 exp = 2 [json_name = "exp"];</code>
        * @param value The exp to set.
        * @return This builder for chaining.
        */
@@ -666,7 +636,7 @@ public final class AccessOuterClass {
        * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>int64 exp = 2;</code>
+       * <code>int64 exp = 2 [json_name = "exp"];</code>
        * @return This builder for chaining.
        */
       public Builder clearExp() {
@@ -708,7 +678,18 @@ public final class AccessOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ValetKeyRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -737,7 +718,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -746,7 +727,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -757,7 +738,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The token.
      */
     java.lang.String getToken();
@@ -766,7 +747,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The bytes for token.
      */
     com.google.protobuf.ByteString
@@ -801,55 +782,6 @@ public final class AccessOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ValetKeyResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              token_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.access.v1.AccessOuterClass.internal_static_ssn_access_v1_ValetKeyResponse_descriptor;
@@ -870,7 +802,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -891,7 +823,7 @@ public final class AccessOuterClass {
      * Key for this key
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -916,7 +848,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The token.
      */
     @java.lang.Override
@@ -937,7 +869,7 @@ public final class AccessOuterClass {
      * A JWT Token
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return The bytes for token.
      */
     @java.lang.Override
@@ -969,13 +901,13 @@ public final class AccessOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, token_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -984,13 +916,13 @@ public final class AccessOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, token_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1009,7 +941,7 @@ public final class AccessOuterClass {
           .equals(other.getId())) return false;
       if (!getToken()
           .equals(other.getToken())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1024,7 +956,7 @@ public final class AccessOuterClass {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1141,18 +1073,13 @@ public final class AccessOuterClass {
 
       // Construct using ssn.access.v1.AccessOuterClass.ValetKeyResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1245,7 +1172,7 @@ public final class AccessOuterClass {
           token_ = other.token_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1260,17 +1187,40 @@ public final class AccessOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.access.v1.AccessOuterClass.ValetKeyResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                token_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.access.v1.AccessOuterClass.ValetKeyResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1280,7 +1230,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1300,7 +1250,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1321,7 +1271,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1340,7 +1290,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1354,7 +1304,7 @@ public final class AccessOuterClass {
        * Key for this key
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1376,7 +1326,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @return The token.
        */
       public java.lang.String getToken() {
@@ -1396,7 +1346,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @return The bytes for token.
        */
       public com.google.protobuf.ByteString
@@ -1417,7 +1367,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @param value The token to set.
        * @return This builder for chaining.
        */
@@ -1436,7 +1386,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @return This builder for chaining.
        */
       public Builder clearToken() {
@@ -1450,7 +1400,7 @@ public final class AccessOuterClass {
        * A JWT Token
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>string token = 2 [json_name = "token"];</code>
        * @param value The bytes for token to set.
        * @return This builder for chaining.
        */
@@ -1498,7 +1448,18 @@ public final class AccessOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ValetKeyResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1538,14 +1499,15 @@ public final class AccessOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032ssn/access/v1/access.proto\022\rssn.access" +
-      ".v1\032\034google/api/annotations.proto\"+\n\017Val" +
-      "etKeyRequest\022\013\n\003sub\030\001 \001(\t\022\013\n\003exp\030\002 \001(\003\"-" +
-      "\n\020ValetKeyResponse\022\n\n\002id\030\001 \001(\t\022\r\n\005token\030" +
-      "\002 \001(\t2}\n\006Access\022s\n\020GenerateValetKey\022\036.ss" +
-      "n.access.v1.ValetKeyRequest\032\037.ssn.access" +
-      ".v1.ValetKeyResponse\"\036\202\323\344\223\002\030\"\023/v1/access" +
-      "/valetkey:\001*B:Z8github.com/e-conomic/vml" +
-      "apis/gen/go/ssn/access/v1;accessb\006proto3"
+      ".v1\032\034google/api/annotations.proto\"5\n\017Val" +
+      "etKeyRequest\022\020\n\003sub\030\001 \001(\tR\003sub\022\020\n\003exp\030\002 " +
+      "\001(\003R\003exp\"8\n\020ValetKeyResponse\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\022\024\n\005token\030\002 \001(\tR\005token2}\n\006Access\022s\n\020" +
+      "GenerateValetKey\022\036.ssn.access.v1.ValetKe" +
+      "yRequest\032\037.ssn.access.v1.ValetKeyRespons" +
+      "e\"\036\202\323\344\223\002\030:\001*\"\023/v1/access/valetkeyB:Z8git" +
+      "hub.com/e-conomic/vmlapis/gen/go/ssn/acc" +
+      "ess/v1;accessb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

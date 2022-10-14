@@ -2,25 +2,23 @@ syntax = "proto3";
 
 package asgt.v2;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
-
-import "google/api/annotations.proto";
-import "google/protobuf/empty.proto";
-import "options/annotations.proto";
-import "validate/validate.proto";
-
+import "asgt/type/dataset.proto";
 import "asgt/v2/type/example.proto";
 import "asgt/v2/type/training.proto";
-import "asgt/type/dataset.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "validate/validate.proto";
 
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
 
 service DatasetService {
   option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {
-      description: "Manage datasets and examples used for training AutoSuggest models."
+    description: "Manage datasets and examples used for training AutoSuggest models."
   };
 
   // Get the basic information about a dataset.
-  rpc GetDataset (GetDatasetRequest) returns (asgt.type.Dataset) {
+  rpc GetDataset(GetDatasetRequest) returns (asgt.type.Dataset) {
     option (google.api.http) = {
       get: "/v2/datasets/{dataset_name}"
     };
@@ -28,24 +26,24 @@ service DatasetService {
 
   // Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
   // until CreateExample or BatchCreateExample is called after the creation of the dataset.
-  rpc CreateDataset (CreateDatasetRequest) returns (google.protobuf.Empty) {
+  rpc CreateDataset(CreateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v2/datasets"
       body: "*"
     };
   }
 
-  // Not implemented yet. 
-  //Creates a new dataset. If a dataset with such name already exsits, it will be updated with the 
+  // Not implemented yet.
+  //Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
   // provided data.
-  rpc CreateOrUpdateDataset (CreateOrUpdateDatasetRequest) returns (google.protobuf.Empty) {
+  rpc CreateOrUpdateDataset(CreateOrUpdateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       put: "/v2/datasets/{dataset_name}"
     };
   }
 
   // Delete a dataset with the specified name.
-  rpc DeleteDataset (DeleteDatasetRequest) returns (asgt.type.Dataset) {
+  rpc DeleteDataset(DeleteDatasetRequest) returns (asgt.type.Dataset) {
     option (google.api.http) = {
       delete: "/v2/datasets/{dataset_name}"
     };
@@ -53,25 +51,25 @@ service DatasetService {
 
   // Delete all datasets (and their examples) containing the specified tag.
   // The datasets' names are not considered in this request - only the tag names is.
-  rpc DeleteTag (DeleteTagRequest) returns (google.protobuf.Empty) {
+  rpc DeleteTag(DeleteTagRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v2/tags/{tag_name}"
     };
   }
 
   // Uploads a new single example.
-  rpc CreateExample (CreateExampleRequest) returns (google.protobuf.Empty) {
+  rpc CreateExample(CreateExampleRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}/examples"
       body: "*"
     };
   }
 
-  // Not implemented yet. 
-  // Uploads or updates a new single example. 
-  // If the specified example already exists, the example 
+  // Not implemented yet.
+  // Uploads or updates a new single example.
+  // If the specified example already exists, the example
   // is updated with the provided values according to provided ID.
-  rpc CreateOrUpdateExample (CreateOrUpdateExampleRequest) returns (google.protobuf.Empty) {
+  rpc CreateOrUpdateExample(CreateOrUpdateExampleRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       put: "/v2/datasets/{dataset_name}/examples/{example.id}"
       body: "*"
@@ -79,7 +77,7 @@ service DatasetService {
   }
 
   // Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
-  rpc BatchCreateExample (BatchCreateExampleRequest) returns (google.protobuf.Empty) {
+  rpc BatchCreateExample(BatchCreateExampleRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}/examples:batchCreate"
       body: "*"
@@ -88,15 +86,15 @@ service DatasetService {
 
   // Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
   // removing existing models.
-  rpc TruncateDataset (TruncateDatasetRequest) returns (google.protobuf.Empty) {
+  rpc TruncateDataset(TruncateDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v2/datasets/{dataset_name}/examples"
     };
   }
 
-  // Get the specified number of the most recent dataset's trainings. 
+  // Get the specified number of the most recent dataset's trainings.
   // Number of requested trainings has to be larger than 0 but no larger than 100.
-  rpc GetDatasetTrainings (GetDatasetTrainingsRequest) returns (TrainingsResponse) {
+  rpc GetDatasetTrainings(GetDatasetTrainingsRequest) returns (TrainingsResponse) {
     option (google.api.http) = {
       get: "/v2/datasets/{dataset_name}/trainings"
     };
@@ -112,53 +110,91 @@ service DatasetService {
 }
 
 message GetDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
 }
 
 message CreateDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
-  repeated string tags = 2 [(validate.rules).repeated.unique = true, 
-                            (validate.rules).repeated.items.string = { pattern: "^[A-Za-z0-9\\s_.>-]*$", max_bytes: 64 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
+  repeated string tags = 2 [
+    (validate.rules).repeated.unique = true,
+    (validate.rules).repeated.items.string = {
+      pattern: "^[A-Za-z0-9\\s_.>-]*$",
+      max_bytes: 64
+    }
+  ]; // text-no-spaces
 }
 
 message CreateOrUpdateDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
 }
 
 message DeleteDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
 }
 
 message DeleteTagRequest {
-  string tag_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string tag_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
 }
 
 message CreateExampleRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
   asgt.v2.type.Example example = 2;
 }
 
 message CreateOrUpdateExampleRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
   asgt.v2.type.Example example = 2;
 }
 
 message BatchCreateExampleRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
   repeated asgt.v2.type.Example examples = 2;
 }
 
 message TruncateDatasetRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
 }
 
 message TrainingRequestOptions {
   // The number of trainings to return. Ranges from 1 to 100.
-  int64 limit = 1 [(validate.rules).int64 = { gt:0, lte: 100 }];  // mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+  int64 limit = 1 [(validate.rules).int64 = {
+    gt: 0,
+    lte: 100
+  }]; // mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
 }
 
 message GetDatasetTrainingsRequest {
-  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
   TrainingRequestOptions options = 2;
 }
 

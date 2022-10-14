@@ -90,6 +90,7 @@ class SuggesterService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -98,7 +99,7 @@ class SuggesterService(object):
             asgt_dot_v2_dot_suggester__service__pb2.SuggestRequest.SerializeToString,
             asgt_dot_v2_dot_suggester__service__pb2.SuggestResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def BatchSuggest(request,
@@ -106,6 +107,7 @@ class SuggesterService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -114,7 +116,7 @@ class SuggesterService(object):
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestRequest.SerializeToString,
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ModelBatchSuggest(request,
@@ -122,6 +124,7 @@ class SuggesterService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -130,4 +133,4 @@ class SuggesterService(object):
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestRequest.SerializeToString,
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

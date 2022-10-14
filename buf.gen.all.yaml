@@ -1,0 +1,15 @@
+version: v1
+plugins:
+  - remote: buf.build/protocolbuffers/plugins/go
+    out: gen/go
+    opt: paths=source_relative
+  - remote: buf.build/protocolbuffers/plugins/python
+    out: gen/python
+  - remote: buf.build/protocolbuffers/plugins/js
+    out: gen/js
+    opt: import_style=commonjs,binary
+  - remote: buf.build/protocolbuffers/plugins/java
+    out: gen/java
+  - remote: buf.build/protocolbuffers/plugins/csharp
+    out: gen/csharp
+    opt: base_namespace=

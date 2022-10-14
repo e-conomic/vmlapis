@@ -19,24 +19,24 @@ public final class TargetValueOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
@@ -75,55 +75,6 @@ public final class TargetValueOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TargetValue(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              value_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.TargetValueOuterClass.internal_static_asgt_type_TargetValue_descriptor;
@@ -140,7 +91,7 @@ public final class TargetValueOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -157,7 +108,7 @@ public final class TargetValueOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -178,7 +129,7 @@ public final class TargetValueOuterClass {
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -195,7 +146,7 @@ public final class TargetValueOuterClass {
       }
     }
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -227,13 +178,13 @@ public final class TargetValueOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -242,13 +193,13 @@ public final class TargetValueOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -267,7 +218,7 @@ public final class TargetValueOuterClass {
           .equals(other.getName())) return false;
       if (!getValue()
           .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -282,7 +233,7 @@ public final class TargetValueOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -403,18 +354,13 @@ public final class TargetValueOuterClass {
 
       // Construct using asgt.type.TargetValueOuterClass.TargetValue.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -507,7 +453,7 @@ public final class TargetValueOuterClass {
           value_ = other.value_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -522,23 +468,46 @@ public final class TargetValueOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TargetValueOuterClass.TargetValue parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TargetValueOuterClass.TargetValue) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -554,7 +523,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -571,7 +540,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -586,7 +555,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -596,7 +565,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -614,7 +583,7 @@ public final class TargetValueOuterClass {
 
       private java.lang.Object value_ = "";
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @return The value.
        */
       public java.lang.String getValue() {
@@ -630,7 +599,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
@@ -647,7 +616,7 @@ public final class TargetValueOuterClass {
         }
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -662,7 +631,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -672,7 +641,7 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
@@ -720,7 +689,18 @@ public final class TargetValueOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TargetValue(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -755,9 +735,10 @@ public final class TargetValueOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034asgt/type/target_value.proto\022\tasgt.typ" +
-      "e\"*\n\013TargetValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\tB8Z6github.com/e-conomic/vmlapis/ge" +
-      "n/go/asgt/type;asgttypeb\006proto3"
+      "e\"7\n\013TargetValue\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005" +
+      "value\030\002 \001(\tR\005valueB8Z6github.com/e-conom" +
+      "ic/vmlapis/gen/go/asgt/type;asgttypeb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

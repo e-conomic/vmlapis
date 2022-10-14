@@ -24,7 +24,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
@@ -34,7 +34,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     ssn.type.CandidateOuterClass.Confidence.Level getLevel();
@@ -44,7 +44,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     boolean hasValue();
@@ -53,7 +53,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     com.google.protobuf.FloatValue getValue();
@@ -62,7 +62,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     com.google.protobuf.FloatValueOrBuilder getValueOrBuilder();
   }
@@ -93,62 +93,6 @@ public final class CandidateOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private Confidence(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              level_ = rawValue;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.FloatValue.Builder subBuilder = null;
-              if (value_ != null) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -315,7 +259,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     @java.lang.Override public int getLevelValue() {
@@ -327,7 +271,7 @@ public final class CandidateOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.ssn.type.Confidence.Level level = 1;</code>
+     * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Confidence.Level getLevel() {
@@ -343,7 +287,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     @java.lang.Override
@@ -355,7 +299,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -367,7 +311,7 @@ public final class CandidateOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
@@ -394,7 +338,7 @@ public final class CandidateOuterClass {
       if (value_ != null) {
         output.writeMessage(2, getValue());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -411,7 +355,7 @@ public final class CandidateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValue());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -432,7 +376,7 @@ public final class CandidateOuterClass {
         if (!getValue()
             .equals(other.getValue())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -449,7 +393,7 @@ public final class CandidateOuterClass {
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -566,18 +510,13 @@ public final class CandidateOuterClass {
 
       // Construct using ssn.type.CandidateOuterClass.Confidence.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -676,7 +615,7 @@ public final class CandidateOuterClass {
         if (other.hasValue()) {
           mergeValue(other.getValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -691,17 +630,42 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.type.CandidateOuterClass.Confidence parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                level_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.type.CandidateOuterClass.Confidence) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -712,7 +676,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The enum numeric value on the wire for level.
        */
       @java.lang.Override public int getLevelValue() {
@@ -724,7 +688,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
        */
@@ -740,7 +704,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The level.
        */
       @java.lang.Override
@@ -755,7 +719,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The level to set.
        * @return This builder for chaining.
        */
@@ -774,7 +738,7 @@ public final class CandidateOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.ssn.type.Confidence.Level level = 1;</code>
+       * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
@@ -792,7 +756,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return Whether the value field is set.
        */
       public boolean hasValue() {
@@ -803,7 +767,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return The value.
        */
       public com.google.protobuf.FloatValue getValue() {
@@ -818,7 +782,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -838,7 +802,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(
           com.google.protobuf.FloatValue.Builder builderForValue) {
@@ -856,7 +820,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder mergeValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -878,7 +842,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder clearValue() {
         if (valueBuilder_ == null) {
@@ -896,7 +860,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValue.Builder getValueBuilder() {
         
@@ -908,7 +872,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
         if (valueBuilder_ != null) {
@@ -923,7 +887,7 @@ public final class CandidateOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
@@ -971,7 +935,18 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Confidence(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1000,7 +975,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The value.
      */
     java.lang.String getValue();
@@ -1009,7 +984,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
@@ -1021,7 +996,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -1031,7 +1006,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -1042,7 +1017,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return Whether the confidence field is set.
      */
     boolean hasConfidence();
@@ -1051,7 +1026,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     ssn.type.CandidateOuterClass.Confidence getConfidence();
@@ -1060,7 +1035,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
 
@@ -1083,7 +1058,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
@@ -1106,7 +1081,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     ssn.type.Geometry.BoundingPoly getBoundingBox();
@@ -1129,7 +1104,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
@@ -1138,7 +1113,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
@@ -1147,7 +1122,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The type.
      */
     ssn.type.CandidateOuterClass.Candidate.Type getType();
@@ -1158,7 +1133,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     int getPageRef();
@@ -1168,7 +1143,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
     boolean hasModelMetadata();
@@ -1177,7 +1152,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
     ssn.type.CandidateOuterClass.ModelSpec getModelMetadata();
@@ -1186,7 +1161,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder();
   }
@@ -1219,105 +1194,6 @@ public final class CandidateOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private Candidate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              value_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            case 26: {
-              ssn.type.CandidateOuterClass.Confidence.Builder subBuilder = null;
-              if (confidence_ != null) {
-                subBuilder = confidence_.toBuilder();
-              }
-              confidence_ = input.readMessage(ssn.type.CandidateOuterClass.Confidence.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(confidence_);
-                confidence_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              ssn.type.Geometry.BoundingPoly.Builder subBuilder = null;
-              if (boundingBox_ != null) {
-                subBuilder = boundingBox_.toBuilder();
-              }
-              boundingBox_ = input.readMessage(ssn.type.Geometry.BoundingPoly.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(boundingBox_);
-                boundingBox_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
-              break;
-            }
-            case 48: {
-
-              pageRef_ = input.readUInt32();
-              break;
-            }
-            case 58: {
-              ssn.type.CandidateOuterClass.ModelSpec.Builder subBuilder = null;
-              if (modelMetadata_ != null) {
-                subBuilder = modelMetadata_.toBuilder();
-              }
-              modelMetadata_ = input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(modelMetadata_);
-                modelMetadata_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -1456,7 +1332,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -1477,7 +1353,7 @@ public final class CandidateOuterClass {
      * Normalized value 01-01-2019
      * </pre>
      *
-     * <code>string value = 1;</code>
+     * <code>string value = 1 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -1503,7 +1379,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -1525,7 +1401,7 @@ public final class CandidateOuterClass {
      * useful for overlays
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -1550,7 +1426,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return Whether the confidence field is set.
      */
     @java.lang.Override
@@ -1562,7 +1438,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -1574,7 +1450,7 @@ public final class CandidateOuterClass {
      * Confidence
      * </pre>
      *
-     * <code>.ssn.type.Confidence confidence = 3;</code>
+     * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
@@ -1602,7 +1478,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
     @java.lang.Override
@@ -1628,7 +1504,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
     @java.lang.Override
@@ -1654,7 +1530,7 @@ public final class CandidateOuterClass {
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
-     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -1668,7 +1544,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
@@ -1679,7 +1555,7 @@ public final class CandidateOuterClass {
      * Indicate the type of the candidate
      * </pre>
      *
-     * <code>.ssn.type.Candidate.Type type = 5;</code>
+     * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Candidate.Type getType() {
@@ -1696,7 +1572,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     @java.lang.Override
@@ -1711,7 +1587,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
     @java.lang.Override
@@ -1723,7 +1599,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
     @java.lang.Override
@@ -1735,7 +1611,7 @@ public final class CandidateOuterClass {
      * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
@@ -1756,10 +1632,10 @@ public final class CandidateOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
       if (confidence_ != null) {
@@ -1777,7 +1653,7 @@ public final class CandidateOuterClass {
       if (modelMetadata_ != null) {
         output.writeMessage(7, getModelMetadata());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1786,10 +1662,10 @@ public final class CandidateOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
       }
       if (confidence_ != null) {
@@ -1812,7 +1688,7 @@ public final class CandidateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getModelMetadata());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1849,7 +1725,7 @@ public final class CandidateOuterClass {
         if (!getModelMetadata()
             .equals(other.getModelMetadata())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1880,7 +1756,7 @@ public final class CandidateOuterClass {
         hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getModelMetadata().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1997,18 +1873,13 @@ public final class CandidateOuterClass {
 
       // Construct using ssn.type.CandidateOuterClass.Candidate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2155,7 +2026,7 @@ public final class CandidateOuterClass {
         if (other.hasModelMetadata()) {
           mergeModelMetadata(other.getModelMetadata());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2170,17 +2041,71 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.type.CandidateOuterClass.Candidate parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                value_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                text_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getConfidenceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getBoundingBoxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 40: {
+                type_ = input.readEnum();
+
+                break;
+              } // case 40
+              case 48: {
+                pageRef_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 58: {
+                input.readMessage(
+                    getModelMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.type.CandidateOuterClass.Candidate) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2190,7 +2115,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @return The value.
        */
       public java.lang.String getValue() {
@@ -2210,7 +2135,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
@@ -2231,7 +2156,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -2250,7 +2175,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -2264,7 +2189,7 @@ public final class CandidateOuterClass {
        * Normalized value 01-01-2019
        * </pre>
        *
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [json_name = "value"];</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
@@ -2287,7 +2212,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -2308,7 +2233,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -2330,7 +2255,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -2350,7 +2275,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -2365,7 +2290,7 @@ public final class CandidateOuterClass {
        * useful for overlays
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -2389,7 +2314,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        * @return Whether the confidence field is set.
        */
       public boolean hasConfidence() {
@@ -2400,7 +2325,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       public ssn.type.CandidateOuterClass.Confidence getConfidence() {
@@ -2415,7 +2340,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder setConfidence(ssn.type.CandidateOuterClass.Confidence value) {
         if (confidenceBuilder_ == null) {
@@ -2435,7 +2360,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder setConfidence(
           ssn.type.CandidateOuterClass.Confidence.Builder builderForValue) {
@@ -2453,7 +2378,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder mergeConfidence(ssn.type.CandidateOuterClass.Confidence value) {
         if (confidenceBuilder_ == null) {
@@ -2475,7 +2400,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder clearConfidence() {
         if (confidenceBuilder_ == null) {
@@ -2493,7 +2418,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public ssn.type.CandidateOuterClass.Confidence.Builder getConfidenceBuilder() {
         
@@ -2505,7 +2430,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
         if (confidenceBuilder_ != null) {
@@ -2520,7 +2445,7 @@ public final class CandidateOuterClass {
        * Confidence
        * </pre>
        *
-       * <code>.ssn.type.Confidence confidence = 3;</code>
+       * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.CandidateOuterClass.Confidence, ssn.type.CandidateOuterClass.Confidence.Builder, ssn.type.CandidateOuterClass.ConfidenceOrBuilder> 
@@ -2558,7 +2483,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
@@ -2583,7 +2508,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        * @return The boundingBox.
        */
       public ssn.type.Geometry.BoundingPoly getBoundingBox() {
@@ -2612,7 +2537,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -2646,7 +2571,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder setBoundingBox(
           ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
@@ -2678,7 +2603,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
@@ -2714,7 +2639,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder clearBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -2746,7 +2671,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
         
@@ -2772,7 +2697,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
         if (boundingBoxBuilder_ != null) {
@@ -2801,7 +2726,7 @@ public final class CandidateOuterClass {
        *   and the vertex order will still be (0, 1, 2, 3).
        * </pre>
        *
-       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> 
@@ -2823,7 +2748,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -2834,7 +2759,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -2849,7 +2774,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @return The type.
        */
       @java.lang.Override
@@ -2863,7 +2788,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -2881,7 +2806,7 @@ public final class CandidateOuterClass {
        * Indicate the type of the candidate
        * </pre>
        *
-       * <code>.ssn.type.Candidate.Type type = 5;</code>
+       * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -2898,7 +2823,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return The pageRef.
        */
       @java.lang.Override
@@ -2911,7 +2836,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @param value The pageRef to set.
        * @return This builder for chaining.
        */
@@ -2927,7 +2852,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageRef() {
@@ -2945,7 +2870,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        * @return Whether the modelMetadata field is set.
        */
       public boolean hasModelMetadata() {
@@ -2956,7 +2881,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        * @return The modelMetadata.
        */
       public ssn.type.CandidateOuterClass.ModelSpec getModelMetadata() {
@@ -2971,7 +2896,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder setModelMetadata(ssn.type.CandidateOuterClass.ModelSpec value) {
         if (modelMetadataBuilder_ == null) {
@@ -2991,7 +2916,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder setModelMetadata(
           ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
@@ -3009,7 +2934,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder mergeModelMetadata(ssn.type.CandidateOuterClass.ModelSpec value) {
         if (modelMetadataBuilder_ == null) {
@@ -3031,7 +2956,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder clearModelMetadata() {
         if (modelMetadataBuilder_ == null) {
@@ -3049,7 +2974,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public ssn.type.CandidateOuterClass.ModelSpec.Builder getModelMetadataBuilder() {
         
@@ -3061,7 +2986,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
         if (modelMetadataBuilder_ != null) {
@@ -3076,7 +3001,7 @@ public final class CandidateOuterClass {
        * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
@@ -3124,7 +3049,18 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Candidate(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3153,7 +3089,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The modelName.
      */
     java.lang.String getModelName();
@@ -3162,7 +3098,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The bytes for modelName.
      */
     com.google.protobuf.ByteString
@@ -3173,7 +3109,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return Whether the modelVer field is set.
      */
     boolean hasModelVer();
@@ -3182,7 +3118,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return The modelVer.
      */
     com.google.protobuf.Int64Value getModelVer();
@@ -3191,7 +3127,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder();
   }
@@ -3223,62 +3159,6 @@ public final class CandidateOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ModelSpec(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              modelName_ = s;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.Int64Value.Builder subBuilder = null;
-              if (modelVer_ != null) {
-                subBuilder = modelVer_.toBuilder();
-              }
-              modelVer_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(modelVer_);
-                modelVer_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.type.CandidateOuterClass.internal_static_ssn_type_ModelSpec_descriptor;
@@ -3299,7 +3179,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The modelName.
      */
     @java.lang.Override
@@ -3320,7 +3200,7 @@ public final class CandidateOuterClass {
      * The name of the TensorFlow Serving model
      * </pre>
      *
-     * <code>string model_name = 1;</code>
+     * <code>string model_name = 1 [json_name = "modelName"];</code>
      * @return The bytes for modelName.
      */
     @java.lang.Override
@@ -3345,7 +3225,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return Whether the modelVer field is set.
      */
     @java.lang.Override
@@ -3357,7 +3237,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      * @return The modelVer.
      */
     @java.lang.Override
@@ -3369,7 +3249,7 @@ public final class CandidateOuterClass {
      * The version number of the TensorFlow Serving model
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
@@ -3390,13 +3270,13 @@ public final class CandidateOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelName_);
       }
       if (modelVer_ != null) {
         output.writeMessage(2, getModelVer());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3405,14 +3285,14 @@ public final class CandidateOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelName_);
       }
       if (modelVer_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getModelVer());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3434,7 +3314,7 @@ public final class CandidateOuterClass {
         if (!getModelVer()
             .equals(other.getModelVer())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3451,7 +3331,7 @@ public final class CandidateOuterClass {
         hash = (37 * hash) + MODEL_VER_FIELD_NUMBER;
         hash = (53 * hash) + getModelVer().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3568,18 +3448,13 @@ public final class CandidateOuterClass {
 
       // Construct using ssn.type.CandidateOuterClass.ModelSpec.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3679,7 +3554,7 @@ public final class CandidateOuterClass {
         if (other.hasModelVer()) {
           mergeModelVer(other.getModelVer());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3694,17 +3569,42 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.type.CandidateOuterClass.ModelSpec parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                modelName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getModelVerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.type.CandidateOuterClass.ModelSpec) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3714,7 +3614,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @return The modelName.
        */
       public java.lang.String getModelName() {
@@ -3734,7 +3634,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @return The bytes for modelName.
        */
       public com.google.protobuf.ByteString
@@ -3755,7 +3655,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @param value The modelName to set.
        * @return This builder for chaining.
        */
@@ -3774,7 +3674,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
@@ -3788,7 +3688,7 @@ public final class CandidateOuterClass {
        * The name of the TensorFlow Serving model
        * </pre>
        *
-       * <code>string model_name = 1;</code>
+       * <code>string model_name = 1 [json_name = "modelName"];</code>
        * @param value The bytes for modelName to set.
        * @return This builder for chaining.
        */
@@ -3812,7 +3712,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        * @return Whether the modelVer field is set.
        */
       public boolean hasModelVer() {
@@ -3823,7 +3723,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        * @return The modelVer.
        */
       public com.google.protobuf.Int64Value getModelVer() {
@@ -3838,7 +3738,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder setModelVer(com.google.protobuf.Int64Value value) {
         if (modelVerBuilder_ == null) {
@@ -3858,7 +3758,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder setModelVer(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3876,7 +3776,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder mergeModelVer(com.google.protobuf.Int64Value value) {
         if (modelVerBuilder_ == null) {
@@ -3898,7 +3798,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder clearModelVer() {
         if (modelVerBuilder_ == null) {
@@ -3916,7 +3816,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getModelVerBuilder() {
         
@@ -3928,7 +3828,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
         if (modelVerBuilder_ != null) {
@@ -3943,7 +3843,7 @@ public final class CandidateOuterClass {
        * The version number of the TensorFlow Serving model
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3991,7 +3891,18 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ModelSpec(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4021,7 +3932,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -4031,7 +3942,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -4043,7 +3954,7 @@ public final class CandidateOuterClass {
      * Example: 300.0
      * </pre>
      *
-     * <code>double amount = 2;</code>
+     * <code>double amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     double getAmount();
@@ -4054,7 +3965,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     int getPageRef();
@@ -4087,59 +3998,6 @@ public final class CandidateOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private LineCandidate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            case 17: {
-
-              amount_ = input.readDouble();
-              break;
-            }
-            case 48: {
-
-              pageRef_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_descriptor;
@@ -4161,7 +4019,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -4183,7 +4041,7 @@ public final class CandidateOuterClass {
      * Example: "3 Dark and Stormy"
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -4209,7 +4067,7 @@ public final class CandidateOuterClass {
      * Example: 300.0
      * </pre>
      *
-     * <code>double amount = 2;</code>
+     * <code>double amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -4225,7 +4083,7 @@ public final class CandidateOuterClass {
      * page_ref start from 1.
      * </pre>
      *
-     * <code>uint32 page_ref = 6;</code>
+     * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
      * @return The pageRef.
      */
     @java.lang.Override
@@ -4247,16 +4105,16 @@ public final class CandidateOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
-      if (amount_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(amount_) != 0) {
         output.writeDouble(2, amount_);
       }
       if (pageRef_ != 0) {
         output.writeUInt32(6, pageRef_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4265,10 +4123,10 @@ public final class CandidateOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
-      if (amount_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(amount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, amount_);
       }
@@ -4276,7 +4134,7 @@ public final class CandidateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, pageRef_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4298,7 +4156,7 @@ public final class CandidateOuterClass {
               other.getAmount())) return false;
       if (getPageRef()
           != other.getPageRef()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4316,7 +4174,7 @@ public final class CandidateOuterClass {
           java.lang.Double.doubleToLongBits(getAmount()));
       hash = (37 * hash) + PAGE_REF_FIELD_NUMBER;
       hash = (53 * hash) + getPageRef();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4433,18 +4291,13 @@ public final class CandidateOuterClass {
 
       // Construct using ssn.type.CandidateOuterClass.LineCandidate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4542,7 +4395,7 @@ public final class CandidateOuterClass {
         if (other.getPageRef() != 0) {
           setPageRef(other.getPageRef());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4557,17 +4410,45 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.type.CandidateOuterClass.LineCandidate parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                text_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 17: {
+                amount_ = input.readDouble();
+
+                break;
+              } // case 17
+              case 48: {
+                pageRef_ = input.readUInt32();
+
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.type.CandidateOuterClass.LineCandidate) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -4578,7 +4459,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -4599,7 +4480,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -4621,7 +4502,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -4641,7 +4522,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -4656,7 +4537,7 @@ public final class CandidateOuterClass {
        * Example: "3 Dark and Stormy"
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -4679,7 +4560,7 @@ public final class CandidateOuterClass {
        * Example: 300.0
        * </pre>
        *
-       * <code>double amount = 2;</code>
+       * <code>double amount = 2 [json_name = "amount"];</code>
        * @return The amount.
        */
       @java.lang.Override
@@ -4692,7 +4573,7 @@ public final class CandidateOuterClass {
        * Example: 300.0
        * </pre>
        *
-       * <code>double amount = 2;</code>
+       * <code>double amount = 2 [json_name = "amount"];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -4708,7 +4589,7 @@ public final class CandidateOuterClass {
        * Example: 300.0
        * </pre>
        *
-       * <code>double amount = 2;</code>
+       * <code>double amount = 2 [json_name = "amount"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -4725,7 +4606,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return The pageRef.
        */
       @java.lang.Override
@@ -4738,7 +4619,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @param value The pageRef to set.
        * @return This builder for chaining.
        */
@@ -4754,7 +4635,7 @@ public final class CandidateOuterClass {
        * page_ref start from 1.
        * </pre>
        *
-       * <code>uint32 page_ref = 6;</code>
+       * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageRef() {
@@ -4796,7 +4677,18 @@ public final class CandidateOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LineCandidate(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4847,24 +4739,27 @@ public final class CandidateOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030ssn/type/candidate.proto\022\010ssn.type\032\036go" +
       "ogle/protobuf/wrappers.proto\032\027ssn/type/g" +
-      "eometry.proto\"\262\001\n\nConfidence\022)\n\005level\030\001 " +
-      "\001(\0162\032.ssn.type.Confidence.Level\022*\n\005value" +
-      "\030\002 \001(\0132\033.google.protobuf.FloatValue\"M\n\005L" +
-      "evel\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002" +
-      "\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\225\002\n\tC" +
-      "andidate\022\r\n\005value\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022(\n" +
-      "\nconfidence\030\003 \001(\0132\024.ssn.type.Confidence\022" +
-      ",\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Boundin" +
-      "gPoly\022&\n\004type\030\005 \001(\0162\030.ssn.type.Candidate" +
-      ".Type\022\020\n\010page_ref\030\006 \001(\r\022+\n\016model_metadat" +
-      "a\030\007 \001(\0132\023.ssn.type.ModelSpec\",\n\004Type\022\013\n\007" +
-      "UNKNOWN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"O\n\tMo" +
-      "delSpec\022\022\n\nmodel_name\030\001 \001(\t\022.\n\tmodel_ver" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\"?\n\rL" +
-      "ineCandidate\022\014\n\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
-      "(\001\022\020\n\010page_ref\030\006 \001(\rB6Z4github.com/e-con" +
-      "omic/vmlapis/gen/go/ssn/type;ssntypeb\006pr" +
-      "oto3"
+      "eometry.proto\"\300\001\n\nConfidence\0220\n\005level\030\001 " +
+      "\001(\0162\032.ssn.type.Confidence.LevelR\005level\0221" +
+      "\n\005value\030\002 \001(\0132\033.google.protobuf.FloatVal" +
+      "ueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_" +
+      "LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVER" +
+      "Y_HIGH\020\005\"\331\002\n\tCandidate\022\024\n\005value\030\001 \001(\tR\005v" +
+      "alue\022\022\n\004text\030\002 \001(\tR\004text\0224\n\nconfidence\030\003" +
+      " \001(\0132\024.ssn.type.ConfidenceR\nconfidence\0229" +
+      "\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Bounding" +
+      "PolyR\013boundingBox\022,\n\004type\030\005 \001(\0162\030.ssn.ty" +
+      "pe.Candidate.TypeR\004type\022\031\n\010page_ref\030\006 \001(" +
+      "\rR\007pageRef\022:\n\016model_metadata\030\007 \001(\0132\023.ssn" +
+      ".type.ModelSpecR\rmodelMetadata\",\n\004Type\022\013" +
+      "\n\007UNKNOWN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"d\n\t" +
+      "ModelSpec\022\035\n\nmodel_name\030\001 \001(\tR\tmodelName" +
+      "\0228\n\tmodel_ver\030\002 \001(\0132\033.google.protobuf.In" +
+      "t64ValueR\010modelVer\"V\n\rLineCandidate\022\022\n\004t" +
+      "ext\030\001 \001(\tR\004text\022\026\n\006amount\030\002 \001(\001R\006amount\022" +
+      "\031\n\010page_ref\030\006 \001(\rR\007pageRefB6Z4github.com" +
+      "/e-conomic/vmlapis/gen/go/ssn/type;ssnty" +
+      "peb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -2,24 +2,27 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 var google_type_date_pb = require('../../../google/type/date_pb.js');
 goog.object.extend(proto, google_type_date_pb);
+var ssn_mlservice_v2_example_pb = require('../../../ssn/mlservice/v2/example_pb.js');
+goog.object.extend(proto, ssn_mlservice_v2_example_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.object.extend(proto, ssn_type_text_annotation_pb);
-var tensorflow_core_example_example_pb = require('../../../tensorflow/core/example/example_pb.js');
-goog.object.extend(proto, tensorflow_core_example_example_pb);
 goog.exportSymbol('proto.ssn.mlservice.v2.FeatureGenPredictRequest', null, global);
 goog.exportSymbol('proto.ssn.mlservice.v2.FeatureGenRequest', null, global);
 goog.exportSymbol('proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels', null, global);
@@ -1569,7 +1572,7 @@ proto.ssn.mlservice.v2.FeatureGenResponse.prototype.toObject = function(opt_incl
  */
 proto.ssn.mlservice.v2.FeatureGenResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    example: (f = msg.getExample()) && tensorflow_core_example_example_pb.Example.toObject(includeInstance, f)
+    example: (f = msg.getExample()) && ssn_mlservice_v2_example_pb.Example.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1607,8 +1610,8 @@ proto.ssn.mlservice.v2.FeatureGenResponse.deserializeBinaryFromReader = function
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new tensorflow_core_example_example_pb.Example;
-      reader.readMessage(value,tensorflow_core_example_example_pb.Example.deserializeBinaryFromReader);
+      var value = new ssn_mlservice_v2_example_pb.Example;
+      reader.readMessage(value,ssn_mlservice_v2_example_pb.Example.deserializeBinaryFromReader);
       msg.setExample(value);
       break;
     default:
@@ -1645,7 +1648,7 @@ proto.ssn.mlservice.v2.FeatureGenResponse.serializeBinaryToWriter = function(mes
     writer.writeMessage(
       1,
       f,
-      tensorflow_core_example_example_pb.Example.serializeBinaryToWriter
+      ssn_mlservice_v2_example_pb.Example.serializeBinaryToWriter
     );
   }
 };
@@ -1657,7 +1660,7 @@ proto.ssn.mlservice.v2.FeatureGenResponse.serializeBinaryToWriter = function(mes
  */
 proto.ssn.mlservice.v2.FeatureGenResponse.prototype.getExample = function() {
   return /** @type{?proto.tensorflow.Example} */ (
-    jspb.Message.getWrapperField(this, tensorflow_core_example_example_pb.Example, 1));
+    jspb.Message.getWrapperField(this, ssn_mlservice_v2_example_pb.Example, 1));
 };
 
 
@@ -1720,7 +1723,7 @@ proto.ssn.mlservice.v2.PredictRequest.prototype.toObject = function(opt_includeI
  */
 proto.ssn.mlservice.v2.PredictRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    example: (f = msg.getExample()) && tensorflow_core_example_example_pb.Example.toObject(includeInstance, f),
+    example: (f = msg.getExample()) && ssn_mlservice_v2_example_pb.Example.toObject(includeInstance, f),
     topNMostConfident: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
@@ -1759,8 +1762,8 @@ proto.ssn.mlservice.v2.PredictRequest.deserializeBinaryFromReader = function(msg
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new tensorflow_core_example_example_pb.Example;
-      reader.readMessage(value,tensorflow_core_example_example_pb.Example.deserializeBinaryFromReader);
+      var value = new ssn_mlservice_v2_example_pb.Example;
+      reader.readMessage(value,ssn_mlservice_v2_example_pb.Example.deserializeBinaryFromReader);
       msg.setExample(value);
       break;
     case 2:
@@ -1801,7 +1804,7 @@ proto.ssn.mlservice.v2.PredictRequest.serializeBinaryToWriter = function(message
     writer.writeMessage(
       1,
       f,
-      tensorflow_core_example_example_pb.Example.serializeBinaryToWriter
+      ssn_mlservice_v2_example_pb.Example.serializeBinaryToWriter
     );
   }
   f = message.getTopNMostConfident();
@@ -1820,7 +1823,7 @@ proto.ssn.mlservice.v2.PredictRequest.serializeBinaryToWriter = function(message
  */
 proto.ssn.mlservice.v2.PredictRequest.prototype.getExample = function() {
   return /** @type{?proto.tensorflow.Example} */ (
-    jspb.Message.getWrapperField(this, tensorflow_core_example_example_pb.Example, 1));
+    jspb.Message.getWrapperField(this, ssn_mlservice_v2_example_pb.Example, 1));
 };
 
 

@@ -11,6 +11,7 @@ import (
 	"net/mail"
 	"net/url"
 	"regexp"
+	"sort"
 	"strings"
 	"time"
 	"unicode/utf8"
@@ -31,19 +32,53 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+	_ = sort.Sort
 )
 
 // define the regex for a UUID once up-front
 var _example_uuidPattern = regexp.MustCompile("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")
 
 // Validate checks the field values on Example with the rules defined in the
-// proto definition for this message. If any rules are violated, an error is returned.
+// proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *Example) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Example with the rules defined in the
+// proto definition for this message. If any rules are violated, the result is
+// a list of violation errors wrapped in ExampleMultiError, or nil if none found.
+func (m *Example) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Example) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetData()).(interface{ Validate() error }); ok {
+	var errors []error
+
+	if all {
+		switch v := interface{}(m.GetData()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, ExampleValidationError{
+					field:  "Data",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, ExampleValidationError{
+					field:  "Data",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetData()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return ExampleValidationError{
 				field:  "Data",
@@ -54,16 +89,39 @@ func (m *Example) Validate() error {
 	}
 
 	if len(m.GetTargetValues()) < 1 {
-		return ExampleValidationError{
+		err := ExampleValidationError{
 			field:  "TargetValues",
 			reason: "value must contain at least 1 item(s)",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	for idx, item := range m.GetTargetValues() {
 		_, _ = idx, item
 
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, ExampleValidationError{
+						field:  fmt.Sprintf("TargetValues[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, ExampleValidationError{
+						field:  fmt.Sprintf("TargetValues[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return ExampleValidationError{
 					field:  fmt.Sprintf("TargetValues[%v]", idx),
@@ -78,13 +136,21 @@ func (m *Example) Validate() error {
 	if m.GetId() != "" {
 
 		if err := m._validateUuid(m.GetId()); err != nil {
-			return ExampleValidationError{
+			err = ExampleValidationError{
 				field:  "Id",
 				reason: "value must be a valid UUID",
 				cause:  err,
 			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
 		}
 
+	}
+
+	if len(errors) > 0 {
+		return ExampleMultiError(errors)
 	}
 
 	return nil
@@ -97,6 +163,22 @@ func (m *Example) _validateUuid(uuid string) error {
 
 	return nil
 }
+
+// ExampleMultiError is an error wrapping multiple validation errors returned
+// by Example.ValidateAll() if the designated constraints aren't met.
+type ExampleMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ExampleMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ExampleMultiError) AllErrors() []error { return m }
 
 // ExampleValidationError is the validation error returned by Example.Validate
 // if the designated constraints aren't met.

@@ -54,6 +54,7 @@ class Access(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -62,4 +63,4 @@ class Access(object):
             ssn_dot_access_dot_v1_dot_access__pb2.ValetKeyRequest.SerializeToString,
             ssn_dot_access_dot_v1_dot_access__pb2.ValetKeyResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

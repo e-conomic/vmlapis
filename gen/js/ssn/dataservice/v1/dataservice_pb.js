@@ -2,15 +2,18 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js');
 goog.object.extend(proto, gen_bq_schema_bq_field_pb);
@@ -680,10 +683,10 @@ proto.ssn.dataservice.v1.Document.prototype.hasTa = function() {
 
 /**
  * optional bytes bytes = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.ssn.dataservice.v1.Document.prototype.getBytes = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -9152,10 +9155,10 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.hasTa = function() {
 
 /**
  * optional bytes document_bytes = 3;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getDocumentBytes = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 

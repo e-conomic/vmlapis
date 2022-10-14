@@ -2,15 +2,13 @@ syntax = "proto3";
 
 package ssn.annotator.v1;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
-
 import "google/api/annotations.proto";
-import "options/annotations.proto";
-
+import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
 
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
     title: "SmartScan";
@@ -49,8 +47,8 @@ message Feature {
     TOTAL_INCL_VAT = 6;
     // Run total excl vat detection
     TOTAL_EXCL_VAT = 7;
-    // [DEPRECATED] Run supplier corporate id detection. 
-    // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
+    // [DEPRECATED] Run supplier corporate id detection.
+    // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
     SUPPLIER_CORPORATE_ID = 8;
     // Run country code detection
     SUPPLIER_COUNTRY_CODE = 9;
@@ -118,7 +116,6 @@ message Feature {
   ssn.type.Confidence.Level min_confidence = 3;
 }
 
-
 message DocumentAnnotatorRequest {
   Document document = 1;
   repeated Feature features = 2;
@@ -153,7 +150,7 @@ message DocumentAnnotatorResponse {
   // Example: "10.0" or "11.11"
   repeated ssn.type.Candidate total_excl_vat = 6;
   // [DEPRECATED]
-  // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead. 
+  // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
   // supplierCorporateId
   // The company VAT number
   // Example: "123456789B01" (for Dutch companies)

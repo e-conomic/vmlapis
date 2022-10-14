@@ -2,15 +2,18 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 var google_protobuf_descriptor_pb = require('google-protobuf/google/protobuf/descriptor_pb.js');
 goog.object.extend(proto, google_protobuf_descriptor_pb);
@@ -1903,12 +1906,16 @@ proto.validate.FloatRules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -2396,12 +2403,16 @@ proto.validate.DoubleRules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedDouble() : [reader.readDouble()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedDouble() : [reader.readDouble()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -2889,12 +2900,16 @@ proto.validate.Int32Rules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedInt32() : [reader.readInt32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedInt32() : [reader.readInt32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -3382,12 +3397,16 @@ proto.validate.Int64Rules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedInt64() : [reader.readInt64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedInt64() : [reader.readInt64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -3875,12 +3894,16 @@ proto.validate.UInt32Rules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedUint32() : [reader.readUint32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedUint32() : [reader.readUint32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -4368,12 +4391,16 @@ proto.validate.UInt64Rules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedUint64() : [reader.readUint64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedUint64() : [reader.readUint64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -4861,12 +4888,16 @@ proto.validate.SInt32Rules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readSint32());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSint32() : [reader.readSint32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readSint32());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSint32() : [reader.readSint32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -5354,12 +5385,16 @@ proto.validate.SInt64Rules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readSint64());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSint64() : [reader.readSint64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readSint64());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSint64() : [reader.readSint64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -5847,12 +5882,16 @@ proto.validate.Fixed32Rules.deserializeBinaryFromReader = function(msg, reader) 
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readFixed32());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFixed32() : [reader.readFixed32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readFixed32());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFixed32() : [reader.readFixed32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -6340,12 +6379,16 @@ proto.validate.Fixed64Rules.deserializeBinaryFromReader = function(msg, reader) 
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readFixed64());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFixed64() : [reader.readFixed64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readFixed64());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFixed64() : [reader.readFixed64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -6833,12 +6876,16 @@ proto.validate.SFixed32Rules.deserializeBinaryFromReader = function(msg, reader)
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readSfixed32());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSfixed32() : [reader.readSfixed32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readSfixed32());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSfixed32() : [reader.readSfixed32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -7326,12 +7373,16 @@ proto.validate.SFixed64Rules.deserializeBinaryFromReader = function(msg, reader)
       msg.setGte(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readSfixed64());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSfixed64() : [reader.readSfixed64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readSfixed64());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedSfixed64() : [reader.readSfixed64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -9558,10 +9609,10 @@ proto.validate.BytesRules.serializeBinaryToWriter = function(message, writer) {
 
 /**
  * optional bytes const = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.validate.BytesRules.prototype.getConst = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -9762,10 +9813,10 @@ proto.validate.BytesRules.prototype.hasPattern = function() {
 
 /**
  * optional bytes prefix = 5;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.validate.BytesRules.prototype.getPrefix = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
@@ -9822,10 +9873,10 @@ proto.validate.BytesRules.prototype.hasPrefix = function() {
 
 /**
  * optional bytes suffix = 6;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.validate.BytesRules.prototype.getSuffix = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
@@ -9882,10 +9933,10 @@ proto.validate.BytesRules.prototype.hasSuffix = function() {
 
 /**
  * optional bytes contains = 7;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.validate.BytesRules.prototype.getContains = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
@@ -9942,10 +9993,10 @@ proto.validate.BytesRules.prototype.hasContains = function() {
 
 /**
  * repeated bytes in = 8;
- * @return {!Array<string>}
+ * @return {!(Array<!Uint8Array>|Array<string>)}
  */
 proto.validate.BytesRules.prototype.getInList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 8));
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 8));
 };
 
 
@@ -10003,10 +10054,10 @@ proto.validate.BytesRules.prototype.clearInList = function() {
 
 /**
  * repeated bytes not_in = 9;
- * @return {!Array<string>}
+ * @return {!(Array<!Uint8Array>|Array<string>)}
  */
 proto.validate.BytesRules.prototype.getNotInList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 9));
 };
 
 
@@ -10294,12 +10345,16 @@ proto.validate.EnumRules.deserializeBinaryFromReader = function(msg, reader) {
       msg.setDefinedOnly(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.addIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedInt32() : [reader.readInt32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addIn(values[i]);
+      }
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.addNotIn(value);
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedInt32() : [reader.readInt32()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addNotIn(values[i]);
+      }
       break;
     default:
       reader.skipField();

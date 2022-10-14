@@ -24,7 +24,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
@@ -34,7 +34,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     asgt.type.PredictionOuterClass.Confidence.Level getLevel();
@@ -44,7 +44,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     boolean hasValue();
@@ -53,7 +53,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     com.google.protobuf.FloatValue getValue();
@@ -62,7 +62,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     com.google.protobuf.FloatValueOrBuilder getValueOrBuilder();
   }
@@ -97,62 +97,6 @@ public final class PredictionOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private Confidence(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              level_ = rawValue;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.FloatValue.Builder subBuilder = null;
-              if (value_ != null) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -319,7 +263,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
     @java.lang.Override public int getLevelValue() {
@@ -331,7 +275,7 @@ public final class PredictionOuterClass {
      * highly stable results across model upgrades.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level level = 1;</code>
+     * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getLevel() {
@@ -347,7 +291,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     @java.lang.Override
@@ -359,7 +303,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -371,7 +315,7 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
@@ -398,7 +342,7 @@ public final class PredictionOuterClass {
       if (value_ != null) {
         output.writeMessage(2, getValue());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -415,7 +359,7 @@ public final class PredictionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValue());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -436,7 +380,7 @@ public final class PredictionOuterClass {
         if (!getValue()
             .equals(other.getValue())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -453,7 +397,7 @@ public final class PredictionOuterClass {
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -574,18 +518,13 @@ public final class PredictionOuterClass {
 
       // Construct using asgt.type.PredictionOuterClass.Confidence.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -684,7 +623,7 @@ public final class PredictionOuterClass {
         if (other.hasValue()) {
           mergeValue(other.getValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -699,17 +638,42 @@ public final class PredictionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.PredictionOuterClass.Confidence parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                level_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.PredictionOuterClass.Confidence) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -720,7 +684,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The enum numeric value on the wire for level.
        */
       @java.lang.Override public int getLevelValue() {
@@ -732,7 +696,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
        */
@@ -748,7 +712,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return The level.
        */
       @java.lang.Override
@@ -763,7 +727,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @param value The level to set.
        * @return This builder for chaining.
        */
@@ -782,7 +746,7 @@ public final class PredictionOuterClass {
        * highly stable results across model upgrades.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level level = 1;</code>
+       * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
@@ -800,7 +764,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return Whether the value field is set.
        */
       public boolean hasValue() {
@@ -811,7 +775,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        * @return The value.
        */
       public com.google.protobuf.FloatValue getValue() {
@@ -826,7 +790,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -846,7 +810,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder setValue(
           com.google.protobuf.FloatValue.Builder builderForValue) {
@@ -864,7 +828,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder mergeValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
@@ -886,7 +850,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder clearValue() {
         if (valueBuilder_ == null) {
@@ -904,7 +868,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValue.Builder getValueBuilder() {
         
@@ -916,7 +880,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
         if (valueBuilder_ != null) {
@@ -931,7 +895,7 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
@@ -979,7 +943,18 @@ public final class PredictionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Confidence(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1004,25 +979,25 @@ public final class PredictionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> 
         getTargetsList();
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index);
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     int getTargetsCount();
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
         getTargetsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
         int index);
@@ -1055,56 +1030,6 @@ public final class PredictionOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Prediction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targets_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              targets_.add(
-                  input.readMessage(asgt.type.PredictionOuterClass.Prediction.Target.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          targets_ = java.util.Collections.unmodifiableList(targets_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_descriptor;
@@ -1123,37 +1048,37 @@ public final class PredictionOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       java.lang.String getName();
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
 
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> 
           getCandidatesList();
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index);
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       int getCandidatesCount();
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
           getCandidatesOrBuilderList();
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
           int index);
@@ -1187,62 +1112,6 @@ public final class PredictionOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Target(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                name_ = s;
-                break;
-              }
-              case 18: {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target.Candidate>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                candidates_.add(
-                    input.readMessage(asgt.type.PredictionOuterClass.Prediction.Target.Candidate.parser(), extensionRegistry));
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000001) != 0)) {
-            candidates_ = java.util.Collections.unmodifiableList(candidates_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_descriptor;
@@ -1261,29 +1130,29 @@ public final class PredictionOuterClass {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The value.
          */
         java.lang.String getValue();
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The bytes for value.
          */
         com.google.protobuf.ByteString
             getValueBytes();
 
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return Whether the confidence field is set.
          */
         boolean hasConfidence();
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         asgt.type.PredictionOuterClass.Confidence getConfidence();
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          */
         asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
       }
@@ -1315,62 +1184,6 @@ public final class PredictionOuterClass {
         getUnknownFields() {
           return this.unknownFields;
         }
-        private Candidate(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          this();
-          if (extensionRegistry == null) {
-            throw new java.lang.NullPointerException();
-          }
-          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 10: {
-                  java.lang.String s = input.readStringRequireUtf8();
-
-                  value_ = s;
-                  break;
-                }
-                case 18: {
-                  asgt.type.PredictionOuterClass.Confidence.Builder subBuilder = null;
-                  if (confidence_ != null) {
-                    subBuilder = confidence_.toBuilder();
-                  }
-                  confidence_ = input.readMessage(asgt.type.PredictionOuterClass.Confidence.parser(), extensionRegistry);
-                  if (subBuilder != null) {
-                    subBuilder.mergeFrom(confidence_);
-                    confidence_ = subBuilder.buildPartial();
-                  }
-
-                  break;
-                }
-                default: {
-                  if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
-                    done = true;
-                  }
-                  break;
-                }
-              }
-            }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(this);
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
-          } finally {
-            this.unknownFields = unknownFields.build();
-            makeExtensionsImmutable();
-          }
-        }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_Candidate_descriptor;
@@ -1387,7 +1200,7 @@ public final class PredictionOuterClass {
         public static final int VALUE_FIELD_NUMBER = 1;
         private volatile java.lang.Object value_;
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The value.
          */
         @java.lang.Override
@@ -1404,7 +1217,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+         * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The bytes for value.
          */
         @java.lang.Override
@@ -1425,7 +1238,7 @@ public final class PredictionOuterClass {
         public static final int CONFIDENCE_FIELD_NUMBER = 2;
         private asgt.type.PredictionOuterClass.Confidence confidence_;
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return Whether the confidence field is set.
          */
         @java.lang.Override
@@ -1433,7 +1246,7 @@ public final class PredictionOuterClass {
           return confidence_ != null;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         @java.lang.Override
@@ -1441,7 +1254,7 @@ public final class PredictionOuterClass {
           return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
          */
         @java.lang.Override
         public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
@@ -1462,13 +1275,13 @@ public final class PredictionOuterClass {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
           }
           if (confidence_ != null) {
             output.writeMessage(2, getConfidence());
           }
-          unknownFields.writeTo(output);
+          getUnknownFields().writeTo(output);
         }
 
         @java.lang.Override
@@ -1477,14 +1290,14 @@ public final class PredictionOuterClass {
           if (size != -1) return size;
 
           size = 0;
-          if (!getValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
           }
           if (confidence_ != null) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(2, getConfidence());
           }
-          size += unknownFields.getSerializedSize();
+          size += getUnknownFields().getSerializedSize();
           memoizedSize = size;
           return size;
         }
@@ -1506,7 +1319,7 @@ public final class PredictionOuterClass {
             if (!getConfidence()
                 .equals(other.getConfidence())) return false;
           }
-          if (!unknownFields.equals(other.unknownFields)) return false;
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
           return true;
         }
 
@@ -1523,7 +1336,7 @@ public final class PredictionOuterClass {
             hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
             hash = (53 * hash) + getConfidence().hashCode();
           }
-          hash = (29 * hash) + unknownFields.hashCode();
+          hash = (29 * hash) + getUnknownFields().hashCode();
           memoizedHashCode = hash;
           return hash;
         }
@@ -1640,18 +1453,13 @@ public final class PredictionOuterClass {
 
           // Construct using asgt.type.PredictionOuterClass.Prediction.Target.Candidate.newBuilder()
           private Builder() {
-            maybeForceBuilderInitialization();
+
           }
 
           private Builder(
               com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
             super(parent);
-            maybeForceBuilderInitialization();
-          }
-          private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessageV3
-                    .alwaysUseFieldBuilders) {
-            }
+
           }
           @java.lang.Override
           public Builder clear() {
@@ -1751,7 +1559,7 @@ public final class PredictionOuterClass {
             if (other.hasConfidence()) {
               mergeConfidence(other.getConfidence());
             }
-            this.mergeUnknownFields(other.unknownFields);
+            this.mergeUnknownFields(other.getUnknownFields());
             onChanged();
             return this;
           }
@@ -1766,23 +1574,48 @@ public final class PredictionOuterClass {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            asgt.type.PredictionOuterClass.Prediction.Target.Candidate parsedMessage = null;
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
             try {
-              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    value_ = input.readStringRequireUtf8();
+
+                    break;
+                  } // case 10
+                  case 18: {
+                    input.readMessage(
+                        getConfidenceFieldBuilder().getBuilder(),
+                        extensionRegistry);
+
+                    break;
+                  } // case 18
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (asgt.type.PredictionOuterClass.Prediction.Target.Candidate) e.getUnfinishedMessage();
               throw e.unwrapIOException();
             } finally {
-              if (parsedMessage != null) {
-                mergeFrom(parsedMessage);
-              }
-            }
+              onChanged();
+            } // finally
             return this;
           }
 
           private java.lang.Object value_ = "";
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @return The value.
            */
           public java.lang.String getValue() {
@@ -1798,7 +1631,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @return The bytes for value.
            */
           public com.google.protobuf.ByteString
@@ -1815,7 +1648,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @param value The value to set.
            * @return This builder for chaining.
            */
@@ -1830,7 +1663,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @return This builder for chaining.
            */
           public Builder clearValue() {
@@ -1840,7 +1673,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
+           * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
            * @param value The bytes for value to set.
            * @return This builder for chaining.
            */
@@ -1860,14 +1693,14 @@ public final class PredictionOuterClass {
           private com.google.protobuf.SingleFieldBuilderV3<
               asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            * @return Whether the confidence field is set.
            */
           public boolean hasConfidence() {
             return confidenceBuilder_ != null || confidence_ != null;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            * @return The confidence.
            */
           public asgt.type.PredictionOuterClass.Confidence getConfidence() {
@@ -1878,7 +1711,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder setConfidence(asgt.type.PredictionOuterClass.Confidence value) {
             if (confidenceBuilder_ == null) {
@@ -1894,7 +1727,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder setConfidence(
               asgt.type.PredictionOuterClass.Confidence.Builder builderForValue) {
@@ -1908,7 +1741,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder mergeConfidence(asgt.type.PredictionOuterClass.Confidence value) {
             if (confidenceBuilder_ == null) {
@@ -1926,7 +1759,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder clearConfidence() {
             if (confidenceBuilder_ == null) {
@@ -1940,7 +1773,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public asgt.type.PredictionOuterClass.Confidence.Builder getConfidenceBuilder() {
             
@@ -1948,7 +1781,7 @@ public final class PredictionOuterClass {
             return getConfidenceFieldBuilder().getBuilder();
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
             if (confidenceBuilder_ != null) {
@@ -1959,7 +1792,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>.asgt.type.Confidence confidence = 2;</code>
+           * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> 
@@ -2007,7 +1840,18 @@ public final class PredictionOuterClass {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Candidate(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -2030,7 +1874,7 @@ public final class PredictionOuterClass {
       public static final int NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object name_;
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       @java.lang.Override
@@ -2047,7 +1891,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       @java.lang.Override
@@ -2068,14 +1912,14 @@ public final class PredictionOuterClass {
       public static final int CANDIDATES_FIELD_NUMBER = 2;
       private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> candidates_;
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> getCandidatesList() {
         return candidates_;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
@@ -2083,21 +1927,21 @@ public final class PredictionOuterClass {
         return candidates_;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public int getCandidatesCount() {
         return candidates_.size();
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index) {
         return candidates_.get(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
@@ -2119,13 +1963,13 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         for (int i = 0; i < candidates_.size(); i++) {
           output.writeMessage(2, candidates_.get(i));
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -2134,14 +1978,14 @@ public final class PredictionOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         for (int i = 0; i < candidates_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, candidates_.get(i));
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -2160,7 +2004,7 @@ public final class PredictionOuterClass {
             .equals(other.getName())) return false;
         if (!getCandidatesList()
             .equals(other.getCandidatesList())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -2177,7 +2021,7 @@ public final class PredictionOuterClass {
           hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
           hash = (53 * hash) + getCandidatesList().hashCode();
         }
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -2294,19 +2138,13 @@ public final class PredictionOuterClass {
 
         // Construct using asgt.type.PredictionOuterClass.Prediction.Target.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getCandidatesFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -2315,10 +2153,11 @@ public final class PredictionOuterClass {
 
           if (candidatesBuilder_ == null) {
             candidates_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
+            candidates_ = null;
             candidatesBuilder_.clear();
           }
+          bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
 
@@ -2434,7 +2273,7 @@ public final class PredictionOuterClass {
               }
             }
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -2449,24 +2288,55 @@ public final class PredictionOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.type.PredictionOuterClass.Prediction.Target parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  name_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+                case 18: {
+                  asgt.type.PredictionOuterClass.Prediction.Target.Candidate m =
+                      input.readMessage(
+                          asgt.type.PredictionOuterClass.Prediction.Target.Candidate.parser(),
+                          extensionRegistry);
+                  if (candidatesBuilder_ == null) {
+                    ensureCandidatesIsMutable();
+                    candidates_.add(m);
+                  } else {
+                    candidatesBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.type.PredictionOuterClass.Prediction.Target) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
         private int bitField0_;
 
         private java.lang.Object name_ = "";
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return The name.
          */
         public java.lang.String getName() {
@@ -2482,7 +2352,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
@@ -2499,7 +2369,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @param value The name to set.
          * @return This builder for chaining.
          */
@@ -2514,7 +2384,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return This builder for chaining.
          */
         public Builder clearName() {
@@ -2524,7 +2394,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @param value The bytes for name to set.
          * @return This builder for chaining.
          */
@@ -2553,7 +2423,7 @@ public final class PredictionOuterClass {
             asgt.type.PredictionOuterClass.Prediction.Target.Candidate, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> candidatesBuilder_;
 
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> getCandidatesList() {
           if (candidatesBuilder_ == null) {
@@ -2563,7 +2433,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public int getCandidatesCount() {
           if (candidatesBuilder_ == null) {
@@ -2573,7 +2443,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index) {
           if (candidatesBuilder_ == null) {
@@ -2583,7 +2453,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder setCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
@@ -2600,7 +2470,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder setCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
@@ -2614,7 +2484,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
           if (candidatesBuilder_ == null) {
@@ -2630,7 +2500,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
@@ -2647,7 +2517,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(
             asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
@@ -2661,7 +2531,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addCandidates(
             int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
@@ -2675,7 +2545,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder addAllCandidates(
             java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Target.Candidate> values) {
@@ -2690,7 +2560,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder clearCandidates() {
           if (candidatesBuilder_ == null) {
@@ -2703,7 +2573,7 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public Builder removeCandidates(int index) {
           if (candidatesBuilder_ == null) {
@@ -2716,14 +2586,14 @@ public final class PredictionOuterClass {
           return this;
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder getCandidatesBuilder(
             int index) {
           return getCandidatesFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
             int index) {
@@ -2733,7 +2603,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
              getCandidatesOrBuilderList() {
@@ -2744,14 +2614,14 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder addCandidatesBuilder() {
           return getCandidatesFieldBuilder().addBuilder(
               asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance());
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder addCandidatesBuilder(
             int index) {
@@ -2759,7 +2629,7 @@ public final class PredictionOuterClass {
               index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance());
         }
         /**
-         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
          */
         public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder> 
              getCandidatesBuilderList() {
@@ -2812,7 +2682,18 @@ public final class PredictionOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Target(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -2835,14 +2716,14 @@ public final class PredictionOuterClass {
     public static final int TARGETS_FIELD_NUMBER = 1;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> targets_;
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getTargetsList() {
       return targets_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
@@ -2850,21 +2731,21 @@ public final class PredictionOuterClass {
       return targets_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
@@ -2889,7 +2770,7 @@ public final class PredictionOuterClass {
       for (int i = 0; i < targets_.size(); i++) {
         output.writeMessage(1, targets_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2902,7 +2783,7 @@ public final class PredictionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, targets_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2919,7 +2800,7 @@ public final class PredictionOuterClass {
 
       if (!getTargetsList()
           .equals(other.getTargetsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2934,7 +2815,7 @@ public final class PredictionOuterClass {
         hash = (37 * hash) + TARGETS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3051,29 +2932,24 @@ public final class PredictionOuterClass {
 
       // Construct using asgt.type.PredictionOuterClass.Prediction.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (targetsBuilder_ == null) {
           targets_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          targets_ = null;
           targetsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -3184,7 +3060,7 @@ public final class PredictionOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3199,17 +3075,43 @@ public final class PredictionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.PredictionOuterClass.Prediction parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                asgt.type.PredictionOuterClass.Prediction.Target m =
+                    input.readMessage(
+                        asgt.type.PredictionOuterClass.Prediction.Target.parser(),
+                        extensionRegistry);
+                if (targetsBuilder_ == null) {
+                  ensureTargetsIsMutable();
+                  targets_.add(m);
+                } else {
+                  targetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.PredictionOuterClass.Prediction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3227,7 +3129,7 @@ public final class PredictionOuterClass {
           asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> targetsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getTargetsList() {
         if (targetsBuilder_ == null) {
@@ -3237,7 +3139,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public int getTargetsCount() {
         if (targetsBuilder_ == null) {
@@ -3247,7 +3149,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index) {
         if (targetsBuilder_ == null) {
@@ -3257,7 +3159,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder setTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
@@ -3274,7 +3176,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder setTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -3288,7 +3190,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(asgt.type.PredictionOuterClass.Prediction.Target value) {
         if (targetsBuilder_ == null) {
@@ -3304,7 +3206,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
@@ -3321,7 +3223,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
           asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -3335,7 +3237,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
           int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
@@ -3349,7 +3251,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addAllTargets(
           java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Target> values) {
@@ -3364,7 +3266,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder clearTargets() {
         if (targetsBuilder_ == null) {
@@ -3377,7 +3279,7 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder removeTargets(int index) {
         if (targetsBuilder_ == null) {
@@ -3390,14 +3292,14 @@ public final class PredictionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder getTargetsBuilder(
           int index) {
         return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
           int index) {
@@ -3407,7 +3309,7 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
            getTargetsOrBuilderList() {
@@ -3418,14 +3320,14 @@ public final class PredictionOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder addTargetsBuilder() {
         return getTargetsFieldBuilder().addBuilder(
             asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Target.Builder addTargetsBuilder(
           int index) {
@@ -3433,7 +3335,7 @@ public final class PredictionOuterClass {
             index, asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Builder> 
            getTargetsBuilderList() {
@@ -3486,7 +3388,18 @@ public final class PredictionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Prediction(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3537,19 +3450,20 @@ public final class PredictionOuterClass {
     java.lang.String[] descriptorData = {
       "\n\032asgt/type/prediction.proto\022\tasgt.type\032" +
       "\034gen_bq_schema/bq_field.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\"\263\001\n\nConfidence\022*\n\005" +
+      "otobuf/wrappers.proto\"\301\001\n\nConfidence\0221\n\005" +
       "level\030\001 \001(\0162\033.asgt.type.Confidence.Level" +
-      "\022*\n\005value\030\002 \001(\0132\033.google.protobuf.FloatV" +
-      "alue\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001" +
-      "\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIG" +
-      "H\020\005\"\336\001\n\nPrediction\022-\n\007targets\030\001 \003(\0132\034.as" +
-      "gt.type.Prediction.Target\032\240\001\n\006Target\022\014\n\004" +
-      "name\030\001 \001(\t\022:\n\ncandidates\030\002 \003(\0132&.asgt.ty" +
-      "pe.Prediction.Target.Candidate\032L\n\tCandid" +
-      "ate\022\024\n\005value\030\001 \001(\tB\005\352?\002\010\001\022)\n\nconfidence\030" +
-      "\002 \001(\0132\025.asgt.type.ConfidenceB8Z6github.c" +
-      "om/e-conomic/vmlapis/gen/go/asgt/type;as" +
-      "gttypeb\006proto3"
+      "R\005level\0221\n\005value\030\002 \001(\0132\033.google.protobuf" +
+      ".FloatValueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000" +
+      "\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH" +
+      "\020\004\022\r\n\tVERY_HIGH\020\005\"\214\002\n\nPrediction\0226\n\007targ" +
+      "ets\030\001 \003(\0132\034.asgt.type.Prediction.TargetR" +
+      "\007targets\032\305\001\n\006Target\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "F\n\ncandidates\030\002 \003(\0132&.asgt.type.Predicti" +
+      "on.Target.CandidateR\ncandidates\032_\n\tCandi" +
+      "date\022\033\n\005value\030\001 \001(\tB\005\352?\002\010\001R\005value\0225\n\ncon" +
+      "fidence\030\002 \001(\0132\025.asgt.type.ConfidenceR\nco" +
+      "nfidenceB8Z6github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package ssn.ocrservice.v1;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrservice";
-option java_outer_classname = "OcrServiceProto";
-
+import "google/protobuf/wrappers.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/text_annotation.proto";
-import "google/protobuf/wrappers.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrservice";
+option java_outer_classname = "OcrServiceProto";
 
 // Interface exported by the server.
 service OcrService {

@@ -25,7 +25,7 @@ public final class BqField {
      * used to generate schema for BigQuery.
      * </pre>
      *
-     * <code>bool require = 1;</code>
+     * <code>bool require = 1 [json_name = "require"];</code>
      * @return The require.
      */
     boolean getRequire();
@@ -38,7 +38,7 @@ public final class BqField {
      * be structured as 'INTEGER' fields.
      * </pre>
      *
-     * <code>string type_override = 2;</code>
+     * <code>string type_override = 2 [json_name = "typeOverride"];</code>
      * @return The typeOverride.
      */
     java.lang.String getTypeOverride();
@@ -50,7 +50,7 @@ public final class BqField {
      * be structured as 'INTEGER' fields.
      * </pre>
      *
-     * <code>string type_override = 2;</code>
+     * <code>string type_override = 2 [json_name = "typeOverride"];</code>
      * @return The bytes for typeOverride.
      */
     com.google.protobuf.ByteString
@@ -61,7 +61,7 @@ public final class BqField {
      * Optionally omit a field from BigQuery schema.
      * </pre>
      *
-     * <code>bool ignore = 3;</code>
+     * <code>bool ignore = 3 [json_name = "ignore"];</code>
      * @return The ignore.
      */
     boolean getIgnore();
@@ -71,7 +71,7 @@ public final class BqField {
      * Set the description for a field in BigQuery schema.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -80,7 +80,7 @@ public final class BqField {
      * Set the description for a field in BigQuery schema.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -91,7 +91,7 @@ public final class BqField {
      * Customize the name of the field in the BigQuery schema.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -100,7 +100,7 @@ public final class BqField {
      * Customize the name of the field in the BigQuery schema.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -141,71 +141,6 @@ public final class BqField {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BigQueryFieldOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              require_ = input.readBool();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              typeOverride_ = s;
-              break;
-            }
-            case 24: {
-
-              ignore_ = input.readBool();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return gen_bq_schema.BqField.internal_static_gen_bq_schema_BigQueryFieldOptions_descriptor;
@@ -227,7 +162,7 @@ public final class BqField {
      * used to generate schema for BigQuery.
      * </pre>
      *
-     * <code>bool require = 1;</code>
+     * <code>bool require = 1 [json_name = "require"];</code>
      * @return The require.
      */
     @java.lang.Override
@@ -245,7 +180,7 @@ public final class BqField {
      * be structured as 'INTEGER' fields.
      * </pre>
      *
-     * <code>string type_override = 2;</code>
+     * <code>string type_override = 2 [json_name = "typeOverride"];</code>
      * @return The typeOverride.
      */
     @java.lang.Override
@@ -269,7 +204,7 @@ public final class BqField {
      * be structured as 'INTEGER' fields.
      * </pre>
      *
-     * <code>string type_override = 2;</code>
+     * <code>string type_override = 2 [json_name = "typeOverride"];</code>
      * @return The bytes for typeOverride.
      */
     @java.lang.Override
@@ -294,7 +229,7 @@ public final class BqField {
      * Optionally omit a field from BigQuery schema.
      * </pre>
      *
-     * <code>bool ignore = 3;</code>
+     * <code>bool ignore = 3 [json_name = "ignore"];</code>
      * @return The ignore.
      */
     @java.lang.Override
@@ -309,7 +244,7 @@ public final class BqField {
      * Set the description for a field in BigQuery schema.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -330,7 +265,7 @@ public final class BqField {
      * Set the description for a field in BigQuery schema.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -355,7 +290,7 @@ public final class BqField {
      * Customize the name of the field in the BigQuery schema.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -376,7 +311,7 @@ public final class BqField {
      * Customize the name of the field in the BigQuery schema.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -411,19 +346,19 @@ public final class BqField {
       if (require_ != false) {
         output.writeBool(1, require_);
       }
-      if (!getTypeOverrideBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeOverride_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, typeOverride_);
       }
       if (ignore_ != false) {
         output.writeBool(3, ignore_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -436,20 +371,20 @@ public final class BqField {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, require_);
       }
-      if (!getTypeOverrideBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeOverride_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, typeOverride_);
       }
       if (ignore_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, ignore_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -474,7 +409,7 @@ public final class BqField {
           .equals(other.getDescription())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -497,7 +432,7 @@ public final class BqField {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -619,18 +554,13 @@ public final class BqField {
 
       // Construct using gen_bq_schema.BqField.BigQueryFieldOptions.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -742,7 +672,7 @@ public final class BqField {
           name_ = other.name_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -757,17 +687,55 @@ public final class BqField {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        gen_bq_schema.BqField.BigQueryFieldOptions parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                require_ = input.readBool();
+
+                break;
+              } // case 8
+              case 18: {
+                typeOverride_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 24: {
+                ignore_ = input.readBool();
+
+                break;
+              } // case 24
+              case 34: {
+                description_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (gen_bq_schema.BqField.BigQueryFieldOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -778,7 +746,7 @@ public final class BqField {
        * used to generate schema for BigQuery.
        * </pre>
        *
-       * <code>bool require = 1;</code>
+       * <code>bool require = 1 [json_name = "require"];</code>
        * @return The require.
        */
       @java.lang.Override
@@ -791,7 +759,7 @@ public final class BqField {
        * used to generate schema for BigQuery.
        * </pre>
        *
-       * <code>bool require = 1;</code>
+       * <code>bool require = 1 [json_name = "require"];</code>
        * @param value The require to set.
        * @return This builder for chaining.
        */
@@ -807,7 +775,7 @@ public final class BqField {
        * used to generate schema for BigQuery.
        * </pre>
        *
-       * <code>bool require = 1;</code>
+       * <code>bool require = 1 [json_name = "require"];</code>
        * @return This builder for chaining.
        */
       public Builder clearRequire() {
@@ -826,7 +794,7 @@ public final class BqField {
        * be structured as 'INTEGER' fields.
        * </pre>
        *
-       * <code>string type_override = 2;</code>
+       * <code>string type_override = 2 [json_name = "typeOverride"];</code>
        * @return The typeOverride.
        */
       public java.lang.String getTypeOverride() {
@@ -849,7 +817,7 @@ public final class BqField {
        * be structured as 'INTEGER' fields.
        * </pre>
        *
-       * <code>string type_override = 2;</code>
+       * <code>string type_override = 2 [json_name = "typeOverride"];</code>
        * @return The bytes for typeOverride.
        */
       public com.google.protobuf.ByteString
@@ -873,7 +841,7 @@ public final class BqField {
        * be structured as 'INTEGER' fields.
        * </pre>
        *
-       * <code>string type_override = 2;</code>
+       * <code>string type_override = 2 [json_name = "typeOverride"];</code>
        * @param value The typeOverride to set.
        * @return This builder for chaining.
        */
@@ -895,7 +863,7 @@ public final class BqField {
        * be structured as 'INTEGER' fields.
        * </pre>
        *
-       * <code>string type_override = 2;</code>
+       * <code>string type_override = 2 [json_name = "typeOverride"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTypeOverride() {
@@ -912,7 +880,7 @@ public final class BqField {
        * be structured as 'INTEGER' fields.
        * </pre>
        *
-       * <code>string type_override = 2;</code>
+       * <code>string type_override = 2 [json_name = "typeOverride"];</code>
        * @param value The bytes for typeOverride to set.
        * @return This builder for chaining.
        */
@@ -934,7 +902,7 @@ public final class BqField {
        * Optionally omit a field from BigQuery schema.
        * </pre>
        *
-       * <code>bool ignore = 3;</code>
+       * <code>bool ignore = 3 [json_name = "ignore"];</code>
        * @return The ignore.
        */
       @java.lang.Override
@@ -946,7 +914,7 @@ public final class BqField {
        * Optionally omit a field from BigQuery schema.
        * </pre>
        *
-       * <code>bool ignore = 3;</code>
+       * <code>bool ignore = 3 [json_name = "ignore"];</code>
        * @param value The ignore to set.
        * @return This builder for chaining.
        */
@@ -961,7 +929,7 @@ public final class BqField {
        * Optionally omit a field from BigQuery schema.
        * </pre>
        *
-       * <code>bool ignore = 3;</code>
+       * <code>bool ignore = 3 [json_name = "ignore"];</code>
        * @return This builder for chaining.
        */
       public Builder clearIgnore() {
@@ -977,7 +945,7 @@ public final class BqField {
        * Set the description for a field in BigQuery schema.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [json_name = "description"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -997,7 +965,7 @@ public final class BqField {
        * Set the description for a field in BigQuery schema.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [json_name = "description"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -1018,7 +986,7 @@ public final class BqField {
        * Set the description for a field in BigQuery schema.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [json_name = "description"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -1037,7 +1005,7 @@ public final class BqField {
        * Set the description for a field in BigQuery schema.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [json_name = "description"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -1051,7 +1019,7 @@ public final class BqField {
        * Set the description for a field in BigQuery schema.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [json_name = "description"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -1073,7 +1041,7 @@ public final class BqField {
        * Customize the name of the field in the BigQuery schema.
        * </pre>
        *
-       * <code>string name = 5;</code>
+       * <code>string name = 5 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -1093,7 +1061,7 @@ public final class BqField {
        * Customize the name of the field in the BigQuery schema.
        * </pre>
        *
-       * <code>string name = 5;</code>
+       * <code>string name = 5 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -1114,7 +1082,7 @@ public final class BqField {
        * Customize the name of the field in the BigQuery schema.
        * </pre>
        *
-       * <code>string name = 5;</code>
+       * <code>string name = 5 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -1133,7 +1101,7 @@ public final class BqField {
        * Customize the name of the field in the BigQuery schema.
        * </pre>
        *
-       * <code>string name = 5;</code>
+       * <code>string name = 5 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -1147,7 +1115,7 @@ public final class BqField {
        * Customize the name of the field in the BigQuery schema.
        * </pre>
        *
-       * <code>string name = 5;</code>
+       * <code>string name = 5 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -1195,7 +1163,18 @@ public final class BqField {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BigQueryFieldOptions(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1246,13 +1225,15 @@ public final class BqField {
     java.lang.String[] descriptorData = {
       "\n\034gen_bq_schema/bq_field.proto\022\rgen_bq_s" +
       "chema\032 google/protobuf/descriptor.proto\"" +
-      "q\n\024BigQueryFieldOptions\022\017\n\007require\030\001 \001(\010" +
-      "\022\025\n\rtype_override\030\002 \001(\t\022\016\n\006ignore\030\003 \001(\010\022" +
-      "\023\n\013description\030\004 \001(\t\022\014\n\004name\030\005 \001(\t:U\n\010bi" +
-      "gquery\022\035.google.protobuf.FieldOptions\030\375\007" +
-      " \001(\0132#.gen_bq_schema.BigQueryFieldOption" +
-      "sBAZ?github.com/e-conomic/vmlapis/gen/go" +
-      "/gen_bq_schema;gen_bq_schemab\006proto3"
+      "\243\001\n\024BigQueryFieldOptions\022\030\n\007require\030\001 \001(" +
+      "\010R\007require\022#\n\rtype_override\030\002 \001(\tR\014typeO" +
+      "verride\022\026\n\006ignore\030\003 \001(\010R\006ignore\022 \n\013descr" +
+      "iption\030\004 \001(\tR\013description\022\022\n\004name\030\005 \001(\tR" +
+      "\004name:_\n\010bigquery\022\035.google.protobuf.Fiel" +
+      "dOptions\030\375\007 \001(\0132#.gen_bq_schema.BigQuery" +
+      "FieldOptionsR\010bigqueryBAZ?github.com/e-c" +
+      "onomic/vmlapis/gen/go/gen_bq_schema;gen_" +
+      "bq_schemab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

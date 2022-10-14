@@ -94,18 +94,6 @@ func (mr *MockDocumentAnnotatorServerMockRecorder) AnnotateDocument(arg0, arg1 i
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnnotateDocument", reflect.TypeOf((*MockDocumentAnnotatorServer)(nil).AnnotateDocument), arg0, arg1)
 }
 
-// mustEmbedUnimplementedDocumentAnnotatorServer mocks base method.
-func (m *MockDocumentAnnotatorServer) mustEmbedUnimplementedDocumentAnnotatorServer() {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "mustEmbedUnimplementedDocumentAnnotatorServer")
-}
-
-// mustEmbedUnimplementedDocumentAnnotatorServer indicates an expected call of mustEmbedUnimplementedDocumentAnnotatorServer.
-func (mr *MockDocumentAnnotatorServerMockRecorder) mustEmbedUnimplementedDocumentAnnotatorServer() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDocumentAnnotatorServer", reflect.TypeOf((*MockDocumentAnnotatorServer)(nil).mustEmbedUnimplementedDocumentAnnotatorServer))
-}
-
 // MockUnsafeDocumentAnnotatorServer is a mock of UnsafeDocumentAnnotatorServer interface.
 type MockUnsafeDocumentAnnotatorServer struct {
 	ctrl     *gomock.Controller

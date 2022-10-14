@@ -11,6 +11,7 @@ import (
 	"net/mail"
 	"net/url"
 	"regexp"
+	"sort"
 	"strings"
 	"time"
 	"unicode/utf8"
@@ -31,19 +32,54 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+	_ = sort.Sort
 )
 
 // Validate checks the field values on Invoice with the rules defined in the
-// proto definition for this message. If any rules are violated, an error is returned.
+// proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *Invoice) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Invoice with the rules defined in the
+// proto definition for this message. If any rules are violated, the result is
+// a list of violation errors wrapped in InvoiceMultiError, or nil if none found.
+func (m *Invoice) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Invoice) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	// no validation rules for Text
+
+	if len(errors) > 0 {
+		return InvoiceMultiError(errors)
+	}
 
 	return nil
 }
+
+// InvoiceMultiError is an error wrapping multiple validation errors returned
+// by Invoice.ValidateAll() if the designated constraints aren't met.
+type InvoiceMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m InvoiceMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m InvoiceMultiError) AllErrors() []error { return m }
 
 // InvoiceValidationError is the validation error returned by Invoice.Validate
 // if the designated constraints aren't met.
@@ -100,19 +136,53 @@ var _ interface {
 } = InvoiceValidationError{}
 
 // Validate checks the field values on Transaction with the rules defined in
-// the proto definition for this message. If any rules are violated, an error
-// is returned.
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *Transaction) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Transaction with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in TransactionMultiError, or
+// nil if none found.
+func (m *Transaction) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Transaction) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
+
+	var errors []error
 
 	// no validation rules for Text
 
 	// no validation rules for Amount
 
+	if len(errors) > 0 {
+		return TransactionMultiError(errors)
+	}
+
 	return nil
 }
+
+// TransactionMultiError is an error wrapping multiple validation errors
+// returned by Transaction.ValidateAll() if the designated constraints aren't met.
+type TransactionMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m TransactionMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m TransactionMultiError) AllErrors() []error { return m }
 
 // TransactionValidationError is the validation error returned by
 // Transaction.Validate if the designated constraints aren't met.
@@ -169,18 +239,51 @@ var _ interface {
 } = TransactionValidationError{}
 
 // Validate checks the field values on InvoiceLine with the rules defined in
-// the proto definition for this message. If any rules are violated, an error
-// is returned.
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *InvoiceLine) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on InvoiceLine with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in InvoiceLineMultiError, or
+// nil if none found.
+func (m *InvoiceLine) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *InvoiceLine) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
+
+	var errors []error
 
 	// no validation rules for ItemId
 
 	// no validation rules for Text
 
-	if v, ok := interface{}(m.GetIssueDate()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetIssueDate()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, InvoiceLineValidationError{
+					field:  "IssueDate",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, InvoiceLineValidationError{
+					field:  "IssueDate",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetIssueDate()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return InvoiceLineValidationError{
 				field:  "IssueDate",
@@ -190,7 +293,26 @@ func (m *InvoiceLine) Validate() error {
 		}
 	}
 
-	if v, ok := interface{}(m.GetSupplier()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetSupplier()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, InvoiceLineValidationError{
+					field:  "Supplier",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, InvoiceLineValidationError{
+					field:  "Supplier",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetSupplier()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return InvoiceLineValidationError{
 				field:  "Supplier",
@@ -204,8 +326,28 @@ func (m *InvoiceLine) Validate() error {
 
 	// no validation rules for Amount
 
+	if len(errors) > 0 {
+		return InvoiceLineMultiError(errors)
+	}
+
 	return nil
 }
+
+// InvoiceLineMultiError is an error wrapping multiple validation errors
+// returned by InvoiceLine.ValidateAll() if the designated constraints aren't met.
+type InvoiceLineMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m InvoiceLineMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m InvoiceLineMultiError) AllErrors() []error { return m }
 
 // InvoiceLineValidationError is the validation error returned by
 // InvoiceLine.Validate if the designated constraints aren't met.
@@ -262,32 +404,75 @@ var _ interface {
 } = InvoiceLineValidationError{}
 
 // Validate checks the field values on Supplier with the rules defined in the
-// proto definition for this message. If any rules are violated, an error is returned.
+// proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *Supplier) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Supplier with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in SupplierMultiError, or nil
+// if none found.
+func (m *Supplier) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Supplier) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetId()) > 64 {
-		return SupplierValidationError{
+		err := SupplierValidationError{
 			field:  "Id",
 			reason: "value length must be at most 64 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_Supplier_Id_Pattern.MatchString(m.GetId()) {
-		return SupplierValidationError{
+		err := SupplierValidationError{
 			field:  "Id",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	// no validation rules for Name
 
 	// no validation rules for GlobalId
 
+	if len(errors) > 0 {
+		return SupplierMultiError(errors)
+	}
+
 	return nil
 }
+
+// SupplierMultiError is an error wrapping multiple validation errors returned
+// by Supplier.ValidateAll() if the designated constraints aren't met.
+type SupplierMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m SupplierMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m SupplierMultiError) AllErrors() []error { return m }
 
 // SupplierValidationError is the validation error returned by
 // Supplier.Validate if the designated constraints aren't met.
@@ -346,17 +531,50 @@ var _ interface {
 var _Supplier_Id_Pattern = regexp.MustCompile("^[A-Za-z0-9]*$")
 
 // Validate checks the field values on Data with the rules defined in the proto
-// definition for this message. If any rules are violated, an error is returned.
+// definition for this message. If any rules are violated, the first error
+// encountered is returned, or nil if there are no violations.
 func (m *Data) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Data with the rules defined in the
+// proto definition for this message. If any rules are violated, the result is
+// a list of violation errors wrapped in DataMultiError, or nil if none found.
+func (m *Data) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Data) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
+
+	var errors []error
 
 	switch m.DataStructure.(type) {
 
 	case *Data_Transaction:
 
-		if v, ok := interface{}(m.GetTransaction()).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(m.GetTransaction()).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, DataValidationError{
+						field:  "Transaction",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, DataValidationError{
+						field:  "Transaction",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(m.GetTransaction()).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return DataValidationError{
 					field:  "Transaction",
@@ -368,7 +586,26 @@ func (m *Data) Validate() error {
 
 	case *Data_Invoice:
 
-		if v, ok := interface{}(m.GetInvoice()).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(m.GetInvoice()).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, DataValidationError{
+						field:  "Invoice",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, DataValidationError{
+						field:  "Invoice",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(m.GetInvoice()).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return DataValidationError{
 					field:  "Invoice",
@@ -380,7 +617,26 @@ func (m *Data) Validate() error {
 
 	case *Data_InvoiceLine:
 
-		if v, ok := interface{}(m.GetInvoiceLine()).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(m.GetInvoiceLine()).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, DataValidationError{
+						field:  "InvoiceLine",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, DataValidationError{
+						field:  "InvoiceLine",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(m.GetInvoiceLine()).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return DataValidationError{
 					field:  "InvoiceLine",
@@ -392,8 +648,28 @@ func (m *Data) Validate() error {
 
 	}
 
+	if len(errors) > 0 {
+		return DataMultiError(errors)
+	}
+
 	return nil
 }
+
+// DataMultiError is an error wrapping multiple validation errors returned by
+// Data.ValidateAll() if the designated constraints aren't met.
+type DataMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m DataMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m DataMultiError) AllErrors() []error { return m }
 
 // DataValidationError is the validation error returned by Data.Validate if the
 // designated constraints aren't met.

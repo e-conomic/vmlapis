@@ -32,6 +32,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
+              "type": "object",
               "properties": {}
             }
           },
@@ -123,6 +124,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
+              "type": "object",
               "properties": {}
             }
           },
@@ -154,6 +156,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
+              "type": "object",
               "properties": {}
             }
           },
@@ -183,6 +186,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
+              "type": "object",
               "properties": {}
             }
           },
@@ -227,6 +231,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
+              "type": "object",
               "properties": {}
             }
           },
@@ -259,7 +264,19 @@
               "type": "object",
               "properties": {
                 "example": {
-                  "$ref": "#/definitions/typeExample"
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/definitions/typeData"
+                    },
+                    "targetValues": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/definitions/typeTargetValue"
+                      }
+                    }
+                  },
+                  "title": "A pair of example data and example target values"
                 }
               }
             }
@@ -278,6 +295,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
+              "type": "object",
               "properties": {}
             }
           },
@@ -517,6 +535,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
+              "type": "object",
               "properties": {}
             }
           },

@@ -11,6 +11,7 @@ import (
 	"net/mail"
 	"net/url"
 	"regexp"
+	"sort"
 	"strings"
 	"time"
 	"unicode/utf8"
@@ -31,34 +32,77 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+	_ = sort.Sort
 )
 
 // Validate checks the field values on TargetValue with the rules defined in
-// the proto definition for this message. If any rules are violated, an error
-// is returned.
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *TargetValue) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on TargetValue with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in TargetValueMultiError, or
+// nil if none found.
+func (m *TargetValue) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *TargetValue) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetName()) > 256 {
-		return TargetValueValidationError{
+		err := TargetValueValidationError{
 			field:  "Name",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_TargetValue_Name_Pattern.MatchString(m.GetName()) {
-		return TargetValueValidationError{
+		err := TargetValueValidationError{
 			field:  "Name",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	// no validation rules for Value
 
+	if len(errors) > 0 {
+		return TargetValueMultiError(errors)
+	}
+
 	return nil
 }
+
+// TargetValueMultiError is an error wrapping multiple validation errors
+// returned by TargetValue.ValidateAll() if the designated constraints aren't met.
+type TargetValueMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m TargetValueMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m TargetValueMultiError) AllErrors() []error { return m }
 
 // TargetValueValidationError is the validation error returned by
 // TargetValue.Validate if the designated constraints aren't met.

@@ -10,8 +10,8 @@ import (
 
 	dataservice "github.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1"
 	gomock "github.com/golang/mock/gomock"
-	empty "github.com/golang/protobuf/ptypes/empty"
 	grpc "google.golang.org/grpc"
+	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 
 // MockDataServiceClient is a mock of DataServiceClient interface.
@@ -58,7 +58,7 @@ func (mr *MockDataServiceClientMockRecorder) CalculateMetrics(ctx, in interface{
 }
 
 // CallsPerMonthMetric mocks base method.
-func (m *MockDataServiceClient) CallsPerMonthMetric(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
@@ -98,14 +98,14 @@ func (mr *MockDataServiceClientMockRecorder) CreateDocument(ctx, in interface{},
 }
 
 // Delete mocks base method.
-func (m *MockDataServiceClient) Delete(ctx context.Context, in *dataservice.DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (m *MockDataServiceClient) Delete(ctx context.Context, in *dataservice.DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Delete", varargs...)
-	ret0, _ := ret[0].(*empty.Empty)
+	ret0, _ := ret[0].(*emptypb.Empty)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -118,14 +118,14 @@ func (mr *MockDataServiceClientMockRecorder) Delete(ctx, in interface{}, opts ..
 }
 
 // Feedback mocks base method.
-func (m *MockDataServiceClient) Feedback(ctx context.Context, in *dataservice.FeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (m *MockDataServiceClient) Feedback(ctx context.Context, in *dataservice.FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Feedback", varargs...)
-	ret0, _ := ret[0].(*empty.Empty)
+	ret0, _ := ret[0].(*emptypb.Empty)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -138,14 +138,14 @@ func (mr *MockDataServiceClientMockRecorder) Feedback(ctx, in interface{}, opts 
 }
 
 // PrepareFeedback mocks base method.
-func (m *MockDataServiceClient) PrepareFeedback(ctx context.Context, in *dataservice.PrepareFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (m *MockDataServiceClient) PrepareFeedback(ctx context.Context, in *dataservice.PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "PrepareFeedback", varargs...)
-	ret0, _ := ret[0].(*empty.Empty)
+	ret0, _ := ret[0].(*emptypb.Empty)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -216,7 +216,7 @@ func (mr *MockDataServiceServerMockRecorder) CalculateMetrics(arg0, arg1 interfa
 }
 
 // CallsPerMonthMetric mocks base method.
-func (m *MockDataServiceServer) CallsPerMonthMetric(arg0 context.Context, arg1 *empty.Empty) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceServer) CallsPerMonthMetric(arg0 context.Context, arg1 *emptypb.Empty) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CallsPerMonthMetric", arg0, arg1)
 	ret0, _ := ret[0].(*dataservice.CallsPerMonthResponse)
@@ -246,10 +246,10 @@ func (mr *MockDataServiceServerMockRecorder) CreateDocument(arg0, arg1 interface
 }
 
 // Delete mocks base method.
-func (m *MockDataServiceServer) Delete(arg0 context.Context, arg1 *dataservice.DeleteRequest) (*empty.Empty, error) {
+func (m *MockDataServiceServer) Delete(arg0 context.Context, arg1 *dataservice.DeleteRequest) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Delete", arg0, arg1)
-	ret0, _ := ret[0].(*empty.Empty)
+	ret0, _ := ret[0].(*emptypb.Empty)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -261,10 +261,10 @@ func (mr *MockDataServiceServerMockRecorder) Delete(arg0, arg1 interface{}) *gom
 }
 
 // Feedback mocks base method.
-func (m *MockDataServiceServer) Feedback(arg0 context.Context, arg1 *dataservice.FeedbackRequest) (*empty.Empty, error) {
+func (m *MockDataServiceServer) Feedback(arg0 context.Context, arg1 *dataservice.FeedbackRequest) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Feedback", arg0, arg1)
-	ret0, _ := ret[0].(*empty.Empty)
+	ret0, _ := ret[0].(*emptypb.Empty)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -276,10 +276,10 @@ func (mr *MockDataServiceServerMockRecorder) Feedback(arg0, arg1 interface{}) *g
 }
 
 // PrepareFeedback mocks base method.
-func (m *MockDataServiceServer) PrepareFeedback(arg0 context.Context, arg1 *dataservice.PrepareFeedbackRequest) (*empty.Empty, error) {
+func (m *MockDataServiceServer) PrepareFeedback(arg0 context.Context, arg1 *dataservice.PrepareFeedbackRequest) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PrepareFeedback", arg0, arg1)
-	ret0, _ := ret[0].(*empty.Empty)
+	ret0, _ := ret[0].(*emptypb.Empty)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -303,18 +303,6 @@ func (m *MockDataServiceServer) ReadDocument(arg0 context.Context, arg1 *dataser
 func (mr *MockDataServiceServerMockRecorder) ReadDocument(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReadDocument", reflect.TypeOf((*MockDataServiceServer)(nil).ReadDocument), arg0, arg1)
-}
-
-// mustEmbedUnimplementedDataServiceServer mocks base method.
-func (m *MockDataServiceServer) mustEmbedUnimplementedDataServiceServer() {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "mustEmbedUnimplementedDataServiceServer")
-}
-
-// mustEmbedUnimplementedDataServiceServer indicates an expected call of mustEmbedUnimplementedDataServiceServer.
-func (mr *MockDataServiceServerMockRecorder) mustEmbedUnimplementedDataServiceServer() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDataServiceServer", reflect.TypeOf((*MockDataServiceServer)(nil).mustEmbedUnimplementedDataServiceServer))
 }
 
 // MockUnsafeDataServiceServer is a mock of UnsafeDataServiceServer interface.

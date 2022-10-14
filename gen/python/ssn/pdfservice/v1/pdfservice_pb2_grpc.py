@@ -54,6 +54,7 @@ class PdfService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -62,4 +63,4 @@ class PdfService(object):
             ssn_dot_pdfservice_dot_v1_dot_pdfservice__pb2.RasterizePdfRequest.SerializeToString,
             ssn_dot_pdfservice_dot_v1_dot_pdfservice__pb2.RasterizePdfResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

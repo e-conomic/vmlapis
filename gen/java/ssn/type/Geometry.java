@@ -23,7 +23,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>int32 x = 1;</code>
+     * <code>int32 x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     int getX();
@@ -33,7 +33,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>int32 y = 2;</code>
+     * <code>int32 y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     int getY();
@@ -70,53 +70,6 @@ public final class Geometry {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Vertex(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              x_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              y_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.type.Geometry.internal_static_ssn_type_Vertex_descriptor;
@@ -137,7 +90,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>int32 x = 1;</code>
+     * <code>int32 x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     @java.lang.Override
@@ -152,7 +105,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>int32 y = 2;</code>
+     * <code>int32 y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     @java.lang.Override
@@ -180,7 +133,7 @@ public final class Geometry {
       if (y_ != 0) {
         output.writeInt32(2, y_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -197,7 +150,7 @@ public final class Geometry {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, y_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -216,7 +169,7 @@ public final class Geometry {
           != other.getX()) return false;
       if (getY()
           != other.getY()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -231,7 +184,7 @@ public final class Geometry {
       hash = (53 * hash) + getX();
       hash = (37 * hash) + Y_FIELD_NUMBER;
       hash = (53 * hash) + getY();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -353,18 +306,13 @@ public final class Geometry {
 
       // Construct using ssn.type.Geometry.Vertex.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -455,7 +403,7 @@ public final class Geometry {
         if (other.getY() != 0) {
           setY(other.getY());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -470,17 +418,40 @@ public final class Geometry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.type.Geometry.Vertex parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                x_ = input.readInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                y_ = input.readInt32();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.type.Geometry.Vertex) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -490,7 +461,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>int32 x = 1;</code>
+       * <code>int32 x = 1 [json_name = "x"];</code>
        * @return The x.
        */
       @java.lang.Override
@@ -502,7 +473,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>int32 x = 1;</code>
+       * <code>int32 x = 1 [json_name = "x"];</code>
        * @param value The x to set.
        * @return This builder for chaining.
        */
@@ -517,7 +488,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>int32 x = 1;</code>
+       * <code>int32 x = 1 [json_name = "x"];</code>
        * @return This builder for chaining.
        */
       public Builder clearX() {
@@ -533,7 +504,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>int32 y = 2;</code>
+       * <code>int32 y = 2 [json_name = "y"];</code>
        * @return The y.
        */
       @java.lang.Override
@@ -545,7 +516,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>int32 y = 2;</code>
+       * <code>int32 y = 2 [json_name = "y"];</code>
        * @param value The y to set.
        * @return This builder for chaining.
        */
@@ -560,7 +531,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>int32 y = 2;</code>
+       * <code>int32 y = 2 [json_name = "y"];</code>
        * @return This builder for chaining.
        */
       public Builder clearY() {
@@ -602,7 +573,18 @@ public final class Geometry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Vertex(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -631,7 +613,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>float x = 1;</code>
+     * <code>float x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     float getX();
@@ -641,7 +623,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>float y = 2;</code>
+     * <code>float y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     float getY();
@@ -679,53 +661,6 @@ public final class Geometry {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private NormalizedVertex(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 13: {
-
-              x_ = input.readFloat();
-              break;
-            }
-            case 21: {
-
-              y_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.type.Geometry.internal_static_ssn_type_NormalizedVertex_descriptor;
@@ -746,7 +681,7 @@ public final class Geometry {
      * X coordinate.
      * </pre>
      *
-     * <code>float x = 1;</code>
+     * <code>float x = 1 [json_name = "x"];</code>
      * @return The x.
      */
     @java.lang.Override
@@ -761,7 +696,7 @@ public final class Geometry {
      * Y coordinate.
      * </pre>
      *
-     * <code>float y = 2;</code>
+     * <code>float y = 2 [json_name = "y"];</code>
      * @return The y.
      */
     @java.lang.Override
@@ -783,13 +718,13 @@ public final class Geometry {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (x_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(x_) != 0) {
         output.writeFloat(1, x_);
       }
-      if (y_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(y_) != 0) {
         output.writeFloat(2, y_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -798,15 +733,15 @@ public final class Geometry {
       if (size != -1) return size;
 
       size = 0;
-      if (x_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(x_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(1, x_);
       }
-      if (y_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(y_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, y_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -827,7 +762,7 @@ public final class Geometry {
       if (java.lang.Float.floatToIntBits(getY())
           != java.lang.Float.floatToIntBits(
               other.getY())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -844,7 +779,7 @@ public final class Geometry {
       hash = (37 * hash) + Y_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getY());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -967,18 +902,13 @@ public final class Geometry {
 
       // Construct using ssn.type.Geometry.NormalizedVertex.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1069,7 +999,7 @@ public final class Geometry {
         if (other.getY() != 0F) {
           setY(other.getY());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1084,17 +1014,40 @@ public final class Geometry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.type.Geometry.NormalizedVertex parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                x_ = input.readFloat();
+
+                break;
+              } // case 13
+              case 21: {
+                y_ = input.readFloat();
+
+                break;
+              } // case 21
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.type.Geometry.NormalizedVertex) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1104,7 +1057,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>float x = 1;</code>
+       * <code>float x = 1 [json_name = "x"];</code>
        * @return The x.
        */
       @java.lang.Override
@@ -1116,7 +1069,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>float x = 1;</code>
+       * <code>float x = 1 [json_name = "x"];</code>
        * @param value The x to set.
        * @return This builder for chaining.
        */
@@ -1131,7 +1084,7 @@ public final class Geometry {
        * X coordinate.
        * </pre>
        *
-       * <code>float x = 1;</code>
+       * <code>float x = 1 [json_name = "x"];</code>
        * @return This builder for chaining.
        */
       public Builder clearX() {
@@ -1147,7 +1100,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>float y = 2;</code>
+       * <code>float y = 2 [json_name = "y"];</code>
        * @return The y.
        */
       @java.lang.Override
@@ -1159,7 +1112,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>float y = 2;</code>
+       * <code>float y = 2 [json_name = "y"];</code>
        * @param value The y to set.
        * @return This builder for chaining.
        */
@@ -1174,7 +1127,7 @@ public final class Geometry {
        * Y coordinate.
        * </pre>
        *
-       * <code>float y = 2;</code>
+       * <code>float y = 2 [json_name = "y"];</code>
        * @return This builder for chaining.
        */
       public Builder clearY() {
@@ -1216,7 +1169,18 @@ public final class Geometry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NormalizedVertex(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1245,7 +1209,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     java.util.List<ssn.type.Geometry.Vertex> 
         getVerticesList();
@@ -1254,7 +1218,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     ssn.type.Geometry.Vertex getVertices(int index);
     /**
@@ -1262,7 +1226,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     int getVerticesCount();
     /**
@@ -1270,7 +1234,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     java.util.List<? extends ssn.type.Geometry.VertexOrBuilder> 
         getVerticesOrBuilderList();
@@ -1279,7 +1243,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     ssn.type.Geometry.VertexOrBuilder getVerticesOrBuilder(
         int index);
@@ -1289,7 +1253,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     java.util.List<ssn.type.Geometry.NormalizedVertex> 
         getNormalizedVerticesList();
@@ -1298,7 +1262,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     ssn.type.Geometry.NormalizedVertex getNormalizedVertices(int index);
     /**
@@ -1306,7 +1270,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     int getNormalizedVerticesCount();
     /**
@@ -1314,7 +1278,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     java.util.List<? extends ssn.type.Geometry.NormalizedVertexOrBuilder> 
         getNormalizedVerticesOrBuilderList();
@@ -1323,7 +1287,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     ssn.type.Geometry.NormalizedVertexOrBuilder getNormalizedVerticesOrBuilder(
         int index);
@@ -1361,68 +1325,6 @@ public final class Geometry {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BoundingPoly(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                vertices_ = new java.util.ArrayList<ssn.type.Geometry.Vertex>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              vertices_.add(
-                  input.readMessage(ssn.type.Geometry.Vertex.parser(), extensionRegistry));
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                normalizedVertices_ = new java.util.ArrayList<ssn.type.Geometry.NormalizedVertex>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              normalizedVertices_.add(
-                  input.readMessage(ssn.type.Geometry.NormalizedVertex.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          vertices_ = java.util.Collections.unmodifiableList(vertices_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          normalizedVertices_ = java.util.Collections.unmodifiableList(normalizedVertices_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ssn.type.Geometry.internal_static_ssn_type_BoundingPoly_descriptor;
@@ -1443,7 +1345,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.Geometry.Vertex> getVerticesList() {
@@ -1454,7 +1356,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.Geometry.VertexOrBuilder> 
@@ -1466,7 +1368,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public int getVerticesCount() {
@@ -1477,7 +1379,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.Vertex getVertices(int index) {
@@ -1488,7 +1390,7 @@ public final class Geometry {
      * The bounding polygon vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+     * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.VertexOrBuilder getVerticesOrBuilder(
@@ -1503,7 +1405,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.Geometry.NormalizedVertex> getNormalizedVerticesList() {
@@ -1514,7 +1416,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.Geometry.NormalizedVertexOrBuilder> 
@@ -1526,7 +1428,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public int getNormalizedVerticesCount() {
@@ -1537,7 +1439,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.NormalizedVertex getNormalizedVertices(int index) {
@@ -1548,7 +1450,7 @@ public final class Geometry {
      * The bounding polygon normalized vertices.
      * </pre>
      *
-     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+     * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
      */
     @java.lang.Override
     public ssn.type.Geometry.NormalizedVertexOrBuilder getNormalizedVerticesOrBuilder(
@@ -1576,7 +1478,7 @@ public final class Geometry {
       for (int i = 0; i < normalizedVertices_.size(); i++) {
         output.writeMessage(2, normalizedVertices_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1593,7 +1495,7 @@ public final class Geometry {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, normalizedVertices_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1612,7 +1514,7 @@ public final class Geometry {
           .equals(other.getVerticesList())) return false;
       if (!getNormalizedVerticesList()
           .equals(other.getNormalizedVerticesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1631,7 +1533,7 @@ public final class Geometry {
         hash = (37 * hash) + NORMALIZED_VERTICES_FIELD_NUMBER;
         hash = (53 * hash) + getNormalizedVerticesList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1752,36 +1654,31 @@ public final class Geometry {
 
       // Construct using ssn.type.Geometry.BoundingPoly.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVerticesFieldBuilder();
-          getNormalizedVerticesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (verticesBuilder_ == null) {
           vertices_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          vertices_ = null;
           verticesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (normalizedVerticesBuilder_ == null) {
           normalizedVertices_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          normalizedVertices_ = null;
           normalizedVerticesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -1927,7 +1824,7 @@ public final class Geometry {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1942,17 +1839,56 @@ public final class Geometry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.type.Geometry.BoundingPoly parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ssn.type.Geometry.Vertex m =
+                    input.readMessage(
+                        ssn.type.Geometry.Vertex.parser(),
+                        extensionRegistry);
+                if (verticesBuilder_ == null) {
+                  ensureVerticesIsMutable();
+                  vertices_.add(m);
+                } else {
+                  verticesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                ssn.type.Geometry.NormalizedVertex m =
+                    input.readMessage(
+                        ssn.type.Geometry.NormalizedVertex.parser(),
+                        extensionRegistry);
+                if (normalizedVerticesBuilder_ == null) {
+                  ensureNormalizedVerticesIsMutable();
+                  normalizedVertices_.add(m);
+                } else {
+                  normalizedVerticesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.type.Geometry.BoundingPoly) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1974,7 +1910,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.Vertex> getVerticesList() {
         if (verticesBuilder_ == null) {
@@ -1988,7 +1924,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public int getVerticesCount() {
         if (verticesBuilder_ == null) {
@@ -2002,7 +1938,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex getVertices(int index) {
         if (verticesBuilder_ == null) {
@@ -2016,7 +1952,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder setVertices(
           int index, ssn.type.Geometry.Vertex value) {
@@ -2037,7 +1973,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder setVertices(
           int index, ssn.type.Geometry.Vertex.Builder builderForValue) {
@@ -2055,7 +1991,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(ssn.type.Geometry.Vertex value) {
         if (verticesBuilder_ == null) {
@@ -2075,7 +2011,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(
           int index, ssn.type.Geometry.Vertex value) {
@@ -2096,7 +2032,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(
           ssn.type.Geometry.Vertex.Builder builderForValue) {
@@ -2114,7 +2050,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addVertices(
           int index, ssn.type.Geometry.Vertex.Builder builderForValue) {
@@ -2132,7 +2068,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder addAllVertices(
           java.lang.Iterable<? extends ssn.type.Geometry.Vertex> values) {
@@ -2151,7 +2087,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder clearVertices() {
         if (verticesBuilder_ == null) {
@@ -2168,7 +2104,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public Builder removeVertices(int index) {
         if (verticesBuilder_ == null) {
@@ -2185,7 +2121,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex.Builder getVerticesBuilder(
           int index) {
@@ -2196,7 +2132,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.VertexOrBuilder getVerticesOrBuilder(
           int index) {
@@ -2210,7 +2146,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public java.util.List<? extends ssn.type.Geometry.VertexOrBuilder> 
            getVerticesOrBuilderList() {
@@ -2225,7 +2161,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex.Builder addVerticesBuilder() {
         return getVerticesFieldBuilder().addBuilder(
@@ -2236,7 +2172,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public ssn.type.Geometry.Vertex.Builder addVerticesBuilder(
           int index) {
@@ -2248,7 +2184,7 @@ public final class Geometry {
        * The bounding polygon vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.Vertex vertices = 1;</code>
+       * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.Vertex.Builder> 
            getVerticesBuilderList() {
@@ -2286,7 +2222,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.NormalizedVertex> getNormalizedVerticesList() {
         if (normalizedVerticesBuilder_ == null) {
@@ -2300,7 +2236,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public int getNormalizedVerticesCount() {
         if (normalizedVerticesBuilder_ == null) {
@@ -2314,7 +2250,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex getNormalizedVertices(int index) {
         if (normalizedVerticesBuilder_ == null) {
@@ -2328,7 +2264,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder setNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex value) {
@@ -2349,7 +2285,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder setNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex.Builder builderForValue) {
@@ -2367,7 +2303,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(ssn.type.Geometry.NormalizedVertex value) {
         if (normalizedVerticesBuilder_ == null) {
@@ -2387,7 +2323,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex value) {
@@ -2408,7 +2344,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(
           ssn.type.Geometry.NormalizedVertex.Builder builderForValue) {
@@ -2426,7 +2362,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addNormalizedVertices(
           int index, ssn.type.Geometry.NormalizedVertex.Builder builderForValue) {
@@ -2444,7 +2380,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder addAllNormalizedVertices(
           java.lang.Iterable<? extends ssn.type.Geometry.NormalizedVertex> values) {
@@ -2463,7 +2399,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder clearNormalizedVertices() {
         if (normalizedVerticesBuilder_ == null) {
@@ -2480,7 +2416,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public Builder removeNormalizedVertices(int index) {
         if (normalizedVerticesBuilder_ == null) {
@@ -2497,7 +2433,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex.Builder getNormalizedVerticesBuilder(
           int index) {
@@ -2508,7 +2444,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertexOrBuilder getNormalizedVerticesOrBuilder(
           int index) {
@@ -2522,7 +2458,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public java.util.List<? extends ssn.type.Geometry.NormalizedVertexOrBuilder> 
            getNormalizedVerticesOrBuilderList() {
@@ -2537,7 +2473,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex.Builder addNormalizedVerticesBuilder() {
         return getNormalizedVerticesFieldBuilder().addBuilder(
@@ -2548,7 +2484,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public ssn.type.Geometry.NormalizedVertex.Builder addNormalizedVerticesBuilder(
           int index) {
@@ -2560,7 +2496,7 @@ public final class Geometry {
        * The bounding polygon normalized vertices.
        * </pre>
        *
-       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2;</code>
+       * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
        */
       public java.util.List<ssn.type.Geometry.NormalizedVertex.Builder> 
            getNormalizedVerticesBuilderList() {
@@ -2613,7 +2549,18 @@ public final class Geometry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoundingPoly(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2657,14 +2604,15 @@ public final class Geometry {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027ssn/type/geometry.proto\022\010ssn.type\"\036\n\006V" +
-      "ertex\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\"(\n\020Normalize" +
-      "dVertex\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"k\n\014Boundin" +
-      "gPoly\022\"\n\010vertices\030\001 \003(\0132\020.ssn.type.Verte" +
-      "x\0227\n\023normalized_vertices\030\002 \003(\0132\032.ssn.typ" +
-      "e.NormalizedVertexB6Z4github.com/e-conom" +
-      "ic/vmlapis/gen/go/ssn/type;ssntypeb\006prot" +
-      "o3"
+      "\n\027ssn/type/geometry.proto\022\010ssn.type\"$\n\006V" +
+      "ertex\022\014\n\001x\030\001 \001(\005R\001x\022\014\n\001y\030\002 \001(\005R\001y\".\n\020Nor" +
+      "malizedVertex\022\014\n\001x\030\001 \001(\002R\001x\022\014\n\001y\030\002 \001(\002R\001" +
+      "y\"\211\001\n\014BoundingPoly\022,\n\010vertices\030\001 \003(\0132\020.s" +
+      "sn.type.VertexR\010vertices\022K\n\023normalized_v" +
+      "ertices\030\002 \003(\0132\032.ssn.type.NormalizedVerte" +
+      "xR\022normalizedVerticesB6Z4github.com/e-co" +
+      "nomic/vmlapis/gen/go/ssn/type;ssntypeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

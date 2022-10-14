@@ -237,6 +237,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -245,7 +246,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.GetDatasetRequest.SerializeToString,
             asgt_dot_type_dot_dataset__pb2.Dataset.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreateDataset(request,
@@ -253,6 +254,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -261,7 +263,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.CreateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreateOrUpdateDataset(request,
@@ -269,6 +271,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -277,7 +280,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def DeleteDataset(request,
@@ -285,6 +288,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -293,7 +297,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.DeleteDatasetRequest.SerializeToString,
             asgt_dot_type_dot_dataset__pb2.Dataset.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def DeleteTag(request,
@@ -301,6 +305,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -309,7 +314,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.DeleteTagRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreateExample(request,
@@ -317,6 +322,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -325,7 +331,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.CreateExampleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreateOrUpdateExample(request,
@@ -333,6 +339,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -341,7 +348,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateExampleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def BatchCreateExample(request,
@@ -349,6 +356,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -357,7 +365,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.BatchCreateExampleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def TruncateDataset(request,
@@ -365,6 +373,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -373,7 +382,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.TruncateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def GetDatasetTrainings(request,
@@ -381,6 +390,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -389,7 +399,7 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.GetDatasetTrainingsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def GetTrainings(request,
@@ -397,6 +407,7 @@ class DatasetService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -405,4 +416,4 @@ class DatasetService(object):
             asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

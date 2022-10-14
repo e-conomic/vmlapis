@@ -11,6 +11,7 @@ import (
 	"net/mail"
 	"net/url"
 	"regexp"
+	"sort"
 	"strings"
 	"time"
 	"unicode/utf8"
@@ -33,29 +34,69 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+	_ = sort.Sort
 
 	_ = asgttype.Confidence_Level(0)
 )
 
 // Validate checks the field values on SuggestOptions with the rules defined in
-// the proto definition for this message. If any rules are violated, an error
-// is returned.
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *SuggestOptions) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on SuggestOptions with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in SuggestOptionsMultiError,
+// or nil if none found.
+func (m *SuggestOptions) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *SuggestOptions) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	// no validation rules for SuggestLimit
 
 	if _, ok := asgttype.Confidence_Level_name[int32(m.GetMinConfidence())]; !ok {
-		return SuggestOptionsValidationError{
+		err := SuggestOptionsValidationError{
 			field:  "MinConfidence",
 			reason: "value must be one of the defined enum values",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return SuggestOptionsMultiError(errors)
 	}
 
 	return nil
 }
+
+// SuggestOptionsMultiError is an error wrapping multiple validation errors
+// returned by SuggestOptions.ValidateAll() if the designated constraints
+// aren't met.
+type SuggestOptionsMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m SuggestOptionsMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m SuggestOptionsMultiError) AllErrors() []error { return m }
 
 // SuggestOptionsValidationError is the validation error returned by
 // SuggestOptions.Validate if the designated constraints aren't met.
@@ -112,28 +153,69 @@ var _ interface {
 } = SuggestOptionsValidationError{}
 
 // Validate checks the field values on SuggestRequest with the rules defined in
-// the proto definition for this message. If any rules are violated, an error
-// is returned.
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
 func (m *SuggestRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on SuggestRequest with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in SuggestRequestMultiError,
+// or nil if none found.
+func (m *SuggestRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *SuggestRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return SuggestRequestValidationError{
+		err := SuggestRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_SuggestRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return SuggestRequestValidationError{
+		err := SuggestRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
-	if v, ok := interface{}(m.GetInput()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetInput()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, SuggestRequestValidationError{
+					field:  "Input",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, SuggestRequestValidationError{
+					field:  "Input",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetInput()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return SuggestRequestValidationError{
 				field:  "Input",
@@ -143,7 +225,26 @@ func (m *SuggestRequest) Validate() error {
 		}
 	}
 
-	if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetOptions()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, SuggestRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, SuggestRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return SuggestRequestValidationError{
 				field:  "Options",
@@ -153,8 +254,29 @@ func (m *SuggestRequest) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return SuggestRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// SuggestRequestMultiError is an error wrapping multiple validation errors
+// returned by SuggestRequest.ValidateAll() if the designated constraints
+// aren't met.
+type SuggestRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m SuggestRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m SuggestRequestMultiError) AllErrors() []error { return m }
 
 // SuggestRequestValidationError is the validation error returned by
 // SuggestRequest.Validate if the designated constraints aren't met.
@@ -213,14 +335,47 @@ var _ interface {
 var _SuggestRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on SuggestResponse with the rules defined
-// in the proto definition for this message. If any rules are violated, an
-// error is returned.
+// in the proto definition for this message. If any rules are violated, the
+// first error encountered is returned, or nil if there are no violations.
 func (m *SuggestResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on SuggestResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// SuggestResponseMultiError, or nil if none found.
+func (m *SuggestResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *SuggestResponse) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetPrediction()).(interface{ Validate() error }); ok {
+	var errors []error
+
+	if all {
+		switch v := interface{}(m.GetPrediction()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, SuggestResponseValidationError{
+					field:  "Prediction",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, SuggestResponseValidationError{
+					field:  "Prediction",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetPrediction()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return SuggestResponseValidationError{
 				field:  "Prediction",
@@ -230,7 +385,26 @@ func (m *SuggestResponse) Validate() error {
 		}
 	}
 
-	if v, ok := interface{}(m.GetModel()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetModel()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, SuggestResponseValidationError{
+					field:  "Model",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, SuggestResponseValidationError{
+					field:  "Model",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetModel()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return SuggestResponseValidationError{
 				field:  "Model",
@@ -240,8 +414,29 @@ func (m *SuggestResponse) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return SuggestResponseMultiError(errors)
+	}
+
 	return nil
 }
+
+// SuggestResponseMultiError is an error wrapping multiple validation errors
+// returned by SuggestResponse.ValidateAll() if the designated constraints
+// aren't met.
+type SuggestResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m SuggestResponseMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m SuggestResponseMultiError) AllErrors() []error { return m }
 
 // SuggestResponseValidationError is the validation error returned by
 // SuggestResponse.Validate if the designated constraints aren't met.
@@ -299,30 +494,71 @@ var _ interface {
 
 // Validate checks the field values on BatchSuggestRequest with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *BatchSuggestRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on BatchSuggestRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// BatchSuggestRequestMultiError, or nil if none found.
+func (m *BatchSuggestRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *BatchSuggestRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return BatchSuggestRequestValidationError{
+		err := BatchSuggestRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_BatchSuggestRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return BatchSuggestRequestValidationError{
+		err := BatchSuggestRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	for idx, item := range m.GetInputs() {
 		_, _ = idx, item
 
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, BatchSuggestRequestValidationError{
+						field:  fmt.Sprintf("Inputs[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, BatchSuggestRequestValidationError{
+						field:  fmt.Sprintf("Inputs[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return BatchSuggestRequestValidationError{
 					field:  fmt.Sprintf("Inputs[%v]", idx),
@@ -334,7 +570,26 @@ func (m *BatchSuggestRequest) Validate() error {
 
 	}
 
-	if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetOptions()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, BatchSuggestRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, BatchSuggestRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return BatchSuggestRequestValidationError{
 				field:  "Options",
@@ -344,8 +599,29 @@ func (m *BatchSuggestRequest) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return BatchSuggestRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// BatchSuggestRequestMultiError is an error wrapping multiple validation
+// errors returned by BatchSuggestRequest.ValidateAll() if the designated
+// constraints aren't met.
+type BatchSuggestRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m BatchSuggestRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m BatchSuggestRequestMultiError) AllErrors() []error { return m }
 
 // BatchSuggestRequestValidationError is the validation error returned by
 // BatchSuggestRequest.Validate if the designated constraints aren't met.
@@ -407,16 +683,49 @@ var _BatchSuggestRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.]
 
 // Validate checks the field values on BatchSuggestResponse with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *BatchSuggestResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on BatchSuggestResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// BatchSuggestResponseMultiError, or nil if none found.
+func (m *BatchSuggestResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *BatchSuggestResponse) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	for idx, item := range m.GetPredictions() {
 		_, _ = idx, item
 
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, BatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("Predictions[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, BatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("Predictions[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return BatchSuggestResponseValidationError{
 					field:  fmt.Sprintf("Predictions[%v]", idx),
@@ -428,7 +737,26 @@ func (m *BatchSuggestResponse) Validate() error {
 
 	}
 
-	if v, ok := interface{}(m.GetModel()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetModel()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, BatchSuggestResponseValidationError{
+					field:  "Model",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, BatchSuggestResponseValidationError{
+					field:  "Model",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetModel()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return BatchSuggestResponseValidationError{
 				field:  "Model",
@@ -438,8 +766,29 @@ func (m *BatchSuggestResponse) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return BatchSuggestResponseMultiError(errors)
+	}
+
 	return nil
 }
+
+// BatchSuggestResponseMultiError is an error wrapping multiple validation
+// errors returned by BatchSuggestResponse.ValidateAll() if the designated
+// constraints aren't met.
+type BatchSuggestResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m BatchSuggestResponseMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m BatchSuggestResponseMultiError) AllErrors() []error { return m }
 
 // BatchSuggestResponseValidationError is the validation error returned by
 // BatchSuggestResponse.Validate if the designated constraints aren't met.

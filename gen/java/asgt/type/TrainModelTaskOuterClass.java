@@ -19,37 +19,37 @@ public final class TrainModelTaskOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return Whether the revision field is set.
      */
     boolean hasRevision();
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return The revision.
      */
     asgt.type.RevisionOuterClass.Revision getRevision();
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      */
     asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder();
 
     /**
-     * <code>int64 model_version = 4;</code>
+     * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     long getModelVersion();
@@ -81,74 +81,6 @@ public final class TrainModelTaskOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrainModelTask(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
-              if (dataset_ != null) {
-                subBuilder = dataset_.toBuilder();
-              }
-              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataset_);
-                dataset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              asgt.type.RevisionOuterClass.Revision.Builder subBuilder = null;
-              if (revision_ != null) {
-                subBuilder = revision_.toBuilder();
-              }
-              revision_ = input.readMessage(asgt.type.RevisionOuterClass.Revision.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(revision_);
-                revision_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 32: {
-
-              modelVersion_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.TrainModelTaskOuterClass.internal_static_asgt_type_TrainModelTask_descriptor;
@@ -165,7 +97,7 @@ public final class TrainModelTaskOuterClass {
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     @java.lang.Override
@@ -173,7 +105,7 @@ public final class TrainModelTaskOuterClass {
       return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -181,7 +113,7 @@ public final class TrainModelTaskOuterClass {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -191,7 +123,7 @@ public final class TrainModelTaskOuterClass {
     public static final int REVISION_FIELD_NUMBER = 2;
     private asgt.type.RevisionOuterClass.Revision revision_;
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return Whether the revision field is set.
      */
     @java.lang.Override
@@ -199,7 +131,7 @@ public final class TrainModelTaskOuterClass {
       return revision_ != null;
     }
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return The revision.
      */
     @java.lang.Override
@@ -207,7 +139,7 @@ public final class TrainModelTaskOuterClass {
       return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
     }
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      */
     @java.lang.Override
     public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
@@ -217,7 +149,7 @@ public final class TrainModelTaskOuterClass {
     public static final int MODEL_VERSION_FIELD_NUMBER = 4;
     private long modelVersion_;
     /**
-     * <code>int64 model_version = 4;</code>
+     * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     @java.lang.Override
@@ -248,7 +180,7 @@ public final class TrainModelTaskOuterClass {
       if (modelVersion_ != 0L) {
         output.writeInt64(4, modelVersion_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -269,7 +201,7 @@ public final class TrainModelTaskOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, modelVersion_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -296,7 +228,7 @@ public final class TrainModelTaskOuterClass {
       }
       if (getModelVersion()
           != other.getModelVersion()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -318,7 +250,7 @@ public final class TrainModelTaskOuterClass {
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -435,18 +367,13 @@ public final class TrainModelTaskOuterClass {
 
       // Construct using asgt.type.TrainModelTaskOuterClass.TrainModelTask.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -559,7 +486,7 @@ public final class TrainModelTaskOuterClass {
         if (other.getModelVersion() != 0L) {
           setModelVersion(other.getModelVersion());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -574,17 +501,49 @@ public final class TrainModelTaskOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TrainModelTaskOuterClass.TrainModelTask parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatasetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRevisionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 32: {
+                modelVersion_ = input.readInt64();
+
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TrainModelTaskOuterClass.TrainModelTask) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -592,14 +551,14 @@ public final class TrainModelTaskOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
@@ -610,7 +569,7 @@ public final class TrainModelTaskOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -626,7 +585,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -640,7 +599,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -658,7 +617,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -672,7 +631,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -680,7 +639,7 @@ public final class TrainModelTaskOuterClass {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -691,7 +650,7 @@ public final class TrainModelTaskOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -711,14 +670,14 @@ public final class TrainModelTaskOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> revisionBuilder_;
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        * @return Whether the revision field is set.
        */
       public boolean hasRevision() {
         return revisionBuilder_ != null || revision_ != null;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        * @return The revision.
        */
       public asgt.type.RevisionOuterClass.Revision getRevision() {
@@ -729,7 +688,7 @@ public final class TrainModelTaskOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder setRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
@@ -745,7 +704,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder setRevision(
           asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
@@ -759,7 +718,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
@@ -777,7 +736,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder clearRevision() {
         if (revisionBuilder_ == null) {
@@ -791,7 +750,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
         
@@ -799,7 +758,7 @@ public final class TrainModelTaskOuterClass {
         return getRevisionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
         if (revisionBuilder_ != null) {
@@ -810,7 +769,7 @@ public final class TrainModelTaskOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> 
@@ -828,7 +787,7 @@ public final class TrainModelTaskOuterClass {
 
       private long modelVersion_ ;
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @return The modelVersion.
        */
       @java.lang.Override
@@ -836,7 +795,7 @@ public final class TrainModelTaskOuterClass {
         return modelVersion_;
       }
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @param value The modelVersion to set.
        * @return This builder for chaining.
        */
@@ -847,7 +806,7 @@ public final class TrainModelTaskOuterClass {
         return this;
       }
       /**
-       * <code>int64 model_version = 4;</code>
+       * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
@@ -889,7 +848,18 @@ public final class TrainModelTaskOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrainModelTask(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -925,11 +895,12 @@ public final class TrainModelTaskOuterClass {
     java.lang.String[] descriptorData = {
       "\n asgt/type/train_model_task.proto\022\tasgt" +
       ".type\032\027asgt/type/dataset.proto\032\030asgt/typ" +
-      "e/revision.proto\"s\n\016TrainModelTask\022#\n\007da" +
-      "taset\030\001 \001(\0132\022.asgt.type.Dataset\022%\n\010revis" +
-      "ion\030\002 \001(\0132\023.asgt.type.Revision\022\025\n\rmodel_" +
-      "version\030\004 \001(\003B8Z6github.com/e-conomic/vm" +
-      "lapis/gen/go/asgt/type;asgttypeb\006proto3"
+      "e/revision.proto\"\224\001\n\016TrainModelTask\022,\n\007d" +
+      "ataset\030\001 \001(\0132\022.asgt.type.DatasetR\007datase" +
+      "t\022/\n\010revision\030\002 \001(\0132\023.asgt.type.Revision" +
+      "R\010revision\022#\n\rmodel_version\030\004 \001(\003R\014model" +
+      "VersionB8Z6github.com/e-conomic/vmlapis/" +
+      "gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

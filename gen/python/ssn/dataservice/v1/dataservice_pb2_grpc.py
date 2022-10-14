@@ -152,6 +152,7 @@ class DataService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -160,7 +161,7 @@ class DataService(object):
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CreateDocumentRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CreateDocumentResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ReadDocument(request,
@@ -168,6 +169,7 @@ class DataService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -176,7 +178,7 @@ class DataService(object):
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.ReadDocumentRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.ReadDocumentResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def PrepareFeedback(request,
@@ -184,6 +186,7 @@ class DataService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -192,7 +195,7 @@ class DataService(object):
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareFeedbackRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Feedback(request,
@@ -200,6 +203,7 @@ class DataService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -208,7 +212,7 @@ class DataService(object):
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CalculateMetrics(request,
@@ -216,6 +220,7 @@ class DataService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -224,7 +229,7 @@ class DataService(object):
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Delete(request,
@@ -232,6 +237,7 @@ class DataService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -240,7 +246,7 @@ class DataService(object):
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeleteRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CallsPerMonthMetric(request,
@@ -248,6 +254,7 @@ class DataService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -256,4 +263,4 @@ class DataService(object):
             google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

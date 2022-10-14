@@ -217,18 +217,6 @@ func (mr *MockPdfServiceServerMockRecorder) RasterizePdf(arg0, arg1 interface{})
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RasterizePdf", reflect.TypeOf((*MockPdfServiceServer)(nil).RasterizePdf), arg0, arg1)
 }
 
-// mustEmbedUnimplementedPdfServiceServer mocks base method.
-func (m *MockPdfServiceServer) mustEmbedUnimplementedPdfServiceServer() {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "mustEmbedUnimplementedPdfServiceServer")
-}
-
-// mustEmbedUnimplementedPdfServiceServer indicates an expected call of mustEmbedUnimplementedPdfServiceServer.
-func (mr *MockPdfServiceServerMockRecorder) mustEmbedUnimplementedPdfServiceServer() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedPdfServiceServer", reflect.TypeOf((*MockPdfServiceServer)(nil).mustEmbedUnimplementedPdfServiceServer))
-}
-
 // MockUnsafePdfServiceServer is a mock of UnsafePdfServiceServer interface.
 type MockUnsafePdfServiceServer struct {
 	ctrl     *gomock.Controller

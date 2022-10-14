@@ -23,7 +23,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -32,7 +32,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -66,49 +66,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetDatasetRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetDatasetRequest_descriptor;
@@ -129,7 +86,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -150,7 +107,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -182,10 +139,10 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -194,10 +151,10 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -214,7 +171,7 @@ public final class DatasetServiceOuterClass {
 
       if (!getDatasetName()
           .equals(other.getDatasetName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -227,7 +184,7 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -344,18 +301,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.GetDatasetRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -441,7 +393,7 @@ public final class DatasetServiceOuterClass {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -456,17 +408,35 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.GetDatasetRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.GetDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -476,7 +446,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -496,7 +466,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -517,7 +487,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -536,7 +506,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -550,7 +520,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -598,7 +568,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetDatasetRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -627,7 +608,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -636,7 +617,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -647,7 +628,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
@@ -657,7 +638,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     int getTagsCount();
@@ -666,7 +647,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -676,7 +657,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -712,62 +693,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateDatasetRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              tags_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_CreateDatasetRequest_descriptor;
@@ -788,7 +713,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -809,7 +734,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -834,7 +759,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -846,7 +771,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
@@ -857,7 +782,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -869,7 +794,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+     * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -892,13 +817,13 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -907,7 +832,7 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       {
@@ -918,7 +843,7 @@ public final class DatasetServiceOuterClass {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -937,7 +862,7 @@ public final class DatasetServiceOuterClass {
           .equals(other.getDatasetName())) return false;
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -954,7 +879,7 @@ public final class DatasetServiceOuterClass {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1071,18 +996,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1186,7 +1106,7 @@ public final class DatasetServiceOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1201,17 +1121,41 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTagsIsMutable();
+                tags_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1222,7 +1166,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -1242,7 +1186,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -1263,7 +1207,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -1282,7 +1226,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -1296,7 +1240,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -1324,7 +1268,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -1336,7 +1280,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
@@ -1347,7 +1291,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -1359,7 +1303,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -1372,7 +1316,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -1392,7 +1336,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -1411,7 +1355,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -1428,7 +1372,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -1442,7 +1386,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
+       * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -1490,7 +1434,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateDatasetRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1519,7 +1474,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -1528,7 +1483,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -1562,49 +1517,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateOrUpdateDatasetRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_CreateOrUpdateDatasetRequest_descriptor;
@@ -1625,7 +1537,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -1646,7 +1558,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -1678,10 +1590,10 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1690,10 +1602,10 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1710,7 +1622,7 @@ public final class DatasetServiceOuterClass {
 
       if (!getDatasetName()
           .equals(other.getDatasetName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1723,7 +1635,7 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1840,18 +1752,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1937,7 +1844,7 @@ public final class DatasetServiceOuterClass {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1952,17 +1859,35 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1972,7 +1897,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -1992,7 +1917,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -2013,7 +1938,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -2032,7 +1957,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -2046,7 +1971,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -2094,7 +2019,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateOrUpdateDatasetRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2123,7 +2059,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -2132,7 +2068,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -2166,49 +2102,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DeleteDatasetRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_DeleteDatasetRequest_descriptor;
@@ -2229,7 +2122,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -2250,7 +2143,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -2282,10 +2175,10 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2294,10 +2187,10 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2314,7 +2207,7 @@ public final class DatasetServiceOuterClass {
 
       if (!getDatasetName()
           .equals(other.getDatasetName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2327,7 +2220,7 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2444,18 +2337,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2541,7 +2429,7 @@ public final class DatasetServiceOuterClass {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2556,17 +2444,35 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2576,7 +2482,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -2596,7 +2502,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -2617,7 +2523,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -2636,7 +2542,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -2650,7 +2556,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -2698,7 +2604,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteDatasetRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2727,7 +2644,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The tagName.
      */
     java.lang.String getTagName();
@@ -2736,7 +2653,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The bytes for tagName.
      */
     com.google.protobuf.ByteString
@@ -2770,49 +2687,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DeleteTagRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              tagName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_DeleteTagRequest_descriptor;
@@ -2833,7 +2707,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The tagName.
      */
     @java.lang.Override
@@ -2854,7 +2728,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return The bytes for tagName.
      */
     @java.lang.Override
@@ -2886,10 +2760,10 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTagNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tagName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tagName_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2898,10 +2772,10 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTagNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tagName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tagName_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2918,7 +2792,7 @@ public final class DatasetServiceOuterClass {
 
       if (!getTagName()
           .equals(other.getTagName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2931,7 +2805,7 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TAG_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getTagName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3048,18 +2922,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.DeleteTagRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3145,7 +3014,7 @@ public final class DatasetServiceOuterClass {
           tagName_ = other.tagName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3160,17 +3029,35 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.DeleteTagRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tagName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.DeleteTagRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3180,7 +3067,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @return The tagName.
        */
       public java.lang.String getTagName() {
@@ -3200,7 +3087,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @return The bytes for tagName.
        */
       public com.google.protobuf.ByteString
@@ -3221,7 +3108,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @param value The tagName to set.
        * @return This builder for chaining.
        */
@@ -3240,7 +3127,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTagName() {
@@ -3254,7 +3141,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string tag_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
        * @param value The bytes for tagName to set.
        * @return This builder for chaining.
        */
@@ -3302,7 +3189,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteTagRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3331,7 +3229,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -3340,24 +3238,24 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     asgt.v2.type.ExampleOuterClass.Example getExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
   }
@@ -3389,62 +3287,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateExampleRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 18: {
-              asgt.v2.type.ExampleOuterClass.Example.Builder subBuilder = null;
-              if (example_ != null) {
-                subBuilder = example_.toBuilder();
-              }
-              example_ = input.readMessage(asgt.v2.type.ExampleOuterClass.Example.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(example_);
-                example_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_CreateExampleRequest_descriptor;
@@ -3465,7 +3307,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -3486,7 +3328,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -3507,7 +3349,7 @@ public final class DatasetServiceOuterClass {
     public static final int EXAMPLE_FIELD_NUMBER = 2;
     private asgt.v2.type.ExampleOuterClass.Example example_;
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -3515,7 +3357,7 @@ public final class DatasetServiceOuterClass {
       return example_ != null;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     @java.lang.Override
@@ -3523,7 +3365,7 @@ public final class DatasetServiceOuterClass {
       return example_ == null ? asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
@@ -3544,13 +3386,13 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       if (example_ != null) {
         output.writeMessage(2, getExample());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3559,14 +3401,14 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       if (example_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExample());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3588,7 +3430,7 @@ public final class DatasetServiceOuterClass {
         if (!getExample()
             .equals(other.getExample())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3605,7 +3447,7 @@ public final class DatasetServiceOuterClass {
         hash = (37 * hash) + EXAMPLE_FIELD_NUMBER;
         hash = (53 * hash) + getExample().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3722,18 +3564,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.CreateExampleRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3833,7 +3670,7 @@ public final class DatasetServiceOuterClass {
         if (other.hasExample()) {
           mergeExample(other.getExample());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3848,17 +3685,42 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.CreateExampleRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getExampleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.CreateExampleRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3868,7 +3730,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -3888,7 +3750,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -3909,7 +3771,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -3928,7 +3790,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -3942,7 +3804,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -3962,14 +3824,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return The example.
        */
       public asgt.v2.type.ExampleOuterClass.Example getExample() {
@@ -3980,7 +3842,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -3996,7 +3858,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -4010,7 +3872,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder mergeExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -4028,7 +3890,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -4042,7 +3904,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
         
@@ -4050,7 +3912,7 @@ public final class DatasetServiceOuterClass {
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
@@ -4061,7 +3923,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
@@ -4109,7 +3971,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateExampleRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4138,7 +4011,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -4147,24 +4020,24 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     asgt.v2.type.ExampleOuterClass.Example getExample();
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
   }
@@ -4196,62 +4069,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateOrUpdateExampleRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 18: {
-              asgt.v2.type.ExampleOuterClass.Example.Builder subBuilder = null;
-              if (example_ != null) {
-                subBuilder = example_.toBuilder();
-              }
-              example_ = input.readMessage(asgt.v2.type.ExampleOuterClass.Example.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(example_);
-                example_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_CreateOrUpdateExampleRequest_descriptor;
@@ -4272,7 +4089,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -4293,7 +4110,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -4314,7 +4131,7 @@ public final class DatasetServiceOuterClass {
     public static final int EXAMPLE_FIELD_NUMBER = 2;
     private asgt.v2.type.ExampleOuterClass.Example example_;
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -4322,7 +4139,7 @@ public final class DatasetServiceOuterClass {
       return example_ != null;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      * @return The example.
      */
     @java.lang.Override
@@ -4330,7 +4147,7 @@ public final class DatasetServiceOuterClass {
       return example_ == null ? asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.asgt.v2.type.Example example = 2;</code>
+     * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
@@ -4351,13 +4168,13 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       if (example_ != null) {
         output.writeMessage(2, getExample());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4366,14 +4183,14 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       if (example_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExample());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4395,7 +4212,7 @@ public final class DatasetServiceOuterClass {
         if (!getExample()
             .equals(other.getExample())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4412,7 +4229,7 @@ public final class DatasetServiceOuterClass {
         hash = (37 * hash) + EXAMPLE_FIELD_NUMBER;
         hash = (53 * hash) + getExample().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4529,18 +4346,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4640,7 +4452,7 @@ public final class DatasetServiceOuterClass {
         if (other.hasExample()) {
           mergeExample(other.getExample());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4655,17 +4467,42 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getExampleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -4675,7 +4512,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -4695,7 +4532,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -4716,7 +4553,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -4735,7 +4572,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -4749,7 +4586,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -4769,14 +4606,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        * @return The example.
        */
       public asgt.v2.type.ExampleOuterClass.Example getExample() {
@@ -4787,7 +4624,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -4803,7 +4640,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder setExample(
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -4817,7 +4654,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder mergeExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
@@ -4835,7 +4672,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -4849,7 +4686,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
         
@@ -4857,7 +4694,7 @@ public final class DatasetServiceOuterClass {
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
@@ -4868,7 +4705,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.type.Example example = 2;</code>
+       * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
@@ -4916,7 +4753,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateOrUpdateExampleRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4945,7 +4793,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -4954,32 +4802,32 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     java.util.List<asgt.v2.type.ExampleOuterClass.Example> 
         getExamplesList();
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     asgt.v2.type.ExampleOuterClass.Example getExamples(int index);
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     int getExamplesCount();
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     java.util.List<? extends asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
         getExamplesOrBuilderList();
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
         int index);
@@ -5013,62 +4861,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BatchCreateExampleRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                examples_ = new java.util.ArrayList<asgt.v2.type.ExampleOuterClass.Example>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              examples_.add(
-                  input.readMessage(asgt.v2.type.ExampleOuterClass.Example.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          examples_ = java.util.Collections.unmodifiableList(examples_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_BatchCreateExampleRequest_descriptor;
@@ -5089,7 +4881,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -5110,7 +4902,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -5131,14 +4923,14 @@ public final class DatasetServiceOuterClass {
     public static final int EXAMPLES_FIELD_NUMBER = 2;
     private java.util.List<asgt.v2.type.ExampleOuterClass.Example> examples_;
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.v2.type.ExampleOuterClass.Example> getExamplesList() {
       return examples_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
@@ -5146,21 +4938,21 @@ public final class DatasetServiceOuterClass {
       return examples_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public int getExamplesCount() {
       return examples_.size();
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.Example getExamples(int index) {
       return examples_.get(index);
     }
     /**
-     * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
@@ -5182,13 +4974,13 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       for (int i = 0; i < examples_.size(); i++) {
         output.writeMessage(2, examples_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5197,14 +4989,14 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       for (int i = 0; i < examples_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, examples_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5223,7 +5015,7 @@ public final class DatasetServiceOuterClass {
           .equals(other.getDatasetName())) return false;
       if (!getExamplesList()
           .equals(other.getExamplesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5240,7 +5032,7 @@ public final class DatasetServiceOuterClass {
         hash = (37 * hash) + EXAMPLES_FIELD_NUMBER;
         hash = (53 * hash) + getExamplesList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5357,19 +5149,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExamplesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5378,10 +5164,11 @@ public final class DatasetServiceOuterClass {
 
         if (examplesBuilder_ == null) {
           examples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          examples_ = null;
           examplesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -5497,7 +5284,7 @@ public final class DatasetServiceOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5512,17 +5299,48 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                asgt.v2.type.ExampleOuterClass.Example m =
+                    input.readMessage(
+                        asgt.v2.type.ExampleOuterClass.Example.parser(),
+                        extensionRegistry);
+                if (examplesBuilder_ == null) {
+                  ensureExamplesIsMutable();
+                  examples_.add(m);
+                } else {
+                  examplesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -5533,7 +5351,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -5553,7 +5371,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -5574,7 +5392,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -5593,7 +5411,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -5607,7 +5425,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -5636,7 +5454,7 @@ public final class DatasetServiceOuterClass {
           asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> examplesBuilder_;
 
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public java.util.List<asgt.v2.type.ExampleOuterClass.Example> getExamplesList() {
         if (examplesBuilder_ == null) {
@@ -5646,7 +5464,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public int getExamplesCount() {
         if (examplesBuilder_ == null) {
@@ -5656,7 +5474,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example getExamples(int index) {
         if (examplesBuilder_ == null) {
@@ -5666,7 +5484,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder setExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example value) {
@@ -5683,7 +5501,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder setExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -5697,7 +5515,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(asgt.v2.type.ExampleOuterClass.Example value) {
         if (examplesBuilder_ == null) {
@@ -5713,7 +5531,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example value) {
@@ -5730,7 +5548,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -5744,7 +5562,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addExamples(
           int index, asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
@@ -5758,7 +5576,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder addAllExamples(
           java.lang.Iterable<? extends asgt.v2.type.ExampleOuterClass.Example> values) {
@@ -5773,7 +5591,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder clearExamples() {
         if (examplesBuilder_ == null) {
@@ -5786,7 +5604,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public Builder removeExamples(int index) {
         if (examplesBuilder_ == null) {
@@ -5799,14 +5617,14 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExamplesBuilder(
           int index) {
         return getExamplesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
           int index) {
@@ -5816,7 +5634,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public java.util.List<? extends asgt.v2.type.ExampleOuterClass.ExampleOrBuilder> 
            getExamplesOrBuilderList() {
@@ -5827,14 +5645,14 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder addExamplesBuilder() {
         return getExamplesFieldBuilder().addBuilder(
             asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder addExamplesBuilder(
           int index) {
@@ -5842,7 +5660,7 @@ public final class DatasetServiceOuterClass {
             index, asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
        */
       public java.util.List<asgt.v2.type.ExampleOuterClass.Example.Builder> 
            getExamplesBuilderList() {
@@ -5895,7 +5713,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchCreateExampleRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5924,7 +5753,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -5933,7 +5762,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -5967,49 +5796,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TruncateDatasetRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TruncateDatasetRequest_descriptor;
@@ -6030,7 +5816,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -6051,7 +5837,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -6083,10 +5869,10 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6095,10 +5881,10 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6115,7 +5901,7 @@ public final class DatasetServiceOuterClass {
 
       if (!getDatasetName()
           .equals(other.getDatasetName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6128,7 +5914,7 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6245,18 +6031,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6342,7 +6123,7 @@ public final class DatasetServiceOuterClass {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6357,17 +6138,35 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -6377,7 +6176,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -6397,7 +6196,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -6418,7 +6217,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -6437,7 +6236,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -6451,7 +6250,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -6499,7 +6298,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TruncateDatasetRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6528,7 +6338,7 @@ public final class DatasetServiceOuterClass {
      * The number of trainings to return. Ranges from 1 to 100.
      * </pre>
      *
-     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+     * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
      * @return The limit.
      */
     long getLimit();
@@ -6560,48 +6370,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrainingRequestOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              limit_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingRequestOptions_descriptor;
@@ -6622,7 +6390,7 @@ public final class DatasetServiceOuterClass {
      * The number of trainings to return. Ranges from 1 to 100.
      * </pre>
      *
-     * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+     * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
      * @return The limit.
      */
     @java.lang.Override
@@ -6647,7 +6415,7 @@ public final class DatasetServiceOuterClass {
       if (limit_ != 0L) {
         output.writeInt64(1, limit_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6660,7 +6428,7 @@ public final class DatasetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, limit_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6677,7 +6445,7 @@ public final class DatasetServiceOuterClass {
 
       if (getLimit()
           != other.getLimit()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6691,7 +6459,7 @@ public final class DatasetServiceOuterClass {
       hash = (37 * hash) + LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getLimit());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6808,18 +6576,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6904,7 +6667,7 @@ public final class DatasetServiceOuterClass {
         if (other.getLimit() != 0L) {
           setLimit(other.getLimit());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6919,17 +6682,35 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                limit_ = input.readInt64();
+
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -6939,7 +6720,7 @@ public final class DatasetServiceOuterClass {
        * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
-       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
        * @return The limit.
        */
       @java.lang.Override
@@ -6951,7 +6732,7 @@ public final class DatasetServiceOuterClass {
        * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
-       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
        * @param value The limit to set.
        * @return This builder for chaining.
        */
@@ -6966,7 +6747,7 @@ public final class DatasetServiceOuterClass {
        * The number of trainings to return. Ranges from 1 to 100.
        * </pre>
        *
-       * <code>int64 limit = 1 [(.validate.rules) = { ... }</code>
+       * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
@@ -7008,7 +6789,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrainingRequestOptions(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7037,7 +6829,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -7046,24 +6838,24 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -7095,62 +6887,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetDatasetTrainingsRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 18: {
-              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder subBuilder = null;
-              if (options_ != null) {
-                subBuilder = options_.toBuilder();
-              }
-              options_ = input.readMessage(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(options_);
-                options_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor;
@@ -7171,7 +6907,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -7192,7 +6928,7 @@ public final class DatasetServiceOuterClass {
      * text-no-spaces
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -7213,7 +6949,7 @@ public final class DatasetServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 2;
     private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -7221,7 +6957,7 @@ public final class DatasetServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -7229,7 +6965,7 @@ public final class DatasetServiceOuterClass {
       return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
@@ -7250,13 +6986,13 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       if (options_ != null) {
         output.writeMessage(2, getOptions());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7265,14 +7001,14 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOptions());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7294,7 +7030,7 @@ public final class DatasetServiceOuterClass {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7311,7 +7047,7 @@ public final class DatasetServiceOuterClass {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7428,18 +7164,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7539,7 +7270,7 @@ public final class DatasetServiceOuterClass {
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7554,17 +7285,42 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOptionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -7574,7 +7330,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -7594,7 +7350,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -7615,7 +7371,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -7634,7 +7390,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -7648,7 +7404,7 @@ public final class DatasetServiceOuterClass {
        * text-no-spaces
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -7668,14 +7424,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
@@ -7686,7 +7442,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -7702,7 +7458,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
@@ -7716,7 +7472,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -7734,7 +7490,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -7748,7 +7504,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
         
@@ -7756,7 +7512,7 @@ public final class DatasetServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -7767,7 +7523,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 2;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
@@ -7815,7 +7571,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetDatasetTrainingsRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7840,17 +7607,17 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions();
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -7881,56 +7648,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetTrainingsRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder subBuilder = null;
-              if (options_ != null) {
-                subBuilder = options_.toBuilder();
-              }
-              options_ = input.readMessage(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(options_);
-                options_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_GetTrainingsRequest_descriptor;
@@ -7947,7 +7664,7 @@ public final class DatasetServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 1;
     private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -7955,7 +7672,7 @@ public final class DatasetServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -7963,7 +7680,7 @@ public final class DatasetServiceOuterClass {
       return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+     * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
@@ -7987,7 +7704,7 @@ public final class DatasetServiceOuterClass {
       if (options_ != null) {
         output.writeMessage(1, getOptions());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8000,7 +7717,7 @@ public final class DatasetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOptions());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8020,7 +7737,7 @@ public final class DatasetServiceOuterClass {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8035,7 +7752,7 @@ public final class DatasetServiceOuterClass {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8152,18 +7869,13 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8256,7 +7968,7 @@ public final class DatasetServiceOuterClass {
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8271,17 +7983,37 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOptionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -8289,14 +8021,14 @@ public final class DatasetServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions getOptions() {
@@ -8307,7 +8039,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -8323,7 +8055,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
@@ -8337,7 +8069,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
@@ -8355,7 +8087,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -8369,7 +8101,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
         
@@ -8377,7 +8109,7 @@ public final class DatasetServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -8388,7 +8120,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.TrainingRequestOptions options = 1;</code>
+       * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder, asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder> 
@@ -8436,7 +8168,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetTrainingsRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8461,25 +8204,25 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     java.util.List<asgt.v2.type.TrainingOuterClass.Training> 
         getTrainingsList();
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     asgt.v2.type.TrainingOuterClass.Training getTrainings(int index);
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     int getTrainingsCount();
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
         getTrainingsOrBuilderList();
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
         int index);
@@ -8512,56 +8255,6 @@ public final class DatasetServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrainingsResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                trainings_ = new java.util.ArrayList<asgt.v2.type.TrainingOuterClass.Training>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              trainings_.add(
-                  input.readMessage(asgt.v2.type.TrainingOuterClass.Training.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          trainings_ = java.util.Collections.unmodifiableList(trainings_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.DatasetServiceOuterClass.internal_static_asgt_v2_TrainingsResponse_descriptor;
@@ -8578,14 +8271,14 @@ public final class DatasetServiceOuterClass {
     public static final int TRAININGS_FIELD_NUMBER = 1;
     private java.util.List<asgt.v2.type.TrainingOuterClass.Training> trainings_;
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.v2.type.TrainingOuterClass.Training> getTrainingsList() {
       return trainings_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
@@ -8593,21 +8286,21 @@ public final class DatasetServiceOuterClass {
       return trainings_;
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public int getTrainingsCount() {
       return trainings_.size();
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.TrainingOuterClass.Training getTrainings(int index) {
       return trainings_.get(index);
     }
     /**
-     * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+     * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
@@ -8632,7 +8325,7 @@ public final class DatasetServiceOuterClass {
       for (int i = 0; i < trainings_.size(); i++) {
         output.writeMessage(1, trainings_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8645,7 +8338,7 @@ public final class DatasetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, trainings_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8662,7 +8355,7 @@ public final class DatasetServiceOuterClass {
 
       if (!getTrainingsList()
           .equals(other.getTrainingsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8677,7 +8370,7 @@ public final class DatasetServiceOuterClass {
         hash = (37 * hash) + TRAININGS_FIELD_NUMBER;
         hash = (53 * hash) + getTrainingsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8794,29 +8487,24 @@ public final class DatasetServiceOuterClass {
 
       // Construct using asgt.v2.DatasetServiceOuterClass.TrainingsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTrainingsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (trainingsBuilder_ == null) {
           trainings_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          trainings_ = null;
           trainingsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -8927,7 +8615,7 @@ public final class DatasetServiceOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8942,17 +8630,43 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.DatasetServiceOuterClass.TrainingsResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                asgt.v2.type.TrainingOuterClass.Training m =
+                    input.readMessage(
+                        asgt.v2.type.TrainingOuterClass.Training.parser(),
+                        extensionRegistry);
+                if (trainingsBuilder_ == null) {
+                  ensureTrainingsIsMutable();
+                  trainings_.add(m);
+                } else {
+                  trainingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.DatasetServiceOuterClass.TrainingsResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -8970,7 +8684,7 @@ public final class DatasetServiceOuterClass {
           asgt.v2.type.TrainingOuterClass.Training, asgt.v2.type.TrainingOuterClass.Training.Builder, asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> trainingsBuilder_;
 
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public java.util.List<asgt.v2.type.TrainingOuterClass.Training> getTrainingsList() {
         if (trainingsBuilder_ == null) {
@@ -8980,7 +8694,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public int getTrainingsCount() {
         if (trainingsBuilder_ == null) {
@@ -8990,7 +8704,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training getTrainings(int index) {
         if (trainingsBuilder_ == null) {
@@ -9000,7 +8714,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder setTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training value) {
@@ -9017,7 +8731,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder setTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
@@ -9031,7 +8745,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(asgt.v2.type.TrainingOuterClass.Training value) {
         if (trainingsBuilder_ == null) {
@@ -9047,7 +8761,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training value) {
@@ -9064,7 +8778,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(
           asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
@@ -9078,7 +8792,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addTrainings(
           int index, asgt.v2.type.TrainingOuterClass.Training.Builder builderForValue) {
@@ -9092,7 +8806,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder addAllTrainings(
           java.lang.Iterable<? extends asgt.v2.type.TrainingOuterClass.Training> values) {
@@ -9107,7 +8821,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder clearTrainings() {
         if (trainingsBuilder_ == null) {
@@ -9120,7 +8834,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public Builder removeTrainings(int index) {
         if (trainingsBuilder_ == null) {
@@ -9133,14 +8847,14 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training.Builder getTrainingsBuilder(
           int index) {
         return getTrainingsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.TrainingOrBuilder getTrainingsOrBuilder(
           int index) {
@@ -9150,7 +8864,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public java.util.List<? extends asgt.v2.type.TrainingOuterClass.TrainingOrBuilder> 
            getTrainingsOrBuilderList() {
@@ -9161,14 +8875,14 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training.Builder addTrainingsBuilder() {
         return getTrainingsFieldBuilder().addBuilder(
             asgt.v2.type.TrainingOuterClass.Training.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public asgt.v2.type.TrainingOuterClass.Training.Builder addTrainingsBuilder(
           int index) {
@@ -9176,7 +8890,7 @@ public final class DatasetServiceOuterClass {
             index, asgt.v2.type.TrainingOuterClass.Training.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2.type.Training trainings = 1;</code>
+       * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
        */
       public java.util.List<asgt.v2.type.TrainingOuterClass.Training.Builder> 
            getTrainingsBuilderList() {
@@ -9229,7 +8943,18 @@ public final class DatasetServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrainingsResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -9327,77 +9052,83 @@ public final class DatasetServiceOuterClass {
       "\032\027asgt/type/dataset.proto\032\032asgt/v2/type/" +
       "example.proto\032\033asgt/v2/type/training.pro" +
       "to\032\034google/api/annotations.proto\032\033google" +
-      "/protobuf/empty.proto\032\031options/annotatio" +
-      "ns.proto\032\027validate/validate.proto\"S\n\021Get" +
-      "DatasetRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B" +
-      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\220" +
-      "\001\n\024CreateDatasetRequest\022>\n\014dataset_name\030" +
-      "\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9" +
-      "_.>-]*$\0228\n\004tags\030\002 \003(\tB*\372B\037\222\001\034\"\032r\030(@2\024^[A" +
-      "-Za-z0-9\\s_.>-]*$\372B\005\222\001\002\030\001\"^\n\034CreateOrUpd" +
-      "ateDatasetRequest\022>\n\014dataset_name\030\001 \001(\tB" +
-      "(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*" +
-      "$\"V\n\024DeleteDatasetRequest\022>\n\014dataset_nam" +
-      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
-      "-9_.>-]*$\"N\n\020DeleteTagRequest\022:\n\010tag_nam" +
-      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
-      "-9_.>-]*$\"~\n\024CreateExampleRequest\022>\n\014dat" +
-      "aset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.]" +
-      "[A-Za-z0-9_.>-]*$\022&\n\007example\030\002 \001(\0132\025.asg" +
-      "t.v2.type.Example\"\206\001\n\034CreateOrUpdateExam" +
-      "pleRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(" +
-      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022&\n\007ex" +
-      "ample\030\002 \001(\0132\025.asgt.v2.type.Example\"\204\001\n\031B" +
-      "atchCreateExampleRequest\022>\n\014dataset_name" +
-      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
-      "9_.>-]*$\022\'\n\010examples\030\002 \003(\0132\025.asgt.v2.typ" +
-      "e.Example\"X\n\026TruncateDatasetRequest\022>\n\014d" +
+      "/protobuf/empty.proto\032.protoc-gen-openap" +
+      "iv2/options/annotations.proto\032\027validate/" +
+      "validate.proto\"`\n\021GetDatasetRequest\022K\n\014d" +
       "ataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
-      ".][A-Za-z0-9_.>-]*$\"2\n\026TrainingRequestOp" +
-      "tions\022\030\n\005limit\030\001 \001(\003B\t\372B\006\"\004\030d \000\"\216\001\n\032GetD" +
-      "atasetTrainingsRequest\022>\n\014dataset_name\030\001" +
-      " \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_" +
-      ".>-]*$\0220\n\007options\030\002 \001(\0132\037.asgt.v2.Traini" +
-      "ngRequestOptions\"G\n\023GetTrainingsRequest\022" +
-      "0\n\007options\030\001 \001(\0132\037.asgt.v2.TrainingReque" +
-      "stOptions\">\n\021TrainingsResponse\022)\n\ttraini" +
-      "ngs\030\001 \003(\0132\026.asgt.v2.type.Training2\343\n\n\016Da" +
-      "tasetService\022a\n\nGetDataset\022\032.asgt.v2.Get" +
-      "DatasetRequest\032\022.asgt.type.Dataset\"#\202\323\344\223" +
-      "\002\035\022\033/v2/datasets/{dataset_name}\022_\n\rCreat" +
-      "eDataset\022\035.asgt.v2.CreateDatasetRequest\032" +
-      "\026.google.protobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/dat" +
-      "asets:\001*\022{\n\025CreateOrUpdateDataset\022%.asgt" +
-      ".v2.CreateOrUpdateDatasetRequest\032\026.googl" +
-      "e.protobuf.Empty\"#\202\323\344\223\002\035\032\033/v2/datasets/{" +
-      "dataset_name}\022g\n\rDeleteDataset\022\035.asgt.v2" +
-      ".DeleteDatasetRequest\032\022.asgt.type.Datase" +
-      "t\"#\202\323\344\223\002\035*\033/v2/datasets/{dataset_name}\022[" +
-      "\n\tDeleteTag\022\031.asgt.v2.DeleteTagRequest\032\026" +
-      ".google.protobuf.Empty\"\033\202\323\344\223\002\025*\023/v2/tags" +
-      "/{tag_name}\022w\n\rCreateExample\022\035.asgt.v2.C" +
-      "reateExampleRequest\032\026.google.protobuf.Em" +
-      "pty\"/\202\323\344\223\002)\"$/v2/datasets/{dataset_name}" +
-      "/examples:\001*\022\224\001\n\025CreateOrUpdateExample\022%" +
-      ".asgt.v2.CreateOrUpdateExampleRequest\032\026." +
-      "google.protobuf.Empty\"<\202\323\344\223\0026\0321/v2/datas" +
-      "ets/{dataset_name}/examples/{example.id}" +
-      ":\001*\022\215\001\n\022BatchCreateExample\022\".asgt.v2.Bat" +
-      "chCreateExampleRequest\032\026.google.protobuf" +
-      ".Empty\";\202\323\344\223\0025\"0/v2/datasets/{dataset_na" +
-      "me}/examples:batchCreate:\001*\022x\n\017TruncateD" +
-      "ataset\022\037.asgt.v2.TruncateDatasetRequest\032" +
-      "\026.google.protobuf.Empty\",\202\323\344\223\002&*$/v2/dat" +
-      "asets/{dataset_name}/examples\022\205\001\n\023GetDat" +
-      "asetTrainings\022#.asgt.v2.GetDatasetTraini" +
-      "ngsRequest\032\032.asgt.v2.TrainingsResponse\"-" +
-      "\202\323\344\223\002\'\022%/v2/datasets/{dataset_name}/trai" +
-      "nings\022_\n\014GetTrainings\022\034.asgt.v2.GetTrain" +
-      "ingsRequest\032\032.asgt.v2.TrainingsResponse\"" +
-      "\025\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022BManage data" +
-      "sets and examples used for training Auto" +
-      "Suggest models.B-Z+github.com/e-conomic/" +
-      "vmlapis/gen/go/asgt/v2b\006proto3"
+      ".][A-Za-z0-9_.>-]*$R\013datasetName\"\235\001\n\024Cre" +
+      "ateDatasetRequest\022K\n\014dataset_name\030\001 \001(\tB" +
+      "(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*" +
+      "$R\013datasetName\0228\n\004tags\030\002 \003(\tB$\372B!\222\001\036\030\001\"\032" +
+      "r\030(@2\024^[A-Za-z0-9\\s_.>-]*$R\004tags\"k\n\034Crea" +
+      "teOrUpdateDatasetRequest\022K\n\014dataset_name" +
+      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
+      "9_.>-]*$R\013datasetName\"c\n\024DeleteDatasetRe" +
+      "quest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^" +
+      "[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNa" +
+      "me\"W\n\020DeleteTagRequest\022C\n\010tag_name\030\001 \001(\t" +
+      "B(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]" +
+      "*$R\007tagName\"\224\001\n\024CreateExampleRequest\022K\n\014" +
+      "dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-" +
+      "9.][A-Za-z0-9_.>-]*$R\013datasetName\022/\n\007exa" +
+      "mple\030\002 \001(\0132\025.asgt.v2.type.ExampleR\007examp" +
+      "le\"\234\001\n\034CreateOrUpdateExampleRequest\022K\n\014d" +
+      "ataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
+      ".][A-Za-z0-9_.>-]*$R\013datasetName\022/\n\007exam" +
+      "ple\030\002 \001(\0132\025.asgt.v2.type.ExampleR\007exampl" +
+      "e\"\233\001\n\031BatchCreateExampleRequest\022K\n\014datas" +
+      "et_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
+      "-Za-z0-9_.>-]*$R\013datasetName\0221\n\010examples" +
+      "\030\002 \003(\0132\025.asgt.v2.type.ExampleR\010examples\"" +
+      "e\n\026TruncateDatasetRequest\022K\n\014dataset_nam" +
+      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
+      "-9_.>-]*$R\013datasetName\"9\n\026TrainingReques" +
+      "tOptions\022\037\n\005limit\030\001 \001(\003B\t\372B\006\"\004\030d \000R\005limi" +
+      "t\"\244\001\n\032GetDatasetTrainingsRequest\022K\n\014data" +
+      "set_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
+      "A-Za-z0-9_.>-]*$R\013datasetName\0229\n\007options" +
+      "\030\002 \001(\0132\037.asgt.v2.TrainingRequestOptionsR" +
+      "\007options\"P\n\023GetTrainingsRequest\0229\n\007optio" +
+      "ns\030\001 \001(\0132\037.asgt.v2.TrainingRequestOption" +
+      "sR\007options\"I\n\021TrainingsResponse\0224\n\ttrain" +
+      "ings\030\001 \003(\0132\026.asgt.v2.type.TrainingR\ttrai" +
+      "nings2\343\n\n\016DatasetService\022a\n\nGetDataset\022\032" +
+      ".asgt.v2.GetDatasetRequest\032\022.asgt.type.D" +
+      "ataset\"#\202\323\344\223\002\035\022\033/v2/datasets/{dataset_na" +
+      "me}\022_\n\rCreateDataset\022\035.asgt.v2.CreateDat" +
+      "asetRequest\032\026.google.protobuf.Empty\"\027\202\323\344" +
+      "\223\002\021:\001*\"\014/v2/datasets\022{\n\025CreateOrUpdateDa" +
+      "taset\022%.asgt.v2.CreateOrUpdateDatasetReq" +
+      "uest\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\033/v" +
+      "2/datasets/{dataset_name}\022g\n\rDeleteDatas" +
+      "et\022\035.asgt.v2.DeleteDatasetRequest\032\022.asgt" +
+      ".type.Dataset\"#\202\323\344\223\002\035*\033/v2/datasets/{dat" +
+      "aset_name}\022[\n\tDeleteTag\022\031.asgt.v2.Delete" +
+      "TagRequest\032\026.google.protobuf.Empty\"\033\202\323\344\223" +
+      "\002\025*\023/v2/tags/{tag_name}\022w\n\rCreateExample" +
+      "\022\035.asgt.v2.CreateExampleRequest\032\026.google" +
+      ".protobuf.Empty\"/\202\323\344\223\002):\001*\"$/v2/datasets" +
+      "/{dataset_name}/examples\022\224\001\n\025CreateOrUpd" +
+      "ateExample\022%.asgt.v2.CreateOrUpdateExamp" +
+      "leRequest\032\026.google.protobuf.Empty\"<\202\323\344\223\002" +
+      "6:\001*\0321/v2/datasets/{dataset_name}/exampl" +
+      "es/{example.id}\022\215\001\n\022BatchCreateExample\022\"" +
+      ".asgt.v2.BatchCreateExampleRequest\032\026.goo" +
+      "gle.protobuf.Empty\";\202\323\344\223\0025:\001*\"0/v2/datas" +
+      "ets/{dataset_name}/examples:batchCreate\022" +
+      "x\n\017TruncateDataset\022\037.asgt.v2.TruncateDat" +
+      "asetRequest\032\026.google.protobuf.Empty\",\202\323\344" +
+      "\223\002&*$/v2/datasets/{dataset_name}/example" +
+      "s\022\205\001\n\023GetDatasetTrainings\022#.asgt.v2.GetD" +
+      "atasetTrainingsRequest\032\032.asgt.v2.Trainin" +
+      "gsResponse\"-\202\323\344\223\002\'\022%/v2/datasets/{datase" +
+      "t_name}/trainings\022_\n\014GetTrainings\022\034.asgt" +
+      ".v2.GetTrainingsRequest\032\032.asgt.v2.Traini" +
+      "ngsResponse\"\025\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022" +
+      "BManage datasets and examples used for t" +
+      "raining AutoSuggest models.B-Z+github.co" +
+      "m/e-conomic/vmlapis/gen/go/asgt/v2b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

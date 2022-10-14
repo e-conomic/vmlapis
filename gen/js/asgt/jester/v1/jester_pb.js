@@ -2,15 +2,18 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 var asgt_type_data_pb = require('../../../asgt/type/data_pb.js');
 goog.object.extend(proto, asgt_type_data_pb);
@@ -20,8 +23,8 @@ var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
-var options_annotations_pb = require('../../../options/annotations_pb.js');
-goog.object.extend(proto, options_annotations_pb);
+var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js');
+goog.object.extend(proto, protoc$gen$openapiv2_options_annotations_pb);
 goog.exportSymbol('proto.asgt.jester.v1.SuggestionOptions', null, global);
 goog.exportSymbol('proto.asgt.jester.v1.SuggestionRequest', null, global);
 goog.exportSymbol('proto.asgt.jester.v1.SuggestionResponse', null, global);

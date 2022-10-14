@@ -19,40 +19,40 @@ public final class ExampleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     boolean hasData();
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     asgt.type.DataOuterClass.Data getData();
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      */
     asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
         getTargetValuesList();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
         getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
@@ -63,7 +63,7 @@ public final class ExampleOuterClass {
      * feedback. The id should be a string in UUID format.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -73,7 +73,7 @@ public final class ExampleOuterClass {
      * feedback. The id should be a string in UUID format.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -112,75 +112,6 @@ public final class ExampleOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Example(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DataOuterClass.Data.Builder subBuilder = null;
-              if (data_ != null) {
-                subBuilder = data_.toBuilder();
-              }
-              data_ = input.readMessage(asgt.type.DataOuterClass.Data.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(data_);
-                data_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              targetValues_.add(
-                  input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.ExampleOuterClass.internal_static_asgt_type_Example_descriptor;
@@ -197,7 +128,7 @@ public final class ExampleOuterClass {
     public static final int DATA_FIELD_NUMBER = 1;
     private asgt.type.DataOuterClass.Data data_;
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -205,7 +136,7 @@ public final class ExampleOuterClass {
       return data_ != null;
     }
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -213,7 +144,7 @@ public final class ExampleOuterClass {
       return data_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
     }
     /**
-     * <code>.asgt.type.Data data = 1;</code>
+     * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
@@ -223,14 +154,14 @@ public final class ExampleOuterClass {
     public static final int TARGET_VALUES_FIELD_NUMBER = 2;
     private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
@@ -238,21 +169,21 @@ public final class ExampleOuterClass {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public int getTargetValuesCount() {
       return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
       return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
@@ -268,7 +199,7 @@ public final class ExampleOuterClass {
      * feedback. The id should be a string in UUID format.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -290,7 +221,7 @@ public final class ExampleOuterClass {
      * feedback. The id should be a string in UUID format.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -328,10 +259,10 @@ public final class ExampleOuterClass {
       for (int i = 0; i < targetValues_.size(); i++) {
         output.writeMessage(2, targetValues_.get(i));
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -348,10 +279,10 @@ public final class ExampleOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, targetValues_.get(i));
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -375,7 +306,7 @@ public final class ExampleOuterClass {
           .equals(other.getTargetValuesList())) return false;
       if (!getId()
           .equals(other.getId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -396,7 +327,7 @@ public final class ExampleOuterClass {
       }
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -517,19 +448,13 @@ public final class ExampleOuterClass {
 
       // Construct using asgt.type.ExampleOuterClass.Example.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetValuesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -542,10 +467,11 @@ public final class ExampleOuterClass {
         }
         if (targetValuesBuilder_ == null) {
           targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          targetValues_ = null;
           targetValuesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         id_ = "";
 
         return this;
@@ -671,7 +597,7 @@ public final class ExampleOuterClass {
           id_ = other.id_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -686,17 +612,55 @@ public final class ExampleOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.ExampleOuterClass.Example parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                asgt.type.TargetValueOuterClass.TargetValue m =
+                    input.readMessage(
+                        asgt.type.TargetValueOuterClass.TargetValue.parser(),
+                        extensionRegistry);
+                if (targetValuesBuilder_ == null) {
+                  ensureTargetValuesIsMutable();
+                  targetValues_.add(m);
+                } else {
+                  targetValuesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.ExampleOuterClass.Example) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -705,14 +669,14 @@ public final class ExampleOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> dataBuilder_;
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       public asgt.type.DataOuterClass.Data getData() {
@@ -723,7 +687,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder setData(asgt.type.DataOuterClass.Data value) {
         if (dataBuilder_ == null) {
@@ -739,7 +703,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder setData(
           asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -753,7 +717,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder mergeData(asgt.type.DataOuterClass.Data value) {
         if (dataBuilder_ == null) {
@@ -771,7 +735,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder clearData() {
         if (dataBuilder_ == null) {
@@ -785,7 +749,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public asgt.type.DataOuterClass.Data.Builder getDataBuilder() {
         
@@ -793,7 +757,7 @@ public final class ExampleOuterClass {
         return getDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
         if (dataBuilder_ != null) {
@@ -804,7 +768,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Data data = 1;</code>
+       * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> 
@@ -833,7 +797,7 @@ public final class ExampleOuterClass {
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
         if (targetValuesBuilder_ == null) {
@@ -843,7 +807,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public int getTargetValuesCount() {
         if (targetValuesBuilder_ == null) {
@@ -853,7 +817,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -863,7 +827,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
@@ -880,7 +844,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -894,7 +858,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
         if (targetValuesBuilder_ == null) {
@@ -910,7 +874,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
@@ -927,7 +891,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -941,7 +905,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -955,7 +919,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
@@ -970,7 +934,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder clearTargetValues() {
         if (targetValuesBuilder_ == null) {
@@ -983,7 +947,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public Builder removeTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -996,14 +960,14 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
         return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
@@ -1013,7 +977,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
            getTargetValuesOrBuilderList() {
@@ -1024,14 +988,14 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
         return getTargetValuesFieldBuilder().addBuilder(
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
@@ -1039,7 +1003,7 @@ public final class ExampleOuterClass {
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
            getTargetValuesBuilderList() {
@@ -1067,7 +1031,7 @@ public final class ExampleOuterClass {
        * feedback. The id should be a string in UUID format.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1088,7 +1052,7 @@ public final class ExampleOuterClass {
        * feedback. The id should be a string in UUID format.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1110,7 +1074,7 @@ public final class ExampleOuterClass {
        * feedback. The id should be a string in UUID format.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1130,7 +1094,7 @@ public final class ExampleOuterClass {
        * feedback. The id should be a string in UUID format.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1145,7 +1109,7 @@ public final class ExampleOuterClass {
        * feedback. The id should be a string in UUID format.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1193,7 +1157,18 @@ public final class ExampleOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Example(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1229,11 +1204,11 @@ public final class ExampleOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027asgt/type/example.proto\022\tasgt.type\032\024as" +
       "gt/type/data.proto\032\034asgt/type/target_val" +
-      "ue.proto\"c\n\007Example\022\035\n\004data\030\001 \001(\0132\017.asgt" +
-      ".type.Data\022-\n\rtarget_values\030\002 \003(\0132\026.asgt" +
-      ".type.TargetValue\022\n\n\002id\030\003 \001(\tB8Z6github." +
-      "com/e-conomic/vmlapis/gen/go/asgt/type;a" +
-      "sgttypeb\006proto3"
+      "ue.proto\"{\n\007Example\022#\n\004data\030\001 \001(\0132\017.asgt" +
+      ".type.DataR\004data\022;\n\rtarget_values\030\002 \003(\0132" +
+      "\026.asgt.type.TargetValueR\014targetValues\022\016\n" +
+      "\002id\030\003 \001(\tR\002idB8Z6github.com/e-conomic/vm" +
+      "lapis/gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

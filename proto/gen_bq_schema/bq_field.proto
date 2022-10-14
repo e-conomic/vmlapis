@@ -13,12 +13,12 @@
 // limitations under the License.
 
 syntax = "proto3";
-package gen_bq_schema;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema";
+package gen_bq_schema;
 
 import "google/protobuf/descriptor.proto";
 
+option go_package = "github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema";
 
 // Message containing options related to BigQuery schema generation
 // and management via Protobuf.
@@ -43,9 +43,7 @@ message BigQueryFieldOptions {
   string name = 5;
 }
 
-
 extend google.protobuf.FieldOptions {
   // BigQuery field schema generation options.
   BigQueryFieldOptions bigquery = 1021;
 }
-

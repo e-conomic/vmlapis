@@ -11,6 +11,7 @@ import (
 	"net/mail"
 	"net/url"
 	"regexp"
+	"sort"
 	"strings"
 	"time"
 	"unicode/utf8"
@@ -31,32 +32,76 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+	_ = sort.Sort
 )
 
 // Validate checks the field values on GetDatasetRequest with the rules defined
-// in the proto definition for this message. If any rules are violated, an
-// error is returned.
+// in the proto definition for this message. If any rules are violated, the
+// first error encountered is returned, or nil if there are no violations.
 func (m *GetDatasetRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetDatasetRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetDatasetRequestMultiError, or nil if none found.
+func (m *GetDatasetRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetDatasetRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return GetDatasetRequestValidationError{
+		err := GetDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_GetDatasetRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return GetDatasetRequestValidationError{
+		err := GetDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return GetDatasetRequestMultiError(errors)
 	}
 
 	return nil
 }
+
+// GetDatasetRequestMultiError is an error wrapping multiple validation errors
+// returned by GetDatasetRequest.ValidateAll() if the designated constraints
+// aren't met.
+type GetDatasetRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetDatasetRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetDatasetRequestMultiError) AllErrors() []error { return m }
 
 // GetDatasetRequestValidationError is the validation error returned by
 // GetDatasetRequest.Validate if the designated constraints aren't met.
@@ -118,24 +163,46 @@ var _GetDatasetRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A
 
 // Validate checks the field values on CreateDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *CreateDatasetRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on CreateDatasetRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// CreateDatasetRequestMultiError, or nil if none found.
+func (m *CreateDatasetRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *CreateDatasetRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return CreateDatasetRequestValidationError{
+		err := CreateDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_CreateDatasetRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return CreateDatasetRequestValidationError{
+		err := CreateDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	_CreateDatasetRequest_Tags_Unique := make(map[string]struct{}, len(m.GetTags()))
@@ -144,32 +211,65 @@ func (m *CreateDatasetRequest) Validate() error {
 		_, _ = idx, item
 
 		if _, exists := _CreateDatasetRequest_Tags_Unique[item]; exists {
-			return CreateDatasetRequestValidationError{
+			err := CreateDatasetRequestValidationError{
 				field:  fmt.Sprintf("Tags[%v]", idx),
 				reason: "repeated value must contain unique items",
 			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
 		} else {
 			_CreateDatasetRequest_Tags_Unique[item] = struct{}{}
 		}
 
 		if len(item) > 64 {
-			return CreateDatasetRequestValidationError{
+			err := CreateDatasetRequestValidationError{
 				field:  fmt.Sprintf("Tags[%v]", idx),
 				reason: "value length must be at most 64 bytes",
 			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
 		}
 
 		if !_CreateDatasetRequest_Tags_Pattern.MatchString(item) {
-			return CreateDatasetRequestValidationError{
+			err := CreateDatasetRequestValidationError{
 				field:  fmt.Sprintf("Tags[%v]", idx),
 				reason: "value does not match regex pattern \"^[A-Za-z0-9\\\\s_.>-]*$\"",
 			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
 		}
 
 	}
 
+	if len(errors) > 0 {
+		return CreateDatasetRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// CreateDatasetRequestMultiError is an error wrapping multiple validation
+// errors returned by CreateDatasetRequest.ValidateAll() if the designated
+// constraints aren't met.
+type CreateDatasetRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m CreateDatasetRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m CreateDatasetRequestMultiError) AllErrors() []error { return m }
 
 // CreateDatasetRequestValidationError is the validation error returned by
 // CreateDatasetRequest.Validate if the designated constraints aren't met.
@@ -233,28 +333,71 @@ var _CreateDatasetRequest_Tags_Pattern = regexp.MustCompile("^[A-Za-z0-9\\s_.>-]
 
 // Validate checks the field values on CreateOrUpdateDatasetRequest with the
 // rules defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *CreateOrUpdateDatasetRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on CreateOrUpdateDatasetRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// CreateOrUpdateDatasetRequestMultiError, or nil if none found.
+func (m *CreateOrUpdateDatasetRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *CreateOrUpdateDatasetRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return CreateOrUpdateDatasetRequestValidationError{
+		err := CreateOrUpdateDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_CreateOrUpdateDatasetRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return CreateOrUpdateDatasetRequestValidationError{
+		err := CreateOrUpdateDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return CreateOrUpdateDatasetRequestMultiError(errors)
 	}
 
 	return nil
 }
+
+// CreateOrUpdateDatasetRequestMultiError is an error wrapping multiple
+// validation errors returned by CreateOrUpdateDatasetRequest.ValidateAll() if
+// the designated constraints aren't met.
+type CreateOrUpdateDatasetRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m CreateOrUpdateDatasetRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m CreateOrUpdateDatasetRequestMultiError) AllErrors() []error { return m }
 
 // CreateOrUpdateDatasetRequestValidationError is the validation error returned
 // by CreateOrUpdateDatasetRequest.Validate if the designated constraints
@@ -317,28 +460,71 @@ var _CreateOrUpdateDatasetRequest_DatasetName_Pattern = regexp.MustCompile("^[A-
 
 // Validate checks the field values on DeleteDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *DeleteDatasetRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on DeleteDatasetRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// DeleteDatasetRequestMultiError, or nil if none found.
+func (m *DeleteDatasetRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *DeleteDatasetRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return DeleteDatasetRequestValidationError{
+		err := DeleteDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_DeleteDatasetRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return DeleteDatasetRequestValidationError{
+		err := DeleteDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return DeleteDatasetRequestMultiError(errors)
 	}
 
 	return nil
 }
+
+// DeleteDatasetRequestMultiError is an error wrapping multiple validation
+// errors returned by DeleteDatasetRequest.ValidateAll() if the designated
+// constraints aren't met.
+type DeleteDatasetRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m DeleteDatasetRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m DeleteDatasetRequestMultiError) AllErrors() []error { return m }
 
 // DeleteDatasetRequestValidationError is the validation error returned by
 // DeleteDatasetRequest.Validate if the designated constraints aren't met.
@@ -399,29 +585,72 @@ var _ interface {
 var _DeleteDatasetRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on DeleteTagRequest with the rules defined
-// in the proto definition for this message. If any rules are violated, an
-// error is returned.
+// in the proto definition for this message. If any rules are violated, the
+// first error encountered is returned, or nil if there are no violations.
 func (m *DeleteTagRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on DeleteTagRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// DeleteTagRequestMultiError, or nil if none found.
+func (m *DeleteTagRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *DeleteTagRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetTagName()) > 256 {
-		return DeleteTagRequestValidationError{
+		err := DeleteTagRequestValidationError{
 			field:  "TagName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_DeleteTagRequest_TagName_Pattern.MatchString(m.GetTagName()) {
-		return DeleteTagRequestValidationError{
+		err := DeleteTagRequestValidationError{
 			field:  "TagName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return DeleteTagRequestMultiError(errors)
 	}
 
 	return nil
 }
+
+// DeleteTagRequestMultiError is an error wrapping multiple validation errors
+// returned by DeleteTagRequest.ValidateAll() if the designated constraints
+// aren't met.
+type DeleteTagRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m DeleteTagRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m DeleteTagRequestMultiError) AllErrors() []error { return m }
 
 // DeleteTagRequestValidationError is the validation error returned by
 // DeleteTagRequest.Validate if the designated constraints aren't met.
@@ -481,27 +710,68 @@ var _DeleteTagRequest_TagName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z
 
 // Validate checks the field values on CreateExampleRequest with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *CreateExampleRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on CreateExampleRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// CreateExampleRequestMultiError, or nil if none found.
+func (m *CreateExampleRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *CreateExampleRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return CreateExampleRequestValidationError{
+		err := CreateExampleRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_CreateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return CreateExampleRequestValidationError{
+		err := CreateExampleRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
-	if v, ok := interface{}(m.GetExample()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetExample()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, CreateExampleRequestValidationError{
+					field:  "Example",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, CreateExampleRequestValidationError{
+					field:  "Example",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetExample()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return CreateExampleRequestValidationError{
 				field:  "Example",
@@ -511,8 +781,29 @@ func (m *CreateExampleRequest) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return CreateExampleRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// CreateExampleRequestMultiError is an error wrapping multiple validation
+// errors returned by CreateExampleRequest.ValidateAll() if the designated
+// constraints aren't met.
+type CreateExampleRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m CreateExampleRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m CreateExampleRequestMultiError) AllErrors() []error { return m }
 
 // CreateExampleRequestValidationError is the validation error returned by
 // CreateExampleRequest.Validate if the designated constraints aren't met.
@@ -574,27 +865,68 @@ var _CreateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.
 
 // Validate checks the field values on CreateOrUpdateExampleRequest with the
 // rules defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *CreateOrUpdateExampleRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on CreateOrUpdateExampleRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// CreateOrUpdateExampleRequestMultiError, or nil if none found.
+func (m *CreateOrUpdateExampleRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *CreateOrUpdateExampleRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return CreateOrUpdateExampleRequestValidationError{
+		err := CreateOrUpdateExampleRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_CreateOrUpdateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return CreateOrUpdateExampleRequestValidationError{
+		err := CreateOrUpdateExampleRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
-	if v, ok := interface{}(m.GetExample()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetExample()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, CreateOrUpdateExampleRequestValidationError{
+					field:  "Example",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, CreateOrUpdateExampleRequestValidationError{
+					field:  "Example",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetExample()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return CreateOrUpdateExampleRequestValidationError{
 				field:  "Example",
@@ -604,8 +936,29 @@ func (m *CreateOrUpdateExampleRequest) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return CreateOrUpdateExampleRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// CreateOrUpdateExampleRequestMultiError is an error wrapping multiple
+// validation errors returned by CreateOrUpdateExampleRequest.ValidateAll() if
+// the designated constraints aren't met.
+type CreateOrUpdateExampleRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m CreateOrUpdateExampleRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m CreateOrUpdateExampleRequestMultiError) AllErrors() []error { return m }
 
 // CreateOrUpdateExampleRequestValidationError is the validation error returned
 // by CreateOrUpdateExampleRequest.Validate if the designated constraints
@@ -668,30 +1021,71 @@ var _CreateOrUpdateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-
 
 // Validate checks the field values on BatchCreateExampleRequest with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *BatchCreateExampleRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on BatchCreateExampleRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// BatchCreateExampleRequestMultiError, or nil if none found.
+func (m *BatchCreateExampleRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *BatchCreateExampleRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return BatchCreateExampleRequestValidationError{
+		err := BatchCreateExampleRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_BatchCreateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return BatchCreateExampleRequestValidationError{
+		err := BatchCreateExampleRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	for idx, item := range m.GetExamples() {
 		_, _ = idx, item
 
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, BatchCreateExampleRequestValidationError{
+						field:  fmt.Sprintf("Examples[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, BatchCreateExampleRequestValidationError{
+						field:  fmt.Sprintf("Examples[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return BatchCreateExampleRequestValidationError{
 					field:  fmt.Sprintf("Examples[%v]", idx),
@@ -703,8 +1097,29 @@ func (m *BatchCreateExampleRequest) Validate() error {
 
 	}
 
+	if len(errors) > 0 {
+		return BatchCreateExampleRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// BatchCreateExampleRequestMultiError is an error wrapping multiple validation
+// errors returned by BatchCreateExampleRequest.ValidateAll() if the
+// designated constraints aren't met.
+type BatchCreateExampleRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m BatchCreateExampleRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m BatchCreateExampleRequestMultiError) AllErrors() []error { return m }
 
 // BatchCreateExampleRequestValidationError is the validation error returned by
 // BatchCreateExampleRequest.Validate if the designated constraints aren't met.
@@ -766,28 +1181,71 @@ var _BatchCreateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-
 
 // Validate checks the field values on TruncateDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *TruncateDatasetRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on TruncateDatasetRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// TruncateDatasetRequestMultiError, or nil if none found.
+func (m *TruncateDatasetRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *TruncateDatasetRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return TruncateDatasetRequestValidationError{
+		err := TruncateDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_TruncateDatasetRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return TruncateDatasetRequestValidationError{
+		err := TruncateDatasetRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return TruncateDatasetRequestMultiError(errors)
 	}
 
 	return nil
 }
+
+// TruncateDatasetRequestMultiError is an error wrapping multiple validation
+// errors returned by TruncateDatasetRequest.ValidateAll() if the designated
+// constraints aren't met.
+type TruncateDatasetRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m TruncateDatasetRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m TruncateDatasetRequestMultiError) AllErrors() []error { return m }
 
 // TruncateDatasetRequestValidationError is the validation error returned by
 // TruncateDatasetRequest.Validate if the designated constraints aren't met.
@@ -849,21 +1307,60 @@ var _TruncateDatasetRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-
 
 // Validate checks the field values on TrainingRequestOptions with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *TrainingRequestOptions) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on TrainingRequestOptions with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// TrainingRequestOptionsMultiError, or nil if none found.
+func (m *TrainingRequestOptions) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *TrainingRequestOptions) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if val := m.GetLimit(); val <= 0 || val > 100 {
-		return TrainingRequestOptionsValidationError{
+		err := TrainingRequestOptionsValidationError{
 			field:  "Limit",
 			reason: "value must be inside range (0, 100]",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return TrainingRequestOptionsMultiError(errors)
 	}
 
 	return nil
 }
+
+// TrainingRequestOptionsMultiError is an error wrapping multiple validation
+// errors returned by TrainingRequestOptions.ValidateAll() if the designated
+// constraints aren't met.
+type TrainingRequestOptionsMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m TrainingRequestOptionsMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m TrainingRequestOptionsMultiError) AllErrors() []error { return m }
 
 // TrainingRequestOptionsValidationError is the validation error returned by
 // TrainingRequestOptions.Validate if the designated constraints aren't met.
@@ -923,27 +1420,68 @@ var _ interface {
 
 // Validate checks the field values on GetDatasetTrainingsRequest with the
 // rules defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *GetDatasetTrainingsRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetDatasetTrainingsRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetDatasetTrainingsRequestMultiError, or nil if none found.
+func (m *GetDatasetTrainingsRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetDatasetTrainingsRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	if len(m.GetDatasetName()) > 256 {
-		return GetDatasetTrainingsRequestValidationError{
+		err := GetDatasetTrainingsRequestValidationError{
 			field:  "DatasetName",
 			reason: "value length must be at most 256 bytes",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
 	if !_GetDatasetTrainingsRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
-		return GetDatasetTrainingsRequestValidationError{
+		err := GetDatasetTrainingsRequestValidationError{
 			field:  "DatasetName",
 			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
 		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
 	}
 
-	if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
+	if all {
+		switch v := interface{}(m.GetOptions()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDatasetTrainingsRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDatasetTrainingsRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return GetDatasetTrainingsRequestValidationError{
 				field:  "Options",
@@ -953,8 +1491,29 @@ func (m *GetDatasetTrainingsRequest) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return GetDatasetTrainingsRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// GetDatasetTrainingsRequestMultiError is an error wrapping multiple
+// validation errors returned by GetDatasetTrainingsRequest.ValidateAll() if
+// the designated constraints aren't met.
+type GetDatasetTrainingsRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetDatasetTrainingsRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetDatasetTrainingsRequestMultiError) AllErrors() []error { return m }
 
 // GetDatasetTrainingsRequestValidationError is the validation error returned
 // by GetDatasetTrainingsRequest.Validate if the designated constraints aren't met.
@@ -1016,13 +1575,46 @@ var _GetDatasetTrainingsRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za
 
 // Validate checks the field values on GetTrainingsRequest with the rules
 // defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
+// violated, the first error encountered is returned, or nil if there are no violations.
 func (m *GetTrainingsRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetTrainingsRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetTrainingsRequestMultiError, or nil if none found.
+func (m *GetTrainingsRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetTrainingsRequest) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
+	var errors []error
+
+	if all {
+		switch v := interface{}(m.GetOptions()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetTrainingsRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetTrainingsRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return GetTrainingsRequestValidationError{
 				field:  "Options",
@@ -1032,8 +1624,29 @@ func (m *GetTrainingsRequest) Validate() error {
 		}
 	}
 
+	if len(errors) > 0 {
+		return GetTrainingsRequestMultiError(errors)
+	}
+
 	return nil
 }
+
+// GetTrainingsRequestMultiError is an error wrapping multiple validation
+// errors returned by GetTrainingsRequest.ValidateAll() if the designated
+// constraints aren't met.
+type GetTrainingsRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetTrainingsRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetTrainingsRequestMultiError) AllErrors() []error { return m }
 
 // GetTrainingsRequestValidationError is the validation error returned by
 // GetTrainingsRequest.Validate if the designated constraints aren't met.
@@ -1092,17 +1705,50 @@ var _ interface {
 } = GetTrainingsRequestValidationError{}
 
 // Validate checks the field values on TrainingsResponse with the rules defined
-// in the proto definition for this message. If any rules are violated, an
-// error is returned.
+// in the proto definition for this message. If any rules are violated, the
+// first error encountered is returned, or nil if there are no violations.
 func (m *TrainingsResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on TrainingsResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// TrainingsResponseMultiError, or nil if none found.
+func (m *TrainingsResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *TrainingsResponse) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
 
+	var errors []error
+
 	for idx, item := range m.GetTrainings() {
 		_, _ = idx, item
 
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, TrainingsResponseValidationError{
+						field:  fmt.Sprintf("Trainings[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, TrainingsResponseValidationError{
+						field:  fmt.Sprintf("Trainings[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return TrainingsResponseValidationError{
 					field:  fmt.Sprintf("Trainings[%v]", idx),
@@ -1114,8 +1760,29 @@ func (m *TrainingsResponse) Validate() error {
 
 	}
 
+	if len(errors) > 0 {
+		return TrainingsResponseMultiError(errors)
+	}
+
 	return nil
 }
+
+// TrainingsResponseMultiError is an error wrapping multiple validation errors
+// returned by TrainingsResponse.ValidateAll() if the designated constraints
+// aren't met.
+type TrainingsResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m TrainingsResponseMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m TrainingsResponseMultiError) AllErrors() []error { return m }
 
 // TrainingsResponseValidationError is the validation error returned by
 // TrainingsResponse.Validate if the designated constraints aren't met.

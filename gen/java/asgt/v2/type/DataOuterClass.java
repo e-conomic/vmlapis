@@ -23,7 +23,7 @@ public final class DataOuterClass {
      * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -32,7 +32,7 @@ public final class DataOuterClass {
      * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -70,49 +70,6 @@ public final class DataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Invoice(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Invoice_descriptor;
@@ -133,7 +90,7 @@ public final class DataOuterClass {
      * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -154,7 +111,7 @@ public final class DataOuterClass {
      * Invoice text from the SmartScan product.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -186,10 +143,10 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -198,10 +155,10 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -218,7 +175,7 @@ public final class DataOuterClass {
 
       if (!getText()
           .equals(other.getText())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -231,7 +188,7 @@ public final class DataOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getText().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -352,18 +309,13 @@ public final class DataOuterClass {
 
       // Construct using asgt.v2.type.DataOuterClass.Invoice.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -449,7 +401,7 @@ public final class DataOuterClass {
           text_ = other.text_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -464,17 +416,35 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.type.DataOuterClass.Invoice parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                text_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.type.DataOuterClass.Invoice) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -484,7 +454,7 @@ public final class DataOuterClass {
        * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -504,7 +474,7 @@ public final class DataOuterClass {
        * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -525,7 +495,7 @@ public final class DataOuterClass {
        * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -544,7 +514,7 @@ public final class DataOuterClass {
        * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -558,7 +528,7 @@ public final class DataOuterClass {
        * Invoice text from the SmartScan product.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -606,7 +576,18 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Invoice(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -635,7 +616,7 @@ public final class DataOuterClass {
      * Text of the bank transaction.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -644,7 +625,7 @@ public final class DataOuterClass {
      * Text of the bank transaction.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
@@ -655,7 +636,7 @@ public final class DataOuterClass {
      * Amount of the transaction.
      * </pre>
      *
-     * <code>float amount = 2;</code>
+     * <code>float amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     float getAmount();
@@ -692,54 +673,6 @@ public final class DataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Transaction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            case 21: {
-
-              amount_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Transaction_descriptor;
@@ -760,7 +693,7 @@ public final class DataOuterClass {
      * Text of the bank transaction.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -781,7 +714,7 @@ public final class DataOuterClass {
      * Text of the bank transaction.
      * </pre>
      *
-     * <code>string text = 1;</code>
+     * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -806,7 +739,7 @@ public final class DataOuterClass {
      * Amount of the transaction.
      * </pre>
      *
-     * <code>float amount = 2;</code>
+     * <code>float amount = 2 [json_name = "amount"];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -828,13 +761,13 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         output.writeFloat(2, amount_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -843,14 +776,14 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, amount_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -870,7 +803,7 @@ public final class DataOuterClass {
       if (java.lang.Float.floatToIntBits(getAmount())
           != java.lang.Float.floatToIntBits(
               other.getAmount())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -886,7 +819,7 @@ public final class DataOuterClass {
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getAmount());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1007,18 +940,13 @@ public final class DataOuterClass {
 
       // Construct using asgt.v2.type.DataOuterClass.Transaction.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1110,7 +1038,7 @@ public final class DataOuterClass {
         if (other.getAmount() != 0F) {
           setAmount(other.getAmount());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1125,17 +1053,40 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.type.DataOuterClass.Transaction parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                text_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 21: {
+                amount_ = input.readFloat();
+
+                break;
+              } // case 21
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.type.DataOuterClass.Transaction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1145,7 +1096,7 @@ public final class DataOuterClass {
        * Text of the bank transaction.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -1165,7 +1116,7 @@ public final class DataOuterClass {
        * Text of the bank transaction.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -1186,7 +1137,7 @@ public final class DataOuterClass {
        * Text of the bank transaction.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -1205,7 +1156,7 @@ public final class DataOuterClass {
        * Text of the bank transaction.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -1219,7 +1170,7 @@ public final class DataOuterClass {
        * Text of the bank transaction.
        * </pre>
        *
-       * <code>string text = 1;</code>
+       * <code>string text = 1 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -1241,7 +1192,7 @@ public final class DataOuterClass {
        * Amount of the transaction.
        * </pre>
        *
-       * <code>float amount = 2;</code>
+       * <code>float amount = 2 [json_name = "amount"];</code>
        * @return The amount.
        */
       @java.lang.Override
@@ -1253,7 +1204,7 @@ public final class DataOuterClass {
        * Amount of the transaction.
        * </pre>
        *
-       * <code>float amount = 2;</code>
+       * <code>float amount = 2 [json_name = "amount"];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -1268,7 +1219,7 @@ public final class DataOuterClass {
        * Amount of the transaction.
        * </pre>
        *
-       * <code>float amount = 2;</code>
+       * <code>float amount = 2 [json_name = "amount"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -1310,7 +1261,18 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Transaction(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1339,7 +1301,7 @@ public final class DataOuterClass {
      * Id of the product (item).
      * </pre>
      *
-     * <code>string item_id = 1;</code>
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
      * @return The itemId.
      */
     java.lang.String getItemId();
@@ -1348,7 +1310,7 @@ public final class DataOuterClass {
      * Id of the product (item).
      * </pre>
      *
-     * <code>string item_id = 1;</code>
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
      * @return The bytes for itemId.
      */
     com.google.protobuf.ByteString
@@ -1359,7 +1321,7 @@ public final class DataOuterClass {
      * Text of the invoice line.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
@@ -1368,24 +1330,24 @@ public final class DataOuterClass {
      * Text of the invoice line.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      * @return Whether the issueDate field is set.
      */
     boolean hasIssueDate();
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      * @return The issueDate.
      */
     com.google.protobuf.Timestamp getIssueDate();
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder();
 
@@ -1394,7 +1356,7 @@ public final class DataOuterClass {
      * Supplier of the invoice.
      * </pre>
      *
-     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      * @return Whether the supplier field is set.
      */
     boolean hasSupplier();
@@ -1403,7 +1365,7 @@ public final class DataOuterClass {
      * Supplier of the invoice.
      * </pre>
      *
-     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      * @return The supplier.
      */
     asgt.v2.type.DataOuterClass.Supplier getSupplier();
@@ -1412,7 +1374,7 @@ public final class DataOuterClass {
      * Supplier of the invoice.
      * </pre>
      *
-     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder();
 
@@ -1421,7 +1383,7 @@ public final class DataOuterClass {
      * reference to the customer.
      * </pre>
      *
-     * <code>string customer_ref = 5;</code>
+     * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
      * @return The customerRef.
      */
     java.lang.String getCustomerRef();
@@ -1430,7 +1392,7 @@ public final class DataOuterClass {
      * reference to the customer.
      * </pre>
      *
-     * <code>string customer_ref = 5;</code>
+     * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
      * @return The bytes for customerRef.
      */
     com.google.protobuf.ByteString
@@ -1441,7 +1403,7 @@ public final class DataOuterClass {
      * Amount of the invoice line.
      * </pre>
      *
-     * <code>float amount = 7;</code>
+     * <code>float amount = 7 [json_name = "amount"];</code>
      * @return The amount.
      */
     float getAmount();
@@ -1480,92 +1442,6 @@ public final class DataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private InvoiceLine(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              itemId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (issueDate_ != null) {
-                subBuilder = issueDate_.toBuilder();
-              }
-              issueDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(issueDate_);
-                issueDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              asgt.v2.type.DataOuterClass.Supplier.Builder subBuilder = null;
-              if (supplier_ != null) {
-                subBuilder = supplier_.toBuilder();
-              }
-              supplier_ = input.readMessage(asgt.v2.type.DataOuterClass.Supplier.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(supplier_);
-                supplier_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              customerRef_ = s;
-              break;
-            }
-            case 61: {
-
-              amount_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_InvoiceLine_descriptor;
@@ -1586,7 +1462,7 @@ public final class DataOuterClass {
      * Id of the product (item).
      * </pre>
      *
-     * <code>string item_id = 1;</code>
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
      * @return The itemId.
      */
     @java.lang.Override
@@ -1607,7 +1483,7 @@ public final class DataOuterClass {
      * Id of the product (item).
      * </pre>
      *
-     * <code>string item_id = 1;</code>
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
      * @return The bytes for itemId.
      */
     @java.lang.Override
@@ -1632,7 +1508,7 @@ public final class DataOuterClass {
      * Text of the invoice line.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The text.
      */
     @java.lang.Override
@@ -1653,7 +1529,7 @@ public final class DataOuterClass {
      * Text of the invoice line.
      * </pre>
      *
-     * <code>string text = 2;</code>
+     * <code>string text = 2 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     @java.lang.Override
@@ -1674,7 +1550,7 @@ public final class DataOuterClass {
     public static final int ISSUE_DATE_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp issueDate_;
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      * @return Whether the issueDate field is set.
      */
     @java.lang.Override
@@ -1682,7 +1558,7 @@ public final class DataOuterClass {
       return issueDate_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      * @return The issueDate.
      */
     @java.lang.Override
@@ -1690,7 +1566,7 @@ public final class DataOuterClass {
       return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
     }
     /**
-     * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+     * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
@@ -1704,7 +1580,7 @@ public final class DataOuterClass {
      * Supplier of the invoice.
      * </pre>
      *
-     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      * @return Whether the supplier field is set.
      */
     @java.lang.Override
@@ -1716,7 +1592,7 @@ public final class DataOuterClass {
      * Supplier of the invoice.
      * </pre>
      *
-     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      * @return The supplier.
      */
     @java.lang.Override
@@ -1728,7 +1604,7 @@ public final class DataOuterClass {
      * Supplier of the invoice.
      * </pre>
      *
-     * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+     * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
@@ -1742,7 +1618,7 @@ public final class DataOuterClass {
      * reference to the customer.
      * </pre>
      *
-     * <code>string customer_ref = 5;</code>
+     * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
      * @return The customerRef.
      */
     @java.lang.Override
@@ -1763,7 +1639,7 @@ public final class DataOuterClass {
      * reference to the customer.
      * </pre>
      *
-     * <code>string customer_ref = 5;</code>
+     * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
      * @return The bytes for customerRef.
      */
     @java.lang.Override
@@ -1788,7 +1664,7 @@ public final class DataOuterClass {
      * Amount of the invoice line.
      * </pre>
      *
-     * <code>float amount = 7;</code>
+     * <code>float amount = 7 [json_name = "amount"];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -1810,10 +1686,10 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getItemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, itemId_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
       if (issueDate_ != null) {
@@ -1822,13 +1698,13 @@ public final class DataOuterClass {
       if (supplier_ != null) {
         output.writeMessage(4, getSupplier());
       }
-      if (!getCustomerRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerRef_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, customerRef_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         output.writeFloat(7, amount_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1837,10 +1713,10 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getItemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, itemId_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
       }
       if (issueDate_ != null) {
@@ -1851,14 +1727,14 @@ public final class DataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSupplier());
       }
-      if (!getCustomerRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerRef_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, customerRef_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(7, amount_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1892,7 +1768,7 @@ public final class DataOuterClass {
       if (java.lang.Float.floatToIntBits(getAmount())
           != java.lang.Float.floatToIntBits(
               other.getAmount())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1920,7 +1796,7 @@ public final class DataOuterClass {
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getAmount());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2041,18 +1917,13 @@ public final class DataOuterClass {
 
       // Construct using asgt.v2.type.DataOuterClass.InvoiceLine.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2186,7 +2057,7 @@ public final class DataOuterClass {
         if (other.getAmount() != 0F) {
           setAmount(other.getAmount());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2201,17 +2072,64 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.type.DataOuterClass.InvoiceLine parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                itemId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                text_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getIssueDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getSupplierFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 42: {
+                customerRef_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 61: {
+                amount_ = input.readFloat();
+
+                break;
+              } // case 61
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.type.DataOuterClass.InvoiceLine) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2221,7 +2139,7 @@ public final class DataOuterClass {
        * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 1;</code>
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
        * @return The itemId.
        */
       public java.lang.String getItemId() {
@@ -2241,7 +2159,7 @@ public final class DataOuterClass {
        * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 1;</code>
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
        * @return The bytes for itemId.
        */
       public com.google.protobuf.ByteString
@@ -2262,7 +2180,7 @@ public final class DataOuterClass {
        * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 1;</code>
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
        * @param value The itemId to set.
        * @return This builder for chaining.
        */
@@ -2281,7 +2199,7 @@ public final class DataOuterClass {
        * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 1;</code>
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
@@ -2295,7 +2213,7 @@ public final class DataOuterClass {
        * Id of the product (item).
        * </pre>
        *
-       * <code>string item_id = 1;</code>
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
        * @param value The bytes for itemId to set.
        * @return This builder for chaining.
        */
@@ -2317,7 +2235,7 @@ public final class DataOuterClass {
        * Text of the invoice line.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The text.
        */
       public java.lang.String getText() {
@@ -2337,7 +2255,7 @@ public final class DataOuterClass {
        * Text of the invoice line.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
@@ -2358,7 +2276,7 @@ public final class DataOuterClass {
        * Text of the invoice line.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -2377,7 +2295,7 @@ public final class DataOuterClass {
        * Text of the invoice line.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
@@ -2391,7 +2309,7 @@ public final class DataOuterClass {
        * Text of the invoice line.
        * </pre>
        *
-       * <code>string text = 2;</code>
+       * <code>string text = 2 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -2411,14 +2329,14 @@ public final class DataOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        * @return Whether the issueDate field is set.
        */
       public boolean hasIssueDate() {
         return issueDateBuilder_ != null || issueDate_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        * @return The issueDate.
        */
       public com.google.protobuf.Timestamp getIssueDate() {
@@ -2429,7 +2347,7 @@ public final class DataOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        */
       public Builder setIssueDate(com.google.protobuf.Timestamp value) {
         if (issueDateBuilder_ == null) {
@@ -2445,7 +2363,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        */
       public Builder setIssueDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2459,7 +2377,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        */
       public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
         if (issueDateBuilder_ == null) {
@@ -2477,7 +2395,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        */
       public Builder clearIssueDate() {
         if (issueDateBuilder_ == null) {
@@ -2491,7 +2409,7 @@ public final class DataOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
         
@@ -2499,7 +2417,7 @@ public final class DataOuterClass {
         return getIssueDateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
         if (issueDateBuilder_ != null) {
@@ -2510,7 +2428,7 @@ public final class DataOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp issue_date = 3;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2534,7 +2452,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        * @return Whether the supplier field is set.
        */
       public boolean hasSupplier() {
@@ -2545,7 +2463,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        * @return The supplier.
        */
       public asgt.v2.type.DataOuterClass.Supplier getSupplier() {
@@ -2560,7 +2478,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        */
       public Builder setSupplier(asgt.v2.type.DataOuterClass.Supplier value) {
         if (supplierBuilder_ == null) {
@@ -2580,7 +2498,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        */
       public Builder setSupplier(
           asgt.v2.type.DataOuterClass.Supplier.Builder builderForValue) {
@@ -2598,7 +2516,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        */
       public Builder mergeSupplier(asgt.v2.type.DataOuterClass.Supplier value) {
         if (supplierBuilder_ == null) {
@@ -2620,7 +2538,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        */
       public Builder clearSupplier() {
         if (supplierBuilder_ == null) {
@@ -2638,7 +2556,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        */
       public asgt.v2.type.DataOuterClass.Supplier.Builder getSupplierBuilder() {
         
@@ -2650,7 +2568,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        */
       public asgt.v2.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
         if (supplierBuilder_ != null) {
@@ -2665,7 +2583,7 @@ public final class DataOuterClass {
        * Supplier of the invoice.
        * </pre>
        *
-       * <code>.asgt.v2.type.Supplier supplier = 4;</code>
+       * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Supplier, asgt.v2.type.DataOuterClass.Supplier.Builder, asgt.v2.type.DataOuterClass.SupplierOrBuilder> 
@@ -2687,7 +2605,7 @@ public final class DataOuterClass {
        * reference to the customer.
        * </pre>
        *
-       * <code>string customer_ref = 5;</code>
+       * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
        * @return The customerRef.
        */
       public java.lang.String getCustomerRef() {
@@ -2707,7 +2625,7 @@ public final class DataOuterClass {
        * reference to the customer.
        * </pre>
        *
-       * <code>string customer_ref = 5;</code>
+       * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
        * @return The bytes for customerRef.
        */
       public com.google.protobuf.ByteString
@@ -2728,7 +2646,7 @@ public final class DataOuterClass {
        * reference to the customer.
        * </pre>
        *
-       * <code>string customer_ref = 5;</code>
+       * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
        * @param value The customerRef to set.
        * @return This builder for chaining.
        */
@@ -2747,7 +2665,7 @@ public final class DataOuterClass {
        * reference to the customer.
        * </pre>
        *
-       * <code>string customer_ref = 5;</code>
+       * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerRef() {
@@ -2761,7 +2679,7 @@ public final class DataOuterClass {
        * reference to the customer.
        * </pre>
        *
-       * <code>string customer_ref = 5;</code>
+       * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
        * @param value The bytes for customerRef to set.
        * @return This builder for chaining.
        */
@@ -2783,7 +2701,7 @@ public final class DataOuterClass {
        * Amount of the invoice line.
        * </pre>
        *
-       * <code>float amount = 7;</code>
+       * <code>float amount = 7 [json_name = "amount"];</code>
        * @return The amount.
        */
       @java.lang.Override
@@ -2795,7 +2713,7 @@ public final class DataOuterClass {
        * Amount of the invoice line.
        * </pre>
        *
-       * <code>float amount = 7;</code>
+       * <code>float amount = 7 [json_name = "amount"];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -2810,7 +2728,7 @@ public final class DataOuterClass {
        * Amount of the invoice line.
        * </pre>
        *
-       * <code>float amount = 7;</code>
+       * <code>float amount = 7 [json_name = "amount"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -2852,7 +2770,18 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new InvoiceLine(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2881,7 +2810,7 @@ public final class DataOuterClass {
      * Id of the supplier; not nullable.
      * </pre>
      *
-     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -2890,7 +2819,7 @@ public final class DataOuterClass {
      * Id of the supplier; not nullable.
      * </pre>
      *
-     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -2901,7 +2830,7 @@ public final class DataOuterClass {
      * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2910,7 +2839,7 @@ public final class DataOuterClass {
      * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2921,7 +2850,7 @@ public final class DataOuterClass {
      * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 3;</code>
+     * <code>string global_id = 3 [json_name = "globalId"];</code>
      * @return The globalId.
      */
     java.lang.String getGlobalId();
@@ -2930,7 +2859,7 @@ public final class DataOuterClass {
      * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 3;</code>
+     * <code>string global_id = 3 [json_name = "globalId"];</code>
      * @return The bytes for globalId.
      */
     com.google.protobuf.ByteString
@@ -2966,61 +2895,6 @@ public final class DataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Supplier(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              globalId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.type.DataOuterClass.internal_static_asgt_v2_type_Supplier_descriptor;
@@ -3041,7 +2915,7 @@ public final class DataOuterClass {
      * Id of the supplier; not nullable.
      * </pre>
      *
-     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -3062,7 +2936,7 @@ public final class DataOuterClass {
      * Id of the supplier; not nullable.
      * </pre>
      *
-     * <code>string id = 1 [(.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -3087,7 +2961,7 @@ public final class DataOuterClass {
      * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3108,7 +2982,7 @@ public final class DataOuterClass {
      * Name of the supplier.
      * </pre>
      *
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -3133,7 +3007,7 @@ public final class DataOuterClass {
      * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 3;</code>
+     * <code>string global_id = 3 [json_name = "globalId"];</code>
      * @return The globalId.
      */
     @java.lang.Override
@@ -3154,7 +3028,7 @@ public final class DataOuterClass {
      * Global ID of the supplier.
      * </pre>
      *
-     * <code>string global_id = 3;</code>
+     * <code>string global_id = 3 [json_name = "globalId"];</code>
      * @return The bytes for globalId.
      */
     @java.lang.Override
@@ -3186,16 +3060,16 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getGlobalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, globalId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3204,16 +3078,16 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getGlobalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, globalId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3234,7 +3108,7 @@ public final class DataOuterClass {
           .equals(other.getName())) return false;
       if (!getGlobalId()
           .equals(other.getGlobalId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3251,7 +3125,7 @@ public final class DataOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + GLOBAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGlobalId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3368,18 +3242,13 @@ public final class DataOuterClass {
 
       // Construct using asgt.v2.type.DataOuterClass.Supplier.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3479,7 +3348,7 @@ public final class DataOuterClass {
           globalId_ = other.globalId_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3494,17 +3363,45 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.type.DataOuterClass.Supplier parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                globalId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.type.DataOuterClass.Supplier) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3514,7 +3411,7 @@ public final class DataOuterClass {
        * Id of the supplier; not nullable.
        * </pre>
        *
-       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -3534,7 +3431,7 @@ public final class DataOuterClass {
        * Id of the supplier; not nullable.
        * </pre>
        *
-       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -3555,7 +3452,7 @@ public final class DataOuterClass {
        * Id of the supplier; not nullable.
        * </pre>
        *
-       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -3574,7 +3471,7 @@ public final class DataOuterClass {
        * Id of the supplier; not nullable.
        * </pre>
        *
-       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -3588,7 +3485,7 @@ public final class DataOuterClass {
        * Id of the supplier; not nullable.
        * </pre>
        *
-       * <code>string id = 1 [(.validate.rules) = { ... }</code>
+       * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -3610,7 +3507,7 @@ public final class DataOuterClass {
        * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3630,7 +3527,7 @@ public final class DataOuterClass {
        * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3651,7 +3548,7 @@ public final class DataOuterClass {
        * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3670,7 +3567,7 @@ public final class DataOuterClass {
        * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3684,7 +3581,7 @@ public final class DataOuterClass {
        * Name of the supplier.
        * </pre>
        *
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3706,7 +3603,7 @@ public final class DataOuterClass {
        * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 3;</code>
+       * <code>string global_id = 3 [json_name = "globalId"];</code>
        * @return The globalId.
        */
       public java.lang.String getGlobalId() {
@@ -3726,7 +3623,7 @@ public final class DataOuterClass {
        * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 3;</code>
+       * <code>string global_id = 3 [json_name = "globalId"];</code>
        * @return The bytes for globalId.
        */
       public com.google.protobuf.ByteString
@@ -3747,7 +3644,7 @@ public final class DataOuterClass {
        * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 3;</code>
+       * <code>string global_id = 3 [json_name = "globalId"];</code>
        * @param value The globalId to set.
        * @return This builder for chaining.
        */
@@ -3766,7 +3663,7 @@ public final class DataOuterClass {
        * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 3;</code>
+       * <code>string global_id = 3 [json_name = "globalId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearGlobalId() {
@@ -3780,7 +3677,7 @@ public final class DataOuterClass {
        * Global ID of the supplier.
        * </pre>
        *
-       * <code>string global_id = 3;</code>
+       * <code>string global_id = 3 [json_name = "globalId"];</code>
        * @param value The bytes for globalId to set.
        * @return This builder for chaining.
        */
@@ -3828,7 +3725,18 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Supplier(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3857,7 +3765,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return Whether the transaction field is set.
      */
     boolean hasTransaction();
@@ -3866,7 +3774,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return The transaction.
      */
     asgt.v2.type.DataOuterClass.Transaction getTransaction();
@@ -3875,7 +3783,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     asgt.v2.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder();
 
@@ -3884,7 +3792,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return Whether the invoice field is set.
      */
     boolean hasInvoice();
@@ -3893,7 +3801,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return The invoice.
      */
     asgt.v2.type.DataOuterClass.Invoice getInvoice();
@@ -3902,7 +3810,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     asgt.v2.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder();
 
@@ -3911,7 +3819,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return Whether the invoiceLine field is set.
      */
     boolean hasInvoiceLine();
@@ -3920,7 +3828,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return The invoiceLine.
      */
     asgt.v2.type.DataOuterClass.InvoiceLine getInvoiceLine();
@@ -3929,7 +3837,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder();
 
@@ -3966,85 +3874,6 @@ public final class DataOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private Data(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.v2.type.DataOuterClass.Transaction.Builder subBuilder = null;
-              if (dataStructureCase_ == 1) {
-                subBuilder = ((asgt.v2.type.DataOuterClass.Transaction) dataStructure_).toBuilder();
-              }
-              dataStructure_ =
-                  input.readMessage(asgt.v2.type.DataOuterClass.Transaction.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((asgt.v2.type.DataOuterClass.Transaction) dataStructure_);
-                dataStructure_ = subBuilder.buildPartial();
-              }
-              dataStructureCase_ = 1;
-              break;
-            }
-            case 18: {
-              asgt.v2.type.DataOuterClass.Invoice.Builder subBuilder = null;
-              if (dataStructureCase_ == 2) {
-                subBuilder = ((asgt.v2.type.DataOuterClass.Invoice) dataStructure_).toBuilder();
-              }
-              dataStructure_ =
-                  input.readMessage(asgt.v2.type.DataOuterClass.Invoice.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((asgt.v2.type.DataOuterClass.Invoice) dataStructure_);
-                dataStructure_ = subBuilder.buildPartial();
-              }
-              dataStructureCase_ = 2;
-              break;
-            }
-            case 26: {
-              asgt.v2.type.DataOuterClass.InvoiceLine.Builder subBuilder = null;
-              if (dataStructureCase_ == 3) {
-                subBuilder = ((asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_).toBuilder();
-              }
-              dataStructure_ =
-                  input.readMessage(asgt.v2.type.DataOuterClass.InvoiceLine.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_);
-                dataStructure_ = subBuilder.buildPartial();
-              }
-              dataStructureCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4108,7 +3937,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return Whether the transaction field is set.
      */
     @java.lang.Override
@@ -4120,7 +3949,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return The transaction.
      */
     @java.lang.Override
@@ -4135,7 +3964,7 @@ public final class DataOuterClass {
      * Transaction-level information; at this time used only with bank transactions
      * </pre>
      *
-     * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+     * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
@@ -4151,7 +3980,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return Whether the invoice field is set.
      */
     @java.lang.Override
@@ -4163,7 +3992,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return The invoice.
      */
     @java.lang.Override
@@ -4178,7 +4007,7 @@ public final class DataOuterClass {
      * Invoice-level information for e-invoices and scanned invoices and receipts
      * </pre>
      *
-     * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+     * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
@@ -4194,7 +4023,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return Whether the invoiceLine field is set.
      */
     @java.lang.Override
@@ -4206,7 +4035,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return The invoiceLine.
      */
     @java.lang.Override
@@ -4221,7 +4050,7 @@ public final class DataOuterClass {
      * Line-level information for e-invoices; use one sample per invoice line
      * </pre>
      *
-     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+     * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
@@ -4254,7 +4083,7 @@ public final class DataOuterClass {
       if (dataStructureCase_ == 3) {
         output.writeMessage(3, (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4275,7 +4104,7 @@ public final class DataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (asgt.v2.type.DataOuterClass.InvoiceLine) dataStructure_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4307,7 +4136,7 @@ public final class DataOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4334,7 +4163,7 @@ public final class DataOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4456,22 +4285,26 @@ public final class DataOuterClass {
 
       // Construct using asgt.v2.type.DataOuterClass.Data.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (transactionBuilder_ != null) {
+          transactionBuilder_.clear();
+        }
+        if (invoiceBuilder_ != null) {
+          invoiceBuilder_.clear();
+        }
+        if (invoiceLineBuilder_ != null) {
+          invoiceLineBuilder_.clear();
+        }
         dataStructureCase_ = 0;
         dataStructure_ = null;
         return this;
@@ -4587,7 +4420,7 @@ public final class DataOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4602,17 +4435,51 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.type.DataOuterClass.Data parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTransactionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataStructureCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getInvoiceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataStructureCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getInvoiceLineFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataStructureCase_ = 3;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.type.DataOuterClass.Data) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int dataStructureCase_ = 0;
@@ -4638,7 +4505,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        * @return Whether the transaction field is set.
        */
       @java.lang.Override
@@ -4650,7 +4517,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        * @return The transaction.
        */
       @java.lang.Override
@@ -4672,7 +4539,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder setTransaction(asgt.v2.type.DataOuterClass.Transaction value) {
         if (transactionBuilder_ == null) {
@@ -4692,7 +4559,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder setTransaction(
           asgt.v2.type.DataOuterClass.Transaction.Builder builderForValue) {
@@ -4710,7 +4577,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder mergeTransaction(asgt.v2.type.DataOuterClass.Transaction value) {
         if (transactionBuilder_ == null) {
@@ -4725,8 +4592,9 @@ public final class DataOuterClass {
         } else {
           if (dataStructureCase_ == 1) {
             transactionBuilder_.mergeFrom(value);
+          } else {
+            transactionBuilder_.setMessage(value);
           }
-          transactionBuilder_.setMessage(value);
         }
         dataStructureCase_ = 1;
         return this;
@@ -4736,7 +4604,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder clearTransaction() {
         if (transactionBuilder_ == null) {
@@ -4759,7 +4627,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public asgt.v2.type.DataOuterClass.Transaction.Builder getTransactionBuilder() {
         return getTransactionFieldBuilder().getBuilder();
@@ -4769,7 +4637,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       @java.lang.Override
       public asgt.v2.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
@@ -4787,7 +4655,7 @@ public final class DataOuterClass {
        * Transaction-level information; at this time used only with bank transactions
        * </pre>
        *
-       * <code>.asgt.v2.type.Transaction transaction = 1;</code>
+       * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Transaction, asgt.v2.type.DataOuterClass.Transaction.Builder, asgt.v2.type.DataOuterClass.TransactionOrBuilder> 
@@ -4815,7 +4683,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        * @return Whether the invoice field is set.
        */
       @java.lang.Override
@@ -4827,7 +4695,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        * @return The invoice.
        */
       @java.lang.Override
@@ -4849,7 +4717,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder setInvoice(asgt.v2.type.DataOuterClass.Invoice value) {
         if (invoiceBuilder_ == null) {
@@ -4869,7 +4737,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder setInvoice(
           asgt.v2.type.DataOuterClass.Invoice.Builder builderForValue) {
@@ -4887,7 +4755,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder mergeInvoice(asgt.v2.type.DataOuterClass.Invoice value) {
         if (invoiceBuilder_ == null) {
@@ -4902,8 +4770,9 @@ public final class DataOuterClass {
         } else {
           if (dataStructureCase_ == 2) {
             invoiceBuilder_.mergeFrom(value);
+          } else {
+            invoiceBuilder_.setMessage(value);
           }
-          invoiceBuilder_.setMessage(value);
         }
         dataStructureCase_ = 2;
         return this;
@@ -4913,7 +4782,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder clearInvoice() {
         if (invoiceBuilder_ == null) {
@@ -4936,7 +4805,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public asgt.v2.type.DataOuterClass.Invoice.Builder getInvoiceBuilder() {
         return getInvoiceFieldBuilder().getBuilder();
@@ -4946,7 +4815,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
@@ -4964,7 +4833,7 @@ public final class DataOuterClass {
        * Invoice-level information for e-invoices and scanned invoices and receipts
        * </pre>
        *
-       * <code>.asgt.v2.type.Invoice invoice = 2;</code>
+       * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Invoice, asgt.v2.type.DataOuterClass.Invoice.Builder, asgt.v2.type.DataOuterClass.InvoiceOrBuilder> 
@@ -4992,7 +4861,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        * @return Whether the invoiceLine field is set.
        */
       @java.lang.Override
@@ -5004,7 +4873,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        * @return The invoiceLine.
        */
       @java.lang.Override
@@ -5026,7 +4895,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder setInvoiceLine(asgt.v2.type.DataOuterClass.InvoiceLine value) {
         if (invoiceLineBuilder_ == null) {
@@ -5046,7 +4915,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder setInvoiceLine(
           asgt.v2.type.DataOuterClass.InvoiceLine.Builder builderForValue) {
@@ -5064,7 +4933,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder mergeInvoiceLine(asgt.v2.type.DataOuterClass.InvoiceLine value) {
         if (invoiceLineBuilder_ == null) {
@@ -5079,8 +4948,9 @@ public final class DataOuterClass {
         } else {
           if (dataStructureCase_ == 3) {
             invoiceLineBuilder_.mergeFrom(value);
+          } else {
+            invoiceLineBuilder_.setMessage(value);
           }
-          invoiceLineBuilder_.setMessage(value);
         }
         dataStructureCase_ = 3;
         return this;
@@ -5090,7 +4960,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder clearInvoiceLine() {
         if (invoiceLineBuilder_ == null) {
@@ -5113,7 +4983,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public asgt.v2.type.DataOuterClass.InvoiceLine.Builder getInvoiceLineBuilder() {
         return getInvoiceLineFieldBuilder().getBuilder();
@@ -5123,7 +4993,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       @java.lang.Override
       public asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
@@ -5141,7 +5011,7 @@ public final class DataOuterClass {
        * Line-level information for e-invoices; use one sample per invoice line
        * </pre>
        *
-       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3;</code>
+       * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.InvoiceLine, asgt.v2.type.DataOuterClass.InvoiceLine.Builder, asgt.v2.type.DataOuterClass.InvoiceLineOrBuilder> 
@@ -5194,7 +5064,18 @@ public final class DataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Data(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5250,21 +5131,24 @@ public final class DataOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027asgt/v2/type/data.proto\022\014asgt.v2.type\032" +
       "\037google/protobuf/timestamp.proto\032\027valida" +
-      "te/validate.proto\"\027\n\007Invoice\022\014\n\004text\030\001 \001" +
-      "(\t\"+\n\013Transaction\022\014\n\004text\030\001 \001(\t\022\016\n\006amoun" +
-      "t\030\002 \001(\002\"\254\001\n\013InvoiceLine\022\017\n\007item_id\030\001 \001(\t" +
-      "\022\014\n\004text\030\002 \001(\t\022.\n\nissue_date\030\003 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022(\n\010supplier\030\004 \001(\013" +
-      "2\026.asgt.v2.type.Supplier\022\024\n\014customer_ref" +
-      "\030\005 \001(\t\022\016\n\006amount\030\007 \001(\002\"P\n\010Supplier\022#\n\002id" +
-      "\030\001 \001(\tB\027\372B\024r\022(@2\016^[A-Za-z0-9]*$\022\014\n\004name\030" +
-      "\002 \001(\t\022\021\n\tglobal_id\030\003 \001(\t\"\247\001\n\004Data\0220\n\013tra" +
-      "nsaction\030\001 \001(\0132\031.asgt.v2.type.Transactio" +
-      "nH\000\022(\n\007invoice\030\002 \001(\0132\025.asgt.v2.type.Invo" +
-      "iceH\000\0221\n\014invoice_line\030\003 \001(\0132\031.asgt.v2.ty" +
-      "pe.InvoiceLineH\000B\020\n\016data_structureB;Z9gi" +
-      "thub.com/e-conomic/vmlapis/gen/go/asgt/v" +
-      "2/type;asgttypeb\006proto3"
+      "te/validate.proto\"\035\n\007Invoice\022\022\n\004text\030\001 \001" +
+      "(\tR\004text\"9\n\013Transaction\022\022\n\004text\030\001 \001(\tR\004t" +
+      "ext\022\026\n\006amount\030\002 \001(\002R\006amount\"\344\001\n\013InvoiceL" +
+      "ine\022\027\n\007item_id\030\001 \001(\tR\006itemId\022\022\n\004text\030\002 \001" +
+      "(\tR\004text\0229\n\nissue_date\030\003 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\tissueDate\0222\n\010supplier\030" +
+      "\004 \001(\0132\026.asgt.v2.type.SupplierR\010supplier\022" +
+      "!\n\014customer_ref\030\005 \001(\tR\013customerRef\022\026\n\006am" +
+      "ount\030\007 \001(\002R\006amount\"d\n\010Supplier\022\'\n\002id\030\001 \001" +
+      "(\tB\027\372B\024r\022(@2\016^[A-Za-z0-9]*$R\002id\022\022\n\004name\030" +
+      "\002 \001(\tR\004name\022\033\n\tglobal_id\030\003 \001(\tR\010globalId" +
+      "\"\312\001\n\004Data\022=\n\013transaction\030\001 \001(\0132\031.asgt.v2" +
+      ".type.TransactionH\000R\013transaction\0221\n\007invo" +
+      "ice\030\002 \001(\0132\025.asgt.v2.type.InvoiceH\000R\007invo" +
+      "ice\022>\n\014invoice_line\030\003 \001(\0132\031.asgt.v2.type" +
+      ".InvoiceLineH\000R\013invoiceLineB\020\n\016data_stru" +
+      "ctureB;Z9github.com/e-conomic/vmlapis/ge" +
+      "n/go/asgt/v2/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

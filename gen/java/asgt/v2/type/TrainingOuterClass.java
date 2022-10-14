@@ -23,7 +23,7 @@ public final class TrainingOuterClass {
      * Creation time of the training
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
@@ -32,7 +32,7 @@ public final class TrainingOuterClass {
      * Creation time of the training
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
@@ -41,17 +41,17 @@ public final class TrainingOuterClass {
      * Creation time of the training
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>string status = 2;</code>
+     * <code>string status = 2 [json_name = "status"];</code>
      * @return The status.
      */
     java.lang.String getStatus();
     /**
-     * <code>string status = 2;</code>
+     * <code>string status = 2 [json_name = "status"];</code>
      * @return The bytes for status.
      */
     com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public final class TrainingOuterClass {
      * more information.
      * </pre>
      *
-     * <code>string training_status = 3;</code>
+     * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
      * @return The trainingStatus.
      */
     java.lang.String getTrainingStatus();
@@ -87,7 +87,7 @@ public final class TrainingOuterClass {
      * more information.
      * </pre>
      *
-     * <code>string training_status = 3;</code>
+     * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
      * @return The bytes for trainingStatus.
      */
     com.google.protobuf.ByteString
@@ -98,7 +98,7 @@ public final class TrainingOuterClass {
      * Additional information about the training status.
      * </pre>
      *
-     * <code>string training_status_message = 4;</code>
+     * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
      * @return The trainingStatusMessage.
      */
     java.lang.String getTrainingStatusMessage();
@@ -107,7 +107,7 @@ public final class TrainingOuterClass {
      * Additional information about the training status.
      * </pre>
      *
-     * <code>string training_status_message = 4;</code>
+     * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
      * @return The bytes for trainingStatusMessage.
      */
     com.google.protobuf.ByteString
@@ -118,7 +118,7 @@ public final class TrainingOuterClass {
      * Specifies when did the training finish.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
      * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
@@ -127,7 +127,7 @@ public final class TrainingOuterClass {
      * Specifies when did the training finish.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
      * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
@@ -136,7 +136,7 @@ public final class TrainingOuterClass {
      * Specifies when did the training finish.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
 
@@ -145,7 +145,7 @@ public final class TrainingOuterClass {
      * Specifies dataset the training ran on.
      * </pre>
      *
-     * <code>.asgt.type.Dataset dataset = 6;</code>
+     * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
@@ -154,7 +154,7 @@ public final class TrainingOuterClass {
      * Specifies dataset the training ran on.
      * </pre>
      *
-     * <code>.asgt.type.Dataset dataset = 6;</code>
+     * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
@@ -163,7 +163,7 @@ public final class TrainingOuterClass {
      * Specifies dataset the training ran on.
      * </pre>
      *
-     * <code>.asgt.type.Dataset dataset = 6;</code>
+     * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
@@ -172,7 +172,7 @@ public final class TrainingOuterClass {
      * Specifies when the training is scheduled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
      * @return Whether the scheduleTime field is set.
      */
     boolean hasScheduleTime();
@@ -181,7 +181,7 @@ public final class TrainingOuterClass {
      * Specifies when the training is scheduled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
      * @return The scheduleTime.
      */
     com.google.protobuf.Timestamp getScheduleTime();
@@ -190,7 +190,7 @@ public final class TrainingOuterClass {
      * Specifies when the training is scheduled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getScheduleTimeOrBuilder();
   }
@@ -224,113 +224,6 @@ public final class TrainingOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Training(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createdAt_ != null) {
-                subBuilder = createdAt_.toBuilder();
-              }
-              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(createdAt_);
-                createdAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              status_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              trainingStatus_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              trainingStatusMessage_ = s;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (finishTime_ != null) {
-                subBuilder = finishTime_.toBuilder();
-              }
-              finishTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(finishTime_);
-                finishTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
-              if (dataset_ != null) {
-                subBuilder = dataset_.toBuilder();
-              }
-              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataset_);
-                dataset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (scheduleTime_ != null) {
-                subBuilder = scheduleTime_.toBuilder();
-              }
-              scheduleTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(scheduleTime_);
-                scheduleTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.type.TrainingOuterClass.internal_static_asgt_v2_type_Training_descriptor;
@@ -351,7 +244,7 @@ public final class TrainingOuterClass {
      * Creation time of the training
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     @java.lang.Override
@@ -363,7 +256,7 @@ public final class TrainingOuterClass {
      * Creation time of the training
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     @java.lang.Override
@@ -375,7 +268,7 @@ public final class TrainingOuterClass {
      * Creation time of the training
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -385,7 +278,7 @@ public final class TrainingOuterClass {
     public static final int STATUS_FIELD_NUMBER = 2;
     private volatile java.lang.Object status_;
     /**
-     * <code>string status = 2;</code>
+     * <code>string status = 2 [json_name = "status"];</code>
      * @return The status.
      */
     @java.lang.Override
@@ -402,7 +295,7 @@ public final class TrainingOuterClass {
       }
     }
     /**
-     * <code>string status = 2;</code>
+     * <code>string status = 2 [json_name = "status"];</code>
      * @return The bytes for status.
      */
     @java.lang.Override
@@ -435,7 +328,7 @@ public final class TrainingOuterClass {
      * more information.
      * </pre>
      *
-     * <code>string training_status = 3;</code>
+     * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
      * @return The trainingStatus.
      */
     @java.lang.Override
@@ -464,7 +357,7 @@ public final class TrainingOuterClass {
      * more information.
      * </pre>
      *
-     * <code>string training_status = 3;</code>
+     * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
      * @return The bytes for trainingStatus.
      */
     @java.lang.Override
@@ -489,7 +382,7 @@ public final class TrainingOuterClass {
      * Additional information about the training status.
      * </pre>
      *
-     * <code>string training_status_message = 4;</code>
+     * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
      * @return The trainingStatusMessage.
      */
     @java.lang.Override
@@ -510,7 +403,7 @@ public final class TrainingOuterClass {
      * Additional information about the training status.
      * </pre>
      *
-     * <code>string training_status_message = 4;</code>
+     * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
      * @return The bytes for trainingStatusMessage.
      */
     @java.lang.Override
@@ -535,7 +428,7 @@ public final class TrainingOuterClass {
      * Specifies when did the training finish.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
      * @return Whether the finishTime field is set.
      */
     @java.lang.Override
@@ -547,7 +440,7 @@ public final class TrainingOuterClass {
      * Specifies when did the training finish.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
      * @return The finishTime.
      */
     @java.lang.Override
@@ -559,7 +452,7 @@ public final class TrainingOuterClass {
      * Specifies when did the training finish.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+     * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
@@ -573,7 +466,7 @@ public final class TrainingOuterClass {
      * Specifies dataset the training ran on.
      * </pre>
      *
-     * <code>.asgt.type.Dataset dataset = 6;</code>
+     * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     @java.lang.Override
@@ -585,7 +478,7 @@ public final class TrainingOuterClass {
      * Specifies dataset the training ran on.
      * </pre>
      *
-     * <code>.asgt.type.Dataset dataset = 6;</code>
+     * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -597,7 +490,7 @@ public final class TrainingOuterClass {
      * Specifies dataset the training ran on.
      * </pre>
      *
-     * <code>.asgt.type.Dataset dataset = 6;</code>
+     * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -611,7 +504,7 @@ public final class TrainingOuterClass {
      * Specifies when the training is scheduled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
      * @return Whether the scheduleTime field is set.
      */
     @java.lang.Override
@@ -623,7 +516,7 @@ public final class TrainingOuterClass {
      * Specifies when the training is scheduled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
      * @return The scheduleTime.
      */
     @java.lang.Override
@@ -635,7 +528,7 @@ public final class TrainingOuterClass {
      * Specifies when the training is scheduled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+     * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getScheduleTimeOrBuilder() {
@@ -659,13 +552,13 @@ public final class TrainingOuterClass {
       if (createdAt_ != null) {
         output.writeMessage(1, getCreatedAt());
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
       }
-      if (!getTrainingStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatus_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, trainingStatus_);
       }
-      if (!getTrainingStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatusMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, trainingStatusMessage_);
       }
       if (finishTime_ != null) {
@@ -677,7 +570,7 @@ public final class TrainingOuterClass {
       if (scheduleTime_ != null) {
         output.writeMessage(7, getScheduleTime());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -690,13 +583,13 @@ public final class TrainingOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreatedAt());
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
       }
-      if (!getTrainingStatusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatus_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, trainingStatus_);
       }
-      if (!getTrainingStatusMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trainingStatusMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, trainingStatusMessage_);
       }
       if (finishTime_ != null) {
@@ -711,7 +604,7 @@ public final class TrainingOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getScheduleTime());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -752,7 +645,7 @@ public final class TrainingOuterClass {
         if (!getScheduleTime()
             .equals(other.getScheduleTime())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -785,7 +678,7 @@ public final class TrainingOuterClass {
         hash = (37 * hash) + SCHEDULE_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getScheduleTime().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -902,18 +795,13 @@ public final class TrainingOuterClass {
 
       // Construct using asgt.v2.type.TrainingOuterClass.Training.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1069,7 +957,7 @@ public final class TrainingOuterClass {
         if (other.hasScheduleTime()) {
           mergeScheduleTime(other.getScheduleTime());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1084,17 +972,73 @@ public final class TrainingOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.type.TrainingOuterClass.Training parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                status_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                trainingStatus_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                trainingStatusMessage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getFinishTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDatasetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getScheduleTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.type.TrainingOuterClass.Training) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1106,7 +1050,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
@@ -1117,7 +1061,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1132,7 +1076,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -1152,7 +1096,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1170,7 +1114,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -1192,7 +1136,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1210,7 +1154,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
         
@@ -1222,7 +1166,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -1237,7 +1181,7 @@ public final class TrainingOuterClass {
        * Creation time of the training
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1255,7 +1199,7 @@ public final class TrainingOuterClass {
 
       private java.lang.Object status_ = "";
       /**
-       * <code>string status = 2;</code>
+       * <code>string status = 2 [json_name = "status"];</code>
        * @return The status.
        */
       public java.lang.String getStatus() {
@@ -1271,7 +1215,7 @@ public final class TrainingOuterClass {
         }
       }
       /**
-       * <code>string status = 2;</code>
+       * <code>string status = 2 [json_name = "status"];</code>
        * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
@@ -1288,7 +1232,7 @@ public final class TrainingOuterClass {
         }
       }
       /**
-       * <code>string status = 2;</code>
+       * <code>string status = 2 [json_name = "status"];</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -1303,7 +1247,7 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
-       * <code>string status = 2;</code>
+       * <code>string status = 2 [json_name = "status"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -1313,7 +1257,7 @@ public final class TrainingOuterClass {
         return this;
       }
       /**
-       * <code>string status = 2;</code>
+       * <code>string status = 2 [json_name = "status"];</code>
        * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
@@ -1343,7 +1287,7 @@ public final class TrainingOuterClass {
        * more information.
        * </pre>
        *
-       * <code>string training_status = 3;</code>
+       * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
        * @return The trainingStatus.
        */
       public java.lang.String getTrainingStatus() {
@@ -1371,7 +1315,7 @@ public final class TrainingOuterClass {
        * more information.
        * </pre>
        *
-       * <code>string training_status = 3;</code>
+       * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
        * @return The bytes for trainingStatus.
        */
       public com.google.protobuf.ByteString
@@ -1400,7 +1344,7 @@ public final class TrainingOuterClass {
        * more information.
        * </pre>
        *
-       * <code>string training_status = 3;</code>
+       * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
        * @param value The trainingStatus to set.
        * @return This builder for chaining.
        */
@@ -1427,7 +1371,7 @@ public final class TrainingOuterClass {
        * more information.
        * </pre>
        *
-       * <code>string training_status = 3;</code>
+       * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTrainingStatus() {
@@ -1449,7 +1393,7 @@ public final class TrainingOuterClass {
        * more information.
        * </pre>
        *
-       * <code>string training_status = 3;</code>
+       * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
        * @param value The bytes for trainingStatus to set.
        * @return This builder for chaining.
        */
@@ -1471,7 +1415,7 @@ public final class TrainingOuterClass {
        * Additional information about the training status.
        * </pre>
        *
-       * <code>string training_status_message = 4;</code>
+       * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
        * @return The trainingStatusMessage.
        */
       public java.lang.String getTrainingStatusMessage() {
@@ -1491,7 +1435,7 @@ public final class TrainingOuterClass {
        * Additional information about the training status.
        * </pre>
        *
-       * <code>string training_status_message = 4;</code>
+       * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
        * @return The bytes for trainingStatusMessage.
        */
       public com.google.protobuf.ByteString
@@ -1512,7 +1456,7 @@ public final class TrainingOuterClass {
        * Additional information about the training status.
        * </pre>
        *
-       * <code>string training_status_message = 4;</code>
+       * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
        * @param value The trainingStatusMessage to set.
        * @return This builder for chaining.
        */
@@ -1531,7 +1475,7 @@ public final class TrainingOuterClass {
        * Additional information about the training status.
        * </pre>
        *
-       * <code>string training_status_message = 4;</code>
+       * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTrainingStatusMessage() {
@@ -1545,7 +1489,7 @@ public final class TrainingOuterClass {
        * Additional information about the training status.
        * </pre>
        *
-       * <code>string training_status_message = 4;</code>
+       * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
        * @param value The bytes for trainingStatusMessage to set.
        * @return This builder for chaining.
        */
@@ -1569,7 +1513,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        * @return Whether the finishTime field is set.
        */
       public boolean hasFinishTime() {
@@ -1580,7 +1524,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        * @return The finishTime.
        */
       public com.google.protobuf.Timestamp getFinishTime() {
@@ -1595,7 +1539,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public Builder setFinishTime(com.google.protobuf.Timestamp value) {
         if (finishTimeBuilder_ == null) {
@@ -1615,7 +1559,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public Builder setFinishTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1633,7 +1577,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
         if (finishTimeBuilder_ == null) {
@@ -1655,7 +1599,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public Builder clearFinishTime() {
         if (finishTimeBuilder_ == null) {
@@ -1673,7 +1617,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
         
@@ -1685,7 +1629,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
         if (finishTimeBuilder_ != null) {
@@ -1700,7 +1644,7 @@ public final class TrainingOuterClass {
        * Specifies when did the training finish.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp finish_time = 5;</code>
+       * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1724,7 +1668,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
@@ -1735,7 +1679,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
@@ -1750,7 +1694,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1770,7 +1714,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -1788,7 +1732,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1810,7 +1754,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -1828,7 +1772,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -1840,7 +1784,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -1855,7 +1799,7 @@ public final class TrainingOuterClass {
        * Specifies dataset the training ran on.
        * </pre>
        *
-       * <code>.asgt.type.Dataset dataset = 6;</code>
+       * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -1879,7 +1823,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        * @return Whether the scheduleTime field is set.
        */
       public boolean hasScheduleTime() {
@@ -1890,7 +1834,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        * @return The scheduleTime.
        */
       public com.google.protobuf.Timestamp getScheduleTime() {
@@ -1905,7 +1849,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public Builder setScheduleTime(com.google.protobuf.Timestamp value) {
         if (scheduleTimeBuilder_ == null) {
@@ -1925,7 +1869,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public Builder setScheduleTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1943,7 +1887,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public Builder mergeScheduleTime(com.google.protobuf.Timestamp value) {
         if (scheduleTimeBuilder_ == null) {
@@ -1965,7 +1909,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public Builder clearScheduleTime() {
         if (scheduleTimeBuilder_ == null) {
@@ -1983,7 +1927,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getScheduleTimeBuilder() {
         
@@ -1995,7 +1939,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getScheduleTimeOrBuilder() {
         if (scheduleTimeBuilder_ != null) {
@@ -2010,7 +1954,7 @@ public final class TrainingOuterClass {
        * Specifies when the training is scheduled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp schedule_time = 7;</code>
+       * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2058,7 +2002,18 @@ public final class TrainingOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Training(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2094,16 +2049,18 @@ public final class TrainingOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033asgt/v2/type/training.proto\022\014asgt.v2.t" +
       "ype\032\027asgt/type/dataset.proto\032\037google/pro" +
-      "tobuf/timestamp.proto\"\215\002\n\010Training\022.\n\ncr" +
+      "tobuf/timestamp.proto\"\352\002\n\010Training\0229\n\ncr" +
       "eated_at\030\001 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\016\n\006status\030\002 \001(\t\022\027\n\017training_status\030\003 " +
-      "\001(\t\022\037\n\027training_status_message\030\004 \001(\t\022/\n\013" +
-      "finish_time\030\005 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022#\n\007dataset\030\006 \001(\0132\022.asgt.type.Datas" +
-      "et\0221\n\rschedule_time\030\007 \001(\0132\032.google.proto" +
-      "buf.TimestampB;Z9github.com/e-conomic/vm" +
-      "lapis/gen/go/asgt/v2/type;asgttypeb\006prot" +
-      "o3"
+      "mpR\tcreatedAt\022\026\n\006status\030\002 \001(\tR\006status\022\'\n" +
+      "\017training_status\030\003 \001(\tR\016trainingStatus\0226" +
+      "\n\027training_status_message\030\004 \001(\tR\025trainin" +
+      "gStatusMessage\022;\n\013finish_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\nfinishTime\022,\n\007d" +
+      "ataset\030\006 \001(\0132\022.asgt.type.DatasetR\007datase" +
+      "t\022?\n\rschedule_time\030\007 \001(\0132\032.google.protob" +
+      "uf.TimestampR\014scheduleTimeB;Z9github.com" +
+      "/e-conomic/vmlapis/gen/go/asgt/v2/type;a" +
+      "sgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

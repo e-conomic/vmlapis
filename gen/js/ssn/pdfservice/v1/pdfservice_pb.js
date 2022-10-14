@@ -2,15 +2,18 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 goog.exportSymbol('proto.ssn.pdfservice.v1.RasterizePdfRequest', null, global);
 goog.exportSymbol('proto.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace', null, global);
@@ -248,10 +251,10 @@ proto.ssn.pdfservice.v1.RasterizePdfRequest.PageOption = {
 
 /**
  * optional bytes data = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.ssn.pdfservice.v1.RasterizePdfRequest.prototype.getData = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -540,10 +543,10 @@ proto.ssn.pdfservice.v1.RasterizePdfResponse.prototype.setIndex = function(value
 
 /**
  * optional bytes data = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.ssn.pdfservice.v1.RasterizePdfResponse.prototype.getData = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 

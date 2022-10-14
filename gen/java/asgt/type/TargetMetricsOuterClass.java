@@ -19,37 +19,37 @@ public final class TargetMetricsOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The target.
      */
     java.lang.String getTarget();
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The bytes for target.
      */
     com.google.protobuf.ByteString
         getTargetBytes();
 
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> 
         getMetricsList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric getMetrics(int index);
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     int getMetricsCount();
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> 
         getMetricsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
         int index);
@@ -83,62 +83,6 @@ public final class TargetMetricsOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TargetMetrics(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              target_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              metrics_.add(
-                  input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          metrics_ = java.util.Collections.unmodifiableList(metrics_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.type.TargetMetricsOuterClass.internal_static_asgt_type_TargetMetrics_descriptor;
@@ -157,19 +101,19 @@ public final class TargetMetricsOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>float precision = 1;</code>
+       * <code>float precision = 1 [json_name = "precision"];</code>
        * @return The precision.
        */
       float getPrecision();
 
       /**
-       * <code>float confidence = 2;</code>
+       * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       float getConfidence();
 
       /**
-       * <code>float answer_rate = 3;</code>
+       * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @return The answerRate.
        */
       float getAnswerRate();
@@ -201,58 +145,6 @@ public final class TargetMetricsOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Metric(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-
-                precision_ = input.readFloat();
-                break;
-              }
-              case 21: {
-
-                confidence_ = input.readFloat();
-                break;
-              }
-              case 29: {
-
-                answerRate_ = input.readFloat();
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return asgt.type.TargetMetricsOuterClass.internal_static_asgt_type_TargetMetrics_Metric_descriptor;
@@ -269,7 +161,7 @@ public final class TargetMetricsOuterClass {
       public static final int PRECISION_FIELD_NUMBER = 1;
       private float precision_;
       /**
-       * <code>float precision = 1;</code>
+       * <code>float precision = 1 [json_name = "precision"];</code>
        * @return The precision.
        */
       @java.lang.Override
@@ -280,7 +172,7 @@ public final class TargetMetricsOuterClass {
       public static final int CONFIDENCE_FIELD_NUMBER = 2;
       private float confidence_;
       /**
-       * <code>float confidence = 2;</code>
+       * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
       @java.lang.Override
@@ -291,7 +183,7 @@ public final class TargetMetricsOuterClass {
       public static final int ANSWER_RATE_FIELD_NUMBER = 3;
       private float answerRate_;
       /**
-       * <code>float answer_rate = 3;</code>
+       * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @return The answerRate.
        */
       @java.lang.Override
@@ -313,16 +205,16 @@ public final class TargetMetricsOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (precision_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(precision_) != 0) {
           output.writeFloat(1, precision_);
         }
-        if (confidence_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
           output.writeFloat(2, confidence_);
         }
-        if (answerRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(answerRate_) != 0) {
           output.writeFloat(3, answerRate_);
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -331,19 +223,19 @@ public final class TargetMetricsOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (precision_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(precision_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(1, precision_);
         }
-        if (confidence_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(2, confidence_);
         }
-        if (answerRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(answerRate_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(3, answerRate_);
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -367,7 +259,7 @@ public final class TargetMetricsOuterClass {
         if (java.lang.Float.floatToIntBits(getAnswerRate())
             != java.lang.Float.floatToIntBits(
                 other.getAnswerRate())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -387,7 +279,7 @@ public final class TargetMetricsOuterClass {
         hash = (37 * hash) + ANSWER_RATE_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
             getAnswerRate());
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -504,18 +396,13 @@ public final class TargetMetricsOuterClass {
 
         // Construct using asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -612,7 +499,7 @@ public final class TargetMetricsOuterClass {
           if (other.getAnswerRate() != 0F) {
             setAnswerRate(other.getAnswerRate());
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -627,23 +514,51 @@ public final class TargetMetricsOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 13: {
+                  precision_ = input.readFloat();
+
+                  break;
+                } // case 13
+                case 21: {
+                  confidence_ = input.readFloat();
+
+                  break;
+                } // case 21
+                case 29: {
+                  answerRate_ = input.readFloat();
+
+                  break;
+                } // case 29
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
 
         private float precision_ ;
         /**
-         * <code>float precision = 1;</code>
+         * <code>float precision = 1 [json_name = "precision"];</code>
          * @return The precision.
          */
         @java.lang.Override
@@ -651,7 +566,7 @@ public final class TargetMetricsOuterClass {
           return precision_;
         }
         /**
-         * <code>float precision = 1;</code>
+         * <code>float precision = 1 [json_name = "precision"];</code>
          * @param value The precision to set.
          * @return This builder for chaining.
          */
@@ -662,7 +577,7 @@ public final class TargetMetricsOuterClass {
           return this;
         }
         /**
-         * <code>float precision = 1;</code>
+         * <code>float precision = 1 [json_name = "precision"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPrecision() {
@@ -674,7 +589,7 @@ public final class TargetMetricsOuterClass {
 
         private float confidence_ ;
         /**
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @return The confidence.
          */
         @java.lang.Override
@@ -682,7 +597,7 @@ public final class TargetMetricsOuterClass {
           return confidence_;
         }
         /**
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @param value The confidence to set.
          * @return This builder for chaining.
          */
@@ -693,7 +608,7 @@ public final class TargetMetricsOuterClass {
           return this;
         }
         /**
-         * <code>float confidence = 2;</code>
+         * <code>float confidence = 2 [json_name = "confidence"];</code>
          * @return This builder for chaining.
          */
         public Builder clearConfidence() {
@@ -705,7 +620,7 @@ public final class TargetMetricsOuterClass {
 
         private float answerRate_ ;
         /**
-         * <code>float answer_rate = 3;</code>
+         * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
          * @return The answerRate.
          */
         @java.lang.Override
@@ -713,7 +628,7 @@ public final class TargetMetricsOuterClass {
           return answerRate_;
         }
         /**
-         * <code>float answer_rate = 3;</code>
+         * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
          * @param value The answerRate to set.
          * @return This builder for chaining.
          */
@@ -724,7 +639,7 @@ public final class TargetMetricsOuterClass {
           return this;
         }
         /**
-         * <code>float answer_rate = 3;</code>
+         * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAnswerRate() {
@@ -766,7 +681,18 @@ public final class TargetMetricsOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Metric(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -789,7 +715,7 @@ public final class TargetMetricsOuterClass {
     public static final int TARGET_FIELD_NUMBER = 1;
     private volatile java.lang.Object target_;
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The target.
      */
     @java.lang.Override
@@ -806,7 +732,7 @@ public final class TargetMetricsOuterClass {
       }
     }
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [json_name = "target"];</code>
      * @return The bytes for target.
      */
     @java.lang.Override
@@ -827,14 +753,14 @@ public final class TargetMetricsOuterClass {
     public static final int METRICS_FIELD_NUMBER = 2;
     private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> metrics_;
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> getMetricsList() {
       return metrics_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> 
@@ -842,21 +768,21 @@ public final class TargetMetricsOuterClass {
       return metrics_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric getMetrics(int index) {
       return metrics_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+     * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
@@ -878,13 +804,13 @@ public final class TargetMetricsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(target_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, target_);
       }
       for (int i = 0; i < metrics_.size(); i++) {
         output.writeMessage(2, metrics_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -893,14 +819,14 @@ public final class TargetMetricsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(target_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, target_);
       }
       for (int i = 0; i < metrics_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, metrics_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -919,7 +845,7 @@ public final class TargetMetricsOuterClass {
           .equals(other.getTarget())) return false;
       if (!getMetricsList()
           .equals(other.getMetricsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -936,7 +862,7 @@ public final class TargetMetricsOuterClass {
         hash = (37 * hash) + METRICS_FIELD_NUMBER;
         hash = (53 * hash) + getMetricsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1053,19 +979,13 @@ public final class TargetMetricsOuterClass {
 
       // Construct using asgt.type.TargetMetricsOuterClass.TargetMetrics.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetricsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1074,10 +994,11 @@ public final class TargetMetricsOuterClass {
 
         if (metricsBuilder_ == null) {
           metrics_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          metrics_ = null;
           metricsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1193,7 +1114,7 @@ public final class TargetMetricsOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1208,24 +1129,55 @@ public final class TargetMetricsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.type.TargetMetricsOuterClass.TargetMetrics parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                target_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric m =
+                    input.readMessage(
+                        asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.parser(),
+                        extensionRegistry);
+                if (metricsBuilder_ == null) {
+                  ensureMetricsIsMutable();
+                  metrics_.add(m);
+                } else {
+                  metricsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.type.TargetMetricsOuterClass.TargetMetrics) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
       private java.lang.Object target_ = "";
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The target.
        */
       public java.lang.String getTarget() {
@@ -1241,7 +1193,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return The bytes for target.
        */
       public com.google.protobuf.ByteString
@@ -1258,7 +1210,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @param value The target to set.
        * @return This builder for chaining.
        */
@@ -1273,7 +1225,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTarget() {
@@ -1283,7 +1235,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [json_name = "target"];</code>
        * @param value The bytes for target to set.
        * @return This builder for chaining.
        */
@@ -1312,7 +1264,7 @@ public final class TargetMetricsOuterClass {
           asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder, asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> metricsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> getMetricsList() {
         if (metricsBuilder_ == null) {
@@ -1322,7 +1274,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public int getMetricsCount() {
         if (metricsBuilder_ == null) {
@@ -1332,7 +1284,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric getMetrics(int index) {
         if (metricsBuilder_ == null) {
@@ -1342,7 +1294,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder setMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric value) {
@@ -1359,7 +1311,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder setMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder builderForValue) {
@@ -1373,7 +1325,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric value) {
         if (metricsBuilder_ == null) {
@@ -1389,7 +1341,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric value) {
@@ -1406,7 +1358,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder builderForValue) {
@@ -1420,7 +1372,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder builderForValue) {
@@ -1434,7 +1386,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder addAllMetrics(
           java.lang.Iterable<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> values) {
@@ -1449,7 +1401,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder clearMetrics() {
         if (metricsBuilder_ == null) {
@@ -1462,7 +1414,7 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public Builder removeMetrics(int index) {
         if (metricsBuilder_ == null) {
@@ -1475,14 +1427,14 @@ public final class TargetMetricsOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder getMetricsBuilder(
           int index) {
         return getMetricsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
           int index) {
@@ -1492,7 +1444,7 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder> 
            getMetricsOrBuilderList() {
@@ -1503,14 +1455,14 @@ public final class TargetMetricsOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder addMetricsBuilder() {
         return getMetricsFieldBuilder().addBuilder(
             asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder addMetricsBuilder(
           int index) {
@@ -1518,7 +1470,7 @@ public final class TargetMetricsOuterClass {
             index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2;</code>
+       * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder> 
            getMetricsBuilderList() {
@@ -1571,7 +1523,18 @@ public final class TargetMetricsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TargetMetrics(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1611,12 +1574,13 @@ public final class TargetMetricsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036asgt/type/target_metrics.proto\022\tasgt.t" +
-      "ype\"\227\001\n\rTargetMetrics\022\016\n\006target\030\001 \001(\t\0220\n" +
-      "\007metrics\030\002 \003(\0132\037.asgt.type.TargetMetrics" +
-      ".Metric\032D\n\006Metric\022\021\n\tprecision\030\001 \001(\002\022\022\n\n" +
-      "confidence\030\002 \001(\002\022\023\n\013answer_rate\030\003 \001(\002B8Z" +
-      "6github.com/e-conomic/vmlapis/gen/go/asg" +
-      "t/type;asgttypeb\006proto3"
+      "ype\"\313\001\n\rTargetMetrics\022\026\n\006target\030\001 \001(\tR\006t" +
+      "arget\0229\n\007metrics\030\002 \003(\0132\037.asgt.type.Targe" +
+      "tMetrics.MetricR\007metrics\032g\n\006Metric\022\034\n\tpr" +
+      "ecision\030\001 \001(\002R\tprecision\022\036\n\nconfidence\030\002" +
+      " \001(\002R\nconfidence\022\037\n\013answer_rate\030\003 \001(\002R\na" +
+      "nswerRateB8Z6github.com/e-conomic/vmlapi" +
+      "s/gen/go/asgt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

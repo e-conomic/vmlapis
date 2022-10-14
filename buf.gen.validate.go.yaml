@@ -1,0 +1,8 @@
+version: v1
+plugins:
+  - name: validate
+    out: gen/go
+    path: protoc-gen-validate
+    opt:
+      - lang=go
+      - paths=source_relative

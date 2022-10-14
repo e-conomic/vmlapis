@@ -38,9 +38,7 @@ class ModelRegistryServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def GetCurrentModel(self, request, context):
-        """List the most recent versions of a model trained with a specified dataset
-        rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -74,6 +72,7 @@ class ModelRegistry(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -82,7 +81,7 @@ class ModelRegistry(object):
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.RegisterModelRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def GetCurrentModel(request,
@@ -90,6 +89,7 @@ class ModelRegistry(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -98,4 +98,4 @@ class ModelRegistry(object):
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -25,7 +25,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The tableName.
      */
     java.lang.String getTableName();
@@ -35,7 +35,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The bytes for tableName.
      */
     com.google.protobuf.ByteString
@@ -47,7 +47,7 @@ public final class BqTable {
      * not its original/proto field name.
      * </pre>
      *
-     * <code>bool use_json_names = 2;</code>
+     * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
      * @return The useJsonNames.
      */
     boolean getUseJsonNames();
@@ -80,54 +80,6 @@ public final class BqTable {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BigQueryMessageOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              tableName_ = s;
-              break;
-            }
-            case 16: {
-
-              useJsonNames_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return gen_bq_schema.BqTable.internal_static_gen_bq_schema_BigQueryMessageOptions_descriptor;
@@ -149,7 +101,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The tableName.
      */
     @java.lang.Override
@@ -171,7 +123,7 @@ public final class BqTable {
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
-     * <code>string table_name = 1;</code>
+     * <code>string table_name = 1 [json_name = "tableName"];</code>
      * @return The bytes for tableName.
      */
     @java.lang.Override
@@ -197,7 +149,7 @@ public final class BqTable {
      * not its original/proto field name.
      * </pre>
      *
-     * <code>bool use_json_names = 2;</code>
+     * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
      * @return The useJsonNames.
      */
     @java.lang.Override
@@ -219,13 +171,13 @@ public final class BqTable {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTableNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tableName_);
       }
       if (useJsonNames_ != false) {
         output.writeBool(2, useJsonNames_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -234,14 +186,14 @@ public final class BqTable {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTableNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tableName_);
       }
       if (useJsonNames_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, useJsonNames_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -260,7 +212,7 @@ public final class BqTable {
           .equals(other.getTableName())) return false;
       if (getUseJsonNames()
           != other.getUseJsonNames()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -276,7 +228,7 @@ public final class BqTable {
       hash = (37 * hash) + USE_JSON_NAMES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getUseJsonNames());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -393,18 +345,13 @@ public final class BqTable {
 
       // Construct using gen_bq_schema.BqTable.BigQueryMessageOptions.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -496,7 +443,7 @@ public final class BqTable {
         if (other.getUseJsonNames() != false) {
           setUseJsonNames(other.getUseJsonNames());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -511,17 +458,40 @@ public final class BqTable {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        gen_bq_schema.BqTable.BigQueryMessageOptions parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tableName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                useJsonNames_ = input.readBool();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (gen_bq_schema.BqTable.BigQueryMessageOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -532,7 +502,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @return The tableName.
        */
       public java.lang.String getTableName() {
@@ -553,7 +523,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @return The bytes for tableName.
        */
       public com.google.protobuf.ByteString
@@ -575,7 +545,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @param value The tableName to set.
        * @return This builder for chaining.
        */
@@ -595,7 +565,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTableName() {
@@ -610,7 +580,7 @@ public final class BqTable {
        * If not blank, indicates the message is a type of record to be stored into BigQuery.
        * </pre>
        *
-       * <code>string table_name = 1;</code>
+       * <code>string table_name = 1 [json_name = "tableName"];</code>
        * @param value The bytes for tableName to set.
        * @return This builder for chaining.
        */
@@ -633,7 +603,7 @@ public final class BqTable {
        * not its original/proto field name.
        * </pre>
        *
-       * <code>bool use_json_names = 2;</code>
+       * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
        * @return The useJsonNames.
        */
       @java.lang.Override
@@ -646,7 +616,7 @@ public final class BqTable {
        * not its original/proto field name.
        * </pre>
        *
-       * <code>bool use_json_names = 2;</code>
+       * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
        * @param value The useJsonNames to set.
        * @return This builder for chaining.
        */
@@ -662,7 +632,7 @@ public final class BqTable {
        * not its original/proto field name.
        * </pre>
        *
-       * <code>bool use_json_names = 2;</code>
+       * <code>bool use_json_names = 2 [json_name = "useJsonNames"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUseJsonNames() {
@@ -704,7 +674,18 @@ public final class BqTable {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BigQueryMessageOptions(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -757,12 +738,13 @@ public final class BqTable {
     java.lang.String[] descriptorData = {
       "\n\034gen_bq_schema/bq_table.proto\022\rgen_bq_s" +
       "chema\032 google/protobuf/descriptor.proto\"" +
-      "D\n\026BigQueryMessageOptions\022\022\n\ntable_name\030" +
-      "\001 \001(\t\022\026\n\016use_json_names\030\002 \001(\010:^\n\rbigquer" +
-      "y_opts\022\037.google.protobuf.MessageOptions\030" +
-      "\375\007 \001(\0132%.gen_bq_schema.BigQueryMessageOp" +
-      "tionsBAZ?github.com/e-conomic/vmlapis/ge" +
-      "n/go/gen_bq_schema;gen_bq_schemab\006proto3"
+      "]\n\026BigQueryMessageOptions\022\035\n\ntable_name\030" +
+      "\001 \001(\tR\ttableName\022$\n\016use_json_names\030\002 \001(\010" +
+      "R\014useJsonNames:l\n\rbigquery_opts\022\037.google" +
+      ".protobuf.MessageOptions\030\375\007 \001(\0132%.gen_bq" +
+      "_schema.BigQueryMessageOptionsR\014bigquery" +
+      "OptsBAZ?github.com/e-conomic/vmlapis/gen" +
+      "/go/gen_bq_schema;gen_bq_schemab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

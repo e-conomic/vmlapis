@@ -19,47 +19,47 @@ public final class ModelRegistryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return Whether the revision field is set.
      */
     boolean hasRevision();
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return The revision.
      */
     asgt.type.RevisionOuterClass.Revision getRevision();
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      */
     asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder();
 
     /**
-     * <code>int64 model_version = 3;</code>
+     * <code>int64 model_version = 3 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     long getModelVersion();
 
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     int getMetricsCount();
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     boolean containsMetrics(
         java.lang.String key);
@@ -70,71 +70,71 @@ public final class ModelRegistryOuterClass {
     java.util.Map<java.lang.String, java.lang.Integer>
     getMetrics();
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     java.util.Map<java.lang.String, java.lang.Integer>
     getMetricsMap();
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
 
     int getMetricsOrDefault(
         java.lang.String key,
         int defaultValue);
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
 
     int getMetricsOrThrow(
         java.lang.String key);
 
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> 
         getTargetMetricsList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index);
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     int getTargetMetricsCount();
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
         getTargetMetricsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
      * @return The enum numeric value on the wire for inputType.
      */
     int getInputTypeValue();
     /**
-     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
      * @return The inputType.
      */
     asgt.type.ModelOuterClass.Model.InputType getInputType();
 
     /**
-     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
      * @return Whether the trainStatistics field is set.
      */
     boolean hasTrainStatistics();
     /**
-     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
      * @return The trainStatistics.
      */
     asgt.type.TrainStatisticsOuterClass.TrainStatistics getTrainStatistics();
     /**
-     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
      */
     asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder getTrainStatisticsOrBuilder();
   }
@@ -167,119 +167,6 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RegisterModelRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
-              if (dataset_ != null) {
-                subBuilder = dataset_.toBuilder();
-              }
-              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataset_);
-                dataset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              asgt.type.RevisionOuterClass.Revision.Builder subBuilder = null;
-              if (revision_ != null) {
-                subBuilder = revision_.toBuilder();
-              }
-              revision_ = input.readMessage(asgt.type.RevisionOuterClass.Revision.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(revision_);
-                revision_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-
-              modelVersion_ = input.readInt64();
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metrics_ = com.google.protobuf.MapField.newMapField(
-                    MetricsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
-              metrics__ = input.readMessage(
-                  MetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              metrics_.getMutableMap().put(
-                  metrics__.getKey(), metrics__.getValue());
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                targetMetrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targetMetrics_.add(
-                  input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-
-              inputType_ = rawValue;
-              break;
-            }
-            case 58: {
-              asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder subBuilder = null;
-              if (trainStatistics_ != null) {
-                subBuilder = trainStatistics_.toBuilder();
-              }
-              trainStatistics_ = input.readMessage(asgt.type.TrainStatisticsOuterClass.TrainStatistics.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trainStatistics_);
-                trainStatistics_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor;
@@ -308,7 +195,7 @@ public final class ModelRegistryOuterClass {
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     @java.lang.Override
@@ -316,7 +203,7 @@ public final class ModelRegistryOuterClass {
       return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -324,7 +211,7 @@ public final class ModelRegistryOuterClass {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -334,7 +221,7 @@ public final class ModelRegistryOuterClass {
     public static final int REVISION_FIELD_NUMBER = 2;
     private asgt.type.RevisionOuterClass.Revision revision_;
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return Whether the revision field is set.
      */
     @java.lang.Override
@@ -342,7 +229,7 @@ public final class ModelRegistryOuterClass {
       return revision_ != null;
     }
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      * @return The revision.
      */
     @java.lang.Override
@@ -350,7 +237,7 @@ public final class ModelRegistryOuterClass {
       return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
     }
     /**
-     * <code>.asgt.type.Revision revision = 2;</code>
+     * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
      */
     @java.lang.Override
     public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
@@ -360,7 +247,7 @@ public final class ModelRegistryOuterClass {
     public static final int MODEL_VERSION_FIELD_NUMBER = 3;
     private long modelVersion_;
     /**
-     * <code>int64 model_version = 3;</code>
+     * <code>int64 model_version = 3 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
      */
     @java.lang.Override
@@ -395,13 +282,13 @@ public final class ModelRegistryOuterClass {
       return internalGetMetrics().getMap().size();
     }
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
 
     @java.lang.Override
     public boolean containsMetrics(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetrics().getMap().containsKey(key);
     }
     /**
@@ -413,7 +300,7 @@ public final class ModelRegistryOuterClass {
       return getMetricsMap();
     }
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     @java.lang.Override
 
@@ -421,26 +308,26 @@ public final class ModelRegistryOuterClass {
       return internalGetMetrics().getMap();
     }
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     @java.lang.Override
 
     public int getMetricsOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetMetrics().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     @java.lang.Override
 
     public int getMetricsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetMetrics().getMap();
       if (!map.containsKey(key)) {
@@ -452,14 +339,14 @@ public final class ModelRegistryOuterClass {
     public static final int TARGET_METRICS_FIELD_NUMBER = 5;
     private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> targetMetrics_;
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getTargetMetricsList() {
       return targetMetrics_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
@@ -467,21 +354,21 @@ public final class ModelRegistryOuterClass {
       return targetMetrics_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     @java.lang.Override
     public int getTargetMetricsCount() {
       return targetMetrics_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index) {
       return targetMetrics_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
      */
     @java.lang.Override
     public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
@@ -492,14 +379,14 @@ public final class ModelRegistryOuterClass {
     public static final int INPUT_TYPE_FIELD_NUMBER = 6;
     private int inputType_;
     /**
-     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
      * @return The enum numeric value on the wire for inputType.
      */
     @java.lang.Override public int getInputTypeValue() {
       return inputType_;
     }
     /**
-     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
      * @return The inputType.
      */
     @java.lang.Override public asgt.type.ModelOuterClass.Model.InputType getInputType() {
@@ -511,7 +398,7 @@ public final class ModelRegistryOuterClass {
     public static final int TRAIN_STATISTICS_FIELD_NUMBER = 7;
     private asgt.type.TrainStatisticsOuterClass.TrainStatistics trainStatistics_;
     /**
-     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
      * @return Whether the trainStatistics field is set.
      */
     @java.lang.Override
@@ -519,7 +406,7 @@ public final class ModelRegistryOuterClass {
       return trainStatistics_ != null;
     }
     /**
-     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
      * @return The trainStatistics.
      */
     @java.lang.Override
@@ -527,7 +414,7 @@ public final class ModelRegistryOuterClass {
       return trainStatistics_ == null ? asgt.type.TrainStatisticsOuterClass.TrainStatistics.getDefaultInstance() : trainStatistics_;
     }
     /**
-     * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+     * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
      */
     @java.lang.Override
     public asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder getTrainStatisticsOrBuilder() {
@@ -572,7 +459,7 @@ public final class ModelRegistryOuterClass {
       if (trainStatistics_ != null) {
         output.writeMessage(7, getTrainStatistics());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -615,7 +502,7 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getTrainStatistics());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -652,7 +539,7 @@ public final class ModelRegistryOuterClass {
         if (!getTrainStatistics()
             .equals(other.getTrainStatistics())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -688,7 +575,7 @@ public final class ModelRegistryOuterClass {
         hash = (37 * hash) + TRAIN_STATISTICS_FIELD_NUMBER;
         hash = (53 * hash) + getTrainStatistics().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -827,19 +714,13 @@ public final class ModelRegistryOuterClass {
 
       // Construct using asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetMetricsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -861,10 +742,11 @@ public final class ModelRegistryOuterClass {
         internalGetMutableMetrics().clear();
         if (targetMetricsBuilder_ == null) {
           targetMetrics_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          targetMetrics_ = null;
           targetMetricsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         inputType_ = 0;
 
         if (trainStatisticsBuilder_ == null) {
@@ -1019,7 +901,7 @@ public final class ModelRegistryOuterClass {
         if (other.hasTrainStatistics()) {
           mergeTrainStatistics(other.getTrainStatistics());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1034,17 +916,82 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatasetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRevisionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 24: {
+                modelVersion_ = input.readInt64();
+
+                break;
+              } // case 24
+              case 34: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+                metrics__ = input.readMessage(
+                    MetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMetrics().getMutableMap().put(
+                    metrics__.getKey(), metrics__.getValue());
+                break;
+              } // case 34
+              case 42: {
+                asgt.type.TargetMetricsOuterClass.TargetMetrics m =
+                    input.readMessage(
+                        asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(),
+                        extensionRegistry);
+                if (targetMetricsBuilder_ == null) {
+                  ensureTargetMetricsIsMutable();
+                  targetMetrics_.add(m);
+                } else {
+                  targetMetricsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 48: {
+                inputType_ = input.readEnum();
+
+                break;
+              } // case 48
+              case 58: {
+                input.readMessage(
+                    getTrainStatisticsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1053,14 +1000,14 @@ public final class ModelRegistryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
@@ -1071,7 +1018,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1087,7 +1034,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -1101,7 +1048,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -1119,7 +1066,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -1133,7 +1080,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -1141,7 +1088,7 @@ public final class ModelRegistryOuterClass {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -1152,7 +1099,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -1172,14 +1119,14 @@ public final class ModelRegistryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> revisionBuilder_;
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        * @return Whether the revision field is set.
        */
       public boolean hasRevision() {
         return revisionBuilder_ != null || revision_ != null;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        * @return The revision.
        */
       public asgt.type.RevisionOuterClass.Revision getRevision() {
@@ -1190,7 +1137,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder setRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
@@ -1206,7 +1153,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder setRevision(
           asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
@@ -1220,7 +1167,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
@@ -1238,7 +1185,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder clearRevision() {
         if (revisionBuilder_ == null) {
@@ -1252,7 +1199,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
         
@@ -1260,7 +1207,7 @@ public final class ModelRegistryOuterClass {
         return getRevisionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
         if (revisionBuilder_ != null) {
@@ -1271,7 +1218,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Revision revision = 2;</code>
+       * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> 
@@ -1289,7 +1236,7 @@ public final class ModelRegistryOuterClass {
 
       private long modelVersion_ ;
       /**
-       * <code>int64 model_version = 3;</code>
+       * <code>int64 model_version = 3 [json_name = "modelVersion"];</code>
        * @return The modelVersion.
        */
       @java.lang.Override
@@ -1297,7 +1244,7 @@ public final class ModelRegistryOuterClass {
         return modelVersion_;
       }
       /**
-       * <code>int64 model_version = 3;</code>
+       * <code>int64 model_version = 3 [json_name = "modelVersion"];</code>
        * @param value The modelVersion to set.
        * @return This builder for chaining.
        */
@@ -1308,7 +1255,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>int64 model_version = 3;</code>
+       * <code>int64 model_version = 3 [json_name = "modelVersion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
@@ -1345,13 +1292,13 @@ public final class ModelRegistryOuterClass {
         return internalGetMetrics().getMap().size();
       }
       /**
-       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
 
       @java.lang.Override
       public boolean containsMetrics(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetrics().getMap().containsKey(key);
       }
       /**
@@ -1363,7 +1310,7 @@ public final class ModelRegistryOuterClass {
         return getMetricsMap();
       }
       /**
-       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
       @java.lang.Override
 
@@ -1371,26 +1318,26 @@ public final class ModelRegistryOuterClass {
         return internalGetMetrics().getMap();
       }
       /**
-       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
       @java.lang.Override
 
       public int getMetricsOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetMetrics().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
       @java.lang.Override
 
       public int getMetricsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetMetrics().getMap();
         if (!map.containsKey(key)) {
@@ -1405,12 +1352,12 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
 
       public Builder removeMetrics(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetrics().getMutableMap()
             .remove(key);
         return this;
@@ -1424,19 +1371,19 @@ public final class ModelRegistryOuterClass {
         return internalGetMutableMetrics().getMutableMap();
       }
       /**
-       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
       public Builder putMetrics(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableMetrics().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
 
       public Builder putAllMetrics(
@@ -1459,7 +1406,7 @@ public final class ModelRegistryOuterClass {
           asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> targetMetricsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getTargetMetricsList() {
         if (targetMetricsBuilder_ == null) {
@@ -1469,7 +1416,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public int getTargetMetricsCount() {
         if (targetMetricsBuilder_ == null) {
@@ -1479,7 +1426,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index) {
         if (targetMetricsBuilder_ == null) {
@@ -1489,7 +1436,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder setTargetMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
@@ -1506,7 +1453,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder setTargetMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
@@ -1520,7 +1467,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder addTargetMetrics(asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
         if (targetMetricsBuilder_ == null) {
@@ -1536,7 +1483,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder addTargetMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
@@ -1553,7 +1500,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder addTargetMetrics(
           asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
@@ -1567,7 +1514,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder addTargetMetrics(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
@@ -1581,7 +1528,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder addAllTargetMetrics(
           java.lang.Iterable<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics> values) {
@@ -1596,7 +1543,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder clearTargetMetrics() {
         if (targetMetricsBuilder_ == null) {
@@ -1609,7 +1556,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public Builder removeTargetMetrics(int index) {
         if (targetMetricsBuilder_ == null) {
@@ -1622,14 +1569,14 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder getTargetMetricsBuilder(
           int index) {
         return getTargetMetricsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
           int index) {
@@ -1639,7 +1586,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
            getTargetMetricsOrBuilderList() {
@@ -1650,14 +1597,14 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addTargetMetricsBuilder() {
         return getTargetMetricsFieldBuilder().addBuilder(
             asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addTargetMetricsBuilder(
           int index) {
@@ -1665,7 +1612,7 @@ public final class ModelRegistryOuterClass {
             index, asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder> 
            getTargetMetricsBuilderList() {
@@ -1688,14 +1635,14 @@ public final class ModelRegistryOuterClass {
 
       private int inputType_ = 0;
       /**
-       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
        * @return The enum numeric value on the wire for inputType.
        */
       @java.lang.Override public int getInputTypeValue() {
         return inputType_;
       }
       /**
-       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
        * @param value The enum numeric value on the wire for inputType to set.
        * @return This builder for chaining.
        */
@@ -1706,7 +1653,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
        * @return The inputType.
        */
       @java.lang.Override
@@ -1716,7 +1663,7 @@ public final class ModelRegistryOuterClass {
         return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
        * @param value The inputType to set.
        * @return This builder for chaining.
        */
@@ -1730,7 +1677,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
        * @return This builder for chaining.
        */
       public Builder clearInputType() {
@@ -1744,14 +1691,14 @@ public final class ModelRegistryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.TrainStatisticsOuterClass.TrainStatistics, asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder, asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder> trainStatisticsBuilder_;
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        * @return Whether the trainStatistics field is set.
        */
       public boolean hasTrainStatistics() {
         return trainStatisticsBuilder_ != null || trainStatistics_ != null;
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        * @return The trainStatistics.
        */
       public asgt.type.TrainStatisticsOuterClass.TrainStatistics getTrainStatistics() {
@@ -1762,7 +1709,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public Builder setTrainStatistics(asgt.type.TrainStatisticsOuterClass.TrainStatistics value) {
         if (trainStatisticsBuilder_ == null) {
@@ -1778,7 +1725,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public Builder setTrainStatistics(
           asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder builderForValue) {
@@ -1792,7 +1739,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public Builder mergeTrainStatistics(asgt.type.TrainStatisticsOuterClass.TrainStatistics value) {
         if (trainStatisticsBuilder_ == null) {
@@ -1810,7 +1757,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public Builder clearTrainStatistics() {
         if (trainStatisticsBuilder_ == null) {
@@ -1824,7 +1771,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder getTrainStatisticsBuilder() {
         
@@ -1832,7 +1779,7 @@ public final class ModelRegistryOuterClass {
         return getTrainStatisticsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder getTrainStatisticsOrBuilder() {
         if (trainStatisticsBuilder_ != null) {
@@ -1843,7 +1790,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.TrainStatistics train_statistics = 7;</code>
+       * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.TrainStatisticsOuterClass.TrainStatistics, asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder, asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder> 
@@ -1891,7 +1838,18 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RegisterModelRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1916,17 +1874,17 @@ public final class ModelRegistryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
   }
@@ -1957,56 +1915,6 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetCurrentModelRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
-              if (dataset_ != null) {
-                subBuilder = dataset_.toBuilder();
-              }
-              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dataset_);
-                dataset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor;
@@ -2023,7 +1931,7 @@ public final class ModelRegistryOuterClass {
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return Whether the dataset field is set.
      */
     @java.lang.Override
@@ -2031,7 +1939,7 @@ public final class ModelRegistryOuterClass {
       return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
     @java.lang.Override
@@ -2039,7 +1947,7 @@ public final class ModelRegistryOuterClass {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 1;</code>
+     * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
@@ -2063,7 +1971,7 @@ public final class ModelRegistryOuterClass {
       if (dataset_ != null) {
         output.writeMessage(1, getDataset());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2076,7 +1984,7 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataset());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2096,7 +2004,7 @@ public final class ModelRegistryOuterClass {
         if (!getDataset()
             .equals(other.getDataset())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2111,7 +2019,7 @@ public final class ModelRegistryOuterClass {
         hash = (37 * hash) + DATASET_FIELD_NUMBER;
         hash = (53 * hash) + getDataset().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2228,18 +2136,13 @@ public final class ModelRegistryOuterClass {
 
       // Construct using asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2332,7 +2235,7 @@ public final class ModelRegistryOuterClass {
         if (other.hasDataset()) {
           mergeDataset(other.getDataset());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2347,17 +2250,37 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatasetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2365,14 +2288,14 @@ public final class ModelRegistryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
@@ -2383,7 +2306,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -2399,7 +2322,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -2413,7 +2336,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -2431,7 +2354,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -2445,7 +2368,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -2453,7 +2376,7 @@ public final class ModelRegistryOuterClass {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -2464,7 +2387,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 1;</code>
+       * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -2512,7 +2435,18 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetCurrentModelRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2537,17 +2471,17 @@ public final class ModelRegistryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Model model = 1;</code>
+     * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 1;</code>
+     * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 1;</code>
+     * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
@@ -2578,56 +2512,6 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetCurrentModelResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
-              if (model_ != null) {
-                subBuilder = model_.toBuilder();
-              }
-              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(model_);
-                model_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_GetCurrentModelResponse_descriptor;
@@ -2644,7 +2528,7 @@ public final class ModelRegistryOuterClass {
     public static final int MODEL_FIELD_NUMBER = 1;
     private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 1;</code>
+     * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -2652,7 +2536,7 @@ public final class ModelRegistryOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 1;</code>
+     * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -2660,7 +2544,7 @@ public final class ModelRegistryOuterClass {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 1;</code>
+     * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -2684,7 +2568,7 @@ public final class ModelRegistryOuterClass {
       if (model_ != null) {
         output.writeMessage(1, getModel());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2697,7 +2581,7 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getModel());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2717,7 +2601,7 @@ public final class ModelRegistryOuterClass {
         if (!getModel()
             .equals(other.getModel())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2732,7 +2616,7 @@ public final class ModelRegistryOuterClass {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + getModel().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2849,18 +2733,13 @@ public final class ModelRegistryOuterClass {
 
       // Construct using asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2953,7 +2832,7 @@ public final class ModelRegistryOuterClass {
         if (other.hasModel()) {
           mergeModel(other.getModel());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2968,17 +2847,37 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2986,14 +2885,14 @@ public final class ModelRegistryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -3004,7 +2903,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -3020,7 +2919,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -3034,7 +2933,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -3052,7 +2951,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -3066,7 +2965,7 @@ public final class ModelRegistryOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -3074,7 +2973,7 @@ public final class ModelRegistryOuterClass {
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -3085,7 +2984,7 @@ public final class ModelRegistryOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 1;</code>
+       * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -3133,7 +3032,18 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetCurrentModelResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3187,28 +3097,31 @@ public final class ModelRegistryOuterClass {
       "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
       "t/type/revision.proto\032\036asgt/type/target_" +
       "metrics.proto\032 asgt/type/train_statistic" +
-      "s.proto\032\033google/protobuf/empty.proto\"\214\003\n" +
-      "\024RegisterModelRequest\022#\n\007dataset\030\001 \001(\0132\022" +
-      ".asgt.type.Dataset\022%\n\010revision\030\002 \001(\0132\023.a" +
-      "sgt.type.Revision\022\025\n\rmodel_version\030\003 \001(\003" +
-      "\022I\n\007metrics\030\004 \003(\01328.asgt.modelregistry.v" +
-      "1.RegisterModelRequest.MetricsEntry\0220\n\016t" +
-      "arget_metrics\030\005 \003(\0132\030.asgt.type.TargetMe" +
-      "trics\022.\n\ninput_type\030\006 \001(\0162\032.asgt.type.Mo" +
-      "del.InputType\0224\n\020train_statistics\030\007 \001(\0132" +
-      "\032.asgt.type.TrainStatistics\032.\n\014MetricsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\"=\n\026G" +
-      "etCurrentModelRequest\022#\n\007dataset\030\001 \001(\0132\022" +
-      ".asgt.type.Dataset\":\n\027GetCurrentModelRes" +
-      "ponse\022\037\n\005model\030\001 \001(\0132\020.asgt.type.Model2\327" +
-      "\001\n\rModelRegistry\022T\n\rRegisterModel\022+.asgt" +
-      ".modelregistry.v1.RegisterModelRequest\032\026" +
-      ".google.protobuf.Empty\022p\n\017GetCurrentMode" +
-      "l\022-.asgt.modelregistry.v1.GetCurrentMode" +
-      "lRequest\032..asgt.modelregistry.v1.GetCurr" +
-      "entModelResponseBIZGgithub.com/e-conomic" +
-      "/vmlapis/gen/go/asgt/modelregistry/v1;mo" +
-      "delregistryb\006proto3"
+      "s.proto\032\033google/protobuf/empty.proto\"\355\003\n" +
+      "\024RegisterModelRequest\022,\n\007dataset\030\001 \001(\0132\022" +
+      ".asgt.type.DatasetR\007dataset\022/\n\010revision\030" +
+      "\002 \001(\0132\023.asgt.type.RevisionR\010revision\022#\n\r" +
+      "model_version\030\003 \001(\003R\014modelVersion\022R\n\007met" +
+      "rics\030\004 \003(\01328.asgt.modelregistry.v1.Regis" +
+      "terModelRequest.MetricsEntryR\007metrics\022?\n" +
+      "\016target_metrics\030\005 \003(\0132\030.asgt.type.Target" +
+      "MetricsR\rtargetMetrics\0229\n\ninput_type\030\006 \001" +
+      "(\0162\032.asgt.type.Model.InputTypeR\tinputTyp" +
+      "e\022E\n\020train_statistics\030\007 \001(\0132\032.asgt.type." +
+      "TrainStatisticsR\017trainStatistics\032:\n\014Metr" +
+      "icsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
+      "\005R\005value:\0028\001\"F\n\026GetCurrentModelRequest\022," +
+      "\n\007dataset\030\001 \001(\0132\022.asgt.type.DatasetR\007dat" +
+      "aset\"A\n\027GetCurrentModelResponse\022&\n\005model" +
+      "\030\001 \001(\0132\020.asgt.type.ModelR\005model2\327\001\n\rMode" +
+      "lRegistry\022T\n\rRegisterModel\022+.asgt.modelr" +
+      "egistry.v1.RegisterModelRequest\032\026.google" +
+      ".protobuf.Empty\022p\n\017GetCurrentModel\022-.asg" +
+      "t.modelregistry.v1.GetCurrentModelReques" +
+      "t\032..asgt.modelregistry.v1.GetCurrentMode" +
+      "lResponseBIZGgithub.com/e-conomic/vmlapi" +
+      "s/gen/go/asgt/modelregistry/v1;modelregi" +
+      "stryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

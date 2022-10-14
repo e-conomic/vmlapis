@@ -73,6 +73,7 @@ class OcrService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -81,7 +82,7 @@ class OcrService(object):
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def GetTextAnnotation(request,
@@ -89,6 +90,7 @@ class OcrService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -97,4 +99,4 @@ class OcrService(object):
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

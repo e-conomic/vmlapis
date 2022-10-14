@@ -23,7 +23,7 @@ public final class SuggesterServiceOuterClass {
      * Maximum number of suggestions to return per target
      * </pre>
      *
-     * <code>int32 suggest_limit = 1;</code>
+     * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
      * @return The suggestLimit.
      */
     int getSuggestLimit();
@@ -33,7 +33,7 @@ public final class SuggesterServiceOuterClass {
      * Not implemented yet.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
@@ -42,7 +42,7 @@ public final class SuggesterServiceOuterClass {
      * Not implemented yet.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The minConfidence.
      */
     asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
@@ -75,54 +75,6 @@ public final class SuggesterServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SuggestOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              suggestLimit_ = input.readInt32();
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              minConfidence_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.SuggesterServiceOuterClass.internal_static_asgt_v2_SuggestOptions_descriptor;
@@ -143,7 +95,7 @@ public final class SuggesterServiceOuterClass {
      * Maximum number of suggestions to return per target
      * </pre>
      *
-     * <code>int32 suggest_limit = 1;</code>
+     * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
      * @return The suggestLimit.
      */
     @java.lang.Override
@@ -158,7 +110,7 @@ public final class SuggesterServiceOuterClass {
      * Not implemented yet.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     @java.lang.Override public int getMinConfidenceValue() {
@@ -169,7 +121,7 @@ public final class SuggesterServiceOuterClass {
      * Not implemented yet.
      * </pre>
      *
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The minConfidence.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
@@ -198,7 +150,7 @@ public final class SuggesterServiceOuterClass {
       if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         output.writeEnum(2, minConfidence_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -215,7 +167,7 @@ public final class SuggesterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, minConfidence_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -233,7 +185,7 @@ public final class SuggesterServiceOuterClass {
       if (getSuggestLimit()
           != other.getSuggestLimit()) return false;
       if (minConfidence_ != other.minConfidence_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -248,7 +200,7 @@ public final class SuggesterServiceOuterClass {
       hash = (53 * hash) + getSuggestLimit();
       hash = (37 * hash) + MIN_CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + minConfidence_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -365,18 +317,13 @@ public final class SuggesterServiceOuterClass {
 
       // Construct using asgt.v2.SuggesterServiceOuterClass.SuggestOptions.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -467,7 +414,7 @@ public final class SuggesterServiceOuterClass {
         if (other.minConfidence_ != 0) {
           setMinConfidenceValue(other.getMinConfidenceValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -482,17 +429,40 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.SuggesterServiceOuterClass.SuggestOptions parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                suggestLimit_ = input.readInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                minConfidence_ = input.readEnum();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.SuggesterServiceOuterClass.SuggestOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -502,7 +472,7 @@ public final class SuggesterServiceOuterClass {
        * Maximum number of suggestions to return per target
        * </pre>
        *
-       * <code>int32 suggest_limit = 1;</code>
+       * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
        * @return The suggestLimit.
        */
       @java.lang.Override
@@ -514,7 +484,7 @@ public final class SuggesterServiceOuterClass {
        * Maximum number of suggestions to return per target
        * </pre>
        *
-       * <code>int32 suggest_limit = 1;</code>
+       * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
        * @param value The suggestLimit to set.
        * @return This builder for chaining.
        */
@@ -529,7 +499,7 @@ public final class SuggesterServiceOuterClass {
        * Maximum number of suggestions to return per target
        * </pre>
        *
-       * <code>int32 suggest_limit = 1;</code>
+       * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSuggestLimit() {
@@ -545,7 +515,7 @@ public final class SuggesterServiceOuterClass {
        * Not implemented yet.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @return The enum numeric value on the wire for minConfidence.
        */
       @java.lang.Override public int getMinConfidenceValue() {
@@ -556,7 +526,7 @@ public final class SuggesterServiceOuterClass {
        * Not implemented yet.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @param value The enum numeric value on the wire for minConfidence to set.
        * @return This builder for chaining.
        */
@@ -571,7 +541,7 @@ public final class SuggesterServiceOuterClass {
        * Not implemented yet.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @return The minConfidence.
        */
       @java.lang.Override
@@ -585,7 +555,7 @@ public final class SuggesterServiceOuterClass {
        * Not implemented yet.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @param value The minConfidence to set.
        * @return This builder for chaining.
        */
@@ -603,7 +573,7 @@ public final class SuggesterServiceOuterClass {
        * Not implemented yet.
        * </pre>
        *
-       * <code>.asgt.type.Confidence.Level min_confidence = 2 [(.validate.rules) = { ... }</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
@@ -645,7 +615,18 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SuggestOptions(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -674,7 +655,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -683,7 +664,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -694,7 +675,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return Whether the input field is set.
      */
     boolean hasInput();
@@ -703,7 +684,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return The input.
      */
     asgt.v2.type.DataOuterClass.Data getInput();
@@ -712,22 +693,22 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder();
 
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -759,75 +740,6 @@ public final class SuggesterServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SuggestRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 18: {
-              asgt.v2.type.DataOuterClass.Data.Builder subBuilder = null;
-              if (input_ != null) {
-                subBuilder = input_.toBuilder();
-              }
-              input_ = input.readMessage(asgt.v2.type.DataOuterClass.Data.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(input_);
-                input_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder subBuilder = null;
-              if (options_ != null) {
-                subBuilder = options_.toBuilder();
-              }
-              options_ = input.readMessage(asgt.v2.SuggesterServiceOuterClass.SuggestOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(options_);
-                options_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.SuggesterServiceOuterClass.internal_static_asgt_v2_SuggestRequest_descriptor;
@@ -848,7 +760,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -869,7 +781,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -894,7 +806,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return Whether the input field is set.
      */
     @java.lang.Override
@@ -906,7 +818,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return The input.
      */
     @java.lang.Override
@@ -918,7 +830,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>.asgt.v2.type.Data input = 2;</code>
+     * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
@@ -928,7 +840,7 @@ public final class SuggesterServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 3;
     private asgt.v2.SuggesterServiceOuterClass.SuggestOptions options_;
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -936,7 +848,7 @@ public final class SuggesterServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -944,7 +856,7 @@ public final class SuggesterServiceOuterClass {
       return options_ == null ? asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
@@ -965,7 +877,7 @@ public final class SuggesterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       if (input_ != null) {
@@ -974,7 +886,7 @@ public final class SuggesterServiceOuterClass {
       if (options_ != null) {
         output.writeMessage(3, getOptions());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -983,7 +895,7 @@ public final class SuggesterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       if (input_ != null) {
@@ -994,7 +906,7 @@ public final class SuggesterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getOptions());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1021,7 +933,7 @@ public final class SuggesterServiceOuterClass {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1042,7 +954,7 @@ public final class SuggesterServiceOuterClass {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1159,18 +1071,13 @@ public final class SuggesterServiceOuterClass {
 
       // Construct using asgt.v2.SuggesterServiceOuterClass.SuggestRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1284,7 +1191,7 @@ public final class SuggesterServiceOuterClass {
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1299,17 +1206,49 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.SuggesterServiceOuterClass.SuggestRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getInputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getOptionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.SuggesterServiceOuterClass.SuggestRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1319,7 +1258,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -1339,7 +1278,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -1360,7 +1299,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -1379,7 +1318,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -1393,7 +1332,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -1417,7 +1356,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        * @return Whether the input field is set.
        */
       public boolean hasInput() {
@@ -1428,7 +1367,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        * @return The input.
        */
       public asgt.v2.type.DataOuterClass.Data getInput() {
@@ -1443,7 +1382,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder setInput(asgt.v2.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
@@ -1463,7 +1402,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder setInput(
           asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -1481,7 +1420,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder mergeInput(asgt.v2.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
@@ -1503,7 +1442,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder clearInput() {
         if (inputBuilder_ == null) {
@@ -1521,7 +1460,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder getInputBuilder() {
         
@@ -1533,7 +1472,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
         if (inputBuilder_ != null) {
@@ -1548,7 +1487,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>.asgt.v2.type.Data input = 2;</code>
+       * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.type.DataOuterClass.Data, asgt.v2.type.DataOuterClass.Data.Builder, asgt.v2.type.DataOuterClass.DataOrBuilder> 
@@ -1568,14 +1507,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions() {
@@ -1586,7 +1525,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -1602,7 +1541,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder builderForValue) {
@@ -1616,7 +1555,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -1634,7 +1573,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -1648,7 +1587,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder getOptionsBuilder() {
         
@@ -1656,7 +1595,7 @@ public final class SuggesterServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -1667,7 +1606,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> 
@@ -1715,7 +1654,18 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SuggestRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1740,32 +1690,32 @@ public final class SuggesterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return Whether the prediction field is set.
      */
     boolean hasPrediction();
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return The prediction.
      */
     asgt.type.PredictionOuterClass.Prediction getPrediction();
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      */
     asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder();
 
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
@@ -1796,69 +1746,6 @@ public final class SuggesterServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SuggestResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.PredictionOuterClass.Prediction.Builder subBuilder = null;
-              if (prediction_ != null) {
-                subBuilder = prediction_.toBuilder();
-              }
-              prediction_ = input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(prediction_);
-                prediction_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
-              if (model_ != null) {
-                subBuilder = model_.toBuilder();
-              }
-              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(model_);
-                model_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.SuggesterServiceOuterClass.internal_static_asgt_v2_SuggestResponse_descriptor;
@@ -1875,7 +1762,7 @@ public final class SuggesterServiceOuterClass {
     public static final int PREDICTION_FIELD_NUMBER = 1;
     private asgt.type.PredictionOuterClass.Prediction prediction_;
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return Whether the prediction field is set.
      */
     @java.lang.Override
@@ -1883,7 +1770,7 @@ public final class SuggesterServiceOuterClass {
       return prediction_ != null;
     }
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      * @return The prediction.
      */
     @java.lang.Override
@@ -1891,7 +1778,7 @@ public final class SuggesterServiceOuterClass {
       return prediction_ == null ? asgt.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
     }
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
@@ -1901,7 +1788,7 @@ public final class SuggesterServiceOuterClass {
     public static final int MODEL_FIELD_NUMBER = 2;
     private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -1909,7 +1796,7 @@ public final class SuggesterServiceOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -1917,7 +1804,7 @@ public final class SuggesterServiceOuterClass {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -1944,7 +1831,7 @@ public final class SuggesterServiceOuterClass {
       if (model_ != null) {
         output.writeMessage(2, getModel());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1961,7 +1848,7 @@ public final class SuggesterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getModel());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1986,7 +1873,7 @@ public final class SuggesterServiceOuterClass {
         if (!getModel()
             .equals(other.getModel())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2005,7 +1892,7 @@ public final class SuggesterServiceOuterClass {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + getModel().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2122,18 +2009,13 @@ public final class SuggesterServiceOuterClass {
 
       // Construct using asgt.v2.SuggesterServiceOuterClass.SuggestResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2240,7 +2122,7 @@ public final class SuggesterServiceOuterClass {
         if (other.hasModel()) {
           mergeModel(other.getModel());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2255,17 +2137,44 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.SuggesterServiceOuterClass.SuggestResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPredictionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.SuggesterServiceOuterClass.SuggestResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2273,14 +2182,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionBuilder_;
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        * @return Whether the prediction field is set.
        */
       public boolean hasPrediction() {
         return predictionBuilder_ != null || prediction_ != null;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        * @return The prediction.
        */
       public asgt.type.PredictionOuterClass.Prediction getPrediction() {
@@ -2291,7 +2200,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder setPrediction(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionBuilder_ == null) {
@@ -2307,7 +2216,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder setPrediction(
           asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -2321,7 +2230,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder mergePrediction(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionBuilder_ == null) {
@@ -2339,7 +2248,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder clearPrediction() {
         if (predictionBuilder_ == null) {
@@ -2353,7 +2262,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionBuilder() {
         
@@ -2361,7 +2270,7 @@ public final class SuggesterServiceOuterClass {
         return getPredictionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
         if (predictionBuilder_ != null) {
@@ -2372,7 +2281,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> 
@@ -2392,14 +2301,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -2410,7 +2319,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -2426,7 +2335,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -2440,7 +2349,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -2458,7 +2367,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -2472,7 +2381,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -2480,7 +2389,7 @@ public final class SuggesterServiceOuterClass {
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -2491,7 +2400,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -2539,7 +2448,18 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SuggestResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2568,7 +2488,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
@@ -2577,7 +2497,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -2588,7 +2508,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     java.util.List<asgt.v2.type.DataOuterClass.Data> 
         getInputsList();
@@ -2597,7 +2517,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     asgt.v2.type.DataOuterClass.Data getInputs(int index);
     /**
@@ -2605,7 +2525,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     int getInputsCount();
     /**
@@ -2613,7 +2533,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList();
@@ -2622,23 +2542,23 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions();
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder();
   }
@@ -2671,75 +2591,6 @@ public final class SuggesterServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BatchSuggestRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              datasetName_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                inputs_ = new java.util.ArrayList<asgt.v2.type.DataOuterClass.Data>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              inputs_.add(
-                  input.readMessage(asgt.v2.type.DataOuterClass.Data.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder subBuilder = null;
-              if (options_ != null) {
-                subBuilder = options_.toBuilder();
-              }
-              options_ = input.readMessage(asgt.v2.SuggesterServiceOuterClass.SuggestOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(options_);
-                options_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          inputs_ = java.util.Collections.unmodifiableList(inputs_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.SuggesterServiceOuterClass.internal_static_asgt_v2_BatchSuggestRequest_descriptor;
@@ -2760,7 +2611,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -2781,7 +2632,7 @@ public final class SuggesterServiceOuterClass {
      * Name of the dataset to make prediction against
      * </pre>
      *
-     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+     * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -2806,7 +2657,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.v2.type.DataOuterClass.Data> getInputsList() {
@@ -2817,7 +2668,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
@@ -2829,7 +2680,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public int getInputsCount() {
@@ -2840,7 +2691,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.Data getInputs(int index) {
@@ -2851,7 +2702,7 @@ public final class SuggesterServiceOuterClass {
      * Input data to use for prediction
      * </pre>
      *
-     * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
@@ -2862,7 +2713,7 @@ public final class SuggesterServiceOuterClass {
     public static final int OPTIONS_FIELD_NUMBER = 3;
     private asgt.v2.SuggesterServiceOuterClass.SuggestOptions options_;
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -2870,7 +2721,7 @@ public final class SuggesterServiceOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      * @return The options.
      */
     @java.lang.Override
@@ -2878,7 +2729,7 @@ public final class SuggesterServiceOuterClass {
       return options_ == null ? asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2.SuggestOptions options = 3;</code>
+     * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
      */
     @java.lang.Override
     public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
@@ -2899,7 +2750,7 @@ public final class SuggesterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       for (int i = 0; i < inputs_.size(); i++) {
@@ -2908,7 +2759,7 @@ public final class SuggesterServiceOuterClass {
       if (options_ != null) {
         output.writeMessage(3, getOptions());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2917,7 +2768,7 @@ public final class SuggesterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       for (int i = 0; i < inputs_.size(); i++) {
@@ -2928,7 +2779,7 @@ public final class SuggesterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getOptions());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2952,7 +2803,7 @@ public final class SuggesterServiceOuterClass {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2973,7 +2824,7 @@ public final class SuggesterServiceOuterClass {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3090,19 +2941,13 @@ public final class SuggesterServiceOuterClass {
 
       // Construct using asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3111,10 +2956,11 @@ public final class SuggesterServiceOuterClass {
 
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          inputs_ = null;
           inputsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (optionsBuilder_ == null) {
           options_ = null;
         } else {
@@ -3244,7 +3090,7 @@ public final class SuggesterServiceOuterClass {
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3259,17 +3105,55 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                datasetName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                asgt.v2.type.DataOuterClass.Data m =
+                    input.readMessage(
+                        asgt.v2.type.DataOuterClass.Data.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getOptionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3280,7 +3164,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -3300,7 +3184,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -3321,7 +3205,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -3340,7 +3224,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -3354,7 +3238,7 @@ public final class SuggesterServiceOuterClass {
        * Name of the dataset to make prediction against
        * </pre>
        *
-       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
+       * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -3387,7 +3271,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public java.util.List<asgt.v2.type.DataOuterClass.Data> getInputsList() {
         if (inputsBuilder_ == null) {
@@ -3401,7 +3285,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -3415,7 +3299,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3429,7 +3313,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder setInputs(
           int index, asgt.v2.type.DataOuterClass.Data value) {
@@ -3450,7 +3334,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder setInputs(
           int index, asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3468,7 +3352,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(asgt.v2.type.DataOuterClass.Data value) {
         if (inputsBuilder_ == null) {
@@ -3488,7 +3372,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           int index, asgt.v2.type.DataOuterClass.Data value) {
@@ -3509,7 +3393,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3527,7 +3411,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addInputs(
           int index, asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3545,7 +3429,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder addAllInputs(
           java.lang.Iterable<? extends asgt.v2.type.DataOuterClass.Data> values) {
@@ -3564,7 +3448,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -3581,7 +3465,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3598,7 +3482,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder getInputsBuilder(
           int index) {
@@ -3609,7 +3493,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
           int index) {
@@ -3623,7 +3507,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public java.util.List<? extends asgt.v2.type.DataOuterClass.DataOrBuilder> 
            getInputsOrBuilderList() {
@@ -3638,7 +3522,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
@@ -3649,7 +3533,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder addInputsBuilder(
           int index) {
@@ -3661,7 +3545,7 @@ public final class SuggesterServiceOuterClass {
        * Input data to use for prediction
        * </pre>
        *
-       * <code>repeated .asgt.v2.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
        */
       public java.util.List<asgt.v2.type.DataOuterClass.Data.Builder> 
            getInputsBuilderList() {
@@ -3686,14 +3570,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        * @return The options.
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions getOptions() {
@@ -3704,7 +3588,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -3720,7 +3604,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder setOptions(
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder builderForValue) {
@@ -3734,7 +3618,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder mergeOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -3752,7 +3636,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -3766,7 +3650,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder getOptionsBuilder() {
         
@@ -3774,7 +3658,7 @@ public final class SuggesterServiceOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -3785,7 +3669,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2.SuggestOptions options = 3;</code>
+       * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions, asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder, asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder> 
@@ -3833,7 +3717,18 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchSuggestRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3858,41 +3753,41 @@ public final class SuggesterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     java.util.List<asgt.type.PredictionOuterClass.Prediction> 
         getPredictionsList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     asgt.type.PredictionOuterClass.Prediction getPredictions(int index);
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     int getPredictionsCount();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
@@ -3924,69 +3819,6 @@ public final class SuggesterServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BatchSuggestResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              predictions_.add(
-                  input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry));
-              break;
-            }
-            case 18: {
-              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
-              if (model_ != null) {
-                subBuilder = model_.toBuilder();
-              }
-              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(model_);
-                model_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          predictions_ = java.util.Collections.unmodifiableList(predictions_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return asgt.v2.SuggesterServiceOuterClass.internal_static_asgt_v2_BatchSuggestResponse_descriptor;
@@ -4003,14 +3835,14 @@ public final class SuggesterServiceOuterClass {
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
@@ -4018,21 +3850,21 @@ public final class SuggesterServiceOuterClass {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public int getPredictionsCount() {
       return predictions_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
       return predictions_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
@@ -4043,7 +3875,7 @@ public final class SuggesterServiceOuterClass {
     public static final int MODEL_FIELD_NUMBER = 2;
     private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -4051,7 +3883,7 @@ public final class SuggesterServiceOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -4059,7 +3891,7 @@ public final class SuggesterServiceOuterClass {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
@@ -4086,7 +3918,7 @@ public final class SuggesterServiceOuterClass {
       if (model_ != null) {
         output.writeMessage(2, getModel());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4103,7 +3935,7 @@ public final class SuggesterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getModel());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4125,7 +3957,7 @@ public final class SuggesterServiceOuterClass {
         if (!getModel()
             .equals(other.getModel())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4144,7 +3976,7 @@ public final class SuggesterServiceOuterClass {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + getModel().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4261,29 +4093,24 @@ public final class SuggesterServiceOuterClass {
 
       // Construct using asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPredictionsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (predictionsBuilder_ == null) {
           predictions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          predictions_ = null;
           predictionsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (modelBuilder_ == null) {
           model_ = null;
         } else {
@@ -4408,7 +4235,7 @@ public final class SuggesterServiceOuterClass {
         if (other.hasModel()) {
           mergeModel(other.getModel());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4423,17 +4250,50 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                asgt.type.PredictionOuterClass.Prediction m =
+                    input.readMessage(
+                        asgt.type.PredictionOuterClass.Prediction.parser(),
+                        extensionRegistry);
+                if (predictionsBuilder_ == null) {
+                  ensurePredictionsIsMutable();
+                  predictions_.add(m);
+                } else {
+                  predictionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -4451,7 +4311,7 @@ public final class SuggesterServiceOuterClass {
           asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
         if (predictionsBuilder_ == null) {
@@ -4461,7 +4321,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public int getPredictionsCount() {
         if (predictionsBuilder_ == null) {
@@ -4471,7 +4331,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -4481,7 +4341,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder setPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction value) {
@@ -4498,7 +4358,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder setPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -4512,7 +4372,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
@@ -4528,7 +4388,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction value) {
@@ -4545,7 +4405,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -4559,7 +4419,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addPredictions(
           int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
@@ -4573,7 +4433,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder addAllPredictions(
           java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction> values) {
@@ -4588,7 +4448,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder clearPredictions() {
         if (predictionsBuilder_ == null) {
@@ -4601,7 +4461,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public Builder removePredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -4614,14 +4474,14 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
           int index) {
         return getPredictionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
           int index) {
@@ -4631,7 +4491,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
            getPredictionsOrBuilderList() {
@@ -4642,14 +4502,14 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
         return getPredictionsFieldBuilder().addBuilder(
             asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
           int index) {
@@ -4657,7 +4517,7 @@ public final class SuggesterServiceOuterClass {
             index, asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
        */
       public java.util.List<asgt.type.PredictionOuterClass.Prediction.Builder> 
            getPredictionsBuilderList() {
@@ -4682,14 +4542,14 @@ public final class SuggesterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
@@ -4700,7 +4560,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -4716,7 +4576,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
@@ -4730,7 +4590,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
@@ -4748,7 +4608,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -4762,7 +4622,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
@@ -4770,7 +4630,7 @@ public final class SuggesterServiceOuterClass {
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
@@ -4781,7 +4641,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
@@ -4829,7 +4689,18 @@ public final class SuggesterServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchSuggestResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4886,39 +4757,43 @@ public final class SuggesterServiceOuterClass {
       "\n\037asgt/v2/suggester_service.proto\022\007asgt." +
       "v2\032\025asgt/type/model.proto\032\032asgt/type/pre" +
       "diction.proto\032\027asgt/v2/type/data.proto\032\034" +
-      "google/api/annotations.proto\032\031options/an" +
-      "notations.proto\032\027validate/validate.proto" +
-      "\"\201\001\n\016SuggestOptions\022\025\n\rsuggest_limit\030\001 \001" +
-      "(\005\022=\n\016min_confidence\030\002 \001(\0162\033.asgt.type.C" +
-      "onfidence.LevelB\010\372B\005\202\001\002\020\001:\031\222A\0262\024{\"sugges" +
-      "t_limit\": 3}\"\235\001\n\016SuggestRequest\022>\n\014datas" +
-      "et_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
-      "-Za-z0-9_.>-]*$\022!\n\005input\030\002 \001(\0132\022.asgt.v2" +
-      ".type.Data\022(\n\007options\030\003 \001(\0132\027.asgt.v2.Su" +
-      "ggestOptions\"]\n\017SuggestResponse\022)\n\npredi" +
-      "ction\030\001 \001(\0132\025.asgt.type.Prediction\022\037\n\005mo" +
-      "del\030\002 \001(\0132\020.asgt.type.Model\"\243\001\n\023BatchSug" +
-      "gestRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#" +
-      "(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022\"\n\006i" +
-      "nputs\030\002 \003(\0132\022.asgt.v2.type.Data\022(\n\007optio" +
-      "ns\030\003 \001(\0132\027.asgt.v2.SuggestOptions\"c\n\024Bat" +
-      "chSuggestResponse\022*\n\013predictions\030\001 \003(\0132\025" +
-      ".asgt.type.Prediction\022\037\n\005model\030\002 \001(\0132\020.a" +
-      "sgt.type.Model2\273\003\n\020SuggesterService\022l\n\007S" +
-      "uggest\022\027.asgt.v2.SuggestRequest\032\030.asgt.v" +
-      "2.SuggestResponse\".\202\323\344\223\002(\"#/v2/datasets/" +
-      "{dataset_name}:suggest:\001*\022\200\001\n\014BatchSugge" +
-      "st\022\034.asgt.v2.BatchSuggestRequest\032\035.asgt." +
-      "v2.BatchSuggestResponse\"3\202\323\344\223\002-\"(/v2/dat" +
-      "asets/{dataset_name}:batchSuggest:\001*\022\213\001\n" +
-      "\021ModelBatchSuggest\022\034.asgt.v2.BatchSugges" +
-      "tRequest\032\035.asgt.v2.BatchSuggestResponse\"" +
-      "9\202\323\344\223\0023\"./v2/datasets/{dataset_name}/mod" +
-      "el:batchSuggest:\001*\032(\222A%\022#Make prediction" +
-      "s against a dataset.BjZ+github.com/e-con" +
-      "omic/vmlapis/gen/go/asgt/v2\222A:\022\021\n\013AutoSu" +
-      "ggest2\002v2*\001\0022\020application/json:\020applicat" +
-      "ion/jsonb\006proto3"
+      "google/api/annotations.proto\032.protoc-gen" +
+      "-openapiv2/options/annotations.proto\032\027va" +
+      "lidate/validate.proto\"\236\001\n\016SuggestOptions" +
+      "\022#\n\rsuggest_limit\030\001 \001(\005R\014suggestLimit\022L\n" +
+      "\016min_confidence\030\002 \001(\0162\033.asgt.type.Confid" +
+      "ence.LevelB\010\372B\005\202\001\002\020\001R\rminConfidence:\031\222A\026" +
+      "2\024{\"suggest_limit\": 3}\"\272\001\n\016SuggestReques" +
+      "t\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Z" +
+      "a-z0-9.][A-Za-z0-9_.>-]*$R\013datasetName\022(" +
+      "\n\005input\030\002 \001(\0132\022.asgt.v2.type.DataR\005input" +
+      "\0221\n\007options\030\003 \001(\0132\027.asgt.v2.SuggestOptio" +
+      "nsR\007options\"p\n\017SuggestResponse\0225\n\npredic" +
+      "tion\030\001 \001(\0132\025.asgt.type.PredictionR\npredi" +
+      "ction\022&\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005" +
+      "model\"\301\001\n\023BatchSuggestRequest\022K\n\014dataset" +
+      "_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Z" +
+      "a-z0-9_.>-]*$R\013datasetName\022*\n\006inputs\030\002 \003" +
+      "(\0132\022.asgt.v2.type.DataR\006inputs\0221\n\007option" +
+      "s\030\003 \001(\0132\027.asgt.v2.SuggestOptionsR\007option" +
+      "s\"w\n\024BatchSuggestResponse\0227\n\013predictions" +
+      "\030\001 \003(\0132\025.asgt.type.PredictionR\013predictio" +
+      "ns\022&\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005mod" +
+      "el2\273\003\n\020SuggesterService\022l\n\007Suggest\022\027.asg" +
+      "t.v2.SuggestRequest\032\030.asgt.v2.SuggestRes" +
+      "ponse\".\202\323\344\223\002(:\001*\"#/v2/datasets/{dataset_" +
+      "name}:suggest\022\200\001\n\014BatchSuggest\022\034.asgt.v2" +
+      ".BatchSuggestRequest\032\035.asgt.v2.BatchSugg" +
+      "estResponse\"3\202\323\344\223\002-:\001*\"(/v2/datasets/{da" +
+      "taset_name}:batchSuggest\022\213\001\n\021ModelBatchS" +
+      "uggest\022\034.asgt.v2.BatchSuggestRequest\032\035.a" +
+      "sgt.v2.BatchSuggestResponse\"9\202\323\344\223\0023:\001*\"." +
+      "/v2/datasets/{dataset_name}/model:batchS" +
+      "uggest\032(\222A%\022#Make predictions against a " +
+      "dataset.BjZ+github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/v2\222A:\022\021\n\013AutoSuggest2\002v2*\001\002" +
+      "2\020application/json:\020application/jsonb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

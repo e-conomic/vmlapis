@@ -2,23 +2,24 @@ syntax = "proto3";
 
 package asgt.modelregistry.v1;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistry";
-
-import "google/protobuf/empty.proto";
-import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
+import "asgt/type/model.proto";
 import "asgt/type/revision.proto";
 import "asgt/type/target_metrics.proto";
 import "asgt/type/train_statistics.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistry";
 
 service ModelRegistry {
-  rpc RegisterModel (RegisterModelRequest) returns (google.protobuf.Empty);
-//  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
+  rpc RegisterModel(RegisterModelRequest) returns (google.protobuf.Empty);
+  //  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
 
-  rpc GetCurrentModel (GetCurrentModelRequest) returns (GetCurrentModelResponse);
 
-  // List the most recent versions of a model trained with a specified dataset
-  //  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
+  rpc GetCurrentModel(GetCurrentModelRequest) returns (GetCurrentModelResponse);
+
+// List the most recent versions of a model trained with a specified dataset
+//  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
 }
 
 message RegisterModelRequest {
