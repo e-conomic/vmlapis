@@ -43,42 +43,35 @@ message TrainStatistics {
   map<string, TargetStats> target_stats_by_target = 1;
   // target statistics for each target (classification task)
 
-
   map<string, FeatureStats> feature_stats_by_target = 2;
   // feature statistics for each target (classification task)
 
+  float similarity_index = 3;
+  // measure of train/test similarity
 
   float lexical_diversity_split_on_space = 4;
   // lexical diversity of the dataset split on space
 
-
   float lexical_diversity_split_on_special = 5;
   // lexical diversity of the dataset split on special characters
-
 
   float percent_empty_strings = 6;
   // percentage of empty strings in the dataset
 
-
   float percent_pure_numbers_remove_spaces = 7;
   // percentage of pure numbers in the dataset after removing spaces
-
 
   float percent_pure_numbers_remove_special = 8;
   // percentage of pure numbers in the dataset after removing spaces and special characters
 
-
   float percent_special_characters = 9;
   // percentage of special characters in the dataset
-
 
   float percent_digits = 10;
   // percentage of digits in the dataset
 
-
   float percent_letters = 11;
   // percentage of letters in the dataset
-
 
   float percent_duplicates_in_dataset = 12;
   // percentage of duplicates in the dataset

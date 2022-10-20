@@ -15,11 +15,10 @@ service ModelRegistry {
   rpc RegisterModel(RegisterModelRequest) returns (google.protobuf.Empty);
   //  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
 
-
   rpc GetCurrentModel(GetCurrentModelRequest) returns (GetCurrentModelResponse);
 
-// List the most recent versions of a model trained with a specified dataset
-//  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
+  // List the most recent versions of a model trained with a specified dataset
+  //  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
 }
 
 message RegisterModelRequest {

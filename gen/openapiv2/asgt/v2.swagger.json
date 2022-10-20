@@ -512,8 +512,7 @@
               "type": "object",
               "properties": {
                 "input": {
-                  "$ref": "#/definitions/typeData",
-                  "title": "Input data to use for prediction"
+                  "$ref": "#/definitions/typeData"
                 },
                 "options": {
                   "$ref": "#/definitions/v2SuggestOptions"
@@ -687,8 +686,7 @@
       "type": "object",
       "properties": {
         "level": {
-          "$ref": "#/definitions/ConfidenceLevel",
-          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
+          "$ref": "#/definitions/ConfidenceLevel"
         },
         "value": {
           "type": "number",
@@ -702,16 +700,13 @@
       "type": "object",
       "properties": {
         "transaction": {
-          "$ref": "#/definitions/typeTransaction",
-          "title": "Transaction-level information; at this time used only with bank transactions"
+          "$ref": "#/definitions/typeTransaction"
         },
         "invoice": {
-          "$ref": "#/definitions/typeInvoice",
-          "title": "Invoice-level information for e-invoices and scanned invoices and receipts"
+          "$ref": "#/definitions/typeInvoice"
         },
         "invoiceLine": {
-          "$ref": "#/definitions/typeInvoiceLine",
-          "title": "Line-level information for e-invoices; use one sample per invoice line"
+          "$ref": "#/definitions/typeInvoiceLine"
         }
       },
       "description": "Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine\nstructures can be used at a time."
@@ -807,8 +802,7 @@
           "format": "date-time"
         },
         "supplier": {
-          "$ref": "#/definitions/typeSupplier",
-          "description": "Supplier of the invoice."
+          "$ref": "#/definitions/typeSupplier"
         },
         "customerRef": {
           "type": "string",
@@ -943,8 +937,7 @@
           "description": "Specifies when did the training finish."
         },
         "dataset": {
-          "$ref": "#/definitions/typeDataset",
-          "description": "Specifies dataset the training ran on."
+          "$ref": "#/definitions/typeDataset"
         },
         "scheduleTime": {
           "type": "string",
@@ -1008,8 +1001,7 @@
           "title": "Maximum number of suggestions to return per target"
         },
         "minConfidence": {
-          "$ref": "#/definitions/ConfidenceLevel",
-          "description": "Not implemented yet."
+          "$ref": "#/definitions/ConfidenceLevel"
         }
       }
     },

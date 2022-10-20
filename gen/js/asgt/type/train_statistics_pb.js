@@ -871,7 +871,16 @@ proto.asgt.type.TrainStatistics.toObject = function(includeInstance, msg) {
   var f, obj = {
     targetStatsByTargetMap: (f = msg.getTargetStatsByTargetMap()) ? f.toObject(includeInstance, proto.asgt.type.TargetStats.toObject) : [],
     featureStatsByTargetMap: (f = msg.getFeatureStatsByTargetMap()) ? f.toObject(includeInstance, proto.asgt.type.FeatureStats.toObject) : [],
-    similarityIndex: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0)
+    similarityIndex: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+    lexicalDiversitySplitOnSpace: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    lexicalDiversitySplitOnSpecial: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
+    percentEmptyStrings: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
+    percentPureNumbersRemoveSpaces: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0),
+    percentPureNumbersRemoveSpecial: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
+    percentSpecialCharacters: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0),
+    percentDigits: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
+    percentLetters: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 0.0),
+    percentDuplicatesInDataset: jspb.Message.getFloatingPointFieldWithDefault(msg, 12, 0.0)
   };
 
   if (includeInstance) {
@@ -924,6 +933,42 @@ proto.asgt.type.TrainStatistics.deserializeBinaryFromReader = function(msg, read
       var value = /** @type {number} */ (reader.readFloat());
       msg.setSimilarityIndex(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setLexicalDiversitySplitOnSpace(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setLexicalDiversitySplitOnSpecial(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentEmptyStrings(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentPureNumbersRemoveSpaces(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentPureNumbersRemoveSpecial(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentSpecialCharacters(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentDigits(value);
+      break;
+    case 11:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentLetters(value);
+      break;
+    case 12:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentDuplicatesInDataset(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -965,6 +1010,69 @@ proto.asgt.type.TrainStatistics.serializeBinaryToWriter = function(message, writ
   if (f !== 0.0) {
     writer.writeFloat(
       3,
+      f
+    );
+  }
+  f = message.getLexicalDiversitySplitOnSpace();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      4,
+      f
+    );
+  }
+  f = message.getLexicalDiversitySplitOnSpecial();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      5,
+      f
+    );
+  }
+  f = message.getPercentEmptyStrings();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      6,
+      f
+    );
+  }
+  f = message.getPercentPureNumbersRemoveSpaces();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      7,
+      f
+    );
+  }
+  f = message.getPercentPureNumbersRemoveSpecial();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      8,
+      f
+    );
+  }
+  f = message.getPercentSpecialCharacters();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      9,
+      f
+    );
+  }
+  f = message.getPercentDigits();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      10,
+      f
+    );
+  }
+  f = message.getPercentLetters();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      11,
+      f
+    );
+  }
+  f = message.getPercentDuplicatesInDataset();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      12,
       f
     );
   }
@@ -1030,6 +1138,168 @@ proto.asgt.type.TrainStatistics.prototype.getSimilarityIndex = function() {
  */
 proto.asgt.type.TrainStatistics.prototype.setSimilarityIndex = function(value) {
   return jspb.Message.setProto3FloatField(this, 3, value);
+};
+
+
+/**
+ * optional float lexical_diversity_split_on_space = 4;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getLexicalDiversitySplitOnSpace = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setLexicalDiversitySplitOnSpace = function(value) {
+  return jspb.Message.setProto3FloatField(this, 4, value);
+};
+
+
+/**
+ * optional float lexical_diversity_split_on_special = 5;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getLexicalDiversitySplitOnSpecial = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setLexicalDiversitySplitOnSpecial = function(value) {
+  return jspb.Message.setProto3FloatField(this, 5, value);
+};
+
+
+/**
+ * optional float percent_empty_strings = 6;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getPercentEmptyStrings = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setPercentEmptyStrings = function(value) {
+  return jspb.Message.setProto3FloatField(this, 6, value);
+};
+
+
+/**
+ * optional float percent_pure_numbers_remove_spaces = 7;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getPercentPureNumbersRemoveSpaces = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setPercentPureNumbersRemoveSpaces = function(value) {
+  return jspb.Message.setProto3FloatField(this, 7, value);
+};
+
+
+/**
+ * optional float percent_pure_numbers_remove_special = 8;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getPercentPureNumbersRemoveSpecial = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setPercentPureNumbersRemoveSpecial = function(value) {
+  return jspb.Message.setProto3FloatField(this, 8, value);
+};
+
+
+/**
+ * optional float percent_special_characters = 9;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getPercentSpecialCharacters = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 9, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setPercentSpecialCharacters = function(value) {
+  return jspb.Message.setProto3FloatField(this, 9, value);
+};
+
+
+/**
+ * optional float percent_digits = 10;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getPercentDigits = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setPercentDigits = function(value) {
+  return jspb.Message.setProto3FloatField(this, 10, value);
+};
+
+
+/**
+ * optional float percent_letters = 11;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getPercentLetters = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 11, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setPercentLetters = function(value) {
+  return jspb.Message.setProto3FloatField(this, 11, value);
+};
+
+
+/**
+ * optional float percent_duplicates_in_dataset = 12;
+ * @return {number}
+ */
+proto.asgt.type.TrainStatistics.prototype.getPercentDuplicatesInDataset = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 12, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TrainStatistics} returns this
+ */
+proto.asgt.type.TrainStatistics.prototype.setPercentDuplicatesInDataset = function(value) {
+  return jspb.Message.setProto3FloatField(this, 12, value);
 };
 
 

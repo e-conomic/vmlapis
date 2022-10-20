@@ -410,8 +410,7 @@
       "type": "object",
       "properties": {
         "level": {
-          "$ref": "#/definitions/asgttypeConfidenceLevel",
-          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
+          "$ref": "#/definitions/asgttypeConfidenceLevel"
         },
         "value": {
           "type": "number",
@@ -464,16 +463,13 @@
       "type": "object",
       "properties": {
         "transaction": {
-          "$ref": "#/definitions/typeTransaction",
-          "title": "Transaction-level information; at this time used only with bank transactions"
+          "$ref": "#/definitions/typeTransaction"
         },
         "invoice": {
-          "$ref": "#/definitions/typeInvoice",
-          "title": "Invoice-level information for e-invoices and scanned invoices and receipts"
+          "$ref": "#/definitions/typeInvoice"
         },
         "invoiceLine": {
-          "$ref": "#/definitions/typeInvoiceLine",
-          "title": "Line-level information for e-invoices; use one sample per invoice line"
+          "$ref": "#/definitions/typeInvoiceLine"
         }
       }
     },
@@ -531,8 +527,7 @@
           "format": "date-time"
         },
         "supplier": {
-          "$ref": "#/definitions/typeSupplier",
-          "description": "supplier of the invoice. Used in electronic-invoice-line requests."
+          "$ref": "#/definitions/typeSupplier"
         },
         "customerRef": {
           "type": "string",
@@ -731,8 +726,7 @@
           "$ref": "#/definitions/typeDataset"
         },
         "model": {
-          "$ref": "#/definitions/typeModel",
-          "title": "The most recently trained model; empty if no model has been trained"
+          "$ref": "#/definitions/typeModel"
         }
       }
     },
