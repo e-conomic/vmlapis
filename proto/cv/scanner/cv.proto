@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package cv.scanner.v1;
+
+import "google/api/annotations.proto";
+import "google/api/http.proto";
+import "ssn/type/candidate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/cv/cv/v1;cv";
+
+service CvScanner {
+  rpc ScanDocument(ScanDocumentRequest) returns (ScanDocumentResponse) {
+    option (google.api.http) = {
+      post: "/v1/document:scan"
+      body: "*"
+    };
+  }
+}
+
+message ScanDocumentRequest {
+  Document document = 1;
+  repeated Feature features = 2;
+  repeated string tags = 3;
+}
+
+message ScanDocumentResponse {
+  repeated ssn.type.Candidate order_date = 1;
+}
+
+message Feature {
+  enum Type {
+    FIRST_NAME = 0;
+    LAST_NAME = 1;
+    DATE_OF_BIRTH = 2;
+    PHONE = 3;
+    EMAIL = 4;
+    COUNTRY = 5;
+    NATIONALITY = 6;
+    POSTAL_CODE = 7;
+    POSTAL_AREA = 8;
+    MUNICIPALITY = 9;
+    COUNTY = 10;
+    ADDRESS = 11;
+    EMPLOYER_NAME = 12;
+    POSITION_TITLE = 13;
+    DATE = 14;
+    INSTITUTE_NAME = 15;
+    INSTITUTE_TYPE = 16;
+    AREA_OF_EDUCATION = 17;
+    DEGREE = 18;
+    AVERAGE_GRADE = 19;
+    NAME = 20;
+    LEVEL = 21;
+  }
+  // The feature type.
+  Type type = 1;
+  // Maximum number of results of this type. Does not apply to
+  // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+  int32 max_results = 2;
+  // The minimum confidence for predictions that the caller wants returned
+  // ssn.type.Confidence.Level min_confidence = 3;
+}
+
+message Document {
+  // Document content, represented as a stream of bytes.
+  // Note: As with all `bytes` fields, protobuffers use a pure binary
+  // representation, whereas JSON representations use base64.
+  bytes content = 1;
+  // Google Cloud Storage image location, or publicly-accessible image
+  // URL. If both `content` and `source` are provided for a document, `content`
+  // takes precedence and is used to perform the scan request.
+  DocumentSource source = 2;
+}
+
+message DocumentSource {
+  // The URI of the source document. Can be either:
+  //
+  // 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
+  //    HTTP/HTTPS URLs, We cannot guarantee that the request will be
+  //    completed. Your request may fail if the specified host denies the
+  //    request (e.g. due to request throttling or DOS prevention).
+  //
+  string http_uri = 1;
+}
