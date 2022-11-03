@@ -9,7 +9,7 @@ import "ssn/type/candidate.proto";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/cv/cv/v1;cv";
 
 service CvScanner {
-  rpc ScanDocument(ScanDocumentRequest) returns (ScanDocumentResponse) {
+  rpc ScanCV(ScanCVRequest) returns (ScanCVResponse) {
     option (google.api.http) = {
       post: "/v1/document:scan"
       body: "*"
@@ -17,14 +17,34 @@ service CvScanner {
   }
 }
 
-message ScanDocumentRequest {
+message ScanCVRequest {
   Document document = 1;
   repeated Feature features = 2;
   repeated string tags = 3;
 }
 
-message ScanDocumentResponse {
-  repeated ssn.type.Candidate order_date = 1;
+message ScanCVResponse {
+  repeated ssn.type.Candidate first_name = 1;
+  repeated ssn.type.Candidate last_name = 2;
+  repeated ssn.type.Candidate date_of_birth = 3;
+  repeated ssn.type.Candidate phone = 4;
+  repeated ssn.type.Candidate email = 5;
+  repeated ssn.type.Candidate country = 6;
+  repeated ssn.type.Candidate nationality = 7;
+  repeated ssn.type.Candidate postal_code = 8;
+  repeated ssn.type.Candidate postal_area = 9;
+  repeated ssn.type.Candidate municipality = 10;
+  repeated ssn.type.Candidate county = 11;
+  repeated ssn.type.Candidate adress = 12;
+  repeated ssn.type.Candidate empoloyer_name = 13;
+  repeated ssn.type.Candidate position_title = 14;
+  repeated ssn.type.Candidate date = 15;
+  repeated ssn.type.Candidate institution_type = 16;
+  repeated ssn.type.Candidate area_of_education = 17;
+  repeated ssn.type.Candidate degree = 19;
+  repeated ssn.type.Candidate average_grade = 20;
+  repeated ssn.type.Candidate name = 21;
+  repeated ssn.type.Candidate level = 22;
 }
 
 message Feature {
