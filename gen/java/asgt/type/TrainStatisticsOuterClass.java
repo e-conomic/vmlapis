@@ -3562,96 +3562,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      * @return The similarityIndex.
      */
     float getSimilarityIndex();
-
-    /**
-     * <pre>
-     * lexical diversity of the dataset split on space
-     * </pre>
-     *
-     * <code>float lexical_diversity_split_on_space = 4 [json_name = "lexicalDiversitySplitOnSpace"];</code>
-     * @return The lexicalDiversitySplitOnSpace.
-     */
-    float getLexicalDiversitySplitOnSpace();
-
-    /**
-     * <pre>
-     * lexical diversity of the dataset split on special characters
-     * </pre>
-     *
-     * <code>float lexical_diversity_split_on_special = 5 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
-     * @return The lexicalDiversitySplitOnSpecial.
-     */
-    float getLexicalDiversitySplitOnSpecial();
-
-    /**
-     * <pre>
-     * percentage of empty strings in the dataset
-     * </pre>
-     *
-     * <code>float percent_empty_strings = 6 [json_name = "percentEmptyStrings"];</code>
-     * @return The percentEmptyStrings.
-     */
-    float getPercentEmptyStrings();
-
-    /**
-     * <pre>
-     * percentage of pure numbers in the dataset after removing spaces
-     * </pre>
-     *
-     * <code>float percent_pure_numbers_remove_spaces = 7 [json_name = "percentPureNumbersRemoveSpaces"];</code>
-     * @return The percentPureNumbersRemoveSpaces.
-     */
-    float getPercentPureNumbersRemoveSpaces();
-
-    /**
-     * <pre>
-     * percentage of pure numbers in the dataset after removing spaces and special characters
-     * </pre>
-     *
-     * <code>float percent_pure_numbers_remove_special = 8 [json_name = "percentPureNumbersRemoveSpecial"];</code>
-     * @return The percentPureNumbersRemoveSpecial.
-     */
-    float getPercentPureNumbersRemoveSpecial();
-
-    /**
-     * <pre>
-     * percentage of special characters in the dataset
-     * </pre>
-     *
-     * <code>float percent_special_characters = 9 [json_name = "percentSpecialCharacters"];</code>
-     * @return The percentSpecialCharacters.
-     */
-    float getPercentSpecialCharacters();
-
-    /**
-     * <pre>
-     * percentage of digits in the dataset
-     * </pre>
-     *
-     * <code>float percent_digits = 10 [json_name = "percentDigits"];</code>
-     * @return The percentDigits.
-     */
-    float getPercentDigits();
-
-    /**
-     * <pre>
-     * percentage of letters in the dataset
-     * </pre>
-     *
-     * <code>float percent_letters = 11 [json_name = "percentLetters"];</code>
-     * @return The percentLetters.
-     */
-    float getPercentLetters();
-
-    /**
-     * <pre>
-     * percentage of duplicates in the dataset
-     * </pre>
-     *
-     * <code>float percent_duplicates_in_dataset = 12 [json_name = "percentDuplicatesInDataset"];</code>
-     * @return The percentDuplicatesInDataset.
-     */
-    float getPercentDuplicatesInDataset();
   }
   /**
    * Protobuf type {@code asgt.type.TrainStatistics}
@@ -3916,141 +3826,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       return similarityIndex_;
     }
 
-    public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER = 4;
-    private float lexicalDiversitySplitOnSpace_;
-    /**
-     * <pre>
-     * lexical diversity of the dataset split on space
-     * </pre>
-     *
-     * <code>float lexical_diversity_split_on_space = 4 [json_name = "lexicalDiversitySplitOnSpace"];</code>
-     * @return The lexicalDiversitySplitOnSpace.
-     */
-    @java.lang.Override
-    public float getLexicalDiversitySplitOnSpace() {
-      return lexicalDiversitySplitOnSpace_;
-    }
-
-    public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER = 5;
-    private float lexicalDiversitySplitOnSpecial_;
-    /**
-     * <pre>
-     * lexical diversity of the dataset split on special characters
-     * </pre>
-     *
-     * <code>float lexical_diversity_split_on_special = 5 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
-     * @return The lexicalDiversitySplitOnSpecial.
-     */
-    @java.lang.Override
-    public float getLexicalDiversitySplitOnSpecial() {
-      return lexicalDiversitySplitOnSpecial_;
-    }
-
-    public static final int PERCENT_EMPTY_STRINGS_FIELD_NUMBER = 6;
-    private float percentEmptyStrings_;
-    /**
-     * <pre>
-     * percentage of empty strings in the dataset
-     * </pre>
-     *
-     * <code>float percent_empty_strings = 6 [json_name = "percentEmptyStrings"];</code>
-     * @return The percentEmptyStrings.
-     */
-    @java.lang.Override
-    public float getPercentEmptyStrings() {
-      return percentEmptyStrings_;
-    }
-
-    public static final int PERCENT_PURE_NUMBERS_REMOVE_SPACES_FIELD_NUMBER = 7;
-    private float percentPureNumbersRemoveSpaces_;
-    /**
-     * <pre>
-     * percentage of pure numbers in the dataset after removing spaces
-     * </pre>
-     *
-     * <code>float percent_pure_numbers_remove_spaces = 7 [json_name = "percentPureNumbersRemoveSpaces"];</code>
-     * @return The percentPureNumbersRemoveSpaces.
-     */
-    @java.lang.Override
-    public float getPercentPureNumbersRemoveSpaces() {
-      return percentPureNumbersRemoveSpaces_;
-    }
-
-    public static final int PERCENT_PURE_NUMBERS_REMOVE_SPECIAL_FIELD_NUMBER = 8;
-    private float percentPureNumbersRemoveSpecial_;
-    /**
-     * <pre>
-     * percentage of pure numbers in the dataset after removing spaces and special characters
-     * </pre>
-     *
-     * <code>float percent_pure_numbers_remove_special = 8 [json_name = "percentPureNumbersRemoveSpecial"];</code>
-     * @return The percentPureNumbersRemoveSpecial.
-     */
-    @java.lang.Override
-    public float getPercentPureNumbersRemoveSpecial() {
-      return percentPureNumbersRemoveSpecial_;
-    }
-
-    public static final int PERCENT_SPECIAL_CHARACTERS_FIELD_NUMBER = 9;
-    private float percentSpecialCharacters_;
-    /**
-     * <pre>
-     * percentage of special characters in the dataset
-     * </pre>
-     *
-     * <code>float percent_special_characters = 9 [json_name = "percentSpecialCharacters"];</code>
-     * @return The percentSpecialCharacters.
-     */
-    @java.lang.Override
-    public float getPercentSpecialCharacters() {
-      return percentSpecialCharacters_;
-    }
-
-    public static final int PERCENT_DIGITS_FIELD_NUMBER = 10;
-    private float percentDigits_;
-    /**
-     * <pre>
-     * percentage of digits in the dataset
-     * </pre>
-     *
-     * <code>float percent_digits = 10 [json_name = "percentDigits"];</code>
-     * @return The percentDigits.
-     */
-    @java.lang.Override
-    public float getPercentDigits() {
-      return percentDigits_;
-    }
-
-    public static final int PERCENT_LETTERS_FIELD_NUMBER = 11;
-    private float percentLetters_;
-    /**
-     * <pre>
-     * percentage of letters in the dataset
-     * </pre>
-     *
-     * <code>float percent_letters = 11 [json_name = "percentLetters"];</code>
-     * @return The percentLetters.
-     */
-    @java.lang.Override
-    public float getPercentLetters() {
-      return percentLetters_;
-    }
-
-    public static final int PERCENT_DUPLICATES_IN_DATASET_FIELD_NUMBER = 12;
-    private float percentDuplicatesInDataset_;
-    /**
-     * <pre>
-     * percentage of duplicates in the dataset
-     * </pre>
-     *
-     * <code>float percent_duplicates_in_dataset = 12 [json_name = "percentDuplicatesInDataset"];</code>
-     * @return The percentDuplicatesInDataset.
-     */
-    @java.lang.Override
-    public float getPercentDuplicatesInDataset() {
-      return percentDuplicatesInDataset_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4079,33 +3854,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
           2);
       if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
         output.writeFloat(3, similarityIndex_);
-      }
-      if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
-        output.writeFloat(4, lexicalDiversitySplitOnSpace_);
-      }
-      if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpecial_) != 0) {
-        output.writeFloat(5, lexicalDiversitySplitOnSpecial_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentEmptyStrings_) != 0) {
-        output.writeFloat(6, percentEmptyStrings_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpaces_) != 0) {
-        output.writeFloat(7, percentPureNumbersRemoveSpaces_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpecial_) != 0) {
-        output.writeFloat(8, percentPureNumbersRemoveSpecial_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentSpecialCharacters_) != 0) {
-        output.writeFloat(9, percentSpecialCharacters_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentDigits_) != 0) {
-        output.writeFloat(10, percentDigits_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentLetters_) != 0) {
-        output.writeFloat(11, percentLetters_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentDuplicatesInDataset_) != 0) {
-        output.writeFloat(12, percentDuplicatesInDataset_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4140,42 +3888,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, similarityIndex_);
       }
-      if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, lexicalDiversitySplitOnSpace_);
-      }
-      if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpecial_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(5, lexicalDiversitySplitOnSpecial_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentEmptyStrings_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(6, percentEmptyStrings_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpaces_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(7, percentPureNumbersRemoveSpaces_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpecial_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, percentPureNumbersRemoveSpecial_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentSpecialCharacters_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(9, percentSpecialCharacters_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentDigits_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(10, percentDigits_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentLetters_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(11, percentLetters_);
-      }
-      if (java.lang.Float.floatToRawIntBits(percentDuplicatesInDataset_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(12, percentDuplicatesInDataset_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4198,33 +3910,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       if (java.lang.Float.floatToIntBits(getSimilarityIndex())
           != java.lang.Float.floatToIntBits(
               other.getSimilarityIndex())) return false;
-      if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpace())
-          != java.lang.Float.floatToIntBits(
-              other.getLexicalDiversitySplitOnSpace())) return false;
-      if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpecial())
-          != java.lang.Float.floatToIntBits(
-              other.getLexicalDiversitySplitOnSpecial())) return false;
-      if (java.lang.Float.floatToIntBits(getPercentEmptyStrings())
-          != java.lang.Float.floatToIntBits(
-              other.getPercentEmptyStrings())) return false;
-      if (java.lang.Float.floatToIntBits(getPercentPureNumbersRemoveSpaces())
-          != java.lang.Float.floatToIntBits(
-              other.getPercentPureNumbersRemoveSpaces())) return false;
-      if (java.lang.Float.floatToIntBits(getPercentPureNumbersRemoveSpecial())
-          != java.lang.Float.floatToIntBits(
-              other.getPercentPureNumbersRemoveSpecial())) return false;
-      if (java.lang.Float.floatToIntBits(getPercentSpecialCharacters())
-          != java.lang.Float.floatToIntBits(
-              other.getPercentSpecialCharacters())) return false;
-      if (java.lang.Float.floatToIntBits(getPercentDigits())
-          != java.lang.Float.floatToIntBits(
-              other.getPercentDigits())) return false;
-      if (java.lang.Float.floatToIntBits(getPercentLetters())
-          != java.lang.Float.floatToIntBits(
-              other.getPercentLetters())) return false;
-      if (java.lang.Float.floatToIntBits(getPercentDuplicatesInDataset())
-          != java.lang.Float.floatToIntBits(
-              other.getPercentDuplicatesInDataset())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4247,33 +3932,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       hash = (37 * hash) + SIMILARITY_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getSimilarityIndex());
-      hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getLexicalDiversitySplitOnSpace());
-      hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getLexicalDiversitySplitOnSpecial());
-      hash = (37 * hash) + PERCENT_EMPTY_STRINGS_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPercentEmptyStrings());
-      hash = (37 * hash) + PERCENT_PURE_NUMBERS_REMOVE_SPACES_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPercentPureNumbersRemoveSpaces());
-      hash = (37 * hash) + PERCENT_PURE_NUMBERS_REMOVE_SPECIAL_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPercentPureNumbersRemoveSpecial());
-      hash = (37 * hash) + PERCENT_SPECIAL_CHARACTERS_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPercentSpecialCharacters());
-      hash = (37 * hash) + PERCENT_DIGITS_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPercentDigits());
-      hash = (37 * hash) + PERCENT_LETTERS_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPercentLetters());
-      hash = (37 * hash) + PERCENT_DUPLICATES_IN_DATASET_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPercentDuplicatesInDataset());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4432,24 +4090,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         internalGetMutableFeatureStatsByTarget().clear();
         similarityIndex_ = 0F;
 
-        lexicalDiversitySplitOnSpace_ = 0F;
-
-        lexicalDiversitySplitOnSpecial_ = 0F;
-
-        percentEmptyStrings_ = 0F;
-
-        percentPureNumbersRemoveSpaces_ = 0F;
-
-        percentPureNumbersRemoveSpecial_ = 0F;
-
-        percentSpecialCharacters_ = 0F;
-
-        percentDigits_ = 0F;
-
-        percentLetters_ = 0F;
-
-        percentDuplicatesInDataset_ = 0F;
-
         return this;
       }
 
@@ -4482,15 +4122,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         result.featureStatsByTarget_ = internalGetFeatureStatsByTarget();
         result.featureStatsByTarget_.makeImmutable();
         result.similarityIndex_ = similarityIndex_;
-        result.lexicalDiversitySplitOnSpace_ = lexicalDiversitySplitOnSpace_;
-        result.lexicalDiversitySplitOnSpecial_ = lexicalDiversitySplitOnSpecial_;
-        result.percentEmptyStrings_ = percentEmptyStrings_;
-        result.percentPureNumbersRemoveSpaces_ = percentPureNumbersRemoveSpaces_;
-        result.percentPureNumbersRemoveSpecial_ = percentPureNumbersRemoveSpecial_;
-        result.percentSpecialCharacters_ = percentSpecialCharacters_;
-        result.percentDigits_ = percentDigits_;
-        result.percentLetters_ = percentLetters_;
-        result.percentDuplicatesInDataset_ = percentDuplicatesInDataset_;
         onBuilt();
         return result;
       }
@@ -4546,33 +4177,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         if (other.getSimilarityIndex() != 0F) {
           setSimilarityIndex(other.getSimilarityIndex());
         }
-        if (other.getLexicalDiversitySplitOnSpace() != 0F) {
-          setLexicalDiversitySplitOnSpace(other.getLexicalDiversitySplitOnSpace());
-        }
-        if (other.getLexicalDiversitySplitOnSpecial() != 0F) {
-          setLexicalDiversitySplitOnSpecial(other.getLexicalDiversitySplitOnSpecial());
-        }
-        if (other.getPercentEmptyStrings() != 0F) {
-          setPercentEmptyStrings(other.getPercentEmptyStrings());
-        }
-        if (other.getPercentPureNumbersRemoveSpaces() != 0F) {
-          setPercentPureNumbersRemoveSpaces(other.getPercentPureNumbersRemoveSpaces());
-        }
-        if (other.getPercentPureNumbersRemoveSpecial() != 0F) {
-          setPercentPureNumbersRemoveSpecial(other.getPercentPureNumbersRemoveSpecial());
-        }
-        if (other.getPercentSpecialCharacters() != 0F) {
-          setPercentSpecialCharacters(other.getPercentSpecialCharacters());
-        }
-        if (other.getPercentDigits() != 0F) {
-          setPercentDigits(other.getPercentDigits());
-        }
-        if (other.getPercentLetters() != 0F) {
-          setPercentLetters(other.getPercentLetters());
-        }
-        if (other.getPercentDuplicatesInDataset() != 0F) {
-          setPercentDuplicatesInDataset(other.getPercentDuplicatesInDataset());
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4620,51 +4224,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
 
                 break;
               } // case 29
-              case 37: {
-                lexicalDiversitySplitOnSpace_ = input.readFloat();
-
-                break;
-              } // case 37
-              case 45: {
-                lexicalDiversitySplitOnSpecial_ = input.readFloat();
-
-                break;
-              } // case 45
-              case 53: {
-                percentEmptyStrings_ = input.readFloat();
-
-                break;
-              } // case 53
-              case 61: {
-                percentPureNumbersRemoveSpaces_ = input.readFloat();
-
-                break;
-              } // case 61
-              case 69: {
-                percentPureNumbersRemoveSpecial_ = input.readFloat();
-
-                break;
-              } // case 69
-              case 77: {
-                percentSpecialCharacters_ = input.readFloat();
-
-                break;
-              } // case 77
-              case 85: {
-                percentDigits_ = input.readFloat();
-
-                break;
-              } // case 85
-              case 93: {
-                percentLetters_ = input.readFloat();
-
-                break;
-              } // case 93
-              case 101: {
-                percentDuplicatesInDataset_ = input.readFloat();
-
-                break;
-              } // case 101
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5042,393 +4601,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         onChanged();
         return this;
       }
-
-      private float lexicalDiversitySplitOnSpace_ ;
-      /**
-       * <pre>
-       * lexical diversity of the dataset split on space
-       * </pre>
-       *
-       * <code>float lexical_diversity_split_on_space = 4 [json_name = "lexicalDiversitySplitOnSpace"];</code>
-       * @return The lexicalDiversitySplitOnSpace.
-       */
-      @java.lang.Override
-      public float getLexicalDiversitySplitOnSpace() {
-        return lexicalDiversitySplitOnSpace_;
-      }
-      /**
-       * <pre>
-       * lexical diversity of the dataset split on space
-       * </pre>
-       *
-       * <code>float lexical_diversity_split_on_space = 4 [json_name = "lexicalDiversitySplitOnSpace"];</code>
-       * @param value The lexicalDiversitySplitOnSpace to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLexicalDiversitySplitOnSpace(float value) {
-        
-        lexicalDiversitySplitOnSpace_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * lexical diversity of the dataset split on space
-       * </pre>
-       *
-       * <code>float lexical_diversity_split_on_space = 4 [json_name = "lexicalDiversitySplitOnSpace"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLexicalDiversitySplitOnSpace() {
-        
-        lexicalDiversitySplitOnSpace_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float lexicalDiversitySplitOnSpecial_ ;
-      /**
-       * <pre>
-       * lexical diversity of the dataset split on special characters
-       * </pre>
-       *
-       * <code>float lexical_diversity_split_on_special = 5 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
-       * @return The lexicalDiversitySplitOnSpecial.
-       */
-      @java.lang.Override
-      public float getLexicalDiversitySplitOnSpecial() {
-        return lexicalDiversitySplitOnSpecial_;
-      }
-      /**
-       * <pre>
-       * lexical diversity of the dataset split on special characters
-       * </pre>
-       *
-       * <code>float lexical_diversity_split_on_special = 5 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
-       * @param value The lexicalDiversitySplitOnSpecial to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLexicalDiversitySplitOnSpecial(float value) {
-        
-        lexicalDiversitySplitOnSpecial_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * lexical diversity of the dataset split on special characters
-       * </pre>
-       *
-       * <code>float lexical_diversity_split_on_special = 5 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLexicalDiversitySplitOnSpecial() {
-        
-        lexicalDiversitySplitOnSpecial_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float percentEmptyStrings_ ;
-      /**
-       * <pre>
-       * percentage of empty strings in the dataset
-       * </pre>
-       *
-       * <code>float percent_empty_strings = 6 [json_name = "percentEmptyStrings"];</code>
-       * @return The percentEmptyStrings.
-       */
-      @java.lang.Override
-      public float getPercentEmptyStrings() {
-        return percentEmptyStrings_;
-      }
-      /**
-       * <pre>
-       * percentage of empty strings in the dataset
-       * </pre>
-       *
-       * <code>float percent_empty_strings = 6 [json_name = "percentEmptyStrings"];</code>
-       * @param value The percentEmptyStrings to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPercentEmptyStrings(float value) {
-        
-        percentEmptyStrings_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * percentage of empty strings in the dataset
-       * </pre>
-       *
-       * <code>float percent_empty_strings = 6 [json_name = "percentEmptyStrings"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPercentEmptyStrings() {
-        
-        percentEmptyStrings_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float percentPureNumbersRemoveSpaces_ ;
-      /**
-       * <pre>
-       * percentage of pure numbers in the dataset after removing spaces
-       * </pre>
-       *
-       * <code>float percent_pure_numbers_remove_spaces = 7 [json_name = "percentPureNumbersRemoveSpaces"];</code>
-       * @return The percentPureNumbersRemoveSpaces.
-       */
-      @java.lang.Override
-      public float getPercentPureNumbersRemoveSpaces() {
-        return percentPureNumbersRemoveSpaces_;
-      }
-      /**
-       * <pre>
-       * percentage of pure numbers in the dataset after removing spaces
-       * </pre>
-       *
-       * <code>float percent_pure_numbers_remove_spaces = 7 [json_name = "percentPureNumbersRemoveSpaces"];</code>
-       * @param value The percentPureNumbersRemoveSpaces to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPercentPureNumbersRemoveSpaces(float value) {
-        
-        percentPureNumbersRemoveSpaces_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * percentage of pure numbers in the dataset after removing spaces
-       * </pre>
-       *
-       * <code>float percent_pure_numbers_remove_spaces = 7 [json_name = "percentPureNumbersRemoveSpaces"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPercentPureNumbersRemoveSpaces() {
-        
-        percentPureNumbersRemoveSpaces_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float percentPureNumbersRemoveSpecial_ ;
-      /**
-       * <pre>
-       * percentage of pure numbers in the dataset after removing spaces and special characters
-       * </pre>
-       *
-       * <code>float percent_pure_numbers_remove_special = 8 [json_name = "percentPureNumbersRemoveSpecial"];</code>
-       * @return The percentPureNumbersRemoveSpecial.
-       */
-      @java.lang.Override
-      public float getPercentPureNumbersRemoveSpecial() {
-        return percentPureNumbersRemoveSpecial_;
-      }
-      /**
-       * <pre>
-       * percentage of pure numbers in the dataset after removing spaces and special characters
-       * </pre>
-       *
-       * <code>float percent_pure_numbers_remove_special = 8 [json_name = "percentPureNumbersRemoveSpecial"];</code>
-       * @param value The percentPureNumbersRemoveSpecial to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPercentPureNumbersRemoveSpecial(float value) {
-        
-        percentPureNumbersRemoveSpecial_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * percentage of pure numbers in the dataset after removing spaces and special characters
-       * </pre>
-       *
-       * <code>float percent_pure_numbers_remove_special = 8 [json_name = "percentPureNumbersRemoveSpecial"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPercentPureNumbersRemoveSpecial() {
-        
-        percentPureNumbersRemoveSpecial_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float percentSpecialCharacters_ ;
-      /**
-       * <pre>
-       * percentage of special characters in the dataset
-       * </pre>
-       *
-       * <code>float percent_special_characters = 9 [json_name = "percentSpecialCharacters"];</code>
-       * @return The percentSpecialCharacters.
-       */
-      @java.lang.Override
-      public float getPercentSpecialCharacters() {
-        return percentSpecialCharacters_;
-      }
-      /**
-       * <pre>
-       * percentage of special characters in the dataset
-       * </pre>
-       *
-       * <code>float percent_special_characters = 9 [json_name = "percentSpecialCharacters"];</code>
-       * @param value The percentSpecialCharacters to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPercentSpecialCharacters(float value) {
-        
-        percentSpecialCharacters_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * percentage of special characters in the dataset
-       * </pre>
-       *
-       * <code>float percent_special_characters = 9 [json_name = "percentSpecialCharacters"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPercentSpecialCharacters() {
-        
-        percentSpecialCharacters_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float percentDigits_ ;
-      /**
-       * <pre>
-       * percentage of digits in the dataset
-       * </pre>
-       *
-       * <code>float percent_digits = 10 [json_name = "percentDigits"];</code>
-       * @return The percentDigits.
-       */
-      @java.lang.Override
-      public float getPercentDigits() {
-        return percentDigits_;
-      }
-      /**
-       * <pre>
-       * percentage of digits in the dataset
-       * </pre>
-       *
-       * <code>float percent_digits = 10 [json_name = "percentDigits"];</code>
-       * @param value The percentDigits to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPercentDigits(float value) {
-        
-        percentDigits_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * percentage of digits in the dataset
-       * </pre>
-       *
-       * <code>float percent_digits = 10 [json_name = "percentDigits"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPercentDigits() {
-        
-        percentDigits_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float percentLetters_ ;
-      /**
-       * <pre>
-       * percentage of letters in the dataset
-       * </pre>
-       *
-       * <code>float percent_letters = 11 [json_name = "percentLetters"];</code>
-       * @return The percentLetters.
-       */
-      @java.lang.Override
-      public float getPercentLetters() {
-        return percentLetters_;
-      }
-      /**
-       * <pre>
-       * percentage of letters in the dataset
-       * </pre>
-       *
-       * <code>float percent_letters = 11 [json_name = "percentLetters"];</code>
-       * @param value The percentLetters to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPercentLetters(float value) {
-        
-        percentLetters_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * percentage of letters in the dataset
-       * </pre>
-       *
-       * <code>float percent_letters = 11 [json_name = "percentLetters"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPercentLetters() {
-        
-        percentLetters_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float percentDuplicatesInDataset_ ;
-      /**
-       * <pre>
-       * percentage of duplicates in the dataset
-       * </pre>
-       *
-       * <code>float percent_duplicates_in_dataset = 12 [json_name = "percentDuplicatesInDataset"];</code>
-       * @return The percentDuplicatesInDataset.
-       */
-      @java.lang.Override
-      public float getPercentDuplicatesInDataset() {
-        return percentDuplicatesInDataset_;
-      }
-      /**
-       * <pre>
-       * percentage of duplicates in the dataset
-       * </pre>
-       *
-       * <code>float percent_duplicates_in_dataset = 12 [json_name = "percentDuplicatesInDataset"];</code>
-       * @param value The percentDuplicatesInDataset to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPercentDuplicatesInDataset(float value) {
-        
-        percentDuplicatesInDataset_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * percentage of duplicates in the dataset
-       * </pre>
-       *
-       * <code>float percent_duplicates_in_dataset = 12 [json_name = "percentDuplicatesInDataset"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPercentDuplicatesInDataset() {
-        
-        percentDuplicatesInDataset_ = 0F;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5551,35 +4723,21 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       "mationGain\"=\n\004Type\022\007\n\003INT\020\000\022\t\n\005FLOAT\020\001\022\n" +
       "\n\006STRING\020\002\022\t\n\005BYTES\020\003\022\n\n\006STRUCT\020\004\"K\n\014Fea" +
       "tureStats\022;\n\rfeature_stats\030\001 \003(\0132\026.asgt." +
-      "type.FeatureStatR\014featureStats\"\210\010\n\017Train" +
+      "type.FeatureStatR\014featureStats\"\325\003\n\017Train" +
       "Statistics\022h\n\026target_stats_by_target\030\001 \003" +
       "(\01323.asgt.type.TrainStatistics.TargetSta" +
       "tsByTargetEntryR\023targetStatsByTarget\022k\n\027" +
       "feature_stats_by_target\030\002 \003(\01324.asgt.typ" +
       "e.TrainStatistics.FeatureStatsByTargetEn" +
       "tryR\024featureStatsByTarget\022)\n\020similarity_" +
-      "index\030\003 \001(\002R\017similarityIndex\022F\n lexical_" +
-      "diversity_split_on_space\030\004 \001(\002R\034lexicalD" +
-      "iversitySplitOnSpace\022J\n\"lexical_diversit" +
-      "y_split_on_special\030\005 \001(\002R\036lexicalDiversi" +
-      "tySplitOnSpecial\0222\n\025percent_empty_string" +
-      "s\030\006 \001(\002R\023percentEmptyStrings\022J\n\"percent_" +
-      "pure_numbers_remove_spaces\030\007 \001(\002R\036percen" +
-      "tPureNumbersRemoveSpaces\022L\n#percent_pure" +
-      "_numbers_remove_special\030\010 \001(\002R\037percentPu" +
-      "reNumbersRemoveSpecial\022<\n\032percent_specia" +
-      "l_characters\030\t \001(\002R\030percentSpecialCharac" +
-      "ters\022%\n\016percent_digits\030\n \001(\002R\rpercentDig" +
-      "its\022\'\n\017percent_letters\030\013 \001(\002R\016percentLet" +
-      "ters\022A\n\035percent_duplicates_in_dataset\030\014 " +
-      "\001(\002R\032percentDuplicatesInDataset\032^\n\030Targe" +
-      "tStatsByTargetEntry\022\020\n\003key\030\001 \001(\tR\003key\022,\n" +
-      "\005value\030\002 \001(\0132\026.asgt.type.TargetStatsR\005va" +
-      "lue:\0028\001\032`\n\031FeatureStatsByTargetEntry\022\020\n\003" +
-      "key\030\001 \001(\tR\003key\022-\n\005value\030\002 \001(\0132\027.asgt.typ" +
-      "e.FeatureStatsR\005value:\0028\001B8Z6github.com/" +
-      "e-conomic/vmlapis/gen/go/asgt/type;asgtt" +
-      "ypeb\006proto3"
+      "index\030\003 \001(\002R\017similarityIndex\032^\n\030TargetSt" +
+      "atsByTargetEntry\022\020\n\003key\030\001 \001(\tR\003key\022,\n\005va" +
+      "lue\030\002 \001(\0132\026.asgt.type.TargetStatsR\005value" +
+      ":\0028\001\032`\n\031FeatureStatsByTargetEntry\022\020\n\003key" +
+      "\030\001 \001(\tR\003key\022-\n\005value\030\002 \001(\0132\027.asgt.type.F" +
+      "eatureStatsR\005value:\0028\001B8Z6github.com/e-c" +
+      "onomic/vmlapis/gen/go/asgt/type;asgttype" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5614,7 +4772,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
     internal_static_asgt_type_TrainStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_TrainStatistics_descriptor,
-        new java.lang.String[] { "TargetStatsByTarget", "FeatureStatsByTarget", "SimilarityIndex", "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", });
+        new java.lang.String[] { "TargetStatsByTarget", "FeatureStatsByTarget", "SimilarityIndex", });
     internal_static_asgt_type_TrainStatistics_TargetStatsByTargetEntry_descriptor =
       internal_static_asgt_type_TrainStatistics_descriptor.getNestedTypes().get(0);
     internal_static_asgt_type_TrainStatistics_TargetStatsByTargetEntry_fieldAccessorTable = new

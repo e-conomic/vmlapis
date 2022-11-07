@@ -37,31 +37,19 @@ namespace Asgt.Type {
             "Ij0KBFR5cGUSBwoDSU5UEAASCQoFRkxPQVQQARIKCgZTVFJJTkcQAhIJCgVC",
             "WVRFUxADEgoKBlNUUlVDVBAEIksKDEZlYXR1cmVTdGF0cxI7Cg1mZWF0dXJl",
             "X3N0YXRzGAEgAygLMhYuYXNndC50eXBlLkZlYXR1cmVTdGF0UgxmZWF0dXJl",
-            "U3RhdHMiiAgKD1RyYWluU3RhdGlzdGljcxJoChZ0YXJnZXRfc3RhdHNfYnlf",
+            "U3RhdHMi1QMKD1RyYWluU3RhdGlzdGljcxJoChZ0YXJnZXRfc3RhdHNfYnlf",
             "dGFyZ2V0GAEgAygLMjMuYXNndC50eXBlLlRyYWluU3RhdGlzdGljcy5UYXJn",
             "ZXRTdGF0c0J5VGFyZ2V0RW50cnlSE3RhcmdldFN0YXRzQnlUYXJnZXQSawoX",
             "ZmVhdHVyZV9zdGF0c19ieV90YXJnZXQYAiADKAsyNC5hc2d0LnR5cGUuVHJh",
             "aW5TdGF0aXN0aWNzLkZlYXR1cmVTdGF0c0J5VGFyZ2V0RW50cnlSFGZlYXR1",
             "cmVTdGF0c0J5VGFyZ2V0EikKEHNpbWlsYXJpdHlfaW5kZXgYAyABKAJSD3Np",
-            "bWlsYXJpdHlJbmRleBJGCiBsZXhpY2FsX2RpdmVyc2l0eV9zcGxpdF9vbl9z",
-            "cGFjZRgEIAEoAlIcbGV4aWNhbERpdmVyc2l0eVNwbGl0T25TcGFjZRJKCiJs",
-            "ZXhpY2FsX2RpdmVyc2l0eV9zcGxpdF9vbl9zcGVjaWFsGAUgASgCUh5sZXhp",
-            "Y2FsRGl2ZXJzaXR5U3BsaXRPblNwZWNpYWwSMgoVcGVyY2VudF9lbXB0eV9z",
-            "dHJpbmdzGAYgASgCUhNwZXJjZW50RW1wdHlTdHJpbmdzEkoKInBlcmNlbnRf",
-            "cHVyZV9udW1iZXJzX3JlbW92ZV9zcGFjZXMYByABKAJSHnBlcmNlbnRQdXJl",
-            "TnVtYmVyc1JlbW92ZVNwYWNlcxJMCiNwZXJjZW50X3B1cmVfbnVtYmVyc19y",
-            "ZW1vdmVfc3BlY2lhbBgIIAEoAlIfcGVyY2VudFB1cmVOdW1iZXJzUmVtb3Zl",
-            "U3BlY2lhbBI8ChpwZXJjZW50X3NwZWNpYWxfY2hhcmFjdGVycxgJIAEoAlIY",
-            "cGVyY2VudFNwZWNpYWxDaGFyYWN0ZXJzEiUKDnBlcmNlbnRfZGlnaXRzGAog",
-            "ASgCUg1wZXJjZW50RGlnaXRzEicKD3BlcmNlbnRfbGV0dGVycxgLIAEoAlIO",
-            "cGVyY2VudExldHRlcnMSQQodcGVyY2VudF9kdXBsaWNhdGVzX2luX2RhdGFz",
-            "ZXQYDCABKAJSGnBlcmNlbnREdXBsaWNhdGVzSW5EYXRhc2V0Gl4KGFRhcmdl",
-            "dFN0YXRzQnlUYXJnZXRFbnRyeRIQCgNrZXkYASABKAlSA2tleRIsCgV2YWx1",
-            "ZRgCIAEoCzIWLmFzZ3QudHlwZS5UYXJnZXRTdGF0c1IFdmFsdWU6AjgBGmAK",
-            "GUZlYXR1cmVTdGF0c0J5VGFyZ2V0RW50cnkSEAoDa2V5GAEgASgJUgNrZXkS",
-            "LQoFdmFsdWUYAiABKAsyFy5hc2d0LnR5cGUuRmVhdHVyZVN0YXRzUgV2YWx1",
-            "ZToCOAFCOFo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28v",
-            "YXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
+            "bWlsYXJpdHlJbmRleBpeChhUYXJnZXRTdGF0c0J5VGFyZ2V0RW50cnkSEAoD",
+            "a2V5GAEgASgJUgNrZXkSLAoFdmFsdWUYAiABKAsyFi5hc2d0LnR5cGUuVGFy",
+            "Z2V0U3RhdHNSBXZhbHVlOgI4ARpgChlGZWF0dXJlU3RhdHNCeVRhcmdldEVu",
+            "dHJ5EhAKA2tleRgBIAEoCVIDa2V5Ei0KBXZhbHVlGAIgASgLMhcuYXNndC50",
+            "eXBlLkZlYXR1cmVTdGF0c1IFdmFsdWU6AjgBQjhaNmdpdGh1Yi5jb20vZS1j",
+            "b25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlwZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -69,7 +57,7 @@ namespace Asgt.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetStats), global::Asgt.Type.TargetStats.Parser, new[]{ "TargetStats_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStat), global::Asgt.Type.FeatureStat.Parser, new[]{ "FeatureName", "FeatureType", "InformationGain" }, null, new[]{ typeof(global::Asgt.Type.FeatureStat.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.FeatureStats), global::Asgt.Type.FeatureStats.Parser, new[]{ "FeatureStats_" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics), global::Asgt.Type.TrainStatistics.Parser, new[]{ "TargetStatsByTarget", "FeatureStatsByTarget", "SimilarityIndex", "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainStatistics), global::Asgt.Type.TrainStatistics.Parser, new[]{ "TargetStatsByTarget", "FeatureStatsByTarget", "SimilarityIndex" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1029,15 +1017,6 @@ namespace Asgt.Type {
       targetStatsByTarget_ = other.targetStatsByTarget_.Clone();
       featureStatsByTarget_ = other.featureStatsByTarget_.Clone();
       similarityIndex_ = other.similarityIndex_;
-      lexicalDiversitySplitOnSpace_ = other.lexicalDiversitySplitOnSpace_;
-      lexicalDiversitySplitOnSpecial_ = other.lexicalDiversitySplitOnSpecial_;
-      percentEmptyStrings_ = other.percentEmptyStrings_;
-      percentPureNumbersRemoveSpaces_ = other.percentPureNumbersRemoveSpaces_;
-      percentPureNumbersRemoveSpecial_ = other.percentPureNumbersRemoveSpecial_;
-      percentSpecialCharacters_ = other.percentSpecialCharacters_;
-      percentDigits_ = other.percentDigits_;
-      percentLetters_ = other.percentLetters_;
-      percentDuplicatesInDataset_ = other.percentDuplicatesInDataset_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1090,141 +1069,6 @@ namespace Asgt.Type {
       }
     }
 
-    /// <summary>Field number for the "lexical_diversity_split_on_space" field.</summary>
-    public const int LexicalDiversitySplitOnSpaceFieldNumber = 4;
-    private float lexicalDiversitySplitOnSpace_;
-    /// <summary>
-    /// lexical diversity of the dataset split on space
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float LexicalDiversitySplitOnSpace {
-      get { return lexicalDiversitySplitOnSpace_; }
-      set {
-        lexicalDiversitySplitOnSpace_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "lexical_diversity_split_on_special" field.</summary>
-    public const int LexicalDiversitySplitOnSpecialFieldNumber = 5;
-    private float lexicalDiversitySplitOnSpecial_;
-    /// <summary>
-    /// lexical diversity of the dataset split on special characters
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float LexicalDiversitySplitOnSpecial {
-      get { return lexicalDiversitySplitOnSpecial_; }
-      set {
-        lexicalDiversitySplitOnSpecial_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_empty_strings" field.</summary>
-    public const int PercentEmptyStringsFieldNumber = 6;
-    private float percentEmptyStrings_;
-    /// <summary>
-    /// percentage of empty strings in the dataset
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PercentEmptyStrings {
-      get { return percentEmptyStrings_; }
-      set {
-        percentEmptyStrings_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_pure_numbers_remove_spaces" field.</summary>
-    public const int PercentPureNumbersRemoveSpacesFieldNumber = 7;
-    private float percentPureNumbersRemoveSpaces_;
-    /// <summary>
-    /// percentage of pure numbers in the dataset after removing spaces
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PercentPureNumbersRemoveSpaces {
-      get { return percentPureNumbersRemoveSpaces_; }
-      set {
-        percentPureNumbersRemoveSpaces_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_pure_numbers_remove_special" field.</summary>
-    public const int PercentPureNumbersRemoveSpecialFieldNumber = 8;
-    private float percentPureNumbersRemoveSpecial_;
-    /// <summary>
-    /// percentage of pure numbers in the dataset after removing spaces and special characters
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PercentPureNumbersRemoveSpecial {
-      get { return percentPureNumbersRemoveSpecial_; }
-      set {
-        percentPureNumbersRemoveSpecial_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_special_characters" field.</summary>
-    public const int PercentSpecialCharactersFieldNumber = 9;
-    private float percentSpecialCharacters_;
-    /// <summary>
-    /// percentage of special characters in the dataset
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PercentSpecialCharacters {
-      get { return percentSpecialCharacters_; }
-      set {
-        percentSpecialCharacters_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_digits" field.</summary>
-    public const int PercentDigitsFieldNumber = 10;
-    private float percentDigits_;
-    /// <summary>
-    /// percentage of digits in the dataset
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PercentDigits {
-      get { return percentDigits_; }
-      set {
-        percentDigits_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_letters" field.</summary>
-    public const int PercentLettersFieldNumber = 11;
-    private float percentLetters_;
-    /// <summary>
-    /// percentage of letters in the dataset
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PercentLetters {
-      get { return percentLetters_; }
-      set {
-        percentLetters_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_duplicates_in_dataset" field.</summary>
-    public const int PercentDuplicatesInDatasetFieldNumber = 12;
-    private float percentDuplicatesInDataset_;
-    /// <summary>
-    /// percentage of duplicates in the dataset
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PercentDuplicatesInDataset {
-      get { return percentDuplicatesInDataset_; }
-      set {
-        percentDuplicatesInDataset_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1243,15 +1087,6 @@ namespace Asgt.Type {
       if (!TargetStatsByTarget.Equals(other.TargetStatsByTarget)) return false;
       if (!FeatureStatsByTarget.Equals(other.FeatureStatsByTarget)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SimilarityIndex, other.SimilarityIndex)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LexicalDiversitySplitOnSpace, other.LexicalDiversitySplitOnSpace)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LexicalDiversitySplitOnSpecial, other.LexicalDiversitySplitOnSpecial)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentEmptyStrings, other.PercentEmptyStrings)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentPureNumbersRemoveSpaces, other.PercentPureNumbersRemoveSpaces)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentPureNumbersRemoveSpecial, other.PercentPureNumbersRemoveSpecial)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentSpecialCharacters, other.PercentSpecialCharacters)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentDigits, other.PercentDigits)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentLetters, other.PercentLetters)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentDuplicatesInDataset, other.PercentDuplicatesInDataset)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1262,15 +1097,6 @@ namespace Asgt.Type {
       hash ^= TargetStatsByTarget.GetHashCode();
       hash ^= FeatureStatsByTarget.GetHashCode();
       if (SimilarityIndex != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SimilarityIndex);
-      if (LexicalDiversitySplitOnSpace != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LexicalDiversitySplitOnSpace);
-      if (LexicalDiversitySplitOnSpecial != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LexicalDiversitySplitOnSpecial);
-      if (PercentEmptyStrings != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentEmptyStrings);
-      if (PercentPureNumbersRemoveSpaces != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPureNumbersRemoveSpaces);
-      if (PercentPureNumbersRemoveSpecial != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPureNumbersRemoveSpecial);
-      if (PercentSpecialCharacters != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentSpecialCharacters);
-      if (PercentDigits != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDigits);
-      if (PercentLetters != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentLetters);
-      if (PercentDuplicatesInDataset != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDuplicatesInDataset);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1295,42 +1121,6 @@ namespace Asgt.Type {
         output.WriteRawTag(29);
         output.WriteFloat(SimilarityIndex);
       }
-      if (LexicalDiversitySplitOnSpace != 0F) {
-        output.WriteRawTag(37);
-        output.WriteFloat(LexicalDiversitySplitOnSpace);
-      }
-      if (LexicalDiversitySplitOnSpecial != 0F) {
-        output.WriteRawTag(45);
-        output.WriteFloat(LexicalDiversitySplitOnSpecial);
-      }
-      if (PercentEmptyStrings != 0F) {
-        output.WriteRawTag(53);
-        output.WriteFloat(PercentEmptyStrings);
-      }
-      if (PercentPureNumbersRemoveSpaces != 0F) {
-        output.WriteRawTag(61);
-        output.WriteFloat(PercentPureNumbersRemoveSpaces);
-      }
-      if (PercentPureNumbersRemoveSpecial != 0F) {
-        output.WriteRawTag(69);
-        output.WriteFloat(PercentPureNumbersRemoveSpecial);
-      }
-      if (PercentSpecialCharacters != 0F) {
-        output.WriteRawTag(77);
-        output.WriteFloat(PercentSpecialCharacters);
-      }
-      if (PercentDigits != 0F) {
-        output.WriteRawTag(85);
-        output.WriteFloat(PercentDigits);
-      }
-      if (PercentLetters != 0F) {
-        output.WriteRawTag(93);
-        output.WriteFloat(PercentLetters);
-      }
-      if (PercentDuplicatesInDataset != 0F) {
-        output.WriteRawTag(101);
-        output.WriteFloat(PercentDuplicatesInDataset);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1347,42 +1137,6 @@ namespace Asgt.Type {
         output.WriteRawTag(29);
         output.WriteFloat(SimilarityIndex);
       }
-      if (LexicalDiversitySplitOnSpace != 0F) {
-        output.WriteRawTag(37);
-        output.WriteFloat(LexicalDiversitySplitOnSpace);
-      }
-      if (LexicalDiversitySplitOnSpecial != 0F) {
-        output.WriteRawTag(45);
-        output.WriteFloat(LexicalDiversitySplitOnSpecial);
-      }
-      if (PercentEmptyStrings != 0F) {
-        output.WriteRawTag(53);
-        output.WriteFloat(PercentEmptyStrings);
-      }
-      if (PercentPureNumbersRemoveSpaces != 0F) {
-        output.WriteRawTag(61);
-        output.WriteFloat(PercentPureNumbersRemoveSpaces);
-      }
-      if (PercentPureNumbersRemoveSpecial != 0F) {
-        output.WriteRawTag(69);
-        output.WriteFloat(PercentPureNumbersRemoveSpecial);
-      }
-      if (PercentSpecialCharacters != 0F) {
-        output.WriteRawTag(77);
-        output.WriteFloat(PercentSpecialCharacters);
-      }
-      if (PercentDigits != 0F) {
-        output.WriteRawTag(85);
-        output.WriteFloat(PercentDigits);
-      }
-      if (PercentLetters != 0F) {
-        output.WriteRawTag(93);
-        output.WriteFloat(PercentLetters);
-      }
-      if (PercentDuplicatesInDataset != 0F) {
-        output.WriteRawTag(101);
-        output.WriteFloat(PercentDuplicatesInDataset);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1396,33 +1150,6 @@ namespace Asgt.Type {
       size += targetStatsByTarget_.CalculateSize(_map_targetStatsByTarget_codec);
       size += featureStatsByTarget_.CalculateSize(_map_featureStatsByTarget_codec);
       if (SimilarityIndex != 0F) {
-        size += 1 + 4;
-      }
-      if (LexicalDiversitySplitOnSpace != 0F) {
-        size += 1 + 4;
-      }
-      if (LexicalDiversitySplitOnSpecial != 0F) {
-        size += 1 + 4;
-      }
-      if (PercentEmptyStrings != 0F) {
-        size += 1 + 4;
-      }
-      if (PercentPureNumbersRemoveSpaces != 0F) {
-        size += 1 + 4;
-      }
-      if (PercentPureNumbersRemoveSpecial != 0F) {
-        size += 1 + 4;
-      }
-      if (PercentSpecialCharacters != 0F) {
-        size += 1 + 4;
-      }
-      if (PercentDigits != 0F) {
-        size += 1 + 4;
-      }
-      if (PercentLetters != 0F) {
-        size += 1 + 4;
-      }
-      if (PercentDuplicatesInDataset != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -1441,33 +1168,6 @@ namespace Asgt.Type {
       featureStatsByTarget_.Add(other.featureStatsByTarget_);
       if (other.SimilarityIndex != 0F) {
         SimilarityIndex = other.SimilarityIndex;
-      }
-      if (other.LexicalDiversitySplitOnSpace != 0F) {
-        LexicalDiversitySplitOnSpace = other.LexicalDiversitySplitOnSpace;
-      }
-      if (other.LexicalDiversitySplitOnSpecial != 0F) {
-        LexicalDiversitySplitOnSpecial = other.LexicalDiversitySplitOnSpecial;
-      }
-      if (other.PercentEmptyStrings != 0F) {
-        PercentEmptyStrings = other.PercentEmptyStrings;
-      }
-      if (other.PercentPureNumbersRemoveSpaces != 0F) {
-        PercentPureNumbersRemoveSpaces = other.PercentPureNumbersRemoveSpaces;
-      }
-      if (other.PercentPureNumbersRemoveSpecial != 0F) {
-        PercentPureNumbersRemoveSpecial = other.PercentPureNumbersRemoveSpecial;
-      }
-      if (other.PercentSpecialCharacters != 0F) {
-        PercentSpecialCharacters = other.PercentSpecialCharacters;
-      }
-      if (other.PercentDigits != 0F) {
-        PercentDigits = other.PercentDigits;
-      }
-      if (other.PercentLetters != 0F) {
-        PercentLetters = other.PercentLetters;
-      }
-      if (other.PercentDuplicatesInDataset != 0F) {
-        PercentDuplicatesInDataset = other.PercentDuplicatesInDataset;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1496,42 +1196,6 @@ namespace Asgt.Type {
             SimilarityIndex = input.ReadFloat();
             break;
           }
-          case 37: {
-            LexicalDiversitySplitOnSpace = input.ReadFloat();
-            break;
-          }
-          case 45: {
-            LexicalDiversitySplitOnSpecial = input.ReadFloat();
-            break;
-          }
-          case 53: {
-            PercentEmptyStrings = input.ReadFloat();
-            break;
-          }
-          case 61: {
-            PercentPureNumbersRemoveSpaces = input.ReadFloat();
-            break;
-          }
-          case 69: {
-            PercentPureNumbersRemoveSpecial = input.ReadFloat();
-            break;
-          }
-          case 77: {
-            PercentSpecialCharacters = input.ReadFloat();
-            break;
-          }
-          case 85: {
-            PercentDigits = input.ReadFloat();
-            break;
-          }
-          case 93: {
-            PercentLetters = input.ReadFloat();
-            break;
-          }
-          case 101: {
-            PercentDuplicatesInDataset = input.ReadFloat();
-            break;
-          }
         }
       }
     #endif
@@ -1557,42 +1221,6 @@ namespace Asgt.Type {
           }
           case 29: {
             SimilarityIndex = input.ReadFloat();
-            break;
-          }
-          case 37: {
-            LexicalDiversitySplitOnSpace = input.ReadFloat();
-            break;
-          }
-          case 45: {
-            LexicalDiversitySplitOnSpecial = input.ReadFloat();
-            break;
-          }
-          case 53: {
-            PercentEmptyStrings = input.ReadFloat();
-            break;
-          }
-          case 61: {
-            PercentPureNumbersRemoveSpaces = input.ReadFloat();
-            break;
-          }
-          case 69: {
-            PercentPureNumbersRemoveSpecial = input.ReadFloat();
-            break;
-          }
-          case 77: {
-            PercentSpecialCharacters = input.ReadFloat();
-            break;
-          }
-          case 85: {
-            PercentDigits = input.ReadFloat();
-            break;
-          }
-          case 93: {
-            PercentLetters = input.ReadFloat();
-            break;
-          }
-          case 101: {
-            PercentDuplicatesInDataset = input.ReadFloat();
             break;
           }
         }

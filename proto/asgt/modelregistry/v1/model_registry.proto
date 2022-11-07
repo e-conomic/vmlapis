@@ -3,6 +3,7 @@ syntax = "proto3";
 package asgt.modelregistry.v1;
 
 import "asgt/type/dataset.proto";
+import "asgt/type/dataset_statistics.proto";
 import "asgt/type/model.proto";
 import "asgt/type/revision.proto";
 import "asgt/type/target_metrics.proto";
@@ -29,6 +30,7 @@ message RegisterModelRequest {
   repeated asgt.type.TargetMetrics target_metrics = 5;
   asgt.type.Model.InputType input_type = 6;
   asgt.type.TrainStatistics train_statistics = 7;
+  asgt.type.DatasetStatistics dataset_statistics = 8;
 }
 
 //message DeleteModelRequest {
