@@ -26,35 +26,37 @@ namespace Asgt.Modelregistry.V1 {
           string.Concat(
             "Ciphc2d0L21vZGVscmVnaXN0cnkvdjEvbW9kZWxfcmVnaXN0cnkucHJvdG8S",
             "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRoXYXNndC90eXBlL2RhdGFzZXQucHJv",
-            "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
-            "LnByb3RvGh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aIGFzZ3Qv",
-            "dHlwZS90cmFpbl9zdGF0aXN0aWNzLnByb3RvGhtnb29nbGUvcHJvdG9idWYv",
-            "ZW1wdHkucHJvdG8i7QMKFFJlZ2lzdGVyTW9kZWxSZXF1ZXN0EiwKB2RhdGFz",
-            "ZXQYASABKAsyEi5hc2d0LnR5cGUuRGF0YXNldFIHZGF0YXNldBIvCghyZXZp",
-            "c2lvbhgCIAEoCzITLmFzZ3QudHlwZS5SZXZpc2lvblIIcmV2aXNpb24SIwoN",
-            "bW9kZWxfdmVyc2lvbhgDIAEoA1IMbW9kZWxWZXJzaW9uElIKB21ldHJpY3MY",
-            "BCADKAsyOC5hc2d0Lm1vZGVscmVnaXN0cnkudjEuUmVnaXN0ZXJNb2RlbFJl",
-            "cXVlc3QuTWV0cmljc0VudHJ5UgdtZXRyaWNzEj8KDnRhcmdldF9tZXRyaWNz",
-            "GAUgAygLMhguYXNndC50eXBlLlRhcmdldE1ldHJpY3NSDXRhcmdldE1ldHJp",
-            "Y3MSOQoKaW5wdXRfdHlwZRgGIAEoDjIaLmFzZ3QudHlwZS5Nb2RlbC5JbnB1",
-            "dFR5cGVSCWlucHV0VHlwZRJFChB0cmFpbl9zdGF0aXN0aWNzGAcgASgLMhou",
-            "YXNndC50eXBlLlRyYWluU3RhdGlzdGljc1IPdHJhaW5TdGF0aXN0aWNzGjoK",
-            "DE1ldHJpY3NFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEo",
-            "BVIFdmFsdWU6AjgBIkYKFkdldEN1cnJlbnRNb2RlbFJlcXVlc3QSLAoHZGF0",
-            "YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0UgdkYXRhc2V0IkEKF0dl",
-            "dEN1cnJlbnRNb2RlbFJlc3BvbnNlEiYKBW1vZGVsGAEgASgLMhAuYXNndC50",
-            "eXBlLk1vZGVsUgVtb2RlbDLXAQoNTW9kZWxSZWdpc3RyeRJUCg1SZWdpc3Rl",
-            "ck1vZGVsEisuYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLlJlZ2lzdGVyTW9kZWxS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EnAKD0dldEN1cnJlbnRN",
-            "b2RlbBItLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5HZXRDdXJyZW50TW9kZWxS",
-            "ZXF1ZXN0Gi4uYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLkdldEN1cnJlbnRNb2Rl",
-            "bFJlc3BvbnNlQklaR2dpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
-            "L2dvL2FzZ3QvbW9kZWxyZWdpc3RyeS92MTttb2RlbHJlZ2lzdHJ5YgZwcm90",
-            "bzM="));
+            "dG8aImFzZ3QvdHlwZS9kYXRhc2V0X3N0YXRpc3RpY3MucHJvdG8aFWFzZ3Qv",
+            "dHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9uLnByb3RvGh5h",
+            "c2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aIGFzZ3QvdHlwZS90cmFp",
+            "bl9zdGF0aXN0aWNzLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJv",
+            "dG8iugQKFFJlZ2lzdGVyTW9kZWxSZXF1ZXN0EiwKB2RhdGFzZXQYASABKAsy",
+            "Ei5hc2d0LnR5cGUuRGF0YXNldFIHZGF0YXNldBIvCghyZXZpc2lvbhgCIAEo",
+            "CzITLmFzZ3QudHlwZS5SZXZpc2lvblIIcmV2aXNpb24SIwoNbW9kZWxfdmVy",
+            "c2lvbhgDIAEoA1IMbW9kZWxWZXJzaW9uElIKB21ldHJpY3MYBCADKAsyOC5h",
+            "c2d0Lm1vZGVscmVnaXN0cnkudjEuUmVnaXN0ZXJNb2RlbFJlcXVlc3QuTWV0",
+            "cmljc0VudHJ5UgdtZXRyaWNzEj8KDnRhcmdldF9tZXRyaWNzGAUgAygLMhgu",
+            "YXNndC50eXBlLlRhcmdldE1ldHJpY3NSDXRhcmdldE1ldHJpY3MSOQoKaW5w",
+            "dXRfdHlwZRgGIAEoDjIaLmFzZ3QudHlwZS5Nb2RlbC5JbnB1dFR5cGVSCWlu",
+            "cHV0VHlwZRJFChB0cmFpbl9zdGF0aXN0aWNzGAcgASgLMhouYXNndC50eXBl",
+            "LlRyYWluU3RhdGlzdGljc1IPdHJhaW5TdGF0aXN0aWNzEksKEmRhdGFzZXRf",
+            "c3RhdGlzdGljcxgIIAEoCzIcLmFzZ3QudHlwZS5EYXRhc2V0U3RhdGlzdGlj",
+            "c1IRZGF0YXNldFN0YXRpc3RpY3MaOgoMTWV0cmljc0VudHJ5EhAKA2tleRgB",
+            "IAEoCVIDa2V5EhQKBXZhbHVlGAIgASgFUgV2YWx1ZToCOAEiRgoWR2V0Q3Vy",
+            "cmVudE1vZGVsUmVxdWVzdBIsCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBl",
+            "LkRhdGFzZXRSB2RhdGFzZXQiQQoXR2V0Q3VycmVudE1vZGVsUmVzcG9uc2US",
+            "JgoFbW9kZWwYASABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVsMtcBCg1N",
+            "b2RlbFJlZ2lzdHJ5ElQKDVJlZ2lzdGVyTW9kZWwSKy5hc2d0Lm1vZGVscmVn",
+            "aXN0cnkudjEuUmVnaXN0ZXJNb2RlbFJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkScAoPR2V0Q3VycmVudE1vZGVsEi0uYXNndC5tb2RlbHJlZ2lz",
+            "dHJ5LnYxLkdldEN1cnJlbnRNb2RlbFJlcXVlc3QaLi5hc2d0Lm1vZGVscmVn",
+            "aXN0cnkudjEuR2V0Q3VycmVudE1vZGVsUmVzcG9uc2VCSVpHZ2l0aHViLmNv",
+            "bS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC9tb2RlbHJlZ2lzdHJ5",
+            "L3YxO21vZGVscmVnaXN0cnliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Asgt.Type.TrainStatisticsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.DatasetStatisticsReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Asgt.Type.TrainStatisticsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics", "DatasetStatistics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null, null)
           }));
@@ -104,6 +106,7 @@ namespace Asgt.Modelregistry.V1 {
       targetMetrics_ = other.targetMetrics_.Clone();
       inputType_ = other.inputType_;
       trainStatistics_ = other.trainStatistics_ != null ? other.trainStatistics_.Clone() : null;
+      datasetStatistics_ = other.datasetStatistics_ != null ? other.datasetStatistics_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -195,6 +198,18 @@ namespace Asgt.Modelregistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "dataset_statistics" field.</summary>
+    public const int DatasetStatisticsFieldNumber = 8;
+    private global::Asgt.Type.DatasetStatistics datasetStatistics_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.Type.DatasetStatistics DatasetStatistics {
+      get { return datasetStatistics_; }
+      set {
+        datasetStatistics_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -217,6 +232,7 @@ namespace Asgt.Modelregistry.V1 {
       if(!targetMetrics_.Equals(other.targetMetrics_)) return false;
       if (InputType != other.InputType) return false;
       if (!object.Equals(TrainStatistics, other.TrainStatistics)) return false;
+      if (!object.Equals(DatasetStatistics, other.DatasetStatistics)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -231,6 +247,7 @@ namespace Asgt.Modelregistry.V1 {
       hash ^= targetMetrics_.GetHashCode();
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
       if (trainStatistics_ != null) hash ^= TrainStatistics.GetHashCode();
+      if (datasetStatistics_ != null) hash ^= DatasetStatistics.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -271,6 +288,10 @@ namespace Asgt.Modelregistry.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(TrainStatistics);
       }
+      if (datasetStatistics_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(DatasetStatistics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -303,6 +324,10 @@ namespace Asgt.Modelregistry.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(TrainStatistics);
       }
+      if (datasetStatistics_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(DatasetStatistics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -329,6 +354,9 @@ namespace Asgt.Modelregistry.V1 {
       }
       if (trainStatistics_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainStatistics);
+      }
+      if (datasetStatistics_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DatasetStatistics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -367,6 +395,12 @@ namespace Asgt.Modelregistry.V1 {
           TrainStatistics = new global::Asgt.Type.TrainStatistics();
         }
         TrainStatistics.MergeFrom(other.TrainStatistics);
+      }
+      if (other.datasetStatistics_ != null) {
+        if (datasetStatistics_ == null) {
+          DatasetStatistics = new global::Asgt.Type.DatasetStatistics();
+        }
+        DatasetStatistics.MergeFrom(other.DatasetStatistics);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -420,6 +454,13 @@ namespace Asgt.Modelregistry.V1 {
             input.ReadMessage(TrainStatistics);
             break;
           }
+          case 66: {
+            if (datasetStatistics_ == null) {
+              DatasetStatistics = new global::Asgt.Type.DatasetStatistics();
+            }
+            input.ReadMessage(DatasetStatistics);
+            break;
+          }
         }
       }
     #endif
@@ -470,6 +511,13 @@ namespace Asgt.Modelregistry.V1 {
               TrainStatistics = new global::Asgt.Type.TrainStatistics();
             }
             input.ReadMessage(TrainStatistics);
+            break;
+          }
+          case 66: {
+            if (datasetStatistics_ == null) {
+              DatasetStatistics = new global::Asgt.Type.DatasetStatistics();
+            }
+            input.ReadMessage(DatasetStatistics);
             break;
           }
         }

@@ -38,9 +38,7 @@ service DataService {
   }
 
   rpc GetInfo(GetInfoRequest) returns (GetInfoResponse) {
-    option (google.api.http) = {
-      get: "/v1/{type}/{name}:info"
-    };
+    option (google.api.http) = {get: "/v1/{type}/{name}:info"};
   }
 
   rpc UpdateDataset(UpdateDatasetRequest) returns (google.protobuf.Empty) {

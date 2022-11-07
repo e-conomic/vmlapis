@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+message DatasetStatistics {
+  float similarity_index = 1;
+  // measure of train/test similarity
+
+  float lexical_diversity_split_on_space = 2;
+  // lexical diversity of the dataset split on space
+
+  float lexical_diversity_split_on_special = 3;
+  // lexical diversity of the dataset split on special characters
+
+  float percent_empty_strings = 4;
+  // percentage of empty strings in the dataset
+
+  float percent_pure_numbers_remove_spaces = 5;
+  // percentage of pure numbers in the dataset after removing spaces
+
+  float percent_pure_numbers_remove_special = 6;
+  // percentage of pure numbers in the dataset after removing spaces and special characters
+
+  float percent_special_characters = 7;
+  // percentage of special characters in the dataset
+
+  float percent_digits = 8;
+  // percentage of digits in the dataset
+
+  float percent_letters = 9;
+  // percentage of letters in the dataset
+
+  float percent_duplicates_in_dataset = 10;
+  // percentage of duplicates in the dataset
+}

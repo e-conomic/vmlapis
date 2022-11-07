@@ -17,6 +17,8 @@ var global = (function() { return this || window || global || self || Function('
 
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 goog.object.extend(proto, asgt_type_dataset_pb);
+var asgt_type_dataset_statistics_pb = require('../../../asgt/type/dataset_statistics_pb.js');
+goog.object.extend(proto, asgt_type_dataset_statistics_pb);
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 goog.object.extend(proto, asgt_type_model_pb);
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
@@ -139,7 +141,8 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     targetMetricsList: jspb.Message.toObjectList(msg.getTargetMetricsList(),
     asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance),
     inputType: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    trainStatistics: (f = msg.getTrainStatistics()) && asgt_type_train_statistics_pb.TrainStatistics.toObject(includeInstance, f)
+    trainStatistics: (f = msg.getTrainStatistics()) && asgt_type_train_statistics_pb.TrainStatistics.toObject(includeInstance, f),
+    datasetStatistics: (f = msg.getDatasetStatistics()) && asgt_type_dataset_statistics_pb.DatasetStatistics.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -209,6 +212,11 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
       var value = new asgt_type_train_statistics_pb.TrainStatistics;
       reader.readMessage(value,asgt_type_train_statistics_pb.TrainStatistics.deserializeBinaryFromReader);
       msg.setTrainStatistics(value);
+      break;
+    case 8:
+      var value = new asgt_type_dataset_statistics_pb.DatasetStatistics;
+      reader.readMessage(value,asgt_type_dataset_statistics_pb.DatasetStatistics.deserializeBinaryFromReader);
+      msg.setDatasetStatistics(value);
       break;
     default:
       reader.skipField();
@@ -287,6 +295,14 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
       7,
       f,
       asgt_type_train_statistics_pb.TrainStatistics.serializeBinaryToWriter
+    );
+  }
+  f = message.getDatasetStatistics();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      asgt_type_dataset_statistics_pb.DatasetStatistics.serializeBinaryToWriter
     );
   }
 };
@@ -496,6 +512,43 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearTrainStatistics 
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.hasTrainStatistics = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional asgt.type.DatasetStatistics dataset_statistics = 8;
+ * @return {?proto.asgt.type.DatasetStatistics}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getDatasetStatistics = function() {
+  return /** @type{?proto.asgt.type.DatasetStatistics} */ (
+    jspb.Message.getWrapperField(this, asgt_type_dataset_statistics_pb.DatasetStatistics, 8));
+};
+
+
+/**
+ * @param {?proto.asgt.type.DatasetStatistics|undefined} value
+ * @return {!proto.asgt.modelregistry.v1.RegisterModelRequest} returns this
+*/
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setDatasetStatistics = function(value) {
+  return jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.modelregistry.v1.RegisterModelRequest} returns this
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearDatasetStatistics = function() {
+  return this.setDatasetStatistics(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.hasDatasetStatistics = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

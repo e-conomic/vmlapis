@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb';
+import * as asgt_type_dataset_statistics_pb from '../../../asgt/type/dataset_statistics_pb';
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb';
 import * as asgt_type_revision_pb from '../../../asgt/type/revision_pb';
 import * as asgt_type_target_metrics_pb from '../../../asgt/type/target_metrics_pb';
@@ -38,6 +39,11 @@ export class RegisterModelRequest extends jspb.Message {
   hasTrainStatistics(): boolean;
   clearTrainStatistics(): RegisterModelRequest;
 
+  getDatasetStatistics(): asgt_type_dataset_statistics_pb.DatasetStatistics | undefined;
+  setDatasetStatistics(value?: asgt_type_dataset_statistics_pb.DatasetStatistics): RegisterModelRequest;
+  hasDatasetStatistics(): boolean;
+  clearDatasetStatistics(): RegisterModelRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterModelRequest.AsObject;
   static toObject(includeInstance: boolean, msg: RegisterModelRequest): RegisterModelRequest.AsObject;
@@ -55,6 +61,7 @@ export namespace RegisterModelRequest {
     targetMetricsList: Array<asgt_type_target_metrics_pb.TargetMetrics.AsObject>,
     inputType: asgt_type_model_pb.Model.InputType,
     trainStatistics?: asgt_type_train_statistics_pb.TrainStatistics.AsObject,
+    datasetStatistics?: asgt_type_dataset_statistics_pb.DatasetStatistics.AsObject,
   }
 }
 

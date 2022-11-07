@@ -3,6 +3,7 @@ syntax = "proto3";
 package asgt.modelregistry.v1;
 
 import "asgt/type/dataset.proto";
+import "asgt/type/dataset_statistics.proto";
 import "asgt/type/model.proto";
 import "asgt/type/revision.proto";
 import "asgt/type/target_metrics.proto";
@@ -15,11 +16,10 @@ service ModelRegistry {
   rpc RegisterModel(RegisterModelRequest) returns (google.protobuf.Empty);
   //  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
 
-
   rpc GetCurrentModel(GetCurrentModelRequest) returns (GetCurrentModelResponse);
 
-// List the most recent versions of a model trained with a specified dataset
-//  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
+  // List the most recent versions of a model trained with a specified dataset
+  //  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
 }
 
 message RegisterModelRequest {
@@ -30,6 +30,7 @@ message RegisterModelRequest {
   repeated asgt.type.TargetMetrics target_metrics = 5;
   asgt.type.Model.InputType input_type = 6;
   asgt.type.TrainStatistics train_statistics = 7;
+  asgt.type.DatasetStatistics dataset_statistics = 8;
 }
 
 //message DeleteModelRequest {

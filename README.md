@@ -1,5 +1,11 @@
 # Protobuf API definitions for VML
 
+
+### Requirements
+Have buf installed
+```bash
+brew install bufbuild/buf/buf
+```
 ### Generate
 
 Generation is now done with a dockerfile
