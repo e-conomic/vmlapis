@@ -164,7 +164,8 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/DetectedBreakBreakType"
+          "$ref": "#/definitions/DetectedBreakBreakType",
+          "description": "Detected break type."
         },
         "isPrefix": {
           "type": "boolean",
@@ -199,7 +200,8 @@
           "description": "A list of detected languages together with confidence."
         },
         "detectedBreak": {
-          "$ref": "#/definitions/TextAnnotationDetectedBreak"
+          "$ref": "#/definitions/TextAnnotationDetectedBreak",
+          "description": "Detected start or end of a text segment."
         }
       },
       "description": "Additional information detected on the structural component."
@@ -240,7 +242,8 @@
           "description": "Document content, represented as a stream of bytes.\nNote: As with all `bytes` fields, protobuffers use a pure binary\nrepresentation, whereas JSON representations use base64."
         },
         "source": {
-          "$ref": "#/definitions/v1DocumentSource"
+          "$ref": "#/definitions/v1DocumentSource",
+          "description": "Google Cloud Storage image location, or publicly-accessible image\nURL. If both `content` and `source` are provided for a document, `content`\ntakes precedence and is used to perform the scan request."
         }
       }
     },
@@ -288,10 +291,13 @@
       "type": "object",
       "properties": {
         "property": {
-          "$ref": "#/definitions/TextAnnotationTextProperty"
+          "$ref": "#/definitions/TextAnnotationTextProperty",
+          "description": "Additional information detected for the block."
         },
         "boundingBox": {
-          "$ref": "#/definitions/typeBoundingPoly"
+          "$ref": "#/definitions/typeBoundingPoly",
+          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
+          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:"
         },
         "paragraphs": {
           "type": "array",
@@ -301,7 +307,8 @@
           "description": "List of paragraphs in this block (if this blocks is of type text)."
         },
         "blockType": {
-          "$ref": "#/definitions/BlockBlockType"
+          "$ref": "#/definitions/BlockBlockType",
+          "description": "Detected block type (text, image etc) for this block."
         },
         "confidence": {
           "type": "number",
@@ -343,13 +350,17 @@
           "title": "The text as found on the document \"1. Jan\"\nuseful for overlays"
         },
         "confidence": {
-          "$ref": "#/definitions/typeConfidence"
+          "$ref": "#/definitions/typeConfidence",
+          "title": "Confidence"
         },
         "boundingBox": {
-          "$ref": "#/definitions/typeBoundingPoly"
+          "$ref": "#/definitions/typeBoundingPoly",
+          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
+          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:"
         },
         "type": {
-          "$ref": "#/definitions/typeCandidateType"
+          "$ref": "#/definitions/typeCandidateType",
+          "title": "Indicate the type of the candidate"
         },
         "pageRef": {
           "type": "integer",
@@ -357,7 +368,8 @@
           "description": "A reference to the page where the candidate was found.\npage_ref start from 1."
         },
         "modelMetadata": {
-          "$ref": "#/definitions/typeModelSpec"
+          "$ref": "#/definitions/typeModelSpec",
+          "title": "Model spec of the TensorFlow Serving model that predicted this candidate"
         }
       }
     },
@@ -374,7 +386,8 @@
       "type": "object",
       "properties": {
         "level": {
-          "$ref": "#/definitions/ConfidenceLevel"
+          "$ref": "#/definitions/ConfidenceLevel",
+          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
         },
         "value": {
           "type": "number",
@@ -458,7 +471,8 @@
       "type": "object",
       "properties": {
         "property": {
-          "$ref": "#/definitions/TextAnnotationTextProperty"
+          "$ref": "#/definitions/TextAnnotationTextProperty",
+          "description": "Additional information detected on the page."
         },
         "width": {
           "type": "integer",
@@ -489,10 +503,12 @@
       "type": "object",
       "properties": {
         "property": {
-          "$ref": "#/definitions/TextAnnotationTextProperty"
+          "$ref": "#/definitions/TextAnnotationTextProperty",
+          "description": "Additional information detected for the paragraph."
         },
         "boundingBox": {
-          "$ref": "#/definitions/typeBoundingPoly"
+          "$ref": "#/definitions/typeBoundingPoly",
+          "description": "The bounding box for the paragraph.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3)."
         },
         "words": {
           "type": "array",
@@ -513,10 +529,12 @@
       "type": "object",
       "properties": {
         "property": {
-          "$ref": "#/definitions/TextAnnotationTextProperty"
+          "$ref": "#/definitions/TextAnnotationTextProperty",
+          "description": "Additional information detected for the symbol."
         },
         "boundingBox": {
-          "$ref": "#/definitions/typeBoundingPoly"
+          "$ref": "#/definitions/typeBoundingPoly",
+          "description": "The bounding box for the symbol.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertice order will still be (0, 1, 2, 3)."
         },
         "text": {
           "type": "string",
@@ -577,10 +595,12 @@
       "type": "object",
       "properties": {
         "property": {
-          "$ref": "#/definitions/TextAnnotationTextProperty"
+          "$ref": "#/definitions/TextAnnotationTextProperty",
+          "description": "Additional information detected for the word."
         },
         "boundingBox": {
-          "$ref": "#/definitions/typeBoundingPoly"
+          "$ref": "#/definitions/typeBoundingPoly",
+          "description": "The bounding box for the word.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3)."
         },
         "symbols": {
           "type": "array",
@@ -780,7 +800,8 @@
           "title": "[DEPRECATED]\nuse document number instead\ninvoiceNumber\nThe supplier defined identifier af the invoice\nExample: \"12345-A99\""
         },
         "textAnnotation": {
-          "$ref": "#/definitions/typeTextAnnotation"
+          "$ref": "#/definitions/typeTextAnnotation",
+          "title": "Return text annotation"
         },
         "ocrLineDkType": {
           "type": "array",
@@ -957,7 +978,8 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/v1FeatureType"
+          "$ref": "#/definitions/v1FeatureType",
+          "description": "The feature type."
         },
         "maxResults": {
           "type": "integer",
@@ -965,7 +987,8 @@
           "description": "Maximum number of results of this type. Does not apply to\n`TEXT_ANNOTATION` or `DOCUMENT_TYPE`."
         },
         "minConfidence": {
-          "$ref": "#/definitions/ConfidenceLevel"
+          "$ref": "#/definitions/ConfidenceLevel",
+          "title": "The minimum confidence for predictions that the caller wants returned"
         }
       }
     },

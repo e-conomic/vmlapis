@@ -79,6 +79,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -108,6 +109,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -138,6 +140,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -170,6 +173,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -200,6 +204,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -245,6 +250,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -309,6 +315,7 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -356,7 +363,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "Name of the dataset to make prediction against",
+            "description": "Name of the dataset to make prediction against\n\ntext-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -408,13 +415,14 @@
         "parameters": [
           {
             "name": "datasetName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "options.limit",
-            "description": "The number of trainings to return. Ranges from 1 to 100.",
+            "description": "The number of trainings to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)",
             "in": "query",
             "required": false,
             "type": "string",
@@ -447,7 +455,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "Name of the dataset to make prediction against",
+            "description": "Name of the dataset to make prediction against\n\ntext-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -499,7 +507,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "Name of the dataset to make prediction against",
+            "description": "Name of the dataset to make prediction against\n\ntext-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -512,7 +520,8 @@
               "type": "object",
               "properties": {
                 "input": {
-                  "$ref": "#/definitions/typeData"
+                  "$ref": "#/definitions/typeData",
+                  "title": "Input data to use for prediction"
                 },
                 "options": {
                   "$ref": "#/definitions/v2SuggestOptions"
@@ -548,6 +557,7 @@
         "parameters": [
           {
             "name": "tagName",
+            "description": "text-no-spaces",
             "in": "path",
             "required": true,
             "type": "string"
@@ -579,7 +589,7 @@
         "parameters": [
           {
             "name": "options.limit",
-            "description": "The number of trainings to return. Ranges from 1 to 100.",
+            "description": "The number of trainings to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)",
             "in": "query",
             "required": false,
             "type": "string",
@@ -686,7 +696,8 @@
       "type": "object",
       "properties": {
         "level": {
-          "$ref": "#/definitions/ConfidenceLevel"
+          "$ref": "#/definitions/ConfidenceLevel",
+          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
         },
         "value": {
           "type": "number",
@@ -700,13 +711,16 @@
       "type": "object",
       "properties": {
         "transaction": {
-          "$ref": "#/definitions/typeTransaction"
+          "$ref": "#/definitions/typeTransaction",
+          "title": "Transaction-level information; at this time used only with bank transactions"
         },
         "invoice": {
-          "$ref": "#/definitions/typeInvoice"
+          "$ref": "#/definitions/typeInvoice",
+          "title": "Invoice-level information for e-invoices and scanned invoices and receipts"
         },
         "invoiceLine": {
-          "$ref": "#/definitions/typeInvoiceLine"
+          "$ref": "#/definitions/typeInvoiceLine",
+          "title": "Line-level information for e-invoices; use one sample per invoice line"
         }
       },
       "description": "Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine\nstructures can be used at a time."
@@ -802,7 +816,8 @@
           "format": "date-time"
         },
         "supplier": {
-          "$ref": "#/definitions/typeSupplier"
+          "$ref": "#/definitions/typeSupplier",
+          "description": "Supplier of the invoice."
         },
         "customerRef": {
           "type": "string",
@@ -937,7 +952,8 @@
           "description": "Specifies when did the training finish."
         },
         "dataset": {
-          "$ref": "#/definitions/typeDataset"
+          "$ref": "#/definitions/typeDataset",
+          "description": "Specifies dataset the training ran on."
         },
         "scheduleTime": {
           "type": "string",
@@ -979,13 +995,15 @@
       "type": "object",
       "properties": {
         "datasetName": {
-          "type": "string"
+          "type": "string",
+          "title": "text-no-spaces"
         },
         "tags": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "title": "text-no-spaces"
         }
       }
     },
@@ -1001,7 +1019,8 @@
           "title": "Maximum number of suggestions to return per target"
         },
         "minConfidence": {
-          "$ref": "#/definitions/ConfidenceLevel"
+          "$ref": "#/definitions/ConfidenceLevel",
+          "description": "Not implemented yet."
         }
       }
     },
@@ -1022,7 +1041,7 @@
         "limit": {
           "type": "string",
           "format": "int64",
-          "description": "The number of trainings to return. Ranges from 1 to 100."
+          "description": "The number of trainings to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)"
         }
       }
     },
