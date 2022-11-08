@@ -5,8 +5,7 @@ package asgt.type;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
 message DatasetStatistics {
-  float similarity_index = 1;
-  // measure of train/test similarity
+  reserved 1;
 
   float lexical_diversity_split_on_space = 2;
   // lexical diversity of the dataset split on space

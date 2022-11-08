@@ -20,16 +20,6 @@ public final class DatasetStatisticsOuterClass {
 
     /**
      * <pre>
-     * measure of train/test similarity
-     * </pre>
-     *
-     * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-     * @return The similarityIndex.
-     */
-    float getSimilarityIndex();
-
-    /**
-     * <pre>
      * lexical diversity of the dataset split on space
      * </pre>
      *
@@ -156,21 +146,6 @@ public final class DatasetStatisticsOuterClass {
       return asgt.type.DatasetStatisticsOuterClass.internal_static_asgt_type_DatasetStatistics_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.class, asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.Builder.class);
-    }
-
-    public static final int SIMILARITY_INDEX_FIELD_NUMBER = 1;
-    private float similarityIndex_;
-    /**
-     * <pre>
-     * measure of train/test similarity
-     * </pre>
-     *
-     * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-     * @return The similarityIndex.
-     */
-    @java.lang.Override
-    public float getSimilarityIndex() {
-      return similarityIndex_;
     }
 
     public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER = 2;
@@ -322,9 +297,6 @@ public final class DatasetStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
-        output.writeFloat(1, similarityIndex_);
-      }
       if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
         output.writeFloat(2, lexicalDiversitySplitOnSpace_);
       }
@@ -361,10 +333,6 @@ public final class DatasetStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(1, similarityIndex_);
-      }
       if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, lexicalDiversitySplitOnSpace_);
@@ -416,9 +384,6 @@ public final class DatasetStatisticsOuterClass {
       }
       asgt.type.DatasetStatisticsOuterClass.DatasetStatistics other = (asgt.type.DatasetStatisticsOuterClass.DatasetStatistics) obj;
 
-      if (java.lang.Float.floatToIntBits(getSimilarityIndex())
-          != java.lang.Float.floatToIntBits(
-              other.getSimilarityIndex())) return false;
       if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpace())
           != java.lang.Float.floatToIntBits(
               other.getLexicalDiversitySplitOnSpace())) return false;
@@ -457,9 +422,6 @@ public final class DatasetStatisticsOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SIMILARITY_INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getSimilarityIndex());
       hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getLexicalDiversitySplitOnSpace());
@@ -615,8 +577,6 @@ public final class DatasetStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        similarityIndex_ = 0F;
-
         lexicalDiversitySplitOnSpace_ = 0F;
 
         lexicalDiversitySplitOnSpecial_ = 0F;
@@ -661,7 +621,6 @@ public final class DatasetStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.DatasetStatisticsOuterClass.DatasetStatistics buildPartial() {
         asgt.type.DatasetStatisticsOuterClass.DatasetStatistics result = new asgt.type.DatasetStatisticsOuterClass.DatasetStatistics(this);
-        result.similarityIndex_ = similarityIndex_;
         result.lexicalDiversitySplitOnSpace_ = lexicalDiversitySplitOnSpace_;
         result.lexicalDiversitySplitOnSpecial_ = lexicalDiversitySplitOnSpecial_;
         result.percentEmptyStrings_ = percentEmptyStrings_;
@@ -719,9 +678,6 @@ public final class DatasetStatisticsOuterClass {
 
       public Builder mergeFrom(asgt.type.DatasetStatisticsOuterClass.DatasetStatistics other) {
         if (other == asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.getDefaultInstance()) return this;
-        if (other.getSimilarityIndex() != 0F) {
-          setSimilarityIndex(other.getSimilarityIndex());
-        }
         if (other.getLexicalDiversitySplitOnSpace() != 0F) {
           setLexicalDiversitySplitOnSpace(other.getLexicalDiversitySplitOnSpace());
         }
@@ -775,11 +731,6 @@ public final class DatasetStatisticsOuterClass {
               case 0:
                 done = true;
                 break;
-              case 13: {
-                similarityIndex_ = input.readFloat();
-
-                break;
-              } // case 13
               case 21: {
                 lexicalDiversitySplitOnSpace_ = input.readFloat();
 
@@ -838,49 +789,6 @@ public final class DatasetStatisticsOuterClass {
         } finally {
           onChanged();
         } // finally
-        return this;
-      }
-
-      private float similarityIndex_ ;
-      /**
-       * <pre>
-       * measure of train/test similarity
-       * </pre>
-       *
-       * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-       * @return The similarityIndex.
-       */
-      @java.lang.Override
-      public float getSimilarityIndex() {
-        return similarityIndex_;
-      }
-      /**
-       * <pre>
-       * measure of train/test similarity
-       * </pre>
-       *
-       * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-       * @param value The similarityIndex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSimilarityIndex(float value) {
-        
-        similarityIndex_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * measure of train/test similarity
-       * </pre>
-       *
-       * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSimilarityIndex() {
-        
-        similarityIndex_ = 0F;
-        onChanged();
         return this;
       }
 
@@ -1349,24 +1257,23 @@ public final class DatasetStatisticsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\"asgt/type/dataset_statistics.proto\022\tas" +
-      "gt.type\"\361\004\n\021DatasetStatistics\022)\n\020similar" +
-      "ity_index\030\001 \001(\002R\017similarityIndex\022F\n lexi" +
-      "cal_diversity_split_on_space\030\002 \001(\002R\034lexi" +
-      "calDiversitySplitOnSpace\022J\n\"lexical_dive" +
-      "rsity_split_on_special\030\003 \001(\002R\036lexicalDiv" +
-      "ersitySplitOnSpecial\0222\n\025percent_empty_st" +
-      "rings\030\004 \001(\002R\023percentEmptyStrings\022J\n\"perc" +
-      "ent_pure_numbers_remove_spaces\030\005 \001(\002R\036pe" +
-      "rcentPureNumbersRemoveSpaces\022L\n#percent_" +
-      "pure_numbers_remove_special\030\006 \001(\002R\037perce" +
-      "ntPureNumbersRemoveSpecial\022<\n\032percent_sp" +
-      "ecial_characters\030\007 \001(\002R\030percentSpecialCh" +
-      "aracters\022%\n\016percent_digits\030\010 \001(\002R\rpercen" +
-      "tDigits\022\'\n\017percent_letters\030\t \001(\002R\016percen" +
-      "tLetters\022A\n\035percent_duplicates_in_datase" +
-      "t\030\n \001(\002R\032percentDuplicatesInDatasetB8Z6g" +
-      "ithub.com/e-conomic/vmlapis/gen/go/asgt/" +
-      "type;asgttypeb\006proto3"
+      "gt.type\"\314\004\n\021DatasetStatistics\022F\n lexical" +
+      "_diversity_split_on_space\030\002 \001(\002R\034lexical" +
+      "DiversitySplitOnSpace\022J\n\"lexical_diversi" +
+      "ty_split_on_special\030\003 \001(\002R\036lexicalDivers" +
+      "itySplitOnSpecial\0222\n\025percent_empty_strin" +
+      "gs\030\004 \001(\002R\023percentEmptyStrings\022J\n\"percent" +
+      "_pure_numbers_remove_spaces\030\005 \001(\002R\036perce" +
+      "ntPureNumbersRemoveSpaces\022L\n#percent_pur" +
+      "e_numbers_remove_special\030\006 \001(\002R\037percentP" +
+      "ureNumbersRemoveSpecial\022<\n\032percent_speci" +
+      "al_characters\030\007 \001(\002R\030percentSpecialChara" +
+      "cters\022%\n\016percent_digits\030\010 \001(\002R\rpercentDi" +
+      "gits\022\'\n\017percent_letters\030\t \001(\002R\016percentLe" +
+      "tters\022A\n\035percent_duplicates_in_dataset\030\n" +
+      " \001(\002R\032percentDuplicatesInDatasetJ\004\010\001\020\002B8" +
+      "Z6github.com/e-conomic/vmlapis/gen/go/as" +
+      "gt/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1377,7 +1284,7 @@ public final class DatasetStatisticsOuterClass {
     internal_static_asgt_type_DatasetStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_DatasetStatistics_descriptor,
-        new java.lang.String[] { "SimilarityIndex", "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", });
+        new java.lang.String[] { "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

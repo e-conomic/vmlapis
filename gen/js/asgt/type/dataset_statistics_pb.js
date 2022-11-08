@@ -69,7 +69,6 @@ proto.asgt.type.DatasetStatistics.prototype.toObject = function(opt_includeInsta
  */
 proto.asgt.type.DatasetStatistics.toObject = function(includeInstance, msg) {
   var f, obj = {
-    similarityIndex: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
     lexicalDiversitySplitOnSpace: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
     lexicalDiversitySplitOnSpecial: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
     percentEmptyStrings: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
@@ -115,10 +114,6 @@ proto.asgt.type.DatasetStatistics.deserializeBinaryFromReader = function(msg, re
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setSimilarityIndex(value);
-      break;
     case 2:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setLexicalDiversitySplitOnSpace(value);
@@ -184,13 +179,6 @@ proto.asgt.type.DatasetStatistics.prototype.serializeBinary = function() {
  */
 proto.asgt.type.DatasetStatistics.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getSimilarityIndex();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      1,
-      f
-    );
-  }
   f = message.getLexicalDiversitySplitOnSpace();
   if (f !== 0.0) {
     writer.writeFloat(
@@ -254,24 +242,6 @@ proto.asgt.type.DatasetStatistics.serializeBinaryToWriter = function(message, wr
       f
     );
   }
-};
-
-
-/**
- * optional float similarity_index = 1;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getSimilarityIndex = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setSimilarityIndex = function(value) {
-  return jspb.Message.setProto3FloatField(this, 1, value);
 };
 
 
