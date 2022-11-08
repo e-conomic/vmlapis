@@ -20,20 +20,10 @@ public final class DatasetStatisticsOuterClass {
 
     /**
      * <pre>
-     * measure of train/test similarity
-     * </pre>
-     *
-     * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-     * @return The similarityIndex.
-     */
-    float getSimilarityIndex();
-
-    /**
-     * <pre>
      * lexical diversity of the dataset split on space
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+     * <code>float lexical_diversity_split_on_space = 1 [json_name = "lexicalDiversitySplitOnSpace"];</code>
      * @return The lexicalDiversitySplitOnSpace.
      */
     float getLexicalDiversitySplitOnSpace();
@@ -43,7 +33,7 @@ public final class DatasetStatisticsOuterClass {
      * lexical diversity of the dataset split on special characters
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+     * <code>float lexical_diversity_split_on_special = 2 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
      * @return The lexicalDiversitySplitOnSpecial.
      */
     float getLexicalDiversitySplitOnSpecial();
@@ -53,7 +43,7 @@ public final class DatasetStatisticsOuterClass {
      * percentage of empty strings in the dataset
      * </pre>
      *
-     * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+     * <code>float percent_empty_strings = 3 [json_name = "percentEmptyStrings"];</code>
      * @return The percentEmptyStrings.
      */
     float getPercentEmptyStrings();
@@ -63,7 +53,7 @@ public final class DatasetStatisticsOuterClass {
      * percentage of pure numbers in the dataset after removing spaces
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+     * <code>float percent_pure_numbers_remove_spaces = 4 [json_name = "percentPureNumbersRemoveSpaces"];</code>
      * @return The percentPureNumbersRemoveSpaces.
      */
     float getPercentPureNumbersRemoveSpaces();
@@ -73,7 +63,7 @@ public final class DatasetStatisticsOuterClass {
      * percentage of pure numbers in the dataset after removing spaces and special characters
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+     * <code>float percent_pure_numbers_remove_special = 5 [json_name = "percentPureNumbersRemoveSpecial"];</code>
      * @return The percentPureNumbersRemoveSpecial.
      */
     float getPercentPureNumbersRemoveSpecial();
@@ -83,7 +73,7 @@ public final class DatasetStatisticsOuterClass {
      * percentage of special characters in the dataset
      * </pre>
      *
-     * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+     * <code>float percent_special_characters = 6 [json_name = "percentSpecialCharacters"];</code>
      * @return The percentSpecialCharacters.
      */
     float getPercentSpecialCharacters();
@@ -93,7 +83,7 @@ public final class DatasetStatisticsOuterClass {
      * percentage of digits in the dataset
      * </pre>
      *
-     * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+     * <code>float percent_digits = 7 [json_name = "percentDigits"];</code>
      * @return The percentDigits.
      */
     float getPercentDigits();
@@ -103,7 +93,7 @@ public final class DatasetStatisticsOuterClass {
      * percentage of letters in the dataset
      * </pre>
      *
-     * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+     * <code>float percent_letters = 8 [json_name = "percentLetters"];</code>
      * @return The percentLetters.
      */
     float getPercentLetters();
@@ -113,7 +103,7 @@ public final class DatasetStatisticsOuterClass {
      * percentage of duplicates in the dataset
      * </pre>
      *
-     * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+     * <code>float percent_duplicates_in_dataset = 9 [json_name = "percentDuplicatesInDataset"];</code>
      * @return The percentDuplicatesInDataset.
      */
     float getPercentDuplicatesInDataset();
@@ -158,29 +148,14 @@ public final class DatasetStatisticsOuterClass {
               asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.class, asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.Builder.class);
     }
 
-    public static final int SIMILARITY_INDEX_FIELD_NUMBER = 1;
-    private float similarityIndex_;
-    /**
-     * <pre>
-     * measure of train/test similarity
-     * </pre>
-     *
-     * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-     * @return The similarityIndex.
-     */
-    @java.lang.Override
-    public float getSimilarityIndex() {
-      return similarityIndex_;
-    }
-
-    public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER = 2;
+    public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER = 1;
     private float lexicalDiversitySplitOnSpace_;
     /**
      * <pre>
      * lexical diversity of the dataset split on space
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+     * <code>float lexical_diversity_split_on_space = 1 [json_name = "lexicalDiversitySplitOnSpace"];</code>
      * @return The lexicalDiversitySplitOnSpace.
      */
     @java.lang.Override
@@ -188,14 +163,14 @@ public final class DatasetStatisticsOuterClass {
       return lexicalDiversitySplitOnSpace_;
     }
 
-    public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER = 3;
+    public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER = 2;
     private float lexicalDiversitySplitOnSpecial_;
     /**
      * <pre>
      * lexical diversity of the dataset split on special characters
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+     * <code>float lexical_diversity_split_on_special = 2 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
      * @return The lexicalDiversitySplitOnSpecial.
      */
     @java.lang.Override
@@ -203,14 +178,14 @@ public final class DatasetStatisticsOuterClass {
       return lexicalDiversitySplitOnSpecial_;
     }
 
-    public static final int PERCENT_EMPTY_STRINGS_FIELD_NUMBER = 4;
+    public static final int PERCENT_EMPTY_STRINGS_FIELD_NUMBER = 3;
     private float percentEmptyStrings_;
     /**
      * <pre>
      * percentage of empty strings in the dataset
      * </pre>
      *
-     * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+     * <code>float percent_empty_strings = 3 [json_name = "percentEmptyStrings"];</code>
      * @return The percentEmptyStrings.
      */
     @java.lang.Override
@@ -218,14 +193,14 @@ public final class DatasetStatisticsOuterClass {
       return percentEmptyStrings_;
     }
 
-    public static final int PERCENT_PURE_NUMBERS_REMOVE_SPACES_FIELD_NUMBER = 5;
+    public static final int PERCENT_PURE_NUMBERS_REMOVE_SPACES_FIELD_NUMBER = 4;
     private float percentPureNumbersRemoveSpaces_;
     /**
      * <pre>
      * percentage of pure numbers in the dataset after removing spaces
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+     * <code>float percent_pure_numbers_remove_spaces = 4 [json_name = "percentPureNumbersRemoveSpaces"];</code>
      * @return The percentPureNumbersRemoveSpaces.
      */
     @java.lang.Override
@@ -233,14 +208,14 @@ public final class DatasetStatisticsOuterClass {
       return percentPureNumbersRemoveSpaces_;
     }
 
-    public static final int PERCENT_PURE_NUMBERS_REMOVE_SPECIAL_FIELD_NUMBER = 6;
+    public static final int PERCENT_PURE_NUMBERS_REMOVE_SPECIAL_FIELD_NUMBER = 5;
     private float percentPureNumbersRemoveSpecial_;
     /**
      * <pre>
      * percentage of pure numbers in the dataset after removing spaces and special characters
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+     * <code>float percent_pure_numbers_remove_special = 5 [json_name = "percentPureNumbersRemoveSpecial"];</code>
      * @return The percentPureNumbersRemoveSpecial.
      */
     @java.lang.Override
@@ -248,14 +223,14 @@ public final class DatasetStatisticsOuterClass {
       return percentPureNumbersRemoveSpecial_;
     }
 
-    public static final int PERCENT_SPECIAL_CHARACTERS_FIELD_NUMBER = 7;
+    public static final int PERCENT_SPECIAL_CHARACTERS_FIELD_NUMBER = 6;
     private float percentSpecialCharacters_;
     /**
      * <pre>
      * percentage of special characters in the dataset
      * </pre>
      *
-     * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+     * <code>float percent_special_characters = 6 [json_name = "percentSpecialCharacters"];</code>
      * @return The percentSpecialCharacters.
      */
     @java.lang.Override
@@ -263,14 +238,14 @@ public final class DatasetStatisticsOuterClass {
       return percentSpecialCharacters_;
     }
 
-    public static final int PERCENT_DIGITS_FIELD_NUMBER = 8;
+    public static final int PERCENT_DIGITS_FIELD_NUMBER = 7;
     private float percentDigits_;
     /**
      * <pre>
      * percentage of digits in the dataset
      * </pre>
      *
-     * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+     * <code>float percent_digits = 7 [json_name = "percentDigits"];</code>
      * @return The percentDigits.
      */
     @java.lang.Override
@@ -278,14 +253,14 @@ public final class DatasetStatisticsOuterClass {
       return percentDigits_;
     }
 
-    public static final int PERCENT_LETTERS_FIELD_NUMBER = 9;
+    public static final int PERCENT_LETTERS_FIELD_NUMBER = 8;
     private float percentLetters_;
     /**
      * <pre>
      * percentage of letters in the dataset
      * </pre>
      *
-     * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+     * <code>float percent_letters = 8 [json_name = "percentLetters"];</code>
      * @return The percentLetters.
      */
     @java.lang.Override
@@ -293,14 +268,14 @@ public final class DatasetStatisticsOuterClass {
       return percentLetters_;
     }
 
-    public static final int PERCENT_DUPLICATES_IN_DATASET_FIELD_NUMBER = 10;
+    public static final int PERCENT_DUPLICATES_IN_DATASET_FIELD_NUMBER = 9;
     private float percentDuplicatesInDataset_;
     /**
      * <pre>
      * percentage of duplicates in the dataset
      * </pre>
      *
-     * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+     * <code>float percent_duplicates_in_dataset = 9 [json_name = "percentDuplicatesInDataset"];</code>
      * @return The percentDuplicatesInDataset.
      */
     @java.lang.Override
@@ -322,35 +297,32 @@ public final class DatasetStatisticsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
-        output.writeFloat(1, similarityIndex_);
-      }
       if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
-        output.writeFloat(2, lexicalDiversitySplitOnSpace_);
+        output.writeFloat(1, lexicalDiversitySplitOnSpace_);
       }
       if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpecial_) != 0) {
-        output.writeFloat(3, lexicalDiversitySplitOnSpecial_);
+        output.writeFloat(2, lexicalDiversitySplitOnSpecial_);
       }
       if (java.lang.Float.floatToRawIntBits(percentEmptyStrings_) != 0) {
-        output.writeFloat(4, percentEmptyStrings_);
+        output.writeFloat(3, percentEmptyStrings_);
       }
       if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpaces_) != 0) {
-        output.writeFloat(5, percentPureNumbersRemoveSpaces_);
+        output.writeFloat(4, percentPureNumbersRemoveSpaces_);
       }
       if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpecial_) != 0) {
-        output.writeFloat(6, percentPureNumbersRemoveSpecial_);
+        output.writeFloat(5, percentPureNumbersRemoveSpecial_);
       }
       if (java.lang.Float.floatToRawIntBits(percentSpecialCharacters_) != 0) {
-        output.writeFloat(7, percentSpecialCharacters_);
+        output.writeFloat(6, percentSpecialCharacters_);
       }
       if (java.lang.Float.floatToRawIntBits(percentDigits_) != 0) {
-        output.writeFloat(8, percentDigits_);
+        output.writeFloat(7, percentDigits_);
       }
       if (java.lang.Float.floatToRawIntBits(percentLetters_) != 0) {
-        output.writeFloat(9, percentLetters_);
+        output.writeFloat(8, percentLetters_);
       }
       if (java.lang.Float.floatToRawIntBits(percentDuplicatesInDataset_) != 0) {
-        output.writeFloat(10, percentDuplicatesInDataset_);
+        output.writeFloat(9, percentDuplicatesInDataset_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -361,45 +333,41 @@ public final class DatasetStatisticsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(similarityIndex_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(1, similarityIndex_);
-      }
       if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, lexicalDiversitySplitOnSpace_);
+          .computeFloatSize(1, lexicalDiversitySplitOnSpace_);
       }
       if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpecial_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(3, lexicalDiversitySplitOnSpecial_);
+          .computeFloatSize(2, lexicalDiversitySplitOnSpecial_);
       }
       if (java.lang.Float.floatToRawIntBits(percentEmptyStrings_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, percentEmptyStrings_);
+          .computeFloatSize(3, percentEmptyStrings_);
       }
       if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpaces_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(5, percentPureNumbersRemoveSpaces_);
+          .computeFloatSize(4, percentPureNumbersRemoveSpaces_);
       }
       if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpecial_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(6, percentPureNumbersRemoveSpecial_);
+          .computeFloatSize(5, percentPureNumbersRemoveSpecial_);
       }
       if (java.lang.Float.floatToRawIntBits(percentSpecialCharacters_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(7, percentSpecialCharacters_);
+          .computeFloatSize(6, percentSpecialCharacters_);
       }
       if (java.lang.Float.floatToRawIntBits(percentDigits_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, percentDigits_);
+          .computeFloatSize(7, percentDigits_);
       }
       if (java.lang.Float.floatToRawIntBits(percentLetters_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(9, percentLetters_);
+          .computeFloatSize(8, percentLetters_);
       }
       if (java.lang.Float.floatToRawIntBits(percentDuplicatesInDataset_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(10, percentDuplicatesInDataset_);
+          .computeFloatSize(9, percentDuplicatesInDataset_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -416,9 +384,6 @@ public final class DatasetStatisticsOuterClass {
       }
       asgt.type.DatasetStatisticsOuterClass.DatasetStatistics other = (asgt.type.DatasetStatisticsOuterClass.DatasetStatistics) obj;
 
-      if (java.lang.Float.floatToIntBits(getSimilarityIndex())
-          != java.lang.Float.floatToIntBits(
-              other.getSimilarityIndex())) return false;
       if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpace())
           != java.lang.Float.floatToIntBits(
               other.getLexicalDiversitySplitOnSpace())) return false;
@@ -457,9 +422,6 @@ public final class DatasetStatisticsOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SIMILARITY_INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getSimilarityIndex());
       hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getLexicalDiversitySplitOnSpace());
@@ -615,8 +577,6 @@ public final class DatasetStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        similarityIndex_ = 0F;
-
         lexicalDiversitySplitOnSpace_ = 0F;
 
         lexicalDiversitySplitOnSpecial_ = 0F;
@@ -661,7 +621,6 @@ public final class DatasetStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.DatasetStatisticsOuterClass.DatasetStatistics buildPartial() {
         asgt.type.DatasetStatisticsOuterClass.DatasetStatistics result = new asgt.type.DatasetStatisticsOuterClass.DatasetStatistics(this);
-        result.similarityIndex_ = similarityIndex_;
         result.lexicalDiversitySplitOnSpace_ = lexicalDiversitySplitOnSpace_;
         result.lexicalDiversitySplitOnSpecial_ = lexicalDiversitySplitOnSpecial_;
         result.percentEmptyStrings_ = percentEmptyStrings_;
@@ -719,9 +678,6 @@ public final class DatasetStatisticsOuterClass {
 
       public Builder mergeFrom(asgt.type.DatasetStatisticsOuterClass.DatasetStatistics other) {
         if (other == asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.getDefaultInstance()) return this;
-        if (other.getSimilarityIndex() != 0F) {
-          setSimilarityIndex(other.getSimilarityIndex());
-        }
         if (other.getLexicalDiversitySplitOnSpace() != 0F) {
           setLexicalDiversitySplitOnSpace(other.getLexicalDiversitySplitOnSpace());
         }
@@ -776,55 +732,50 @@ public final class DatasetStatisticsOuterClass {
                 done = true;
                 break;
               case 13: {
-                similarityIndex_ = input.readFloat();
+                lexicalDiversitySplitOnSpace_ = input.readFloat();
 
                 break;
               } // case 13
               case 21: {
-                lexicalDiversitySplitOnSpace_ = input.readFloat();
+                lexicalDiversitySplitOnSpecial_ = input.readFloat();
 
                 break;
               } // case 21
               case 29: {
-                lexicalDiversitySplitOnSpecial_ = input.readFloat();
+                percentEmptyStrings_ = input.readFloat();
 
                 break;
               } // case 29
               case 37: {
-                percentEmptyStrings_ = input.readFloat();
+                percentPureNumbersRemoveSpaces_ = input.readFloat();
 
                 break;
               } // case 37
               case 45: {
-                percentPureNumbersRemoveSpaces_ = input.readFloat();
+                percentPureNumbersRemoveSpecial_ = input.readFloat();
 
                 break;
               } // case 45
               case 53: {
-                percentPureNumbersRemoveSpecial_ = input.readFloat();
+                percentSpecialCharacters_ = input.readFloat();
 
                 break;
               } // case 53
               case 61: {
-                percentSpecialCharacters_ = input.readFloat();
+                percentDigits_ = input.readFloat();
 
                 break;
               } // case 61
               case 69: {
-                percentDigits_ = input.readFloat();
+                percentLetters_ = input.readFloat();
 
                 break;
               } // case 69
               case 77: {
-                percentLetters_ = input.readFloat();
-
-                break;
-              } // case 77
-              case 85: {
                 percentDuplicatesInDataset_ = input.readFloat();
 
                 break;
-              } // case 85
+              } // case 77
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -841,56 +792,13 @@ public final class DatasetStatisticsOuterClass {
         return this;
       }
 
-      private float similarityIndex_ ;
-      /**
-       * <pre>
-       * measure of train/test similarity
-       * </pre>
-       *
-       * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-       * @return The similarityIndex.
-       */
-      @java.lang.Override
-      public float getSimilarityIndex() {
-        return similarityIndex_;
-      }
-      /**
-       * <pre>
-       * measure of train/test similarity
-       * </pre>
-       *
-       * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-       * @param value The similarityIndex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSimilarityIndex(float value) {
-        
-        similarityIndex_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * measure of train/test similarity
-       * </pre>
-       *
-       * <code>float similarity_index = 1 [json_name = "similarityIndex"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSimilarityIndex() {
-        
-        similarityIndex_ = 0F;
-        onChanged();
-        return this;
-      }
-
       private float lexicalDiversitySplitOnSpace_ ;
       /**
        * <pre>
        * lexical diversity of the dataset split on space
        * </pre>
        *
-       * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+       * <code>float lexical_diversity_split_on_space = 1 [json_name = "lexicalDiversitySplitOnSpace"];</code>
        * @return The lexicalDiversitySplitOnSpace.
        */
       @java.lang.Override
@@ -902,7 +810,7 @@ public final class DatasetStatisticsOuterClass {
        * lexical diversity of the dataset split on space
        * </pre>
        *
-       * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+       * <code>float lexical_diversity_split_on_space = 1 [json_name = "lexicalDiversitySplitOnSpace"];</code>
        * @param value The lexicalDiversitySplitOnSpace to set.
        * @return This builder for chaining.
        */
@@ -917,7 +825,7 @@ public final class DatasetStatisticsOuterClass {
        * lexical diversity of the dataset split on space
        * </pre>
        *
-       * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+       * <code>float lexical_diversity_split_on_space = 1 [json_name = "lexicalDiversitySplitOnSpace"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLexicalDiversitySplitOnSpace() {
@@ -933,7 +841,7 @@ public final class DatasetStatisticsOuterClass {
        * lexical diversity of the dataset split on special characters
        * </pre>
        *
-       * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+       * <code>float lexical_diversity_split_on_special = 2 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
        * @return The lexicalDiversitySplitOnSpecial.
        */
       @java.lang.Override
@@ -945,7 +853,7 @@ public final class DatasetStatisticsOuterClass {
        * lexical diversity of the dataset split on special characters
        * </pre>
        *
-       * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+       * <code>float lexical_diversity_split_on_special = 2 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
        * @param value The lexicalDiversitySplitOnSpecial to set.
        * @return This builder for chaining.
        */
@@ -960,7 +868,7 @@ public final class DatasetStatisticsOuterClass {
        * lexical diversity of the dataset split on special characters
        * </pre>
        *
-       * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+       * <code>float lexical_diversity_split_on_special = 2 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLexicalDiversitySplitOnSpecial() {
@@ -976,7 +884,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of empty strings in the dataset
        * </pre>
        *
-       * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+       * <code>float percent_empty_strings = 3 [json_name = "percentEmptyStrings"];</code>
        * @return The percentEmptyStrings.
        */
       @java.lang.Override
@@ -988,7 +896,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of empty strings in the dataset
        * </pre>
        *
-       * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+       * <code>float percent_empty_strings = 3 [json_name = "percentEmptyStrings"];</code>
        * @param value The percentEmptyStrings to set.
        * @return This builder for chaining.
        */
@@ -1003,7 +911,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of empty strings in the dataset
        * </pre>
        *
-       * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+       * <code>float percent_empty_strings = 3 [json_name = "percentEmptyStrings"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPercentEmptyStrings() {
@@ -1019,7 +927,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of pure numbers in the dataset after removing spaces
        * </pre>
        *
-       * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+       * <code>float percent_pure_numbers_remove_spaces = 4 [json_name = "percentPureNumbersRemoveSpaces"];</code>
        * @return The percentPureNumbersRemoveSpaces.
        */
       @java.lang.Override
@@ -1031,7 +939,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of pure numbers in the dataset after removing spaces
        * </pre>
        *
-       * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+       * <code>float percent_pure_numbers_remove_spaces = 4 [json_name = "percentPureNumbersRemoveSpaces"];</code>
        * @param value The percentPureNumbersRemoveSpaces to set.
        * @return This builder for chaining.
        */
@@ -1046,7 +954,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of pure numbers in the dataset after removing spaces
        * </pre>
        *
-       * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+       * <code>float percent_pure_numbers_remove_spaces = 4 [json_name = "percentPureNumbersRemoveSpaces"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPercentPureNumbersRemoveSpaces() {
@@ -1062,7 +970,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of pure numbers in the dataset after removing spaces and special characters
        * </pre>
        *
-       * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+       * <code>float percent_pure_numbers_remove_special = 5 [json_name = "percentPureNumbersRemoveSpecial"];</code>
        * @return The percentPureNumbersRemoveSpecial.
        */
       @java.lang.Override
@@ -1074,7 +982,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of pure numbers in the dataset after removing spaces and special characters
        * </pre>
        *
-       * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+       * <code>float percent_pure_numbers_remove_special = 5 [json_name = "percentPureNumbersRemoveSpecial"];</code>
        * @param value The percentPureNumbersRemoveSpecial to set.
        * @return This builder for chaining.
        */
@@ -1089,7 +997,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of pure numbers in the dataset after removing spaces and special characters
        * </pre>
        *
-       * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+       * <code>float percent_pure_numbers_remove_special = 5 [json_name = "percentPureNumbersRemoveSpecial"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPercentPureNumbersRemoveSpecial() {
@@ -1105,7 +1013,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of special characters in the dataset
        * </pre>
        *
-       * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+       * <code>float percent_special_characters = 6 [json_name = "percentSpecialCharacters"];</code>
        * @return The percentSpecialCharacters.
        */
       @java.lang.Override
@@ -1117,7 +1025,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of special characters in the dataset
        * </pre>
        *
-       * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+       * <code>float percent_special_characters = 6 [json_name = "percentSpecialCharacters"];</code>
        * @param value The percentSpecialCharacters to set.
        * @return This builder for chaining.
        */
@@ -1132,7 +1040,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of special characters in the dataset
        * </pre>
        *
-       * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+       * <code>float percent_special_characters = 6 [json_name = "percentSpecialCharacters"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPercentSpecialCharacters() {
@@ -1148,7 +1056,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of digits in the dataset
        * </pre>
        *
-       * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+       * <code>float percent_digits = 7 [json_name = "percentDigits"];</code>
        * @return The percentDigits.
        */
       @java.lang.Override
@@ -1160,7 +1068,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of digits in the dataset
        * </pre>
        *
-       * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+       * <code>float percent_digits = 7 [json_name = "percentDigits"];</code>
        * @param value The percentDigits to set.
        * @return This builder for chaining.
        */
@@ -1175,7 +1083,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of digits in the dataset
        * </pre>
        *
-       * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+       * <code>float percent_digits = 7 [json_name = "percentDigits"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPercentDigits() {
@@ -1191,7 +1099,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of letters in the dataset
        * </pre>
        *
-       * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+       * <code>float percent_letters = 8 [json_name = "percentLetters"];</code>
        * @return The percentLetters.
        */
       @java.lang.Override
@@ -1203,7 +1111,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of letters in the dataset
        * </pre>
        *
-       * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+       * <code>float percent_letters = 8 [json_name = "percentLetters"];</code>
        * @param value The percentLetters to set.
        * @return This builder for chaining.
        */
@@ -1218,7 +1126,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of letters in the dataset
        * </pre>
        *
-       * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+       * <code>float percent_letters = 8 [json_name = "percentLetters"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPercentLetters() {
@@ -1234,7 +1142,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of duplicates in the dataset
        * </pre>
        *
-       * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+       * <code>float percent_duplicates_in_dataset = 9 [json_name = "percentDuplicatesInDataset"];</code>
        * @return The percentDuplicatesInDataset.
        */
       @java.lang.Override
@@ -1246,7 +1154,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of duplicates in the dataset
        * </pre>
        *
-       * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+       * <code>float percent_duplicates_in_dataset = 9 [json_name = "percentDuplicatesInDataset"];</code>
        * @param value The percentDuplicatesInDataset to set.
        * @return This builder for chaining.
        */
@@ -1261,7 +1169,7 @@ public final class DatasetStatisticsOuterClass {
        * percentage of duplicates in the dataset
        * </pre>
        *
-       * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+       * <code>float percent_duplicates_in_dataset = 9 [json_name = "percentDuplicatesInDataset"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPercentDuplicatesInDataset() {
@@ -1349,24 +1257,23 @@ public final class DatasetStatisticsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\"asgt/type/dataset_statistics.proto\022\tas" +
-      "gt.type\"\361\004\n\021DatasetStatistics\022)\n\020similar" +
-      "ity_index\030\001 \001(\002R\017similarityIndex\022F\n lexi" +
-      "cal_diversity_split_on_space\030\002 \001(\002R\034lexi" +
-      "calDiversitySplitOnSpace\022J\n\"lexical_dive" +
-      "rsity_split_on_special\030\003 \001(\002R\036lexicalDiv" +
-      "ersitySplitOnSpecial\0222\n\025percent_empty_st" +
-      "rings\030\004 \001(\002R\023percentEmptyStrings\022J\n\"perc" +
-      "ent_pure_numbers_remove_spaces\030\005 \001(\002R\036pe" +
-      "rcentPureNumbersRemoveSpaces\022L\n#percent_" +
-      "pure_numbers_remove_special\030\006 \001(\002R\037perce" +
-      "ntPureNumbersRemoveSpecial\022<\n\032percent_sp" +
-      "ecial_characters\030\007 \001(\002R\030percentSpecialCh" +
-      "aracters\022%\n\016percent_digits\030\010 \001(\002R\rpercen" +
-      "tDigits\022\'\n\017percent_letters\030\t \001(\002R\016percen" +
-      "tLetters\022A\n\035percent_duplicates_in_datase" +
-      "t\030\n \001(\002R\032percentDuplicatesInDatasetB8Z6g" +
-      "ithub.com/e-conomic/vmlapis/gen/go/asgt/" +
-      "type;asgttypeb\006proto3"
+      "gt.type\"\306\004\n\021DatasetStatistics\022F\n lexical" +
+      "_diversity_split_on_space\030\001 \001(\002R\034lexical" +
+      "DiversitySplitOnSpace\022J\n\"lexical_diversi" +
+      "ty_split_on_special\030\002 \001(\002R\036lexicalDivers" +
+      "itySplitOnSpecial\0222\n\025percent_empty_strin" +
+      "gs\030\003 \001(\002R\023percentEmptyStrings\022J\n\"percent" +
+      "_pure_numbers_remove_spaces\030\004 \001(\002R\036perce" +
+      "ntPureNumbersRemoveSpaces\022L\n#percent_pur" +
+      "e_numbers_remove_special\030\005 \001(\002R\037percentP" +
+      "ureNumbersRemoveSpecial\022<\n\032percent_speci" +
+      "al_characters\030\006 \001(\002R\030percentSpecialChara" +
+      "cters\022%\n\016percent_digits\030\007 \001(\002R\rpercentDi" +
+      "gits\022\'\n\017percent_letters\030\010 \001(\002R\016percentLe" +
+      "tters\022A\n\035percent_duplicates_in_dataset\030\t" +
+      " \001(\002R\032percentDuplicatesInDatasetB8Z6gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/asgt/typ" +
+      "e;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1377,7 +1284,7 @@ public final class DatasetStatisticsOuterClass {
     internal_static_asgt_type_DatasetStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_DatasetStatistics_descriptor,
-        new java.lang.String[] { "SimilarityIndex", "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", });
+        new java.lang.String[] { "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

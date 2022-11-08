@@ -69,16 +69,15 @@ proto.asgt.type.DatasetStatistics.prototype.toObject = function(opt_includeInsta
  */
 proto.asgt.type.DatasetStatistics.toObject = function(includeInstance, msg) {
   var f, obj = {
-    similarityIndex: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
-    lexicalDiversitySplitOnSpace: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
-    lexicalDiversitySplitOnSpecial: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
-    percentEmptyStrings: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
-    percentPureNumbersRemoveSpaces: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
-    percentPureNumbersRemoveSpecial: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
-    percentSpecialCharacters: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0),
-    percentDigits: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
-    percentLetters: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0),
-    percentDuplicatesInDataset: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0)
+    lexicalDiversitySplitOnSpace: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
+    lexicalDiversitySplitOnSpecial: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+    percentEmptyStrings: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+    percentPureNumbersRemoveSpaces: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    percentPureNumbersRemoveSpecial: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
+    percentSpecialCharacters: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
+    percentDigits: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0),
+    percentLetters: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
+    percentDuplicatesInDataset: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0)
   };
 
   if (includeInstance) {
@@ -117,41 +116,37 @@ proto.asgt.type.DatasetStatistics.deserializeBinaryFromReader = function(msg, re
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setSimilarityIndex(value);
+      msg.setLexicalDiversitySplitOnSpace(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setLexicalDiversitySplitOnSpace(value);
+      msg.setLexicalDiversitySplitOnSpecial(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setLexicalDiversitySplitOnSpecial(value);
+      msg.setPercentEmptyStrings(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setPercentEmptyStrings(value);
+      msg.setPercentPureNumbersRemoveSpaces(value);
       break;
     case 5:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setPercentPureNumbersRemoveSpaces(value);
+      msg.setPercentPureNumbersRemoveSpecial(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setPercentPureNumbersRemoveSpecial(value);
+      msg.setPercentSpecialCharacters(value);
       break;
     case 7:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setPercentSpecialCharacters(value);
+      msg.setPercentDigits(value);
       break;
     case 8:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setPercentDigits(value);
-      break;
-    case 9:
-      var value = /** @type {number} */ (reader.readFloat());
       msg.setPercentLetters(value);
       break;
-    case 10:
+    case 9:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setPercentDuplicatesInDataset(value);
       break;
@@ -184,73 +179,66 @@ proto.asgt.type.DatasetStatistics.prototype.serializeBinary = function() {
  */
 proto.asgt.type.DatasetStatistics.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getSimilarityIndex();
+  f = message.getLexicalDiversitySplitOnSpace();
   if (f !== 0.0) {
     writer.writeFloat(
       1,
       f
     );
   }
-  f = message.getLexicalDiversitySplitOnSpace();
+  f = message.getLexicalDiversitySplitOnSpecial();
   if (f !== 0.0) {
     writer.writeFloat(
       2,
       f
     );
   }
-  f = message.getLexicalDiversitySplitOnSpecial();
+  f = message.getPercentEmptyStrings();
   if (f !== 0.0) {
     writer.writeFloat(
       3,
       f
     );
   }
-  f = message.getPercentEmptyStrings();
+  f = message.getPercentPureNumbersRemoveSpaces();
   if (f !== 0.0) {
     writer.writeFloat(
       4,
       f
     );
   }
-  f = message.getPercentPureNumbersRemoveSpaces();
+  f = message.getPercentPureNumbersRemoveSpecial();
   if (f !== 0.0) {
     writer.writeFloat(
       5,
       f
     );
   }
-  f = message.getPercentPureNumbersRemoveSpecial();
+  f = message.getPercentSpecialCharacters();
   if (f !== 0.0) {
     writer.writeFloat(
       6,
       f
     );
   }
-  f = message.getPercentSpecialCharacters();
+  f = message.getPercentDigits();
   if (f !== 0.0) {
     writer.writeFloat(
       7,
       f
     );
   }
-  f = message.getPercentDigits();
+  f = message.getPercentLetters();
   if (f !== 0.0) {
     writer.writeFloat(
       8,
       f
     );
   }
-  f = message.getPercentLetters();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      9,
-      f
-    );
-  }
   f = message.getPercentDuplicatesInDataset();
   if (f !== 0.0) {
     writer.writeFloat(
-      10,
+      9,
       f
     );
   }
@@ -258,10 +246,10 @@ proto.asgt.type.DatasetStatistics.serializeBinaryToWriter = function(message, wr
 
 
 /**
- * optional float similarity_index = 1;
+ * optional float lexical_diversity_split_on_space = 1;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getSimilarityIndex = function() {
+proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpace = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
 };
 
@@ -270,16 +258,16 @@ proto.asgt.type.DatasetStatistics.prototype.getSimilarityIndex = function() {
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setSimilarityIndex = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setLexicalDiversitySplitOnSpace = function(value) {
   return jspb.Message.setProto3FloatField(this, 1, value);
 };
 
 
 /**
- * optional float lexical_diversity_split_on_space = 2;
+ * optional float lexical_diversity_split_on_special = 2;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpace = function() {
+proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpecial = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
 };
 
@@ -288,16 +276,16 @@ proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpace = fu
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setLexicalDiversitySplitOnSpace = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setLexicalDiversitySplitOnSpecial = function(value) {
   return jspb.Message.setProto3FloatField(this, 2, value);
 };
 
 
 /**
- * optional float lexical_diversity_split_on_special = 3;
+ * optional float percent_empty_strings = 3;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpecial = function() {
+proto.asgt.type.DatasetStatistics.prototype.getPercentEmptyStrings = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
 };
 
@@ -306,16 +294,16 @@ proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpecial = 
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setLexicalDiversitySplitOnSpecial = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setPercentEmptyStrings = function(value) {
   return jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
 /**
- * optional float percent_empty_strings = 4;
+ * optional float percent_pure_numbers_remove_spaces = 4;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getPercentEmptyStrings = function() {
+proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpaces = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
 };
 
@@ -324,16 +312,16 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentEmptyStrings = function() 
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setPercentEmptyStrings = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setPercentPureNumbersRemoveSpaces = function(value) {
   return jspb.Message.setProto3FloatField(this, 4, value);
 };
 
 
 /**
- * optional float percent_pure_numbers_remove_spaces = 5;
+ * optional float percent_pure_numbers_remove_special = 5;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpaces = function() {
+proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpecial = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
 };
 
@@ -342,16 +330,16 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpaces = 
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setPercentPureNumbersRemoveSpaces = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setPercentPureNumbersRemoveSpecial = function(value) {
   return jspb.Message.setProto3FloatField(this, 5, value);
 };
 
 
 /**
- * optional float percent_pure_numbers_remove_special = 6;
+ * optional float percent_special_characters = 6;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpecial = function() {
+proto.asgt.type.DatasetStatistics.prototype.getPercentSpecialCharacters = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
 };
 
@@ -360,16 +348,16 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpecial =
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setPercentPureNumbersRemoveSpecial = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setPercentSpecialCharacters = function(value) {
   return jspb.Message.setProto3FloatField(this, 6, value);
 };
 
 
 /**
- * optional float percent_special_characters = 7;
+ * optional float percent_digits = 7;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getPercentSpecialCharacters = function() {
+proto.asgt.type.DatasetStatistics.prototype.getPercentDigits = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
 };
 
@@ -378,16 +366,16 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentSpecialCharacters = functi
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setPercentSpecialCharacters = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setPercentDigits = function(value) {
   return jspb.Message.setProto3FloatField(this, 7, value);
 };
 
 
 /**
- * optional float percent_digits = 8;
+ * optional float percent_letters = 8;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getPercentDigits = function() {
+proto.asgt.type.DatasetStatistics.prototype.getPercentLetters = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
 };
 
@@ -396,16 +384,16 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentDigits = function() {
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setPercentDigits = function(value) {
+proto.asgt.type.DatasetStatistics.prototype.setPercentLetters = function(value) {
   return jspb.Message.setProto3FloatField(this, 8, value);
 };
 
 
 /**
- * optional float percent_letters = 9;
+ * optional float percent_duplicates_in_dataset = 9;
  * @return {number}
  */
-proto.asgt.type.DatasetStatistics.prototype.getPercentLetters = function() {
+proto.asgt.type.DatasetStatistics.prototype.getPercentDuplicatesInDataset = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 9, 0.0));
 };
 
@@ -414,26 +402,8 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentLetters = function() {
  * @param {number} value
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
-proto.asgt.type.DatasetStatistics.prototype.setPercentLetters = function(value) {
-  return jspb.Message.setProto3FloatField(this, 9, value);
-};
-
-
-/**
- * optional float percent_duplicates_in_dataset = 10;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getPercentDuplicatesInDataset = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
 proto.asgt.type.DatasetStatistics.prototype.setPercentDuplicatesInDataset = function(value) {
-  return jspb.Message.setProto3FloatField(this, 10, value);
+  return jspb.Message.setProto3FloatField(this, 9, value);
 };
 
 

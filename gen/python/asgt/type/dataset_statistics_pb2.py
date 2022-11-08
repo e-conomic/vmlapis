@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"asgt/type/dataset_statistics.proto\x12\tasgt.type\"\xf1\x04\n\x11\x44\x61tasetStatistics\x12)\n\x10similarity_index\x18\x01 \x01(\x02R\x0fsimilarityIndex\x12\x46\n lexical_diversity_split_on_space\x18\x02 \x01(\x02R\x1clexicalDiversitySplitOnSpace\x12J\n\"lexical_diversity_split_on_special\x18\x03 \x01(\x02R\x1elexicalDiversitySplitOnSpecial\x12\x32\n\x15percent_empty_strings\x18\x04 \x01(\x02R\x13percentEmptyStrings\x12J\n\"percent_pure_numbers_remove_spaces\x18\x05 \x01(\x02R\x1epercentPureNumbersRemoveSpaces\x12L\n#percent_pure_numbers_remove_special\x18\x06 \x01(\x02R\x1fpercentPureNumbersRemoveSpecial\x12<\n\x1apercent_special_characters\x18\x07 \x01(\x02R\x18percentSpecialCharacters\x12%\n\x0epercent_digits\x18\x08 \x01(\x02R\rpercentDigits\x12\'\n\x0fpercent_letters\x18\t \x01(\x02R\x0epercentLetters\x12\x41\n\x1dpercent_duplicates_in_dataset\x18\n \x01(\x02R\x1apercentDuplicatesInDatasetB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"asgt/type/dataset_statistics.proto\x12\tasgt.type\"\xc6\x04\n\x11\x44\x61tasetStatistics\x12\x46\n lexical_diversity_split_on_space\x18\x01 \x01(\x02R\x1clexicalDiversitySplitOnSpace\x12J\n\"lexical_diversity_split_on_special\x18\x02 \x01(\x02R\x1elexicalDiversitySplitOnSpecial\x12\x32\n\x15percent_empty_strings\x18\x03 \x01(\x02R\x13percentEmptyStrings\x12J\n\"percent_pure_numbers_remove_spaces\x18\x04 \x01(\x02R\x1epercentPureNumbersRemoveSpaces\x12L\n#percent_pure_numbers_remove_special\x18\x05 \x01(\x02R\x1fpercentPureNumbersRemoveSpecial\x12<\n\x1apercent_special_characters\x18\x06 \x01(\x02R\x18percentSpecialCharacters\x12%\n\x0epercent_digits\x18\x07 \x01(\x02R\rpercentDigits\x12\'\n\x0fpercent_letters\x18\x08 \x01(\x02R\x0epercentLetters\x12\x41\n\x1dpercent_duplicates_in_dataset\x18\t \x01(\x02R\x1apercentDuplicatesInDatasetB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.type.dataset_statistics_pb2', globals())
@@ -22,5 +22,5 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
   _DATASETSTATISTICS._serialized_start=50
-  _DATASETSTATISTICS._serialized_end=675
+  _DATASETSTATISTICS._serialized_end=632
 # @@protoc_insertion_point(module_scope)
