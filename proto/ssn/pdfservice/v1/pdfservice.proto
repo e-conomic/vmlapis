@@ -6,6 +6,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/pdfservice/v1;pdfse
 option java_outer_classname = "PdfServiceProto";
 
 service PdfService {
+  rpc InternalRasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse);
   rpc RasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse);
 }
 

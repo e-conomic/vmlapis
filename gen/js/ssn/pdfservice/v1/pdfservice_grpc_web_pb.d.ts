@@ -8,6 +8,11 @@ export class PdfServiceClient {
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });
 
+  internalRasterizePdf(
+    request: ssn_pdfservice_v1_pdfservice_pb.RasterizePdfRequest,
+    metadata?: grpcWeb.Metadata
+  ): grpcWeb.ClientReadableStream<ssn_pdfservice_v1_pdfservice_pb.RasterizePdfResponse>;
+
   rasterizePdf(
     request: ssn_pdfservice_v1_pdfservice_pb.RasterizePdfRequest,
     metadata?: grpcWeb.Metadata
@@ -19,6 +24,11 @@ export class PdfServicePromiseClient {
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });
+
+  internalRasterizePdf(
+    request: ssn_pdfservice_v1_pdfservice_pb.RasterizePdfRequest,
+    metadata?: grpcWeb.Metadata
+  ): grpcWeb.ClientReadableStream<ssn_pdfservice_v1_pdfservice_pb.RasterizePdfResponse>;
 
   rasterizePdf(
     request: ssn_pdfservice_v1_pdfservice_pb.RasterizePdfRequest,
