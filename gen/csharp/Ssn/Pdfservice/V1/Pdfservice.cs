@@ -37,11 +37,14 @@ namespace Ssn.Pdfservice.V1 {
             "CAoETEFTVBACEgcKA0FMTBADIoQBChRSYXN0ZXJpemVQZGZSZXNwb25zZRIU",
             "CgVpbmRleBgBIAEoDVIFaW5kZXgSEgoEZGF0YRgCIAEoDFIEZGF0YRIUCgV3",
             "aWR0aBgDIAEoDVIFd2lkdGgSFgoGaGVpZ2h0GAQgASgNUgZoZWlnaHQSFAoF",
-            "c2NhbGUYBSABKAFSBXNjYWxlMm8KClBkZlNlcnZpY2USYQoMUmFzdGVyaXpl",
-            "UGRmEiYuc3NuLnBkZnNlcnZpY2UudjEuUmFzdGVyaXplUGRmUmVxdWVzdBon",
-            "LnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rlcml6ZVBkZlJlc3BvbnNlMAFCU0IP",
-            "UGRmU2VydmljZVByb3RvWkBnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlz",
-            "L2dlbi9nby9zc24vcGRmc2VydmljZS92MTtwZGZzZXJ2aWNlYgZwcm90bzM="));
+            "c2NhbGUYBSABKAFSBXNjYWxlMtoBCgpQZGZTZXJ2aWNlEmkKFEludGVybmFs",
+            "UmFzdGVyaXplUGRmEiYuc3NuLnBkZnNlcnZpY2UudjEuUmFzdGVyaXplUGRm",
+            "UmVxdWVzdBonLnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rlcml6ZVBkZlJlc3Bv",
+            "bnNlMAESYQoMUmFzdGVyaXplUGRmEiYuc3NuLnBkZnNlcnZpY2UudjEuUmFz",
+            "dGVyaXplUGRmUmVxdWVzdBonLnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rlcml6",
+            "ZVBkZlJlc3BvbnNlMAFCU0IPUGRmU2VydmljZVByb3RvWkBnaXRodWIuY29t",
+            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vcGRmc2VydmljZS92MTtw",
+            "ZGZzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

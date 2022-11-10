@@ -2037,12 +2037,14 @@ public final class PdfServiceProto {
       "zePdfResponse\022\024\n\005index\030\001 \001(\rR\005index\022\022\n\004d" +
       "ata\030\002 \001(\014R\004data\022\024\n\005width\030\003 \001(\rR\005width\022\026\n" +
       "\006height\030\004 \001(\rR\006height\022\024\n\005scale\030\005 \001(\001R\005sc" +
-      "ale2o\n\nPdfService\022a\n\014RasterizePdf\022&.ssn." +
-      "pdfservice.v1.RasterizePdfRequest\032\'.ssn." +
-      "pdfservice.v1.RasterizePdfResponse0\001BSB\017" +
-      "PdfServiceProtoZ@github.com/e-conomic/vm" +
-      "lapis/gen/go/ssn/pdfservice/v1;pdfservic" +
-      "eb\006proto3"
+      "ale2\332\001\n\nPdfService\022i\n\024InternalRasterizeP" +
+      "df\022&.ssn.pdfservice.v1.RasterizePdfReque" +
+      "st\032\'.ssn.pdfservice.v1.RasterizePdfRespo" +
+      "nse0\001\022a\n\014RasterizePdf\022&.ssn.pdfservice.v" +
+      "1.RasterizePdfRequest\032\'.ssn.pdfservice.v" +
+      "1.RasterizePdfResponse0\001BSB\017PdfServicePr" +
+      "otoZ@github.com/e-conomic/vmlapis/gen/go" +
+      "/ssn/pdfservice/v1;pdfserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
