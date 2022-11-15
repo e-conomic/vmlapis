@@ -1,4 +1,4 @@
-// source: ssn/type/example.proto
+// source: ssn/type/tensorflow/example.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -15,8 +15,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
-var ssn_type_feature_pb = require('../../ssn/type/feature_pb.js');
-goog.object.extend(proto, ssn_type_feature_pb);
+var ssn_type_tensorflow_feature_pb = require('../../../ssn/type/tensorflow/feature_pb.js');
+goog.object.extend(proto, ssn_type_tensorflow_feature_pb);
 goog.exportSymbol('proto.tensorflow.Example', null, global);
 goog.exportSymbol('proto.tensorflow.SequenceExample', null, global);
 /**
@@ -93,7 +93,7 @@ proto.tensorflow.Example.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.Example.toObject = function(includeInstance, msg) {
   var f, obj = {
-    features: (f = msg.getFeatures()) && ssn_type_feature_pb.Features.toObject(includeInstance, f)
+    features: (f = msg.getFeatures()) && ssn_type_tensorflow_feature_pb.Features.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -131,8 +131,8 @@ proto.tensorflow.Example.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new ssn_type_feature_pb.Features;
-      reader.readMessage(value,ssn_type_feature_pb.Features.deserializeBinaryFromReader);
+      var value = new ssn_type_tensorflow_feature_pb.Features;
+      reader.readMessage(value,ssn_type_tensorflow_feature_pb.Features.deserializeBinaryFromReader);
       msg.setFeatures(value);
       break;
     default:
@@ -169,7 +169,7 @@ proto.tensorflow.Example.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       1,
       f,
-      ssn_type_feature_pb.Features.serializeBinaryToWriter
+      ssn_type_tensorflow_feature_pb.Features.serializeBinaryToWriter
     );
   }
 };
@@ -181,7 +181,7 @@ proto.tensorflow.Example.serializeBinaryToWriter = function(message, writer) {
  */
 proto.tensorflow.Example.prototype.getFeatures = function() {
   return /** @type{?proto.tensorflow.Features} */ (
-    jspb.Message.getWrapperField(this, ssn_type_feature_pb.Features, 1));
+    jspb.Message.getWrapperField(this, ssn_type_tensorflow_feature_pb.Features, 1));
 };
 
 
@@ -244,8 +244,8 @@ proto.tensorflow.SequenceExample.prototype.toObject = function(opt_includeInstan
  */
 proto.tensorflow.SequenceExample.toObject = function(includeInstance, msg) {
   var f, obj = {
-    context: (f = msg.getContext()) && ssn_type_feature_pb.Features.toObject(includeInstance, f),
-    featureLists: (f = msg.getFeatureLists()) && ssn_type_feature_pb.FeatureLists.toObject(includeInstance, f)
+    context: (f = msg.getContext()) && ssn_type_tensorflow_feature_pb.Features.toObject(includeInstance, f),
+    featureLists: (f = msg.getFeatureLists()) && ssn_type_tensorflow_feature_pb.FeatureLists.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -283,13 +283,13 @@ proto.tensorflow.SequenceExample.deserializeBinaryFromReader = function(msg, rea
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new ssn_type_feature_pb.Features;
-      reader.readMessage(value,ssn_type_feature_pb.Features.deserializeBinaryFromReader);
+      var value = new ssn_type_tensorflow_feature_pb.Features;
+      reader.readMessage(value,ssn_type_tensorflow_feature_pb.Features.deserializeBinaryFromReader);
       msg.setContext(value);
       break;
     case 2:
-      var value = new ssn_type_feature_pb.FeatureLists;
-      reader.readMessage(value,ssn_type_feature_pb.FeatureLists.deserializeBinaryFromReader);
+      var value = new ssn_type_tensorflow_feature_pb.FeatureLists;
+      reader.readMessage(value,ssn_type_tensorflow_feature_pb.FeatureLists.deserializeBinaryFromReader);
       msg.setFeatureLists(value);
       break;
     default:
@@ -326,7 +326,7 @@ proto.tensorflow.SequenceExample.serializeBinaryToWriter = function(message, wri
     writer.writeMessage(
       1,
       f,
-      ssn_type_feature_pb.Features.serializeBinaryToWriter
+      ssn_type_tensorflow_feature_pb.Features.serializeBinaryToWriter
     );
   }
   f = message.getFeatureLists();
@@ -334,7 +334,7 @@ proto.tensorflow.SequenceExample.serializeBinaryToWriter = function(message, wri
     writer.writeMessage(
       2,
       f,
-      ssn_type_feature_pb.FeatureLists.serializeBinaryToWriter
+      ssn_type_tensorflow_feature_pb.FeatureLists.serializeBinaryToWriter
     );
   }
 };
@@ -346,7 +346,7 @@ proto.tensorflow.SequenceExample.serializeBinaryToWriter = function(message, wri
  */
 proto.tensorflow.SequenceExample.prototype.getContext = function() {
   return /** @type{?proto.tensorflow.Features} */ (
-    jspb.Message.getWrapperField(this, ssn_type_feature_pb.Features, 1));
+    jspb.Message.getWrapperField(this, ssn_type_tensorflow_feature_pb.Features, 1));
 };
 
 
@@ -383,7 +383,7 @@ proto.tensorflow.SequenceExample.prototype.hasContext = function() {
  */
 proto.tensorflow.SequenceExample.prototype.getFeatureLists = function() {
   return /** @type{?proto.tensorflow.FeatureLists} */ (
-    jspb.Message.getWrapperField(this, ssn_type_feature_pb.FeatureLists, 2));
+    jspb.Message.getWrapperField(this, ssn_type_tensorflow_feature_pb.FeatureLists, 2));
 };
 
 

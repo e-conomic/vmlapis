@@ -2,7 +2,7 @@ import * as jspb from 'google-protobuf'
 
 import * as google_type_date_pb from '../../../google/type/date_pb';
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
-import * as ssn_type_example_pb from '../../../ssn/type/example_pb';
+import * as ssn_type_tensorflow_example_pb from '../../../ssn/type/tensorflow/example_pb';
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb';
 
 
@@ -190,8 +190,8 @@ export namespace FeatureGenRequest {
 }
 
 export class FeatureGenResponse extends jspb.Message {
-  getExample(): ssn_type_example_pb.Example | undefined;
-  setExample(value?: ssn_type_example_pb.Example): FeatureGenResponse;
+  getExample(): ssn_type_tensorflow_example_pb.Example | undefined;
+  setExample(value?: ssn_type_tensorflow_example_pb.Example): FeatureGenResponse;
   hasExample(): boolean;
   clearExample(): FeatureGenResponse;
 
@@ -205,13 +205,13 @@ export class FeatureGenResponse extends jspb.Message {
 
 export namespace FeatureGenResponse {
   export type AsObject = {
-    example?: ssn_type_example_pb.Example.AsObject,
+    example?: ssn_type_tensorflow_example_pb.Example.AsObject,
   }
 }
 
 export class PredictRequest extends jspb.Message {
-  getExample(): ssn_type_example_pb.Example | undefined;
-  setExample(value?: ssn_type_example_pb.Example): PredictRequest;
+  getExample(): ssn_type_tensorflow_example_pb.Example | undefined;
+  setExample(value?: ssn_type_tensorflow_example_pb.Example): PredictRequest;
   hasExample(): boolean;
   clearExample(): PredictRequest;
 
@@ -228,7 +228,7 @@ export class PredictRequest extends jspb.Message {
 
 export namespace PredictRequest {
   export type AsObject = {
-    example?: ssn_type_example_pb.Example.AsObject,
+    example?: ssn_type_tensorflow_example_pb.Example.AsObject,
     topNMostConfident: number,
   }
 }

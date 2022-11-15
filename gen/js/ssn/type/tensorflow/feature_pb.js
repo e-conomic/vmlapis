@@ -1,4 +1,4 @@
-// source: ssn/type/feature.proto
+// source: ssn/type/tensorflow/feature.proto
 /**
  * @fileoverview
  * @enhanceable
