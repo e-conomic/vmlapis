@@ -30,9 +30,9 @@ package inference;
 
 //@@.. cpp:namespace:: inference
 
-import "ssn/type/triton/model_config.proto";
+import "ssn/triton/model_config.proto";
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type/triton/;nvidia_inferenceserver";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/triton;nvidia_inferenceserver";
 
 //@@
 //@@.. cpp:var:: service InferenceService

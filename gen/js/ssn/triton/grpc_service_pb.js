@@ -1,4 +1,4 @@
-// source: ssn/type/triton/grpc_service.proto
+// source: ssn/triton/grpc_service.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -15,8 +15,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
-var ssn_type_triton_model_config_pb = require('../../../ssn/type/triton/model_config_pb.js');
-goog.object.extend(proto, ssn_type_triton_model_config_pb);
+var ssn_triton_model_config_pb = require('../../ssn/triton/model_config_pb.js');
+goog.object.extend(proto, ssn_triton_model_config_pb);
 goog.exportSymbol('proto.inference.CudaSharedMemoryRegisterRequest', null, global);
 goog.exportSymbol('proto.inference.CudaSharedMemoryRegisterResponse', null, global);
 goog.exportSymbol('proto.inference.CudaSharedMemoryStatusRequest', null, global);
@@ -5757,7 +5757,7 @@ proto.inference.ModelConfigResponse.prototype.toObject = function(opt_includeIns
  */
 proto.inference.ModelConfigResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    config: (f = msg.getConfig()) && ssn_type_triton_model_config_pb.ModelConfig.toObject(includeInstance, f)
+    config: (f = msg.getConfig()) && ssn_triton_model_config_pb.ModelConfig.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5795,8 +5795,8 @@ proto.inference.ModelConfigResponse.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new ssn_type_triton_model_config_pb.ModelConfig;
-      reader.readMessage(value,ssn_type_triton_model_config_pb.ModelConfig.deserializeBinaryFromReader);
+      var value = new ssn_triton_model_config_pb.ModelConfig;
+      reader.readMessage(value,ssn_triton_model_config_pb.ModelConfig.deserializeBinaryFromReader);
       msg.setConfig(value);
       break;
     default:
@@ -5833,7 +5833,7 @@ proto.inference.ModelConfigResponse.serializeBinaryToWriter = function(message, 
     writer.writeMessage(
       1,
       f,
-      ssn_type_triton_model_config_pb.ModelConfig.serializeBinaryToWriter
+      ssn_triton_model_config_pb.ModelConfig.serializeBinaryToWriter
     );
   }
 };
@@ -5845,7 +5845,7 @@ proto.inference.ModelConfigResponse.serializeBinaryToWriter = function(message, 
  */
 proto.inference.ModelConfigResponse.prototype.getConfig = function() {
   return /** @type{?proto.inference.ModelConfig} */ (
-    jspb.Message.getWrapperField(this, ssn_type_triton_model_config_pb.ModelConfig, 1));
+    jspb.Message.getWrapperField(this, ssn_triton_model_config_pb.ModelConfig, 1));
 };
 
 

@@ -1,4 +1,4 @@
-// source: ssn/type/triton/model_config.proto
+// source: ssn/triton/model_config.proto
 /**
  * @fileoverview
  * @enhanceable

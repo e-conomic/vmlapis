@@ -30,7 +30,7 @@ syntax = "proto3";
 
 package inference;
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type/triton/;nvidia_inferenceserver";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/triton;nvidia_inferenceserver";
 
 //@@.. cpp:namespace:: inference
 
