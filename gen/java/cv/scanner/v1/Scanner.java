@@ -19,19 +19,19 @@ public final class Scanner {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
-     * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return The document.
      */
-    cv.scanner.v1.Scanner.Document getDocument();
+    ssn.annotator.v1.Annotator.Document getDocument();
     /**
-     * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
-    cv.scanner.v1.Scanner.DocumentOrBuilder getDocumentOrBuilder();
+    ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder();
 
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
@@ -125,9 +125,9 @@ public final class Scanner {
     }
 
     public static final int DOCUMENT_FIELD_NUMBER = 1;
-    private cv.scanner.v1.Scanner.Document document_;
+    private ssn.annotator.v1.Annotator.Document document_;
     /**
-     * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return Whether the document field is set.
      */
     @java.lang.Override
@@ -135,18 +135,18 @@ public final class Scanner {
       return document_ != null;
     }
     /**
-     * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return The document.
      */
     @java.lang.Override
-    public cv.scanner.v1.Scanner.Document getDocument() {
-      return document_ == null ? cv.scanner.v1.Scanner.Document.getDefaultInstance() : document_;
+    public ssn.annotator.v1.Annotator.Document getDocument() {
+      return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
     /**
-     * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     @java.lang.Override
-    public cv.scanner.v1.Scanner.DocumentOrBuilder getDocumentOrBuilder() {
+    public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
       return getDocument();
     }
 
@@ -665,31 +665,31 @@ public final class Scanner {
       }
       private int bitField0_;
 
-      private cv.scanner.v1.Scanner.Document document_;
+      private ssn.annotator.v1.Annotator.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          cv.scanner.v1.Scanner.Document, cv.scanner.v1.Scanner.Document.Builder, cv.scanner.v1.Scanner.DocumentOrBuilder> documentBuilder_;
+          ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> documentBuilder_;
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        * @return The document.
        */
-      public cv.scanner.v1.Scanner.Document getDocument() {
+      public ssn.annotator.v1.Annotator.Document getDocument() {
         if (documentBuilder_ == null) {
-          return document_ == null ? cv.scanner.v1.Scanner.Document.getDefaultInstance() : document_;
+          return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
         } else {
           return documentBuilder_.getMessage();
         }
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
-      public Builder setDocument(cv.scanner.v1.Scanner.Document value) {
+      public Builder setDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -703,10 +703,10 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder setDocument(
-          cv.scanner.v1.Scanner.Document.Builder builderForValue) {
+          ssn.annotator.v1.Annotator.Document.Builder builderForValue) {
         if (documentBuilder_ == null) {
           document_ = builderForValue.build();
           onChanged();
@@ -717,13 +717,13 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
-      public Builder mergeDocument(cv.scanner.v1.Scanner.Document value) {
+      public Builder mergeDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
           if (document_ != null) {
             document_ =
-              cv.scanner.v1.Scanner.Document.newBuilder(document_).mergeFrom(value).buildPartial();
+              ssn.annotator.v1.Annotator.Document.newBuilder(document_).mergeFrom(value).buildPartial();
           } else {
             document_ = value;
           }
@@ -735,7 +735,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
         if (documentBuilder_ == null) {
@@ -749,33 +749,33 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
-      public cv.scanner.v1.Scanner.Document.Builder getDocumentBuilder() {
+      public ssn.annotator.v1.Annotator.Document.Builder getDocumentBuilder() {
         
         onChanged();
         return getDocumentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
-      public cv.scanner.v1.Scanner.DocumentOrBuilder getDocumentOrBuilder() {
+      public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
         if (documentBuilder_ != null) {
           return documentBuilder_.getMessageOrBuilder();
         } else {
           return document_ == null ?
-              cv.scanner.v1.Scanner.Document.getDefaultInstance() : document_;
+              ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
         }
       }
       /**
-       * <code>.cv.scanner.v1.Document document = 1 [json_name = "document"];</code>
+       * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          cv.scanner.v1.Scanner.Document, cv.scanner.v1.Scanner.Document.Builder, cv.scanner.v1.Scanner.DocumentOrBuilder> 
+          ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> 
           getDocumentFieldBuilder() {
         if (documentBuilder_ == null) {
           documentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cv.scanner.v1.Scanner.Document, cv.scanner.v1.Scanner.Document.Builder, cv.scanner.v1.Scanner.DocumentOrBuilder>(
+              ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder>(
                   getDocument(),
                   getParentForChildren(),
                   isClean());
@@ -1562,49 +1562,73 @@ public final class Scanner {
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getInstitutionNameList();
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getInstitutionName(int index);
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    int getInstitutionNameCount();
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getInstitutionNameOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getInstitutionNameOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getInstitutionTypeList();
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getInstitutionType(int index);
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     int getInstitutionTypeCount();
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getInstitutionTypeOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getInstitutionTypeOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
         getAreaOfEducationList();
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     ssn.type.CandidateOuterClass.Candidate getAreaOfEducation(int index);
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     int getAreaOfEducationCount();
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
         getAreaOfEducationOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getAreaOfEducationOrBuilder(
         int index);
@@ -1733,6 +1757,7 @@ public final class Scanner {
       empoloyerName_ = java.util.Collections.emptyList();
       positionTitle_ = java.util.Collections.emptyList();
       date_ = java.util.Collections.emptyList();
+      institutionName_ = java.util.Collections.emptyList();
       institutionType_ = java.util.Collections.emptyList();
       areaOfEducation_ = java.util.Collections.emptyList();
       degree_ = java.util.Collections.emptyList();
@@ -2366,17 +2391,57 @@ public final class Scanner {
       return date_.get(index);
     }
 
-    public static final int INSTITUTION_TYPE_FIELD_NUMBER = 16;
+    public static final int INSTITUTION_NAME_FIELD_NUMBER = 16;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> institutionName_;
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInstitutionNameList() {
+      return institutionName_;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getInstitutionNameOrBuilderList() {
+      return institutionName_;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    @java.lang.Override
+    public int getInstitutionNameCount() {
+      return institutionName_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getInstitutionName(int index) {
+      return institutionName_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getInstitutionNameOrBuilder(
+        int index) {
+      return institutionName_.get(index);
+    }
+
+    public static final int INSTITUTION_TYPE_FIELD_NUMBER = 17;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> institutionType_;
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInstitutionTypeList() {
       return institutionType_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -2384,21 +2449,21 @@ public final class Scanner {
       return institutionType_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     @java.lang.Override
     public int getInstitutionTypeCount() {
       return institutionType_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getInstitutionType(int index) {
       return institutionType_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+     * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getInstitutionTypeOrBuilder(
@@ -2406,17 +2471,17 @@ public final class Scanner {
       return institutionType_.get(index);
     }
 
-    public static final int AREA_OF_EDUCATION_FIELD_NUMBER = 17;
+    public static final int AREA_OF_EDUCATION_FIELD_NUMBER = 18;
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> areaOfEducation_;
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     @java.lang.Override
     public java.util.List<ssn.type.CandidateOuterClass.Candidate> getAreaOfEducationList() {
       return areaOfEducation_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
@@ -2424,21 +2489,21 @@ public final class Scanner {
       return areaOfEducation_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     @java.lang.Override
     public int getAreaOfEducationCount() {
       return areaOfEducation_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getAreaOfEducation(int index) {
       return areaOfEducation_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+     * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.CandidateOrBuilder getAreaOfEducationOrBuilder(
@@ -2665,11 +2730,14 @@ public final class Scanner {
       for (int i = 0; i < date_.size(); i++) {
         output.writeMessage(15, date_.get(i));
       }
+      for (int i = 0; i < institutionName_.size(); i++) {
+        output.writeMessage(16, institutionName_.get(i));
+      }
       for (int i = 0; i < institutionType_.size(); i++) {
-        output.writeMessage(16, institutionType_.get(i));
+        output.writeMessage(17, institutionType_.get(i));
       }
       for (int i = 0; i < areaOfEducation_.size(); i++) {
-        output.writeMessage(17, areaOfEducation_.get(i));
+        output.writeMessage(18, areaOfEducation_.get(i));
       }
       for (int i = 0; i < degree_.size(); i++) {
         output.writeMessage(19, degree_.get(i));
@@ -2752,13 +2820,17 @@ public final class Scanner {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, date_.get(i));
       }
+      for (int i = 0; i < institutionName_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, institutionName_.get(i));
+      }
       for (int i = 0; i < institutionType_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, institutionType_.get(i));
+          .computeMessageSize(17, institutionType_.get(i));
       }
       for (int i = 0; i < areaOfEducation_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, areaOfEducation_.get(i));
+          .computeMessageSize(18, areaOfEducation_.get(i));
       }
       for (int i = 0; i < degree_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -2821,6 +2893,8 @@ public final class Scanner {
           .equals(other.getPositionTitleList())) return false;
       if (!getDateList()
           .equals(other.getDateList())) return false;
+      if (!getInstitutionNameList()
+          .equals(other.getInstitutionNameList())) return false;
       if (!getInstitutionTypeList()
           .equals(other.getInstitutionTypeList())) return false;
       if (!getAreaOfEducationList()
@@ -2903,6 +2977,10 @@ public final class Scanner {
       if (getDateCount() > 0) {
         hash = (37 * hash) + DATE_FIELD_NUMBER;
         hash = (53 * hash) + getDateList().hashCode();
+      }
+      if (getInstitutionNameCount() > 0) {
+        hash = (37 * hash) + INSTITUTION_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getInstitutionNameList().hashCode();
       }
       if (getInstitutionTypeCount() > 0) {
         hash = (37 * hash) + INSTITUTION_TYPE_FIELD_NUMBER;
@@ -3161,48 +3239,55 @@ public final class Scanner {
           dateBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00004000);
+        if (institutionNameBuilder_ == null) {
+          institutionName_ = java.util.Collections.emptyList();
+        } else {
+          institutionName_ = null;
+          institutionNameBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00008000);
         if (institutionTypeBuilder_ == null) {
           institutionType_ = java.util.Collections.emptyList();
         } else {
           institutionType_ = null;
           institutionTypeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         if (areaOfEducationBuilder_ == null) {
           areaOfEducation_ = java.util.Collections.emptyList();
         } else {
           areaOfEducation_ = null;
           areaOfEducationBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         if (degreeBuilder_ == null) {
           degree_ = java.util.Collections.emptyList();
         } else {
           degree_ = null;
           degreeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         if (averageGradeBuilder_ == null) {
           averageGrade_ = java.util.Collections.emptyList();
         } else {
           averageGrade_ = null;
           averageGradeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         if (nameBuilder_ == null) {
           name_ = java.util.Collections.emptyList();
         } else {
           name_ = null;
           nameBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         if (levelBuilder_ == null) {
           level_ = java.util.Collections.emptyList();
         } else {
           level_ = null;
           levelBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         return this;
       }
 
@@ -3365,55 +3450,64 @@ public final class Scanner {
         } else {
           result.date_ = dateBuilder_.build();
         }
-        if (institutionTypeBuilder_ == null) {
+        if (institutionNameBuilder_ == null) {
           if (((bitField0_ & 0x00008000) != 0)) {
-            institutionType_ = java.util.Collections.unmodifiableList(institutionType_);
+            institutionName_ = java.util.Collections.unmodifiableList(institutionName_);
             bitField0_ = (bitField0_ & ~0x00008000);
+          }
+          result.institutionName_ = institutionName_;
+        } else {
+          result.institutionName_ = institutionNameBuilder_.build();
+        }
+        if (institutionTypeBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) != 0)) {
+            institutionType_ = java.util.Collections.unmodifiableList(institutionType_);
+            bitField0_ = (bitField0_ & ~0x00010000);
           }
           result.institutionType_ = institutionType_;
         } else {
           result.institutionType_ = institutionTypeBuilder_.build();
         }
         if (areaOfEducationBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) != 0)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             areaOfEducation_ = java.util.Collections.unmodifiableList(areaOfEducation_);
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00020000);
           }
           result.areaOfEducation_ = areaOfEducation_;
         } else {
           result.areaOfEducation_ = areaOfEducationBuilder_.build();
         }
         if (degreeBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) != 0)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             degree_ = java.util.Collections.unmodifiableList(degree_);
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00040000);
           }
           result.degree_ = degree_;
         } else {
           result.degree_ = degreeBuilder_.build();
         }
         if (averageGradeBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) != 0)) {
+          if (((bitField0_ & 0x00080000) != 0)) {
             averageGrade_ = java.util.Collections.unmodifiableList(averageGrade_);
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x00080000);
           }
           result.averageGrade_ = averageGrade_;
         } else {
           result.averageGrade_ = averageGradeBuilder_.build();
         }
         if (nameBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) != 0)) {
+          if (((bitField0_ & 0x00100000) != 0)) {
             name_ = java.util.Collections.unmodifiableList(name_);
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00100000);
           }
           result.name_ = name_;
         } else {
           result.name_ = nameBuilder_.build();
         }
         if (levelBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) != 0)) {
+          if (((bitField0_ & 0x00200000) != 0)) {
             level_ = java.util.Collections.unmodifiableList(level_);
-            bitField0_ = (bitField0_ & ~0x00100000);
+            bitField0_ = (bitField0_ & ~0x00200000);
           }
           result.level_ = level_;
         } else {
@@ -3857,11 +3951,37 @@ public final class Scanner {
             }
           }
         }
+        if (institutionNameBuilder_ == null) {
+          if (!other.institutionName_.isEmpty()) {
+            if (institutionName_.isEmpty()) {
+              institutionName_ = other.institutionName_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+            } else {
+              ensureInstitutionNameIsMutable();
+              institutionName_.addAll(other.institutionName_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.institutionName_.isEmpty()) {
+            if (institutionNameBuilder_.isEmpty()) {
+              institutionNameBuilder_.dispose();
+              institutionNameBuilder_ = null;
+              institutionName_ = other.institutionName_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+              institutionNameBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInstitutionNameFieldBuilder() : null;
+            } else {
+              institutionNameBuilder_.addAllMessages(other.institutionName_);
+            }
+          }
+        }
         if (institutionTypeBuilder_ == null) {
           if (!other.institutionType_.isEmpty()) {
             if (institutionType_.isEmpty()) {
               institutionType_ = other.institutionType_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00010000);
             } else {
               ensureInstitutionTypeIsMutable();
               institutionType_.addAll(other.institutionType_);
@@ -3874,7 +3994,7 @@ public final class Scanner {
               institutionTypeBuilder_.dispose();
               institutionTypeBuilder_ = null;
               institutionType_ = other.institutionType_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00010000);
               institutionTypeBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInstitutionTypeFieldBuilder() : null;
@@ -3887,7 +4007,7 @@ public final class Scanner {
           if (!other.areaOfEducation_.isEmpty()) {
             if (areaOfEducation_.isEmpty()) {
               areaOfEducation_ = other.areaOfEducation_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00020000);
             } else {
               ensureAreaOfEducationIsMutable();
               areaOfEducation_.addAll(other.areaOfEducation_);
@@ -3900,7 +4020,7 @@ public final class Scanner {
               areaOfEducationBuilder_.dispose();
               areaOfEducationBuilder_ = null;
               areaOfEducation_ = other.areaOfEducation_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00020000);
               areaOfEducationBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAreaOfEducationFieldBuilder() : null;
@@ -3913,7 +4033,7 @@ public final class Scanner {
           if (!other.degree_.isEmpty()) {
             if (degree_.isEmpty()) {
               degree_ = other.degree_;
-              bitField0_ = (bitField0_ & ~0x00020000);
+              bitField0_ = (bitField0_ & ~0x00040000);
             } else {
               ensureDegreeIsMutable();
               degree_.addAll(other.degree_);
@@ -3926,7 +4046,7 @@ public final class Scanner {
               degreeBuilder_.dispose();
               degreeBuilder_ = null;
               degree_ = other.degree_;
-              bitField0_ = (bitField0_ & ~0x00020000);
+              bitField0_ = (bitField0_ & ~0x00040000);
               degreeBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDegreeFieldBuilder() : null;
@@ -3939,7 +4059,7 @@ public final class Scanner {
           if (!other.averageGrade_.isEmpty()) {
             if (averageGrade_.isEmpty()) {
               averageGrade_ = other.averageGrade_;
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00080000);
             } else {
               ensureAverageGradeIsMutable();
               averageGrade_.addAll(other.averageGrade_);
@@ -3952,7 +4072,7 @@ public final class Scanner {
               averageGradeBuilder_.dispose();
               averageGradeBuilder_ = null;
               averageGrade_ = other.averageGrade_;
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00080000);
               averageGradeBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAverageGradeFieldBuilder() : null;
@@ -3965,7 +4085,7 @@ public final class Scanner {
           if (!other.name_.isEmpty()) {
             if (name_.isEmpty()) {
               name_ = other.name_;
-              bitField0_ = (bitField0_ & ~0x00080000);
+              bitField0_ = (bitField0_ & ~0x00100000);
             } else {
               ensureNameIsMutable();
               name_.addAll(other.name_);
@@ -3978,7 +4098,7 @@ public final class Scanner {
               nameBuilder_.dispose();
               nameBuilder_ = null;
               name_ = other.name_;
-              bitField0_ = (bitField0_ & ~0x00080000);
+              bitField0_ = (bitField0_ & ~0x00100000);
               nameBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNameFieldBuilder() : null;
@@ -3991,7 +4111,7 @@ public final class Scanner {
           if (!other.level_.isEmpty()) {
             if (level_.isEmpty()) {
               level_ = other.level_;
-              bitField0_ = (bitField0_ & ~0x00100000);
+              bitField0_ = (bitField0_ & ~0x00200000);
             } else {
               ensureLevelIsMutable();
               level_.addAll(other.level_);
@@ -4004,7 +4124,7 @@ public final class Scanner {
               levelBuilder_.dispose();
               levelBuilder_ = null;
               level_ = other.level_;
-              bitField0_ = (bitField0_ & ~0x00100000);
+              bitField0_ = (bitField0_ & ~0x00200000);
               levelBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLevelFieldBuilder() : null;
@@ -4239,6 +4359,19 @@ public final class Scanner {
                     input.readMessage(
                         ssn.type.CandidateOuterClass.Candidate.parser(),
                         extensionRegistry);
+                if (institutionNameBuilder_ == null) {
+                  ensureInstitutionNameIsMutable();
+                  institutionName_.add(m);
+                } else {
+                  institutionNameBuilder_.addMessage(m);
+                }
+                break;
+              } // case 130
+              case 138: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
                 if (institutionTypeBuilder_ == null) {
                   ensureInstitutionTypeIsMutable();
                   institutionType_.add(m);
@@ -4246,8 +4379,8 @@ public final class Scanner {
                   institutionTypeBuilder_.addMessage(m);
                 }
                 break;
-              } // case 130
-              case 138: {
+              } // case 138
+              case 146: {
                 ssn.type.CandidateOuterClass.Candidate m =
                     input.readMessage(
                         ssn.type.CandidateOuterClass.Candidate.parser(),
@@ -4259,7 +4392,7 @@ public final class Scanner {
                   areaOfEducationBuilder_.addMessage(m);
                 }
                 break;
-              } // case 138
+              } // case 146
               case 154: {
                 ssn.type.CandidateOuterClass.Candidate m =
                     input.readMessage(
@@ -7929,12 +8062,252 @@ public final class Scanner {
         return dateBuilder_;
       }
 
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> institutionName_ =
+        java.util.Collections.emptyList();
+      private void ensureInstitutionNameIsMutable() {
+        if (!((bitField0_ & 0x00008000) != 0)) {
+          institutionName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(institutionName_);
+          bitField0_ |= 0x00008000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> institutionNameBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInstitutionNameList() {
+        if (institutionNameBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(institutionName_);
+        } else {
+          return institutionNameBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public int getInstitutionNameCount() {
+        if (institutionNameBuilder_ == null) {
+          return institutionName_.size();
+        } else {
+          return institutionNameBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getInstitutionName(int index) {
+        if (institutionNameBuilder_ == null) {
+          return institutionName_.get(index);
+        } else {
+          return institutionNameBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder setInstitutionName(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (institutionNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstitutionNameIsMutable();
+          institutionName_.set(index, value);
+          onChanged();
+        } else {
+          institutionNameBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder setInstitutionName(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (institutionNameBuilder_ == null) {
+          ensureInstitutionNameIsMutable();
+          institutionName_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          institutionNameBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder addInstitutionName(ssn.type.CandidateOuterClass.Candidate value) {
+        if (institutionNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstitutionNameIsMutable();
+          institutionName_.add(value);
+          onChanged();
+        } else {
+          institutionNameBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder addInstitutionName(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (institutionNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstitutionNameIsMutable();
+          institutionName_.add(index, value);
+          onChanged();
+        } else {
+          institutionNameBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder addInstitutionName(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (institutionNameBuilder_ == null) {
+          ensureInstitutionNameIsMutable();
+          institutionName_.add(builderForValue.build());
+          onChanged();
+        } else {
+          institutionNameBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder addInstitutionName(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (institutionNameBuilder_ == null) {
+          ensureInstitutionNameIsMutable();
+          institutionName_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          institutionNameBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder addAllInstitutionName(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (institutionNameBuilder_ == null) {
+          ensureInstitutionNameIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, institutionName_);
+          onChanged();
+        } else {
+          institutionNameBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder clearInstitutionName() {
+        if (institutionNameBuilder_ == null) {
+          institutionName_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00008000);
+          onChanged();
+        } else {
+          institutionNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public Builder removeInstitutionName(int index) {
+        if (institutionNameBuilder_ == null) {
+          ensureInstitutionNameIsMutable();
+          institutionName_.remove(index);
+          onChanged();
+        } else {
+          institutionNameBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getInstitutionNameBuilder(
+          int index) {
+        return getInstitutionNameFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getInstitutionNameOrBuilder(
+          int index) {
+        if (institutionNameBuilder_ == null) {
+          return institutionName_.get(index);  } else {
+          return institutionNameBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getInstitutionNameOrBuilderList() {
+        if (institutionNameBuilder_ != null) {
+          return institutionNameBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(institutionName_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addInstitutionNameBuilder() {
+        return getInstitutionNameFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addInstitutionNameBuilder(
+          int index) {
+        return getInstitutionNameFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getInstitutionNameBuilderList() {
+        return getInstitutionNameFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getInstitutionNameFieldBuilder() {
+        if (institutionNameBuilder_ == null) {
+          institutionNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  institutionName_,
+                  ((bitField0_ & 0x00008000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          institutionName_ = null;
+        }
+        return institutionNameBuilder_;
+      }
+
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> institutionType_ =
         java.util.Collections.emptyList();
       private void ensureInstitutionTypeIsMutable() {
-        if (!((bitField0_ & 0x00008000) != 0)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           institutionType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(institutionType_);
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00010000;
          }
       }
 
@@ -7942,7 +8315,7 @@ public final class Scanner {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> institutionTypeBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getInstitutionTypeList() {
         if (institutionTypeBuilder_ == null) {
@@ -7952,7 +8325,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public int getInstitutionTypeCount() {
         if (institutionTypeBuilder_ == null) {
@@ -7962,7 +8335,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getInstitutionType(int index) {
         if (institutionTypeBuilder_ == null) {
@@ -7972,7 +8345,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder setInstitutionType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -7989,7 +8362,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder setInstitutionType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -8003,7 +8376,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder addInstitutionType(ssn.type.CandidateOuterClass.Candidate value) {
         if (institutionTypeBuilder_ == null) {
@@ -8019,7 +8392,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder addInstitutionType(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -8036,7 +8409,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder addInstitutionType(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -8050,7 +8423,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder addInstitutionType(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -8064,7 +8437,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder addAllInstitutionType(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -8079,12 +8452,12 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder clearInstitutionType() {
         if (institutionTypeBuilder_ == null) {
           institutionType_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00010000);
           onChanged();
         } else {
           institutionTypeBuilder_.clear();
@@ -8092,7 +8465,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public Builder removeInstitutionType(int index) {
         if (institutionTypeBuilder_ == null) {
@@ -8105,14 +8478,14 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getInstitutionTypeBuilder(
           int index) {
         return getInstitutionTypeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getInstitutionTypeOrBuilder(
           int index) {
@@ -8122,7 +8495,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getInstitutionTypeOrBuilderList() {
@@ -8133,14 +8506,14 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addInstitutionTypeBuilder() {
         return getInstitutionTypeFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addInstitutionTypeBuilder(
           int index) {
@@ -8148,7 +8521,7 @@ public final class Scanner {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate institution_type = 16 [json_name = "institutionType"];</code>
+       * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getInstitutionTypeBuilderList() {
@@ -8161,7 +8534,7 @@ public final class Scanner {
           institutionTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   institutionType_,
-                  ((bitField0_ & 0x00008000) != 0),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           institutionType_ = null;
@@ -8172,9 +8545,9 @@ public final class Scanner {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> areaOfEducation_ =
         java.util.Collections.emptyList();
       private void ensureAreaOfEducationIsMutable() {
-        if (!((bitField0_ & 0x00010000) != 0)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           areaOfEducation_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(areaOfEducation_);
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00020000;
          }
       }
 
@@ -8182,7 +8555,7 @@ public final class Scanner {
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> areaOfEducationBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate> getAreaOfEducationList() {
         if (areaOfEducationBuilder_ == null) {
@@ -8192,7 +8565,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public int getAreaOfEducationCount() {
         if (areaOfEducationBuilder_ == null) {
@@ -8202,7 +8575,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate getAreaOfEducation(int index) {
         if (areaOfEducationBuilder_ == null) {
@@ -8212,7 +8585,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder setAreaOfEducation(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -8229,7 +8602,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder setAreaOfEducation(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -8243,7 +8616,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder addAreaOfEducation(ssn.type.CandidateOuterClass.Candidate value) {
         if (areaOfEducationBuilder_ == null) {
@@ -8259,7 +8632,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder addAreaOfEducation(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
@@ -8276,7 +8649,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder addAreaOfEducation(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -8290,7 +8663,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder addAreaOfEducation(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
@@ -8304,7 +8677,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder addAllAreaOfEducation(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
@@ -8319,12 +8692,12 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder clearAreaOfEducation() {
         if (areaOfEducationBuilder_ == null) {
           areaOfEducation_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00020000);
           onChanged();
         } else {
           areaOfEducationBuilder_.clear();
@@ -8332,7 +8705,7 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public Builder removeAreaOfEducation(int index) {
         if (areaOfEducationBuilder_ == null) {
@@ -8345,14 +8718,14 @@ public final class Scanner {
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder getAreaOfEducationBuilder(
           int index) {
         return getAreaOfEducationFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public ssn.type.CandidateOuterClass.CandidateOrBuilder getAreaOfEducationOrBuilder(
           int index) {
@@ -8362,7 +8735,7 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
            getAreaOfEducationOrBuilderList() {
@@ -8373,14 +8746,14 @@ public final class Scanner {
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addAreaOfEducationBuilder() {
         return getAreaOfEducationFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public ssn.type.CandidateOuterClass.Candidate.Builder addAreaOfEducationBuilder(
           int index) {
@@ -8388,7 +8761,7 @@ public final class Scanner {
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate area_of_education = 17 [json_name = "areaOfEducation"];</code>
+       * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
            getAreaOfEducationBuilderList() {
@@ -8401,7 +8774,7 @@ public final class Scanner {
           areaOfEducationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   areaOfEducation_,
-                  ((bitField0_ & 0x00010000) != 0),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           areaOfEducation_ = null;
@@ -8412,9 +8785,9 @@ public final class Scanner {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> degree_ =
         java.util.Collections.emptyList();
       private void ensureDegreeIsMutable() {
-        if (!((bitField0_ & 0x00020000) != 0)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           degree_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(degree_);
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00040000;
          }
       }
 
@@ -8564,7 +8937,7 @@ public final class Scanner {
       public Builder clearDegree() {
         if (degreeBuilder_ == null) {
           degree_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00040000);
           onChanged();
         } else {
           degreeBuilder_.clear();
@@ -8641,7 +9014,7 @@ public final class Scanner {
           degreeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   degree_,
-                  ((bitField0_ & 0x00020000) != 0),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           degree_ = null;
@@ -8652,9 +9025,9 @@ public final class Scanner {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> averageGrade_ =
         java.util.Collections.emptyList();
       private void ensureAverageGradeIsMutable() {
-        if (!((bitField0_ & 0x00040000) != 0)) {
+        if (!((bitField0_ & 0x00080000) != 0)) {
           averageGrade_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(averageGrade_);
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00080000;
          }
       }
 
@@ -8804,7 +9177,7 @@ public final class Scanner {
       public Builder clearAverageGrade() {
         if (averageGradeBuilder_ == null) {
           averageGrade_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00080000);
           onChanged();
         } else {
           averageGradeBuilder_.clear();
@@ -8881,7 +9254,7 @@ public final class Scanner {
           averageGradeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   averageGrade_,
-                  ((bitField0_ & 0x00040000) != 0),
+                  ((bitField0_ & 0x00080000) != 0),
                   getParentForChildren(),
                   isClean());
           averageGrade_ = null;
@@ -8892,9 +9265,9 @@ public final class Scanner {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> name_ =
         java.util.Collections.emptyList();
       private void ensureNameIsMutable() {
-        if (!((bitField0_ & 0x00080000) != 0)) {
+        if (!((bitField0_ & 0x00100000) != 0)) {
           name_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(name_);
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00100000;
          }
       }
 
@@ -9044,7 +9417,7 @@ public final class Scanner {
       public Builder clearName() {
         if (nameBuilder_ == null) {
           name_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00100000);
           onChanged();
         } else {
           nameBuilder_.clear();
@@ -9121,7 +9494,7 @@ public final class Scanner {
           nameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   name_,
-                  ((bitField0_ & 0x00080000) != 0),
+                  ((bitField0_ & 0x00100000) != 0),
                   getParentForChildren(),
                   isClean());
           name_ = null;
@@ -9132,9 +9505,9 @@ public final class Scanner {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> level_ =
         java.util.Collections.emptyList();
       private void ensureLevelIsMutable() {
-        if (!((bitField0_ & 0x00100000) != 0)) {
+        if (!((bitField0_ & 0x00200000) != 0)) {
           level_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(level_);
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00200000;
          }
       }
 
@@ -9284,7 +9657,7 @@ public final class Scanner {
       public Builder clearLevel() {
         if (levelBuilder_ == null) {
           level_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x00200000);
           onChanged();
         } else {
           levelBuilder_.clear();
@@ -9361,7 +9734,7 @@ public final class Scanner {
           levelBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   level_,
-                  ((bitField0_ & 0x00100000) != 0),
+                  ((bitField0_ & 0x00200000) != 0),
                   getParentForChildren(),
                   isClean());
           level_ = null;
@@ -10357,1418 +10730,6 @@ public final class Scanner {
 
   }
 
-  public interface DocumentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:cv.scanner.v1.Document)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Document content, represented as a stream of bytes.
-     * Note: As with all `bytes` fields, protobuffers use a pure binary
-     * representation, whereas JSON representations use base64.
-     * </pre>
-     *
-     * <code>bytes content = 1 [json_name = "content"];</code>
-     * @return The content.
-     */
-    com.google.protobuf.ByteString getContent();
-
-    /**
-     * <pre>
-     * Google Cloud Storage image location, or publicly-accessible image
-     * URL. If both `content` and `source` are provided for a document, `content`
-     * takes precedence and is used to perform the scan request.
-     * </pre>
-     *
-     * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-     * @return Whether the source field is set.
-     */
-    boolean hasSource();
-    /**
-     * <pre>
-     * Google Cloud Storage image location, or publicly-accessible image
-     * URL. If both `content` and `source` are provided for a document, `content`
-     * takes precedence and is used to perform the scan request.
-     * </pre>
-     *
-     * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-     * @return The source.
-     */
-    cv.scanner.v1.Scanner.DocumentSource getSource();
-    /**
-     * <pre>
-     * Google Cloud Storage image location, or publicly-accessible image
-     * URL. If both `content` and `source` are provided for a document, `content`
-     * takes precedence and is used to perform the scan request.
-     * </pre>
-     *
-     * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-     */
-    cv.scanner.v1.Scanner.DocumentSourceOrBuilder getSourceOrBuilder();
-  }
-  /**
-   * Protobuf type {@code cv.scanner.v1.Document}
-   */
-  public static final class Document extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:cv.scanner.v1.Document)
-      DocumentOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Document.newBuilder() to construct.
-    private Document(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Document() {
-      content_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Document();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Document_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Document_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cv.scanner.v1.Scanner.Document.class, cv.scanner.v1.Scanner.Document.Builder.class);
-    }
-
-    public static final int CONTENT_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString content_;
-    /**
-     * <pre>
-     * Document content, represented as a stream of bytes.
-     * Note: As with all `bytes` fields, protobuffers use a pure binary
-     * representation, whereas JSON representations use base64.
-     * </pre>
-     *
-     * <code>bytes content = 1 [json_name = "content"];</code>
-     * @return The content.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getContent() {
-      return content_;
-    }
-
-    public static final int SOURCE_FIELD_NUMBER = 2;
-    private cv.scanner.v1.Scanner.DocumentSource source_;
-    /**
-     * <pre>
-     * Google Cloud Storage image location, or publicly-accessible image
-     * URL. If both `content` and `source` are provided for a document, `content`
-     * takes precedence and is used to perform the scan request.
-     * </pre>
-     *
-     * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-     * @return Whether the source field is set.
-     */
-    @java.lang.Override
-    public boolean hasSource() {
-      return source_ != null;
-    }
-    /**
-     * <pre>
-     * Google Cloud Storage image location, or publicly-accessible image
-     * URL. If both `content` and `source` are provided for a document, `content`
-     * takes precedence and is used to perform the scan request.
-     * </pre>
-     *
-     * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-     * @return The source.
-     */
-    @java.lang.Override
-    public cv.scanner.v1.Scanner.DocumentSource getSource() {
-      return source_ == null ? cv.scanner.v1.Scanner.DocumentSource.getDefaultInstance() : source_;
-    }
-    /**
-     * <pre>
-     * Google Cloud Storage image location, or publicly-accessible image
-     * URL. If both `content` and `source` are provided for a document, `content`
-     * takes precedence and is used to perform the scan request.
-     * </pre>
-     *
-     * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-     */
-    @java.lang.Override
-    public cv.scanner.v1.Scanner.DocumentSourceOrBuilder getSourceOrBuilder() {
-      return getSource();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!content_.isEmpty()) {
-        output.writeBytes(1, content_);
-      }
-      if (source_ != null) {
-        output.writeMessage(2, getSource());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!content_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, content_);
-      }
-      if (source_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSource());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cv.scanner.v1.Scanner.Document)) {
-        return super.equals(obj);
-      }
-      cv.scanner.v1.Scanner.Document other = (cv.scanner.v1.Scanner.Document) obj;
-
-      if (!getContent()
-          .equals(other.getContent())) return false;
-      if (hasSource() != other.hasSource()) return false;
-      if (hasSource()) {
-        if (!getSource()
-            .equals(other.getSource())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getContent().hashCode();
-      if (hasSource()) {
-        hash = (37 * hash) + SOURCE_FIELD_NUMBER;
-        hash = (53 * hash) + getSource().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.Document parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cv.scanner.v1.Scanner.Document parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cv.scanner.v1.Scanner.Document parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cv.scanner.v1.Scanner.Document prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code cv.scanner.v1.Document}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:cv.scanner.v1.Document)
-        cv.scanner.v1.Scanner.DocumentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Document_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Document_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cv.scanner.v1.Scanner.Document.class, cv.scanner.v1.Scanner.Document.Builder.class);
-      }
-
-      // Construct using cv.scanner.v1.Scanner.Document.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        content_ = com.google.protobuf.ByteString.EMPTY;
-
-        if (sourceBuilder_ == null) {
-          source_ = null;
-        } else {
-          source_ = null;
-          sourceBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Document_descriptor;
-      }
-
-      @java.lang.Override
-      public cv.scanner.v1.Scanner.Document getDefaultInstanceForType() {
-        return cv.scanner.v1.Scanner.Document.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cv.scanner.v1.Scanner.Document build() {
-        cv.scanner.v1.Scanner.Document result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cv.scanner.v1.Scanner.Document buildPartial() {
-        cv.scanner.v1.Scanner.Document result = new cv.scanner.v1.Scanner.Document(this);
-        result.content_ = content_;
-        if (sourceBuilder_ == null) {
-          result.source_ = source_;
-        } else {
-          result.source_ = sourceBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cv.scanner.v1.Scanner.Document) {
-          return mergeFrom((cv.scanner.v1.Scanner.Document)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cv.scanner.v1.Scanner.Document other) {
-        if (other == cv.scanner.v1.Scanner.Document.getDefaultInstance()) return this;
-        if (other.getContent() != com.google.protobuf.ByteString.EMPTY) {
-          setContent(other.getContent());
-        }
-        if (other.hasSource()) {
-          mergeSource(other.getSource());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                content_ = input.readBytes();
-
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getSourceFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       * Document content, represented as a stream of bytes.
-       * Note: As with all `bytes` fields, protobuffers use a pure binary
-       * representation, whereas JSON representations use base64.
-       * </pre>
-       *
-       * <code>bytes content = 1 [json_name = "content"];</code>
-       * @return The content.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getContent() {
-        return content_;
-      }
-      /**
-       * <pre>
-       * Document content, represented as a stream of bytes.
-       * Note: As with all `bytes` fields, protobuffers use a pure binary
-       * representation, whereas JSON representations use base64.
-       * </pre>
-       *
-       * <code>bytes content = 1 [json_name = "content"];</code>
-       * @param value The content to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContent(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        content_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Document content, represented as a stream of bytes.
-       * Note: As with all `bytes` fields, protobuffers use a pure binary
-       * representation, whereas JSON representations use base64.
-       * </pre>
-       *
-       * <code>bytes content = 1 [json_name = "content"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearContent() {
-        
-        content_ = getDefaultInstance().getContent();
-        onChanged();
-        return this;
-      }
-
-      private cv.scanner.v1.Scanner.DocumentSource source_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cv.scanner.v1.Scanner.DocumentSource, cv.scanner.v1.Scanner.DocumentSource.Builder, cv.scanner.v1.Scanner.DocumentSourceOrBuilder> sourceBuilder_;
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       * @return Whether the source field is set.
-       */
-      public boolean hasSource() {
-        return sourceBuilder_ != null || source_ != null;
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       * @return The source.
-       */
-      public cv.scanner.v1.Scanner.DocumentSource getSource() {
-        if (sourceBuilder_ == null) {
-          return source_ == null ? cv.scanner.v1.Scanner.DocumentSource.getDefaultInstance() : source_;
-        } else {
-          return sourceBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       */
-      public Builder setSource(cv.scanner.v1.Scanner.DocumentSource value) {
-        if (sourceBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          source_ = value;
-          onChanged();
-        } else {
-          sourceBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       */
-      public Builder setSource(
-          cv.scanner.v1.Scanner.DocumentSource.Builder builderForValue) {
-        if (sourceBuilder_ == null) {
-          source_ = builderForValue.build();
-          onChanged();
-        } else {
-          sourceBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       */
-      public Builder mergeSource(cv.scanner.v1.Scanner.DocumentSource value) {
-        if (sourceBuilder_ == null) {
-          if (source_ != null) {
-            source_ =
-              cv.scanner.v1.Scanner.DocumentSource.newBuilder(source_).mergeFrom(value).buildPartial();
-          } else {
-            source_ = value;
-          }
-          onChanged();
-        } else {
-          sourceBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       */
-      public Builder clearSource() {
-        if (sourceBuilder_ == null) {
-          source_ = null;
-          onChanged();
-        } else {
-          source_ = null;
-          sourceBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       */
-      public cv.scanner.v1.Scanner.DocumentSource.Builder getSourceBuilder() {
-        
-        onChanged();
-        return getSourceFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       */
-      public cv.scanner.v1.Scanner.DocumentSourceOrBuilder getSourceOrBuilder() {
-        if (sourceBuilder_ != null) {
-          return sourceBuilder_.getMessageOrBuilder();
-        } else {
-          return source_ == null ?
-              cv.scanner.v1.Scanner.DocumentSource.getDefaultInstance() : source_;
-        }
-      }
-      /**
-       * <pre>
-       * Google Cloud Storage image location, or publicly-accessible image
-       * URL. If both `content` and `source` are provided for a document, `content`
-       * takes precedence and is used to perform the scan request.
-       * </pre>
-       *
-       * <code>.cv.scanner.v1.DocumentSource source = 2 [json_name = "source"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cv.scanner.v1.Scanner.DocumentSource, cv.scanner.v1.Scanner.DocumentSource.Builder, cv.scanner.v1.Scanner.DocumentSourceOrBuilder> 
-          getSourceFieldBuilder() {
-        if (sourceBuilder_ == null) {
-          sourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cv.scanner.v1.Scanner.DocumentSource, cv.scanner.v1.Scanner.DocumentSource.Builder, cv.scanner.v1.Scanner.DocumentSourceOrBuilder>(
-                  getSource(),
-                  getParentForChildren(),
-                  isClean());
-          source_ = null;
-        }
-        return sourceBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:cv.scanner.v1.Document)
-    }
-
-    // @@protoc_insertion_point(class_scope:cv.scanner.v1.Document)
-    private static final cv.scanner.v1.Scanner.Document DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cv.scanner.v1.Scanner.Document();
-    }
-
-    public static cv.scanner.v1.Scanner.Document getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Document>
-        PARSER = new com.google.protobuf.AbstractParser<Document>() {
-      @java.lang.Override
-      public Document parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Document> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Document> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cv.scanner.v1.Scanner.Document getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DocumentSourceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:cv.scanner.v1.DocumentSource)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The URI of the source document. Can be either:
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     *    completed. Your request may fail if the specified host denies the
-     *    request (e.g. due to request throttling or DOS prevention).
-     * </pre>
-     *
-     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-     * @return The httpUri.
-     */
-    java.lang.String getHttpUri();
-    /**
-     * <pre>
-     * The URI of the source document. Can be either:
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     *    completed. Your request may fail if the specified host denies the
-     *    request (e.g. due to request throttling or DOS prevention).
-     * </pre>
-     *
-     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-     * @return The bytes for httpUri.
-     */
-    com.google.protobuf.ByteString
-        getHttpUriBytes();
-  }
-  /**
-   * Protobuf type {@code cv.scanner.v1.DocumentSource}
-   */
-  public static final class DocumentSource extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:cv.scanner.v1.DocumentSource)
-      DocumentSourceOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DocumentSource.newBuilder() to construct.
-    private DocumentSource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private DocumentSource() {
-      httpUri_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DocumentSource();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_DocumentSource_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_DocumentSource_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cv.scanner.v1.Scanner.DocumentSource.class, cv.scanner.v1.Scanner.DocumentSource.Builder.class);
-    }
-
-    public static final int HTTP_URI_FIELD_NUMBER = 1;
-    private volatile java.lang.Object httpUri_;
-    /**
-     * <pre>
-     * The URI of the source document. Can be either:
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     *    completed. Your request may fail if the specified host denies the
-     *    request (e.g. due to request throttling or DOS prevention).
-     * </pre>
-     *
-     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-     * @return The httpUri.
-     */
-    @java.lang.Override
-    public java.lang.String getHttpUri() {
-      java.lang.Object ref = httpUri_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        httpUri_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * The URI of the source document. Can be either:
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     *    completed. Your request may fail if the specified host denies the
-     *    request (e.g. due to request throttling or DOS prevention).
-     * </pre>
-     *
-     * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-     * @return The bytes for httpUri.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getHttpUriBytes() {
-      java.lang.Object ref = httpUri_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        httpUri_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpUri_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpUri_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpUri_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpUri_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cv.scanner.v1.Scanner.DocumentSource)) {
-        return super.equals(obj);
-      }
-      cv.scanner.v1.Scanner.DocumentSource other = (cv.scanner.v1.Scanner.DocumentSource) obj;
-
-      if (!getHttpUri()
-          .equals(other.getHttpUri())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HTTP_URI_FIELD_NUMBER;
-      hash = (53 * hash) + getHttpUri().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cv.scanner.v1.Scanner.DocumentSource parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cv.scanner.v1.Scanner.DocumentSource prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code cv.scanner.v1.DocumentSource}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:cv.scanner.v1.DocumentSource)
-        cv.scanner.v1.Scanner.DocumentSourceOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_DocumentSource_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_DocumentSource_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cv.scanner.v1.Scanner.DocumentSource.class, cv.scanner.v1.Scanner.DocumentSource.Builder.class);
-      }
-
-      // Construct using cv.scanner.v1.Scanner.DocumentSource.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        httpUri_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_DocumentSource_descriptor;
-      }
-
-      @java.lang.Override
-      public cv.scanner.v1.Scanner.DocumentSource getDefaultInstanceForType() {
-        return cv.scanner.v1.Scanner.DocumentSource.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cv.scanner.v1.Scanner.DocumentSource build() {
-        cv.scanner.v1.Scanner.DocumentSource result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cv.scanner.v1.Scanner.DocumentSource buildPartial() {
-        cv.scanner.v1.Scanner.DocumentSource result = new cv.scanner.v1.Scanner.DocumentSource(this);
-        result.httpUri_ = httpUri_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cv.scanner.v1.Scanner.DocumentSource) {
-          return mergeFrom((cv.scanner.v1.Scanner.DocumentSource)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cv.scanner.v1.Scanner.DocumentSource other) {
-        if (other == cv.scanner.v1.Scanner.DocumentSource.getDefaultInstance()) return this;
-        if (!other.getHttpUri().isEmpty()) {
-          httpUri_ = other.httpUri_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                httpUri_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private java.lang.Object httpUri_ = "";
-      /**
-       * <pre>
-       * The URI of the source document. Can be either:
-       * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-       *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-       *    completed. Your request may fail if the specified host denies the
-       *    request (e.g. due to request throttling or DOS prevention).
-       * </pre>
-       *
-       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-       * @return The httpUri.
-       */
-      public java.lang.String getHttpUri() {
-        java.lang.Object ref = httpUri_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          httpUri_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The URI of the source document. Can be either:
-       * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-       *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-       *    completed. Your request may fail if the specified host denies the
-       *    request (e.g. due to request throttling or DOS prevention).
-       * </pre>
-       *
-       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-       * @return The bytes for httpUri.
-       */
-      public com.google.protobuf.ByteString
-          getHttpUriBytes() {
-        java.lang.Object ref = httpUri_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          httpUri_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The URI of the source document. Can be either:
-       * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-       *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-       *    completed. Your request may fail if the specified host denies the
-       *    request (e.g. due to request throttling or DOS prevention).
-       * </pre>
-       *
-       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-       * @param value The httpUri to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHttpUri(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        httpUri_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The URI of the source document. Can be either:
-       * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-       *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-       *    completed. Your request may fail if the specified host denies the
-       *    request (e.g. due to request throttling or DOS prevention).
-       * </pre>
-       *
-       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHttpUri() {
-        
-        httpUri_ = getDefaultInstance().getHttpUri();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The URI of the source document. Can be either:
-       * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-       *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-       *    completed. Your request may fail if the specified host denies the
-       *    request (e.g. due to request throttling or DOS prevention).
-       * </pre>
-       *
-       * <code>string http_uri = 1 [json_name = "httpUri"];</code>
-       * @param value The bytes for httpUri to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHttpUriBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        httpUri_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:cv.scanner.v1.DocumentSource)
-    }
-
-    // @@protoc_insertion_point(class_scope:cv.scanner.v1.DocumentSource)
-    private static final cv.scanner.v1.Scanner.DocumentSource DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cv.scanner.v1.Scanner.DocumentSource();
-    }
-
-    public static cv.scanner.v1.Scanner.DocumentSource getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DocumentSource>
-        PARSER = new com.google.protobuf.AbstractParser<DocumentSource>() {
-      @java.lang.Override
-      public DocumentSource parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<DocumentSource> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DocumentSource> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cv.scanner.v1.Scanner.DocumentSource getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cv_scanner_v1_ScanCVRequest_descriptor;
   private static final 
@@ -11784,16 +10745,6 @@ public final class Scanner {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cv_scanner_v1_Feature_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_cv_scanner_v1_Document_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_cv_scanner_v1_Document_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_cv_scanner_v1_DocumentSource_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_cv_scanner_v1_DocumentSource_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11805,64 +10756,64 @@ public final class Scanner {
     java.lang.String[] descriptorData = {
       "\n\033cv/scanner/v1/scanner.proto\022\rcv.scanne" +
       "r.v1\032\034google/api/annotations.proto\032\025goog" +
-      "le/api/http.proto\032\030ssn/type/candidate.pr" +
-      "oto\"\214\001\n\rScanCVRequest\0223\n\010document\030\001 \001(\0132" +
-      "\027.cv.scanner.v1.DocumentR\010document\0222\n\010fe" +
-      "atures\030\002 \003(\0132\026.cv.scanner.v1.FeatureR\010fe" +
-      "atures\022\022\n\004tags\030\003 \003(\tR\004tags\"\307\010\n\016ScanCVRes" +
-      "ponse\0222\n\nfirst_name\030\001 \003(\0132\023.ssn.type.Can" +
-      "didateR\tfirstName\0220\n\tlast_name\030\002 \003(\0132\023.s" +
-      "sn.type.CandidateR\010lastName\0227\n\rdate_of_b" +
-      "irth\030\003 \003(\0132\023.ssn.type.CandidateR\013dateOfB" +
-      "irth\022)\n\005phone\030\004 \003(\0132\023.ssn.type.Candidate" +
-      "R\005phone\022)\n\005email\030\005 \003(\0132\023.ssn.type.Candid" +
-      "ateR\005email\022-\n\007country\030\006 \003(\0132\023.ssn.type.C" +
-      "andidateR\007country\0225\n\013nationality\030\007 \003(\0132\023" +
-      ".ssn.type.CandidateR\013nationality\0224\n\013post" +
-      "al_code\030\010 \003(\0132\023.ssn.type.CandidateR\npost" +
-      "alCode\0224\n\013postal_area\030\t \003(\0132\023.ssn.type.C" +
-      "andidateR\npostalArea\0227\n\014municipality\030\n \003" +
-      "(\0132\023.ssn.type.CandidateR\014municipality\022+\n" +
-      "\006county\030\013 \003(\0132\023.ssn.type.CandidateR\006coun" +
-      "ty\022+\n\006adress\030\014 \003(\0132\023.ssn.type.CandidateR" +
-      "\006adress\022:\n\016empoloyer_name\030\r \003(\0132\023.ssn.ty" +
-      "pe.CandidateR\rempoloyerName\022:\n\016position_" +
-      "title\030\016 \003(\0132\023.ssn.type.CandidateR\rpositi" +
-      "onTitle\022\'\n\004date\030\017 \003(\0132\023.ssn.type.Candida" +
-      "teR\004date\022>\n\020institution_type\030\020 \003(\0132\023.ssn" +
-      ".type.CandidateR\017institutionType\022?\n\021area" +
-      "_of_education\030\021 \003(\0132\023.ssn.type.Candidate" +
-      "R\017areaOfEducation\022+\n\006degree\030\023 \003(\0132\023.ssn." +
-      "type.CandidateR\006degree\0228\n\raverage_grade\030" +
-      "\024 \003(\0132\023.ssn.type.CandidateR\014averageGrade" +
-      "\022\'\n\004name\030\025 \003(\0132\023.ssn.type.CandidateR\004nam" +
-      "e\022)\n\005level\030\026 \003(\0132\023.ssn.type.CandidateR\005l" +
-      "evel\"\273\003\n\007Feature\022/\n\004type\030\001 \001(\0162\033.cv.scan" +
-      "ner.v1.Feature.TypeR\004type\022\037\n\013max_results" +
-      "\030\002 \001(\005R\nmaxResults\"\335\002\n\004Type\022\016\n\nFIRST_NAM" +
-      "E\020\000\022\r\n\tLAST_NAME\020\001\022\021\n\rDATE_OF_BIRTH\020\002\022\t\n" +
-      "\005PHONE\020\003\022\t\n\005EMAIL\020\004\022\013\n\007COUNTRY\020\005\022\017\n\013NATI" +
-      "ONALITY\020\006\022\017\n\013POSTAL_CODE\020\007\022\017\n\013POSTAL_ARE" +
-      "A\020\010\022\020\n\014MUNICIPALITY\020\t\022\n\n\006COUNTY\020\n\022\013\n\007ADD" +
-      "RESS\020\013\022\021\n\rEMPLOYER_NAME\020\014\022\022\n\016POSITION_TI" +
-      "TLE\020\r\022\010\n\004DATE\020\016\022\022\n\016INSTITUTE_NAME\020\017\022\022\n\016I" +
-      "NSTITUTE_TYPE\020\020\022\025\n\021AREA_OF_EDUCATION\020\021\022\n" +
-      "\n\006DEGREE\020\022\022\021\n\rAVERAGE_GRADE\020\023\022\010\n\004NAME\020\024\022" +
-      "\t\n\005LEVEL\020\025\"[\n\010Document\022\030\n\007content\030\001 \001(\014R" +
-      "\007content\0225\n\006source\030\002 \001(\0132\035.cv.scanner.v1" +
-      ".DocumentSourceR\006source\"+\n\016DocumentSourc" +
-      "e\022\031\n\010http_uri\030\001 \001(\tR\007httpUri2p\n\tCvScanne" +
-      "r\022c\n\006ScanCV\022\034.cv.scanner.v1.ScanCVReques" +
-      "t\032\035.cv.scanner.v1.ScanCVResponse\"\034\202\323\344\223\002\026" +
-      ":\001*\"\021/v1/document:scanB1Z/github.com/e-c" +
-      "onomic/vmlapis/gen/go/cv/cv/v1;cvb\006proto" +
-      "3"
+      "le/api/http.proto\032 ssn/annotator/v1/anno" +
+      "tator.proto\032\030ssn/type/candidate.proto\"\217\001" +
+      "\n\rScanCVRequest\0226\n\010document\030\001 \001(\0132\032.ssn." +
+      "annotator.v1.DocumentR\010document\0222\n\010featu" +
+      "res\030\002 \003(\0132\026.cv.scanner.v1.FeatureR\010featu" +
+      "res\022\022\n\004tags\030\003 \003(\tR\004tags\"\207\t\n\016ScanCVRespon" +
+      "se\0222\n\nfirst_name\030\001 \003(\0132\023.ssn.type.Candid" +
+      "ateR\tfirstName\0220\n\tlast_name\030\002 \003(\0132\023.ssn." +
+      "type.CandidateR\010lastName\0227\n\rdate_of_birt" +
+      "h\030\003 \003(\0132\023.ssn.type.CandidateR\013dateOfBirt" +
+      "h\022)\n\005phone\030\004 \003(\0132\023.ssn.type.CandidateR\005p" +
+      "hone\022)\n\005email\030\005 \003(\0132\023.ssn.type.Candidate" +
+      "R\005email\022-\n\007country\030\006 \003(\0132\023.ssn.type.Cand" +
+      "idateR\007country\0225\n\013nationality\030\007 \003(\0132\023.ss" +
+      "n.type.CandidateR\013nationality\0224\n\013postal_" +
+      "code\030\010 \003(\0132\023.ssn.type.CandidateR\npostalC" +
+      "ode\0224\n\013postal_area\030\t \003(\0132\023.ssn.type.Cand" +
+      "idateR\npostalArea\0227\n\014municipality\030\n \003(\0132" +
+      "\023.ssn.type.CandidateR\014municipality\022+\n\006co" +
+      "unty\030\013 \003(\0132\023.ssn.type.CandidateR\006county\022" +
+      "+\n\006adress\030\014 \003(\0132\023.ssn.type.CandidateR\006ad" +
+      "ress\022:\n\016empoloyer_name\030\r \003(\0132\023.ssn.type." +
+      "CandidateR\rempoloyerName\022:\n\016position_tit" +
+      "le\030\016 \003(\0132\023.ssn.type.CandidateR\rpositionT" +
+      "itle\022\'\n\004date\030\017 \003(\0132\023.ssn.type.CandidateR" +
+      "\004date\022>\n\020institution_name\030\020 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\017institutionName\022>\n\020institu" +
+      "tion_type\030\021 \003(\0132\023.ssn.type.CandidateR\017in" +
+      "stitutionType\022?\n\021area_of_education\030\022 \003(\013" +
+      "2\023.ssn.type.CandidateR\017areaOfEducation\022+" +
+      "\n\006degree\030\023 \003(\0132\023.ssn.type.CandidateR\006deg" +
+      "ree\0228\n\raverage_grade\030\024 \003(\0132\023.ssn.type.Ca" +
+      "ndidateR\014averageGrade\022\'\n\004name\030\025 \003(\0132\023.ss" +
+      "n.type.CandidateR\004name\022)\n\005level\030\026 \003(\0132\023." +
+      "ssn.type.CandidateR\005level\"\273\003\n\007Feature\022/\n" +
+      "\004type\030\001 \001(\0162\033.cv.scanner.v1.Feature.Type" +
+      "R\004type\022\037\n\013max_results\030\002 \001(\005R\nmaxResults\"" +
+      "\335\002\n\004Type\022\016\n\nFIRST_NAME\020\000\022\r\n\tLAST_NAME\020\001\022" +
+      "\021\n\rDATE_OF_BIRTH\020\002\022\t\n\005PHONE\020\003\022\t\n\005EMAIL\020\004" +
+      "\022\013\n\007COUNTRY\020\005\022\017\n\013NATIONALITY\020\006\022\017\n\013POSTAL" +
+      "_CODE\020\007\022\017\n\013POSTAL_AREA\020\010\022\020\n\014MUNICIPALITY" +
+      "\020\t\022\n\n\006COUNTY\020\n\022\013\n\007ADDRESS\020\013\022\021\n\rEMPLOYER_" +
+      "NAME\020\014\022\022\n\016POSITION_TITLE\020\r\022\010\n\004DATE\020\016\022\022\n\016" +
+      "INSTITUTE_NAME\020\017\022\022\n\016INSTITUTE_TYPE\020\020\022\025\n\021" +
+      "AREA_OF_EDUCATION\020\021\022\n\n\006DEGREE\020\022\022\021\n\rAVERA" +
+      "GE_GRADE\020\023\022\010\n\004NAME\020\024\022\t\n\005LEVEL\020\0252p\n\tCvSca" +
+      "nner\022c\n\006ScanCV\022\034.cv.scanner.v1.ScanCVReq" +
+      "uest\032\035.cv.scanner.v1.ScanCVResponse\"\034\202\323\344" +
+      "\223\002\026:\001*\"\021/v1/document:scanB1Z/github.com/" +
+      "e-conomic/vmlapis/gen/go/cv/cv/v1;cvb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.HttpProto.getDescriptor(),
+          ssn.annotator.v1.Annotator.getDescriptor(),
           ssn.type.CandidateOuterClass.getDescriptor(),
         });
     internal_static_cv_scanner_v1_ScanCVRequest_descriptor =
@@ -11876,25 +10827,13 @@ public final class Scanner {
     internal_static_cv_scanner_v1_ScanCVResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cv_scanner_v1_ScanCVResponse_descriptor,
-        new java.lang.String[] { "FirstName", "LastName", "DateOfBirth", "Phone", "Email", "Country", "Nationality", "PostalCode", "PostalArea", "Municipality", "County", "Adress", "EmpoloyerName", "PositionTitle", "Date", "InstitutionType", "AreaOfEducation", "Degree", "AverageGrade", "Name", "Level", });
+        new java.lang.String[] { "FirstName", "LastName", "DateOfBirth", "Phone", "Email", "Country", "Nationality", "PostalCode", "PostalArea", "Municipality", "County", "Adress", "EmpoloyerName", "PositionTitle", "Date", "InstitutionName", "InstitutionType", "AreaOfEducation", "Degree", "AverageGrade", "Name", "Level", });
     internal_static_cv_scanner_v1_Feature_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_cv_scanner_v1_Feature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cv_scanner_v1_Feature_descriptor,
         new java.lang.String[] { "Type", "MaxResults", });
-    internal_static_cv_scanner_v1_Document_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_cv_scanner_v1_Document_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_cv_scanner_v1_Document_descriptor,
-        new java.lang.String[] { "Content", "Source", });
-    internal_static_cv_scanner_v1_DocumentSource_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_cv_scanner_v1_DocumentSource_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_cv_scanner_v1_DocumentSource_descriptor,
-        new java.lang.String[] { "HttpUri", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -11902,6 +10841,7 @@ public final class Scanner {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.HttpProto.getDescriptor();
+    ssn.annotator.v1.Annotator.getDescriptor();
     ssn.type.CandidateOuterClass.getDescriptor();
   }
 

@@ -2,12 +2,13 @@ import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
 import * as google_api_http_pb from '../../../google/api/http_pb';
+import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb';
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
 
 
 export class ScanCVRequest extends jspb.Message {
-  getDocument(): Document | undefined;
-  setDocument(value?: Document): ScanCVRequest;
+  getDocument(): ssn_annotator_v1_annotator_pb.Document | undefined;
+  setDocument(value?: ssn_annotator_v1_annotator_pb.Document): ScanCVRequest;
   hasDocument(): boolean;
   clearDocument(): ScanCVRequest;
 
@@ -31,7 +32,7 @@ export class ScanCVRequest extends jspb.Message {
 
 export namespace ScanCVRequest {
   export type AsObject = {
-    document?: Document.AsObject,
+    document?: ssn_annotator_v1_annotator_pb.Document.AsObject,
     featuresList: Array<Feature.AsObject>,
     tagsList: Array<string>,
   }
@@ -113,6 +114,11 @@ export class ScanCVResponse extends jspb.Message {
   clearDateList(): ScanCVResponse;
   addDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getInstitutionNameList(): Array<ssn_type_candidate_pb.Candidate>;
+  setInstitutionNameList(value: Array<ssn_type_candidate_pb.Candidate>): ScanCVResponse;
+  clearInstitutionNameList(): ScanCVResponse;
+  addInstitutionName(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   getInstitutionTypeList(): Array<ssn_type_candidate_pb.Candidate>;
   setInstitutionTypeList(value: Array<ssn_type_candidate_pb.Candidate>): ScanCVResponse;
   clearInstitutionTypeList(): ScanCVResponse;
@@ -168,6 +174,7 @@ export namespace ScanCVResponse {
     empoloyerNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     positionTitleList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     dateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    institutionNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     institutionTypeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     areaOfEducationList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     degreeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
@@ -221,50 +228,6 @@ export namespace Feature {
     AVERAGE_GRADE = 19,
     NAME = 20,
     LEVEL = 21,
-  }
-}
-
-export class Document extends jspb.Message {
-  getContent(): Uint8Array | string;
-  getContent_asU8(): Uint8Array;
-  getContent_asB64(): string;
-  setContent(value: Uint8Array | string): Document;
-
-  getSource(): DocumentSource | undefined;
-  setSource(value?: DocumentSource): Document;
-  hasSource(): boolean;
-  clearSource(): Document;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): Document.AsObject;
-  static toObject(includeInstance: boolean, msg: Document): Document.AsObject;
-  static serializeBinaryToWriter(message: Document, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): Document;
-  static deserializeBinaryFromReader(message: Document, reader: jspb.BinaryReader): Document;
-}
-
-export namespace Document {
-  export type AsObject = {
-    content: Uint8Array | string,
-    source?: DocumentSource.AsObject,
-  }
-}
-
-export class DocumentSource extends jspb.Message {
-  getHttpUri(): string;
-  setHttpUri(value: string): DocumentSource;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): DocumentSource.AsObject;
-  static toObject(includeInstance: boolean, msg: DocumentSource): DocumentSource.AsObject;
-  static serializeBinaryToWriter(message: DocumentSource, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): DocumentSource;
-  static deserializeBinaryFromReader(message: DocumentSource, reader: jspb.BinaryReader): DocumentSource;
-}
-
-export namespace DocumentSource {
-  export type AsObject = {
-    httpUri: string,
   }
 }
 

@@ -24,6 +24,8 @@ var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var google_api_http_pb = require('../../../google/api/http_pb.js')
 
+var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js')
+
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 const proto = {};
 proto.cv = {};
