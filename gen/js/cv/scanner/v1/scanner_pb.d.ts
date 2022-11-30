@@ -94,15 +94,15 @@ export class ScanCVResponse extends jspb.Message {
   clearCountyList(): ScanCVResponse;
   addCounty(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
-  getAdressList(): Array<ssn_type_candidate_pb.Candidate>;
-  setAdressList(value: Array<ssn_type_candidate_pb.Candidate>): ScanCVResponse;
-  clearAdressList(): ScanCVResponse;
-  addAdress(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+  getAddressList(): Array<ssn_type_candidate_pb.Candidate>;
+  setAddressList(value: Array<ssn_type_candidate_pb.Candidate>): ScanCVResponse;
+  clearAddressList(): ScanCVResponse;
+  addAddress(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
-  getEmpoloyerNameList(): Array<ssn_type_candidate_pb.Candidate>;
-  setEmpoloyerNameList(value: Array<ssn_type_candidate_pb.Candidate>): ScanCVResponse;
-  clearEmpoloyerNameList(): ScanCVResponse;
-  addEmpoloyerName(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+  getEmployerNameList(): Array<ssn_type_candidate_pb.Candidate>;
+  setEmployerNameList(value: Array<ssn_type_candidate_pb.Candidate>): ScanCVResponse;
+  clearEmployerNameList(): ScanCVResponse;
+  addEmployerName(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
   getPositionTitleList(): Array<ssn_type_candidate_pb.Candidate>;
   setPositionTitleList(value: Array<ssn_type_candidate_pb.Candidate>): ScanCVResponse;
@@ -170,8 +170,8 @@ export namespace ScanCVResponse {
     postalAreaList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     municipalityList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     countyList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-    adressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-    empoloyerNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    addressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    employerNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     positionTitleList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     dateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     institutionNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,

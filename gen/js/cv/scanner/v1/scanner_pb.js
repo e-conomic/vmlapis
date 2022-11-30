@@ -411,9 +411,9 @@ proto.cv.scanner.v1.ScanCVResponse.toObject = function(includeInstance, msg) {
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     countyList: jspb.Message.toObjectList(msg.getCountyList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
-    adressList: jspb.Message.toObjectList(msg.getAdressList(),
+    addressList: jspb.Message.toObjectList(msg.getAddressList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
-    empoloyerNameList: jspb.Message.toObjectList(msg.getEmpoloyerNameList(),
+    employerNameList: jspb.Message.toObjectList(msg.getEmployerNameList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     positionTitleList: jspb.Message.toObjectList(msg.getPositionTitleList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
@@ -527,12 +527,12 @@ proto.cv.scanner.v1.ScanCVResponse.deserializeBinaryFromReader = function(msg, r
     case 12:
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
-      msg.addAdress(value);
+      msg.addAddress(value);
       break;
     case 13:
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
-      msg.addEmpoloyerName(value);
+      msg.addEmployerName(value);
       break;
     case 14:
       var value = new ssn_type_candidate_pb.Candidate;
@@ -696,7 +696,7 @@ proto.cv.scanner.v1.ScanCVResponse.serializeBinaryToWriter = function(message, w
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getAdressList();
+  f = message.getAddressList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       12,
@@ -704,7 +704,7 @@ proto.cv.scanner.v1.ScanCVResponse.serializeBinaryToWriter = function(message, w
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getEmpoloyerNameList();
+  f = message.getEmployerNameList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       13,
@@ -1206,10 +1206,10 @@ proto.cv.scanner.v1.ScanCVResponse.prototype.clearCountyList = function() {
 
 
 /**
- * repeated ssn.type.Candidate adress = 12;
+ * repeated ssn.type.Candidate address = 12;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
-proto.cv.scanner.v1.ScanCVResponse.prototype.getAdressList = function() {
+proto.cv.scanner.v1.ScanCVResponse.prototype.getAddressList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 12));
 };
@@ -1219,7 +1219,7 @@ proto.cv.scanner.v1.ScanCVResponse.prototype.getAdressList = function() {
  * @param {!Array<!proto.ssn.type.Candidate>} value
  * @return {!proto.cv.scanner.v1.ScanCVResponse} returns this
 */
-proto.cv.scanner.v1.ScanCVResponse.prototype.setAdressList = function(value) {
+proto.cv.scanner.v1.ScanCVResponse.prototype.setAddressList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 12, value);
 };
 
@@ -1229,7 +1229,7 @@ proto.cv.scanner.v1.ScanCVResponse.prototype.setAdressList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ssn.type.Candidate}
  */
-proto.cv.scanner.v1.ScanCVResponse.prototype.addAdress = function(opt_value, opt_index) {
+proto.cv.scanner.v1.ScanCVResponse.prototype.addAddress = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 12, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
@@ -1238,16 +1238,16 @@ proto.cv.scanner.v1.ScanCVResponse.prototype.addAdress = function(opt_value, opt
  * Clears the list making it empty but non-null.
  * @return {!proto.cv.scanner.v1.ScanCVResponse} returns this
  */
-proto.cv.scanner.v1.ScanCVResponse.prototype.clearAdressList = function() {
-  return this.setAdressList([]);
+proto.cv.scanner.v1.ScanCVResponse.prototype.clearAddressList = function() {
+  return this.setAddressList([]);
 };
 
 
 /**
- * repeated ssn.type.Candidate empoloyer_name = 13;
+ * repeated ssn.type.Candidate employer_name = 13;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
-proto.cv.scanner.v1.ScanCVResponse.prototype.getEmpoloyerNameList = function() {
+proto.cv.scanner.v1.ScanCVResponse.prototype.getEmployerNameList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 13));
 };
@@ -1257,7 +1257,7 @@ proto.cv.scanner.v1.ScanCVResponse.prototype.getEmpoloyerNameList = function() {
  * @param {!Array<!proto.ssn.type.Candidate>} value
  * @return {!proto.cv.scanner.v1.ScanCVResponse} returns this
 */
-proto.cv.scanner.v1.ScanCVResponse.prototype.setEmpoloyerNameList = function(value) {
+proto.cv.scanner.v1.ScanCVResponse.prototype.setEmployerNameList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 13, value);
 };
 
@@ -1267,7 +1267,7 @@ proto.cv.scanner.v1.ScanCVResponse.prototype.setEmpoloyerNameList = function(val
  * @param {number=} opt_index
  * @return {!proto.ssn.type.Candidate}
  */
-proto.cv.scanner.v1.ScanCVResponse.prototype.addEmpoloyerName = function(opt_value, opt_index) {
+proto.cv.scanner.v1.ScanCVResponse.prototype.addEmployerName = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 13, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
@@ -1276,8 +1276,8 @@ proto.cv.scanner.v1.ScanCVResponse.prototype.addEmpoloyerName = function(opt_val
  * Clears the list making it empty but non-null.
  * @return {!proto.cv.scanner.v1.ScanCVResponse} returns this
  */
-proto.cv.scanner.v1.ScanCVResponse.prototype.clearEmpoloyerNameList = function() {
-  return this.setEmpoloyerNameList([]);
+proto.cv.scanner.v1.ScanCVResponse.prototype.clearEmployerNameList = function() {
+  return this.setEmployerNameList([]);
 };
 
 

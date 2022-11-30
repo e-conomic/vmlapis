@@ -43,9 +43,9 @@ namespace Cv.Scanner.V1 {
             "b2RlEjQKC3Bvc3RhbF9hcmVhGAkgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
             "Ugpwb3N0YWxBcmVhEjcKDG11bmljaXBhbGl0eRgKIAMoCzITLnNzbi50eXBl",
             "LkNhbmRpZGF0ZVIMbXVuaWNpcGFsaXR5EisKBmNvdW50eRgLIAMoCzITLnNz",
-            "bi50eXBlLkNhbmRpZGF0ZVIGY291bnR5EisKBmFkcmVzcxgMIAMoCzITLnNz",
-            "bi50eXBlLkNhbmRpZGF0ZVIGYWRyZXNzEjoKDmVtcG9sb3llcl9uYW1lGA0g",
-            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg1lbXBvbG95ZXJOYW1lEjoKDnBv",
+            "bi50eXBlLkNhbmRpZGF0ZVIGY291bnR5Ei0KB2FkZHJlc3MYDCADKAsyEy5z",
+            "c24udHlwZS5DYW5kaWRhdGVSB2FkZHJlc3MSOAoNZW1wbG95ZXJfbmFtZRgN",
+            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMZW1wbG95ZXJOYW1lEjoKDnBv",
             "c2l0aW9uX3RpdGxlGA4gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg1wb3Np",
             "dGlvblRpdGxlEicKBGRhdGUYDyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
             "BGRhdGUSPgoQaW5zdGl0dXRpb25fbmFtZRgQIAMoCzITLnNzbi50eXBlLkNh",
@@ -75,7 +75,7 @@ namespace Cv.Scanner.V1 {
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.HttpReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Cv.Scanner.V1.ScanCVRequest), global::Cv.Scanner.V1.ScanCVRequest.Parser, new[]{ "Document", "Features", "Tags" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Cv.Scanner.V1.ScanCVResponse), global::Cv.Scanner.V1.ScanCVResponse.Parser, new[]{ "FirstName", "LastName", "DateOfBirth", "Phone", "Email", "Country", "Nationality", "PostalCode", "PostalArea", "Municipality", "County", "Adress", "EmpoloyerName", "PositionTitle", "Date", "InstitutionName", "InstitutionType", "AreaOfEducation", "Degree", "AverageGrade", "Name", "Level" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Cv.Scanner.V1.ScanCVResponse), global::Cv.Scanner.V1.ScanCVResponse.Parser, new[]{ "FirstName", "LastName", "DateOfBirth", "Phone", "Email", "Country", "Nationality", "PostalCode", "PostalArea", "Municipality", "County", "Address", "EmployerName", "PositionTitle", "Date", "InstitutionName", "InstitutionType", "AreaOfEducation", "Degree", "AverageGrade", "Name", "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Cv.Scanner.V1.Feature), global::Cv.Scanner.V1.Feature.Parser, new[]{ "Type", "MaxResults" }, null, new[]{ typeof(global::Cv.Scanner.V1.Feature.Types.Type) }, null, null)
           }));
     }
@@ -378,8 +378,8 @@ namespace Cv.Scanner.V1 {
       postalArea_ = other.postalArea_.Clone();
       municipality_ = other.municipality_.Clone();
       county_ = other.county_.Clone();
-      adress_ = other.adress_.Clone();
-      empoloyerName_ = other.empoloyerName_.Clone();
+      address_ = other.address_.Clone();
+      employerName_ = other.employerName_.Clone();
       positionTitle_ = other.positionTitle_.Clone();
       date_ = other.date_.Clone();
       institutionName_ = other.institutionName_.Clone();
@@ -519,26 +519,26 @@ namespace Cv.Scanner.V1 {
       get { return county_; }
     }
 
-    /// <summary>Field number for the "adress" field.</summary>
-    public const int AdressFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_adress_codec
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_address_codec
         = pb::FieldCodec.ForMessage(98, global::Ssn.Type.Candidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> adress_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> address_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.Candidate> Adress {
-      get { return adress_; }
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Address {
+      get { return address_; }
     }
 
-    /// <summary>Field number for the "empoloyer_name" field.</summary>
-    public const int EmpoloyerNameFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_empoloyerName_codec
+    /// <summary>Field number for the "employer_name" field.</summary>
+    public const int EmployerNameFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_employerName_codec
         = pb::FieldCodec.ForMessage(106, global::Ssn.Type.Candidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> empoloyerName_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> employerName_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.Candidate> EmpoloyerName {
-      get { return empoloyerName_; }
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> EmployerName {
+      get { return employerName_; }
     }
 
     /// <summary>Field number for the "position_title" field.</summary>
@@ -666,8 +666,8 @@ namespace Cv.Scanner.V1 {
       if(!postalArea_.Equals(other.postalArea_)) return false;
       if(!municipality_.Equals(other.municipality_)) return false;
       if(!county_.Equals(other.county_)) return false;
-      if(!adress_.Equals(other.adress_)) return false;
-      if(!empoloyerName_.Equals(other.empoloyerName_)) return false;
+      if(!address_.Equals(other.address_)) return false;
+      if(!employerName_.Equals(other.employerName_)) return false;
       if(!positionTitle_.Equals(other.positionTitle_)) return false;
       if(!date_.Equals(other.date_)) return false;
       if(!institutionName_.Equals(other.institutionName_)) return false;
@@ -695,8 +695,8 @@ namespace Cv.Scanner.V1 {
       hash ^= postalArea_.GetHashCode();
       hash ^= municipality_.GetHashCode();
       hash ^= county_.GetHashCode();
-      hash ^= adress_.GetHashCode();
-      hash ^= empoloyerName_.GetHashCode();
+      hash ^= address_.GetHashCode();
+      hash ^= employerName_.GetHashCode();
       hash ^= positionTitle_.GetHashCode();
       hash ^= date_.GetHashCode();
       hash ^= institutionName_.GetHashCode();
@@ -735,8 +735,8 @@ namespace Cv.Scanner.V1 {
       postalArea_.WriteTo(output, _repeated_postalArea_codec);
       municipality_.WriteTo(output, _repeated_municipality_codec);
       county_.WriteTo(output, _repeated_county_codec);
-      adress_.WriteTo(output, _repeated_adress_codec);
-      empoloyerName_.WriteTo(output, _repeated_empoloyerName_codec);
+      address_.WriteTo(output, _repeated_address_codec);
+      employerName_.WriteTo(output, _repeated_employerName_codec);
       positionTitle_.WriteTo(output, _repeated_positionTitle_codec);
       date_.WriteTo(output, _repeated_date_codec);
       institutionName_.WriteTo(output, _repeated_institutionName_codec);
@@ -767,8 +767,8 @@ namespace Cv.Scanner.V1 {
       postalArea_.WriteTo(ref output, _repeated_postalArea_codec);
       municipality_.WriteTo(ref output, _repeated_municipality_codec);
       county_.WriteTo(ref output, _repeated_county_codec);
-      adress_.WriteTo(ref output, _repeated_adress_codec);
-      empoloyerName_.WriteTo(ref output, _repeated_empoloyerName_codec);
+      address_.WriteTo(ref output, _repeated_address_codec);
+      employerName_.WriteTo(ref output, _repeated_employerName_codec);
       positionTitle_.WriteTo(ref output, _repeated_positionTitle_codec);
       date_.WriteTo(ref output, _repeated_date_codec);
       institutionName_.WriteTo(ref output, _repeated_institutionName_codec);
@@ -799,8 +799,8 @@ namespace Cv.Scanner.V1 {
       size += postalArea_.CalculateSize(_repeated_postalArea_codec);
       size += municipality_.CalculateSize(_repeated_municipality_codec);
       size += county_.CalculateSize(_repeated_county_codec);
-      size += adress_.CalculateSize(_repeated_adress_codec);
-      size += empoloyerName_.CalculateSize(_repeated_empoloyerName_codec);
+      size += address_.CalculateSize(_repeated_address_codec);
+      size += employerName_.CalculateSize(_repeated_employerName_codec);
       size += positionTitle_.CalculateSize(_repeated_positionTitle_codec);
       size += date_.CalculateSize(_repeated_date_codec);
       size += institutionName_.CalculateSize(_repeated_institutionName_codec);
@@ -833,8 +833,8 @@ namespace Cv.Scanner.V1 {
       postalArea_.Add(other.postalArea_);
       municipality_.Add(other.municipality_);
       county_.Add(other.county_);
-      adress_.Add(other.adress_);
-      empoloyerName_.Add(other.empoloyerName_);
+      address_.Add(other.address_);
+      employerName_.Add(other.employerName_);
       positionTitle_.Add(other.positionTitle_);
       date_.Add(other.date_);
       institutionName_.Add(other.institutionName_);
@@ -904,11 +904,11 @@ namespace Cv.Scanner.V1 {
             break;
           }
           case 98: {
-            adress_.AddEntriesFrom(input, _repeated_adress_codec);
+            address_.AddEntriesFrom(input, _repeated_address_codec);
             break;
           }
           case 106: {
-            empoloyerName_.AddEntriesFrom(input, _repeated_empoloyerName_codec);
+            employerName_.AddEntriesFrom(input, _repeated_employerName_codec);
             break;
           }
           case 114: {
@@ -1007,11 +1007,11 @@ namespace Cv.Scanner.V1 {
             break;
           }
           case 98: {
-            adress_.AddEntriesFrom(ref input, _repeated_adress_codec);
+            address_.AddEntriesFrom(ref input, _repeated_address_codec);
             break;
           }
           case 106: {
-            empoloyerName_.AddEntriesFrom(ref input, _repeated_empoloyerName_codec);
+            employerName_.AddEntriesFrom(ref input, _repeated_employerName_codec);
             break;
           }
           case 114: {

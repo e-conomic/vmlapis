@@ -1466,51 +1466,51 @@ public final class Scanner {
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
-        getAdressList();
+        getAddressList();
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
-    ssn.type.CandidateOuterClass.Candidate getAdress(int index);
+    ssn.type.CandidateOuterClass.Candidate getAddress(int index);
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
-    int getAdressCount();
+    int getAddressCount();
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-        getAdressOrBuilderList();
+        getAddressOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
-    ssn.type.CandidateOuterClass.CandidateOrBuilder getAdressOrBuilder(
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getAddressOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
     java.util.List<ssn.type.CandidateOuterClass.Candidate> 
-        getEmpoloyerNameList();
+        getEmployerNameList();
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
-    ssn.type.CandidateOuterClass.Candidate getEmpoloyerName(int index);
+    ssn.type.CandidateOuterClass.Candidate getEmployerName(int index);
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
-    int getEmpoloyerNameCount();
+    int getEmployerNameCount();
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
     java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-        getEmpoloyerNameOrBuilderList();
+        getEmployerNameOrBuilderList();
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
-    ssn.type.CandidateOuterClass.CandidateOrBuilder getEmpoloyerNameOrBuilder(
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getEmployerNameOrBuilder(
         int index);
 
     /**
@@ -1753,8 +1753,8 @@ public final class Scanner {
       postalArea_ = java.util.Collections.emptyList();
       municipality_ = java.util.Collections.emptyList();
       county_ = java.util.Collections.emptyList();
-      adress_ = java.util.Collections.emptyList();
-      empoloyerName_ = java.util.Collections.emptyList();
+      address_ = java.util.Collections.emptyList();
+      employerName_ = java.util.Collections.emptyList();
       positionTitle_ = java.util.Collections.emptyList();
       date_ = java.util.Collections.emptyList();
       institutionName_ = java.util.Collections.emptyList();
@@ -2231,84 +2231,84 @@ public final class Scanner {
       return county_.get(index);
     }
 
-    public static final int ADRESS_FIELD_NUMBER = 12;
-    private java.util.List<ssn.type.CandidateOuterClass.Candidate> adress_;
+    public static final int ADDRESS_FIELD_NUMBER = 12;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> address_;
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
     @java.lang.Override
-    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getAdressList() {
-      return adress_;
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getAddressList() {
+      return address_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-        getAdressOrBuilderList() {
-      return adress_;
+        getAddressOrBuilderList() {
+      return address_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
     @java.lang.Override
-    public int getAdressCount() {
-      return adress_.size();
+    public int getAddressCount() {
+      return address_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
     @java.lang.Override
-    public ssn.type.CandidateOuterClass.Candidate getAdress(int index) {
-      return adress_.get(index);
+    public ssn.type.CandidateOuterClass.Candidate getAddress(int index) {
+      return address_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+     * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
      */
     @java.lang.Override
-    public ssn.type.CandidateOuterClass.CandidateOrBuilder getAdressOrBuilder(
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getAddressOrBuilder(
         int index) {
-      return adress_.get(index);
+      return address_.get(index);
     }
 
-    public static final int EMPOLOYER_NAME_FIELD_NUMBER = 13;
-    private java.util.List<ssn.type.CandidateOuterClass.Candidate> empoloyerName_;
+    public static final int EMPLOYER_NAME_FIELD_NUMBER = 13;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> employerName_;
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
     @java.lang.Override
-    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getEmpoloyerNameList() {
-      return empoloyerName_;
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getEmployerNameList() {
+      return employerName_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-        getEmpoloyerNameOrBuilderList() {
-      return empoloyerName_;
+        getEmployerNameOrBuilderList() {
+      return employerName_;
     }
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
     @java.lang.Override
-    public int getEmpoloyerNameCount() {
-      return empoloyerName_.size();
+    public int getEmployerNameCount() {
+      return employerName_.size();
     }
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
     @java.lang.Override
-    public ssn.type.CandidateOuterClass.Candidate getEmpoloyerName(int index) {
-      return empoloyerName_.get(index);
+    public ssn.type.CandidateOuterClass.Candidate getEmployerName(int index) {
+      return employerName_.get(index);
     }
     /**
-     * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+     * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
      */
     @java.lang.Override
-    public ssn.type.CandidateOuterClass.CandidateOrBuilder getEmpoloyerNameOrBuilder(
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getEmployerNameOrBuilder(
         int index) {
-      return empoloyerName_.get(index);
+      return employerName_.get(index);
     }
 
     public static final int POSITION_TITLE_FIELD_NUMBER = 14;
@@ -2718,11 +2718,11 @@ public final class Scanner {
       for (int i = 0; i < county_.size(); i++) {
         output.writeMessage(11, county_.get(i));
       }
-      for (int i = 0; i < adress_.size(); i++) {
-        output.writeMessage(12, adress_.get(i));
+      for (int i = 0; i < address_.size(); i++) {
+        output.writeMessage(12, address_.get(i));
       }
-      for (int i = 0; i < empoloyerName_.size(); i++) {
-        output.writeMessage(13, empoloyerName_.get(i));
+      for (int i = 0; i < employerName_.size(); i++) {
+        output.writeMessage(13, employerName_.get(i));
       }
       for (int i = 0; i < positionTitle_.size(); i++) {
         output.writeMessage(14, positionTitle_.get(i));
@@ -2804,13 +2804,13 @@ public final class Scanner {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, county_.get(i));
       }
-      for (int i = 0; i < adress_.size(); i++) {
+      for (int i = 0; i < address_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, adress_.get(i));
+          .computeMessageSize(12, address_.get(i));
       }
-      for (int i = 0; i < empoloyerName_.size(); i++) {
+      for (int i = 0; i < employerName_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, empoloyerName_.get(i));
+          .computeMessageSize(13, employerName_.get(i));
       }
       for (int i = 0; i < positionTitle_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -2885,10 +2885,10 @@ public final class Scanner {
           .equals(other.getMunicipalityList())) return false;
       if (!getCountyList()
           .equals(other.getCountyList())) return false;
-      if (!getAdressList()
-          .equals(other.getAdressList())) return false;
-      if (!getEmpoloyerNameList()
-          .equals(other.getEmpoloyerNameList())) return false;
+      if (!getAddressList()
+          .equals(other.getAddressList())) return false;
+      if (!getEmployerNameList()
+          .equals(other.getEmployerNameList())) return false;
       if (!getPositionTitleList()
           .equals(other.getPositionTitleList())) return false;
       if (!getDateList()
@@ -2962,13 +2962,13 @@ public final class Scanner {
         hash = (37 * hash) + COUNTY_FIELD_NUMBER;
         hash = (53 * hash) + getCountyList().hashCode();
       }
-      if (getAdressCount() > 0) {
-        hash = (37 * hash) + ADRESS_FIELD_NUMBER;
-        hash = (53 * hash) + getAdressList().hashCode();
+      if (getAddressCount() > 0) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddressList().hashCode();
       }
-      if (getEmpoloyerNameCount() > 0) {
-        hash = (37 * hash) + EMPOLOYER_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getEmpoloyerNameList().hashCode();
+      if (getEmployerNameCount() > 0) {
+        hash = (37 * hash) + EMPLOYER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getEmployerNameList().hashCode();
       }
       if (getPositionTitleCount() > 0) {
         hash = (37 * hash) + POSITION_TITLE_FIELD_NUMBER;
@@ -3211,18 +3211,18 @@ public final class Scanner {
           countyBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000400);
-        if (adressBuilder_ == null) {
-          adress_ = java.util.Collections.emptyList();
+        if (addressBuilder_ == null) {
+          address_ = java.util.Collections.emptyList();
         } else {
-          adress_ = null;
-          adressBuilder_.clear();
+          address_ = null;
+          addressBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000800);
-        if (empoloyerNameBuilder_ == null) {
-          empoloyerName_ = java.util.Collections.emptyList();
+        if (employerNameBuilder_ == null) {
+          employerName_ = java.util.Collections.emptyList();
         } else {
-          empoloyerName_ = null;
-          empoloyerNameBuilder_.clear();
+          employerName_ = null;
+          employerNameBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00001000);
         if (positionTitleBuilder_ == null) {
@@ -3414,23 +3414,23 @@ public final class Scanner {
         } else {
           result.county_ = countyBuilder_.build();
         }
-        if (adressBuilder_ == null) {
+        if (addressBuilder_ == null) {
           if (((bitField0_ & 0x00000800) != 0)) {
-            adress_ = java.util.Collections.unmodifiableList(adress_);
+            address_ = java.util.Collections.unmodifiableList(address_);
             bitField0_ = (bitField0_ & ~0x00000800);
           }
-          result.adress_ = adress_;
+          result.address_ = address_;
         } else {
-          result.adress_ = adressBuilder_.build();
+          result.address_ = addressBuilder_.build();
         }
-        if (empoloyerNameBuilder_ == null) {
+        if (employerNameBuilder_ == null) {
           if (((bitField0_ & 0x00001000) != 0)) {
-            empoloyerName_ = java.util.Collections.unmodifiableList(empoloyerName_);
+            employerName_ = java.util.Collections.unmodifiableList(employerName_);
             bitField0_ = (bitField0_ & ~0x00001000);
           }
-          result.empoloyerName_ = empoloyerName_;
+          result.employerName_ = employerName_;
         } else {
-          result.empoloyerName_ = empoloyerNameBuilder_.build();
+          result.employerName_ = employerNameBuilder_.build();
         }
         if (positionTitleBuilder_ == null) {
           if (((bitField0_ & 0x00002000) != 0)) {
@@ -3847,55 +3847,55 @@ public final class Scanner {
             }
           }
         }
-        if (adressBuilder_ == null) {
-          if (!other.adress_.isEmpty()) {
-            if (adress_.isEmpty()) {
-              adress_ = other.adress_;
+        if (addressBuilder_ == null) {
+          if (!other.address_.isEmpty()) {
+            if (address_.isEmpty()) {
+              address_ = other.address_;
               bitField0_ = (bitField0_ & ~0x00000800);
             } else {
-              ensureAdressIsMutable();
-              adress_.addAll(other.adress_);
+              ensureAddressIsMutable();
+              address_.addAll(other.address_);
             }
             onChanged();
           }
         } else {
-          if (!other.adress_.isEmpty()) {
-            if (adressBuilder_.isEmpty()) {
-              adressBuilder_.dispose();
-              adressBuilder_ = null;
-              adress_ = other.adress_;
+          if (!other.address_.isEmpty()) {
+            if (addressBuilder_.isEmpty()) {
+              addressBuilder_.dispose();
+              addressBuilder_ = null;
+              address_ = other.address_;
               bitField0_ = (bitField0_ & ~0x00000800);
-              adressBuilder_ = 
+              addressBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAdressFieldBuilder() : null;
+                   getAddressFieldBuilder() : null;
             } else {
-              adressBuilder_.addAllMessages(other.adress_);
+              addressBuilder_.addAllMessages(other.address_);
             }
           }
         }
-        if (empoloyerNameBuilder_ == null) {
-          if (!other.empoloyerName_.isEmpty()) {
-            if (empoloyerName_.isEmpty()) {
-              empoloyerName_ = other.empoloyerName_;
+        if (employerNameBuilder_ == null) {
+          if (!other.employerName_.isEmpty()) {
+            if (employerName_.isEmpty()) {
+              employerName_ = other.employerName_;
               bitField0_ = (bitField0_ & ~0x00001000);
             } else {
-              ensureEmpoloyerNameIsMutable();
-              empoloyerName_.addAll(other.empoloyerName_);
+              ensureEmployerNameIsMutable();
+              employerName_.addAll(other.employerName_);
             }
             onChanged();
           }
         } else {
-          if (!other.empoloyerName_.isEmpty()) {
-            if (empoloyerNameBuilder_.isEmpty()) {
-              empoloyerNameBuilder_.dispose();
-              empoloyerNameBuilder_ = null;
-              empoloyerName_ = other.empoloyerName_;
+          if (!other.employerName_.isEmpty()) {
+            if (employerNameBuilder_.isEmpty()) {
+              employerNameBuilder_.dispose();
+              employerNameBuilder_ = null;
+              employerName_ = other.employerName_;
               bitField0_ = (bitField0_ & ~0x00001000);
-              empoloyerNameBuilder_ = 
+              employerNameBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEmpoloyerNameFieldBuilder() : null;
+                   getEmployerNameFieldBuilder() : null;
             } else {
-              empoloyerNameBuilder_.addAllMessages(other.empoloyerName_);
+              employerNameBuilder_.addAllMessages(other.employerName_);
             }
           }
         }
@@ -4307,11 +4307,11 @@ public final class Scanner {
                     input.readMessage(
                         ssn.type.CandidateOuterClass.Candidate.parser(),
                         extensionRegistry);
-                if (adressBuilder_ == null) {
-                  ensureAdressIsMutable();
-                  adress_.add(m);
+                if (addressBuilder_ == null) {
+                  ensureAddressIsMutable();
+                  address_.add(m);
                 } else {
-                  adressBuilder_.addMessage(m);
+                  addressBuilder_.addMessage(m);
                 }
                 break;
               } // case 98
@@ -4320,11 +4320,11 @@ public final class Scanner {
                     input.readMessage(
                         ssn.type.CandidateOuterClass.Candidate.parser(),
                         extensionRegistry);
-                if (empoloyerNameBuilder_ == null) {
-                  ensureEmpoloyerNameIsMutable();
-                  empoloyerName_.add(m);
+                if (employerNameBuilder_ == null) {
+                  ensureEmployerNameIsMutable();
+                  employerName_.add(m);
                 } else {
-                  empoloyerNameBuilder_.addMessage(m);
+                  employerNameBuilder_.addMessage(m);
                 }
                 break;
               } // case 106
@@ -7102,484 +7102,484 @@ public final class Scanner {
         return countyBuilder_;
       }
 
-      private java.util.List<ssn.type.CandidateOuterClass.Candidate> adress_ =
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> address_ =
         java.util.Collections.emptyList();
-      private void ensureAdressIsMutable() {
+      private void ensureAddressIsMutable() {
         if (!((bitField0_ & 0x00000800) != 0)) {
-          adress_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(adress_);
+          address_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(address_);
           bitField0_ |= 0x00000800;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> adressBuilder_;
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> addressBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getAdressList() {
-        if (adressBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(adress_);
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getAddressList() {
+        if (addressBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(address_);
         } else {
-          return adressBuilder_.getMessageList();
+          return addressBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public int getAdressCount() {
-        if (adressBuilder_ == null) {
-          return adress_.size();
+      public int getAddressCount() {
+        if (addressBuilder_ == null) {
+          return address_.size();
         } else {
-          return adressBuilder_.getCount();
+          return addressBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate getAdress(int index) {
-        if (adressBuilder_ == null) {
-          return adress_.get(index);
+      public ssn.type.CandidateOuterClass.Candidate getAddress(int index) {
+        if (addressBuilder_ == null) {
+          return address_.get(index);
         } else {
-          return adressBuilder_.getMessage(index);
+          return addressBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder setAdress(
+      public Builder setAddress(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
-        if (adressBuilder_ == null) {
+        if (addressBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAdressIsMutable();
-          adress_.set(index, value);
+          ensureAddressIsMutable();
+          address_.set(index, value);
           onChanged();
         } else {
-          adressBuilder_.setMessage(index, value);
+          addressBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder setAdress(
+      public Builder setAddress(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
-        if (adressBuilder_ == null) {
-          ensureAdressIsMutable();
-          adress_.set(index, builderForValue.build());
+        if (addressBuilder_ == null) {
+          ensureAddressIsMutable();
+          address_.set(index, builderForValue.build());
           onChanged();
         } else {
-          adressBuilder_.setMessage(index, builderForValue.build());
+          addressBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder addAdress(ssn.type.CandidateOuterClass.Candidate value) {
-        if (adressBuilder_ == null) {
+      public Builder addAddress(ssn.type.CandidateOuterClass.Candidate value) {
+        if (addressBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAdressIsMutable();
-          adress_.add(value);
+          ensureAddressIsMutable();
+          address_.add(value);
           onChanged();
         } else {
-          adressBuilder_.addMessage(value);
+          addressBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder addAdress(
+      public Builder addAddress(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
-        if (adressBuilder_ == null) {
+        if (addressBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAdressIsMutable();
-          adress_.add(index, value);
+          ensureAddressIsMutable();
+          address_.add(index, value);
           onChanged();
         } else {
-          adressBuilder_.addMessage(index, value);
+          addressBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder addAdress(
+      public Builder addAddress(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
-        if (adressBuilder_ == null) {
-          ensureAdressIsMutable();
-          adress_.add(builderForValue.build());
+        if (addressBuilder_ == null) {
+          ensureAddressIsMutable();
+          address_.add(builderForValue.build());
           onChanged();
         } else {
-          adressBuilder_.addMessage(builderForValue.build());
+          addressBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder addAdress(
+      public Builder addAddress(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
-        if (adressBuilder_ == null) {
-          ensureAdressIsMutable();
-          adress_.add(index, builderForValue.build());
+        if (addressBuilder_ == null) {
+          ensureAddressIsMutable();
+          address_.add(index, builderForValue.build());
           onChanged();
         } else {
-          adressBuilder_.addMessage(index, builderForValue.build());
+          addressBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder addAllAdress(
+      public Builder addAllAddress(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
-        if (adressBuilder_ == null) {
-          ensureAdressIsMutable();
+        if (addressBuilder_ == null) {
+          ensureAddressIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, adress_);
+              values, address_);
           onChanged();
         } else {
-          adressBuilder_.addAllMessages(values);
+          addressBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder clearAdress() {
-        if (adressBuilder_ == null) {
-          adress_ = java.util.Collections.emptyList();
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000800);
           onChanged();
         } else {
-          adressBuilder_.clear();
+          addressBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public Builder removeAdress(int index) {
-        if (adressBuilder_ == null) {
-          ensureAdressIsMutable();
-          adress_.remove(index);
+      public Builder removeAddress(int index) {
+        if (addressBuilder_ == null) {
+          ensureAddressIsMutable();
+          address_.remove(index);
           onChanged();
         } else {
-          adressBuilder_.remove(index);
+          addressBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate.Builder getAdressBuilder(
+      public ssn.type.CandidateOuterClass.Candidate.Builder getAddressBuilder(
           int index) {
-        return getAdressFieldBuilder().getBuilder(index);
+        return getAddressFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public ssn.type.CandidateOuterClass.CandidateOrBuilder getAdressOrBuilder(
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getAddressOrBuilder(
           int index) {
-        if (adressBuilder_ == null) {
-          return adress_.get(index);  } else {
-          return adressBuilder_.getMessageOrBuilder(index);
+        if (addressBuilder_ == null) {
+          return address_.get(index);  } else {
+          return addressBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-           getAdressOrBuilderList() {
-        if (adressBuilder_ != null) {
-          return adressBuilder_.getMessageOrBuilderList();
+           getAddressOrBuilderList() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(adress_);
+          return java.util.Collections.unmodifiableList(address_);
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate.Builder addAdressBuilder() {
-        return getAdressFieldBuilder().addBuilder(
+      public ssn.type.CandidateOuterClass.Candidate.Builder addAddressBuilder() {
+        return getAddressFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate.Builder addAdressBuilder(
+      public ssn.type.CandidateOuterClass.Candidate.Builder addAddressBuilder(
           int index) {
-        return getAdressFieldBuilder().addBuilder(
+        return getAddressFieldBuilder().addBuilder(
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate adress = 12 [json_name = "adress"];</code>
+       * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
-           getAdressBuilderList() {
-        return getAdressFieldBuilder().getBuilderList();
+           getAddressBuilderList() {
+        return getAddressFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-          getAdressFieldBuilder() {
-        if (adressBuilder_ == null) {
-          adressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
-                  adress_,
+                  address_,
                   ((bitField0_ & 0x00000800) != 0),
                   getParentForChildren(),
                   isClean());
-          adress_ = null;
+          address_ = null;
         }
-        return adressBuilder_;
+        return addressBuilder_;
       }
 
-      private java.util.List<ssn.type.CandidateOuterClass.Candidate> empoloyerName_ =
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> employerName_ =
         java.util.Collections.emptyList();
-      private void ensureEmpoloyerNameIsMutable() {
+      private void ensureEmployerNameIsMutable() {
         if (!((bitField0_ & 0x00001000) != 0)) {
-          empoloyerName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(empoloyerName_);
+          employerName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(employerName_);
           bitField0_ |= 0x00001000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> empoloyerNameBuilder_;
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> employerNameBuilder_;
 
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getEmpoloyerNameList() {
-        if (empoloyerNameBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(empoloyerName_);
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getEmployerNameList() {
+        if (employerNameBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(employerName_);
         } else {
-          return empoloyerNameBuilder_.getMessageList();
+          return employerNameBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public int getEmpoloyerNameCount() {
-        if (empoloyerNameBuilder_ == null) {
-          return empoloyerName_.size();
+      public int getEmployerNameCount() {
+        if (employerNameBuilder_ == null) {
+          return employerName_.size();
         } else {
-          return empoloyerNameBuilder_.getCount();
+          return employerNameBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate getEmpoloyerName(int index) {
-        if (empoloyerNameBuilder_ == null) {
-          return empoloyerName_.get(index);
+      public ssn.type.CandidateOuterClass.Candidate getEmployerName(int index) {
+        if (employerNameBuilder_ == null) {
+          return employerName_.get(index);
         } else {
-          return empoloyerNameBuilder_.getMessage(index);
+          return employerNameBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder setEmpoloyerName(
+      public Builder setEmployerName(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
-        if (empoloyerNameBuilder_ == null) {
+        if (employerNameBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEmpoloyerNameIsMutable();
-          empoloyerName_.set(index, value);
+          ensureEmployerNameIsMutable();
+          employerName_.set(index, value);
           onChanged();
         } else {
-          empoloyerNameBuilder_.setMessage(index, value);
+          employerNameBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder setEmpoloyerName(
+      public Builder setEmployerName(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
-        if (empoloyerNameBuilder_ == null) {
-          ensureEmpoloyerNameIsMutable();
-          empoloyerName_.set(index, builderForValue.build());
+        if (employerNameBuilder_ == null) {
+          ensureEmployerNameIsMutable();
+          employerName_.set(index, builderForValue.build());
           onChanged();
         } else {
-          empoloyerNameBuilder_.setMessage(index, builderForValue.build());
+          employerNameBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder addEmpoloyerName(ssn.type.CandidateOuterClass.Candidate value) {
-        if (empoloyerNameBuilder_ == null) {
+      public Builder addEmployerName(ssn.type.CandidateOuterClass.Candidate value) {
+        if (employerNameBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEmpoloyerNameIsMutable();
-          empoloyerName_.add(value);
+          ensureEmployerNameIsMutable();
+          employerName_.add(value);
           onChanged();
         } else {
-          empoloyerNameBuilder_.addMessage(value);
+          employerNameBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder addEmpoloyerName(
+      public Builder addEmployerName(
           int index, ssn.type.CandidateOuterClass.Candidate value) {
-        if (empoloyerNameBuilder_ == null) {
+        if (employerNameBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEmpoloyerNameIsMutable();
-          empoloyerName_.add(index, value);
+          ensureEmployerNameIsMutable();
+          employerName_.add(index, value);
           onChanged();
         } else {
-          empoloyerNameBuilder_.addMessage(index, value);
+          employerNameBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder addEmpoloyerName(
+      public Builder addEmployerName(
           ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
-        if (empoloyerNameBuilder_ == null) {
-          ensureEmpoloyerNameIsMutable();
-          empoloyerName_.add(builderForValue.build());
+        if (employerNameBuilder_ == null) {
+          ensureEmployerNameIsMutable();
+          employerName_.add(builderForValue.build());
           onChanged();
         } else {
-          empoloyerNameBuilder_.addMessage(builderForValue.build());
+          employerNameBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder addEmpoloyerName(
+      public Builder addEmployerName(
           int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
-        if (empoloyerNameBuilder_ == null) {
-          ensureEmpoloyerNameIsMutable();
-          empoloyerName_.add(index, builderForValue.build());
+        if (employerNameBuilder_ == null) {
+          ensureEmployerNameIsMutable();
+          employerName_.add(index, builderForValue.build());
           onChanged();
         } else {
-          empoloyerNameBuilder_.addMessage(index, builderForValue.build());
+          employerNameBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder addAllEmpoloyerName(
+      public Builder addAllEmployerName(
           java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
-        if (empoloyerNameBuilder_ == null) {
-          ensureEmpoloyerNameIsMutable();
+        if (employerNameBuilder_ == null) {
+          ensureEmployerNameIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, empoloyerName_);
+              values, employerName_);
           onChanged();
         } else {
-          empoloyerNameBuilder_.addAllMessages(values);
+          employerNameBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder clearEmpoloyerName() {
-        if (empoloyerNameBuilder_ == null) {
-          empoloyerName_ = java.util.Collections.emptyList();
+      public Builder clearEmployerName() {
+        if (employerNameBuilder_ == null) {
+          employerName_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00001000);
           onChanged();
         } else {
-          empoloyerNameBuilder_.clear();
+          employerNameBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public Builder removeEmpoloyerName(int index) {
-        if (empoloyerNameBuilder_ == null) {
-          ensureEmpoloyerNameIsMutable();
-          empoloyerName_.remove(index);
+      public Builder removeEmployerName(int index) {
+        if (employerNameBuilder_ == null) {
+          ensureEmployerNameIsMutable();
+          employerName_.remove(index);
           onChanged();
         } else {
-          empoloyerNameBuilder_.remove(index);
+          employerNameBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate.Builder getEmpoloyerNameBuilder(
+      public ssn.type.CandidateOuterClass.Candidate.Builder getEmployerNameBuilder(
           int index) {
-        return getEmpoloyerNameFieldBuilder().getBuilder(index);
+        return getEmployerNameFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public ssn.type.CandidateOuterClass.CandidateOrBuilder getEmpoloyerNameOrBuilder(
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getEmployerNameOrBuilder(
           int index) {
-        if (empoloyerNameBuilder_ == null) {
-          return empoloyerName_.get(index);  } else {
-          return empoloyerNameBuilder_.getMessageOrBuilder(index);
+        if (employerNameBuilder_ == null) {
+          return employerName_.get(index);  } else {
+          return employerNameBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
       public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-           getEmpoloyerNameOrBuilderList() {
-        if (empoloyerNameBuilder_ != null) {
-          return empoloyerNameBuilder_.getMessageOrBuilderList();
+           getEmployerNameOrBuilderList() {
+        if (employerNameBuilder_ != null) {
+          return employerNameBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(empoloyerName_);
+          return java.util.Collections.unmodifiableList(employerName_);
         }
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate.Builder addEmpoloyerNameBuilder() {
-        return getEmpoloyerNameFieldBuilder().addBuilder(
+      public ssn.type.CandidateOuterClass.Candidate.Builder addEmployerNameBuilder() {
+        return getEmployerNameFieldBuilder().addBuilder(
             ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
-      public ssn.type.CandidateOuterClass.Candidate.Builder addEmpoloyerNameBuilder(
+      public ssn.type.CandidateOuterClass.Candidate.Builder addEmployerNameBuilder(
           int index) {
-        return getEmpoloyerNameFieldBuilder().addBuilder(
+        return getEmployerNameFieldBuilder().addBuilder(
             index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .ssn.type.Candidate empoloyer_name = 13 [json_name = "empoloyerName"];</code>
+       * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
        */
       public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
-           getEmpoloyerNameBuilderList() {
-        return getEmpoloyerNameFieldBuilder().getBuilderList();
+           getEmployerNameBuilderList() {
+        return getEmployerNameFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
-          getEmpoloyerNameFieldBuilder() {
-        if (empoloyerNameBuilder_ == null) {
-          empoloyerNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getEmployerNameFieldBuilder() {
+        if (employerNameBuilder_ == null) {
+          employerNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
-                  empoloyerName_,
+                  employerName_,
                   ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
-          empoloyerName_ = null;
+          employerName_ = null;
         }
-        return empoloyerNameBuilder_;
+        return employerNameBuilder_;
       }
 
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> positionTitle_ =
@@ -10776,9 +10776,9 @@ public final class Scanner {
       "idateR\npostalArea\0227\n\014municipality\030\n \003(\0132" +
       "\023.ssn.type.CandidateR\014municipality\022+\n\006co" +
       "unty\030\013 \003(\0132\023.ssn.type.CandidateR\006county\022" +
-      "+\n\006adress\030\014 \003(\0132\023.ssn.type.CandidateR\006ad" +
-      "ress\022:\n\016empoloyer_name\030\r \003(\0132\023.ssn.type." +
-      "CandidateR\rempoloyerName\022:\n\016position_tit" +
+      "-\n\007address\030\014 \003(\0132\023.ssn.type.CandidateR\007a" +
+      "ddress\0228\n\remployer_name\030\r \003(\0132\023.ssn.type" +
+      ".CandidateR\014employerName\022:\n\016position_tit" +
       "le\030\016 \003(\0132\023.ssn.type.CandidateR\rpositionT" +
       "itle\022\'\n\004date\030\017 \003(\0132\023.ssn.type.CandidateR" +
       "\004date\022>\n\020institution_name\030\020 \003(\0132\023.ssn.ty" +
@@ -10827,7 +10827,7 @@ public final class Scanner {
     internal_static_cv_scanner_v1_ScanCVResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cv_scanner_v1_ScanCVResponse_descriptor,
-        new java.lang.String[] { "FirstName", "LastName", "DateOfBirth", "Phone", "Email", "Country", "Nationality", "PostalCode", "PostalArea", "Municipality", "County", "Adress", "EmpoloyerName", "PositionTitle", "Date", "InstitutionName", "InstitutionType", "AreaOfEducation", "Degree", "AverageGrade", "Name", "Level", });
+        new java.lang.String[] { "FirstName", "LastName", "DateOfBirth", "Phone", "Email", "Country", "Nationality", "PostalCode", "PostalArea", "Municipality", "County", "Address", "EmployerName", "PositionTitle", "Date", "InstitutionName", "InstitutionType", "AreaOfEducation", "Degree", "AverageGrade", "Name", "Level", });
     internal_static_cv_scanner_v1_Feature_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_cv_scanner_v1_Feature_fieldAccessorTable = new

@@ -36,8 +36,8 @@ message ScanCVResponse {
   repeated ssn.type.Candidate postal_area = 9;
   repeated ssn.type.Candidate municipality = 10;
   repeated ssn.type.Candidate county = 11;
-  repeated ssn.type.Candidate adress = 12;
-  repeated ssn.type.Candidate empoloyer_name = 13;
+  repeated ssn.type.Candidate address = 12;
+  repeated ssn.type.Candidate employer_name = 13;
   repeated ssn.type.Candidate position_title = 14;
   repeated ssn.type.Candidate date = 15;
   repeated ssn.type.Candidate institution_name = 16;
